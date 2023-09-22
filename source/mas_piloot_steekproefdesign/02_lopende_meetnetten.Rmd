@@ -1,0 +1,16 @@
+# Lopende meetnetten in Vlaanderen
+
+-   Projecten
+    -   ABV
+    -   MAS
+        -   Plan Kiekendief
+        -   Plan Leeuwerik
+        -   Akkervogelonderzoek UHasselt
+-   Veldprotocol
+    -   Telling vogels
+        -   ABV
+        -   MAS
+    -   Andere indicatoren
+-   Steekproefontwerp
+    -   ABV
+    -   MAS
