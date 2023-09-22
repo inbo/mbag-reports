@@ -1,0 +1,4 @@
+# Analyse beschikbare ABV- en MAS-gegevens {#analyse-gegevens}
+
+-   Berekening verklarende variabelen (GIS-analyse)
+-   Resultaten

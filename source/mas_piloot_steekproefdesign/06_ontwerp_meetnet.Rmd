@@ -1,0 +1,12 @@
+# Ontwerp meetnet voor akkervogels Vlaanderen {#ontwerp-meetnet}
+
+-   Infomratiebehoefteanalyse
+-   Ontwerp van de gegevensinzameling
+    -   Afbakening steekproefkader
+    -   Stratificatie/inclusiekansen
+    -   Steekproefgrootteberekening
+    -   Allocatiesteekproefgrootte over strata
+    -   Steekproeftrekking
+-   Plannen van de gegevensanalyse
+-   Plannen van raportering en communicatie
+-   Implementatie en kwaliteitszorg
