@@ -35,7 +35,7 @@ reviewer:
 lang: nl
 style: INBO
 floatbarrier: subsubsection
-keywords: "meetnet, pilootstudie, akkervogels, Vlaanderen, MAS, steekproefdesign"
+keywords: "meetnet; pilootstudie; akkervogels; Vlaanderen; MAS; steekproefdesign"
 community: "inbo"
 publication_type: report
 funder: Instituut voor Natuur- en Bosonderzoek (INBO)

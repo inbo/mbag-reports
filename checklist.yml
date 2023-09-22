@@ -16,5 +16,8 @@ spelling:
   - .github
   - LICENSE.md
   - source/mas_piloot_steekproefdesign/LICENSE.md
+  - source/mas_piloot_analyses/LICENSE.md
   other:
-    en-GB: source/mas_piloot_steekproefdesign/00_abstract.Rmd
+    en-GB:
+    - source/mas_piloot_steekproefdesign/00_abstract.Rmd
+    - source/mas_piloot_analyses/00_abstract.Rmd
