@@ -43,6 +43,8 @@ rightsholder: Instituut voor Natuur- en Bosonderzoek (INBO)
 bibliography: references.bib
 link-citations: TRUE
 site: bookdown::bookdown_site
+year: 2023
+reportnr: 1
 output:
   INBOmd::gitbook: default
   INBOmd::pdf_report: default
@@ -57,9 +59,7 @@ output:
 
 De tekst voor het optionele dankwoord.
 
-# Voorwoord {.unnumbered}
-
-De tekst voor het optionele voorwoord.
+Gebruik dit om index te vervolledigen: <https://github.com/inbo/abvanalysis/blob/1540393796b92f96833f596e331d44de1363af79/inst/website/index.Rmd>
 
 # Samenvatting {.unnumbered}
 
