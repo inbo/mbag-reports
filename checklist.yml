@@ -15,3 +15,6 @@ spelling:
   ignore:
   - .github
   - LICENSE.md
+  - source/mas_piloot_steekproefdesign/LICENSE.md
+  other:
+    en-GB: source/mas_piloot_steekproefdesign/00_abstract.Rmd
