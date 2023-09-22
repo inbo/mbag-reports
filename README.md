@@ -1,7 +1,6 @@
 <!-- badges: start -->
-![GitHub](https://img.shields.io/github/license//mbag-reports)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status//mbag-reports/check-project)
-![GitHub repo size](https://img.shields.io/github/repo-size//mbag-reports)
+![GitHub](https://img.shields.io/github/license/inbo/mbag-reports)
+![GitHub repo size](https://img.shields.io/github/repo-size/inbo/mbag-reports)
 <!-- badges: end -->
 
 # Rapporten MBAG project
@@ -22,7 +21,5 @@ Research Institute for Nature and Forest (INBO)[^cph][^fnd]
 <!-- community: inbo -->
 
 <!-- description: start -->
-Deze repository is bedoeld voor het maken van de rapporten in het MBAG project.
+Dit is een repository bedoeld voor het maken van de rapporten in kader van het MBAG project.
 <!-- description: end -->
-
-test
