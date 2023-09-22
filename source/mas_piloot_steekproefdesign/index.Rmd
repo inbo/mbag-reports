@@ -1,0 +1,108 @@
+---
+title: "Steekproefdesign voor de monitoring van akkervogels in Vlaanderen"
+subtitle: Van lokale pilootstudie tot een Vlaams meetnet
+author:
+  - name:
+      given: "Ward"
+      family: "Langeraert"
+    email: "ward.langeraert@inbo.be"
+    orcid: "0000-0002-5900-8109"
+    affiliation: "Instituut voor Natuur- en Bosonderzoek (INBO)"
+    corresponding: true
+  - name:
+      given: "Hans"
+      family: "Van Calster"
+    email: "hans.vancalster@inbo.be"
+    orcid: "0000-0001-8595-8426"
+    affiliation: "Instituut voor Natuur- en Bosonderzoek (INBO)"
+  - name:
+      given: "Emma"
+      family: "Cartuyvels"
+    email: "emma.cartuyvels@inbo.be"
+    orcid: "0000-0001-7856-6360"
+    affiliation: "Instituut voor Natuur- en Bosonderzoek (INBO)"
+  - name:
+      given: "Johannes"
+      family: "Jansen"
+    email: "johannes.jansen@inbo.be"
+    affiliation: "Instituut voor Natuur- en Bosonderzoek (INBO)"
+reviewer:
+  - name:
+      given: "xxx"
+      family: "xxx"
+    email: "xxx@inbo.be"
+    affiliation: "Instituut voor Natuur- en Bosonderzoek (INBO)"
+lang: nl
+style: INBO
+floatbarrier: subsubsection
+keywords: "meetnet, pilootstudie, akkervogels, Vlaanderen, MAS, steekproefdesign"
+community: "inbo"
+publication_type: report
+funder: Instituut voor Natuur- en Bosonderzoek (INBO)
+rightsholder: Instituut voor Natuur- en Bosonderzoek (INBO)
+bibliography: references.bib
+link-citations: TRUE
+site: bookdown::bookdown_site
+output:
+  INBOmd::gitbook: default
+  INBOmd::pdf_report: default
+  INBOmd::epub_book: default
+# Don't run the format below.
+# Only required for RStudio to recognise the project as a bookdown project.
+# Hence don't use 'Build all formats'.
+  bookdown::dontrun: default
+---
+
+# Dankwoord {.unnumbered}
+
+De tekst voor het optionele dankwoord.
+
+# Voorwoord {.unnumbered}
+
+De tekst voor het optionele voorwoord.
+
+# Samenvatting {.unnumbered}
+
+<!-- description: start -->
+
+De tekst voor de verplichte samenvatting.
+Hou het [Heerlijk Helder](https://overheid.vlaanderen.be/communicatie/heerlijk-helder).
+<!-- description: end -->
+
+# Aanbevelingen voor beheer en/of beleid {.unnumbered}
+
+Verplicht wanneer relevant.
+
+```{r setup, include = FALSE}
+library(knitr)
+opts_chunk$set(
+  echo = FALSE,
+  eval = TRUE,
+  cache = FALSE,
+  warning = TRUE,
+  error = FALSE,
+  message = TRUE
+)
+library(tidyverse)
+library(INBOtheme)
+if (interactive()) {
+  theme_set(theme_inbo(base_size = 10))
+} else {
+  switch(
+    opts_knit$get("rmarkdown.pandoc.to"),
+    html = {
+      opts_chunk$set(dev = "png", dpi = 72)
+      theme_set(theme_inbo(base_size = 12))
+    },
+    latex = {
+      opts_chunk$set(dev = "cairo_pdf", dpi = 300)
+      theme_set(theme_inbo(base_size = 9))
+      update_geom_defaults("point", list(size = 1.5))
+    },
+    epub3 = {
+      opts_chunk$set(dev = "png", dpi = 300)
+      theme_set(theme_inbo(base_size = 12))
+    }
+  )
+}
+```
