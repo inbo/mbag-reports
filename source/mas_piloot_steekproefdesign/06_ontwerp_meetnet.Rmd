@@ -8,5 +8,6 @@
     -   Allocatiesteekproefgrootte over strata
     -   Steekproeftrekking
 -   Plannen van de gegevensanalyse
+-   Vrijwilligerswerking
 -   Plannen van rapportering en communicatie
 -   Implementatie en kwaliteitszorg

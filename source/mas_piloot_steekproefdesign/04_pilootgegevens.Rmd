@@ -4,3 +4,4 @@
     -   wat weten we al?
     -   Wat willen we nog weten?
 -   Selectie telpunten in functie van informatiebehoefte
+    -   Overlap bestaande

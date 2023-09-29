@@ -6,11 +6,7 @@
         -   Plan Kiekendief
         -   Plan Leeuwerik
         -   Akkervogelonderzoek UHasselt
--   Veldprotocol
-    -   Telling vogels
-        -   ABV
-        -   MAS
-    -   Andere indicatoren
--   Steekproefontwerp
-    -   ABV
-    -   MAS
+-   Telling vogels
+    -   ABV (Veldprotocol, steekproefontwerp)
+    -   MAS (Veldprotocol, steekproefontwerp)
+-   Andere indicatoren (niet relevant?)
