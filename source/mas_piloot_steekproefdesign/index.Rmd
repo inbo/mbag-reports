@@ -25,6 +25,7 @@ author:
       given: "Johannes"
       family: "Jansen"
     email: "johannes.jansen@inbo.be"
+    orcid: "0009-0005-2436-5236"
     affiliation: "Instituut voor Natuur- en Bosonderzoek (INBO)"
 reviewer:
   - name:
