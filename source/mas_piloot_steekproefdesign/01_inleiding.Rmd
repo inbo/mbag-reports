@@ -4,6 +4,13 @@
 
 # Inleiding {#inleiding}
 
-Een concreet voorbeeld van de broncode van dergelijk rapport vind je op <https://github.com/inbo/inbomd_examples> onder het mapje `source/inbo_rapport`.
-Hoe zo een rapport er finaal uit kan zien, vind je op <https://inbo.github.io/inbomd_examples>.
-
+-   inleiding
+-   maak tijdlijn ter verduidelijking rapport (bv. gantt chart)
+    -   eerst historie en informatiebehoefte (SWO) (2-3)
+    -   daarna opzet pilootstudie (4)
+    -   daarna resultaten pilootstudie(5)
+    -   daarna over uitbreiding naar MAS Vlaanderen (6)
+        -   verschil met pilootmeetnet
+        -   vrijwilligerswerking
+        -   toekomstvisie (zandleem en leem --\> Vlaanderen vanaf 2024)
+    -   daarna discussie en conclusies (7-8)
