@@ -2,3 +2,9 @@
 
 -   Berekening verklarende variabelen (GIS-analyse)
 -   Resultaten
+    -   Data exploratie
+    -   analyse dubbeltellingen
+-   Case study veldleeuwerik
+    -   densiteitsschattingen distance sampling
+    -   beheerovereenkomsten analyse
+    -   totaalanalyse projpred

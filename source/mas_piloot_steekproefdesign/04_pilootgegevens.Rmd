@@ -3,5 +3,14 @@
 -   Informatiebehoefte-analyse
     -   wat weten we al?
     -   Wat willen we nog weten?
--   Selectie telpunten in functie van informatiebehoefte
-    -   Overlap bestaande
+-   plan van aanpak
+    -   zie ook SWO
+        -   budget
+    -   Selectie telpunten in functie van informatiebehoefte
+        -   Overlap bestaande
+-   Ontwerp van de gegevensinzameling
+    -   Afbakening steekproefkader
+    -   Stratificatie/inclusiekansen
+    -   Steekproefgrootteberekening
+    -   Allocatiesteekproefgrootte over strata
+    -   Steekproeftrekking
