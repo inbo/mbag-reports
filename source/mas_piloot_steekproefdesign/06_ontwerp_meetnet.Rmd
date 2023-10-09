@@ -44,10 +44,15 @@ include_graphics(file.path("media", "kaartjes", "landbouwstreken-vl.png"))
 ### Aanpassingen ten opzichte van het pilootmeetnet
 
 1.  Selectie openheid landschap\\ Expliciete selectie van HOL en OL in het begin van de pipeline.
+    Dit werd voordien pas in een later stadium gedaan.
 
 2.  Exclusie van bepaalde landgebruiken\\ Op basis van de problemen gesignaliseerd tijdens terreinbezoeken, sloten we meer landgebruiken uit dan voordien (Tabel \@ref(tab:exclusie-landgebruik)).
     Deze vooral om zoveel mogelijk een goede bereikbaarheid en zichtbaarheid te voorzien.
-    Daarom hebben we tevens rond autosnelwegen en invoegstroken en afritten van autosnelwegen een buffer van 100 m genomen.
+    Langs autosnelwegen liggen vaak parallelle paden; zelfs langs beide kanten van de snelweg.
+    Dit kan in de steekproef tot gevolg hebben dat er met een hogere waarschijnlijkheid een punt wordt geselecteerd vlak bij een snelweg, omdat er veel van zulke punten zijn.
+    Enerzijds is dat een realiteit van het terrein die een invloed heeft op de waarnemingen (bv. vaak kraaien en buizerd langs snelwegen) en vrij zeker ook op de detecteerbaarheid (geluidsoverlast en beperkte zichtbaarheid).
+    Daarom hebben we een extra exclusiecriterium in acht te genomen door een zone van 100 m buffer rond autosnelwegen en invoegstroken en afritten van autosnelwegen uit te sluiten.
+    Op die manier gaan er nog steeds punten zijn waarvan de telcirkels het effect van snelwegen omvatten, maar sluiten we punten die te dicht tegen snelwegen liggen uit.
 
 ```{r exclusie-landgebruik}
 tibble(
@@ -55,13 +60,13 @@ tibble(
                   "militair terrein",
                   "industriegebied",
                   "begraafplaats",
-                  "spoorwegemplacement,\nspoorwegbedding",
+                  "spoorwegemplacement, spoorwegbedding",
                   "commercieel",
                   "boerenerf",
                   "park",
                   "vliegveld",
                   "autosnelweg",
-                  "invoegstroken en afritten\nvan autosnelwegen"),
+                  "invoegstroken en afritten van autosnelwegen"),
   `OSM definitie` = c(
     "landuse = residential",
     "landuse = military",
@@ -94,3 +99,32 @@ tibble(
   kableExtra::kable_styling(latex_options = "scale_down")
 
 ```
+
+3.  Bepalen geldige plaatsen waar telling kan uitgevoerd worden\\ We beperken omwille van de bereikbaarheid de plaatsen waarlangs tellingen kunnen uitgevoerd worden \@ref(tab:inclusie-wegen). We gaan o.a. niet langer langs waterwegen telpunten leggen (bv. grachten, beken). Ook behouden we wel de holle wegen omdat deze een belangrijk onderdeel uitmaken van het agrarisch landschap. Indien de zichtbaarheid toch te laag is in een holle weg, wordt die er via de visibiliteitsberekening later nog uitgefilterd.
+
+```{r inclusie-wegen}
+tibble(
+  wegen = c("veldwegen en boswegen",
+            "tertiare wegen",
+            "afslagen tertiare wegen",
+            "lokale wegen"),
+  `OSM definitie` = c(
+    "highway = track",
+    "highway = tertiary",
+    "highway = tertiary_link",
+    "highway = unclassified"
+  ),
+  `OSM wiki` = c(
+    "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtrack",
+    "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtertiary",
+    "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dtertiary_link",
+    "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dunclassified"
+  )
+) %>%
+  kable(caption = paste("Selectie routes waarlangs telpunten gelegd kunnen",
+                        "worden.")) %>%
+  kableExtra::kable_styling(latex_options = "scale_down")
+
+```
+
+4.  Bepalen geldige plaatsen waar telling kan uitgevoerd worden\\ We beperken omwille van de bereikbaarheid de plaatsen waarlangs tellingen kunnen uitgevoerd worden
