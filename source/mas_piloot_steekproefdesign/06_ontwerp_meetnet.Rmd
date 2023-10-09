@@ -10,7 +10,7 @@
 
 ## Wat hebben we geleerd uit het pilootmeetnet? {#issues-pilootmeetnet}
 
-### In het veld
+### In het veld {#issues-veld}
 
 Ondanks de inspanningen om tijdens de steekproeftrekking al zoveel mogelijk rekening te houden met mogelijke problemen tijdens de effectieve tellingen in het veld (hoofdstuk \@ref(pilootgegevens)), werden nog 163 problematische telpunten gesignaleerd die dan werden vervangen door een reservepunt.
 Hierbij werden opmerkingen in het attributenveld van de kaartlaag genoteerd.
@@ -33,3 +33,64 @@ read_csv(file.path("media", "issues_pilootmeetnet",
 ### Tijdens de analyses
 
 ## Uitbreiding van het akkervogelmeetnet voor Vlaanderen {#uitbreiding-vlaanderen}
+
+Het idee is om in de komende jaren het meetnet uit te breiden over de verschillende landbouwstreken (Fig. \@ref(fig:landbouwstreken)) met uitzondering van de Duinen en de Weidestreek.
+In 2023 zijn we gestart met de Leemstreek en de Zandleemstreek.
+
+```{r landbouwstreken, out.width = "80%", fig.cap = "Landbouwstreken in Vlaanderen"}
+include_graphics(file.path("media", "kaartjes", "landbouwstreken-vl.png"))
+```
+
+### Aanpassingen ten opzichte van het pilootmeetnet
+
+1.  Selectie openheid landschap\\ Expliciete selectie van HOL en OL in het begin van de pipeline.
+
+2.  Exclusie van bepaalde landgebruiken\\ Op basis van de problemen gesignaliseerd tijdens terreinbezoeken, sloten we meer landgebruiken uit dan voordien (Tabel \@ref(tab:exclusie-landgebruik)).
+    Deze vooral om zoveel mogelijk een goede bereikbaarheid en zichtbaarheid te voorzien.
+    Daarom hebben we tevens rond autosnelwegen en invoegstroken en afritten van autosnelwegen een buffer van 100 m genomen.
+
+```{r exclusie-landgebruik}
+tibble(
+  landgebruik = c("woongebied",
+                  "militair terrein",
+                  "industriegebied",
+                  "begraafplaats",
+                  "spoorwegemplacement,\nspoorwegbedding",
+                  "commercieel",
+                  "boerenerf",
+                  "park",
+                  "vliegveld",
+                  "autosnelweg",
+                  "invoegstroken en afritten\nvan autosnelwegen"),
+  `OSM definitie` = c(
+    "landuse = residential",
+    "landuse = military",
+    "landuse = industrial",
+    "landuse = cemetary",
+    "landuse = railway",
+    "landuse = commercial",
+    "landuse = farmyard",
+    "leisure = park",
+    "aeroway = aerodrome",
+    "highway = motorway",
+    "highway = motorway_link"
+  ),
+  `OSM wiki` = c(
+    "https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dresidential",
+    "https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dmilitary",
+    "https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dindustrial",
+    "https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dcemetery",
+    "https://wiki.openstreetmap.org/wiki/Tag:landuse%3Drailway",
+    "https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dcommercial",
+    "https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dfarmyard",
+    "https://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpark",
+    "https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome",
+    "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway",
+    "https://wiki.openstreetmap.org/wiki/Tag:highway%3Dmotorway_link"
+  )
+) %>%
+  kable(caption = paste("Exclusie van landgebruiken meetnet",
+                        "Leemstreek en Zandleemstreek.")) %>%
+  kableExtra::kable_styling(latex_options = "scale_down")
+
+```
