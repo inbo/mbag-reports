@@ -18,6 +18,7 @@
 *_files
 *.csv
 *.jpg
+*.png
 docs
 libs
 output
