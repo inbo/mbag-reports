@@ -7,3 +7,29 @@
 -   Plannen van de gegevensanalyse
 -   Plannen van rapportering en communicatie
 -   Implementatie en kwaliteitszorg
+
+## Wat hebben we geleerd uit het pilootmeetnet? {#issues-pilootmeetnet}
+
+### In het veld
+
+Ondanks de inspanningen om tijdens de steekproeftrekking al zoveel mogelijk rekening te houden met mogelijke problemen tijdens de effectieve tellingen in het veld (hoofdstuk \@ref(pilootgegevens)), werden nog 163 problematische telpunten gesignaleerd die dan werden vervangen door een reservepunt.
+Hierbij werden opmerkingen in het attributenveld van de kaartlaag genoteerd.
+Deze werden met \`regular expressions' geanalyseerd en gecategoriseerd in vijf categorieën (Tabel \@ref(tab:issues-piloot)).
+Zo kregen we een algemeen overzicht waar de belangrijkste problemen zich nog bevonden.
+Bij een deel van punten is er te veel overlap met andere telcirkels.
+We zien vooral problemen met zichtbaarheid omdat punten nog vallen in bossen, boomgaarden, holle wegen etc., hoewel er niet altijd info is waarom zichtbaarheid slecht is.
+Een belangrijk aandeel plots is ook ontoegankelijk omdat het te dicht bij een grote baan ligt, op privéterrein, langs water etc.
+Er zijn 7 punten waarbij geen info aanwezig is.
+In hoofstuk \@ref(uitbreiding-vlaanderen) leggen we uit hoe we hiermee rekening hebben gehouden voor uitbreiding van het MAS-meetnet in Vlaanderen.
+
+```{r issues-piloot}
+read_csv(file.path("media", "issues_pilootmeetnet",
+                   "issues_pilootmeetnet.csv"),
+         show_col_types = FALSE) %>%
+  kable(caption = paste("Overzicht van problematische telpunten in het",
+                        "pilootmeetnet gecategoriseerd m.b.v. `regular expressions'."))
+```
+
+### Tijdens de analyses
+
+## Uitbreiding van het akkervogelmeetnet voor Vlaanderen {#uitbreiding-vlaanderen}
