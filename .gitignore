@@ -16,6 +16,8 @@
 *.shx
 *.xls*
 *_files
+*.csv
+*.jpg
 docs
 libs
 output
