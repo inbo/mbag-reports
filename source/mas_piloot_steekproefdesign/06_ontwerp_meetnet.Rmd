@@ -43,10 +43,16 @@ include_graphics(file.path("media", "kaartjes", "landbouwstreken-vl.png"))
 
 ### Aanpassingen ten opzichte van het pilootmeetnet
 
-1.  Selectie openheid landschap\\ Expliciete selectie van HOL en OL in het begin van de pipeline.
+In dit hoofdstuk geven we aan welke aanpassingen we doen aan de methodiek van het pilootmeetnet (ref hfdst!!) voor de Leemstreek en de Zandleemstreek en later voor heel Vlaanderen.
+We duiden enkel wijzigingen aan.
+We herhalen geen stappen als die ongewijzigd bleven.
+
+1.  Selectie openheid landschap\
+    Expliciete selectie van HOL en OL in het begin van de pipeline.
     Dit werd voordien pas in een later stadium gedaan.
 
-2.  Exclusie van bepaalde landgebruiken\\ Op basis van de problemen gesignaliseerd tijdens terreinbezoeken, sloten we meer landgebruiken uit dan voordien (Tabel \@ref(tab:exclusie-landgebruik)).
+2.  Exclusie van bepaalde landgebruiken\
+    Op basis van de problemen gesignaliseerd tijdens terreinbezoeken, sluiten we meer landgebruiken uit dan voordien (Tabel \@ref(tab:exclusie-landgebruik)).
     Deze vooral om zoveel mogelijk een goede bereikbaarheid en zichtbaarheid te voorzien.
     Langs autosnelwegen liggen vaak parallelle paden; zelfs langs beide kanten van de snelweg.
     Dit kan in de steekproef tot gevolg hebben dat er met een hogere waarschijnlijkheid een punt wordt geselecteerd vlak bij een snelweg, omdat er veel van zulke punten zijn.
@@ -100,7 +106,8 @@ tibble(
 
 ```
 
-3.  Bepalen geldige plaatsen waar telling kan uitgevoerd worden\\ We beperken omwille van de bereikbaarheid de plaatsen waarlangs tellingen kunnen uitgevoerd worden \@ref(tab:inclusie-wegen). We gaan o.a. niet langer langs waterwegen telpunten leggen (bv. grachten, beken). Ook behouden we wel de holle wegen omdat deze een belangrijk onderdeel uitmaken van het agrarisch landschap. Indien de zichtbaarheid toch te laag is in een holle weg, wordt die er via de visibiliteitsberekening later nog uitgefilterd.
+3.  Bepalen geldige plaatsen waar telling kan uitgevoerd worden\
+    We beperken omwille van de bereikbaarheid de plaatsen waarlangs tellingen kunnen uitgevoerd worden \@ref(tab:inclusie-wegen). We gaan o.a. niet langer langs waterwegen telpunten leggen (bv. grachten, beken). Ook behouden we wel de holle wegen omdat deze een belangrijk onderdeel uitmaken van het agrarisch landschap. Indien de zichtbaarheid toch te laag is in een holle weg, wordt die er via de visibiliteitsberekening later nog uitgefilterd.
 
 ```{r inclusie-wegen}
 tibble(
@@ -127,4 +134,104 @@ tibble(
 
 ```
 
-4.  Bepalen geldige plaatsen waar telling kan uitgevoerd worden\\ We beperken omwille van de bereikbaarheid de plaatsen waarlangs tellingen kunnen uitgevoerd worden
+4.  Exclusie van potentiële telpunten op basis van zichtbaarheid\
+    We berekenden zichtbaarheid als de cumulatieve zichtbaarheidsindex (CVVI: cumulative viewshed visibility index) waarbij de waarnemer een bewegingsvrijheid heeft van 25 m rondom het telpunt (Fig. \@ref(fig:zichtbaarheid)). De zichtbaarheidsindex wordt berekend vanaf een set van locaties die 10 m van elkaar liggen in deze zone van bewegingsvrijheid en geeft de proportie aan van zichtbare rastercellen (resolutie 5 m) in de telcirkel met 300 m straal. De cumulatieve zichtbaarheidsindex is dan de proportie die zichtbaar is vanuit minstens één locatie binnen de zone van bewegingsvrijheid. Hierbij wordt gebruik gemaakt van [Digital Surface Model (DSM) en Digital Terrain Model (DTM)](https://www.vlaanderen.be/digitaal-vlaanderen/onze-oplossingen/earth-observation-data-science-eodas/het-digitaal-hoogtemodel). De code is op basis van aanpassingen aan code van de GVI package v1.1 [@GVI-package].\
+    In de targets pipeline werd gebruik gemaakt van batching per 200 telpunten om rekentijd in te perken (`tar_group_size()` functie van tarchetypes package v0.7.6 [@tarchetypes-package]). We verwijderen telpunten waar de CVVI kleiner is dan 0.10.
+
+```{r zichtbaarheid, out.width = "80%", fig.cap = "Voorbeeld van CVVI berekening o.b.v. DSM en DTM."}
+include_graphics(file.path("media", "visibility",
+                           "voorbeeld_zichtbaarheid.jpg"))
+```
+
+5.  Berekening oppervlakte-aandeel beheerovereenkomsten\
+    Gebruik kaartlaag van 2022 in plaats van 2021.
+
+6.  Berekening oppervlakte-aandeel hoofdteelten\
+    Gebruik kaartlaag van 2022 in plaats van 2021.
+
+    > eigenlijk niet nuttig!
+
+7.  Binnen of buiten gebieden met soortbeschermingsplan\
+    Zowel binnen kerngebied als zoekzones zijn er soortbeschermende maatregelen (SB BO's) gelegd (zie kaart VLM BO's).
+    In theorie waren deze maatregelen vooral bedoeld voor kerngebied, en zal daar een hogere dichtheid (bedekkingsgraad) liggen, maar de VLM heeft het toegelaten om ook in zoekzones deze maatregelen te sluiten (al was dat minder de prioriteit).
+    Daar werd bv.
+    in de Moeren geen rekening mee gehouden, en werden erg veel SB BO's gelegd, ook omdat dit gebied wél kerngebied was van plan kiekendief (SBP Grauwe Kiekendief) waardoor er wel veel BO's gesloten zijn.
+    In de toekomst heeft VLM beloofd om meer/enkel rekening te houden met kerngebied.
+
+    We nemen kerngebieden en zoekzones samen als onderzoeksgebied en alles hierbuiten beschouwen we als controle.
+    Als SBP laag gebruiken we perimeter SBP akkervogels, SBP grauwe kiekendief, SBP bruine kiekendief, SBP zomertortel en SBP hamster.
+    De SBP laag voor de specifieke soorten werd als volgt samengesteld:
+
+    -   De nieuwe (door INBO voorgestelde) nieuwe perimeter voor SBP Grauwe kiekendief.
+        Dat is nog niet goedgekeurd, en nog niet van kracht, dus enkel ter voorbereiding van de toekomstige steekproef.
+        (mail Johannes 2023-02-14)
+
+    -   De oude perimeter van SBP Grauwe kiekendief (in gebruik van 2018 t/m 2022).
+        (mail Johannes 2023-02-14)
+
+    -   SPB's andere soorten (download 2023-02-14): <https://www.vlaanderen.be/datavindplaats/catalogus/soortenbeschermingsprogrammas>
+
+8.  Steekproeftrekking\
+    De stratificatiemethode is niet gewijzigd t.o.v. het pilootmeetnet.
+    Omdat we nu met veel grotere gebieden werken, merkten we wel dat een maximale trekking niet voor een goede spatiale spreiding zorgt omdat het algorime niet genoeg vrijheid krijgt.
+    Daarom besloten we uiteindelijk om 1/20ste (5 %) van het aantal elementen in het steekproefkader te nemen per stratum.
+    Dit is niet de finale steekproef, maar een (veel) grotere steekproef waaruit later het gewenste aantal telpunten wordt geselecteerd.
+    Het algoritme kent een volgorde toe bij de steekproeftrekking en het is aan de hand van deze volgorde dat het gewenste aantal telpunten wordt geselecteerd.
+    Dit heeft als eigenschap dat deze set ook (ruimtelijk) gebalanceerd is en een goede spreiding vertoont.
+    We trekken geen veelvoud van het vooropgestelde aantal telpunten (enkel eerste batch van punten).
+    Elk telpunt zal een volgnummer hebben (`sample_order`).
+    De eerste bv.
+    300 (laagste volgnummers) zullen dan de set zijn voor de zandleemstreek, die kan verdeeld worden over de medewerkers.
+    Indien een punt uitvalt, kan dit vervangen worden door het eerstvolgende uit de reeks dat nog niet toegewezen werd (het 301ste).
+    De methode garandeert dat deze nieuwe set ruimtelijk goed gespreid is en een aselecte steekproef is.
+
+9.  Uitduinnen van steekproef\
+    Om te veel overlap te voorkomen binnen enzelfde stratum, is voor elk punt binnen hetzelfde stratum nagegaan of een punt met grotere `sample_order` op minder dan 300 (Leemstreek) of 600 m (Zandleemstreek) afstand ligt.
+    Als dit het geval is wordt het punt met de lagere `sample_order` weerhouden.
+    Voor een vergelijking tussen 300 en 600 m thinning, zie steekproefontwerp_leemstreek.Rmd.
+
+10. Overlap bestaande telpunten\
+    Ten slotte hebben we overlap met bestaande telpunten geautomatiseerd.
+    Zo kan optimaal gebruik worden gemaakt van data van telpunten die al meerdere jaren voordien zijn geteld.
+    We vervangen bijgevolg alle telpunten uit de nieuwe steekproef door reeds bestaande punten indien ze voor minstens 50 % overlappen en ze tot hetzelfde stratum behoren.
+    Indien er meerdere bestaande punten overlappen, nemen we het bestaande punt dat het meest overlapt.
+    Omdat we nu een nieuwe laag van sbp gebruiken ten opzichte van de pilootstudie, is dit stratum opnieuw berekend voor de bestaande punten.
+
+### Steekproef Leemstreek
+
+...
+
+### Steekproef Zandleemstreek
+
+...
+
+## Implementatie en kwaliteitszorg
+
+Version control steekproef(kader)
+
+Er zijn verschillende opties voor version control in de `targets` pipeline.
+Enkele nuttige links:\
+<https://books.ropensci.org/targets/targets.html#return-value>\
+<https://books.ropensci.org/targets/data.html#cloud-storage>\
+<https://books.ropensci.org/targets/data.html#data-version-control>\
+<https://docs.ropensci.org/gittargets/>\
+<https://docs.ropensci.org/gittargets/articles/git.html>
+
+1.  Hard coding
+    -   Voeg op einde target toe met argument `TRUE` of `FALSE` om bepaalde bestanden weg te schrijven
+    -   Verander argument naar `TRUE` als je finale steekproef wil runnen en zet daarna ev. terug naar `FALSE`
+    -   Versiecontrole met git (check .gitignore)
+2.  Cloud storage
+    -   Amazon of Google
+        -   Account?
+        -   Kosten?
+        -   Lange termijn?
+    -   Vooral voor grote projecten
+3.  Gittargets
+    -   Kan ook voor specifieke objecten: <https://docs.ropensci.org/gittargets/#performance>
+    -   Is het de moeite? Manueel werk --\> waarom niet ineens hard coden? Komt op zelfde neer?
+
+We kiezen voor optie 1.
+We gebruiken hiervoor de package [git2rdata](https://ropensci.github.io/git2rdata/).
+De package maakt het opslaan van dataframes onder versiebeheer efficiënter en handiger.
+Bovendien zijn de data en de metadata in een standaard en open formaat, waardoor ze leesbaar zijn voor andere software.
