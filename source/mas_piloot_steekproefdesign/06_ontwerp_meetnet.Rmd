@@ -37,7 +37,7 @@ read_csv(file.path("media", "issues_pilootmeetnet",
 Het idee is om in de komende jaren het meetnet uit te breiden over de verschillende landbouwstreken (Fig. \@ref(fig:landbouwstreken)) met uitzondering van de Duinen en de Weidestreek.
 In 2023 zijn we gestart met de Leemstreek en de Zandleemstreek.
 
-```{r landbouwstreken, out.width = "80%", fig.cap = "Landbouwstreken in Vlaanderen"}
+```{r landbouwstreken, out.width = "90%", fig.cap = "Landbouwstreken in Vlaanderen"}
 include_graphics(file.path("media", "kaartjes", "landbouwstreken-vl.png"))
 ```
 
