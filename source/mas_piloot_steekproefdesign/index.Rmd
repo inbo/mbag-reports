@@ -41,7 +41,7 @@ community: "inbo"
 publication_type: report
 funder: Instituut voor Natuur- en Bosonderzoek (INBO)
 rightsholder: Instituut voor Natuur- en Bosonderzoek (INBO)
-bibliography: references.bib
+bibliography: [references.json, references.bib]
 link-citations: TRUE
 site: bookdown::bookdown_site
 year: 2023

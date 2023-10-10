@@ -8,3 +8,148 @@
     -   densiteitsschattingen distance sampling
     -   beheerovereenkomsten analyse
     -   totaalanalyse projpred
+
+## Case studie: de Veldleeuwerik {#veldleeuwerik}
+
+> waarom veldleeuwerik ...
+
+### Densiteitsschattingen en detectiekans {#densiteitsschattingen}
+
+> densiteitsschattingen via distance sampling
+
+#### Inleiding tot distance sampling {#inleiding-distance}
+
+Distance sampling is een techniek om de abundantie en/of densiteit van biologische populaties te schatten op basis van een steekproef uit de populatie.
+Het is namelijk in de praktijk quasi nooit mogelijk om elk individu te tellen.
+Dieren staan constant in beweging en interageren op allerlei manier met elkaar en hun omgeving.
+Afhankelijk van de eigenschappen van een soort en de omgeving kan de de detectiekans van een soort verschillen.
+Een idee over de detectiekans van een soort is bijgevolg van belang om een schatting van de volledige populatie te maken vanuit de steekproef.
+Een andere bekende techniek om abundanties te schatten is capture-recapture.
+Hierbij zit de informatie over de detectiekans in de vangstgeschiedenis van verschillende individuen.
+In distance sampling daarentegen zit informatie over detecteerbaarheid vervat in de detectieafstanden.
+Het onderliggende idee van beide benaderingen is dat, als we de detectiekans kunnen schatten voor de individuen die we detecteren, we ook kunnen schatten hoeveel er niet opgemerkt werden.
+Op basis van die schatting van detectiekans, kunnen we de waargenomen tellingen corrigeren voor individuen die op de bemonsterde plots zijn gemist.
+Het voordeel van distance sampling ten opzichte van capture-recapture is dat het niet vereist is dat individuen worden gemarkeerd en opnieuw worden gevangen/waargenomen in de loop van de tijd.
+Bovendien kan slechts een enkele steekproef van de populatie voldoende zijn [@buckland2015; @buckland2001].\
+
+Wanneer we het over distance sampling hebben in dit rapport, spreken we eigenlijk over conventional distance sampling (CDS).
+In CDS worden de data gebundeld voor het schatten van de detectiekans.
+Dit is in tegenstelling tot hierarchical distance sampling (HDS), waarbij de focus ligt op lokale populatiegroottes van de steekproefeenheden door het maken van expliciete modellen die de variatie in populatiegrootte tussen steekproefeenheden verklaren [@kéry2016].
+HDS wordt hier verder niet besproken.
+De belangrijkste aannames van de CDS-methode zijn [@buckland2001, hoofdstuk 2]:
+
+1.  Dieren zijn uniform verdeeld over de ruimte (steekproefdesign)\
+    (= random plaatsing van steekproefeenheden t.o.v. verdeling dieren)
+
+2.  Detectiekans is een functie van afstand en is gelijk aan 1 op afstand 0 (model)
+
+3.  Individuen worden gedetecteerd op hun oorspronkelijke locatie (model)
+
+4.  Afstanden worden foutloos gemeten (model)
+
+Distance sampling is erg populair bij het tellen van vogels met behulp van punttransecten [@rosenstock2002; @buckland2001; @roodbergen2011].
+Een punttransect is een cirkelvormige plot met radius $w$ waar een waarnemer vanuit een centraal punt de radiale afstand $r_i$ meet tot elk van de gedetecteerde individuen $i = 1, ..., n$ met $n$ het totaal aantal waarnemingen (Fig. \@ref(fig:distance-methode)A).
+$w$ wordt ook wel de afknotafstand genoemd.
+
+Om de detectiekans te schatten maak je een model voor de probabiliteit dat een individue van een soort wordt gedetecteerd gegeven we de afstand tot het individu weten.
+Dit model is de detectiefunctie (ook wel detectiecurve genoemd) en wordt genoteerd als $g(r;\boldsymbol \theta)$ met $r$ de radiale afstand van waarneming tot teller/telpunt en $\boldsymbol \theta$ een vector van parameters die geschat moeten worden.
+Het doel is de gemiddelde kans op detectie ($p$) te bepalen.
+Dit is het gemiddelde over afstand van 0 m tot de afknotafstand $w$, in ons geval $w = 300$.
+De term $\frac{2r}{w^2}$ is nodig om rekening te houden met de geometrie van de plot (cirkel).
+
+$$
+p = \int_0^w\frac{2r}{w^2}g(r;\boldsymbol \theta)\,dr
+$$
+
+$p$ is dus de oppervlakte onder de detectiecurve.
+Figuur \@ref(fig:distance-methode)B toont een fictief voorbeeld van een histogram met afstanden van 0 tot 300 meter ($w = 300$).
+Hoe groter de afstand, hoe minder waarnemingen en dus lager de detectiekans.
+Moest het aantal waarnemingen niet afnemen over de afstand, zouden de afstanden uniform verdeeld zijn zoals de rode box.
+Alles zou gezien zijn en de detectiekans op elke afstand is gelijk aan 1.
+De blauwe curve is een half-normale detectiecurve gefit op de data.
+De oppervlakte onder de curve binnen de box is de gemiddelde detectiekans $p$ (de geschatte fractie dieren die gezien zijn).
+De oppervlakte boven de curve binnen de box de geschatte fractie dieren die gemist zijn.
+Als we de gemiddelde detectiekans weten, kunnen we dus eenvoudig berekenen hoeveel dieren we verwachten als we uitgaan van een uniforme verdeling van dieren over de telcirkel (zie verder).
+We controleren er dus voor dat het moeilijker is om dieren te detecteren op grotere afstand, terwijl we er van uitgaan dat er in werkelijkheid evenveel zitten op grotere als op kleinere afstanden.
+
+```{r distance-methode, out.width = "90%", fig.cap = "Methodologie distance sampling. A. Punttransect met radius $w$ en observatie $i$ op afstand $r$. B. Histogram en detectiecurve gefit op 1000 gesimuleerde datapunten uit de half-normale verdeling met parameter $\\sigma = 120$ en afknotafstand 300 m. De oppervlakte onder de curve binnen de rode box is de gemiddelde detectiekans $p$."}
+include_graphics(file.path("media", "distance", "methode_distance.jpg"))
+```
+
+Voor de formulatie van de detectiefunctie beschouwen we half-normal en hazard-rate sleutelfuncties die we laten afhangen van categorische covariaten $\mathbf{z_i}$ (bv. jaar, regio).
+Met $\mathbf{z_i}$ een vector van $J$ covariaten geassocieerd met observatie $i$.
+Dit wordt ook wel multiple-covariate distance sampling (MCDS) genoemd [@marques2007].
+De detectiekans wordt dan berekend conditioneel aan de waargenomen waarden van de covariaten.
+
+$$
+p(\mathbf{z_i}) = \int_0^w\frac{2r}{w^2}g(r, \mathbf{z_i};\boldsymbol \theta)\,dr
+$$
+
+De half-normal sleutelfunctie is van de vorm
+
+$$
+g(r, \mathbf{z};\boldsymbol \theta) = \exp{\left( -\frac{r^2}{2\sigma(\mathbf{z})^2} \right)}
+$$
+
+en de hazard-rate sleutelfunctie
+
+$$
+g(r, \mathbf{z};\boldsymbol \theta) = 1 - \exp{\left( \left( -\frac{r}{\sigma(\mathbf{z})}\right)^{-b} \right)}
+$$
+
+waarbij de scale parameter in beide gevallen gelijk is aan
+
+$$
+\sigma(\mathbf{z}) = \exp{\left( \beta_0 + \sum_{j = 1}^{J} \beta_j z_j \right)}
+$$
+
+De hazard-rate key function heeft naast de scale parameter ook nog de shape parameter $b$.
+
+Wanneer we de detectiecurve gefit hebben, hebben we dus een idee van de detectiekans; en deze kan verschillend zijn afhankelijk van bepaalde covariaten.
+We kunnen daarna de densiteiten berekenen voor bepaalde strata binnen de studieregio (bv. apart voor De Moeren en de Oostelijke leemstreek).
+Beschouw $A(s)$ de totale oppervlakte van stratum $s$ tot waar we de abundantieschatting willen extrapoleren en $a(s)$ het gesampelde gebied.
+
+$$
+a(s) = \pi w^2 T
+$$
+
+Met $T$ het aantal plots ($n_p$) vermenigvuldigd met het aantal bezoeken (effort).
+Dan is de geschatte abundantie in het gesampelde gebied voor elk stratum $s$:
+
+$$
+\hat{N}_C(s) = \sum_{i=1}^n \frac{c_i(s)}{\hat{p}(\mathbf{z_i})}
+$$
+
+Met $c_i(s)$ de clustergrootte in stratum $s$ voor waarneming $i$.
+
+Meestal is $c_i(s) = 1$, maar soms bestaat een waarneming uit meerdere individuen die gezien waren op dezelfde afstand op hetzelfde moment.
+De geschatte abundantie in het gesampelde gebied kan dan worden opgeschaald naar de totale oppervlakte van het stratum via:
+
+$$
+\hat{N}(s) = \frac{A(s)}{a(s)}\hat{N}_C(s)
+$$
+
+De geschatte densiteit in stratumm $s$ is dan $\hat{N}(s) / A(s)$.
+De abundanties kunnen ook opgeteld worden voor een totale schatting $\hat{N}_C$.
+Een maat voor de gemiddelde detectiekans $\hat{P}_a$ is dan:
+
+$$
+\hat{P}_a = \frac{n}{\hat{N}_C}
+$$
+
+De onzekerheid op de abundantie- en densiteitsschattingen komt van twee origines [@miller2019]:
+
+1.  Detectiefunctie: Onzekerheid in parameterschattingen ($\boldsymbol \theta$)
+2.  Trefkans: Bemonsteringsvariabiliteit als gevolg van verschillen in het aantal waarnemingen per transect
+
+#### Methodiek densiteitsschattingen
+
+We voerden de distance sampling analyses uit met behulp van de **Distance** package [@R-Distance; @miller2019].
+
+...
+
+De onzekerheid werd berekend m.b.v. de standaard opties in de `ds()` functie.
+Zie @miller2019 en verwijzingen daarin voor meer informatie over de preciese berekeningen.
+De onzekerheid in de volgende resultaten zijn telkens 95 % betrouwbaarheidsintervallen.
+
+...
