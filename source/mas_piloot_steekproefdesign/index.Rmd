@@ -46,6 +46,8 @@ link-citations: TRUE
 site: bookdown::bookdown_site
 year: 2023
 reportnr: 1
+header-includes:
+   - \usepackage[labelfont=bf,labelsep = period]{caption}
 output:
   INBOmd::gitbook: default
   INBOmd::pdf_report: default

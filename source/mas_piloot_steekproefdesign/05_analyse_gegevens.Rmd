@@ -72,7 +72,7 @@ De oppervlakte boven de curve binnen de box de geschatte fractie dieren die gemi
 Als we de gemiddelde detectiekans weten, kunnen we dus eenvoudig berekenen hoeveel dieren we verwachten als we uitgaan van een uniforme verdeling van dieren over de telcirkel (zie verder).
 We controleren er dus voor dat het moeilijker is om dieren te detecteren op grotere afstand, terwijl we er van uitgaan dat er in werkelijkheid evenveel zitten op grotere als op kleinere afstanden.
 
-```{r distance-methode, out.width = "90%", fig.cap = "Methodologie distance sampling. A. Punttransect met radius $w$ en observatie $i$ op afstand $r$. B. Histogram en detectiecurve gefit op 1000 gesimuleerde datapunten uit de half-normale verdeling met parameter $\\sigma = 120$ en afknotafstand 300 m. De oppervlakte onder de curve binnen de rode box is de gemiddelde detectiekans $p$."}
+```{r distance-methode, out.width = "90%", fig.cap = "Methodologie distance sampling. \\textbf{A.} Punttransect met radius $w$ en observatie $i$ op afstand $r$. \\textbf{B.} Histogram en detectiecurve gefit op 1000 gesimuleerde datapunten uit de half-normale verdeling met parameter $\\sigma = 120$ en afknotafstand 300 m. De oppervlakte onder de curve binnen de rode box is de gemiddelde detectiekans $p$."}
 include_graphics(file.path("media", "distance", "methode_distance.jpg"))
 ```
 
