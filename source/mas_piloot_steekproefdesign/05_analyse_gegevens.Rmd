@@ -145,11 +145,54 @@ De onzekerheid op de abundantie- en densiteitsschattingen komt van twee origines
 #### Methodiek densiteitsschattingen
 
 We voerden de distance sampling analyses uit met behulp van de **Distance** package [@R-Distance; @miller2019].
+We schatten (1) densiteiten per jaar (2018-2023) per regio (De Moeren, Oostelijke leemstreek) en (2) densiteiten per stratum (OL, HOL en binnen en buiten sbp) per regio binnen de pilootstudie (2022-2023).
 
-...
+Voor (1) beschouwden we alle telpunten van 2018-2021 en voegden enkel telpunten van 2022 en 2023 toe als ze minstens eenmaal geteld waren in een van de voorgaande jaren.
+Om abundanties te schatten, moesten we de oppervlakte van de regio's berekenen voor extrapolatie.
+We trokken daarvoor een buffer van 300 m rond het steekproefkader: OLin De Moeren, en OL en HOL in de Oostelijke leemstreek (Fig. \@ref(fig:oppervlakte-steekproefkader-jaar)).
+Voor de formulatie van de detectiefunctie beschouwden we half-normal en hazard-rate sleutelfuncties die we lieten afhangen van covariaten regio en jaar.
 
-De onzekerheid werd berekend m.b.v. de standaard opties in de `ds()` functie.
+```{r oppervlakte-steekproefkader-jaar, out.width = "90%", fig.cap = "Oppervlaktes per regio voor berekening densiteiten per jaar per regio."}
+include_graphics(file.path("media", "distance", "per_jaar", "oppervlakte_strata.jpg"))
+```
+
+Voor (2) beschouwden we enkel de tellingen binnen het pilootproject (alle telpunten van 2022-2023).
+We trokken daarvoor ook een buffer van 300 m rond het steekproefkader, deze keer opgesplitst per stratum (Fig. \@ref(fig:oppervlakte-steekproefkader-stratum)).
+Voor de formulatie van de detectiefunctie beschouwden we half-normal en hazard-rate sleutelfuncties die we lieten afhangen van covariaten regio, openheid (HOL of OL) en sbp (binnen of buiten sbp).
+Analyses werden voor 2022 en 2023 apart gedaan.
+Dit was puur om wille van tijdsoverwegingen, maar dit kan ook in éénzelfde analyse worden gedaan (zoals we in (1) doen).
+Het gevolg is dat de detectiekansen dus zeker zullen verschillen tussen de jaren ook al beschouwden we jaar niet als covariaat in de detectiefunctie.
+
+```{r oppervlakte-steekproefkader-stratum, out.width = "100%", fig.cap = "Oppervlaktes per regio voor berekening densiteiten per stratum per regio."}
+include_graphics(file.path("media", "distance", "per_stratum", "oppervlakte_strata.jpg"))
+```
+
+We fitten voor (1) en (2) modellen zonder covariaten, met alle combinaties van covariaten en beschouwen ook tweewegsinteracties tussen de covariaten.
+De interactie regio met openheid kon niet gefit worden omdat HOL niet in De Moeren voorkomt.
+In de modellen zonder covariaten kunnen aanpassingstermen toegevoegd worden om een betere fit te krijgen tussen de curve en de data.
+Om te hoge flexibiliteit van dergelijke detectiefunctiemodellen te beperken, bijvoorbeeld aangeraden in aanwezigheid van overdispersie [@buckland2015], beperkten we het aantal aanpassingstermen tot maximaal 2.
+De `ds()` functie van de **Distance** package voegt zelf aanpassingstermen toe aan de sleutelfunctie om de fit te verbeteren tot er geen verbetering meer in AIC is.
+
+We vergeleken voor (1) en (2) de AIC van de verschillende modellen.
+Als het verschil tussen AIC's kleiner is dan 2, kiezen we het eenvoudigste van deze modellen (model met minste parameters).
+Modellen met vergelijkbare AIC's hebben vergelijkbare geschatte detectiekansen, dus in de praktijk is er weinig verschil in de keuze tussen deze modellen [@miller2019].
+
+Om te controleren of onze finale modellen voor (1) en (2) goed pasten bij de data ('goodness of fit') maakten we een Q-Q plot waarbij de cumulatieve distributiefunctie van de gefitte detectiefunctie (CDF) wordt vergeleken met de distributie van de data (EDF).
+We voerden ook de Cramér-von Mises test uit.
+Deze kwantificeert de informatie van de Q-Q-plot door te testen of punten van de EDF en CDF uit dezelfde verdeling komen [@buckland2015; @miller2019].
+Finaal bekeken we ook de kansdichtheidsfunctieplots.
+Indien de 'goodness of fit' niet goed was, werd het finale model opnieuw gefit waarbij we de afstanden gegroepeerd werden in intervallen van 50 m.
+
+De onzekerheid op de densiteitsschattingen werd berekend m.b.v. de standaard opties in de `ds()` functie.
 Zie @miller2019 en verwijzingen daarin voor meer informatie over de preciese berekeningen.
-De onzekerheid in de volgende resultaten zijn telkens 95 % betrouwbaarheidsintervallen.
+De onzekerheid op de resultaten zijn telkens 95 % betrouwbaarheidsintervallen.
+
+#### Resultaten densiteitsschattingen
+
+##### Per jaar per regio
+
+##### Per stratum binnen pilootstudie
+
+#### Discussie densiteitsschattingen
 
 ...
