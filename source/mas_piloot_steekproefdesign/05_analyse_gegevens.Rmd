@@ -11,7 +11,7 @@
 
 ## Case studie: de Veldleeuwerik {#veldleeuwerik}
 
-> waarom veldleeuwerik ...
+> waarom veldleeuwerik ... De resulaten van andere soorten zullen in een ander rapport worden beschreven.
 
 ### Densiteitsschattingen en detectiekans {#densiteitsschattingen}
 
@@ -146,6 +146,8 @@ De onzekerheid op de abundantie- en densiteitsschattingen komt van twee origines
 
 We voerden de distance sampling analyses uit met behulp van de **Distance** package [@R-Distance; @miller2019].
 We schatten (1) densiteiten per jaar (2018-2023) per regio (De Moeren, Oostelijke leemstreek) en (2) densiteiten per stratum (OL, HOL en binnen en buiten sbp) per regio binnen de pilootstudie (2022-2023).
+We beschouwen enkel waarnemingen van Veldleeuwerik met broedcode groter dan nul en houden ook rekening met het broedseizoen van de soort.
+Alle vier de verschillende telperiodes vallen binnen het broedseizoen van de soort (1 april - 15 juli) zodat we de data van alle telperiodes binnen het jaar konden gebruiken.
 
 Voor (1) beschouwden we alle telpunten van 2018-2021 en voegden enkel telpunten van 2022 en 2023 toe als ze minstens eenmaal geteld waren in een van de voorgaande jaren.
 Om abundanties te schatten, moesten we de oppervlakte van de regio's berekenen voor extrapolatie.
@@ -153,18 +155,20 @@ We trokken daarvoor een buffer van 300 m rond het steekproefkader: OLin De Moere
 Voor de formulatie van de detectiefunctie beschouwden we half-normal en hazard-rate sleutelfuncties die we lieten afhangen van covariaten regio en jaar.
 
 ```{r oppervlakte-steekproefkader-jaar, out.width = "90%", fig.cap = "Oppervlaktes per regio voor berekening densiteiten per jaar per regio."}
-include_graphics(file.path("media", "distance", "per_jaar", "oppervlakte_strata.jpg"))
+include_graphics(file.path("media", "distance", "per_jaar",
+                           "oppervlakte_strata.jpg"))
 ```
 
 Voor (2) beschouwden we enkel de tellingen binnen het pilootproject (alle telpunten van 2022-2023).
 We trokken daarvoor ook een buffer van 300 m rond het steekproefkader, deze keer opgesplitst per stratum (Fig. \@ref(fig:oppervlakte-steekproefkader-stratum)).
 Voor de formulatie van de detectiefunctie beschouwden we half-normal en hazard-rate sleutelfuncties die we lieten afhangen van covariaten regio, openheid (HOL of OL) en sbp (binnen of buiten sbp).
 Analyses werden voor 2022 en 2023 apart gedaan.
-Dit was puur om wille van tijdsoverwegingen, maar dit kan ook in éénzelfde analyse worden gedaan (zoals we in (1) doen).
+Dit was puur om wille van tijdsoverwegingen, maar dit kan ook in eenzelfde analyse worden gedaan (zoals we in (1) doen).
 Het gevolg is dat de detectiekansen dus zeker zullen verschillen tussen de jaren ook al beschouwden we jaar niet als covariaat in de detectiefunctie.
 
 ```{r oppervlakte-steekproefkader-stratum, out.width = "100%", fig.cap = "Oppervlaktes per regio voor berekening densiteiten per stratum per regio."}
-include_graphics(file.path("media", "distance", "per_stratum", "oppervlakte_strata.jpg"))
+include_graphics(file.path("media", "distance", "per_stratum",
+                           "oppervlakte_strata.jpg"))
 ```
 
 We fitten voor (1) en (2) modellen zonder covariaten, met alle combinaties van covariaten en beschouwen ook tweewegsinteracties tussen de covariaten.
@@ -183,16 +187,234 @@ Deze kwantificeert de informatie van de Q-Q-plot door te testen of punten van de
 Finaal bekeken we ook de kansdichtheidsfunctieplots.
 Indien de 'goodness of fit' niet goed was, werd het finale model opnieuw gefit waarbij we de afstanden gegroepeerd werden in intervallen van 50 m.
 
+Densiteitsschattingen werden omgezet naar aantallen per 100 ha.
 De onzekerheid op de densiteitsschattingen werd berekend m.b.v. de standaard opties in de `ds()` functie.
-Zie @miller2019 en verwijzingen daarin voor meer informatie over de preciese berekeningen.
+Zie @miller2019 en verwijzingen daarin voor meer informatie over de precieze berekeningen.
 De onzekerheid op de resultaten zijn telkens 95 % betrouwbaarheidsintervallen.
 
 #### Resultaten densiteitsschattingen
 
 ##### Per jaar per regio
 
+```{r}
+models_2018_2023 <- readRDS(file.path("media", "distance",
+                                      "models_2018_2023.rds"))
+ds_veldleeuwerik_2018_2023 <- models_2018_2023$Veldleeuwerik
+sum_veldleeuwerik_2018_2023 <- summary(ds_veldleeuwerik_2018_2023)
+```
+
+Het Hazard-rate model waarbij de detectiekans afhankelijk is van regio en jaar scoorde het best.
+De detectiekansen zijn dus verschillend per regio en jaar (Tabel \@ref(tab:detectiekans-jaar)).
+De gemiddelde detectiekans $\hat{P}_a$ is gelijk aan `r round(sum_veldleeuwerik_2018_2023$ds$average.p, digits = 3)` met standaardfout `r round(sum_veldleeuwerik_2018_2023$ds$average.p.se[1, 1], digits = 5)`.
+Omwille van de slechtere 'goodness of fit' werd dit model opnieuw gefit waarbij de afstanden gegroepeerd werden in intervallen van 50 m.
+De fit was dan beter maar nog altijd niet ideaal.
+Dit is ook te zien wanneer we de gemiddelde detectiecurve op de data plotten (Fig. \@ref(fig:detectiekans-jaar-plot)).
+
+```{r detectiekans-jaar}
+veldleeuwerik_covars <- c("regio", "jaar")
+cbind(ds_veldleeuwerik_2018_2023$ddf$data,
+      "detectiekans" = predict(ds_veldleeuwerik_2018_2023,
+                       se.fit = TRUE)$fitted,
+      "standaardfout" = predict(ds_veldleeuwerik_2018_2023,
+                                 se.fit = TRUE)$se) %>%
+  select(all_of(veldleeuwerik_covars), "detectiekans", "standaardfout") %>%
+  distinct() %>%
+  arrange(regio, jaar) %>%
+  kable(digits = 5,
+        caption = "Detectiekans per regio en jaar voor Veldleeuwerik.")
+```
+
+```{r detectiekans-jaar-plot, out.width = "90%", fig.cap = "Gemiddelde detectiecurve geplot over de data. De verticale streepjes op de x-as geven de locaties van de ruwe data aan."}
+include_graphics(file.path("media", "distance", "per_jaar",
+                           "detectiekans_per_jaar_simple_veldleeuwerik.jpg"))
+```
+
+```{r}
+summary_results_2018_2023 <- bind_rows(
+  sum_veldleeuwerik_2018_2023$dht$individuals$D %>%
+    mutate(variable = "density",
+           type = "Aantal broedparen per 100 ha"),
+  sum_veldleeuwerik_2018_2023$dht$individuals$N %>%
+    mutate(variable = "abundance",
+           type = "Totaal aantal broedparen")
+  ) %>%
+  dplyr::filter(Label != "Total") %>%
+  separate(Label, into = c("regio", "jaar"), sep = " - ")
+```
+
+Rekening houdend met de detectiekans, verkrijgen we via de formules besproken in het vorige hoofdstuk de abundantieschattingen in Tabel \@ref(tab:abundantie-jaar).
+Door te delen door de oppervlaktes van elk stratum (regio, jaar) krijgen we de densiteitsschattingen in Tabel \@ref(tab:densiteit-jaar) (Fig. \@ref(fig:densiteit-jaar-plot)).
+
+```{r abundantie-jaar}
+summary_results_2018_2023 %>%
+  dplyr::filter(variable == "abundance") %>%
+  select(regio, jaar, "abundantie" = Estimate, "standaardfout" = se,
+         lcl, ucl) %>%
+  kable(digits = 1,
+        caption = paste("Abundantieschattingen per regio en jaar voor",
+          "Veldleeuwerik. `lcl' staat voor `lower confidence limit' de",
+          "ondergrens van het 95 \\% betrouwbaarheidsinterval en `ucl' (`upper",
+          "confidence limit') voor de bovengrens."))
+```
+
+```{r densiteit-jaar}
+summary_results_2018_2023 %>%
+  dplyr::filter(variable == "density") %>%
+  select(regio, jaar, "densiteit" = Estimate, "standaardfout" = se,
+         lcl, ucl) %>%
+  kable(digits = 2,
+        caption = paste("Densiteitsschattingen per 100 ha per regio en jaar",
+                        "voor Veldleeuwerik."))
+```
+
+```{r densiteit-jaar-plot, out.width = "90%", fig.cap = "Densiteitsschattingen per 100 ha met 95 \\% betrouwbaarheidsintervallen per jaar per regio."}
+include_graphics(file.path("media", "distance", "per_jaar",
+                           "densiteit_per_jaar_veldleeuwerik.jpg"))
+```
+
 ##### Per stratum binnen pilootstudie
+
+```{r}
+# 2022
+models_2022 <- readRDS(file.path("media", "distance", "models_2022.rds"))
+ds_veldleeuwerik_2022 <- models_2022$Veldleeuwerik
+sum_veldleeuwerik_2022 <- summary(ds_veldleeuwerik_2022)
+
+# 2023
+models_2023 <- readRDS(file.path("media", "distance", "models_2023.rds"))
+ds_veldleeuwerik_2023 <- models_2023$Veldleeuwerik
+sum_veldleeuwerik_2023 <- summary(ds_veldleeuwerik_2023)
+```
+
+Het Hazard-rate model waarbij de detectiekans afhankelijk is van openheid scoorde het best voor zowel het model met data van 2022 als van 2023.
+De detectiekansen zijn dus verschillend per openheidsklasse HOL en OL (Tabel \@ref(tab:detectiekans-stratum)).
+De gemiddelde detectiekans $\hat{P}_a$ is gelijk aan `r round(sum_veldleeuwerik_2022$ds$average.p, digits = 3)` met standaardfout `r round(sum_veldleeuwerik_2022$ds$average.p.se[1, 1], digits = 5)` voor 2022 en `r round(sum_veldleeuwerik_2023$ds$average.p, digits = 3)` met standaardfout `r round(sum_veldleeuwerik_2023$ds$average.p.se[1, 1], digits = 5)`.
+Omwille van de slechtere 'goodness of fit' werd dit model opnieuw gefit waarbij de afstanden gegroepeerd werden in intervallen van 50 m.
+De fit was dan beter maar nog altijd niet ideaal.
+Dit is ook te zien wanneer we de gemiddelde detectiecurve op de data plotten (Fig. \@ref(fig:detectiekans-stratum-plot)).
+
+```{r detectiekans-stratum}
+veldleeuwerik_covars <- c("openheid", "jaar")
+cbind(ds_veldleeuwerik_2022$ddf$data,
+      "detectiekans" = predict(ds_veldleeuwerik_2022,
+                       se.fit = TRUE)$fitted,
+      "standaardfout" = predict(ds_veldleeuwerik_2022,
+                                 se.fit = TRUE)$se) %>%
+  mutate(jaar = 2022) %>%
+  bind_rows(
+    cbind(ds_veldleeuwerik_2023$ddf$data,
+      "detectiekans" = predict(ds_veldleeuwerik_2023,
+                       se.fit = TRUE)$fitted,
+      "standaardfout" = predict(ds_veldleeuwerik_2023,
+                                 se.fit = TRUE)$se) %>%
+    mutate(jaar = 2023)
+  ) %>%
+  select(all_of(veldleeuwerik_covars), "detectiekans", "standaardfout") %>%
+  distinct() %>%
+  arrange(jaar, openheid) %>%
+  kable(digits = 5,
+        caption = paste("Detectiekans per openheidsklasse en jaar voor",
+                        "Veldleeuwerik."))
+```
+
+```{r detectiekans-stratum-plot, out.width = "90%", fig.cap = "Gemiddelde detectiecurve geplot over de data voor model van elk jaar."}
+include_graphics(file.path("media", "distance", "per_stratum",
+                           "detectiekans_per_stratum_simple_veldleeuwerik.jpg"))
+```
+
+```{r}
+summary_results_2022 <- bind_rows(
+  sum_veldleeuwerik_2022$dht$individuals$D %>%
+    mutate(variable = "density",
+           type = "Aantal broedparen per 100 ha"),
+  sum_veldleeuwerik_2022$dht$individuals$N %>%
+    mutate(variable = "abundance",
+           type = "Totaal aantal broedparen")
+  ) %>%
+  dplyr::filter(Label != "Total") %>%
+  separate(Label, into = c("regio", "openheid", "sbp"), sep = " - ") %>%
+  mutate(jaar = 2022)
+
+summary_results_2023 <- bind_rows(
+  sum_veldleeuwerik_2023$dht$individuals$D %>%
+    mutate(variable = "density",
+           type = "Aantal broedparen per 100 ha"),
+  sum_veldleeuwerik_2023$dht$individuals$N %>%
+    mutate(variable = "abundance",
+           type = "Totaal aantal broedparen")
+  ) %>%
+  dplyr::filter(Label != "Total") %>%
+  separate(Label, into = c("regio", "openheid", "sbp"), sep = " - ") %>%
+  mutate(jaar = 2023)
+
+summary_results_stratum <- bind_rows(summary_results_2022, summary_results_2023)
+```
+
+Rekening houdend met de detectiekans, verkrijgen we via de formules besproken in het vorige hoofdstuk de abundantieschattingen in Tabel \@ref(tab:abundantie-stratum).
+Door te delen door de oppervlaktes van elk stratum (regio, jaar) krijgen we de densiteitsschattingen in Tabel \@ref(tab:densiteit-stratum) (Fig. \@ref(fig:densiteit-stratum-plot)).
+
+```{r abundantie-stratum}
+summary_results_stratum %>%
+  dplyr::filter(variable == "abundance") %>%
+  select(regio, jaar, openheid, sbp, "abundantie" = Estimate,
+         "standaardfout" = se, lcl, ucl) %>%
+  arrange(regio, jaar, openheid, sbp) %>%
+  kable(digits = 1,
+        caption = paste("Abundantieschattingen per stratum voor",
+          "Veldleeuwerik."))
+```
+
+```{r densiteit-stratum}
+summary_results_stratum %>%
+  dplyr::filter(variable == "density") %>%
+  select(regio, jaar, openheid, sbp, "densiteit" = Estimate,
+         "standaardfout" = se, lcl, ucl) %>%
+  arrange(regio, jaar, openheid, sbp) %>%
+  kable(digits = 2,
+        caption = paste("Densiteitsschattingen per 100 ha per stratum",
+                        "voor Veldleeuwerik."))
+```
+
+```{r densiteit-stratum-plot, out.width = "90%", fig.cap = "Densiteitsschattingen per 100 ha met 95 \\% betrouwbaarheidsintervallen per stratum."}
+include_graphics(file.path("media", "distance", "per_stratum",
+                           "densiteit_per_stratum_veldleeuwerik.jpg"))
+```
 
 #### Discussie densiteitsschattingen
 
-...
+Distance sampling is een statistische methode die over het algemeen goed werkt in combinatie met het MAS-protocol om densiteiten te schatten.
+Echter, we zagen wel dat de fit niet helemaal goed was voor de Veldleeuwerik.
+Een aanname van het model is namelijk dat de detectiekans afneemt over de afstand (zie assumpties hoofdstuk \@ref(inleiding-distance)).
+@roodbergen2011 hadden voor de Veldleeuwerik gelijkaardige problemen om een passende detectiecurve te fitten.
+Zij stellen dat dit kan worden veroorzaakt doordat vogels zich verplaatsen als reactie op de waarnemer of het afronden van afstanden door waarnemers.
+Dit laatste is bij ons zeker niet het geval doordat waarnemers een punt aanduiden op de kaart via een app en niet manueel een afstand invoeren.
+Het probleem ligt dus waarschijnlijk in het gedrag van de soort.
+Veldleeuwerikken vliegen gemakkelijk op bij verstoring waardoor we minder waarnemingen zien op kleinere afstanden en dan weer een groter aantal zien rond ca.
+75-100 m.
+Bovendien is de soort nog gemakkelijk te horen op grotere afstand zonder exact de locatie te weten.
+Hierdoor zien we opnieuw een stijging rond 250 m.
+@roodbergen2011 fitten daarom voor deze soort een detectiecurve m.b.v. afstandsintervallen.
+Wij groepeerden daarom de afstanden per 50 m.
+Hoewel de fit er visueel beter uitzag, waren de densiteitsschattingen en hun onzekerheid quasi identiek aan de eerdere resultaten zonder groepering (resultaten niet getoond).
+De toepasbaarheid van de methodiek zal dus sterk verschillen van soort tot soort.
+Dit zien we bijvoorbeeld ook als we Kneu en Kievit vergelijken (Fig. \@ref(detectiekans-vergelijking)) waarbij deze laatste ook een soort is die meestal op grotere afstanden wordt gezien o.w.v. het gedrag van de soort.
+Hoe dan ook wil dit niet zeggen dat we de resultaten niet kunnen gebruiken.
+Voor probleemgevallen zal de detectiefunctie niet dalen in het begin en de detectiekans zal dicht bij één liggen.
+Dit zorgt ervoor dat de schatting van de densiteit nog altijd kan gebruikt worden als minimumschatting waarbij de gecorrigeerde aantallen zeer dicht tegen de effectief getelde aantallen zullen liggen.
+
+```{r detectiekans-vergelijking, out.width = "90%", fig.cap = "Vergelijking van de fit van de detectiecurve op de data tussen Kneu en Kievit."}
+include_graphics(file.path("media", "distance", "per_jaar",
+                           "detectiekans_per_jaar_vergelijking.jpg"))
+```
+
+Er zijn ook andere manieren om densiteiten in te berekenen, zoals o.b.v. het gemiddelde of het maximum aantal broedparen over de telperiodes heen.
+Dit kan dan omgerekend worden naar densiteiten door te delen door de bezochte oppervlakte.
+Voor het gemiddelde moet dan ook met nultellingen worden rekening gehouden (maakt voor maximum niet uit).
+De gemiddeldes liggen lager, terwijl de maxima goed overeenkomen met de resultaten van distance sampling.
+@wiersma2021 gebruiken de maxima om de densiteiten te schatten.
+Ze stellen dat dit minimumschattingen zijn omdat ze niet voor onvolledige trefkans hebben gecorrigeerd.
+Wij doen dat wel via distance sampling, maar in het geval van de Veldleeuwerik zien we hier geen groot verschil tussen het gebruik van maxima of distance sampling.
+Het voordeel is wel dat we via distance samping ook een onzekerheid krijgen op de schatting.
+
+> uitbreiding distance sampling?
+> stan etc.
