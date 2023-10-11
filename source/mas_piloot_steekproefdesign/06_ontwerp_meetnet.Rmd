@@ -27,7 +27,7 @@ read_csv(file.path("media", "issues_pilootmeetnet",
                    "issues_pilootmeetnet.csv"),
          show_col_types = FALSE) %>%
   kable(caption = paste("Overzicht van problematische telpunten in het",
-                        "pilootmeetnet gecategoriseerd m.b.v. `regular expressions'."))
+          "pilootmeetnet gecategoriseerd m.b.v. `regular expressions'."))
 ```
 
 ### Tijdens de analyses
