@@ -397,12 +397,12 @@ Hierdoor zien we opnieuw een stijging rond 250 m.
 Wij groepeerden daarom de afstanden per 50 m.
 Hoewel de fit er visueel beter uitzag, waren de densiteitsschattingen en hun onzekerheid quasi identiek aan de eerdere resultaten zonder groepering (resultaten niet getoond).
 De toepasbaarheid van de methodiek zal dus sterk verschillen van soort tot soort.
-Dit zien we bijvoorbeeld ook als we Kneu en Kievit vergelijken (Fig. \@ref(detectiekans-vergelijking)) waarbij deze laatste ook een soort is die meestal op grotere afstanden wordt gezien o.w.v. het gedrag van de soort.
+Dit zien we bijvoorbeeld ook als we Kneu en Kievit vergelijken (Fig. \@ref(fig:detectiekans-vergelijking)) waarbij deze laatste ook een soort is die meestal op grotere afstanden wordt gezien o.w.v. het gedrag van de soort.
 Hoe dan ook wil dit niet zeggen dat we de resultaten niet kunnen gebruiken.
 Voor probleemgevallen zal de detectiefunctie niet dalen in het begin en de detectiekans zal dicht bij één liggen.
 Dit zorgt ervoor dat de schatting van de densiteit nog altijd kan gebruikt worden als minimumschatting waarbij de gecorrigeerde aantallen zeer dicht tegen de effectief getelde aantallen zullen liggen.
 
-```{r detectiekans-vergelijking, out.width = "90%", fig.cap = "Vergelijking van de fit van de detectiecurve op de data tussen Kneu en Kievit."}
+```{r detectiekans-vergelijking, out.width = "90%", fig.cap = "Vergelijking van de fit van de gemiddelde detectiecurve op de data tussen Kneu en Kievit."}
 include_graphics(file.path("media", "distance", "per_jaar",
                            "detectiekans_per_jaar_vergelijking.jpg"))
 ```
