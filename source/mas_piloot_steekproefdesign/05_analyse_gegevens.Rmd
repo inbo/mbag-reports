@@ -11,11 +11,11 @@
 
 ## Case studie: de Veldleeuwerik {#veldleeuwerik}
 
-> waarom veldleeuwerik ... De resulaten van andere soorten zullen in een ander rapport worden beschreven.
+\textcolor{red}{waarom veldleeuwerik ... De resulaten van andere soorten zullen in een ander rapport worden beschreven.}
 
 ### Densiteitsschattingen en detectiekans {#densiteitsschattingen}
 
-> densiteitsschattingen via distance sampling
+\textcolor{red}{densiteitsschattingen via distance sampling}
 
 #### Inleiding tot distance sampling {#inleiding-distance}
 
@@ -220,7 +220,7 @@ cbind(ds_veldleeuwerik_2018_2023$ddf$data,
   select(all_of(veldleeuwerik_covars), "detectiekans", "standaardfout") %>%
   distinct() %>%
   arrange(regio, jaar) %>%
-  kable(digits = 5,
+  kable(digits = 3,
         caption = "Detectiekans per regio en jaar voor Veldleeuwerik.")
 ```
 
@@ -312,14 +312,14 @@ cbind(ds_veldleeuwerik_2022$ddf$data,
   select(all_of(veldleeuwerik_covars), "detectiekans", "standaardfout") %>%
   distinct() %>%
   arrange(jaar, openheid) %>%
-  kable(digits = 5,
+  kable(digits = 3,
         caption = paste("Detectiekans per openheidsklasse en jaar voor",
                         "Veldleeuwerik."))
 ```
 
-```{r detectiekans-stratum-plot, out.width = "90%", fig.cap = "Gemiddelde detectiecurve geplot over de data voor model van elk jaar."}
+```{r detectiekans-stratum-plot, out.width = "90%", fig.cap = "Gemiddelde detectiecurve (stippellijn) geplot over de data voor model van elk jaar. Ter vergelijking zijn de detectiecurves per openheidsklasse ook aangegeven."}
 include_graphics(file.path("media", "distance", "per_stratum",
-                           "detectiekans_per_stratum_simple_veldleeuwerik.jpg"))
+                           "detectiekans_per_stratum_veldleeuwerik.jpg"))
 ```
 
 ```{r}
@@ -407,14 +407,18 @@ include_graphics(file.path("media", "distance", "per_jaar",
                            "detectiekans_per_jaar_vergelijking.jpg"))
 ```
 
-Er zijn ook andere manieren om densiteiten in te berekenen, zoals o.b.v. het gemiddelde of het maximum aantal broedparen over de telperiodes heen.
+Er zijn ook andere manieren om densiteiten in te berekenen, zoals o.b.v. het maximum aantal broedparen over de telperiodes heen.
 Dit kan dan omgerekend worden naar densiteiten door te delen door de bezochte oppervlakte.
-Voor het gemiddelde moet dan ook met nultellingen worden rekening gehouden (maakt voor maximum niet uit).
-De gemiddeldes liggen lager, terwijl de maxima goed overeenkomen met de resultaten van distance sampling.
+De maxima komen goed overeeen met de resultaten van distance sampling (Fig. \@ref(fig:densiteit-methodiek)).
 @wiersma2021 gebruiken de maxima om de densiteiten te schatten.
 Ze stellen dat dit minimumschattingen zijn omdat ze niet voor onvolledige trefkans hebben gecorrigeerd.
-Wij doen dat wel via distance sampling, maar in het geval van de Veldleeuwerik zien we hier geen groot verschil tussen het gebruik van maxima of distance sampling.
-Het voordeel is wel dat we via distance samping ook een onzekerheid krijgen op de schatting.
+\textcolor{red}{eigenlijk niet het geval omdat wij door 4 delen!} Wij doen dat wel via distance sampling, maar in het geval van de Veldleeuwerik zien we hier geen groot verschil tussen het gebruik van maxima of distance sampling.
+Het voordeel is wel dat we via distance samping alle data gebruiken.
+\textcolor{red}{zie mail en leg figuur uit}
 
-> uitbreiding distance sampling?
-> stan etc.
+```{r densiteit-methodiek, out.width = "90%", fig.cap = "Vergelijking van twee methodes om densiteiten te schatten. Zie tekst voor meer uitleg."}
+include_graphics(file.path("media", "distance", "per_stratum",
+                           "densiteit_per_stratum_max_veldleeuwerik.jpg"))
+```
+
+\textcolor{red}{uitbreiding distance sampling?} \textcolor{red}{stan etc.}
