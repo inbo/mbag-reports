@@ -407,18 +407,25 @@ include_graphics(file.path("media", "distance", "per_jaar",
                            "detectiekans_per_jaar_vergelijking.jpg"))
 ```
 
-Er zijn ook andere manieren om densiteiten in te berekenen, zoals o.b.v. het maximum aantal broedparen over de telperiodes heen.
-Dit kan dan omgerekend worden naar densiteiten door te delen door de bezochte oppervlakte.
-De maxima komen goed overeeen met de resultaten van distance sampling (Fig. \@ref(fig:densiteit-methodiek)).
-@wiersma2021 gebruiken de maxima om de densiteiten te schatten.
+Het is ook mogelijk om densiteiten in te berekenen o.b.v. het maximum aantal broedparen over de telperiodes heen per telpunt per jaar.
+Dit kan dan omgerekend worden naar densiteiten per stratum door het gemiddelde nemen per stratum en daarna te delen door de oppervlakte van een telcirkel.
+Via bootstrapping kan een betrouwbaarheidsinterval bekomen worden.
+De maxima komen voor Veldleeuwerik goed overeen met de resultaten van distance sampling (Fig. \@ref(fig:densiteit-methodiek)).
+@wiersma2021 gebruiken de maxima om densiteiten van akkervogels in te schatten.
 Ze stellen dat dit minimumschattingen zijn omdat ze niet voor onvolledige trefkans hebben gecorrigeerd.
-\textcolor{red}{eigenlijk niet het geval omdat wij door 4 delen!} Wij doen dat wel via distance sampling, maar in het geval van de Veldleeuwerik zien we hier geen groot verschil tussen het gebruik van maxima of distance sampling.
-Het voordeel is wel dat we via distance samping alle data gebruiken.
-\textcolor{red}{zie mail en leg figuur uit}
+Echter, wij zien hier dat deze methode niet per se lagere resultaten bekomt dan via distance sampling.
+De maxima-methode zal lagere schattingen bekomen als de detectiekans van de soort lager is omdat er dan een sterkere correctie optreedt bij distance sampling die niet zal gebeuren bij de maxima-methode, maar dit is niet per se het geval voor soorten met een hoge detectiekans ($p$ dicht bij 1).
+Bovendien wordt er bij distance sampling meer gewicht gegeven aan lage aantallen omdat alle data worden meegenomen in de analyse (gemiddeld aantal per telpunt per jaar via effort $T$) terwijl via de maxima-methode veel lage waardes worden weggefilterd (maximum aantal per telpunt per jaar).
+Het verschil tussen beide methodes zal dus afhankelijk zijn van soort tot soort omwille van een combinatie van de detectiekans en zeldzaamheid van een soort (en mogelijk nog andere factoren die hier niet zijn opgenomen).
+Zoals in de vorige paragraaf vermeld, kan distance sampling ook als een minimumschatting genomen worden bij hoge detectiekansen, maar deze is mogelijks te strikt in vergelijking met de maxima-methode in biologische context.
+Als er 3 broedgevallen gezien zijn in telperiodes 1, 2 en 4, maar slechts 1 in periode 3, dan kan dit laatste puur per toeval zijn en zou je geneigd zijn om te besluiten dat er in die telcirkel 3 broedgevallen zijn (maxima methode) en niet 2.5 (gemiddelde).
+Een meer diepgaande analyse tussen beide methodes van meerdere soorten met verschillende detectiekansen zou interessant kunnen zijn, maar dit valt buiten het doel van dit rapport.
+\textcolor{red}{of nog uitzoeken?}
 
-```{r densiteit-methodiek, out.width = "90%", fig.cap = "Vergelijking van twee methodes om densiteiten te schatten. Zie tekst voor meer uitleg."}
+```{r densiteit-methodiek, out.width = "90%", fig.cap = "Vergelijking van twee methodes om densiteiten te schatten (Veldleeuwerik). De data bij distance sampling zijn gemiddelde densiteiten over telperiodes heen per telpunt gecorrigeerd voor de detectiekans van de soort in dat stratum. De data bij `gemiddelde van maxima' zijn maxima per telpunt. De puntschattingen en betrouwbaarheidsintervallen zijn bekomen via bootstrapping ($B = 1000$). Voor betere visualisatie hebben we een pseudo-log-transformatie langs de y-as gedaan."}
 include_graphics(file.path("media", "distance", "per_stratum",
-                           "densiteit_per_stratum_max_veldleeuwerik.jpg"))
+                           "densiteit_per_stratum_methods_veldleeuwerik.jpg"))
 ```
 
 \textcolor{red}{uitbreiding distance sampling?} \textcolor{red}{stan etc.}
+
