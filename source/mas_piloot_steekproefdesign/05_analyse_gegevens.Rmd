@@ -11,7 +11,7 @@
 
 ## Case studie: de Veldleeuwerik {#veldleeuwerik}
 
-\textcolor{red}{waarom veldleeuwerik ... De resulaten van andere soorten zullen in een ander rapport worden beschreven.}
+\textcolor{red}{waarom veldleeuwerik ... De resultaten van andere soorten zullen in een ander rapport worden beschreven.}
 
 ### Densiteitsschattingen en detectiekans {#densiteitsschattingen}
 
@@ -51,7 +51,7 @@ Distance sampling is erg populair bij het tellen van vogels met behulp van puntt
 Een punttransect is een cirkelvormige plot met radius $w$ waar een waarnemer vanuit een centraal punt de radiale afstand $r_i$ meet tot elk van de gedetecteerde individuen $i = 1, ..., n$ met $n$ het totaal aantal waarnemingen (Fig. \@ref(fig:distance-methode)A).
 $w$ wordt ook wel de afknotafstand genoemd.
 
-Om de detectiekans te schatten maak je een model voor de probabiliteit dat een individue van een soort wordt gedetecteerd gegeven we de afstand tot het individu weten.
+Om de detectiekans te schatten maak je een model voor de probabiliteit dat een individu van een soort wordt gedetecteerd gegeven we de afstand tot het individu weten.
 Dit model is de detectiefunctie (ook wel detectiecurve genoemd) en wordt genoteerd als $g(r;\boldsymbol \theta)$ met $r$ de radiale afstand van waarneming tot teller/telpunt en $\boldsymbol \theta$ een vector van parameters die geschat moeten worden.
 Het doel is de gemiddelde kans op detectie ($p$) te bepalen.
 Dit is het gemiddelde over afstand van 0 m tot de afknotafstand $w$, in ons geval $w = 300$.
@@ -129,7 +129,7 @@ $$
 \hat{N}(s) = \frac{A(s)}{a(s)}\hat{N}_C(s)
 $$
 
-De geschatte densiteit in stratumm $s$ is dan $\hat{N}(s) / A(s)$.
+De geschatte densiteit in stratum $s$ is dan $\hat{N}(s) / A(s)$.
 De abundanties kunnen ook opgeteld worden voor een totale schatting $\hat{N}_C$.
 Een maat voor de gemiddelde detectiekans $\hat{P}_a$ is dan:
 
@@ -151,7 +151,7 @@ Alle vier de verschillende telperiodes vallen binnen het broedseizoen van de soo
 
 Voor (1) beschouwden we alle telpunten van 2018-2021 en voegden enkel telpunten van 2022 en 2023 toe als ze minstens eenmaal geteld waren in een van de voorgaande jaren.
 Om abundanties te schatten, moesten we de oppervlakte van de regio's berekenen voor extrapolatie.
-We trokken daarvoor een buffer van 300 m rond het steekproefkader: OLin De Moeren, en OL en HOL in de Oostelijke leemstreek (Fig. \@ref(fig:oppervlakte-steekproefkader-jaar)).
+We trokken daarvoor een buffer van 300 m rond het steekproefkader: OL in De Moeren, en OL en HOL in de Oostelijke leemstreek (Fig. \@ref(fig:oppervlakte-steekproefkader-jaar)).
 Voor de formulatie van de detectiefunctie beschouwden we half-normal en hazard-rate sleutelfuncties die we lieten afhangen van covariaten regio en jaar.
 
 ```{r oppervlakte-steekproefkader-jaar, out.width = "90%", fig.cap = "Oppervlaktes per regio voor berekening densiteiten per jaar per regio."}
@@ -164,7 +164,7 @@ We trokken daarvoor ook een buffer van 300 m rond het steekproefkader, deze keer
 Voor de formulatie van de detectiefunctie beschouwden we half-normal en hazard-rate sleutelfuncties die we lieten afhangen van covariaten regio, openheid (HOL of OL) en sbp (binnen of buiten sbp).
 Analyses werden voor 2022 en 2023 apart gedaan.
 Dit was puur om wille van tijdsoverwegingen, maar dit kan ook in eenzelfde analyse worden gedaan (zoals we in (1) doen).
-Het gevolg is dat de detectiekansen dus zeker zullen verschillen tussen de jaren ook al beschouwden we jaar niet als covariaat in de detectiefunctie.
+Het gevolg is dat de detectiekansen dus zeker zullen verschillen tussen de jaren ook al beschouwden we jaar niet als covariant in de detectiefunctie.
 
 ```{r oppervlakte-steekproefkader-stratum, out.width = "100%", fig.cap = "Oppervlaktes per regio voor berekening densiteiten per stratum per regio."}
 include_graphics(file.path("media", "distance", "per_stratum",
@@ -428,4 +428,3 @@ include_graphics(file.path("media", "distance", "per_stratum",
 ```
 
 \textcolor{red}{uitbreiding distance sampling?} \textcolor{red}{stan etc.}
-
