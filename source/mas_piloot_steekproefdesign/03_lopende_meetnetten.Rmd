@@ -2,4 +2,6 @@
 
 -   Hoe afstemmen?
     -   bv. met ABV boerenlandindex
+    -   import in broedvogelatlas
 -   Welke plaats heeft mas in lopende meetnetten?
+-   Invulling van farmland bird index (boerenlandvogel index)  
