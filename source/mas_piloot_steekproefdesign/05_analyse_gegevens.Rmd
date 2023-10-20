@@ -176,7 +176,7 @@ Model fit was niet ideaal en in werkelijkheid verwachten we zelfs dat het versch
 We hebben dus zeker geen bewijs dat er compensatie zou zijn bij de vrijwilligers waarbij ze wel meer soorten zouden noteren met broedcode nul, maar minder met broedcode groter dan nul.
 Voor aantal waarnemingen konden we hetzelfde besluiten (95 % CI: -0,2 tot 0,24).
 
-```{r dubbeltellingen-aantallen, out.width = "90%", fig.cap = ""}
+```{r dubbeltellingen-aantallen, out.width = "90%", fig.cap = "Verschil in aantal soorten en waarnemingen van vogels met broedcode groter dan nul tussen vrijwilligers en professionele teller met aanduiding van posterior gemiddelde en 95  \\% credible interval."}
 include_graphics(file.path("media", "dubbeltellingen",
                            "vergelijk_aantallen.pdf"))
 ```
@@ -201,7 +201,7 @@ Hoe meer waarnemingen, hoe meer soorten.
 Naarmate het aantal waarnemingen een bepaalde grootte overschrijdt, vlakt het aantal soorten af.
 Ook hier zagen we een verschil tussen professionele en vrijwillige tellers met over de totale range van aantal waarnemingen een lager aantal soorten gezien door vrijwillige tellers (95 % CI: -1,2 tot -0,28) (Fig. \@ref(fig:dubbeltellingen-correlatie)).
 
-```{r dubbeltellingen-correlatie, out.width = "90%", fig.cap = "..."}
+```{r dubbeltellingen-correlatie, out.width = "90%", fig.cap = "Verband tussen het aantal soorten en aantal waarnemingen van vogels met broedcode groter dan nul (posterior gemiddelde en 95  \\% credible interval)."}
 include_graphics(file.path("media", "dubbeltellingen",
                            "correlatie_aantallen.pdf"))
 ```
