@@ -9,9 +9,125 @@
     -   beheerovereenkomsten analyse
     -   totaalanalyse projpred
 
+## Berekening verklarende variabelen
+
+...
+
+## Data exploratie MAS-tellingen
+
+### Enkele cijfers
+
+Aantallen
+
+```{r samenvatting-aantallen}
+summary_mas_2018_2023 <- read_csv(file.path("media", "data_exploratie",
+                                            "summary_mas_2018_2023.csv"),
+                                  show_col_types = FALSE) 
+summary_mas_2018_2023 %>%
+  group_by(regio, jaar, aantal_soorten_regiojaar) %>%
+  summarise(`aantal waarnemingen` = sum(aantal_waarnemingen),
+            `aantal telpunten` = sum(aantal_plots),
+            .groups = "drop") %>%
+  select(regio, jaar, `aantal telpunten`, `aantal waarnemingen`,
+         `aantal soorten` = aantal_soorten_regiojaar) %>%
+  arrange(regio, jaar) %>%
+  kable(caption = "Samenvattende tabel aantallen binnen het pilootmeetnet.")
+```
+
+```{r telintensiteit, out.width = "90%", fig.cap = "..."}
+include_graphics(file.path("media", "data_exploratie",
+                           "tellingen_mas_2018_2023.jpg"))
+```
+
+```{r aantal-waarnemingen, out.width = "100%", fig.cap = "..."}
+include_graphics(file.path("media", "data_exploratie",
+                           "waarnemingen_mas_2018_2023.jpg"))
+```
+
+```{r aantal-soorten, out.width = "100%", fig.cap = "..."}
+include_graphics(file.path("media", "data_exploratie",
+                           "soorten_mas_2018_2023.jpg"))
+```
+
+### Broedcodes
+
+```{r broedcodes, out.width = "100%", fig.cap = "..."}
+include_graphics(file.path("media", "data_exploratie",
+                           "broedcode_mas_2022_2023.jpg"))
+```
+
+### Relatieve frequenties
+
+```{r relfreqs, out.width = "90%", fig.cap = "..."}
+include_graphics(file.path("media", "data_exploratie",
+                           "soortenfreqs_mas_2018_2023.jpg"))
+```
+
+```{r verschilfreqs, out.width = "90%", fig.cap = "..."}
+include_graphics(file.path("media", "data_exploratie",
+                           "verschilfreq_total_mas_2018_2023.jpg"))
+```
+
+### Evolutie toename soortbeschermingsmaatregelen
+
+...
+
+### Zoogdieren
+
+...
+
+## Vergelijking van gepaarde tellingen tussen vrijwillige en professionele tellers
+
+### Inleiding
+
+### Methodiek
+
+### Resultaten en discussie
+
+Onze primaire interesse ging uit naar een verschil tussen professionele teller en vrijwilligers voor soorten met broedcode groter dan nul.
+We zien dat vrijwilligers een significant minder aantal waarnemingen en soorten melden dan de professionele teller (Fig. \@ref(fig:dubbeltellingen-aantallen)).
+Verdere exploratie maakte duidelijk dat dit verschil in aantal soorten gelijkaardig is voor broedcode nul en broedcode groter dan nul (95 % CI: -0.21 tot 0.25).
+Model fit was niet ideaal en in werkelijkheid verwachten we zelfs dat het verschil in aantal soorten met broedcode 0 nog lager ligt voor vrijwilligers in vergelijking met het verschil bij broedcode groter dan 0 omdat het aantal nultellingen door het model onderschat werd.
+We hebben dus zeker geen bewijs dat er compensatie zou zijn bij de vrijwilligers waarbij ze wel meer soorten zouden zouden noteren met broedcode 0, maar minder met broedcode \> 0.
+Voor aantal waarnemingen konden we hetzelfde besluiten (95 % CI: -0.2 tot 0.24).
+
+```{r dubbeltellingen-aantallen, out.width = "90%", fig.cap = "..."}
+include_graphics(file.path("media", "dubbeltellingen",
+                           "vergelijk_aantallen.jpg"))
+```
+
+Ook vonden we dat er geen significant verschil was in aantal soorten (data broedcode \> 0) tussen beginnende en ervaren vrijwilligers (95 % CI: -1.86 tot 1.13).
+Voor aantal waarnemingen konden we hetzelfde besluiten (95 % CI: -1.09 tot 3.73).
+
+We moeten opmerken dat deze resultaten gebaseerd zijn op modellen die niet altijd een goede weerspiegeling waren van de data.
+De responsdata waren aantallen en dus positief en discreet van aard.
+Desondanks kozen we vaak voor modellen met een Normale verdeling.
+Dit gaf eenvoudig interpreteerbare resultaten en was ook vaak niet problematisch omdat de aantallen vaak hoog genoeg lagen (en er dus geen negatieve waarden zouden voorspeld worden door het model).
+In verschillende gevallen werden de resultaten van de Poisson en Negatief binomiaal modellen vergeleken met het Normaal model.
+Na omrekenen gaven deze modellen gelijkaardige resultaten.
+Bovendien waren we telkens geïnteresseerd in specifieke hypotheses.
+Hoewel precieze credible intervals van de verschillende modellen wel verschilden, gaven ze wel een eenduidig antwoord op onze vragen.
+Deze waren ook telkens in lijn met de data exploratie.
+
+Ten slotte kozen we het aantal soorten en het aantal waarnemingen als maten om te achterhalen of tellingen van vrijwilligers en de professionele teller gelijkaardige resultaten opleverden.
+Dit zijn geen onafhankelijke maten.
+Zoals verwacht toonden we aan dat deze log-lineair verwant zijn aan elkaar.
+Hoe meer waarnemingen, hoe meer soorten.
+Naarmate het aantal waarnemingen een bepaalde grootte overschrijdt, vlakt het aantal soorten af.
+Ook hier zagen we een verschil tussen professionele en vrijwillige tellers met over de totale range van aantal waarnemingen een lager aantal soorten gezien door vrijwillige tellers (95 % CI: -1.2 tot -0.28) (Fig. \@ref(fig:dubbeltellingen-correlatie)).
+
+```{r dubbeltellingen-correlatie, out.width = "90%", fig.cap = "..."}
+include_graphics(file.path("media", "dubbeltellingen",
+                           "correlatie_aantallen.jpg"))
+```
+
 ## Case studie: de Veldleeuwerik {#veldleeuwerik}
 
 \textcolor{red}{waarom veldleeuwerik ... De resultaten van andere soorten zullen in een ander rapport worden beschreven.}
+
+### Data exploratie {#exploratie-veldleeuwerik}
+
+...
 
 ### Densiteitsschattingen en detectiekans {#densiteitsschattingen}
 
