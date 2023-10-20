@@ -80,24 +80,109 @@ include_graphics(file.path("media", "data_exploratie",
 
 ### Inleiding
 
+Tellingen worden verricht door zowel vrijwilligers als professionele tellers.
+In 2022 werden elf telpunten in De Moeren zowel door vrijwilligers als door een professionele teller in dezelfde telperiodes geteld.
+Met deze opzet wilden we achterhalen of tellingen van vrijwilligers en een professionele teller gelijkaardige resultaten opleveren.
+We waren vooral geïnteresseerd in waarnemingen met broedcode groter dan nul, omdat waarnemingen met broedcode 0 meer op toeval berust zijn (trekkers/pleisteraars of roofvogels).
+
 ### Methodiek
+
+In totaal werden tien telpunten in vier telperiodes en één telpunt in drie telperiodes geteld door zowel een vrijwilliger als een professionele teller.
+We beschikten dus over `r 10 * 4 + 3` gepaarde datapunten.
+De telpunten werden geteld door zeven verschillende vrijwilligers die geclassificeerd konden worden als "beginner" en "ervaren".
+
+We wilden achterhalen of tellingen van vrijwilligers en een professionele teller gelijkaardige resultaten opleveren.
+Dit deden we door het aantal soorten en aantal waarnemingen te vergelijken tussen beide.
+Verder keken we ook naar het effect van broedcode en ervaring van de vrijwilligers.
+Analyses werden gedaan via Bayesiaanse generalized linear mixed models (GLMM's) met de **brms** package v2.19.0 [@bürkner2017; @bürkner2018; @bürkner2021] met standaard priors.
+We vergeleken telkens drie verschillende responsdistributies (en link functies $g()$).
+
+-   Normaal verdeling (identity link)
+-   Poisson verdeling (log link)
+-   Negatief binomiaal verdeling (log link)
+
+We stelden de volgende onderzoeksvragen en bijbehorende modellen op:
+
+**Aantal soorten/waarnemingen**
+
+Is er een verschil in het aantal soorten/waarnemingen met broedcode groter dan nul gezien door de professionele teller vs. de vrijwilligers?
+
+Beschouw $Y_{ijk}$ een observatie $i$ van een aantal soorten/waarnemingen in plot $j$ en telperiode $k$.
+Deze observaties zijn door zowel een professionele teller $X_{status} = 0$ als een vrijwillige teller $X_{status} = 1$ gedaan.
+We voegen een random effect toe van telperiode genest in plot $b_{1}$.
+Bovendien kunnen aantallen van eenzelfde plot meer op elkaar lijken dan aantallen dan aantallen van verschillende plots.
+We voegen ook een random effect toe van plot $b_{2}$.
+
+$$
+g(\text{E}(Y_{ijk})) = \beta_0 + \beta_{1}X_{status, i} + b_{1,jk} + b_{2,k}
+$$
+
+We besluiten dat er een significant verschil is als het 95 % credible interval (CI) van $\beta_1$ nul niet bevat.
+
+**Effect van broedcode**
+
+Kan een verschil in aantal soorten of aantal waarnemingen tussen professionele en vrijwillige tellers verschillen tussen broedcodes?
+
+We voegden de data met broedcode nul toe en maakten een extra dummyvariabele aan die een onderscheid maakt tussen data met broedcode nul $X_{broedcode} = 0$ en data met broedcode groter dan nul.
+
+$$
+g(\text{E}(Y_{ijk})) = \beta_0 + \beta_{1}X_{status, i} + \beta_{2}X_{broedcode, i} + \beta_{3}X_{status, i} \times X_{broedcodee, i}+ b_{1,jk} + b_{2,k}
+$$
+
+We besluiten dat er een significant verschillend effect van broedcode is als het 95 % credible interval van $\beta_3$ nul niet bevat.
+
+**Effect van ervaring**
+
+Is er een verschil in het aantal soorten of aantal waarnemingen met broedcode groter dan nul tussen ervaren en beginnende vrijwillige tellers?
+
+De professionele teller is ervaren, maar bij de vrijwilligers hebben we twee ervaringscategoriën: "beginner" ($X_{ervaring} = 0$) en "ervaren" ($X_{ervaring} = 1$).
+
+$$
+g(\text{E}(Y_{ijk})) = \beta_0 + \beta_{1}X_{status, i} + \beta_{2}X_{ervaring, i} + \beta_{3}X_{status, i} \times X_{ervaring, i} + b_{1,jk} + b_{2,k}
+$$
+
+We besluiten dat er een significant verschillend effect van broedcode is als het 95 % credible interval van $\beta_3$ nul niet bevat.
+
+**Correlatie tussen aantal soorten en aantal waarnemingen**
+
+Ten slotte onderzochten we het verband tussen het aantal soorten en het aantal waarnemingen met broedcode groter dan nul.
+Is er een verschil in de mate waarin aantal soorten toe- of afneemt met het aantal waarnemingen voor professionele teller in vergelijking met vrijwilligers?
+
+Beschouw $Y_{ij}$ een observatie $i$ van een aantal soorten in plot $j$ en $X_{wnm}$ een variabele van het aantal waarnemingen.
+We fitten een model waarbij de intercepten voor zowel de professionele teller ($\beta_0$) als de vrijwilligers ($\beta_0 + \beta_2$) gelijk zijn aan nul (nul soorten bij nul waarnemingen).
+We hebben dus enkel een slope voor de professionele teller ($\beta_1$) en een slope voor de vrijwilligers ($\beta_1 + \beta_3$).
+We voegden random slopes toe per plot $j$ voor professionelen ($b_1$) en vrijwilligers ($b_1 + b_2$).
+
+$$
+\text{E}(Y_{ij}) = \beta_{1}\ln{(X_{wnm, i})} + \beta_{2}\ln{(X_{wnm, i})}\times X_{status, i}  + b_{1,j}\ln{(X_{wnm, i})} + b_{2,j}\ln{(X_{wnm, i})}\times X_{status, i}
+$$
+
+We besluiten dat er een significant verschil is als het 95 % credible interval van $\beta_2$ nul niet bevat.
+
+We bemonsterden de posterior verdelingen voor de modellen met drie Markov Chain Monte Carlo (MCMC) ketens, die elk 4000 iteraties draaiden, waarvan de eerste 2000 werden verwijderd als burn-in.
+We onderzochten MCMC-convergentie door visuele beoordeling van trace plots en posterior densiteiten.
+We onderzochten ook de 'potential scale reduction factors' [@gelman1992] voor elke scalaire parameter in het model zoals voorgesteld door [@gelman2013].
+Ze lagen allemaal dicht bij 1, zoals vereist.
+
+Via 'Leave-One-Out Cross-Validation' vergeleken we eerste welke responsdistributie het best paste bij de data en ten tweede of het random effect van plot $b_{2}$ noodzakelijk was of niet (niet gedaan bij correlatie model).
+De model fit werd bevestigd op basis van 'posterior predictive checks' waarbij we de geobserveerde uitkomst vergeleken met gesimuleerde datasets van de 'posterior predictive distribution'.
 
 ### Resultaten en discussie
 
 Onze primaire interesse ging uit naar een verschil tussen professionele teller en vrijwilligers voor soorten met broedcode groter dan nul.
-We zien dat vrijwilligers een significant minder aantal waarnemingen en soorten melden dan de professionele teller (Fig. \@ref(fig:dubbeltellingen-aantallen)).
-Verdere exploratie maakte duidelijk dat dit verschil in aantal soorten gelijkaardig is voor broedcode nul en broedcode groter dan nul (95 % CI: -0.21 tot 0.25).
+We zagen dat vrijwilligers een significant minder aantal waarnemingen (95 % CI: -5,94 tot -3,04) en soorten (95 % CI: -4,22 tot -2.20) meldden dan de professionele teller (Fig. \@ref(fig:dubbeltellingen-aantallen)).
+Verdere exploratie maakte duidelijk dat dit verschil in aantal soorten gelijkaardig is voor broedcode nul en broedcode groter dan nul (95 % CI: -0,21 tot 0,25).
 Model fit was niet ideaal en in werkelijkheid verwachten we zelfs dat het verschil in aantal soorten met broedcode 0 nog lager ligt voor vrijwilligers in vergelijking met het verschil bij broedcode groter dan 0 omdat het aantal nultellingen door het model onderschat werd.
-We hebben dus zeker geen bewijs dat er compensatie zou zijn bij de vrijwilligers waarbij ze wel meer soorten zouden zouden noteren met broedcode 0, maar minder met broedcode \> 0.
-Voor aantal waarnemingen konden we hetzelfde besluiten (95 % CI: -0.2 tot 0.24).
+We hebben dus zeker geen bewijs dat er compensatie zou zijn bij de vrijwilligers waarbij ze wel meer soorten zouden noteren met broedcode nul, maar minder met broedcode groter dan nul.
+Voor aantal waarnemingen konden we hetzelfde besluiten (95 % CI: -0,2 tot 0,24).
 
 ```{r dubbeltellingen-aantallen, out.width = "90%", fig.cap = "..."}
 include_graphics(file.path("media", "dubbeltellingen",
                            "vergelijk_aantallen.jpg"))
 ```
 
-Ook vonden we dat er geen significant verschil was in aantal soorten (data broedcode \> 0) tussen beginnende en ervaren vrijwilligers (95 % CI: -1.86 tot 1.13).
-Voor aantal waarnemingen konden we hetzelfde besluiten (95 % CI: -1.09 tot 3.73).
+Ook vonden we dat er geen significant verschil was in aantal soorten (data broedcode \> 0) tussen beginnende en ervaren vrijwilligers (95 % CI: -1,86 tot 1,13).
+Voor aantal waarnemingen konden we hetzelfde besluiten (95 % CI: -1,09 tot 3,73).
 
 We moeten opmerken dat deze resultaten gebaseerd zijn op modellen die niet altijd een goede weerspiegeling waren van de data.
 De responsdata waren aantallen en dus positief en discreet van aard.
@@ -114,12 +199,14 @@ Dit zijn geen onafhankelijke maten.
 Zoals verwacht toonden we aan dat deze log-lineair verwant zijn aan elkaar.
 Hoe meer waarnemingen, hoe meer soorten.
 Naarmate het aantal waarnemingen een bepaalde grootte overschrijdt, vlakt het aantal soorten af.
-Ook hier zagen we een verschil tussen professionele en vrijwillige tellers met over de totale range van aantal waarnemingen een lager aantal soorten gezien door vrijwillige tellers (95 % CI: -1.2 tot -0.28) (Fig. \@ref(fig:dubbeltellingen-correlatie)).
+Ook hier zagen we een verschil tussen professionele en vrijwillige tellers met over de totale range van aantal waarnemingen een lager aantal soorten gezien door vrijwillige tellers (95 % CI: -1,2 tot -0,28) (Fig. \@ref(fig:dubbeltellingen-correlatie)).
 
 ```{r dubbeltellingen-correlatie, out.width = "90%", fig.cap = "..."}
 include_graphics(file.path("media", "dubbeltellingen",
                            "correlatie_aantallen.jpg"))
 ```
+
+We kunnen concluderen dat het effect van teller status belangrijk kan zijn het verder analyseren van de data.
 
 ## Case studie: de Veldleeuwerik {#veldleeuwerik}
 

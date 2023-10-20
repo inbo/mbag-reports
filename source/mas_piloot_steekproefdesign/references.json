@@ -437,5 +437,196 @@
         "title": "Improving Estimates of Bird Density Using Multiple- Covariate Distance Sampling",
         "type": "article-journal",
         "volume": "124"
+    },
+    {
+        "DOI": "10.18637/jss.v080.i01",
+        "ISSN": "1548-7660",
+        "URL": "https://doi.org/10.18637/jss.v080.i01",
+        "accessed": {
+            "date-parts": []
+        },
+        "author": [
+            {
+                "family": "Bürkner",
+                "given": "Paul-Christian"
+            }
+        ],
+        "container-title": "Journal of Statistical Software",
+        "id": "bürkner2017",
+        "issue": "1",
+        "issued": {
+            "date-parts": [
+                [
+                    2017,
+                    8,
+                    29
+                ]
+            ]
+        },
+        "key": "SPKTJ9NJ",
+        "language": "en",
+        "libraryid": "1",
+        "page": "1-28",
+        "providerkey": "2509FBBE-5BB0-44C4-B119-6083A81ED673",
+        "rights": "Copyright (c) 2017 Paul-Christian Bürkner",
+        "source": "www.jstatsoft.org",
+        "title": "brms: An R Package for Bayesian Multilevel Models Using Stan",
+        "title-short": "brms",
+        "type": "article-journal",
+        "volume": "80"
+    },
+    {
+        "DOI": "10.32614/RJ-2018-017",
+        "ISSN": "2073-4859",
+        "URL": "https://journal.r-project.org/archive/2018/RJ-2018-017/index.html",
+        "accessed": {
+            "date-parts": []
+        },
+        "author": [
+            {
+                "family": "Bürkner",
+                "given": "Paul-Christian"
+            }
+        ],
+        "container-title": "The R Journal",
+        "id": "bürkner2018",
+        "issue": "1",
+        "issued": {
+            "date-parts": [
+                [
+                    2018
+                ]
+            ]
+        },
+        "key": "A87EDMBL",
+        "language": "en",
+        "libraryid": "1",
+        "page": "395-411",
+        "providerkey": "2509FBBE-5BB0-44C4-B119-6083A81ED673",
+        "source": "journal.r-project.org",
+        "title": "Advanced Bayesian Multilevel Modeling with the R Package brms",
+        "type": "article-journal",
+        "volume": "10"
+    },
+    {
+        "DOI": "10.18637/jss.v100.i05",
+        "ISSN": "1548-7660",
+        "URL": "https://doi.org/10.18637/jss.v100.i05",
+        "accessed": {
+            "date-parts": []
+        },
+        "author": [
+            {
+                "family": "Bürkner",
+                "given": "Paul-Christian"
+            }
+        ],
+        "container-title": "Journal of Statistical Software",
+        "id": "bürkner2021",
+        "issue": "5",
+        "issued": {
+            "date-parts": [
+                [
+                    2021,
+                    11,
+                    30
+                ]
+            ]
+        },
+        "key": "TXRB9BEA",
+        "language": "en",
+        "libraryid": "1",
+        "page": "1-54",
+        "providerkey": "2509FBBE-5BB0-44C4-B119-6083A81ED673",
+        "rights": "Copyright (c) 2021 Paul-Christian Bürkner",
+        "source": "www.jstatsoft.org",
+        "title": "Bayesian Item Response Modeling in R with brms and Stan",
+        "type": "article-journal",
+        "volume": "100"
+    },
+    {
+        "DOI": "10.1214/ss/1177011136",
+        "ISSN": "0883-4237, 2168-8745",
+        "URL": "https://projecteuclid.org/journals/statistical-science/volume-7/issue-4/Inference-from-Iterative-Simulation-Using-Multiple-Sequences/10.1214/ss/1177011136.full",
+        "accessed": {
+            "date-parts": []
+        },
+        "author": [
+            {
+                "family": "Gelman",
+                "given": "Andrew"
+            },
+            {
+                "family": "Rubin",
+                "given": "Donald B."
+            }
+        ],
+        "container-title": "Statistical Science",
+        "id": "gelman1992",
+        "issue": "4",
+        "issued": {
+            "date-parts": [
+                [
+                    1992,
+                    11
+                ]
+            ]
+        },
+        "key": "48ZYLP7Y",
+        "libraryid": "1",
+        "page": "457-472",
+        "providerkey": "Zotero",
+        "publisher": "Institute",
+        "source": "Project Euclid",
+        "title": "Inference from Iterative Simulation Using Multiple Sequences",
+        "type": "article-journal",
+        "volume": "7"
+    },
+    {
+        "DOI": "10.1201/b16018",
+        "ISBN": "978-0-429-11307-9",
+        "author": [
+            {
+                "family": "Gelman",
+                "given": "A"
+            },
+            {
+                "family": "Carlin",
+                "given": "J"
+            },
+            {
+                "family": "Stern",
+                "given": "H"
+            },
+            {
+                "family": "Dunson",
+                "given": "D"
+            },
+            {
+                "family": "Vehtari",
+                "given": "A"
+            },
+            {
+                "family": "Rubin",
+                "given": "D"
+            }
+        ],
+        "edition": "3",
+        "id": "gelman2013",
+        "issued": {
+            "date-parts": [
+                [
+                    2013
+                ]
+            ]
+        },
+        "key": "PSNE3C25",
+        "libraryid": "1",
+        "number-of-pages": "675",
+        "providerkey": "Zotero",
+        "publisher": "Chapman and Hall/CRC",
+        "publisher-place": "New York",
+        "title": "Bayesian Data Analysis",
+        "type": "book"
     }
 ]
