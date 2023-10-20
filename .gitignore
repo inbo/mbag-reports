@@ -19,6 +19,7 @@
 *.csv
 *.jpg
 *.png
+*.pdf
 *.rds
 docs
 libs

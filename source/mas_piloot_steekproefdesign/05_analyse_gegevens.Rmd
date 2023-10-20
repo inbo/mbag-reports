@@ -36,36 +36,36 @@ summary_mas_2018_2023 %>%
 
 ```{r telintensiteit, out.width = "90%", fig.cap = "..."}
 include_graphics(file.path("media", "data_exploratie",
-                           "tellingen_mas_2018_2023.jpg"))
+                           "tellingen_mas_2018_2023.pdf"))
 ```
 
 ```{r aantal-waarnemingen, out.width = "100%", fig.cap = "..."}
 include_graphics(file.path("media", "data_exploratie",
-                           "waarnemingen_mas_2018_2023.jpg"))
+                           "waarnemingen_mas_2018_2023.pdf"))
 ```
 
 ```{r aantal-soorten, out.width = "100%", fig.cap = "..."}
 include_graphics(file.path("media", "data_exploratie",
-                           "soorten_mas_2018_2023.jpg"))
+                           "soorten_mas_2018_2023.pdf"))
 ```
 
 ### Broedcodes
 
 ```{r broedcodes, out.width = "100%", fig.cap = "..."}
 include_graphics(file.path("media", "data_exploratie",
-                           "broedcode_mas_2022_2023.jpg"))
+                           "broedcode_mas_2022_2023.pdf"))
 ```
 
 ### Relatieve frequenties
 
 ```{r relfreqs, out.width = "90%", fig.cap = "..."}
 include_graphics(file.path("media", "data_exploratie",
-                           "soortenfreqs_mas_2018_2023.jpg"))
+                           "soortenfreqs_mas_2018_2023.pdf"))
 ```
 
 ```{r verschilfreqs, out.width = "90%", fig.cap = "..."}
 include_graphics(file.path("media", "data_exploratie",
-                           "verschilfreq_total_mas_2018_2023.jpg"))
+                           "verschilfreq_total_mas_2018_2023.pdf"))
 ```
 
 ### Evolutie toename soortbeschermingsmaatregelen
@@ -176,9 +176,9 @@ Model fit was niet ideaal en in werkelijkheid verwachten we zelfs dat het versch
 We hebben dus zeker geen bewijs dat er compensatie zou zijn bij de vrijwilligers waarbij ze wel meer soorten zouden noteren met broedcode nul, maar minder met broedcode groter dan nul.
 Voor aantal waarnemingen konden we hetzelfde besluiten (95 % CI: -0,2 tot 0,24).
 
-```{r dubbeltellingen-aantallen, out.width = "90%", fig.cap = "..."}
+```{r dubbeltellingen-aantallen, out.width = "90%", fig.cap = ""}
 include_graphics(file.path("media", "dubbeltellingen",
-                           "vergelijk_aantallen.jpg"))
+                           "vergelijk_aantallen.pdf"))
 ```
 
 Ook vonden we dat er geen significant verschil was in aantal soorten (data broedcode \> 0) tussen beginnende en ervaren vrijwilligers (95 % CI: -1,86 tot 1,13).
@@ -203,7 +203,7 @@ Ook hier zagen we een verschil tussen professionele en vrijwillige tellers met o
 
 ```{r dubbeltellingen-correlatie, out.width = "90%", fig.cap = "..."}
 include_graphics(file.path("media", "dubbeltellingen",
-                           "correlatie_aantallen.jpg"))
+                           "correlatie_aantallen.pdf"))
 ```
 
 We kunnen concluderen dat het effect van teller status belangrijk kan zijn het verder analyseren van de data.
@@ -276,7 +276,7 @@ Als we de gemiddelde detectiekans weten, kunnen we dus eenvoudig berekenen hoeve
 We controleren er dus voor dat het moeilijker is om dieren te detecteren op grotere afstand, terwijl we er van uitgaan dat er in werkelijkheid evenveel zitten op grotere als op kleinere afstanden.
 
 ```{r distance-methode, out.width = "90%", fig.cap = "Methodologie distance sampling. \\textbf{A.} Punttransect met radius $w$ en observatie $i$ op afstand $r$. \\textbf{B.} Histogram en detectiecurve gefit op 1000 gesimuleerde datapunten uit de half-normale verdeling met parameter $\\sigma = 120$ en afknotafstand 300 m. De oppervlakte onder de curve binnen de rode box is de gemiddelde detectiekans $p$."}
-include_graphics(file.path("media", "distance", "methode_distance.jpg"))
+include_graphics(file.path("media", "distance", "methode_distance.pdf"))
 ```
 
 Voor de formulatie van de detectiefunctie beschouwen we half-normal en hazard-rate sleutelfuncties die we laten afhangen van categorische covariaten $\mathbf{z_i}$ (bv. jaar, regio).
@@ -359,7 +359,7 @@ Voor de formulatie van de detectiefunctie beschouwden we half-normal en hazard-r
 
 ```{r oppervlakte-steekproefkader-jaar, out.width = "90%", fig.cap = "Oppervlaktes per regio voor berekening densiteiten per jaar per regio."}
 include_graphics(file.path("media", "distance", "per_jaar",
-                           "oppervlakte_strata.jpg"))
+                           "oppervlakte_strata.pdf"))
 ```
 
 Voor (2) beschouwden we enkel de tellingen binnen het pilootproject (alle telpunten van 2022-2023).
@@ -371,7 +371,7 @@ Het gevolg is dat de detectiekansen dus zeker zullen verschillen tussen de jaren
 
 ```{r oppervlakte-steekproefkader-stratum, out.width = "100%", fig.cap = "Oppervlaktes per regio voor berekening densiteiten per stratum per regio."}
 include_graphics(file.path("media", "distance", "per_stratum",
-                           "oppervlakte_strata.jpg"))
+                           "oppervlakte_strata.pdf"))
 ```
 
 We fitten voor (1) en (2) modellen zonder covariaten, met alle combinaties van covariaten en beschouwen ook tweewegsinteracties tussen de covariaten.
@@ -429,7 +429,7 @@ cbind(ds_veldleeuwerik_2018_2023$ddf$data,
 
 ```{r detectiekans-jaar-plot, out.width = "90%", fig.cap = "Gemiddelde detectiecurve geplot over de data. De verticale streepjes op de x-as geven de locaties van de ruwe data aan."}
 include_graphics(file.path("media", "distance", "per_jaar",
-                           "detectiekans_per_jaar_simple_veldleeuwerik.jpg"))
+                           "detectiekans_per_jaar_simple_veldleeuwerik.pdf"))
 ```
 
 ```{r}
@@ -472,7 +472,7 @@ summary_results_2018_2023 %>%
 
 ```{r densiteit-jaar-plot, out.width = "90%", fig.cap = "Densiteitsschattingen per 100 ha met 95 \\% betrouwbaarheidsintervallen per jaar per regio."}
 include_graphics(file.path("media", "distance", "per_jaar",
-                           "densiteit_per_jaar_veldleeuwerik.jpg"))
+                           "densiteit_per_jaar_veldleeuwerik.pdf"))
 ```
 
 ##### Per stratum binnen pilootstudie
@@ -522,7 +522,7 @@ cbind(ds_veldleeuwerik_2022$ddf$data,
 
 ```{r detectiekans-stratum-plot, out.width = "90%", fig.cap = "Gemiddelde detectiecurve (stippellijn) geplot over de data voor model van elk jaar. Ter vergelijking zijn de detectiecurves per openheidsklasse ook aangegeven."}
 include_graphics(file.path("media", "distance", "per_stratum",
-                           "detectiekans_per_stratum_veldleeuwerik.jpg"))
+                           "detectiekans_per_stratum_veldleeuwerik.pdf"))
 ```
 
 ```{r}
@@ -580,7 +580,7 @@ summary_results_stratum %>%
 
 ```{r densiteit-stratum-plot, out.width = "90%", fig.cap = "Densiteitsschattingen per 100 ha met 95 \\% betrouwbaarheidsintervallen per stratum."}
 include_graphics(file.path("media", "distance", "per_stratum",
-                           "densiteit_per_stratum_veldleeuwerik.jpg"))
+                           "densiteit_per_stratum_veldleeuwerik.pdf"))
 ```
 
 #### Discussie densiteitsschattingen
@@ -607,7 +607,7 @@ Dit zorgt ervoor dat de schatting van de densiteit nog altijd kan gebruikt worde
 
 ```{r detectiekans-vergelijking, out.width = "90%", fig.cap = "Vergelijking van de fit van de gemiddelde detectiecurve op de data tussen Kneu en Kievit."}
 include_graphics(file.path("media", "distance", "per_jaar",
-                           "detectiekans_per_jaar_vergelijking.jpg"))
+                           "detectiekans_per_jaar_vergelijking.pdf"))
 ```
 
 Het is ook mogelijk om densiteiten in te berekenen o.b.v. het maximum aantal broedparen over de telperiodes heen per telpunt per jaar.
@@ -627,7 +627,7 @@ Een meer diepgaande analyse tussen beide methodes van meerdere soorten met versc
 
 ```{r densiteit-methodiek, out.width = "90%", fig.cap = "Vergelijking van twee methodes om densiteiten te schatten (Veldleeuwerik). De data bij distance sampling zijn gemiddelde densiteiten over telperiodes heen per telpunt gecorrigeerd voor de detectiekans van de soort in dat stratum. De data bij `gemiddelde van maxima' zijn maxima per telpunt. De puntschattingen en betrouwbaarheidsintervallen zijn bekomen via bootstrapping ($B = 1000$). Voor betere visualisatie hebben we een pseudo-log-transformatie langs de y-as gedaan."}
 include_graphics(file.path("media", "distance", "per_stratum",
-                           "densiteit_per_stratum_methods_veldleeuwerik.jpg"))
+                           "densiteit_per_stratum_methods_veldleeuwerik.pdf"))
 ```
 
 \textcolor{red}{uitbreiding distance sampling?} \textcolor{red}{stan etc.}

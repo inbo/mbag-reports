@@ -140,7 +140,7 @@ tibble(
 
 ```{r zichtbaarheid, out.width = "80%", fig.cap = "Voorbeeld van CVVI berekening o.b.v. DSM en DTM."}
 include_graphics(file.path("media", "visibility",
-                           "voorbeeld_zichtbaarheid.jpg"))
+                           "voorbeeld_zichtbaarheid.pdf"))
 ```
 
 5.  Berekening oppervlakte-aandeel beheerovereenkomsten\
