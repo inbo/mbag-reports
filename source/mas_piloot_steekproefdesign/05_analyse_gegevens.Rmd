@@ -9,10 +9,6 @@
     -   beheerovereenkomsten analyse
     -   totaalanalyse projpred
 
-## Berekening verklarende variabelen
-
-\textcolor{red}{logischer na volgend hoofdstuk?}
-
 ## Data exploratie MAS-tellingen
 
 ### Enkele cijfers
@@ -100,7 +96,7 @@ include_graphics(file.path("media", "data_exploratie",
 
 ### Evolutie toename soortbeschermingsmaatregelen
 
-...
+\textcolor{red}{pas verklarende variabelen verder in dit hoofdstuk...}
 
 ### Zoogdieren
 
@@ -237,6 +233,106 @@ include_graphics(file.path("media", "dubbeltellingen",
 ```
 
 We kunnen concluderen dat het effect van teller status belangrijk kan zijn het verder analyseren van de data.
+
+## Berekening verklarende variabelen {#verklarende-variabelen}
+
+Binnen deze studie hebben we verschillende verklarende variabelen verzameld mogelijk die van belang zijn voor akkervogels.
+We onderscheiden primaire, secundaire en tertiare variabelen.
+Primaire variabelen zijn variabelen die binnen het kader van de pilootstudie de hoogste interesse hebben om te weten wat het effect is op het aantal of de aanwezigheid van bepaalde akkervogels.
+Secundaire variabelen zijn variabelen die mogelijk ook belangrijk zijn voor akkervogels, maar die vooral nodig zijn om modellen vollediger te maken.
+Ze zijn minder op de focus van bepaalde, specifieke onderzoeksvragen.
+Tertaire variabelen zijn structurele variabelen die eerder dienen om te corrigeren voor het monitoringsprotocol in tijd en ruimte bijvoorbeeld via random effects in mixed models.
+\textcolor{red}{verwijzing samenvattende tabel}
+
+### Primaire variabelen {#prim-verklarende-variabelen}
+
+**1. Oppervlakte-aandeel soortbeschermingsmaatregelen**\
+Het aandeel oppervlakte aan beheerovereenkomsten (soortbeschermingsmaatregelen) binnen de telcirkels per jaar.
+De kaartlaag voor de beheerovereenkomsten werd aangevraagd via de Vlaamse Landmaatschappij (VLM) en is niet openlijk beschikbaar.
+
+**2. Oppervlakte-aandeel erosiebeheer en bufferstroken**\
+Het aandeel oppervlakte aan beheerovereenkomsten (erosiebeheer en bufferstroken) binnen de telcirkels per jaar.
+Dit is dezelfde kaartlaag als bij de soortbeschermingsmaatregelen maar een andere filter die toegepast wordt (kolom `bh_doel`).
+
+**3. Oppervlakte-aandeel hoofdteelten**\
+206 aparte hoofdteelten werden gegroepeerd in 20 gewasgroepen (Tabel \@ref(tab:hftlt-groepen)).
+Het aandeel oppervlakte van elke gewasgroep binnen de telcirkels werd berekend per jaar.
+We verwijderden de polygonen die tot de beheerovereenkomstenlaag (zie hierboven) behoren.
+Indien twee polygonen met verschillende teelten overlapten in de kaarlaag, telde die oppervlakte voor elke teelt maar voor 50 % mee.
+De kaartlaag van de landbouwgebruikspercelen is vrij verkrijgbaar via het Departement Landbouw en Visserij (Dept. LV).
+De gebruikte kaart voor 2023 was nog niet definitief (extractie 26-06-2023).
+
+**4. Oppervlakte-aandeel hoofdteelten jaar ervoor**\
+Zelfde als het vorige puntje, maar dan telkens de proportie hoofdteelten die het jaar ervoor aanwezig waren volgens de landbouwgebruikspercelenkaart.
+
+```{r hftlt-groepen}
+hftlt_groepen_raw <- read_delim(file.path("media", "gewasgroepen", 
+                                          "hoofdteelten_groep.csv"),
+                                show_col_types = FALSE)
+hftlt_groepen <- hftlt_groepen_raw %>%
+  select(gewasgroep = nieuwe_groep, gewas = LBLHFDTLT) %>%
+  drop_na(gewasgroep) %>%
+  arrange(gewasgroep, gewas)
+
+hftlt_groepen %>%
+  mutate(val = 1) %>%
+  pivot_wider(names_from = gewas, values_from = val) %>%
+  mutate(across(-gewasgroep, ~ ifelse(.x == 1, cur_column(), NA))) %>%
+  unite(hoofdteelten, -gewasgroep, sep = "; ", na.rm = TRUE) %>%
+  kable(caption = paste("Samenvattende tabel groepering hoofdteelten",
+                        "(gescheiden via puntkomma) in gewasgroepen.")) %>%
+  kableExtra::column_spec(2, width = "5in") %>%
+  kableExtra::kable_styling(font_size = 7)
+```
+
+**5. Effectief aantal hoofdteelten**\
+Het effectief aantal verschillende hoofdteelten (gewasgroepen) binnen een telcirkel is het aantal gewasgroepen indien elke gewasgroep eenzelfde oppervlakte zou hebben binnen de telcirkel.
+Dit kan berekend worden door het exponent van de Shannon index $H'$ te nemen per telcirkel $t$, met
+
+$$
+H'(t) = - \sum_{i=1}^{C(t)}(p_i(t)*\ln[p_i(t)])
+$$
+
+Met $p_i(t)$ de proportie van teelt $i$ ($i = 1, ..., C(t)$) in telcirkel $t$ zoals berekend hierboven.
+We herschaalden deze proporties wel zodat de ze opsomden tot 1 per telcirkel per jaar.
+
+**6. Absoluut aantal hoofdteelten**\
+Het aantal verschillende hoofdteelten (gewasgroepen) binnen een telcirkel.
+
+**7. Eveness aan hoofdteelten**\
+We delen het effectief aantal hoofdteelten (als alle proporties gelijk zouden zijn) door het absoluut aantal hoofdteelten.
+Deze maat is 1 als alle hoofteelten binnen de telcirkel in eenzelfde proportie voorkomen.
+
+**8. Oppervlakte-aandeel voorteelten**\
+46 aparte voorteelten werden gegroepeerd in 13 gewasgroepen (Tabel \@ref(tab:vrtlt-groepen)).
+Het aandeel oppervlakte van elke gewasgroep binnen de telcirkels werd berekend per jaar zoals we ook met de hoofdteelten deden.
+De voorteelten bevinden zich in dezelfde kaarten als de hoofdteelten.
+
+```{r vrtlt-groepen}
+vrtlt_groepen_raw <- read_delim(file.path("media", "gewasgroepen", 
+                                          "voorteelten_groep.csv"),
+                                show_col_types = FALSE)
+vrtlt_groepen <- vrtlt_groepen_raw %>%
+  select(gewasgroep = nieuwe_groep, gewas = GWSNAM_V) %>%
+  drop_na(gewasgroep) %>%
+  arrange(gewasgroep, gewas)
+
+vrtlt_groepen %>%
+  mutate(val = 1) %>%
+  pivot_wider(names_from = gewas, values_from = val) %>%
+  mutate(across(-gewasgroep, ~ ifelse(.x == 1, cur_column(), NA))) %>%
+  unite(voorteelten, -gewasgroep, sep = "; ", na.rm = TRUE) %>%
+  kable(caption = paste("Samenvattende tabel groepering voorteelten",
+                        "(gescheiden via puntkomma) in gewasgroepen.")) %>%
+  kableExtra::column_spec(2, width = "5in") %>%
+  kableExtra::kable_styling(font_size = 7)
+```
+
+### Secundaire variabelen {#sec-verklarende-variabelen}
+
+### Tertiaire variabelen {#tert-verklarende-variabelen}
+
+### Exploratie en conclusies {#expl-verklarende-variabelen}
 
 ## Case studie: de Veldleeuwerik {#veldleeuwerik}
 
