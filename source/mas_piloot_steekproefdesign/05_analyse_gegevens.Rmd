@@ -11,7 +11,7 @@
 
 ## Berekening verklarende variabelen
 
-...
+\textcolor{red}{logischer na volgend hoofdstuk?}
 
 ## Data exploratie MAS-tellingen
 
@@ -23,13 +23,13 @@ Verder zijn er sinds de pilootstudie (2022) veel telpunten bijgekomen in De Moer
 De meeste telpunten werden vier maal per jaar bezocht (Fig. \@ref(fig:telintensiteit)).
 Een telling is hier geïnterpreteerd als een waarneming van een bepaalde soort op een bepaalde afstand op een bepaald telpunt in een bepaalde telperiode.
 Er is dus geen rekening gehouden met het aantal vogels genoteerd per telling.
-De tellingen zijn hoger in de Leemstreek maar daar waren ook meer telpunten.
+Het aantal tellingen was hoger in de Leemstreek maar daar waren ook meer telpunten.
 Figuren \@ref(fig:aantal-waarnemingen) en \@ref(fig:aantal-soorten) geven een meer gedetailleerd beeld van de verdelingen van respectievelijk het aantal waarnemingen en soorten per jaar.
 
 ```{r samenvatting-aantallen}
 summary_mas_2018_2023 <- read_csv(file.path("media", "data_exploratie",
                                             "summary_mas_2018_2023.csv"),
-                                  show_col_types = FALSE) 
+                                  show_col_types = FALSE)
 summary_mas_2018_2023 %>%
   group_by(regio, jaar, aantal_soorten_regiojaar) %>%
   summarise(`aantal waarnemingen` = sum(aantal_waarnemingen),
@@ -60,7 +60,7 @@ include_graphics(file.path("media", "data_exploratie",
 
 Het gebruik van het scoren van verschillende broedcodes bij elke waarneming geeft het voordeel dat we uitspraken kunnen doen in termen van aantal broedgevallen door toevallige waarnemingen van een soort (bv. een overvliegend individu) uit te sluiten (broedcode nul).
 \textcolor{red}{referenties?} We beschouwen tien doelsoorten: Geelgors, Gele kwikstaart, Grasmus, Kievit, Kneu, Kwartel, Ringmus, Torenvalk, Veldleeuwerik en Witte kwikstaart.
-Als we kijken naar de data van 2022-2023, zien we dat de rapportage van broedcodes sterk kan verschillen van soort tot soort(Fig. \@ref(fig:broedcodes)).
+Als we kijken naar de data van 2022-2023, zien we dat de rapportage van broedcodes sterk kan verschillen van soort tot soort (Fig. \@ref(fig:broedcodes)).
 \textcolor{red}{bespreking Johannes? bv verschil witte kwik ringmus, torenvalk, veldleeuwerik? en uitleggen dat we voor roofvogels geen rekening houden met broedcodes}
 
 ```{r broedcodes, out.width = "100%", fig.cap = "Aantal tellingen per broedcode per doelsoort voor 2022-2023."}
@@ -70,20 +70,30 @@ include_graphics(file.path("media", "data_exploratie",
 
 ### Relatieve frequenties
 
-Voor elke soort kunnen we de relatieve frequentie ($P$) berekenen als de proportie telpunten waarin de soort aanwezig is per telperiode $t$, jaar $j$ en regio $r$.
+Voor elke soort kunnen we de relatieve frequentie ($P$) berekenen als de proportie telpunten waarin de soort aanwezig is per telperiode, jaar en regio.
+Een relatieve frequentie van 0,5 wil dus zeggen dat de soort in 50 % van de telpunten gezien is.
 
 $$
-P_{t,j,r} = \sum_{i=1}^{N_{t,j,r}} I(n_i > 0) / N_{t,j,r}
+P = \sum_{i=1}^{N} I(n_i > 0) / N
 $$
 
-Waarbij $N_{t,j,r}$ het totaal aantal telpunten is in telperiode $t$, jaar $j$ en regio $r$ en $n_i$ het aantal individuen van de beschouwde soort waargenomen van telpunt $i$.
+Waarbij $N$ het totaal aantal telpunten is in telperiode, jaar en regio en $n_i$ het aantal individuen van de beschouwde soort waargenomen van telpunt $i$.
+$I(\cdot)$ is de indicatorfunctie die 1 geeft als $n_i > 0$ en 0 anderzijds.
+We selecteerden enkel waarnemingen met broedcode groter dan nul.
+Voor roofvogels hielden we geen rekening met broedcode, \textcolor{red}{omdat?}.
 
-```{r relfreqs, out.width = "90%", fig.cap = "..."}
+Figuur \@ref(fig:relfreqs) toont de relatieve frequenties van de 20 meest frequente soorten (gemiddeld over telperiode, jaar en regio).
+Een beperkt aantal soorten werd gezien in meer dan 50 % van de telpunten in een bepaalde telperiode, de meeste werden minder frequent gezien.
+Het is duidelijk dat bepaalde soorten algemener zijn in de ene of de andere regio.
+Als we het verschil in relatieve frequentie tussen De Moeren en de Oostelijke leemstreek nemen, zien we om welke soorten het gaat (Fig. \@ref(fig:verschilfreqs)).
+\textcolor{red}{Typische soorten van open landschap, water en rietkragen werden meer gezien in De Moeren zoals Kievit, Bruine kiekendief, Rietzanger, Wilde eend Kleine karrekiet enzovoort. In de Oostelijke leemstreek zien we dan weer soorten van meer halfopen landschap en kleine landschapselementen zoals Veldleeuwerik, Geelgors, Vink enzovoort.}
+
+```{r relfreqs, out.width = "90%", fig.cap = "Relatieve frequentie van de 20 meest frequente soorten (gemiddeld over telperiode, jaar en regio) en doelsoorten (in vet rood, onder stippellijn indien niet in top 20). Elke punt is een relatieve frequentie in een bepaalde telperiode, jaar en regio."}
 include_graphics(file.path("media", "data_exploratie",
                            "soortenfreqs_mas_2018_2023.pdf"))
 ```
 
-```{r verschilfreqs, out.width = "90%", fig.cap = "..."}
+```{r verschilfreqs, out.width = "90%", fig.cap = "Verschil in relatieve frequentie tussen De Moeren en de Oostelijke leemstreek. Top 10 meer algemene soorten in De Moeren van boven naar onder, top 10 meer algemene soorten in de Oostelijke leemstreek van onder naar boven (gemiddeld over telperiode en jaar) en doelsoorten (in vet rood, tussen stippellijn indien niet in top 10 van een regio). Elke punt is een verschil in relatieve frequentie in een bepaalde telperiode en jaar tussen De Moeren en de Oostelijke leemstreek."}
 include_graphics(file.path("media", "data_exploratie",
                            "verschilfreq_total_mas_2018_2023.pdf"))
 ```
@@ -155,7 +165,7 @@ We besluiten dat er een significant verschillend effect van broedcode is als het
 
 Is er een verschil in het aantal soorten of aantal waarnemingen met broedcode groter dan nul tussen ervaren en beginnende vrijwillige tellers?
 
-De professionele teller is ervaren, maar bij de vrijwilligers hebben we twee ervaringscategoriën: "beginner" ($X_{ervaring} = 0$) en "ervaren" ($X_{ervaring} = 1$).
+De professionele teller is ervaren, maar bij de vrijwilligers hebben we twee ervaringscategorieën: "beginner" ($X_{ervaring} = 0$) en "ervaren" ($X_{ervaring} = 1$).
 
 $$
 g(\text{E}(Y_{ijk})) = \beta_0 + \beta_{1}X_{status, i} + \beta_{2}X_{ervaring, i} + \beta_{3}X_{status, i} \times X_{ervaring, i} + b_{1,jk} + b_{2,k}
