@@ -9,7 +9,7 @@
     -   beheerovereenkomsten analyse
     -   totaalanalyse projpred
 
-## Data exploratie MAS-tellingen
+## Data exploratie MAS-tellingen {#exploratie-tellingen}
 
 ### Enkele cijfers
 
@@ -59,7 +59,7 @@ Het gebruik van het scoren van verschillende broedcodes bij elke waarneming geef
 Als we kijken naar de data van 2022-2023, zien we dat de rapportage van broedcodes sterk kan verschillen van soort tot soort (Fig. \@ref(fig:broedcodes)).
 \textcolor{red}{bespreking Johannes? bv verschil witte kwik ringmus, torenvalk, veldleeuwerik? en uitleggen dat we voor roofvogels geen rekening houden met broedcodes}
 
-```{r broedcodes, out.width = "100%", fig.cap = "Aantal tellingen per broedcode per doelsoort voor 2022-2023."}
+```{r broedcodes, out.width = "90%", fig.cap = "Aantal tellingen per broedcode per doelsoort voor 2022-2023."}
 include_graphics(file.path("media", "data_exploratie",
                            "broedcode_mas_2022_2023.pdf"))
 ```
@@ -78,31 +78,49 @@ $I(\cdot)$ is de indicatorfunctie die 1 geeft als $n_i > 0$ en 0 anderzijds.
 We selecteerden enkel waarnemingen met broedcode groter dan nul.
 Voor roofvogels hielden we geen rekening met broedcode, \textcolor{red}{omdat?}.
 
-Figuur \@ref(fig:relfreqs) toont de relatieve frequenties van de 20 meest frequente soorten (gemiddeld over telperiode, jaar en regio).
-Een beperkt aantal soorten werd gezien in meer dan 50 % van de telpunten in een bepaalde telperiode, de meeste werden minder frequent gezien.
+Figuur \@ref(fig:relfreqs-2018-2021) toont de relatieve frequenties van de 20 meest frequente soorten tussen 2018-2021 (gemiddeld over telperiode, jaar en regio).
+Tijdens het pilootproject \@ref(fig:relfreqs-2022-2023) zien we andere soorten naar voor komen en ook lagere frequenties.
+Dit is omdat we het controlegebied hadden toegevoegd (buiten sbp) waar minder vogels voorkomen.
 Het is duidelijk dat bepaalde soorten algemener zijn in de ene of de andere regio.
-Als we het verschil in relatieve frequentie tussen De Moeren en de Oostelijke leemstreek nemen, zien we om welke soorten het gaat (Fig. \@ref(fig:verschilfreqs)).
-\textcolor{red}{Typische soorten van open landschap, water en rietkragen werden meer gezien in De Moeren zoals Kievit, Bruine kiekendief, Rietzanger, Wilde eend Kleine karrekiet enzovoort. In de Oostelijke leemstreek zien we dan weer soorten van meer halfopen landschap en kleine landschapselementen zoals Veldleeuwerik, Geelgors, Vink enzovoort.}
+Als we het verschil in relatieve frequentie tussen De Moeren en de Oostelijke leemstreek nemen, zien we om welke soorten het gaat (Fign \@ref(fig:verschilfreqs-2018-2021), \@ref(fig:verschilfreqs-2022-2023)).
+\textcolor{red}{Typische soorten van open landschap, water en rietkragen werden meer gezien in De Moeren zoals Kievit, Bruine kiekendief, Rietzanger, Wilde eend Kleine karrekiet enzovoort. In de Oostelijke leemstreek zien we dan weer soorten van meer halfopen landschap en kleine landschapselementen zoals Veldleeuwerik, Geelgors, Vink enzovoort.} Ook binnen specifieke strata is er voor sommige soorten een groot verschil in frequentie (Fig. \@ref(fig:relfreqs-strata)).
+\textcolor{red}{bespreking, vooral voor veldleeuwerik en gele kwik ...}
 
-```{r relfreqs, out.width = "90%", fig.cap = "Relatieve frequentie van de 20 meest frequente soorten (gemiddeld over telperiode, jaar en regio) en doelsoorten (in vet rood, onder stippellijn indien niet in top 20). Elke punt is een relatieve frequentie in een bepaalde telperiode, jaar en regio."}
+```{r relfreqs-2018-2021, out.width = "100%", fig.cap = "Relatieve frequentie van de 20 meest frequente soorten (gemiddeld over telperiode, jaar en regio) en doelsoorten (in vet rood, onder stippellijn indien niet in top 20) van 2018-2021. Elke punt is een relatieve frequentie in een bepaalde telperiode, jaar en regio."}
 include_graphics(file.path("media", "data_exploratie",
-                           "soortenfreqs_mas_2018_2023.pdf"))
+                           "soortenfreqs_mas_2018_2021.pdf"))
 ```
 
-```{r verschilfreqs, out.width = "90%", fig.cap = "Verschil in relatieve frequentie tussen De Moeren en de Oostelijke leemstreek. Top 10 meer algemene soorten in De Moeren van boven naar onder, top 10 meer algemene soorten in de Oostelijke leemstreek van onder naar boven (gemiddeld over telperiode en jaar) en doelsoorten (in vet rood, tussen stippellijn indien niet in top 10 van een regio). Elke punt is een verschil in relatieve frequentie in een bepaalde telperiode en jaar tussen De Moeren en de Oostelijke leemstreek."}
+```{r relfreqs-2022-2023, out.width = "100%", fig.cap = "Relatieve frequentie van de 20 meest frequente soorten en doelsoorten van 2022-2023."}
 include_graphics(file.path("media", "data_exploratie",
-                           "verschilfreq_total_mas_2018_2023.pdf"))
+                           "soortenfreqs_mas_2022_2023.pdf"))
 ```
 
-### Evolutie toename soortbeschermingsmaatregelen
+```{r verschilfreqs-2018-2021, out.width = "100%", fig.cap = "Verschil in relatieve frequentie tussen De Moeren en de Oostelijke leemstreek van 2018-2021. Top 10 meer algemene soorten in De Moeren van boven naar onder, top 10 meer algemene soorten in de Oostelijke leemstreek van onder naar boven (gemiddeld over telperiode en jaar) en doelsoorten (in vet rood, tussen stippellijn indien niet in top 10 van een regio). Elke punt is een verschil in relatieve frequentie in een bepaalde telperiode en jaar tussen De Moeren en de Oostelijke leemstreek."}
+include_graphics(file.path("media", "data_exploratie",
+                           "verschilfreq_total_mas_2018_2021.pdf"))
+```
 
-\textcolor{red}{pas verklarende variabelen verder in dit hoofdstuk...}
+```{r verschilfreqs-2022-2023, out.width = "100%", fig.cap = "Verschil in relatieve frequentie tussen De Moeren en de Oostelijke leemstreek van 2022-2023. Top 10 meer algemene soorten in De Moeren van boven naar onder, top 10 meer algemene soorten in de Oostelijke leemstreek van onder naar boven en doelsoorten."}
+include_graphics(file.path("media", "data_exploratie",
+                           "verschilfreq_total_mas_2022_2023.pdf"))
+```
+
+```{r relfreqs-strata, out.width = "100%", fig.cap = "Relatieve frequentie van de doelsoorten in verschillende strata van 2022-2023. Elke punt is een relatieve frequentie in een bepaalde telperiode, stratum en regio."}
+include_graphics(file.path("media", "data_exploratie",
+                           "soortenfreqs_doel_per_strat.pdf"))
+```
 
 ### Zoogdieren
 
 ...
 
-## Vergelijking van gepaarde tellingen tussen vrijwilligers en professionele tellers
+```{r relfreqs-zoogdieren, out.width = "100%", fig.cap = "..."}
+include_graphics(file.path("media", "data_exploratie",
+                           "soortenfreqs_zoogdieren_2022_2023.pdf"))
+```
+
+## Vergelijking van gepaarde tellingen tussen vrijwilligers en professionele tellers {#dubbeltellingen}
 
 ### Inleiding
 
@@ -193,7 +211,7 @@ Ze lagen allemaal dicht bij 1, zoals vereist.
 Via 'Leave-One-Out Cross-Validation' vergeleken we eerste welke responsdistributie het best paste bij de data en ten tweede of het random effect van plot $b_{2}$ noodzakelijk was of niet (niet gedaan bij correlatie model).
 De model fit werd bevestigd op basis van 'posterior predictive checks' waarbij we de geobserveerde uitkomst vergeleken met gesimuleerde datasets van de 'posterior predictive distribution'.
 
-### Resultaten en discussie
+### Resultaten en discussie {#dubbeltellingen-resultaten}
 
 Onze primaire interesse ging uit naar een verschil tussen professionele teller en vrijwilligers voor soorten met broedcode groter dan nul.
 We zagen dat vrijwilligers een significant minder aantal waarnemingen (95 % CI: -5,94 tot -3,04) en soorten (95 % CI: -4,22 tot -2.20) meldden dan de professionele teller (Fig. \@ref(fig:dubbeltellingen-aantallen)).
@@ -330,7 +348,71 @@ vrtlt_groepen %>%
 
 ### Secundaire variabelen {#sec-verklarende-variabelen}
 
+**1. Regio**\
+De regio's van het pilootmeetnet (De Moeren en Oostelijke leemstreek).
+
+**2. Openheid landschap 1000 m**\
+\textcolor{red}{continu 1000 m ...}
+
+**3. Soortbeschermingsplan**\
+\textcolor{red}{??}
+
+**4. Status teller**\
+Analyses van telpunten die zowel door vrijwilligers als professionele teller zijn geteld, gaven duidelijk aan dat vrijwilligers een significant lager aantal waarnemingen en soorten zien dan een professionele teller (Hoofdstuk \@ref(dubbeltellingen)).
+Voor elk telpunt hebben we dus ook nagegaan of er geteld is door een professionele teller of een vrijwilliger.
+
+**5. Oppervlakte-aandeel kleine landschapselementen**\
+Het aandeel oppervlakte van elke subklasse kleine landschapselementen binnen de telcirkels werd berekend via landschapselementen op of aangrenzend aan landbouwgebruikspercelen in Vlaanderen (onderzoek 2017 op basis van gegevens 2015, Dept. LV).
+De kaartlaag is vrij verkrijgbaar.
+De verschillende subklasses zijn: (1) bomengroep, (2) bomenrij, (3) boom, (4) bosrand, (5) haag, (6) houtkant.
+
+**6. Perceelsgrootte (mediaan, IQR en CV)**\
+Mediaan, interkwartielafstand (IQR) en variatiecoëfficiënt (CV) van groottes van percelen die overlappen met telcirkels (Fig. \@ref(fig:perceelsgrootte-methode)).
+De CV is de IQR gedeeld door de mediaan.
+Een perceel is de combinatie van aaneenliggende landbouwgebruikspercelen met dezelfde hoofdteelt.
+We gebruikten hiervoor dus opnieuw de kaartklaag van landbouwgebruikspercelen.
+
+```{r perceelsgrootte-methode, out.width = "90%", fig.cap = "Voor de berekeningen m.b.t. perceelsgroottes, selecteerden we overlappende percelen. In tegenstelling tot berekeningen gerelateerd aan oppervlakte-aandelen nemen we dus geen strikte intersectie. Hier een voorbeeld van de percelen gerelateerd aan telpunten DM\\_386.7 en DM\\_44.45."}
+include_graphics(file.path("media", "verklarende_variabelen",
+                           "perceelsgroottes.pdf"))
+```
+
+**7. Inertie soortbeschermingsmaatregelen**\
+...
+
+**8. Inertie erosiebeheer en bufferstroken**\
+...
+
+**9. Aantal predatoren**\
+...
+
+**10. Nabijheid natuurgebieden**\
+...
+
+```{r natuurgebieden-perimeters, out.width = "90%", fig.cap = "Selectie van natuurgebieden in Vlaanderen, Nederland, Frankrijk en Wallonië binnen een buffer van 20 km rond de perimeters van het pilootproject."}
+include_graphics(file.path("media", "verklarende_variabelen",
+                           "natuurgebieden_perimeters.png"))
+```
+
+```{r vervalfunctie, out.width = "90%", fig.cap = "Voorbeeld van een logistische en exponentiele vervalfunctie over 3 km."}
+include_graphics(file.path("media", "verklarende_variabelen",
+                           "distance_decay.pdf"))
+```
+
 ### Tertiaire variabelen {#tert-verklarende-variabelen}
+
+**1. X- en Y-coördinaten**\
+...
+
+**2. Telperiode**\
+...
+
+**3. Jaar**\
+...
+
+**4. Telpunt id**\
+
+...
 
 ### Exploratie en conclusies {#expl-verklarende-variabelen}
 
@@ -613,11 +695,28 @@ sum_veldleeuwerik_2022 <- summary(ds_veldleeuwerik_2022)
 models_2023 <- readRDS(file.path("media", "distance", "models_2023.rds"))
 ds_veldleeuwerik_2023 <- models_2023$Veldleeuwerik
 sum_veldleeuwerik_2023 <- summary(ds_veldleeuwerik_2023)
+
+# Gemiddelde detectiekans
+ds_veldleeuwerik_2022 <- models_2022$Veldleeuwerik
+sum_veldleeuwerik_2022 <- summary(ds_veldleeuwerik_2022)
+
+ds_veldleeuwerik_2023 <- models_2023$Veldleeuwerik
+sum_veldleeuwerik_2023 <- summary(ds_veldleeuwerik_2023)
+
+n1_veldleeuwerik <- sum(ds_veldleeuwerik_2022$ddf$data$size)
+nc1_veldleeuwerik <- sum_veldleeuwerik_2022$ds$Nhat
+
+n2_veldleeuwerik <- sum(ds_veldleeuwerik_2023$ddf$data$size)
+nc2_veldleeuwerik <- sum_veldleeuwerik_2023$ds$Nhat
+
+pa_veldleeuwerik <- round(
+  (n1_veldleeuwerik + n2_veldleeuwerik)/(nc1_veldleeuwerik + nc2_veldleeuwerik),
+  digits = 3)
 ```
 
 Het Hazard-rate model waarbij de detectiekans afhankelijk is van openheid scoorde het best voor zowel het model met data van 2022 als van 2023.
 De detectiekansen zijn dus verschillend per openheidsklasse HOL en OL (Tabel \@ref(tab:detectiekans-stratum)).
-De gemiddelde detectiekans $\hat{P}_a$ is gelijk aan `r round(sum_veldleeuwerik_2022$ds$average.p, digits = 3)` met standaardfout `r round(sum_veldleeuwerik_2022$ds$average.p.se[1, 1], digits = 5)` voor 2022 en `r round(sum_veldleeuwerik_2023$ds$average.p, digits = 3)` met standaardfout `r round(sum_veldleeuwerik_2023$ds$average.p.se[1, 1], digits = 5)`.
+De gemiddelde detectiekans $\hat{P}_a$ is gelijk aan `r pa_veldleeuwerik`, `r round(sum_veldleeuwerik_2022$ds$average.p, digits = 3)` met standaardfout `r round(sum_veldleeuwerik_2022$ds$average.p.se[1, 1], digits = 5)` voor 2022 en `r round(sum_veldleeuwerik_2023$ds$average.p, digits = 3)` met standaardfout `r round(sum_veldleeuwerik_2023$ds$average.p.se[1, 1], digits = 5)`.
 Omwille van de slechtere 'goodness of fit' werd dit model opnieuw gefit waarbij de afstanden gegroepeerd werden in intervallen van 50 m.
 De fit was dan beter maar nog altijd niet ideaal.
 Dit is ook te zien wanneer we de gemiddelde detectiecurve op de data plotten (Fig. \@ref(fig:detectiekans-stratum-plot)).
@@ -736,24 +835,74 @@ include_graphics(file.path("media", "distance", "per_jaar",
                            "detectiekans_per_jaar_vergelijking.pdf"))
 ```
 
+```{r}
+# Gemiddelde detectiekans Fazant
+ds_fazant_2022 <- models_2022$Fazant
+sum_fazant_2022 <- summary(ds_fazant_2022)
+
+ds_fazant_2023 <- models_2023$Fazant
+sum_fazant_2023 <- summary(ds_fazant_2023)
+
+n1_fazant <- sum(ds_fazant_2022$ddf$data$size)
+nc1_fazant <- sum_fazant_2022$ds$Nhat
+
+n2_fazant <- sum(ds_fazant_2023$ddf$data$size)
+nc2_fazant <- sum_fazant_2023$ds$Nhat
+
+pa_fazant <- round((n1_fazant + n2_fazant)/(nc1_fazant + nc2_fazant), 2)
+
+# Gemiddelde detectiekans Kneu
+ds_kneu_2022 <- models_2022$Kneu
+sum_kneu_2022 <- summary(ds_kneu_2022)
+
+ds_kneu_2023 <- models_2023$Kneu
+sum_kneu_2023 <- summary(ds_kneu_2023)
+
+n1_kneu <- sum(ds_kneu_2022$ddf$data$size)
+nc1_kneu <- sum_kneu_2022$ds$Nhat
+
+n2_kneu <- sum(ds_kneu_2023$ddf$data$size)
+nc2_kneu <- sum_kneu_2023$ds$Nhat
+
+pa_kneu <- round((n1_kneu + n2_kneu)/(nc1_kneu + nc2_kneu), 2)
+```
+
 Het is ook mogelijk om densiteiten in te berekenen o.b.v. het maximum aantal broedparen over de telperiodes heen per telpunt per jaar.
 Dit kan dan omgerekend worden naar densiteiten per stratum door het gemiddelde nemen per stratum en daarna te delen door de oppervlakte van een telcirkel.
 Via bootstrapping kan een betrouwbaarheidsinterval bekomen worden.
-De maxima komen voor Veldleeuwerik goed overeen met de resultaten van distance sampling (Fig. \@ref(fig:densiteit-methodiek)).
+De maxima komen voor Veldleeuwerik goed overeen met de resultaten van distance sampling (Fig. \@ref(fig:densiteit-methodiek-veldleeuw)).
 @wiersma2021 gebruiken de maxima om densiteiten van akkervogels in te schatten.
 Ze stellen dat dit minimumschattingen zijn omdat ze niet voor onvolledige trefkans hebben gecorrigeerd.
 Echter, wij zien hier dat deze methode niet per se lagere resultaten bekomt dan via distance sampling.
-De maxima-methode zal lagere schattingen bekomen als de detectiekans van de soort lager is omdat er dan een sterkere correctie optreedt bij distance sampling die niet zal gebeuren bij de maxima-methode, maar dit is niet per se het geval voor soorten met een hoge detectiekans ($p$ dicht bij 1).
+De maxima-methode zal lagere schattingen bekomen als de detectiekans van de soort lager is omdat er dan een sterkere correctie optreedt bij distance sampling die niet zal gebeuren bij de maxima-methode (bijvoorbeeld bij Kneu $\hat{P}_a =$ `r pa_kneu`, Fig. \@ref(fig:densiteit-methodiek-kneu)), maar dit is niet per se het geval voor soorten met een hogere detectiekans (bijvoorbeeld bij Fazant $\hat{P}_a =$ `r pa_fazant`, Fig. \@ref(fig:densiteit-methodiek-fazant)).
 Bovendien wordt er bij distance sampling meer gewicht gegeven aan lage aantallen omdat alle data worden meegenomen in de analyse (gemiddeld aantal per telpunt per jaar via effort $T$) terwijl via de maxima-methode veel lage waardes worden weggefilterd (maximum aantal per telpunt per jaar).
-Het verschil tussen beide methodes zal dus afhankelijk zijn van soort tot soort omwille van een combinatie van de detectiekans en zeldzaamheid van een soort (en mogelijk nog andere factoren die hier niet zijn opgenomen).
-Zoals in de vorige paragraaf vermeld, kan distance sampling ook als een minimumschatting genomen worden bij hoge detectiekansen, maar deze is mogelijks te strikt in vergelijking met de maxima-methode in biologische context.
-Als er 3 broedgevallen gezien zijn in telperiodes 1, 2 en 4, maar slechts 1 in periode 3, dan kan dit laatste puur per toeval zijn en zou je geneigd zijn om te besluiten dat er in die telcirkel 3 broedgevallen zijn (maxima methode) en niet 2.5 (gemiddelde).
+Het verschil tussen beide methodes zal dus afhankelijk zijn van soort tot soort omwille van een combinatie van de detectiekans en zeldzaamheid van een soort (en mogelijk nog andere factoren die hier niet zijn beschouwd).
+Zoals in de vorige paragraaf vermeld, kan distance sampling ook als een minimumschatting genomen worden bij hoge detectiekansen, maar deze is mogelijks te strikt in vergelijking met de maxima-methode in ecologische context.
+Als er 3 broedgevallen gezien zijn in telperiodes 1, 2 en 3, maar 0 in periode 4, dan kan dit laatste puur per toeval zijn.
+Het is namelijk niet zo dat een nultelling in bijvoordbeeld de laatste ronde enigszins iets zegt over het aantal broedparen, die kunnen er wel geweest zijn, maar op dat moment stilgevallen (zingen/baltsen gebeurt enkel in de territoriumfase en eileg; als ze met jongen zitten of al uitgevlogen zijn, dan wordt er niet mee/veel minder gezongen).
+Het zou dus logischer zijn om te besluiten dat er in die telcirkel effectief 3 broedgevallen zijn (maxima methode) en niet 2.25 (gemiddelde).
 Een meer diepgaande analyse tussen beide methodes van meerdere soorten met verschillende detectiekansen zou interessant kunnen zijn, maar dit valt buiten het doel van dit rapport.
-\textcolor{red}{of nog uitzoeken?}
 
-```{r densiteit-methodiek, out.width = "90%", fig.cap = "Vergelijking van twee methodes om densiteiten te schatten (Veldleeuwerik). De data bij distance sampling zijn gemiddelde densiteiten over telperiodes heen per telpunt gecorrigeerd voor de detectiekans van de soort in dat stratum. De data bij `gemiddelde van maxima' zijn maxima per telpunt. De puntschattingen en betrouwbaarheidsintervallen zijn bekomen via bootstrapping ($B = 1000$). Voor betere visualisatie hebben we een pseudo-log-transformatie langs de y-as gedaan."}
+```{r densiteit-methodiek-veldleeuw, out.width = "90%", fig.cap = "Vergelijking van twee methodes om densiteiten te schatten (Veldleeuwerik). De data bij distance sampling zijn gemiddelde densiteiten over telperiodes heen per telpunt gecorrigeerd voor de detectiekans van de soort in dat stratum. De data bij `gemiddelde van maxima' zijn maxima per telpunt. De puntschattingen en betrouwbaarheidsintervallen zijn bekomen via bootstrapping ($B = 1000$). Voor betere visualisatie hebben we een pseudo-log-transformatie langs de y-as gedaan."}
 include_graphics(file.path("media", "distance", "per_stratum",
                            "densiteit_per_stratum_methods_veldleeuwerik.pdf"))
 ```
 
+```{r densiteit-methodiek-kneu, out.width = "90%", fig.cap = "Vergelijking van twee methodes om densiteiten te schatten voor Kneu."}
+include_graphics(file.path("media", "distance", "per_stratum",
+                           "densiteit_per_stratum_methods_kneu.pdf"))
+```
+
+```{r densiteit-methodiek-fazant, out.width = "90%", fig.cap = "Vergelijking van twee methodes om densiteiten te schatten voor Fazant."}
+include_graphics(file.path("media", "distance", "per_stratum",
+                           "densiteit_per_stratum_methods_fazant.pdf"))
+```
+
 \textcolor{red}{uitbreiding distance sampling?} \textcolor{red}{stan etc.}
+
+We kunnen concluderen dat het schatten van densiteiten een evenwichtsoefening is tussen het maken van juiste beslissingen in ecologische context en anderzijds het gebruiken van een duidelijk en niet te complexe statistiche methode.
+Deze eerste kan in rekening genomen worden door de data te filteren op broedcode groter dan nul en voor elke soort de telperiodes te selecteren die binnen de broedperiode van elke soort vallen.
+Een extra maatregel zou kunnen zijn om over die telperiodes (per telpunt per jaar) het maximum aantal te nemen als finale dataset voor verdere analyse (met effort = 1 omdat we dan niet meer corrigeren voor het aantal bezoeken, waardoor geen strikte uitmiddeling gebeurd).
+Distance sampling m.b.v. het **Distance** package bleek een relatief eenvoudige procedure (zowel mathematisch als gebruiksvriendelijkheid) om densiteitsschattingen (incl. onzekerheid) te maken rekening houdend met de detectiekans van een soort.
+\textcolor{red}{complex niet nodig, detectiekans kan wel in GLMM ofzo worden gebruikt? verder}
+
