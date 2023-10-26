@@ -483,7 +483,6 @@ Alle uitspraken voor de variabelen van de hoofdteelten gelden ook voor de variab
 ### Univariate exploratie
 
 Na de univariate exploratie bleek dat er van de hoofdteelten een aantal variabelen zijn met bijna geen data (geen/weinig oppervlakte binnen telcirkels).
-De volgende variabelen hebben nul als derde kwartiel: `andere_hfdtlt`, `braakland_hfdtlt`, `andere_graangewassen_hfdtlt`, `houtachtige_gewassen`, `water_hfdtlt`, `zaden_hfdtlt`, `zomergranen_hfdtlt`.
 We maakten de volgende beslissingen voor deze variabelen:
 
 -   `andere_hfdtlt`: uitsluiten, dit zijn allicht heel zeldzame teelten waarvan we geen invloed verwachten
@@ -535,12 +534,12 @@ Alle uitspraken voor `..hfdtlt` gelden ook voor `..hfdtlt_pre`:
 De nieuwe Pearson correlatiematrix is gevisualiseerd in Figuur \@ref(fig:corrmat2).
 Een PCA toonde gelijkaardige resultaten.
 
-```{r corrmat1, out.width = "100%", fig.cap = "Pearson correlatiematrix tussen continue variabelen die overbleven na univariate data exploratie. We visualiseren enkel correlaties sterker of gelijk aan 0.2."}
+```{r corrmat1, out.width = "100%", fig.cap = "Pearson correlatiematrix tussen continue variabelen die overbleven na univariate data exploratie. We visualiseren enkel correlaties sterker of gelijk aan 0,2."}
 include_graphics(file.path("media", "verklarende_variabelen",
                            "corrmat1.pdf"))
 ```
 
-```{r corrmat2, out.width = "100%", fig.cap = "Pearson correlatiematrix tussen continue variabelen die overbleven na univariate en bivariate data exploratie. We visualiseren enkel correlaties sterker of gelijk aan 0.2."}
+```{r corrmat2, out.width = "100%", fig.cap = "Pearson correlatiematrix tussen continue variabelen die overbleven na univariate en bivariate data exploratie. We visualiseren enkel correlaties sterker of gelijk aan 0,2."}
 include_graphics(file.path("media", "verklarende_variabelen",
                            "corrmat2.pdf"))
 ```
@@ -557,7 +556,7 @@ include_graphics(file.path("media", "data_exploratie",
                            "soortbeschermingsmaatregelen3_2018_2023.pdf"))
 ```
 
-```{r total-propsb, out.width = "90%", fig.cap = "Totale oppervlakte soortbeschermingsmaatregelen binnen de perimeters van het pilootproject over de jaren heen per regio opgedeeld per categorie."}
+```{r total-propsb, out.width = "90%", fig.cap = "Totale oppervlakte soortbeschermingsmaatregelen per stratum binnen de perimeters van het pilootproject over de jaren heen per regio opgedeeld per categorie."}
 include_graphics(file.path("media", "data_exploratie",
                            "soortbeschermingsmaatregelen1_2018_2023.pdf"))
 ```
