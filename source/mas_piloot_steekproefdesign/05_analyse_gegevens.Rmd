@@ -13,13 +13,12 @@
 
 ### Enkele cijfers
 
+De volgende resultaten betreffen vogels.
+Zoogdieren worden besproken in Hoofdstuk \@ref(exploratie-zoogdieren).
 Binnen het pilootmeetnet worden al sinds 2018 tellingen verricht.
-\textcolor{red}{ABV? of van waar komen deze eigenlijk?} Zoals besproken in Hoofdstuk \@ref(pilootgegevens) zijn een aantal van deze punten hergebruikt bij de steekproeftrekking voor deze pilootstudie.
+\textcolor{red}{plan kiekendief ...} Zoals besproken in Hoofdstuk \@ref(pilootgegevens) zijn een aantal van deze punten hergebruikt bij de steekproeftrekking voor deze pilootstudie.
 Verder zijn er sinds de pilootstudie (2022) veel telpunten bijgekomen in De Moeren en de Oostelijke leemstreek (Tabel \@ref(tab:samenvatting-aantallen)).
 De meeste telpunten werden vier maal per jaar bezocht (Fig. \@ref(fig:telintensiteit)).
-Een telling is hier geïnterpreteerd als een waarneming van een bepaalde soort op een bepaalde afstand op een bepaald telpunt in een bepaalde telperiode.
-Er is dus geen rekening gehouden met het aantal vogels genoteerd per telling.
-Het aantal tellingen was hoger in de Leemstreek maar daar waren ook meer telpunten.
 Figuren \@ref(fig:aantal-waarnemingen) en \@ref(fig:aantal-soorten) geven een meer gedetailleerd beeld van de verdelingen van respectievelijk het aantal waarnemingen en soorten per jaar.
 
 ```{r samenvatting-aantallen}
@@ -34,7 +33,9 @@ summary_mas_2018_2023 %>%
   select(regio, jaar, `aantal telpunten`, `aantal waarnemingen`,
          `aantal soorten` = aantal_soorten_regiojaar) %>%
   arrange(regio, jaar) %>%
-  kable(caption = "Samenvattende tabel aantallen binnen het pilootmeetnet.")
+  kable(caption = paste(
+    "Samenvattende tabel aantallen binnen het pilootmeetnet.",
+    "Aantal waarnemingen en soorten betreffen vogels."))
 ```
 
 ```{r telintensiteit, out.width = "90%", fig.cap = "Aantal tellingen per jaar in elke regio."}
@@ -42,12 +43,12 @@ include_graphics(file.path("media", "data_exploratie",
                            "tellingen_mas_2018_2023.pdf"))
 ```
 
-```{r aantal-waarnemingen, out.width = "100%", fig.cap = "Verdeling van het aantal waarnemingen per jaar in elke regio."}
+```{r aantal-waarnemingen, out.width = "100%", fig.cap = "Verdeling van het aantal waarnemingen van vogels per jaar in elke regio."}
 include_graphics(file.path("media", "data_exploratie",
                            "waarnemingen_mas_2018_2023.pdf"))
 ```
 
-```{r aantal-soorten, out.width = "100%", fig.cap = "Verdeling van het aantal soorten per jaar in elke regio."}
+```{r aantal-soorten, out.width = "100%", fig.cap = "Verdeling van het aantal vogelsoorten per jaar in elke regio."}
 include_graphics(file.path("media", "data_exploratie",
                            "soorten_mas_2018_2023.pdf"))
 ```
@@ -73,15 +74,15 @@ $$
 P = \sum_{i=1}^{N} I(n_i > 0) / N
 $$
 
-Waarbij $N$ het totaal aantal telpunten is in telperiode, jaar en regio en $n_i$ het aantal individuen van de beschouwde soort waargenomen van telpunt $i$.
+Waarbij $N$ het totaal aantal telpunten is in telperiode, jaar en regio en $n_i$ het aantal individuen van de beschouwde soort waargenomen aan telpunt $i$.
 $I(\cdot)$ is de indicatorfunctie die 1 geeft als $n_i > 0$ en 0 anderzijds.
 We selecteerden enkel waarnemingen met broedcode groter dan nul.
 Voor roofvogels hielden we geen rekening met broedcode, \textcolor{red}{omdat?}.
 
 Figuur \@ref(fig:relfreqs-2018-2021) toont de relatieve frequenties van de 20 meest frequente soorten tussen 2018-2021 (gemiddeld over telperiode, jaar en regio).
-Tijdens het pilootproject \@ref(fig:relfreqs-2022-2023) zien we andere soorten naar voor komen en ook lagere frequenties.
+Tijdens het pilootproject (2022-2023) zien we andere soorten naar voor komen en ook lagere frequenties (Fig. \@ref(fig:relfreqs-2022-2023)).
 Dit is omdat we het controlegebied hadden toegevoegd (buiten sbp) waar minder vogels voorkomen.
-Het is duidelijk dat bepaalde soorten algemener zijn in de ene of de andere regio.
+Het is bovendien duidelijk dat bepaalde soorten algemener zijn in de ene of de andere regio.
 Als we het verschil in relatieve frequentie tussen De Moeren en de Oostelijke leemstreek nemen, zien we om welke soorten het gaat (Fign \@ref(fig:verschilfreqs-2018-2021), \@ref(fig:verschilfreqs-2022-2023)).
 \textcolor{red}{Typische soorten van open landschap, water en rietkragen werden meer gezien in De Moeren zoals Kievit, Bruine kiekendief, Rietzanger, Wilde eend Kleine karrekiet enzovoort. In de Oostelijke leemstreek zien we dan weer soorten van meer halfopen landschap en kleine landschapselementen zoals Veldleeuwerik, Geelgors, Vink enzovoort.} Ook binnen specifieke strata is er voor sommige soorten een groot verschil in frequentie (Fig. \@ref(fig:relfreqs-strata)).
 \textcolor{red}{bespreking, vooral voor veldleeuwerik en gele kwik ...}
@@ -111,13 +112,28 @@ include_graphics(file.path("media", "data_exploratie",
                            "soortenfreqs_doel_per_strat.pdf"))
 ```
 
-### Zoogdieren
+### Zoogdieren {#exploratie-zoogdieren}
 
-...
+Het MAS-protocol is ook geschikt om zoogdieren te monitoren en dan vooral voor Haas.
+Voor deze soorten is broedcode niet relevant.
+Haas was sterker aanwezig in De Moeren dan de Oostelijke leemstreek (Fig. \@ref(fig:relfreqs-zoogdieren)).
+Andere zoogdieren werden minder frequent gezien tijdens tellingen.
+Haas wordt minder geteld in de laatste telperiode (Fig. \@ref(fig:aantallen-haas)) en is het meest frequent in open landschap (Fig. \@ref(fig:relfreqs-haas)).
+\textcolor{red}{meer kadering, uitleg ... in ander rapport?}
 
-```{r relfreqs-zoogdieren, out.width = "100%", fig.cap = "..."}
+```{r relfreqs-zoogdieren, out.width = "100%", fig.cap = "Relatieve frequentie van de zoogdieren gezien tijdens het pilootproject (geordend volgens gemiddelde over telperiode, jaar en regio). Elke punt is een relatieve frequentie in een bepaalde telperiode, jaar en regio."}
 include_graphics(file.path("media", "data_exploratie",
                            "soortenfreqs_zoogdieren_2022_2023.pdf"))
+```
+
+```{r aantallen-haas, out.width = "100%", fig.cap = "Aantal individuen van Haas gezien tijdens het MAS pilootproject."}
+include_graphics(file.path("media", "data_exploratie",
+                           "aantallen_haas.pdf"))
+```
+
+```{r relfreqs-haas, out.width = "100%", fig.cap = "Relatieve frequentie van de Haas in verschillende strata van 2022-2023."}
+include_graphics(file.path("media", "data_exploratie",
+                           "soortenfreqs_haas_per_strat.pdf"))
 ```
 
 ## Vergelijking van gepaarde tellingen tussen vrijwilligers en professionele tellers {#dubbeltellingen}
@@ -284,7 +300,7 @@ De gebruikte kaart voor 2023 was nog niet definitief (extractie 26-06-2023).
 Zelfde als het vorige puntje, maar dan telkens de proportie hoofdteelten die het jaar ervoor aanwezig waren volgens de landbouwgebruikspercelenkaart.
 
 ```{r hftlt-groepen}
-hftlt_groepen_raw <- read_delim(file.path("media", "gewasgroepen", 
+hftlt_groepen_raw <- read_delim(file.path("media", "gewasgroepen",
                                           "hoofdteelten_groep.csv"),
                                 show_col_types = FALSE)
 hftlt_groepen <- hftlt_groepen_raw %>%
@@ -327,7 +343,7 @@ Het aandeel oppervlakte van elke gewasgroep binnen de telcirkels werd berekend p
 De voorteelten bevinden zich in dezelfde kaarten als de hoofdteelten.
 
 ```{r vrtlt-groepen}
-vrtlt_groepen_raw <- read_delim(file.path("media", "gewasgroepen", 
+vrtlt_groepen_raw <- read_delim(file.path("media", "gewasgroepen",
                                           "voorteelten_groep.csv"),
                                 show_col_types = FALSE)
 vrtlt_groepen <- vrtlt_groepen_raw %>%
@@ -352,10 +368,14 @@ vrtlt_groepen %>%
 De regio's van het pilootmeetnet (De Moeren en Oostelijke leemstreek).
 
 **2. Openheid landschap 1000 m**\
+\textcolor{red}{uitleg al in hoofdstuk 4??, maar dan voor 300 m en categorisch}
+
 \textcolor{red}{continu 1000 m ...}
 
 **3. Soortbeschermingsplan**\
-\textcolor{red}{??}
+\textcolor{red}{uitleg al in hoofdstuk 4??}
+
+\textcolor{red}{Zowel binnen kerngebied als zoekzones zijn er soortbeschermende maatregelen (SB BO’s) gelegd (zie kaart VLM BO’s). In theorie waren deze maatregelen vooral bedoeld voor kerngebied, en zal daar een hogere dichtheid (bedekkingsgraad) liggen, maar de VLM heeft het toegelaten om ook in zoekzones deze maatregelen te sluiten (al was dat minder de prioriteit). Daar werd bv. in de Moeren geen rekening mee gehouden, en werden erg veel SB BO’s gelegd, ook omdat dit gebied wél kerngebied was van plan kiekendief (SBP Grauwe Kiekendief) waardoor er wel veel BO’s gesloten zijn. In de toekomst heeft VLM beloofd om meer/enkel rekening te houden met kerngebied. Voor het pilootmeetnet namen we de kerngebieden samen als onderzoeksgebied (binnen sbp) en alles hierbuiten beschouwen we als controle (buiten sbp).}
 
 **4. Status teller**\
 Analyses van telpunten die zowel door vrijwilligers als professionele teller zijn geteld, gaven duidelijk aan dat vrijwilligers een significant lager aantal waarnemingen en soorten zien dan een professionele teller (Hoofdstuk \@ref(dubbeltellingen)).
@@ -370,51 +390,92 @@ De verschillende subklasses zijn: (1) bomengroep, (2) bomenrij, (3) boom, (4) bo
 Mediaan, interkwartielafstand (IQR) en variatiecoëfficiënt (CV) van groottes van percelen die overlappen met telcirkels (Fig. \@ref(fig:perceelsgrootte-methode)).
 De CV is de IQR gedeeld door de mediaan.
 Een perceel is de combinatie van aaneenliggende landbouwgebruikspercelen met dezelfde hoofdteelt.
-We gebruikten hiervoor dus opnieuw de kaartklaag van landbouwgebruikspercelen.
+We gebruikten hiervoor dus opnieuw de kaartlaag van landbouwgebruikspercelen.
 
-```{r perceelsgrootte-methode, out.width = "90%", fig.cap = "Voor de berekeningen m.b.t. perceelsgroottes, selecteerden we overlappende percelen. In tegenstelling tot berekeningen gerelateerd aan oppervlakte-aandelen nemen we dus geen strikte intersectie. Hier een voorbeeld van de percelen gerelateerd aan telpunten DM\\_386.7 en DM\\_44.45."}
+```{r perceelsgrootte-methode, out.width = "90%", fig.cap = "Voor de berekeningen m.b.t. perceelsgroottes, selecteerden we overlappende percelen voor alle telcirkels. In tegenstelling tot berekeningen gerelateerd aan oppervlakte-aandelen namen we dus geen strikte intersectie. Hier een voorbeeld van de percelen gerelateerd aan telpunten DM\\_386.7 en DM\\_44.45."}
 include_graphics(file.path("media", "verklarende_variabelen",
                            "perceelsgroottes.pdf"))
 ```
 
 **7. Inertie soortbeschermingsmaatregelen**\
-...
+Gewogen gemiddelde van jaar sinds implementatie soortbeschermingsmaatregelen per telcirkel.
+
+-   Geen beheerovereenkomst: 0
+-   Wel beheerovereekomst: Gewogen (oppervlakte beheerovereenkomst) gemiddelde van
+    -   1: start beheerovereenkomst in zelfde jaar als telling
+    -   2: start beheerovereenkomst 1 jaar vóór telling
+    -   3: start beheerovereenkomst 2 jaar vóór telling
+    -   ...
+
+We categoriseren de gemiddeldes door af te ronden naar een geheel getal.
+De informatie is aanwezig in de kaartlaag van de beheerovereenkomsten.
 
 **8. Inertie erosiebeheer en bufferstroken**\
-...
+Gewogen gemiddelde van jaar sinds implementatie erosiebeheer en bufferstroken per telcirkel zoals bij inertie soortbeschermingsmaatregelen.
 
 **9. Aantal predatoren**\
-...
+Aantal predatoren gezien tijdens telling.
+Als predatoren beschouwen we roofvogels (Blauwe Kiekendief, Boomvalk, Bosuil, Bruine Kiekendief, Buizerd, Grauwe Kiekendief, Havik, Ransuil, Rode Wouw, Slechtvalk, Smelleken, Sperwer, Steenuil, Steppekiekendief, Torenvalk, Vale Gier, Velduil, Wespendief, Zwarte Wouw) en kraaiachtigen (Ekster, Gaai, Kauw, Raaf, Roek, Zwarte Kraai).
+We beschouwden zowel een variabele voor het aantal individuen als het aantal soorten.
 
 **10. Nabijheid natuurgebieden**\
-...
+We berekenden een maat voor de nabijheid van natuurgebieden waarbij we gebieden dichtbij meer gewicht geven dan gebieden veraf, en grotere gebieden meer gewicht geven dan kleine binnen een straal van 3 km [@moilanen2002].
+
+We selecteerden hiervoor alle natuurgebieden in Vlaanderen, Nederland, Frankrijk en Wallonië binnen een buffer van 20 km rond de perimeters van het pilootproject (Fig. \@ref(fig:natuurgebieden-perimeters)).
+\textcolor{red}{tabel met kaartlagen} We splitsten alle gebieden op in aparte polygonen en berekenden de oppervlakte van elke polygoon en het middelpunt.
 
 ```{r natuurgebieden-perimeters, out.width = "90%", fig.cap = "Selectie van natuurgebieden in Vlaanderen, Nederland, Frankrijk en Wallonië binnen een buffer van 20 km rond de perimeters van het pilootproject."}
 include_graphics(file.path("media", "verklarende_variabelen",
                            "natuurgebieden_perimeters.png"))
 ```
 
-```{r vervalfunctie, out.width = "90%", fig.cap = "Voorbeeld van een logistische en exponentiele vervalfunctie over 3 km."}
+Beschouw telpunt $i$ met $J$ natuurgebieden met oppervlakte $A_j$ ($j = 1, ..., J$) binnen een straal van 3 km.
+We hielden geen rekening met eventuele invloeden van natuurgebieden op grotere afstanden.
+
+We berekenen het gewicht $w_{ij}$ via een vervalfunctie $f(\cdot)$, zodat
+
+$$
+w_{ij} = f(d_{ij})
+$$
+
+met $d_{ij}$ de afstand tussen telpunt $i$ en het centrum van natuurgebied $j$.\
+We beschouwden twee verschillende vervalfuncties (Fig. \@ref(fig:vervalfunctie)).
+
+1.  Logistische vervalfunctie
+
+$$
+f(x) = \frac{1}{1 + \exp(b(x-m))}
+$$
+
+2.  Exponentiële vervalfunctie
+
+$$
+f(x) = \frac{1}{1 + bx^m}
+$$
+
+```{r vervalfunctie, out.width = "90%", fig.cap = "Voorbeeld van een logistische en exponentiële vervalfunctie over 3 km."}
 include_graphics(file.path("media", "verklarende_variabelen",
                            "distance_decay.pdf"))
 ```
 
+We besloten de exponentiële vervalfunctie te gebruiken met parameters $b = 1$ en $m = 1.3$.
+Daarna berekenden we de variabele voor telpunt $i$ via de gewogen som van de oppervlaktes natuurgebieden $\sum_{j=1}^Jw_{ij}A_j$.
+
 ### Tertiaire variabelen {#tert-verklarende-variabelen}
 
-**1. X- en Y-coördinaten**\
-...
+Enkele triviale variabelen gerelateerd aan het monitoringsprotocol in tijd en ruimte.
 
-**2. Telperiode**\
-...
+**1. X- en Y-coördinaten**
 
-**3. Jaar**\
-...
+**2. Telperiode**
 
-**4. Telpunt id**\
+**3. Jaar**
 
-...
+**4. Telpunt id**
 
 ### Exploratie en conclusies {#expl-verklarende-variabelen}
+
+...
 
 ## Case studie: de Veldleeuwerik {#veldleeuwerik}
 
@@ -422,7 +483,7 @@ include_graphics(file.path("media", "verklarende_variabelen",
 
 ### Data exploratie {#exploratie-veldleeuwerik}
 
-...
+\textcolor{red}{doen?}
 
 ### Densiteitsschattingen en detectiekans {#densiteitsschattingen}
 
@@ -710,7 +771,8 @@ n2_veldleeuwerik <- sum(ds_veldleeuwerik_2023$ddf$data$size)
 nc2_veldleeuwerik <- sum_veldleeuwerik_2023$ds$Nhat
 
 pa_veldleeuwerik <- round(
-  (n1_veldleeuwerik + n2_veldleeuwerik)/(nc1_veldleeuwerik + nc2_veldleeuwerik),
+  (n1_veldleeuwerik + n2_veldleeuwerik) /
+    (nc1_veldleeuwerik + nc2_veldleeuwerik),
   digits = 3)
 ```
 
@@ -849,7 +911,7 @@ nc1_fazant <- sum_fazant_2022$ds$Nhat
 n2_fazant <- sum(ds_fazant_2023$ddf$data$size)
 nc2_fazant <- sum_fazant_2023$ds$Nhat
 
-pa_fazant <- round((n1_fazant + n2_fazant)/(nc1_fazant + nc2_fazant), 2)
+pa_fazant <- round((n1_fazant + n2_fazant) / (nc1_fazant + nc2_fazant), 2)
 
 # Gemiddelde detectiekans Kneu
 ds_kneu_2022 <- models_2022$Kneu
@@ -864,7 +926,7 @@ nc1_kneu <- sum_kneu_2022$ds$Nhat
 n2_kneu <- sum(ds_kneu_2023$ddf$data$size)
 nc2_kneu <- sum_kneu_2023$ds$Nhat
 
-pa_kneu <- round((n1_kneu + n2_kneu)/(nc1_kneu + nc2_kneu), 2)
+pa_kneu <- round((n1_kneu + n2_kneu) / (nc1_kneu + nc2_kneu), 2)
 ```
 
 Het is ook mogelijk om densiteiten in te berekenen o.b.v. het maximum aantal broedparen over de telperiodes heen per telpunt per jaar.
@@ -903,6 +965,6 @@ include_graphics(file.path("media", "distance", "per_stratum",
 We kunnen concluderen dat het schatten van densiteiten een evenwichtsoefening is tussen het maken van juiste beslissingen in ecologische context en anderzijds het gebruiken van een duidelijk en niet te complexe statistiche methode.
 Deze eerste kan in rekening genomen worden door de data te filteren op broedcode groter dan nul en voor elke soort de telperiodes te selecteren die binnen de broedperiode van elke soort vallen.
 Een extra maatregel zou kunnen zijn om over die telperiodes (per telpunt per jaar) het maximum aantal te nemen als finale dataset voor verdere analyse (met effort = 1 omdat we dan niet meer corrigeren voor het aantal bezoeken, waardoor geen strikte uitmiddeling gebeurd).
+Voor Haas zou het bovendien nuttig zijn de oppervlaktes van de telcirkel te corrigeren voor de oppervlakte die effectief zichtbaar is voor de teller \textcolor{red}{(volgens viewshedanalyse, zie  Hoofdstuk @ref(uitbreiding-vlaanderen))}, aangezien Haas steeds op de grond zit.
 Distance sampling m.b.v. het **Distance** package bleek een relatief eenvoudige procedure (zowel mathematisch als gebruiksvriendelijkheid) om densiteitsschattingen (incl. onzekerheid) te maken rekening houdend met de detectiekans van een soort.
 \textcolor{red}{complex niet nodig, detectiekans kan wel in GLMM ofzo worden gebruikt? verder}
-

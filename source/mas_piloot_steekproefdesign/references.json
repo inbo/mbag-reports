@@ -628,5 +628,47 @@
         "publisher-place": "New York",
         "title": "Bayesian Data Analysis",
         "type": "book"
+    },
+    {
+        "DOI": "10.1890/0012-9658(2002)083[1131:scmise]2.0.co;2",
+        "ISSN": "0012-9658",
+        "URL": "http://dx.doi.org/10.1890/0012-9658(2002)083[1131:SCMISE]2.0.CO;2",
+        "author": [
+            {
+                "family": "Moilanen",
+                "given": "Atte"
+            },
+            {
+                "family": "Nieminen",
+                "given": "Marko"
+            }
+        ],
+        "container-title": "Ecology",
+        "container-title-short": "Ecology",
+        "id": "moilanen2002",
+        "is-referenced-by-count": "608",
+        "issue": "4",
+        "issued": {
+            "date-parts": [
+                [
+                    2002,
+                    4
+                ]
+            ]
+        },
+        "language": "en",
+        "member": "311",
+        "page": "1131-1145",
+        "prefix": "10.1002",
+        "providerkey": "doi",
+        "publisher": "Wiley",
+        "reference-count": "106",
+        "references-count": "106",
+        "score": "1",
+        "source": "Crossref",
+        "subject": "Ecology, Evolution, Behavior and Systematics",
+        "title": "SIMPLE CONNECTIVITY MEASURES IN SPATIAL ECOLOGY",
+        "type": "article-journal",
+        "volume": "83"
     }
 ]
