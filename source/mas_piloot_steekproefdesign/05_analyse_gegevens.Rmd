@@ -475,7 +475,92 @@ Enkele triviale variabelen gerelateerd aan het monitoringsprotocol in tijd en ru
 
 ### Exploratie en conclusies {#expl-verklarende-variabelen}
 
-...
+We voerden univariate en bivariate data exploratie uit van de variabelen beschreven hierboven.
+Univariate exploratie gebeurde per regio en indien van toepassing ook nog per jaar en/of telperiode aan de hand van histogrammen, barplots en boxplots.
+Voor bivariate relaties tussen de variabelen, berekenen we Pearson en Spearman correlaties en maken we scatterplots tussen continue variabelen, boxplots om continue met categorische variabelen te vergelijken en tabellen om categorische variabelen te vergelijken.
+Alle uitspraken voor de variabelen van de hoofdteelten gelden ook voor de variabelen van de hoofdteelten van het jaar ervoor.
+
+### Univariate exploratie
+
+Na de univariate exploratie bleek dat er van de hoofdteelten een aantal variabelen zijn met bijna geen data (geen/weinig oppervlakte binnen telcirkels).
+De volgende variabelen hebben nul als derde kwartiel: `andere_hfdtlt`, `braakland_hfdtlt`, `andere_graangewassen_hfdtlt`, `houtachtige_gewassen`, `water_hfdtlt`, `zaden_hfdtlt`, `zomergranen_hfdtlt`.
+We maakten de volgende beslissingen voor deze variabelen:
+
+-   `andere_hfdtlt`: uitsluiten, dit zijn allicht heel zeldzame teelten waarvan we geen invloed verwachten
+-   `braakland_hfdtlt`: uitsluiten, dit kan belangrijk zijn, maar is allicht ook aanwezig in de laag van beheerovereenkomsten
+-   `houtachtige_gewassen_hfdtlt`: uitsluiten, belangrijkste houtachtige gewassen zijn aanwezig in `meerjarige_fruitteelt_hfdtlt` en allicht soms ook in bepaalde variabelen van de kleine landschapselementen
+-   `water_hfdtlt`: uitsluiten, vermoedelijk niet van belang en bijna niet aanwezig
+-   `andere_graangewassen_hfdtlt` en `zomergranen_hfdtlt`: belangrijk voor vogels (behouden), we tellen ze samen op onder `zomergranen_hfdtlt2`
+-   `zaden_hfdtlt`: belangrijk voor vogels (behouden), in enkele telcirkels wel grote oppervlaktes aanwezig
+
+Voor de voorteelten is er bijna geen data.
+We behielden voor de bivariate exploratie enkel de proportie afwezige voorteelt.
+
+### Bivariate exploratie
+
+Zowel de Pearsons als Spearman correlatiematrices toonden gelijkaardige patronen (Fig. \@ref(fig:corrmat1)).
+De Spearman correlatie gaf gelijkaardige resultaten, maar alle correlaties waren sterker.
+De Pearson correlatie tussen twee variabelen zal hoog zijn wanneer waarnemingen een positief lineair verband vertonen en laag wanneer ze een positief lineair verband vertonen.
+De Spearman correlatie tussen twee variabelen zal hoog zijn wanneer waarnemingen een vergelijkbare (of identieke) rangorde hebben tussen de twee variabelen, en laag wanneer waarnemingen een ongelijke (of volledig tegengestelde) rangorde hebben tussen de twee variabelen.
+
+De openheidsvariabele was negatief gecorreleerd met de variabelen van de kleine landschapselementen.
+Dit is logisch aangezien bomen, hagen etc. het landschap minder open maken.
+Zo zagen we ook een negatieve correlatie met fruitteelten omwille van dezelfde reden.
+Een positieve correlatie zagen we dan weer met afwezigheid van voorteelten en groottes van percelen.
+Dan zal het landschap inderdaad meer open zijn.
+We zagen wel dat de verbanden niet altijd lineair zijn.
+
+De mediaan en interkwartielafstand van perceelsgroottes waren sterk gecorreleerd.
+Ook de gewasdiversiteit (Shannon en absolute aantal gewassen) waren op dezelfde laag van de perceelsgroottes gebasseerd en we zien een sterke negatieve correlatie, maar niet met de variatiecoëfficient.
+De eveness maat is ook gecorreleerd met de gewasdiversiteitmaten.
+Alle uitspraken voor `..hfdtlt` gelden ook voor `..hfdtlt_pre` (hoofdteelt jaar ervoor).
+Hun overeenkomstige correlaties zijn hier niet van belang.
+Proportie hagen en meerjarige fruitteelt waren vrij sterk positief gecorreleerd.
+Verder zagen we nog dat er minder hagen, houkanten en bomen zijn als de gewaseveness toeneemt, als er meer afwezigheid is aan voorteelten en als percelen gemiddeld groter zijn.
+Hagen, houtkanten en bomen waren onderling positief gecorreleerd.
+Aantal predatorsoorten en individuen waren ook positief gecorreleerd.
+
+We kunnen verschillende conclusies maken.
+Alle uitspraken voor `..hfdtlt` gelden ook voor `..hfdtlt_pre`:
+
+-   `perceel_median_area` en `perceel_iqr_area` weglaten: `perceel_cv_area` gebruiken als maat voor perceelsgrootte
+-   keuze maken over gewasdiversiteitsvariabele: `gewas_div_shannon` over `gewas_div_n` omdat proportie in rekening wordt gebracht, `gewas_evenness` is minder van belang
+-   sommige KLE variabelen tonen sterke correlaties met andere variabelen en bovendien zijn sommige van deze variabelen heel zeldzaam, toch zijn ze allemaal belangrijk voor de vogels. Tijdens het modelleren kan het toch blijken dat het beter is om alles te sommeren tot 1 KLE proportie variabele
+-   keuze maken over predatorvariabele: `n_predators` over `n_predators_spec` omwille van meer variatie
+-   voorteelten zijn vaak afwezig waardoor het misschien eerder een maat is voor de oppervlakte aan landbouwgebruikspercelen binnen een telcirkel eerder dan indicatief te zijn voor voorteelten zelf: hoe meer afwezigheid voorteelt, hoe minder landbouwgebruikspercelen, hoe minder kleine landschapselementen (neg. corr.), hoe minder openheid landschap (pos. corr.) ... `afwezig_vrtlt` wordt dus toch ook beter weggelaten. Hoewel voorteelten in praktijk belangrijk kunnen zijn voor de akkervogels, blijkt dat we niet de goede data hebben om dit effectief te gaan controleren.
+    -   Voorteelt is door landbouwers vaak ingevoerd als `NA` (en bij ons dus geclassificeerd als "afwezig") omdat er geen voorteelt mogelijk is. Die verzamelaanvraag loopt van 1 januari tot eind van het jaar, en bij wintergewassen staat de hoofdteelt er al op in het vroege voorjaar. Er zijn nog andere gevallen waarbij er geen voorteelt mogelijk is, vanwege de te korte tijd die er vrij is als de hoofdteelt er op moet komen.
+    -   Hoofdteelt is de voornaamste teelt die er tussen 15 mei en eind augustus op staat. Een voorteelt wordt voor die tijd ondergewerkt of geoogst, zodat de hoofdteelt er op kan. Dus als er wintertarwe of een ander wintergraan op staat in de voorteelt, wil dat zeggen dat die (voor de organische stof, als voeder of om in te kuilen) wordt geoogst, of gewoon wordt ingeploegd omdat die mislukt is of als vanggewas is gezet. Dat zou dus een uitzondering moeten zijn. Wintergranen die er al op staan in de voorteelt periode, maar als hoofdteelt blijven staan, daar komt dan bij de voorteelt `NA` vermeld.
+    -   Er blijkt geen controle te zijn op de verzamelaanvraaggegevens, dus het kan ook een interpretatie zijn van de landbouwer om dezelfde voorteelt als hoofdteelt te vermelden (bv. wintertarwe) die gewoon blijft staan. Voor ons onderzoek is vooral de hoofdteelt belangrijk eigenlijk, en bijkomstig of er een verschillende voorteelt is.
+
+De nieuwe Pearson correlatiematrix is gevisualiseerd in Figuur \@ref(fig:corrmat2).
+Een PCA toonde gelijkaardige resultaten.
+
+```{r corrmat1, out.width = "100%", fig.cap = "Pearson correlatiematrix tussen continue variabelen die overbleven na univariate data exploratie. We visualiseren enkel correlaties sterker of gelijk aan 0.2."}
+include_graphics(file.path("media", "verklarende_variabelen",
+                           "corrmat1.pdf"))
+```
+
+```{r corrmat2, out.width = "100%", fig.cap = "Pearson correlatiematrix tussen continue variabelen die overbleven na univariate en bivariate data exploratie. We visualiseren enkel correlaties sterker of gelijk aan 0.2."}
+include_graphics(file.path("media", "verklarende_variabelen",
+                           "corrmat2.pdf"))
+```
+
+Ten slotte waren we ook nog geïnteresseerd in het verband tussen binnen en buiten sbp en het oppervlakte-aandeel soortbeschermingsplannen.
+We zien een groter aandeel soortbeschermingsplannen binnen sbp dan buiten sbp (Fig. \@ref(fig:sbp-areapropsb)).
+Ook zien we een verschillende trend over de jaren.
+Om deze beter te begrijpen, bekeken we de oppervlakte aan soortbeschermingsplannen binnen de volledige perimeter van de pilootstudie over de jaren (Fig. \@ref(fig:total-propsb)).
+We zien voor elk stratum een duidelijke toename tot 2022 en dan een lichte afname naar 2023.
+\textcolor{red}{wat houdt dit in voor de statistische analyses?}
+
+```{r sbp-areapropsb, out.width = "90%", fig.cap = "Relatie tussen oppervlakte-aandeel soortbeschermingsmaatregelen en binnen of buiten sbp per regio per jaar. Elk lijntje is een telpunt."}
+include_graphics(file.path("media", "data_exploratie",
+                           "soortbeschermingsmaatregelen3_2018_2023.pdf"))
+```
+
+```{r total-propsb, out.width = "90%", fig.cap = "Totale oppervlakte soortbeschermingsmaatregelen binnen de perimeters van het pilootproject over de jaren heen per regio opgedeeld per categorie."}
+include_graphics(file.path("media", "data_exploratie",
+                           "soortbeschermingsmaatregelen1_2018_2023.pdf"))
+```
 
 ## Case studie: de Veldleeuwerik {#veldleeuwerik}
 
