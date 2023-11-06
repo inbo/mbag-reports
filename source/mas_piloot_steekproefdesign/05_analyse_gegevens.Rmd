@@ -1066,10 +1066,12 @@ Distance sampling m.b.v. het **Distance** package bleek een relatief eenvoudige 
 -   We centreren en schalen alle continue variabelen door te delen door de standaard deviatie.
 -   Keuze tussen sbp en area_prop_sb We besluiten op te delen volgens de agri-environment schemes (AES) classificatie besproken in @sharps2023.
 
-```{r}
+```{r classificatie-propsb}
 tibble(beleid = c("nul", "laag", "middellaag", "middelhoog", "hoog"),
        prop_area_sb = c("0", "<0.04", "0.04-0.07", "0.07-0.1", ">0.1")) %>%
-  kable()
+  kable(caption = paste("Classificatie oppervlakte-aandeel",
+                        "soortbeschermingsmaatregelen",
+                        "binnen telcirkel."))
 ```
 
 Analyses werden voor beide regio's apart gedaan via Bayesiaanse Poisson modellen met de **brms** package.
@@ -1094,17 +1096,68 @@ De model fit werd bevestigd op basis van 'posterior predictive checks' (PPC) waa
 Na het fitten van de referentiemodellen voor elke regio PPVS toegepast met de **projpred** package v2.6.0 [@R-projpred].
 Hierin worden twee fases onderscheiden:
 
-1.  Zoekfase De rangschikking van de verklarende variabelen, nl. de kleinst mogelijke subset van kandidaat-variabelen voor elk aantal aan variabelen, werd bepaald via forward search. Hierbij werd gespecifieerd dat de categorische variabele voor het oppervlakte-aandeel soortbeschermingsplannen zeker in het finale model moest aanwezig zijn (altijd rang 1). Maximale submodelgrootte werd ingesteld op 19 variabelen.
-2.  Evaluatiefase Berekening van voorspellende prestaties van de steeds complexer wordende submodellen langs de ranglijst van verklarende variabelen via 5-fold cross-validation (CV). Voorspellende prestaties werden gekwantificeerd als 'mean log predictive density' (MLPD). Dit is de expected log (pointwise) predictive density (ELPD) gedeeld door het aantal observaties.
+1.  Zoekfase\\ De rangschikking van de verklarende variabelen, nl. de kleinst mogelijke subset van kandidaat-variabelen voor elk aantal aan variabelen, werd bepaald via forward search. Hierbij werd gespecifieerd dat de categorische variabele voor het oppervlakte-aandeel soortbeschermingsplannen zeker in het finale model moest aanwezig zijn (altijd rang 1). Maximale submodelgrootte werd ingesteld op 19 variabelen.
+2.  Evaluatiefase\\ Berekening van voorspellende prestaties van de steeds complexer wordende submodellen langs de ranglijst van verklarende variabelen via 5-fold cross-validation (CV). Voorspellende prestaties werden gekwantificeerd als 'mean log predictive density' (MLPD). Dit is de expected log (pointwise) predictive density (ELPD) gedeeld door het aantal observaties.
 
 Selectie van het aantal variabelen werd visueel gedaan door de MLPD te plotten als verschil met het referentiemodel in functie van submodelgrootte.
 Als de MLPD niet meer toeneemt met het aantal variabelen, dan voegen die extra variabelen geen voorspellende waarde meer toe aan het model en zullen ze niet geselecteerd worden.
-Ook bekeken we de variabiliteit in de rangschikking van de verklarende variabelen aan de hand van de ranking proporties.
+Ook bekeken we de variabiliteit in de rangschikking van de verklarende variabelen aan de hand van de (cumulatieve) ranking proporties.
 De ranking proportie van variabele $x$ bij submodelgrootte $j$ is de proportie van CV folds die variabele $x$ hebben op positie $j$ van hun rangschikking van de verklarende variabelen.
+De cumulatieve ranking proporties worden opgeteld naarmate submodelgrootte toeneemt.
 
 Finale modellen werden met de geselecteerde variabelen opnieuw gefit via **brms**.
 We fitten zowel een Poisson als zero-inflated Poisson model.
 Beide modellen werden vergeleken visueel via PPC's en o.b.v. het verschil in ELPD berekend via 5-fold cross-validation.
 Voor de nabewerking en visualisatie van de resultaten hebben we gebruik gemaakt van de functionaliteiten uit de **tidybayes** package v3.0.4 [@R-tidybayes].
 
-#### Resultaten
+#### Resultaten De Moeren
+
+```{r ranking-dm-veldleeuw, out.width = "100%", fig.cap = "..."}
+include_graphics(file.path("media", "beheerovereenkomsten",
+                           "de_moeren",
+                           "cvvs_ranking_veldleeuwerik.pdf"))
+```
+
+```{r cvprop-dm-veldleeuw, out.width = "100%", fig.cap = "..."}
+include_graphics(file.path("media", "beheerovereenkomsten",
+                           "de_moeren",
+                           "cvvs_proporties_veldleeuwerik.pdf"))
+```
+
+```{r beleid-df-veldleeuw1, out.width = "100%", fig.cap = "..."}
+include_graphics(file.path("media", "beheerovereenkomsten",
+                           "de_moeren",
+                           "beleidstoestand_veldleeuwerik_fine.pdf"))
+```
+
+```{r beleid-df-veldleeuw2, out.width = "100%", fig.cap = "..."}
+include_graphics(file.path("media", "beheerovereenkomsten",
+                           "de_moeren",
+                           "beleidstoestand_veldleeuwerik_coarse.pdf"))
+```
+
+#### Resultaten Oostelijke leemstreek
+
+```{r ranking-ol-veldleeuw, out.width = "90%", fig.cap = "..."}
+include_graphics(file.path("media", "beheerovereenkomsten",
+                           "oostelijke_leemstreek",
+                           "cvvs_ranking_veldleeuwerik.pdf"))
+```
+
+```{r cvprop-ol-veldleeuw, out.width = "120%", fig.cap = "..."}
+include_graphics(file.path("media", "beheerovereenkomsten",
+                           "oostelijke_leemstreek",
+                           "cvvs_proporties_veldleeuwerik.pdf"))
+```
+
+```{r beleid-ol-veldleeuw1, out.width = "90%", fig.cap = "..."}
+include_graphics(file.path("media", "beheerovereenkomsten",
+                           "oostelijke_leemstreek",
+                           "beleidstoestand_veldleeuwerik_fine.pdf"))
+```
+
+```{r beleid-ol-veldleeuw2, out.width = "120%", fig.cap = "..."}
+include_graphics(file.path("media", "beheerovereenkomsten",
+                           "oostelijke_leemstreek",
+                           "beleidstoestand_veldleeuwerik_coarse.pdf"))
+```
