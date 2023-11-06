@@ -219,7 +219,7 @@ $$
 
 We besluiten dat er een significant verschil is als het 95 % credible interval van $\beta_2$ nul niet bevat.
 
-We bemonsterden de posterior verdelingen voor de modellen met drie Markov Chain Monte Carlo (MCMC) ketens, die elk 4000 iteraties draaiden, waarvan de eerste 2000 werden verwijderd als burn-in.
+We bemonsterden de posterior verdelingen voor de modellen met drie Markov Chain Monte Carlo (MCMC) chains, die elk 4000 iteraties draaiden, waarvan de eerste 2000 werden verwijderd als burn-in.
 We onderzochten MCMC-convergentie door visuele beoordeling van trace plots en posterior densiteiten.
 We onderzochten ook de 'potential scale reduction factors' [@gelman1992] voor elke scalaire parameter in het model zoals voorgesteld door [@gelman2013].
 Ze lagen allemaal dicht bij 1, zoals vereist.
@@ -1052,3 +1052,65 @@ Een extra maatregel zou kunnen zijn om over die telperiodes (per telpunt per jaa
 Voor Haas zou het bovendien nuttig zijn de oppervlaktes van de telcirkel te corrigeren voor de oppervlakte die effectief zichtbaar is voor de teller \textcolor{red}{(volgens viewshedanalyse, zie  Hoofdstuk @ref(uitbreiding-vlaanderen))}, aangezien Haas steeds op de grond zit.
 Distance sampling m.b.v. het **Distance** package bleek een relatief eenvoudige procedure (zowel mathematisch als gebruiksvriendelijkheid) om densiteitsschattingen (incl. onzekerheid) te maken rekening houdend met de detectiekans van een soort.
 \textcolor{red}{complex niet nodig, detectiekans kan wel in GLMM ofzo worden gebruikt? verder}
+
+### Toestand beheerovereenkomsten {#beheerovereenkomsten}
+
+#### Inleiding
+
+#### Materiaal en methoden
+
+Maximum aantal per telcirkel per jaar niet telperiodes --\> gemiddelde n_predators --\> meest frequente teller Enkel data van 2022-2023 We voegen de jaarvariabele toe als factor.
+We centreren en schalen alle continue variabelen door te delen door de standaard deviatie.
+Keuze tussen sbp en area_prop_sb We besluiten op te delen volgens de agri-environment schemes (AES) classificatie besproken in @sharps2023.
+
+```{r}
+tibble(beleid = c("nul", "laag", "middellaag", "middelhoog", "hoog"),
+       prop_area_sb = c("0", "<0.04", "0.04-0.07", "0.07-0.1", ">0.1")) %>%
+  kable()
+```
+
+Analyses werden voor beide regio's apart gedaan via Bayesiaanse Poisson modellen met de **brms** package.
+Selectie van variabelen werd gedaan via projection predictive variable selection methode (PPVS) [@piironen2017; @piironen2020; catalina2022; @mclatchie2023].
+Het doel van PPVS is het vinden van een zo klein mogelijke subset van kandidaat-variabelen met een voorspellende kracht die zo dicht mogelijk ligt bij die van het referentiemodel.
+Het referentiemodel bevat alle variabelen in kwestie en is het best presterende model (in termen van voorspellende prestaties) dat we tot onze beschikking hebben.
+Voor de regressiecoëfficienten ($\beta$-parameters) gebruikten we de 'R2-D2 shrinkage prior' [@zhang2016; @yanchenko2021].
+Voor het intercept gebruiken we de default prior van **brms**.
+De R2-D2 prior specificeert een verdeling voor de determinatiecoëfficiënt $R^2$ en induceert dan een prior op de individuele $\beta$'s.
+Het idee achter 'shrinkage priors' is om de geschatte parameters van een model naar een centrale waarde te trekken of ze naar nul te laten krimpen.
+Deze regularisatie moedigt zo simpelere modellen aan en kunnen dus gebruikt worden in variabelenselectie.
+Voor de hyperparameters gebruiken we 0,5 voor het gemiddelde van de Beta prior op $R^2$, 2 voor de precisie van de Beta prioren en 1 voor de concentratievector van de Dirichlet prior op de variantie decompositieparameter (lagere waardes beteken een sterkere shrinkage).
+Deze werden bepaald o.b.v. exploratieve analyses en bijlage B in @mclatchie2023.
+
+We bemonsterden de posterior verdelingen voor de modellen met drie Markov Chain Monte Carlo (MCMC) chains, die elk 8000 iteraties draaiden, waarvan de eerste 2000 werden verwijderd als burn-in.
+De ketens werden verdund met thinning factor 3 zodat 2000 posterior samples per chain overbleven en dus 6000 posterior samples in totaal.
+We onderzochten MCMC-convergentie door visuele beoordeling van trace plots en posterior densiteiten.
+We onderzochten ook de 'potential scale reduction factors' voor elke scalaire parameter in het model.
+Ze lagen allemaal dicht bij 1, zoals vereist.
+De model fit werd bevestigd op basis van 'posterior predictive checks' waarbij we de geobserveerde uitkomst vergeleken met gesimuleerde datasets van de 'posterior predictive distribution'.
+
+Na het fitten van de referentiemodellen voor elke regio PPVS toegepast met de **projpred** package v2.6.0 [@R-projpred].
+Hierin worden twee fases onderscheiden:
+
+1.  Zoekfase De rangschikking van de verklarende variabelen, nl. de kleinst mogelijke subset van kandidaat-variabelen voor elk aantal aan variabelen, werd bepaald via forward search. Hierbij werd gespecifieerd dat de categorische variabele voor het oppervlakte-aandeel soortbeschermingsplannen zeker in het finale model moest aanwezig zijn (altijd rang 1).
+2.  Evaluatiefase Berekening van voorspellende prestaties van de steeds complexer wordende submodellen langs de ranglijst van verklarende variabelen via 5-fold cross-validation (CV). Voorspellende prestaties werden gekwantificeerd als mean log predictive density (MLPD). Dit is de expected log (pointwise) predictive density (ELPD) gedeeld door het aantal observaties.
+
+Selectie van het aantal variabelen werd visueel gedaan door de MLPD te plotten als verschil met het referentiemodel in functie van submodelgrootte.
+Als de MLPD niet meer toeneemt met het aantal variabelen, dan voegen die extra variabelen geen voorspellende waarde meer toe aan het model en zullen ze niet geselecteerd worden.
+Ook bekeken we de variabiliteit in de rangschikking van de verklarende variabelen aan de hand van de ranking proporties.
+De ranking proportie van variabele $x$ bij submodelgrootte $j$ is de proportie van CV folds die variabele $x$ hebben op positie $j$ van hun rangschikking van de verklarende variabelen.
+
+#### Resultaten
+
+Op basis van deze plot bepalen we submodelgrootte.
+Meestal is het de bedoeling om de kleinste submodelgrootte te vinden waarbij de voorspellende prestaties van de submodellen afvlakken en dicht genoeg in de buurt komen van de voorspellende prestaties van het referentiemodel (de gestippelde rode horizontale lijn).
+Dit blijft min of meer een subjectieve beslissing.
+Er moet er een geschikte afweging worden gemaakt tussen voorspellende prestaties (nauwkeurigheid) en modelgrootte.
+We zien na de vierde predictor geen sterke stijgingen meer.
+Wel is er nog een kleine stijging tot en met 7 à 8.
+
+De eerste vier zijn dezelfde als de eerste vier in de snelle analyse.
+Dit geld ook voor de eerste acht (wel in andere volgorde).
+We zien bovendien dat voor de eerste acht predictors dat er weinig variabiliteit is in de rangschikking van de variabelen
+
+e aangeraden grootte door het projpred package is 11 verklarende variabelen.
+Het gaat dan om de volgende variabelen:
