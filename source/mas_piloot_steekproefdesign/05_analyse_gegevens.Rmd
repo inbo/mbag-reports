@@ -224,7 +224,8 @@ We onderzochten MCMC-convergentie door visuele beoordeling van trace plots en po
 We onderzochten ook de 'potential scale reduction factors' [@gelman1992] voor elke scalaire parameter in het model zoals voorgesteld door [@gelman2013].
 Ze lagen allemaal dicht bij 1, zoals vereist.
 
-Via 'Leave-One-Out Cross-Validation' vergeleken we eerste welke responsdistributie het best paste bij de data en ten tweede of het random effect van plot $b_{2}$ noodzakelijk was of niet (niet gedaan bij correlatie model).
+Via leave-one-out cross-validation (CV) werd de 'expected log pointwise predictive density' (ELPD) berekend en vergeleken tussen verschillende modellen: (1) welke responsdistributie het best paste bij de data en (2) of het random effect van plot $b_{2}$ noodzakelijk was of niet (niet gedaan bij correlatie model).
+
 De model fit werd bevestigd op basis van 'posterior predictive checks' waarbij we de geobserveerde uitkomst vergeleken met gesimuleerde datasets van de 'posterior predictive distribution'.
 
 ### Resultaten en discussie {#dubbeltellingen-resultaten}
@@ -1057,11 +1058,13 @@ Distance sampling m.b.v. het **Distance** package bleek een relatief eenvoudige 
 
 #### Inleiding
 
+\textcolor{red}{blabbla}
+
 #### Materiaal en methoden
 
-Maximum aantal per telcirkel per jaar niet telperiodes --\> gemiddelde n_predators --\> meest frequente teller Enkel data van 2022-2023 We voegen de jaarvariabele toe als factor.
-We centreren en schalen alle continue variabelen door te delen door de standaard deviatie.
-Keuze tussen sbp en area_prop_sb We besluiten op te delen volgens de agri-environment schemes (AES) classificatie besproken in @sharps2023.
+-   Maximum aantal per telcirkel per jaar niet telperiodes --\> gemiddelde n_predators --\> meest frequente teller Enkel data van 2022-2023 We voegen de jaarvariabele toe als factor.
+-   We centreren en schalen alle continue variabelen door te delen door de standaard deviatie.
+-   Keuze tussen sbp en area_prop_sb We besluiten op te delen volgens de agri-environment schemes (AES) classificatie besproken in @sharps2023.
 
 ```{r}
 tibble(beleid = c("nul", "laag", "middellaag", "middelhoog", "hoog"),
@@ -1086,31 +1089,22 @@ De ketens werden verdund met thinning factor 3 zodat 2000 posterior samples per 
 We onderzochten MCMC-convergentie door visuele beoordeling van trace plots en posterior densiteiten.
 We onderzochten ook de 'potential scale reduction factors' voor elke scalaire parameter in het model.
 Ze lagen allemaal dicht bij 1, zoals vereist.
-De model fit werd bevestigd op basis van 'posterior predictive checks' waarbij we de geobserveerde uitkomst vergeleken met gesimuleerde datasets van de 'posterior predictive distribution'.
+De model fit werd bevestigd op basis van 'posterior predictive checks' (PPC) waarbij we de geobserveerde uitkomst vergeleken met gesimuleerde datasets van de 'posterior predictive distribution'.
 
 Na het fitten van de referentiemodellen voor elke regio PPVS toegepast met de **projpred** package v2.6.0 [@R-projpred].
 Hierin worden twee fases onderscheiden:
 
-1.  Zoekfase De rangschikking van de verklarende variabelen, nl. de kleinst mogelijke subset van kandidaat-variabelen voor elk aantal aan variabelen, werd bepaald via forward search. Hierbij werd gespecifieerd dat de categorische variabele voor het oppervlakte-aandeel soortbeschermingsplannen zeker in het finale model moest aanwezig zijn (altijd rang 1).
-2.  Evaluatiefase Berekening van voorspellende prestaties van de steeds complexer wordende submodellen langs de ranglijst van verklarende variabelen via 5-fold cross-validation (CV). Voorspellende prestaties werden gekwantificeerd als mean log predictive density (MLPD). Dit is de expected log (pointwise) predictive density (ELPD) gedeeld door het aantal observaties.
+1.  Zoekfase De rangschikking van de verklarende variabelen, nl. de kleinst mogelijke subset van kandidaat-variabelen voor elk aantal aan variabelen, werd bepaald via forward search. Hierbij werd gespecifieerd dat de categorische variabele voor het oppervlakte-aandeel soortbeschermingsplannen zeker in het finale model moest aanwezig zijn (altijd rang 1). Maximale submodelgrootte werd ingesteld op 19 variabelen.
+2.  Evaluatiefase Berekening van voorspellende prestaties van de steeds complexer wordende submodellen langs de ranglijst van verklarende variabelen via 5-fold cross-validation (CV). Voorspellende prestaties werden gekwantificeerd als 'mean log predictive density' (MLPD). Dit is de expected log (pointwise) predictive density (ELPD) gedeeld door het aantal observaties.
 
 Selectie van het aantal variabelen werd visueel gedaan door de MLPD te plotten als verschil met het referentiemodel in functie van submodelgrootte.
 Als de MLPD niet meer toeneemt met het aantal variabelen, dan voegen die extra variabelen geen voorspellende waarde meer toe aan het model en zullen ze niet geselecteerd worden.
 Ook bekeken we de variabiliteit in de rangschikking van de verklarende variabelen aan de hand van de ranking proporties.
 De ranking proportie van variabele $x$ bij submodelgrootte $j$ is de proportie van CV folds die variabele $x$ hebben op positie $j$ van hun rangschikking van de verklarende variabelen.
 
+Finale modellen werden met de geselecteerde variabelen opnieuw gefit via **brms**.
+We fitten zowel een Poisson als zero-inflated Poisson model.
+Beide modellen werden vergeleken visueel via PPC's en o.b.v. het verschil in ELPD berekend via 5-fold cross-validation.
+Voor de nabewerking en visualisatie van de resultaten hebben we gebruik gemaakt van de functionaliteiten uit de **tidybayes** package v3.0.4 [@R-tidybayes].
+
 #### Resultaten
-
-Op basis van deze plot bepalen we submodelgrootte.
-Meestal is het de bedoeling om de kleinste submodelgrootte te vinden waarbij de voorspellende prestaties van de submodellen afvlakken en dicht genoeg in de buurt komen van de voorspellende prestaties van het referentiemodel (de gestippelde rode horizontale lijn).
-Dit blijft min of meer een subjectieve beslissing.
-Er moet er een geschikte afweging worden gemaakt tussen voorspellende prestaties (nauwkeurigheid) en modelgrootte.
-We zien na de vierde predictor geen sterke stijgingen meer.
-Wel is er nog een kleine stijging tot en met 7 à 8.
-
-De eerste vier zijn dezelfde als de eerste vier in de snelle analyse.
-Dit geld ook voor de eerste acht (wel in andere volgorde).
-We zien bovendien dat voor de eerste acht predictors dat er weinig variabiliteit is in de rangschikking van de variabelen
-
-e aangeraden grootte door het projpred package is 11 verklarende variabelen.
-Het gaat dan om de volgende variabelen:
