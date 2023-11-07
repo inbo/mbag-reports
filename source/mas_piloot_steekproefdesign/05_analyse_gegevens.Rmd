@@ -275,7 +275,7 @@ Binnen deze studie hebben we verschillende verklarende variabelen verzameld moge
 We onderscheiden primaire, secundaire en tertiare variabelen.
 Primaire variabelen zijn variabelen die binnen het kader van de pilootstudie de hoogste interesse hebben om te weten wat het effect is op het aantal of de aanwezigheid van bepaalde akkervogels.
 Secundaire variabelen zijn variabelen die mogelijk ook belangrijk zijn voor akkervogels, maar die vooral nodig zijn om modellen vollediger te maken.
-Ze zijn minder op de focus van bepaalde, specifieke onderzoeksvragen.
+Ze zijn minder de focus van bepaalde, specifieke onderzoeksvragen.
 Tertaire variabelen zijn structurele variabelen die eerder dienen om te corrigeren voor het monitoringsprotocol in tijd en ruimte bijvoorbeeld via random effects in mixed models.
 \textcolor{red}{verwijzing samenvattende tabel}
 
@@ -425,7 +425,7 @@ We berekenden een maat voor de nabijheid van natuurgebieden waarbij we gebieden 
 We selecteerden hiervoor alle natuurgebieden in Vlaanderen, Nederland, Frankrijk en Wallonië binnen een buffer van 20 km rond de perimeters van het pilootproject (Fig. \@ref(fig:natuurgebieden-perimeters)).
 \textcolor{red}{tabel met kaartlagen} We splitsten alle gebieden op in aparte polygonen en berekenden de oppervlakte van elke polygoon en het middelpunt.
 
-```{r natuurgebieden-perimeters, out.width = "90%", fig.cap = "Selectie van natuurgebieden in Vlaanderen, Nederland, Frankrijk en Wallonië binnen een buffer van 20 km rond de perimeters van het pilootproject."}
+```{r natuurgebieden-perimeters, out.width = "100%", fig.cap = "Selectie van natuurgebieden in Vlaanderen, Nederland, Frankrijk en Wallonië binnen een buffer van 20 km rond de perimeters van het pilootproject."}
 include_graphics(file.path("media", "verklarende_variabelen",
                            "natuurgebieden_perimeters.png"))
 ```
@@ -630,7 +630,7 @@ Als we de gemiddelde detectiekans weten, kunnen we dus eenvoudig berekenen hoeve
 We controleren er dus voor dat het moeilijker is om dieren te detecteren op grotere afstand, terwijl we er van uitgaan dat er in werkelijkheid evenveel zitten op grotere als op kleinere afstanden.
 
 ```{r distance-methode, out.width = "90%", fig.cap = "Methodologie distance sampling. \\textbf{A.} Punttransect met radius $w$ en observatie $i$ op afstand $r$. \\textbf{B.} Histogram en detectiecurve gefit op 1000 gesimuleerde datapunten uit de half-normale verdeling met parameter $\\sigma = 120$ en afknotafstand 300 m. De oppervlakte onder de curve binnen de rode box is de gemiddelde detectiekans $p$."}
-include_graphics(file.path("media", "distance", "methode_distance.pdf"))
+include_graphics(file.path("media", "distance", "methode_distance.png"))
 ```
 
 Voor de formulatie van de detectiefunctie beschouwen we half-normal en hazard-rate sleutelfuncties die we laten afhangen van categorische covariaten $\mathbf{z_i}$ (bv. jaar, regio).
@@ -1111,6 +1111,8 @@ Beide modellen werden vergeleken visueel via PPC's en o.b.v. het verschil in ELP
 Voor de nabewerking en visualisatie van de resultaten hebben we gebruik gemaakt van de functionaliteiten uit de **tidybayes** package v3.0.4 [@R-tidybayes].
 
 #### Resultaten De Moeren
+
+\textcolor{red}{te weinig data ...?}
 
 ```{r ranking-dm-veldleeuw, out.width = "100%", fig.cap = "..."}
 include_graphics(file.path("media", "beheerovereenkomsten",
