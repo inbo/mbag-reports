@@ -1096,7 +1096,7 @@ We centreerden en schaalden alle continue variabelen door het gemiddelde af te t
 
 ```{r classificatie-propsb}
 tibble(beleid = c("nul", "laag", "middellaag", "middelhoog", "hoog"),
-       prop_area_sb = c("0", "<0.04", "0.04-0.07", "0.07-0.1", ">0.1")) %>%
+       area_prop_sb = c("0", "<0.04", "0.04-0.07", "0.07-0.1", ">0.1")) %>%
   kable(caption = paste("Classificatie oppervlakte-aandeel",
                         "soortbeschermingsmaatregelen",
                         "binnen telcirkel."))
@@ -1134,33 +1134,35 @@ Als de MLPD niet meer toeneemt met het aantal variabelen, dan voegen die extra v
 Ook bekeken we de variabiliteit in de rangschikking van de verklarende variabelen aan de hand van de (cumulatieve) ranking proporties.
 De ranking proportie van variabele $x$ bij submodelgrootte $j$ is de proportie van CV folds die variabele $x$ hebben op positie $j$ van hun rangschikking van de verklarende variabelen.
 De cumulatieve ranking proporties worden opgeteld naarmate submodelgrootte toeneemt.
+Een cumulatieve ranking proportie voor variabele $x$ van 90 % bij \<= $j=5$ will bijvoorbeeld zeggen dat $x$ in 90 % van de CV folds een ranking kleiner of gelijk aan 5 heeft.
 
 Finale modellen werden met de geselecteerde variabelen opnieuw gefit via **brms**.
 We fitten zowel een Poisson als zero-inflated Poisson model.
 Beide modellen werden vergeleken visueel via PPC's en o.b.v. het verschil in ELPD berekend via 5-fold cross-validation.
 Voor de nabewerking en visualisatie van de resultaten hebben we gebruik gemaakt van de functionaliteiten uit de **tidybayes** package v3.0.4 [@R-tidybayes].
+We definieerden een postief verschil als de ondergrens van het 95 % credible interval groter is dan nul, een negatief verschil als de bovengrens kleiner is dan nul, een stabiel (geen) verschil als het credible interval nul bevat maar binnen de referentiewaarden valt (tussen toename van 25 % en afname van 20 %) en een onzeker verschil als het credible interval nul en ten minste een van de referentiewaarden bevat [@onkelinx2023].
 
 #### Resultaten De Moeren
 
-```{r ranking-dm-veldleeuw, out.width = "100%", fig.cap = "..."}
+```{r ranking-dm-veldleeuw, out.width = "100%", fig.cap = "Verschil in MLPD met referentiemodel (rode stippellijn) voor verschillende submodelgroottes voor het model van De Moeren."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "de_moeren",
                            "cvvs_ranking_veldleeuwerik.pdf"))
 ```
 
-```{r cvprop-dm-veldleeuw, out.width = "100%", fig.cap = "..."}
+```{r cvprop-dm-veldleeuw, out.width = "100%", fig.cap = "Cumulatieve ranking proportie van de eerste 19 variabelen voor het model van De Moeren."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "de_moeren",
                            "cvvs_proporties_veldleeuwerik.pdf"))
 ```
 
-```{r beleid-df-veldleeuw1, out.width = "100%", fig.cap = "..."}
+```{r beleid-df-veldleeuw1, out.width = "100%", fig.cap = "Posterior distributions van het verschil in maximum aantal broedparen per telcirkel met nulbeleid (= geen oppervlakte-aandeel soortbeschermingsmaatregelen aanwezig) voor het model van De Moeren. Het punt geeft de posterior mediaan aan en het interval het 95 % equal tail credible interval."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "de_moeren",
                            "beleidstoestand_veldleeuwerik_fine.pdf"))
 ```
 
-```{r beleid-df-veldleeuw2, out.width = "100%", fig.cap = "..."}
+```{r beleid-df-veldleeuw2, out.width = "100%", fig.cap = "Posterior distributions van het verschil in maximum aantal broedparen per telcirkel van laag- en hoogbeleid met nulbeleid voor het model van De Moeren."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "de_moeren",
                            "beleidstoestand_veldleeuwerik_coarse.pdf"))
@@ -1168,27 +1170,26 @@ include_graphics(file.path("media", "beheerovereenkomsten",
 
 #### Resultaten Oostelijke leemstreek
 
-```{r ranking-ol-veldleeuw, out.width = "100%", fig.cap = "..."}
+```{r ranking-ol-veldleeuw, out.width = "100%", fig.cap = "Verschil in MLPD met referentiemodel (rode stippellijn) voor verschillende submodelgroottes voor het model van de Oostelijke leemstreek."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
                            "cvvs_ranking_veldleeuwerik.pdf"))
 ```
 
-```{r cvprop-ol-veldleeuw, out.width = "100%", fig.cap = "..."}
+```{r cvprop-ol-veldleeuw, out.width = "100%", fig.cap = "Cumulatieve ranking proportie van de eerste 19 variabelen voor het model van de Oostelijke leemstreek."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
                            "cvvs_proporties_veldleeuwerik.pdf"))
 ```
 
-```{r beleid-ol-veldleeuw1, out.width = "100%", fig.cap = "..."}
+```{r beleid-ol-veldleeuw1, out.width = "100%", fig.cap = "Posterior distributions van het verschil in maximum aantal broedparen per telcirkel met nulbeleid (= geen oppervlakte-aandeel soortbeschermingsmaatregelen aanwezig) voor het model van de Oostelijke leemstreek. Het punt geeft de posterior mediaan aan en het interval het 95 % equal tail credible interval."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
                            "beleidstoestand_veldleeuwerik_fine.pdf"))
 ```
 
-```{r beleid-ol-veldleeuw2, out.width = "100%", fig.cap = "..."}
+```{r beleid-ol-veldleeuw2, out.width = "100%", fig.cap = "Posterior distributions van het verschil in maximum aantal broedparen per telcirkel van laag- en hoogbeleid met nulbeleid voor het model van de Oostelijke leemstreek."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
                            "beleidstoestand_veldleeuwerik_coarse.pdf"))
 ```
-

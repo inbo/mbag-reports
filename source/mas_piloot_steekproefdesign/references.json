@@ -921,5 +921,27 @@
         "type": "article-journal",
         "update-policy": "http://dx.doi.org/10.1002/crossmark_policy",
         "volume": "60"
+    },
+    {
+        "URL": "https://effectclass.netlify.com",
+        "author": [
+            {
+                "family": "Onkelinx",
+                "given": "Thierry"
+            }
+        ],
+        "id": "onkelinx2023",
+        "issued": {
+            "date-parts": [
+                [
+                    2023
+                ]
+            ]
+        },
+        "key": "9A9QFDRP",
+        "libraryid": "1",
+        "providerkey": "2509FBBE-5BB0-44C4-B119-6083A81ED673",
+        "title": "effectclass: Classification and visualisation of effects",
+        "type": "book"
     }
 ]
