@@ -1083,10 +1083,16 @@ Distance sampling m.b.v. het **Distance** package bleek een relatief eenvoudige 
 
 #### Materiaal en methoden
 
--   selectie variabelen met verwijzing tabel in vroeger hoofstuk
--   Maximum aantal per telcirkel per jaar niet telperiodes --\> gemiddelde n_predators --\> meest frequente teller Enkel data van 2022-2023 We voegen de jaarvariabele toe als factor.
--   We centreren en schalen alle continue variabelen door te delen door de standaard deviatie.
--   Keuze tussen sbp en area_prop_sb We besluiten op te delen volgens de agri-environment schemes (AES) classificatie besproken in @sharps2023.
+We selecteerden de data van 2022-2023 van Veldleeuwerik met broedcode groter dan nul.
+Dit omdat we vermoedden dat de meer beperkte data van voor het pilootproject mogelijke effecten/trends zou vertroebelen in deze context.
+Om de analyses eenvoudiger te maken zetten we de aantallen om naar het maximum aantal per telcirkel per jaar over de telperiodes heen.
+Twee variabelen werden gemeten op tellingniveau: (1) van variabele `n_predators` nemen we het gemiddelde aantal per telcirkel per jaar en (2) van variabele `status_teller`nemen we de status van de teller die in een bepaald jaar het meest frequent een bepaald telpunt heeft bezocht (in het zeldzame geval dat verschillende tellers hetzelfde telpunt in hetzelfde jaar tijdens verschillende telperiodes bezocht hadden).
+
+We beschouwden alle geselecteerde primaire en secundaire variabelen beschreven in Hoofstuk \@ref(verklarende-variabelen) (Tabel \@ref(tab:verklarende-vars-tab), behalve `openheid_klasse_300` omdat deze als continue variabele op 1000 m informatiever leek (`openheid_waarde_1000`) en `sbp` omwille van de sterke correlatie met de variabele van interesse `area_prop_sb` (Fig. \@ref(fig:sbp-areapropsb)).
+Om de interpretatie van de resultaten te vereenvoudigen besloten we de continue variabele `area_prop_sb` op te delen volgens de agri-environment schemes (AES) classificatie besproken in @sharps2023 (Tabel \@ref(tab:classificatie-propsb)).
+Deze nieuwe categorische variabele is `area_prop_sb_cat`.
+Ten slotte voegden we de tertiaire variabele `jaar` toe als factorvariabele (`jaar.f`).
+We centreerden en schaalden alle continue variabelen door het gemiddelde af te trekken en te delen door de standaarddeviatie.
 
 ```{r classificatie-propsb}
 tibble(beleid = c("nul", "laag", "middellaag", "middelhoog", "hoog"),
@@ -1096,10 +1102,10 @@ tibble(beleid = c("nul", "laag", "middellaag", "middelhoog", "hoog"),
                         "binnen telcirkel."))
 ```
 
-Analyses werden voor beide regio's apart gedaan via Bayesiaanse Poisson modellen met de **brms** package.
+Analyses werden voor beide regio's apart gedaan via Bayesiaanse modellen met de **brms** package.
 Selectie van variabelen werd gedaan via projection predictive variable selection methode (PPVS) [@piironen2017; @piironen2020; catalina2022; @mclatchie2023].
 Het doel van PPVS is het vinden van een zo klein mogelijke subset van kandidaat-variabelen met een voorspellende kracht die zo dicht mogelijk ligt bij die van het referentiemodel.
-Het referentiemodel bevat alle variabelen in kwestie en is het best presterende model (in termen van voorspellende prestaties) dat we tot onze beschikking hebben.
+Als referentiemodel specificeerden we voor elke regio een Poisson model met alle variabelen in kwestie en is het best presterende model (in termen van voorspellende prestaties) dat we tot onze beschikking hebben.
 Voor de regressiecoëfficienten ($\beta$-parameters) gebruikten we de 'R2-D2 shrinkage prior' [@zhang2016; @yanchenko2021].
 Voor het intercept gebruiken we de default prior van **brms**.
 De R2-D2 prior specificeert een verdeling voor de determinatiecoëfficiënt $R^2$ en induceert dan een prior op de individuele $\beta$'s.
@@ -1118,8 +1124,10 @@ De model fit werd bevestigd op basis van 'posterior predictive checks' (PPC) waa
 Na het fitten van de referentiemodellen voor elke regio PPVS toegepast met de **projpred** package v2.6.0 [@R-projpred].
 Hierin worden twee fases onderscheiden:
 
-1.  Zoekfase\\ De rangschikking van de verklarende variabelen, nl. de kleinst mogelijke subset van kandidaat-variabelen voor elk aantal aan variabelen, werd bepaald via forward search. Hierbij werd gespecifieerd dat de categorische variabele voor het oppervlakte-aandeel soortbeschermingsplannen zeker in het finale model moest aanwezig zijn (altijd rang 1). Maximale submodelgrootte werd ingesteld op 19 variabelen.
-2.  Evaluatiefase\\ Berekening van voorspellende prestaties van de steeds complexer wordende submodellen langs de ranglijst van verklarende variabelen via 5-fold cross-validation (CV). Voorspellende prestaties werden gekwantificeerd als 'mean log predictive density' (MLPD). Dit is de expected log (pointwise) predictive density (ELPD) gedeeld door het aantal observaties.
+1.  Zoekfase\
+    De rangschikking van de verklarende variabelen, nl. de kleinst mogelijke subset van kandidaat-variabelen voor elk aantal aan variabelen, werd bepaald via forward search. Hierbij werd gespecifieerd dat de categorische variabele voor het oppervlakte-aandeel soortbeschermingsplannen zeker in het finale model moest aanwezig zijn (altijd rang 1). Maximale submodelgrootte werd ingesteld op 19 variabelen.
+2.  Evaluatiefase\
+    Berekening van voorspellende prestaties van de steeds complexer wordende submodellen langs de ranglijst van verklarende variabelen via 5-fold cross-validation (CV). Voorspellende prestaties werden gekwantificeerd als 'mean log predictive density' (MLPD). Dit is de expected log (pointwise) predictive density (ELPD) gedeeld door het aantal observaties.
 
 Selectie van het aantal variabelen werd visueel gedaan door de MLPD te plotten als verschil met het referentiemodel in functie van submodelgrootte.
 Als de MLPD niet meer toeneemt met het aantal variabelen, dan voegen die extra variabelen geen voorspellende waarde meer toe aan het model en zullen ze niet geselecteerd worden.
@@ -1133,8 +1141,6 @@ Beide modellen werden vergeleken visueel via PPC's en o.b.v. het verschil in ELP
 Voor de nabewerking en visualisatie van de resultaten hebben we gebruik gemaakt van de functionaliteiten uit de **tidybayes** package v3.0.4 [@R-tidybayes].
 
 #### Resultaten De Moeren
-
-\textcolor{red}{te weinig data ...?}
 
 ```{r ranking-dm-veldleeuw, out.width = "100%", fig.cap = "..."}
 include_graphics(file.path("media", "beheerovereenkomsten",
@@ -1185,3 +1191,4 @@ include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
                            "beleidstoestand_veldleeuwerik_coarse.pdf"))
 ```
+
