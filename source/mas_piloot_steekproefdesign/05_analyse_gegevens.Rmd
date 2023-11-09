@@ -277,7 +277,7 @@ Primaire variabelen zijn variabelen die binnen het kader van de pilootstudie de 
 Secundaire variabelen zijn variabelen die mogelijk ook belangrijk zijn voor akkervogels, maar die vooral nodig zijn om modellen vollediger te maken.
 Ze zijn minder de focus van bepaalde, specifieke onderzoeksvragen.
 Tertaire variabelen zijn structurele variabelen die eerder dienen om te corrigeren voor het monitoringsprotocol in tijd en ruimte bijvoorbeeld via random effects in mixed models.
-\textcolor{red}{verwijzing samenvattende tabel}
+Een overzicht wordt gegeven in Tabel \@ref(tab:verklarende-vars-tab) \textcolor{red}{en referenties naar de gebruikte kaartlagen in Bijlage x.}
 
 ### Primaire variabelen {#prim-verklarende-variabelen}
 
@@ -419,11 +419,11 @@ Aantal predatoren gezien tijdens telling.
 Als predatoren beschouwen we roofvogels (Blauwe Kiekendief, Boomvalk, Bosuil, Bruine Kiekendief, Buizerd, Grauwe Kiekendief, Havik, Ransuil, Rode Wouw, Slechtvalk, Smelleken, Sperwer, Steenuil, Steppekiekendief, Torenvalk, Vale Gier, Velduil, Wespendief, Zwarte Wouw) en kraaiachtigen (Ekster, Gaai, Kauw, Raaf, Roek, Zwarte Kraai).
 We beschouwden zowel een variabele voor het aantal individuen als het aantal soorten.
 
-**10. Nabijheid natuurgebieden**\
-We berekenden een maat voor de nabijheid van natuurgebieden waarbij we gebieden dichtbij meer gewicht geven dan gebieden veraf, en grotere gebieden meer gewicht geven dan kleine binnen een straal van 3 km [@moilanen2002].
+**10. Oppervlakte nabije natuurgebieden**\
+We berekenden een maat voor de oppervlakte van nabije natuurgebieden waarbij we gebieden dichtbij meer gewicht geven dan gebieden veraf, en grotere gebieden meer gewicht geven dan kleine binnen een straal van 3 km [@moilanen2002].
 
 We selecteerden hiervoor alle natuurgebieden in Vlaanderen, Nederland, Frankrijk en Wallonië binnen een buffer van 20 km rond de perimeters van het pilootproject (Fig. \@ref(fig:natuurgebieden-perimeters)).
-\textcolor{red}{tabel met kaartlagen} We splitsten alle gebieden op in aparte polygonen en berekenden de oppervlakte van elke polygoon en het middelpunt.
+\textcolor{red}{tabel met kaartlagen toevoegen} We splitsten alle gebieden op in aparte polygonen en berekenden de oppervlakte van elke polygoon en het middelpunt.
 
 ```{r natuurgebieden-perimeters, out.width = "100%", fig.cap = "Selectie van natuurgebieden in Vlaanderen, Nederland, Frankrijk en Wallonië binnen een buffer van 20 km rond de perimeters van het pilootproject."}
 include_graphics(file.path("media", "verklarende_variabelen",
@@ -560,6 +560,27 @@ include_graphics(file.path("media", "data_exploratie",
 ```{r total-propsb, out.width = "90%", fig.cap = "Totale oppervlakte soortbeschermingsmaatregelen per stratum binnen de perimeters van het pilootproject over de jaren heen per regio opgedeeld per categorie."}
 include_graphics(file.path("media", "data_exploratie",
                            "soortbeschermingsmaatregelen1_2018_2023.pdf"))
+```
+
+```{r verklarende-vars-tab}
+summary_var_tab <- read_delim(file.path("media", "verklarende_variabelen",
+                                        "verklarende_variabelen_tabel.csv"),
+                              show_col_types = FALSE)
+
+summary_var_tab %>%
+  arrange(id) %>%
+  select(categorie, variabele, naam, eenheid, selectie) %>%
+  mutate(variabele = gsub("oppervlakte-aandeel", "oppervlakte", variabele),
+         variabele = gsub("hoofdteelt", "oppervlakte hoofdteelt", variabele),
+         variabele = gsub("voorteelt", "oppervlakte voorteelt", variabele)) %>%
+  mutate(selectie = ifelse(selectie == "ja", "X", "")) %>%
+  kable(caption = paste("Samenvattende tabel van alle verklarende variabelen",
+                        "beschouwd in de pilootstudie. De kolom `selectie'",
+                        "geeft aan of de variabele door de selectie is geraakt",
+                        "tijdens data exploratie (zie tekst)."),
+        longtable = T) %>%
+  kableExtra::kable_styling(latex_options = c("repeat_header"), font_size = 8,
+                            repeat_header_text = "\\textit{(vervolg)}")
 ```
 
 ## Case studie: de Veldleeuwerik {#veldleeuwerik}
@@ -1058,10 +1079,11 @@ Distance sampling m.b.v. het **Distance** package bleek een relatief eenvoudige 
 
 #### Inleiding
 
-\textcolor{red}{blabbla}
+\textcolor{red}{tekst}
 
 #### Materiaal en methoden
 
+-   selectie variabelen met verwijzing tabel in vroeger hoofstuk
 -   Maximum aantal per telcirkel per jaar niet telperiodes --\> gemiddelde n_predators --\> meest frequente teller Enkel data van 2022-2023 We voegen de jaarvariabele toe als factor.
 -   We centreren en schalen alle continue variabelen door te delen door de standaard deviatie.
 -   Keuze tussen sbp en area_prop_sb We besluiten op te delen volgens de agri-environment schemes (AES) classificatie besproken in @sharps2023.
@@ -1140,25 +1162,25 @@ include_graphics(file.path("media", "beheerovereenkomsten",
 
 #### Resultaten Oostelijke leemstreek
 
-```{r ranking-ol-veldleeuw, out.width = "90%", fig.cap = "..."}
+```{r ranking-ol-veldleeuw, out.width = "100%", fig.cap = "..."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
                            "cvvs_ranking_veldleeuwerik.pdf"))
 ```
 
-```{r cvprop-ol-veldleeuw, out.width = "120%", fig.cap = "..."}
+```{r cvprop-ol-veldleeuw, out.width = "100%", fig.cap = "..."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
                            "cvvs_proporties_veldleeuwerik.pdf"))
 ```
 
-```{r beleid-ol-veldleeuw1, out.width = "90%", fig.cap = "..."}
+```{r beleid-ol-veldleeuw1, out.width = "100%", fig.cap = "..."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
                            "beleidstoestand_veldleeuwerik_fine.pdf"))
 ```
 
-```{r beleid-ol-veldleeuw2, out.width = "120%", fig.cap = "..."}
+```{r beleid-ol-veldleeuw2, out.width = "100%", fig.cap = "..."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
                            "beleidstoestand_veldleeuwerik_coarse.pdf"))
