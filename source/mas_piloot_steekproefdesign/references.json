@@ -1060,5 +1060,44 @@
         "title": "Spatially Balanced Sampling through the Pivotal Method",
         "type": "article-journal",
         "volume": "68"
+    },
+    {
+        "DOI": "10.21436/inbor.89419879",
+        "URL": "https://pureportal.inbo.be/nl/publications/trends-op-basis-van-de-algemene-broedvogelmonitoring-vlaanderen-a-4",
+        "accessed": {
+            "date-parts": []
+        },
+        "author": [
+            {
+                "family": "Onkelinx",
+                "given": "Thierry"
+            },
+            {
+                "family": "Vermeersch",
+                "given": "Glenn"
+            },
+            {
+                "family": "Devos",
+                "given": "Koen"
+            }
+        ],
+        "collection-title": "Rapporten van het Instituut voor Natuur‐ en Bosonderzoek 2023",
+        "id": "onkelinx2023a",
+        "issued": {
+            "date-parts": [
+                [
+                    2023
+                ]
+            ]
+        },
+        "key": "CNITUX2T",
+        "libraryid": "1",
+        "providerkey": "2509FBBE-5BB0-44C4-B119-6083A81ED673",
+        "publisher": "Instituut voor Natuur- en Bosonderzoek",
+        "publisher-place": "Brussel",
+        "source": "DOI.org (Crossref)",
+        "title": "Trends op basis van de Algemene Broedvogelmonitoring Vlaanderen (ABV): Technisch achtergrondrapport voor de periode 2007-2022",
+        "title-short": "Trends op basis van de Algemene Broedvogelmonitoring Vlaanderen (ABV)",
+        "type": "report"
     }
 ]
