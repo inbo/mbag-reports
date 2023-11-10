@@ -578,7 +578,7 @@ summary_var_tab %>%
                         "beschouwd in de pilootstudie. De kolom `selectie'",
                         "geeft aan of de variabele door de selectie is geraakt",
                         "tijdens data exploratie (zie tekst)."),
-        longtable = T) %>%
+        longtable = TRUE) %>%
   kableExtra::kable_styling(latex_options = c("repeat_header"), font_size = 8,
                             repeat_header_text = "\\textit{(vervolg)}")
 ```
@@ -1156,7 +1156,7 @@ include_graphics(file.path("media", "beheerovereenkomsten",
                            "cvvs_proporties_veldleeuwerik.pdf"))
 ```
 
-```{r beleid-df-veldleeuw1, out.width = "100%", fig.cap = "Posterior distributions van het verschil in maximum aantal broedparen per telcirkel met nulbeleid (= geen oppervlakte-aandeel soortbeschermingsmaatregelen aanwezig) voor het model van De Moeren. Het punt geeft de posterior mediaan aan en het interval het 95 % equal tail credible interval."}
+```{r beleid-df-veldleeuw1, out.width = "100%", fig.cap = "Posterior distributions van het verschil in maximum aantal broedparen per telcirkel met nulbeleid (= geen oppervlakte-aandeel soortbeschermingsmaatregelen aanwezig) voor het model van De Moeren. Het punt geeft de posterior mediaan aan en het interval het 95 \\% equal tail credible interval."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "de_moeren",
                            "beleidstoestand_veldleeuwerik_fine.pdf"))
@@ -1182,7 +1182,7 @@ include_graphics(file.path("media", "beheerovereenkomsten",
                            "cvvs_proporties_veldleeuwerik.pdf"))
 ```
 
-```{r beleid-ol-veldleeuw1, out.width = "100%", fig.cap = "Posterior distributions van het verschil in maximum aantal broedparen per telcirkel met nulbeleid (= geen oppervlakte-aandeel soortbeschermingsmaatregelen aanwezig) voor het model van de Oostelijke leemstreek. Het punt geeft de posterior mediaan aan en het interval het 95 % equal tail credible interval."}
+```{r beleid-ol-veldleeuw1, out.width = "100%", fig.cap = "Posterior distributions van het verschil in maximum aantal broedparen per telcirkel met nulbeleid (= geen oppervlakte-aandeel soortbeschermingsmaatregelen aanwezig) voor het model van de Oostelijke leemstreek. Het punt geeft de posterior mediaan aan en het interval het 95 \\% equal tail credible interval."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
                            "beleidstoestand_veldleeuwerik_fine.pdf"))
