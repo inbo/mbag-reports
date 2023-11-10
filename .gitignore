@@ -17,8 +17,9 @@
 *.xls*
 *_files
 *.csv
-*.jpg
 *.png
+*.pdf
+*.rds
 docs
 libs
 output
