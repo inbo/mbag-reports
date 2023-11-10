@@ -29,9 +29,10 @@ author:
     affiliation: "Instituut voor Natuur- en Bosonderzoek (INBO)"
 reviewer:
   - name:
-      given: "xxx"
-      family: "xxx"
-    email: "xxx@inbo.be"
+      given: "Toon"
+      family: "Van Daele"
+    email: "toon.vandaele@inbo.be"
+    orchid: "0000-0002-1362-853X"
     affiliation: "Instituut voor Natuur- en Bosonderzoek (INBO)"
 lang: nl
 style: INBO

@@ -219,12 +219,13 @@ $$
 
 We besluiten dat er een significant verschil is als het 95 % credible interval van $\beta_2$ nul niet bevat.
 
-We bemonsterden de posterior verdelingen voor de modellen met drie Markov Chain Monte Carlo (MCMC) ketens, die elk 4000 iteraties draaiden, waarvan de eerste 2000 werden verwijderd als burn-in.
+We bemonsterden de posterior verdelingen voor de modellen met drie Markov Chain Monte Carlo (MCMC) chains, die elk 4000 iteraties draaiden, waarvan de eerste 2000 werden verwijderd als burn-in.
 We onderzochten MCMC-convergentie door visuele beoordeling van trace plots en posterior densiteiten.
 We onderzochten ook de 'potential scale reduction factors' [@gelman1992] voor elke scalaire parameter in het model zoals voorgesteld door [@gelman2013].
 Ze lagen allemaal dicht bij 1, zoals vereist.
 
-Via 'Leave-One-Out Cross-Validation' vergeleken we eerste welke responsdistributie het best paste bij de data en ten tweede of het random effect van plot $b_{2}$ noodzakelijk was of niet (niet gedaan bij correlatie model).
+Via leave-one-out cross-validation (CV) werd de 'expected log pointwise predictive density' (ELPD) berekend en vergeleken tussen verschillende modellen: (1) welke responsdistributie het best paste bij de data en (2) of het random effect van plot $b_{2}$ noodzakelijk was of niet (niet gedaan bij correlatie model).
+
 De model fit werd bevestigd op basis van 'posterior predictive checks' waarbij we de geobserveerde uitkomst vergeleken met gesimuleerde datasets van de 'posterior predictive distribution'.
 
 ### Resultaten en discussie {#dubbeltellingen-resultaten}
@@ -274,9 +275,9 @@ Binnen deze studie hebben we verschillende verklarende variabelen verzameld moge
 We onderscheiden primaire, secundaire en tertiare variabelen.
 Primaire variabelen zijn variabelen die binnen het kader van de pilootstudie de hoogste interesse hebben om te weten wat het effect is op het aantal of de aanwezigheid van bepaalde akkervogels.
 Secundaire variabelen zijn variabelen die mogelijk ook belangrijk zijn voor akkervogels, maar die vooral nodig zijn om modellen vollediger te maken.
-Ze zijn minder op de focus van bepaalde, specifieke onderzoeksvragen.
+Ze zijn minder de focus van bepaalde, specifieke onderzoeksvragen.
 Tertaire variabelen zijn structurele variabelen die eerder dienen om te corrigeren voor het monitoringsprotocol in tijd en ruimte bijvoorbeeld via random effects in mixed models.
-\textcolor{red}{verwijzing samenvattende tabel}
+Een overzicht wordt gegeven in Tabel \@ref(tab:verklarende-vars-tab) \textcolor{red}{en referenties naar de gebruikte kaartlagen in Bijlage x.}
 
 ### Primaire variabelen {#prim-verklarende-variabelen}
 
@@ -418,13 +419,13 @@ Aantal predatoren gezien tijdens telling.
 Als predatoren beschouwen we roofvogels (Blauwe Kiekendief, Boomvalk, Bosuil, Bruine Kiekendief, Buizerd, Grauwe Kiekendief, Havik, Ransuil, Rode Wouw, Slechtvalk, Smelleken, Sperwer, Steenuil, Steppekiekendief, Torenvalk, Vale Gier, Velduil, Wespendief, Zwarte Wouw) en kraaiachtigen (Ekster, Gaai, Kauw, Raaf, Roek, Zwarte Kraai).
 We beschouwden zowel een variabele voor het aantal individuen als het aantal soorten.
 
-**10. Nabijheid natuurgebieden**\
-We berekenden een maat voor de nabijheid van natuurgebieden waarbij we gebieden dichtbij meer gewicht geven dan gebieden veraf, en grotere gebieden meer gewicht geven dan kleine binnen een straal van 3 km [@moilanen2002].
+**10. Oppervlakte nabije natuurgebieden**\
+We berekenden een maat voor de oppervlakte van nabije natuurgebieden waarbij we gebieden dichtbij meer gewicht geven dan gebieden veraf, en grotere gebieden meer gewicht geven dan kleine binnen een straal van 3 km [@moilanen2002].
 
 We selecteerden hiervoor alle natuurgebieden in Vlaanderen, Nederland, Frankrijk en Wallonië binnen een buffer van 20 km rond de perimeters van het pilootproject (Fig. \@ref(fig:natuurgebieden-perimeters)).
-\textcolor{red}{tabel met kaartlagen} We splitsten alle gebieden op in aparte polygonen en berekenden de oppervlakte van elke polygoon en het middelpunt.
+\textcolor{red}{tabel met kaartlagen toevoegen} We splitsten alle gebieden op in aparte polygonen en berekenden de oppervlakte van elke polygoon en het middelpunt.
 
-```{r natuurgebieden-perimeters, out.width = "90%", fig.cap = "Selectie van natuurgebieden in Vlaanderen, Nederland, Frankrijk en Wallonië binnen een buffer van 20 km rond de perimeters van het pilootproject."}
+```{r natuurgebieden-perimeters, out.width = "100%", fig.cap = "Selectie van natuurgebieden in Vlaanderen, Nederland, Frankrijk en Wallonië binnen een buffer van 20 km rond de perimeters van het pilootproject."}
 include_graphics(file.path("media", "verklarende_variabelen",
                            "natuurgebieden_perimeters.png"))
 ```
@@ -561,6 +562,27 @@ include_graphics(file.path("media", "data_exploratie",
                            "soortbeschermingsmaatregelen1_2018_2023.pdf"))
 ```
 
+```{r verklarende-vars-tab}
+summary_var_tab <- read_delim(file.path("media", "verklarende_variabelen",
+                                        "verklarende_variabelen_tabel.csv"),
+                              show_col_types = FALSE)
+
+summary_var_tab %>%
+  arrange(id) %>%
+  select(categorie, variabele, naam, eenheid, selectie) %>%
+  mutate(variabele = gsub("oppervlakte-aandeel", "oppervlakte", variabele),
+         variabele = gsub("hoofdteelt", "oppervlakte hoofdteelt", variabele),
+         variabele = gsub("voorteelt", "oppervlakte voorteelt", variabele)) %>%
+  mutate(selectie = ifelse(selectie == "ja", "X", "")) %>%
+  kable(caption = paste("Samenvattende tabel van alle verklarende variabelen",
+                        "beschouwd in de pilootstudie. De kolom `selectie'",
+                        "geeft aan of de variabele door de selectie is geraakt",
+                        "tijdens data exploratie (zie tekst)."),
+        longtable = T) %>%
+  kableExtra::kable_styling(latex_options = c("repeat_header"), font_size = 8,
+                            repeat_header_text = "\\textit{(vervolg)}")
+```
+
 ## Case studie: de Veldleeuwerik {#veldleeuwerik}
 
 \textcolor{red}{waarom veldleeuwerik ... De resultaten van andere soorten zullen in een ander rapport worden beschreven.}
@@ -629,7 +651,7 @@ Als we de gemiddelde detectiekans weten, kunnen we dus eenvoudig berekenen hoeve
 We controleren er dus voor dat het moeilijker is om dieren te detecteren op grotere afstand, terwijl we er van uitgaan dat er in werkelijkheid evenveel zitten op grotere als op kleinere afstanden.
 
 ```{r distance-methode, out.width = "90%", fig.cap = "Methodologie distance sampling. \\textbf{A.} Punttransect met radius $w$ en observatie $i$ op afstand $r$. \\textbf{B.} Histogram en detectiecurve gefit op 1000 gesimuleerde datapunten uit de half-normale verdeling met parameter $\\sigma = 120$ en afknotafstand 300 m. De oppervlakte onder de curve binnen de rode box is de gemiddelde detectiekans $p$."}
-include_graphics(file.path("media", "distance", "methode_distance.pdf"))
+include_graphics(file.path("media", "distance", "methode_distance.png"))
 ```
 
 Voor de formulatie van de detectiefunctie beschouwen we half-normal en hazard-rate sleutelfuncties die we laten afhangen van categorische covariaten $\mathbf{z_i}$ (bv. jaar, regio).
@@ -1052,3 +1074,122 @@ Een extra maatregel zou kunnen zijn om over die telperiodes (per telpunt per jaa
 Voor Haas zou het bovendien nuttig zijn de oppervlaktes van de telcirkel te corrigeren voor de oppervlakte die effectief zichtbaar is voor de teller \textcolor{red}{(volgens viewshedanalyse, zie  Hoofdstuk @ref(uitbreiding-vlaanderen))}, aangezien Haas steeds op de grond zit.
 Distance sampling m.b.v. het **Distance** package bleek een relatief eenvoudige procedure (zowel mathematisch als gebruiksvriendelijkheid) om densiteitsschattingen (incl. onzekerheid) te maken rekening houdend met de detectiekans van een soort.
 \textcolor{red}{complex niet nodig, detectiekans kan wel in GLMM ofzo worden gebruikt? verder}
+
+### Toestand beheerovereenkomsten {#beheerovereenkomsten}
+
+#### Inleiding
+
+\textcolor{red}{tekst}
+
+#### Materiaal en methoden
+
+We selecteerden de data van 2022-2023 van Veldleeuwerik met broedcode groter dan nul.
+Dit omdat we vermoedden dat de meer beperkte data van voor het pilootproject mogelijke effecten/trends zou vertroebelen in deze context.
+Om de analyses eenvoudiger te maken zetten we de aantallen om naar het maximum aantal per telcirkel per jaar over de telperiodes heen.
+Twee variabelen werden gemeten op tellingniveau: (1) van variabele `n_predators` nemen we het gemiddelde aantal per telcirkel per jaar en (2) van variabele `status_teller`nemen we de status van de teller die in een bepaald jaar het meest frequent een bepaald telpunt heeft bezocht (in het zeldzame geval dat verschillende tellers hetzelfde telpunt in hetzelfde jaar tijdens verschillende telperiodes bezocht hadden).
+
+We beschouwden alle geselecteerde primaire en secundaire variabelen beschreven in Hoofstuk \@ref(verklarende-variabelen) (Tabel \@ref(tab:verklarende-vars-tab), behalve `openheid_klasse_300` omdat deze als continue variabele op 1000 m informatiever leek (`openheid_waarde_1000`) en `sbp` omwille van de sterke correlatie met de variabele van interesse `area_prop_sb` (Fig. \@ref(fig:sbp-areapropsb)).
+Om de interpretatie van de resultaten te vereenvoudigen besloten we de continue variabele `area_prop_sb` op te delen volgens de agri-environment schemes (AES) classificatie besproken in @sharps2023 (Tabel \@ref(tab:classificatie-propsb)).
+Deze nieuwe categorische variabele is `area_prop_sb_cat`.
+Ten slotte voegden we de tertiaire variabele `jaar` toe als factorvariabele (`jaar.f`).
+We centreerden en schaalden alle continue variabelen door het gemiddelde af te trekken en te delen door de standaarddeviatie.
+
+```{r classificatie-propsb}
+tibble(beleid = c("nul", "laag", "middellaag", "middelhoog", "hoog"),
+       area_prop_sb = c("0", "<0.04", "0.04-0.07", "0.07-0.1", ">0.1")) %>%
+  kable(caption = paste("Classificatie oppervlakte-aandeel",
+                        "soortbeschermingsmaatregelen",
+                        "binnen telcirkel."))
+```
+
+Analyses werden voor beide regio's apart gedaan via Bayesiaanse modellen met de **brms** package.
+Selectie van variabelen werd gedaan via projection predictive variable selection methode (PPVS) [@piironen2017; @piironen2020; catalina2022; @mclatchie2023].
+Het doel van PPVS is het vinden van een zo klein mogelijke subset van kandidaat-variabelen met een voorspellende kracht die zo dicht mogelijk ligt bij die van het referentiemodel.
+Als referentiemodel specificeerden we voor elke regio een Poisson model met alle variabelen in kwestie en is het best presterende model (in termen van voorspellende prestaties) dat we tot onze beschikking hebben.
+Voor de regressiecoëfficienten ($\beta$-parameters) gebruikten we de 'R2-D2 shrinkage prior' [@zhang2016; @yanchenko2021].
+Voor het intercept gebruiken we de default prior van **brms**.
+De R2-D2 prior specificeert een verdeling voor de determinatiecoëfficiënt $R^2$ en induceert dan een prior op de individuele $\beta$'s.
+Het idee achter 'shrinkage priors' is om de geschatte parameters van een model naar een centrale waarde te trekken of ze naar nul te laten krimpen.
+Deze regularisatie moedigt zo simpelere modellen aan en kunnen dus gebruikt worden in variabelenselectie.
+Voor de hyperparameters gebruiken we 0,5 voor het gemiddelde van de Beta prior op $R^2$, 2 voor de precisie van de Beta prioren en 1 voor de concentratievector van de Dirichlet prior op de variantie decompositieparameter (lagere waardes beteken een sterkere shrinkage).
+Deze werden bepaald o.b.v. exploratieve analyses en bijlage B in @mclatchie2023.
+
+We bemonsterden de posterior verdelingen voor de modellen met drie Markov Chain Monte Carlo (MCMC) chains, die elk 8000 iteraties draaiden, waarvan de eerste 2000 werden verwijderd als burn-in.
+De ketens werden verdund met thinning factor 3 zodat 2000 posterior samples per chain overbleven en dus 6000 posterior samples in totaal.
+We onderzochten MCMC-convergentie door visuele beoordeling van trace plots en posterior densiteiten.
+We onderzochten ook de 'potential scale reduction factors' voor elke scalaire parameter in het model.
+Ze lagen allemaal dicht bij 1, zoals vereist.
+De model fit werd bevestigd op basis van 'posterior predictive checks' (PPC) waarbij we de geobserveerde uitkomst vergeleken met gesimuleerde datasets van de 'posterior predictive distribution'.
+
+Na het fitten van de referentiemodellen voor elke regio PPVS toegepast met de **projpred** package v2.6.0 [@R-projpred].
+Hierin worden twee fases onderscheiden:
+
+1.  Zoekfase\
+    De rangschikking van de verklarende variabelen, nl. de kleinst mogelijke subset van kandidaat-variabelen voor elk aantal aan variabelen, werd bepaald via forward search. Hierbij werd gespecifieerd dat de categorische variabele voor het oppervlakte-aandeel soortbeschermingsplannen zeker in het finale model moest aanwezig zijn (altijd rang 1). Maximale submodelgrootte werd ingesteld op 19 variabelen.
+2.  Evaluatiefase\
+    Berekening van voorspellende prestaties van de steeds complexer wordende submodellen langs de ranglijst van verklarende variabelen via 5-fold cross-validation (CV). Voorspellende prestaties werden gekwantificeerd als 'mean log predictive density' (MLPD). Dit is de expected log (pointwise) predictive density (ELPD) gedeeld door het aantal observaties.
+
+Selectie van het aantal variabelen werd visueel gedaan door de MLPD te plotten als verschil met het referentiemodel in functie van submodelgrootte.
+Als de MLPD niet meer toeneemt met het aantal variabelen, dan voegen die extra variabelen geen voorspellende waarde meer toe aan het model en zullen ze niet geselecteerd worden.
+Ook bekeken we de variabiliteit in de rangschikking van de verklarende variabelen aan de hand van de (cumulatieve) ranking proporties.
+De ranking proportie van variabele $x$ bij submodelgrootte $j$ is de proportie van CV folds die variabele $x$ hebben op positie $j$ van hun rangschikking van de verklarende variabelen.
+De cumulatieve ranking proporties worden opgeteld naarmate submodelgrootte toeneemt.
+Een cumulatieve ranking proportie voor variabele $x$ van 90 % bij \<= $j=5$ will bijvoorbeeld zeggen dat $x$ in 90 % van de CV folds een ranking kleiner of gelijk aan 5 heeft.
+
+Finale modellen werden met de geselecteerde variabelen opnieuw gefit via **brms**.
+We fitten zowel een Poisson als zero-inflated Poisson model.
+Beide modellen werden vergeleken visueel via PPC's en o.b.v. het verschil in ELPD berekend via 5-fold cross-validation.
+Voor de nabewerking en visualisatie van de resultaten hebben we gebruik gemaakt van de functionaliteiten uit de **tidybayes** package v3.0.4 [@R-tidybayes].
+We definieerden een postief verschil als de ondergrens van het 95 % credible interval groter is dan nul, een negatief verschil als de bovengrens kleiner is dan nul, een stabiel (geen) verschil als het credible interval nul bevat maar binnen de referentiewaarden valt (tussen toename van 25 % en afname van 20 %) en een onzeker verschil als het credible interval nul en ten minste een van de referentiewaarden bevat [@onkelinx2023].
+
+#### Resultaten De Moeren
+
+```{r ranking-dm-veldleeuw, out.width = "100%", fig.cap = "Verschil in MLPD met referentiemodel (rode stippellijn) voor verschillende submodelgroottes voor het model van De Moeren."}
+include_graphics(file.path("media", "beheerovereenkomsten",
+                           "de_moeren",
+                           "cvvs_ranking_veldleeuwerik.pdf"))
+```
+
+```{r cvprop-dm-veldleeuw, out.width = "100%", fig.cap = "Cumulatieve ranking proportie van de eerste 19 variabelen voor het model van De Moeren."}
+include_graphics(file.path("media", "beheerovereenkomsten",
+                           "de_moeren",
+                           "cvvs_proporties_veldleeuwerik.pdf"))
+```
+
+```{r beleid-df-veldleeuw1, out.width = "100%", fig.cap = "Posterior distributions van het verschil in maximum aantal broedparen per telcirkel met nulbeleid (= geen oppervlakte-aandeel soortbeschermingsmaatregelen aanwezig) voor het model van De Moeren. Het punt geeft de posterior mediaan aan en het interval het 95 % equal tail credible interval."}
+include_graphics(file.path("media", "beheerovereenkomsten",
+                           "de_moeren",
+                           "beleidstoestand_veldleeuwerik_fine.pdf"))
+```
+
+```{r beleid-df-veldleeuw2, out.width = "100%", fig.cap = "Posterior distributions van het verschil in maximum aantal broedparen per telcirkel van laag- en hoogbeleid met nulbeleid voor het model van De Moeren."}
+include_graphics(file.path("media", "beheerovereenkomsten",
+                           "de_moeren",
+                           "beleidstoestand_veldleeuwerik_coarse.pdf"))
+```
+
+#### Resultaten Oostelijke leemstreek
+
+```{r ranking-ol-veldleeuw, out.width = "100%", fig.cap = "Verschil in MLPD met referentiemodel (rode stippellijn) voor verschillende submodelgroottes voor het model van de Oostelijke leemstreek."}
+include_graphics(file.path("media", "beheerovereenkomsten",
+                           "oostelijke_leemstreek",
+                           "cvvs_ranking_veldleeuwerik.pdf"))
+```
+
+```{r cvprop-ol-veldleeuw, out.width = "100%", fig.cap = "Cumulatieve ranking proportie van de eerste 19 variabelen voor het model van de Oostelijke leemstreek."}
+include_graphics(file.path("media", "beheerovereenkomsten",
+                           "oostelijke_leemstreek",
+                           "cvvs_proporties_veldleeuwerik.pdf"))
+```
+
+```{r beleid-ol-veldleeuw1, out.width = "100%", fig.cap = "Posterior distributions van het verschil in maximum aantal broedparen per telcirkel met nulbeleid (= geen oppervlakte-aandeel soortbeschermingsmaatregelen aanwezig) voor het model van de Oostelijke leemstreek. Het punt geeft de posterior mediaan aan en het interval het 95 % equal tail credible interval."}
+include_graphics(file.path("media", "beheerovereenkomsten",
+                           "oostelijke_leemstreek",
+                           "beleidstoestand_veldleeuwerik_fine.pdf"))
+```
+
+```{r beleid-ol-veldleeuw2, out.width = "100%", fig.cap = "Posterior distributions van het verschil in maximum aantal broedparen per telcirkel van laag- en hoogbeleid met nulbeleid voor het model van de Oostelijke leemstreek."}
+include_graphics(file.path("media", "beheerovereenkomsten",
+                           "oostelijke_leemstreek",
+                           "beleidstoestand_veldleeuwerik_coarse.pdf"))
+```
