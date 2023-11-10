@@ -241,7 +241,7 @@ hier komt een kaart van de steekproef (enkel punten die effectief geteld werden)
 
 <!--# We zien wel dat de steekproef een goede afspiegeling is van de volledige populatie (boxplots voor steekproef en populatie zijn zeer gelijkend).-->
 
-Er werd ook een poging ondernomen om telpunten met slechte zichtbaarheid te verwijderen door enkel voor de getrokken telpunten een zichtbaarheidsindex te berekenen[@GVI-package].
+Er werd ook een poging ondernomen om telpunten met slechte zichtbaarheid te verwijderen door enkel voor de getrokken telpunten een zichtbaarheidsindex te berekenen [@GVI-package].
 In deze fase werden telpunten niet automatisch verwijderd op basis van de zichtbaarheidsindex.
 De reden hiervoor was dat er nog tamelijk veel situaties zijn waar de zichtbaarheidsindex laag was, terwijl de terreinsituatie toch een goede zichtbaarheid toelaat.
 De reden voor zulke 'vals positieven' zijn:
