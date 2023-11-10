@@ -1,6 +1,6 @@
 ---
-title: "Steekproefdesign voor de monitoring van akkervogels in Vlaanderen"
-subtitle: Van lokale pilootstudie tot een Vlaams meetnet
+title: "Meetnet Agrarische Soorten: van lokale pilootstudie tot een Vlaams monitoring instrument"
+subtitle: "Steekproefdesign voor de monitoring van agrarische fauna in Vlaanderen"
 author:
   - name:
       given: "Ward"
@@ -8,7 +8,6 @@ author:
     email: "ward.langeraert@inbo.be"
     orcid: "0000-0002-5900-8109"
     affiliation: "Instituut voor Natuur- en Bosonderzoek (INBO)"
-    corresponding: true
   - name:
       given: "Hans"
       family: "Van Calster"
@@ -27,17 +26,18 @@ author:
     email: "johannes.jansen@inbo.be"
     orcid: "0009-0005-2436-5236"
     affiliation: "Instituut voor Natuur- en Bosonderzoek (INBO)"
+    corresponding: true
 reviewer:
   - name:
-      given: "Toon"
-      family: "Van Daele"
-    email: "toon.vandaele@inbo.be"
-    orchid: "0000-0002-1362-853X"
+      given: "Koen"
+      family: "Devos"
+    email: "koen.devos@inbo.be"
+    orchid: "0000-0001-7265-6349"
     affiliation: "Instituut voor Natuur- en Bosonderzoek (INBO)"
 lang: nl
 style: INBO
 floatbarrier: subsubsection
-keywords: "meetnet; pilootstudie; akkervogels; Vlaanderen; MAS; steekproefdesign"
+keywords: "akkerfauna; monitoring; akkervogels; meetnet; landbouw"
 community: "inbo"
 publication_type: report
 funder: Instituut voor Natuur- en Bosonderzoek (INBO)
@@ -61,16 +61,14 @@ output:
 
 # Dankwoord {.unnumbered}
 
-De tekst voor het optionele dankwoord.
-
-Gebruik dit om index te vervolledigen: <https://github.com/inbo/abvanalysis/blob/1540393796b92f96833f596e331d44de1363af79/inst/website/index.Rmd>
+Deze studie is tot stand gekomen dankzij een samenwerkingsovereenkomst tussen het INBO en
 
 # Samenvatting {.unnumbered}
 
 <!-- description: start -->
 
-De tekst voor de verplichte samenvatting.
-Hou het [Heerlijk Helder](https://overheid.vlaanderen.be/communicatie/heerlijk-helder).
+...
+
 <!-- description: end -->
 
 # Aanbevelingen voor beheer en/of beleid {.unnumbered}
