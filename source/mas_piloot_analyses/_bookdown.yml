@@ -14,3 +14,4 @@ language:
     ex:     'Voorbeeld '
     proof:  'Bewijs. '
     remark: 'Opmerking. '
+edit: https://github.com/inbo/mbag-reports/edit/main/source/mas_piloot_analyses/%s

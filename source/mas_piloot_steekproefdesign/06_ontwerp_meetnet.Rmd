@@ -27,7 +27,7 @@ read_csv(file.path("media", "issues_pilootmeetnet",
                    "issues_pilootmeetnet.csv"),
          show_col_types = FALSE) %>%
   kable(caption = paste("Overzicht van problematische telpunten in het",
-                        "pilootmeetnet gecategoriseerd m.b.v. `regular expressions'."))
+          "pilootmeetnet gecategoriseerd m.b.v. `regular expressions'."))
 ```
 
 ### Tijdens de analyses
@@ -37,7 +37,7 @@ read_csv(file.path("media", "issues_pilootmeetnet",
 Het idee is om in de komende jaren het meetnet uit te breiden over de verschillende landbouwstreken (Fig. \@ref(fig:landbouwstreken)) met uitzondering van de Duinen en de Weidestreek.
 In 2023 zijn we gestart met de Leemstreek en de Zandleemstreek.
 
-```{r landbouwstreken, out.width = "80%", fig.cap = "Landbouwstreken in Vlaanderen"}
+```{r landbouwstreken, out.width = "90%", fig.cap = "Landbouwstreken in Vlaanderen"}
 include_graphics(file.path("media", "kaartjes", "landbouwstreken-vl.png"))
 ```
 
@@ -140,18 +140,13 @@ tibble(
 
 ```{r zichtbaarheid, out.width = "80%", fig.cap = "Voorbeeld van CVVI berekening o.b.v. DSM en DTM."}
 include_graphics(file.path("media", "visibility",
-                           "voorbeeld_zichtbaarheid.jpg"))
+                           "voorbeeld_zichtbaarheid.pdf"))
 ```
 
 5.  Berekening oppervlakte-aandeel beheerovereenkomsten\
     Gebruik kaartlaag van 2022 in plaats van 2021.
 
-6.  Berekening oppervlakte-aandeel hoofdteelten\
-    Gebruik kaartlaag van 2022 in plaats van 2021.
-
-    > eigenlijk niet nuttig!
-
-7.  Binnen of buiten gebieden met soortbeschermingsplan\
+6.  Binnen of buiten gebieden met soortbeschermingsplan\
     Zowel binnen kerngebied als zoekzones zijn er soortbeschermende maatregelen (SB BO's) gelegd (zie kaart VLM BO's).
     In theorie waren deze maatregelen vooral bedoeld voor kerngebied, en zal daar een hogere dichtheid (bedekkingsgraad) liggen, maar de VLM heeft het toegelaten om ook in zoekzones deze maatregelen te sluiten (al was dat minder de prioriteit).
     Daar werd bv.
@@ -171,7 +166,7 @@ include_graphics(file.path("media", "visibility",
 
     -   SPB's andere soorten (download 2023-02-14): <https://www.vlaanderen.be/datavindplaats/catalogus/soortenbeschermingsprogrammas>
 
-8.  Steekproeftrekking\
+7.  Steekproeftrekking\
     De stratificatiemethode is niet gewijzigd t.o.v. het pilootmeetnet.
     Omdat we nu met veel grotere gebieden werken, merkten we wel dat een maximale trekking niet voor een goede spatiale spreiding zorgt omdat het algorime niet genoeg vrijheid krijgt.
     Daarom besloten we uiteindelijk om 1/20ste (5 %) van het aantal elementen in het steekproefkader te nemen per stratum.
@@ -185,12 +180,12 @@ include_graphics(file.path("media", "visibility",
     Indien een punt uitvalt, kan dit vervangen worden door het eerstvolgende uit de reeks dat nog niet toegewezen werd (het 301ste).
     De methode garandeert dat deze nieuwe set ruimtelijk goed gespreid is en een aselecte steekproef is.
 
-9.  Uitduinnen van steekproef\
+8.  Uitduinnen van steekproef\
     Om te veel overlap te voorkomen binnen enzelfde stratum, is voor elk punt binnen hetzelfde stratum nagegaan of een punt met grotere `sample_order` op minder dan 300 (Leemstreek) of 600 m (Zandleemstreek) afstand ligt.
     Als dit het geval is wordt het punt met de lagere `sample_order` weerhouden.
     Voor een vergelijking tussen 300 en 600 m thinning, zie steekproefontwerp_leemstreek.Rmd.
 
-10. Overlap bestaande telpunten\
+9.  Overlap bestaande telpunten\
     Ten slotte hebben we overlap met bestaande telpunten geautomatiseerd.
     Zo kan optimaal gebruik worden gemaakt van data van telpunten die al meerdere jaren voordien zijn geteld.
     We vervangen bijgevolg alle telpunten uit de nieuwe steekproef door reeds bestaande punten indien ze voor minstens 50 % overlappen en ze tot hetzelfde stratum behoren.
@@ -204,34 +199,3 @@ include_graphics(file.path("media", "visibility",
 ### Steekproef Zandleemstreek
 
 ...
-
-## Implementatie en kwaliteitszorg
-
-Version control steekproef(kader)
-
-Er zijn verschillende opties voor version control in de `targets` pipeline.
-Enkele nuttige links:\
-<https://books.ropensci.org/targets/targets.html#return-value>\
-<https://books.ropensci.org/targets/data.html#cloud-storage>\
-<https://books.ropensci.org/targets/data.html#data-version-control>\
-<https://docs.ropensci.org/gittargets/>\
-<https://docs.ropensci.org/gittargets/articles/git.html>
-
-1.  Hard coding
-    -   Voeg op einde target toe met argument `TRUE` of `FALSE` om bepaalde bestanden weg te schrijven
-    -   Verander argument naar `TRUE` als je finale steekproef wil runnen en zet daarna ev. terug naar `FALSE`
-    -   Versiecontrole met git (check .gitignore)
-2.  Cloud storage
-    -   Amazon of Google
-        -   Account?
-        -   Kosten?
-        -   Lange termijn?
-    -   Vooral voor grote projecten
-3.  Gittargets
-    -   Kan ook voor specifieke objecten: <https://docs.ropensci.org/gittargets/#performance>
-    -   Is het de moeite? Manueel werk --\> waarom niet ineens hard coden? Komt op zelfde neer?
-
-We kiezen voor optie 1.
-We gebruiken hiervoor de package [git2rdata](https://ropensci.github.io/git2rdata/).
-De package maakt het opslaan van dataframes onder versiebeheer efficiënter en handiger.
-Bovendien zijn de data en de metadata in een standaard en open formaat, waardoor ze leesbaar zijn voor andere software.
