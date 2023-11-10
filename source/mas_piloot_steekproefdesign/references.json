@@ -670,5 +670,122 @@
         "title": "SIMPLE CONNECTIVITY MEASURES IN SPATIAL ECOLOGY",
         "type": "article-journal",
         "volume": "83"
+    },
+    {
+        "URL": "https://www.openstreetmap.org",
+        "author": [
+            {
+                "family": "OpenStreetMap contributors"
+            }
+        ],
+        "id": "openstreetmapcontributors2022",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "key": "5LAINI2L",
+        "libraryid": "1",
+        "providerkey": "2509FBBE-5BB0-44C4-B119-6083A81ED673",
+        "title": "Belgium dump retrieved from https://download.geofabrik.de/europe/belgium.html on 2022-02-22",
+        "type": "article"
+    },
+    {
+        "URL": "https://archief-algemeen.omgeving.vlaanderen.be/xmlui/bitstream/handle/acd/449392/Landgebruik_en_Ruimtebeslag_2019_def_correctie.pdf?sequence=1&isAllowed=y",
+        "accessed": {
+            "date-parts": []
+        },
+        "author": [
+            {
+                "family": "Poelmans",
+                "given": "Lien"
+            },
+            {
+                "family": "Janssen",
+                "given": "Liliane"
+            },
+            {
+                "family": "Hambsch",
+                "given": "Lorenz"
+            }
+        ],
+        "id": "poelmans2021",
+        "issued": {
+            "date-parts": [
+                [
+                    2021
+                ]
+            ]
+        },
+        "key": "6FW9KJHY",
+        "libraryid": "1",
+        "note": "uitgevoerd in opdracht van het Vlaams Planbureau voor Omgeving",
+        "number": "2021/RMA/R/2458",
+        "providerkey": "2509FBBE-5BB0-44C4-B119-6083A81ED673",
+        "publisher": "VITO",
+        "title": "Landgebruik en ruimtebeslag in Vlaanderen, toestand 2019",
+        "type": "report"
+    },
+    {
+        "DOI": "10.1111/j.1541-0420.2011.01699.x",
+        "ISSN": "1541-0420",
+        "URL": "http://dx.doi.org/10.1111/j.1541-0420.2011.01699.x",
+        "author": [
+            {
+                "family": "Grafström",
+                "given": "Anton"
+            },
+            {
+                "family": "Lundström",
+                "given": "Niklas L P"
+            },
+            {
+                "family": "Schelin",
+                "given": "Lina"
+            }
+        ],
+        "container-title": "Biometrics",
+        "id": "grafström2011",
+        "issued": {
+            "date-parts": [
+                [
+                    2011
+                ]
+            ]
+        },
+        "key": "UL5IPHNY",
+        "libraryid": "1",
+        "page": "514-520",
+        "providerkey": "2509FBBE-5BB0-44C4-B119-6083A81ED673",
+        "publisher": "Blackwell",
+        "title": "Spatially Balanced Sampling through the Pivotal Method",
+        "type": "article-journal",
+        "volume": "68"
+    },
+    {
+        "author": [
+            {
+                "family": "Cochran",
+                "given": "W G"
+            }
+        ],
+        "container-title": "Biometrika",
+        "id": "cochran1950",
+        "issued": {
+            "date-parts": [
+                [
+                    1950
+                ]
+            ]
+        },
+        "key": "UQDNTIDL",
+        "libraryid": "1",
+        "page": "256-266",
+        "providerkey": "2509FBBE-5BB0-44C4-B119-6083A81ED673",
+        "title": "The comparison of percentages in matched samples",
+        "type": "article-journal",
+        "volume": "37"
     }
 ]
