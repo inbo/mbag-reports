@@ -32,7 +32,7 @@ reviewer:
       given: "Koen"
       family: "Devos"
     email: "koen.devos@inbo.be"
-    orchid: "0000-0001-7265-6349"
+    orcid: "0000-0001-7265-6349"
     affiliation: "Instituut voor Natuur- en Bosonderzoek (INBO)"
 lang: nl
 style: INBO
@@ -47,6 +47,9 @@ link-citations: TRUE
 site: bookdown::bookdown_site
 year: 2023
 reportnr: 1
+cover_photo: cover.jpg
+cover: cover.jpg
+cover_description: Gele kwikstaart (_Motacilla flava_). (© Johannes Jansen)
 header-includes:
    - \usepackage[labelfont=bf,labelsep = period]{caption}
 output:
