@@ -237,6 +237,7 @@ hier komt een kaart van de steekproef (enkel punten die effectief geteld werden)
 :::
 
 <!--# De meest open landschappen zitten volledig binnen de perimeter van het SBP plan. De vergelijking van HOL binnen versus buiten plan en OL binnen versus buiten plan is dus bemoeilijkt omdat de gemiddelde openheid systematisch hoger zal liggen binnen de SBP perimeter. Een ander confounding probleem is dat HOL gemiddeld noordelijker gelegen zijn buiten SBP perimeter.-->
+
 <!--# Verder is ook duidelijk te zien dat veruit de meeste SB beheerovereenkomsten afgesloten zijn binnen de SBP perimeter. De stratificatie binnen vs buiten SBP kunnen we dus effectief gebruiken als factor om na te gaan of er een effect is van deze maatregelen. We zullen wel moeten corrigeren voor de confounders door de confounders op te nemen in een model en/of door de data te filteren met behulp van statistical matching technieken in functie van specifieke vraagstellingen over de effectiviteit van beheerovereenkomsten. -->
 
 <!--# We zien wel dat de steekproef een goede afspiegeling is van de volledige populatie (boxplots voor steekproef en populatie zijn zeer gelijkend).-->
@@ -269,5 +270,39 @@ Na manuele controle van de punten op bereikbaarheid, zichtbaarheid, overlap met 
 Daarna werden punten toebedeeld aan tellers.
 Tellers konden ook punten claimen door dit aan te geven in de google maps kaart.
 
+## Implementatie en kwaliteitszorg
+
+\textcolor{red}{deze tekst moet nog verder uitgeschreven worden}
+
+\textcolor{red}{Version control steekproef(kader)}
+
+Er zijn verschillende opties voor version control in de `targets` pipeline.
+Enkele nuttige links:\
+<https://books.ropensci.org/targets/targets.html#return-value>\
+<https://books.ropensci.org/targets/data.html#cloud-storage>\
+<https://books.ropensci.org/targets/data.html#data-version-control>\
+<https://docs.ropensci.org/gittargets/>\
+<https://docs.ropensci.org/gittargets/articles/git.html>
+
+1.  Hard coding
+    -   Voeg op einde target toe met argument `TRUE` of `FALSE` om bepaalde bestanden weg te schrijven
+    -   Verander argument naar `TRUE` als je finale steekproef wil runnen en zet daarna ev. terug naar `FALSE`
+    -   Versiecontrole met git (check .gitignore)
+2.  Cloud storage
+    -   Amazon of Google
+        -   Account?
+        -   Kosten?
+        -   Lange termijn?
+    -   Vooral voor grote projecten
+3.  Gittargets
+    -   Kan ook voor specifieke objecten: <https://docs.ropensci.org/gittargets/#performance>
+    -   Is het de moeite? Manueel werk --\> waarom niet ineens hard coden? Komt op zelfde neer?
+
+We kiezen voor optie 1.
+We gebruiken hiervoor de package [git2rdata](https://ropensci.github.io/git2rdata/).
+De package maakt het opslaan van dataframes onder versiebeheer efficiënter en handiger.
+Bovendien zijn de data en de metadata in een standaard en open formaat, waardoor ze leesbaar zijn voor andere software.
+
 [^04_pilootgegevens-1]: Bij de steekproeftrekking wordt een methode gebruikt die zal vermijden dat telpunten en hun telcirkels overlappen.
     Het kan in deze fase dus geen kwaad dat potentiële telpunten op een afstand van minder dan 300 m van elkaar gelegen zijn.
+

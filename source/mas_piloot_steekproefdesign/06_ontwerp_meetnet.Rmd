@@ -199,34 +199,3 @@ include_graphics(file.path("media", "visibility",
 ### Steekproef Zandleemstreek
 
 ...
-
-## Implementatie en kwaliteitszorg
-
-Version control steekproef(kader)
-
-Er zijn verschillende opties voor version control in de `targets` pipeline.
-Enkele nuttige links:\
-<https://books.ropensci.org/targets/targets.html#return-value>\
-<https://books.ropensci.org/targets/data.html#cloud-storage>\
-<https://books.ropensci.org/targets/data.html#data-version-control>\
-<https://docs.ropensci.org/gittargets/>\
-<https://docs.ropensci.org/gittargets/articles/git.html>
-
-1.  Hard coding
-    -   Voeg op einde target toe met argument `TRUE` of `FALSE` om bepaalde bestanden weg te schrijven
-    -   Verander argument naar `TRUE` als je finale steekproef wil runnen en zet daarna ev. terug naar `FALSE`
-    -   Versiecontrole met git (check .gitignore)
-2.  Cloud storage
-    -   Amazon of Google
-        -   Account?
-        -   Kosten?
-        -   Lange termijn?
-    -   Vooral voor grote projecten
-3.  Gittargets
-    -   Kan ook voor specifieke objecten: <https://docs.ropensci.org/gittargets/#performance>
-    -   Is het de moeite? Manueel werk --\> waarom niet ineens hard coden? Komt op zelfde neer?
-
-We kiezen voor optie 1.
-We gebruiken hiervoor de package [git2rdata](https://ropensci.github.io/git2rdata/).
-De package maakt het opslaan van dataframes onder versiebeheer efficiënter en handiger.
-Bovendien zijn de data en de metadata in een standaard en open formaat, waardoor ze leesbaar zijn voor andere software.
