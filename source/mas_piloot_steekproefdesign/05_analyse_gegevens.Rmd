@@ -1086,7 +1086,7 @@ Distance sampling m.b.v. het **Distance** package bleek een relatief eenvoudige 
 We selecteerden de data van 2022-2023 van Veldleeuwerik met broedcode groter dan nul.
 Dit omdat we vermoedden dat de meer beperkte data van voor het pilootproject mogelijke effecten/trends zou vertroebelen in deze context.
 Om de analyses eenvoudiger te maken zetten we de aantallen om naar het maximum aantal per telcirkel per jaar over de telperiodes heen.
-Twee variabelen werden gemeten op tellingniveau: (1) van variabele `n_predators` nemen we het gemiddelde aantal per telcirkel per jaar en (2) van variabele `status_teller`nemen we de status van de teller die in een bepaald jaar het meest frequent een bepaald telpunt heeft bezocht (in het zeldzame geval dat verschillende tellers hetzelfde telpunt in hetzelfde jaar tijdens verschillende telperiodes bezocht hadden).
+Twee variabelen werden gemeten op tellingniveau: (1) van variabele `n_predators` nemen we het gemiddelde aantal per telcirkel per jaar en (2) van variabele `status_teller` nemen we de status van de teller die in een bepaald jaar het meest frequent een bepaald telpunt heeft bezocht (in het zeldzame geval dat verschillende tellers hetzelfde telpunt in hetzelfde jaar tijdens verschillende telperiodes bezocht hadden).
 
 We beschouwden alle geselecteerde primaire en secundaire variabelen beschreven in Hoofstuk \@ref(verklarende-variabelen) (Tabel \@ref(tab:verklarende-vars-tab), behalve `openheid_klasse_300` omdat deze als continue variabele op 1000 m informatiever leek (`openheid_waarde_1000`) en `sbp` omwille van de sterke correlatie met de variabele van interesse `area_prop_sb` (Fig. \@ref(fig:sbp-areapropsb)).
 Om de interpretatie van de resultaten te vereenvoudigen besloten we de continue variabele `area_prop_sb` op te delen volgens de agri-environment schemes (AES) classificatie besproken in @sharps2023 (Tabel \@ref(tab:classificatie-propsb)).
@@ -1103,7 +1103,7 @@ tibble(beleid = c("nul", "laag", "middellaag", "middelhoog", "hoog"),
 ```
 
 Analyses werden voor beide regio's apart gedaan via Bayesiaanse modellen met de **brms** package.
-Selectie van variabelen werd gedaan via projection predictive variable selection methode (PPVS) [@piironen2017; @piironen2020; catalina2022; @mclatchie2023].
+Selectie van variabelen werd gedaan via projection predictive variable selection methode (PPVS) [@piironen2017; @piironen2020; @catalina2022; @mclatchie2023].
 Het doel van PPVS is het vinden van een zo klein mogelijke subset van kandidaat-variabelen met een voorspellende kracht die zo dicht mogelijk ligt bij die van het referentiemodel.
 Als referentiemodel specificeerden we voor elke regio een Poisson model met alle variabelen in kwestie en is het best presterende model (in termen van voorspellende prestaties) dat we tot onze beschikking hebben.
 Voor de regressiecoëfficienten ($\beta$-parameters) gebruikten we de 'R2-D2 shrinkage prior' [@zhang2016; @yanchenko2021].
@@ -1111,7 +1111,7 @@ Voor het intercept gebruiken we de default prior van **brms**.
 De R2-D2 prior specificeert een verdeling voor de determinatiecoëfficiënt $R^2$ en induceert dan een prior op de individuele $\beta$'s.
 Het idee achter 'shrinkage priors' is om de geschatte parameters van een model naar een centrale waarde te trekken of ze naar nul te laten krimpen.
 Deze regularisatie moedigt zo simpelere modellen aan en kunnen dus gebruikt worden in variabelenselectie.
-Voor de hyperparameters gebruiken we 0,5 voor het gemiddelde van de Beta prior op $R^2$, 2 voor de precisie van de Beta prioren en 1 voor de concentratievector van de Dirichlet prior op de variantie decompositieparameter (lagere waardes beteken een sterkere shrinkage).
+Voor de hyperparameters gebruiken we 0,5 voor het gemiddelde van de Beta prior op $R^2$, 2 voor de precisie van de Beta prior en 1 voor de concentratievector van de Dirichlet prior op de variantie decompositieparameter (lagere waardes beteken een sterkere shrinkage).
 Deze werden bepaald o.b.v. exploratieve analyses en bijlage B in @mclatchie2023.
 
 We bemonsterden de posterior verdelingen voor de modellen met drie Markov Chain Monte Carlo (MCMC) chains, die elk 8000 iteraties draaiden, waarvan de eerste 2000 werden verwijderd als burn-in.
@@ -1125,7 +1125,7 @@ Na het fitten van de referentiemodellen voor elke regio PPVS toegepast met de **
 Hierin worden twee fases onderscheiden:
 
 1.  Zoekfase\
-    De rangschikking van de verklarende variabelen, nl. de kleinst mogelijke subset van kandidaat-variabelen voor elk aantal aan variabelen, werd bepaald via forward search. Hierbij werd gespecifieerd dat de categorische variabele voor het oppervlakte-aandeel soortbeschermingsplannen zeker in het finale model moest aanwezig zijn (altijd rang 1). Maximale submodelgrootte werd ingesteld op 19 variabelen.
+    De rangschikking van de verklarende variabelen, nl. de kleinst mogelijke subset van kandidaat-variabelen voor elk aantal variabelen, werd bepaald via forward search. Hierbij werd gespecifieerd dat de categorische variabele voor het oppervlakte-aandeel soortbeschermingsplannen zeker in het finale model moest aanwezig zijn (altijd rang 1). Maximale submodelgrootte werd ingesteld op 19 variabelen.
 2.  Evaluatiefase\
     Berekening van voorspellende prestaties van de steeds complexer wordende submodellen langs de ranglijst van verklarende variabelen via 5-fold cross-validation (CV). Voorspellende prestaties werden gekwantificeerd als 'mean log predictive density' (MLPD). Dit is de expected log (pointwise) predictive density (ELPD) gedeeld door het aantal observaties.
 
@@ -1134,7 +1134,7 @@ Als de MLPD niet meer toeneemt met het aantal variabelen, dan voegen die extra v
 Ook bekeken we de variabiliteit in de rangschikking van de verklarende variabelen aan de hand van de (cumulatieve) ranking proporties.
 De ranking proportie van variabele $x$ bij submodelgrootte $j$ is de proportie van CV folds die variabele $x$ hebben op positie $j$ van hun rangschikking van de verklarende variabelen.
 De cumulatieve ranking proporties worden opgeteld naarmate submodelgrootte toeneemt.
-Een cumulatieve ranking proportie voor variabele $x$ van 90 % bij \<= $j=5$ will bijvoorbeeld zeggen dat $x$ in 90 % van de CV folds een ranking kleiner of gelijk aan 5 heeft.
+Een cumulatieve ranking proportie voor variabele $x$ van 90 % bij \<= 5 ($= j$) will bijvoorbeeld zeggen dat $x$ in 90 % van de CV folds een ranking kleiner of gelijk aan 5 heeft.
 
 Finale modellen werden met de geselecteerde variabelen opnieuw gefit via **brms**.
 We fitten zowel een Poisson als zero-inflated Poisson model.

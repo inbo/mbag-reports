@@ -181,7 +181,7 @@ include_graphics(file.path("media", "visibility",
     De methode garandeert dat deze nieuwe set ruimtelijk goed gespreid is en een aselecte steekproef is.
 
 8.  Uitduinnen van steekproef\
-    Om te veel overlap te voorkomen binnen enzelfde stratum, is voor elk punt binnen hetzelfde stratum nagegaan of een punt met grotere `sample_order` op minder dan 300 (Leemstreek) of 600 m (Zandleemstreek) afstand ligt.
+    Om te veel overlap te voorkomen binnen enzelfde stratum, is voor elk punt binnen hetzelfde stratum nagegaan of een punt met grotere `sample_order` op minder dan 600 m (Zandleemstreek) afstand ligt.
     Als dit het geval is wordt het punt met de lagere `sample_order` weerhouden.
     Voor een vergelijking tussen 300 en 600 m thinning, zie steekproefontwerp_leemstreek.Rmd.
 
