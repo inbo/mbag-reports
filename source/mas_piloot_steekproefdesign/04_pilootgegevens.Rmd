@@ -265,11 +265,17 @@ Na manuele controle van de punten op bereikbaarheid, zichtbaarheid, overlap met 
 Daarna werden punten toebedeeld aan tellers.
 Tellers konden ook punten claimen door dit aan te geven in de Google Maps kaart.
 
-## Implementatie en kwaliteitszorg
+## Reproduceerbaarheid en traceerbaarheid
 
 \textcolor{red}{renv, targets, github}
 
+[@renv-package] v0.17.3
+
+[@targets-package] v1.0.0
+
 \textcolor{red}{Version control steekproef(kader)}
+
+[@git2rdata-package] 0.4.0
 
 Er zijn verschillende opties voor version control in de `targets` pipeline.
 Enkele nuttige links:\
