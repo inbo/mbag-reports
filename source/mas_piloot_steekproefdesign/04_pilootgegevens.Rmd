@@ -145,11 +145,11 @@ Vervolgens hebben we dit netwerk van (water)wegen omgevormd tot een puntennetwer
 
 -   Langs alle paden worden op regelmatige afstanden van 50 m punten gelegd[^04_pilootgegevens-1]
 -   Daarna worden punten die op minder dan 40 m van elkaar liggen ruimtelijk gegroepeerd (dit gebeurt wanneer verschillende paden elkaar kruisen of op korte afstand parallel aan elkaar liggen) en uit elk van deze clusters wordt één punt overgehouden
--   potentiële telpunten moeten op minstens 300 m van de grens (perimeter) gelegen zijn
+-   Potentiële telpunten moeten op minstens 300 m van de grens (perimeter) gelegen zijn
 
 Deze lijst van potentiële telpunten is nog steeds een te ruime set van punten die nog onvoldoende goed overlapt met onze eigenlijke doelpopulatie.
 Daarom wordt nog een extra exclusiecriterium toegevoegd op basis van de VITO 2019 landgebruikskaart [@poelmans2021].
-Deze landgebruikskaart geeft ons betere informatie om de oppervlaktes aan akker, grasland, bos en struikgewas in een straal van 300m te bepalen rond elk van de potentiële telpunten op de voorlopige lijst.
+Deze landgebruikskaart geeft ons betere informatie om de oppervlaktes aan akker, grasland, bos en struikgewas in een straal van 300 m te bepalen rond elk van de potentiële telpunten op de voorlopige lijst.
 Deze straal komt overeen met de telcirkel uit het MAS telprotocol.
 We zijn enkel geïnteresseerd in potentiële telpunten waar de samenstelling van het landgebruik in een buffer van 300 m rond het punt voldoet aan volgende regel:
 
@@ -158,17 +158,13 @@ We zijn enkel geïnteresseerd in potentiële telpunten waar de samenstelling van
 Met deze regel slagen we er in om potentiële telpunten uit te sluiten die bijvoorbeeld te dicht bij bebouwing gelegen zijn.
 De uiteindelijk bekomen lijst van punten vormt het steekproefkader van het MAS pilootproject.
 
-::: {.center data-latex=""}
-::: {.minipage data-latex="{.5\\linewidth}"}
-hier komt een figuur met een aantal kaartjes die elke stap van bovenstaand proces illustreren voor een klein detailgebied
-:::
-:::
+\textcolor{red}{hier komt een figuur met een aantal kaartjes die elke stap van bovenstaand proces illustreren voor een klein detailgebied}
 
 In een laatste stap was het de bedoeling om ook nog een exclusie van potentiële telpunten uit te voeren op basis van slechte zichtbaarheid vanaf het telpunt.
 Hier was al gedeeltelijk mee rekening gehouden door holle wegen uit te sluiten.
-Mogelijk zijn echter niet alle holle wegen gekend in Openstreetmap en er zijn ook andere landschapsconfiguraties die maken dat observatie van vogels lastig is.
+Mogelijk zijn echter niet alle holle wegen gekend in OpenStreetMap en er zijn ook andere landschapsconfiguraties die maken dat observatie van vogels lastig is.
 Op het moment dat dit steekproefkader werd opgemaakt, was een snelle, efficiënte berekenmethode echter nog niet beschikbaar.
-Later hebben we hier wel een technische oplossing voor gevonden zodat dit wel kan toegepast worden bij de uitrol van het MAS meetnet naar andere landbouwstreken (zie hoofdstuk \@ref(ontwerp-meetnet)).
+Later hebben we hier wel een technische oplossing voor gevonden zodat dit wel kan toegepast worden bij de uitrol van het MAS meetnet naar andere landbouwstreken (zie Sectie \@ref(aanpassingen-meetnet)).
 
 ### Stratificatie-variabelen en andere hulpvariabelen {#piloot-stratificatie}
 

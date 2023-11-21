@@ -38,7 +38,7 @@ Het idee is om in de komende jaren het meetnet uit te breiden over de verschille
 \@ref(fig:landbouwstreken)) met uitzondering van de Duinen en de Weidestreek.
 In 2023 zijn we gestart met de Leemstreek en de Zandleemstreek.
 
-### Aanpassingen ten opzichte van het pilootmeetnet
+### Aanpassingen ten opzichte van het pilootmeetnet {#aanpassingen-meetnet}
 
 In dit hoofdstuk geven we aan welke aanpassingen we doen aan de methodiek van het pilootmeetnet (zie \@ref(piloot-ontwerp)) voor de Leemstreek en de Zandleemstreek en later voor heel Vlaanderen.
 We duiden enkel wijzigingen aan.
