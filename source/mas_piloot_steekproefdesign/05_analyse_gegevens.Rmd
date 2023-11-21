@@ -14,9 +14,9 @@
 ### Enkele cijfers
 
 De volgende resultaten betreffen vogels.
-Zoogdieren worden besproken in Hoofdstuk \@ref(exploratie-zoogdieren).
+Zoogdieren worden besproken in sectie \@ref(exploratie-zoogdieren).
 Binnen het pilootmeetnet worden al sinds 2018 tellingen verricht.
-\textcolor{red}{plan kiekendief ...} Zoals besproken in Hoofdstuk \@ref(pilootgegevens) zijn een aantal van deze punten hergebruikt bij de steekproeftrekking voor deze pilootstudie.
+\textcolor{red}{plan kiekendief ...} Zoals besproken in sectie \@ref(piloot-overlap}) zijn een aantal van deze punten hergebruikt bij de steekproeftrekking voor deze pilootstudie.
 Verder zijn er sinds de pilootstudie (2022) veel telpunten bijgekomen in De Moeren en de Oostelijke leemstreek (Tabel \@ref(tab:samenvatting-aantallen)).
 De meeste telpunten werden vier maal per jaar bezocht (Fig. \@ref(fig:telintensiteit)).
 Figuren \@ref(fig:aantal-waarnemingen) en \@ref(fig:aantal-soorten) geven een meer gedetailleerd beeld van de verdelingen van respectievelijk het aantal waarnemingen en soorten per jaar.
@@ -382,7 +382,7 @@ De regio's van het pilootmeetnet (De Moeren en Oostelijke leemstreek).
 \textcolor{red}{Zowel binnen kerngebied als zoekzones zijn er soortbeschermende maatregelen (SB BO’s) gelegd (zie kaart VLM BO’s). In theorie waren deze maatregelen vooral bedoeld voor kerngebied, en zal daar een hogere dichtheid (bedekkingsgraad) liggen, maar de VLM heeft het toegelaten om ook in zoekzones deze maatregelen te sluiten (al was dat minder de prioriteit). Daar werd bv. in de Moeren geen rekening mee gehouden, en werden erg veel SB BO’s gelegd, ook omdat dit gebied wél kerngebied was van plan kiekendief (SBP Grauwe Kiekendief) waardoor er wel veel BO’s gesloten zijn. In de toekomst heeft VLM beloofd om meer/enkel rekening te houden met kerngebied. Voor het pilootmeetnet namen we de kerngebieden samen als onderzoeksgebied (binnen sbp) en alles hierbuiten beschouwen we als controle (buiten sbp).}
 
 **4. Status teller**\
-Analyses van telpunten die zowel door vrijwilligers als professionele teller zijn geteld, gaven duidelijk aan dat vrijwilligers een significant lager aantal waarnemingen en soorten zien dan een professionele teller (Hoofdstuk \@ref(dubbeltellingen)).
+Analyses van telpunten die zowel door vrijwilligers als professionele teller zijn geteld, gaven duidelijk aan dat vrijwilligers een significant lager aantal waarnemingen en soorten zien dan een professionele teller (sectie \@ref(dubbeltellingen)).
 Voor elk telpunt hebben we dus ook nagegaan of er geteld is door een professionele teller of een vrijwilliger.
 
 **5. Oppervlakte-aandeel kleine landschapselementen**\
@@ -824,7 +824,7 @@ summary_results_2018_2023 <- bind_rows(
   separate(Label, into = c("regio", "jaar"), sep = " - ")
 ```
 
-Rekening houdend met de detectiekans, verkrijgen we via de formules besproken in het vorige hoofdstuk de abundantieschattingen in Tabel \@ref(tab:abundantie-jaar).
+Rekening houdend met de detectiekans, verkrijgen we via de formules besproken in de vorige sectie de abundantieschattingen in Tabel \@ref(tab:abundantie-jaar).
 Door te delen door de oppervlaktes van elk stratum (regio, jaar) krijgen we de densiteitsschattingen in Tabel \@ref(tab:densiteit-jaar) (Fig. \@ref(fig:densiteit-jaar-plot)).
 
 ```{r abundantie-jaar}
@@ -950,7 +950,7 @@ summary_results_2023 <- bind_rows(
 summary_results_stratum <- bind_rows(summary_results_2022, summary_results_2023)
 ```
 
-Rekening houdend met de detectiekans, verkrijgen we via de formules besproken in het vorige hoofdstuk de abundantieschattingen in Tabel \@ref(tab:abundantie-stratum).
+Rekening houdend met de detectiekans, verkrijgen we via de formules besproken in de vorige sectie de abundantieschattingen in Tabel \@ref(tab:abundantie-stratum).
 Door te delen door de oppervlaktes van elk stratum (regio, jaar) krijgen we de densiteitsschattingen in Tabel \@ref(tab:densiteit-stratum) (Fig. \@ref(fig:densiteit-stratum-plot)).
 
 ```{r abundantie-stratum}
@@ -984,7 +984,7 @@ include_graphics(file.path("media", "distance", "per_stratum",
 
 Distance sampling is een statistische methode die over het algemeen goed werkt in combinatie met het MAS-protocol om densiteiten te schatten.
 Echter, we zagen wel dat de fit niet helemaal goed was voor de Veldleeuwerik.
-Een aanname van het model is namelijk dat de detectiekans afneemt over de afstand (zie assumpties hoofdstuk \@ref(inleiding-distance)).
+Een aanname van het model is namelijk dat de detectiekans afneemt over de afstand (zie assumpties sectie \@ref(inleiding-distance)).
 @roodbergen2011 hadden voor de Veldleeuwerik gelijkaardige problemen om een passende detectiecurve te fitten.
 Zij stellen dat dit kan worden veroorzaakt doordat vogels zich verplaatsen als reactie op de waarnemer of het afronden van afstanden door waarnemers.
 Dit laatste is bij ons zeker niet het geval doordat waarnemers een punt aanduiden op de kaart via een app en niet manueel een afstand invoeren.
@@ -1075,7 +1075,7 @@ include_graphics(file.path("media", "distance", "per_stratum",
 We kunnen concluderen dat het schatten van densiteiten een evenwichtsoefening is tussen het maken van juiste beslissingen in ecologische context en anderzijds het gebruiken van een duidelijk en niet te complexe statistiche methode.
 Deze eerste kan in rekening genomen worden door de data te filteren op broedcode groter dan nul en voor elke soort de telperiodes te selecteren die binnen de broedperiode van elke soort vallen.
 Een extra maatregel zou kunnen zijn om over die telperiodes (per telpunt per jaar) het maximum aantal te nemen als finale dataset voor verdere analyse (met effort = 1 omdat we dan niet meer corrigeren voor het aantal bezoeken, waardoor geen strikte uitmiddeling gebeurd).
-Voor Haas zou het bovendien nuttig zijn de oppervlaktes van de telcirkel te corrigeren voor de oppervlakte die effectief zichtbaar is voor de teller \textcolor{red}{(volgens viewshedanalyse, zie  Hoofdstuk @ref(uitbreiding-vlaanderen))}, aangezien Haas steeds op de grond zit.
+Voor Haas zou het bovendien nuttig zijn de oppervlaktes van de telcirkel te corrigeren voor de oppervlakte die effectief zichtbaar is voor de teller \textcolor{red}{(volgens viewshedanalyse, zie @ref(aanpassingen-meetnet))}, aangezien Haas steeds op de grond zit.
 Distance sampling m.b.v. het **Distance** package bleek een relatief eenvoudige procedure (zowel mathematisch als gebruiksvriendelijkheid) om densiteitsschattingen (incl. onzekerheid) te maken rekening houdend met de detectiekans van een soort.
 \textcolor{red}{complex niet nodig, detectiekans kan wel in GLMM ofzo worden gebruikt? verder}
 
