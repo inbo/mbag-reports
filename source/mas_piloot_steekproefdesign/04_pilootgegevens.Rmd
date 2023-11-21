@@ -185,17 +185,17 @@ We maken hiervoor gebruik van het DSM (digitaal oppervlakte model - DHMV II Vlaa
 Werkwijze:
 
 -   berekening "canopy height model" (CHM) door verschil te berekenen tussen DSM en DTM. Dit geeft dan hoogte boven het maaiveld (gebouwen, bodem, struiken ...).
--   berekening van "positive topographic openness" (dit is een waarde tussen 0 en 2 in radians) door voor elke rastercel van het CHM in 8 kijkrichtingen na te gaan wat de gemiddelde hoek is t.o.v. zenith binnen een straal van 300m. Deze hoek geeft aan hoe open het landschap is. Indien volledig open is de hoek 90° (of 1.57 radians).
+-   berekening van "positive topographic openness" (dit is een waarde tussen 0 en 2 in radialen) door voor elke rastercel van het CHM in 8 kijkrichtingen na te gaan wat de gemiddelde hoek is t.o.v. het zenit binnen een straal van 300 m. Deze hoek geeft aan hoe open het landschap is. Indien volledig open is de hoek 90° (of 1.57 radialen).
 -   met dit resultaat de gemiddelde (van de gemiddelde) topografische openheid berekenen in een cirkelvormig landschap rond elke cel met straal 300 m.
 -   deze gemiddelden zijn daarna ingedeeld in drie klassen:
-    -   OL open landschap (\> 86,5°),
-    -   HOL halfopen landschap (77,3° - 86,5°),
-    -   HGL halfgesloten landschap (71,6° - 77,3°)
-    -   GL (\< 71,6°) gesloten landschap
+    -   OL: open landschap (\> 86,5°),
+    -   HOL: halfopen landschap (77,3° - 86,5°),
+    -   HGL: halfgesloten landschap (71,6° - 77,3°)
+    -   GL: gesloten landschap (\< 71,6°)
 
 We stratificeerden binnen de Oostelijke leemstreek volgens OL en HOL.
 Binnen De Moeren was er enkel voldoende OL aanwezig en vervalt het HOL stratum.
-Akkervogelgemeenschappen worden vaak ingedeeld volgens hun affiniteit met open landschap (OLA - Open landschap Akkervogels), half-open landschap (HOLA) en kleinschalig landschap (KLA) [REF].
+Akkervogelgemeenschappen worden vaak ingedeeld volgens hun affiniteit met open landschap (OLA - Open landschap Akkervogels), half-open landschap (HOLA) en kleinschalig landschap (KLA) \textcolor{red}{[REF]}.
 Onder kleinschalig landschap verstaat men een landschap waar de percelen relatief klein zijn en het landschap in sterke mate dooraderd is door hagen, rietkragen en andere lijn- of puntvormige kleine landschapselementen (KLE's).
 De manier waarop we openheid van het landschap hebben bepaald laat niet toe om KLA te bepalen zonder bijkomende berekeningen.
 KLA zullen een subset zijn van wat wij HOL noemen, met name HOL waar de gemiddelde perceelsgrootte relatief klein is.
@@ -227,11 +227,7 @@ In die gevallen werd enkel het overlappende telpunt met laagste volgnummer weerh
 Deze geselecteerde telpunten werden zowel in 2022 als in 2023 geteld in het kader van het MAS pilootproject.
 Voor de steekproef over Vlaanderen is het best mogelijk dat een ander temporeel design nodig is zoals een 'rotating panel design' of een 'augmented panel design'.
 
-::: {.center data-latex=""}
-::: {.minipage data-latex="{.5\\linewidth}"}
-hier komt een kaart van de steekproef (enkel punten die effectief geteld werden)
-:::
-:::
+\textcolor{red}{hier komt een kaart van de steekproef (enkel punten die effectief geteld werden)}
 
 <!--# De meest open landschappen zitten volledig binnen de perimeter van het SBP plan. De vergelijking van HOL binnen versus buiten plan en OL binnen versus buiten plan is dus bemoeilijkt omdat de gemiddelde openheid systematisch hoger zal liggen binnen de SBP perimeter. Een ander confounding probleem is dat HOL gemiddeld noordelijker gelegen zijn buiten SBP perimeter.-->
 
