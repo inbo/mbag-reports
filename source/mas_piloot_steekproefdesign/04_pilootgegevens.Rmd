@@ -73,21 +73,23 @@ Een steekproefkader kan bijvoorbeeld een lijst zijn (bv. alle landbouwbedrijven 
 In het geval van het MAS pilootproject maken we een lijst aan van potentiële telpuntlocaties.
 
 Voor de afbakening van het steekproefkader, starten we met een intersectie van de landbouwstreken van België met de contour van Vlaanderen.
-Dit geeft ons een kaart van de landbouwstreken in Vlaanderen.
+Dit geeft ons een kaart van de landbouwstreken in Vlaanderen (Fig. \@ref(fig:landbouwstreken)).
 De meeste landbouwstreken zijn opgebouwd uit meerdere polygonen.
 Vervolgens beperken we dit daarom voor de Oostelijke leemstreek tot enkel de polygoon die overlapt met de perimeters van de soortbeschermingsplannen voor akkervogels van de Oostelijke leemstreek.
-Dit geeft voldoende mogelijkheden om telpunten buiten deze SBP gebieden te kunnen selecteren (64% van de oppervlakte ligt buiten SBP).
+Dit geeft voldoende mogelijkheden om telpunten buiten deze SBP gebieden te kunnen selecteren (64 % van de oppervlakte ligt buiten SBP).
 In het geval van De Moeren, is er direct vertrokken van een perimeter die al gebruikt werd door de MAS werking van dat gebied en die ons aangeleverd is.
 Dit was nog geen officiële SBP akkervogels perimeter, maar het is wel een gebied waar gelijkaardige inspanningen werden geleverd en we beschouwen het daarom als "SBP" gebied.
 Om voor De Moeren ook een controlegebied te hebben (buiten SBP), werd een buffer gelegd rond het noordoostelijke deel van De Moeren die in oppervlakte nagenoeg gelijk is aan het gedeelte binnen "SBP" (ten zuiden van De Moeren zitten we in Frankrijk en ten westen zitten we in duingebied).
-Deze perimeter ligt grotendeels binnen de Polders landbouwstreek (een klein deel van de bufferzone ligt in de zandleemstreek), maar is slechts een klein deel van de volledige Polders.
+Deze perimeter ligt grotendeels binnen de Polders landbouwstreek (een klein deel van de bufferzone ligt in de zandleemstreek), maar is slechts een klein deel van de volledige Polders (Fig. \@ref(fig:perimeters-sbp)).
 De Oostelijke leemstreek omvat een zeer groot deel van de volledige leemstreek en is daarom te beschouwen als **de betere casus** van de twee pilootgebieden om dienst te doen als test voor de uitrol naar andere landbouwstreken in Vlaanderen.
 
-::: {.center data-latex=""}
-::: {.minipage data-latex="{.5\\linewidth}"}
-hier komt een kaart met de perimeters van De Moeren en de Oostelijke leemstreek, met aanduiding van binnen / buiten SBP en als achtergrond de landbouwstreken
-:::
-:::
+```{r landbouwstreken, out.width = "100%", fig.cap = "Landbouwstreken in Vlaanderen"}
+include_graphics(file.path("media", "kaartjes", "landbouwstreken-vl.png"))
+```
+
+```{r perimeters-sbp, out.width = "100%", fig.cap = "Perimeters van De Moeren (\\textbf{A}) en de Oostelijke leemstreek (\\textbf{B}), met aanduiding van het gebied binnen en buiten SBP en als achtergrond de landbouwstreken."}
+include_graphics(file.path("media", "kaartjes", "sbp_piloot_kaart.png"))
+```
 
 We bekomen dus twee polygonen (één voor De Moeren en één voor de Oostelijke leemstreek, beide bevatten zowel zones binnen als buiten SBP gebieden voor akkervogels).
 We moeten nu echter het steekproefkader verder verfijnen.
