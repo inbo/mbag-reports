@@ -274,9 +274,12 @@ We kunnen concluderen dat het effect van teller status belangrijk kan zijn het v
 Binnen deze studie hebben we verschillende verklarende variabelen verzameld mogelijk die van belang zijn voor akkervogels.
 We onderscheiden primaire, secundaire en tertiare variabelen.
 Primaire variabelen zijn variabelen die binnen het kader van de pilootstudie de hoogste interesse hebben om te weten wat het effect is op het aantal of de aanwezigheid van bepaalde akkervogels.
+Deze variabelen zijn sterk gelinkt aan het beleid.
 Secundaire variabelen zijn variabelen die mogelijk ook belangrijk zijn voor akkervogels, maar die vooral nodig zijn om modellen vollediger te maken.
 Ze zijn minder de focus van bepaalde, specifieke onderzoeksvragen.
+Deze variabelen zijn sterk gelinkt aan het voorkomen van soorten.
 Tertaire variabelen zijn structurele variabelen die eerder dienen om te corrigeren voor het monitoringsprotocol in tijd en ruimte bijvoorbeeld via random effects in mixed models.
+Deze variabelen zijn sterk gelinkt aan het studiedesign.
 Een overzicht wordt gegeven in Tabel \@ref(tab:verklarende-vars-tab) \textcolor{red}{en referenties naar de gebruikte kaartlagen in Bijlage x.}
 
 ### Primaire variabelen {#prim-verklarende-variabelen}
@@ -418,6 +421,7 @@ Gewogen gemiddelde van jaar sinds implementatie erosiebeheer en bufferstroken pe
 Aantal predatoren gezien tijdens telling.
 Als predatoren beschouwen we roofvogels (Blauwe Kiekendief, Boomvalk, Bosuil, Bruine Kiekendief, Buizerd, Grauwe Kiekendief, Havik, Ransuil, Rode Wouw, Slechtvalk, Smelleken, Sperwer, Steenuil, Steppekiekendief, Torenvalk, Vale Gier, Velduil, Wespendief, Zwarte Wouw) en kraaiachtigen (Ekster, Gaai, Kauw, Raaf, Roek, Zwarte Kraai).
 We beschouwden zowel een variabele voor het aantal individuen als het aantal soorten.
+Deze variabelen worden dus berekend op basis van de data van de tellingen zelf.
 
 **10. Oppervlakte nabije natuurgebieden**\
 We berekenden een maat voor de oppervlakte van nabije natuurgebieden waarbij we gebieden dichtbij meer gewicht geven dan gebieden veraf, en grotere gebieden meer gewicht geven dan kleine binnen een straal van 3 km [@moilanen2002].
