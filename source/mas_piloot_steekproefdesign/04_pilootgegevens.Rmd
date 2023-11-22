@@ -87,13 +87,13 @@ De Oostelijke leemstreek omvat een zeer groot deel van de volledige leemstreek e
 include_graphics(file.path("media", "kaartjes", "landbouwstreken_vl.png"))
 ```
 
-```{r perimeters-sbp, out.width = "100%", fig.cap = "Perimeters van De Moeren (\\textbf{A}) en de Oostelijke leemstreek (\\textbf{B}), met aanduiding van het gebied binnen en buiten SBP en als achtergrond de landbouwstreken."}
+```{r perimeters-sbp, out.width = "100%", fig.cap = "Perimeters van De Moeren (\\textbf{A}) en de Oostelijke leemstreek (\\textbf{B}), met aanduiding van het gebied binnen en buiten soortbeschermingsplan (SBP) en als achtergrond de landbouwstreken."}
 include_graphics(file.path("media", "kaartjes", "sbp_piloot_kaart.png"))
 ```
 
 We bekomen dus twee polygonen (één voor De Moeren en één voor de Oostelijke leemstreek, beide bevatten zowel zones binnen als buiten SBP gebieden voor akkervogels).
 We moeten nu echter het steekproefkader verder verfijnen.
-In eerste instantie doen we dit door *exclusie* van een aantal landgebruiken op basis van OpenStreetMap data [@openstreetmapcontributors2022]:
+In eerste instantie doen we dit door *exclusie* van een aantal landgebruiken op basis van OpenStreetMap data [@openstreetmapcontributors2022] (Fig. \@ref(fig:steekproef-afbakening)A):
 
 -   parkgebieden
     -   OSM definitie: `leisure = park`
@@ -112,7 +112,7 @@ In eerste instantie doen we dit door *exclusie* van een aantal landgebruiken op 
     -   OSM Wiki: <https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dcemetery>
 
 MAS tellingen gebeuren altijd vanaf een openbare weg of pad, er worden in principe nooit (landbouw)percelen betreden.
-We gebruiken daarom een extractie uit OpenStreetMap van alle wegentypes die in aanmerkingen komen (positieve selectie, dus autosnelwegen en dergelijke worden hier indirect uitgesloten):
+We gebruiken daarom een extractie uit OpenStreetMap van alle wegentypes die in aanmerkingen komen (positieve selectie, dus autosnelwegen en dergelijke worden hier indirect uitgesloten) (Fig. \@ref(fig:steekproef-afbakening)B):
 
 -   OSM Wiki: <https://wiki.openstreetmap.org/wiki/Key:highway>
     -   OSM definities:
@@ -141,7 +141,7 @@ We voegden daarom ook de waterlopen toe (in principe moet er een vrije strook va
         -   `waterway = ditch`
 
 Overlappende paden of waterwegen werden verwijderd.
-Vervolgens hebben we dit netwerk van (water)wegen omgevormd tot een puntennetwerk, waarbij elk punt een potentieel telpunt kan zijn:
+Vervolgens hebben we dit netwerk van (water)wegen omgevormd tot een puntennetwerk (Fig. \@ref(fig:steekproef-afbakening)C), waarbij elk punt een potentieel telpunt kan zijn:
 
 -   Langs alle paden worden op regelmatige afstanden van 50 m punten gelegd[^04_pilootgegevens-1]
 -   Daarna worden punten die op minder dan 40 m van elkaar liggen ruimtelijk gegroepeerd (dit gebeurt wanneer verschillende paden elkaar kruisen of op korte afstand parallel aan elkaar liggen) en uit elk van deze clusters wordt één punt overgehouden
@@ -155,11 +155,16 @@ We zijn enkel geïnteresseerd in potentiële telpunten waar de samenstelling van
 
 -   Akker + Grasland \> 40% én Grasland + Bos + Struikgewas + Akker \> 50%
 
-Met deze regel slagen we er in om potentiële telpunten uit te sluiten die bijvoorbeeld te dicht bij bebouwing gelegen zijn.
+Met deze regel slagen we er in om potentiële telpunten uit te sluiten die bijvoorbeeld te dicht bij bebouwing gelegen zijn (Fig. \@ref(fig:steekproef-afbakening)D).
 De uiteindelijk bekomen lijst van punten vormt het steekproefkader van het MAS pilootproject.
 
-\textcolor{red}{hier komt een figuur met een aantal kaartjes die elke stap van bovenstaand proces illustreren voor een klein detailgebied}
-
+```{=tex}
+\begin{figure}
+  \makebox[\textwidth][c]{\includegraphics[width=1.1\textwidth]{media/steekproefkader_mas/mas_piloot_afbakening.png}}
+  \caption{Methodiek voor de afbakening van het steekproefkader. In A-C gevisualiseerd voor een kleine oppervlakte in het zuidelijk deel van de Oostelijke leemstreek (xmin = 200000, xmax = 207000, ymin = 155000, ymax = 160000). \textbf{A.} Exclusie van landgebruiken op basis van OpenStreetMap data (groen) over de polygoon van de Oostelijke leemstreek (rood). \textbf{B.} Selectie van paden, wegen en waterlopen. \textbf{C.} Omvorming van (water)wegennetwerk tot puntennetwerk. \textbf{D.} Selectie van de volledige doelpopulatie op basis van de VITO 2019 landgebruikskaart.}
+  \label{fig:steekproef-afbakening}
+\end{figure}
+```
 In een laatste stap was het de bedoeling om ook nog een exclusie van potentiële telpunten uit te voeren op basis van slechte zichtbaarheid vanaf het telpunt.
 Hier was al gedeeltelijk mee rekening gehouden door holle wegen uit te sluiten.
 Mogelijk zijn echter niet alle holle wegen gekend in OpenStreetMap en er zijn ook andere landschapsconfiguraties die maken dat observatie van vogels lastig is.
@@ -257,7 +262,7 @@ Aanpak *bestaande* MAS telpunten:
 
 Achteraf is deze regel versoepeld en zijn ook bestaande punten die op iets grotere afstand lagen als vervanging opgenomen.
 
-### Manuele controle {#manuele-controle-piloot}
+### Manuele controle {#manuele-controle}
 
 De steekproef werd geëxporteerd naar een *KML*-bestand en gedeeld als een kaart in Google Maps met de tellers.
 Na manuele controle van de punten op bereikbaarheid, zichtbaarheid, overlap met andere punten, werden sommige punten verwijderd en vervangen door een ander punt (volgende in de rangorde).
@@ -303,6 +308,10 @@ We kiezen voor optie 1.
 We gebruiken hiervoor de package [git2rdata](https://ropensci.github.io/git2rdata/).
 De package maakt het opslaan van dataframes onder versiebeheer efficiënter en handiger.
 Bovendien zijn de data en de metadata in een standaard en open formaat, waardoor ze leesbaar zijn voor andere software.
+
+## Vrijwilligerswerking
+
+...
 
 [^04_pilootgegevens-1]: Bij de steekproeftrekking wordt een methode gebruikt die zal vermijden dat telpunten en hun telcirkels overlappen.
     Het kan in deze fase dus geen kwaad dat potentiële telpunten op een afstand van minder dan 300 m van elkaar gelegen zijn.
