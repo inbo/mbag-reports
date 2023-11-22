@@ -4,6 +4,15 @@
 INBOmd::references(appendix = TRUE)
 ```
 
-# Eerste hoofdstuk van de bijlage
+# Bijlage: Aanvullende kaarten uitrol MAS Vlaanderen {#bijlage-uitrol-mas}
 
-Inhoud van de eerste bijlage
+```{=tex}
+\begin{figure}
+  \makebox[\textwidth][c]{\includegraphics[width=1.1\textwidth]{media/steekproefkader_mas/mas_zandleem_afbakening.png}}
+  \caption{Methodiek voor de afbakening van het steekproefkader voor de uitrol van MAS Vlaanderen, gevisualiseerd voor een kleine oppervlakte in de zandleemstreek (xmin = 150000, xmax = 177000, ymin = 160000, ymax = 180000). \textbf{A.} Selectie van open en halfopen landschap binnen de perimeter (rood). \textbf{B.} Exclusie van landgebruiken op basis van OpenStreetMap data (groen). \textbf{C.} Selectie van paden en wegen (blauw). \textbf{D.} Omvorming van wegennetwerk tot puntennetwerk.}
+  \label{fig:steekproef-afbakening-mbag}
+\end{figure}
+```
+```{r sbp-per-soort, out.width = "100%", fig.cap = "Gebruikte kaarten van soortbeschermingsplannen in de leemstreek en de zandleemstreek."}
+include_graphics(file.path("media", "kaartjes", "sbp_mbag_per_soort.png"))
+```
