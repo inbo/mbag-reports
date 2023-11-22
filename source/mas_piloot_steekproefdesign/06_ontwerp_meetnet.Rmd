@@ -43,7 +43,7 @@ In 2023 zijn we gestart met de Leemstreek en de Zandleemstreek.
 In deze sectie geven we aan welke aanpassingen we doen aan de methodiek van het pilootmeetnet (zie \@ref(piloot-ontwerp)) voor de Leemstreek en de Zandleemstreek en later voor heel Vlaanderen.
 We duiden enkel wijzigingen aan.
 We herhalen geen stappen als die ongewijzigd bleven.
-Zie bijlage \@ref(bijlage-uitrol-mas), Figuur \@ref(fig:steekproef-afbakening-mbag) voor de visualisatie van de methodiek (cf. Fig. \@ref(fig:steekproef-afbakening) in sectie \@ref(piloot-ontwerp)).
+Zie bijlage \@ref(bijlage-uitrol-mas) (Fig. \@ref(fig:steekproef-afbakening-mbag)) voor de visualisatie van de methodiek (cf. Fig. \@ref(fig:steekproef-afbakening) in sectie \@ref(piloot-ontwerp)).
 
 1.  Selectie openheid landschap\
     Expliciete selectie van HOL en OL in het begin van de pipeline.
