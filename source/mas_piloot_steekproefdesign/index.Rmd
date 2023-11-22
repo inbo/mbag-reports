@@ -15,10 +15,9 @@ author:
     orcid: "0000-0001-8595-8426"
     affiliation: "Instituut voor Natuur- en Bosonderzoek (INBO)"
   - name:
-      given: "Emma"
-      family: "Cartuyvels"
-    email: "emma.cartuyvels@inbo.be"
-    orcid: "0000-0001-7856-6360"
+      given: "Nicolas"
+      family: "Van Overmeeren"
+    email: "nicolas.vanovermeeren@inbo.be"
     affiliation: "Instituut voor Natuur- en Bosonderzoek (INBO)"
   - name:
       given: "Johannes"
