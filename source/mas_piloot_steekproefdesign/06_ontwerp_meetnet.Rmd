@@ -225,4 +225,4 @@ Dit zal zorgen dat deze bestanden nog beter traceerbaar zijn en het volledige me
 
 ## Vrijwilligerswerking
 
-...
+\textcolor{red}{uitdagingen en verandering vrijwilligerswerking t.o.v. pilootproject}

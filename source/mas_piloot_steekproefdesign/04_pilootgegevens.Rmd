@@ -284,7 +284,7 @@ De hashes van de finale bestanden zijn te vinden in Bijlage \@ref(hashes-steekpr
 
 ## Vrijwilligerswerking
 
-...
+\textcolor{red}{uitleg hoe de vrijwilligerswerking werkt}
 
 [^04_pilootgegevens-1]: Bij de steekproeftrekking wordt een methode gebruikt die zal vermijden dat telpunten en hun telcirkels overlappen.
     Het kan in deze fase dus geen kwaad dat potentiële telpunten op een afstand van minder dan 300 m van elkaar gelegen zijn.
