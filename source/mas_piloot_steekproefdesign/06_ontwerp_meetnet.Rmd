@@ -27,7 +27,10 @@ read_csv(file.path("media", "issues_pilootmeetnet",
                    "issues_pilootmeetnet.csv"),
          show_col_types = FALSE) %>%
   kable(caption = paste("Overzicht van problematische telpunten in het",
-          "pilootmeetnet gecategoriseerd m.b.v. `regular expressions'."))
+          "pilootmeetnet gecategoriseerd m.b.v. `regular expressions'."),
+        booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::row_spec(0, bold = TRUE)
 ```
 
 ### Tijdens de analyses
@@ -99,8 +102,10 @@ tibble(
   )
 ) %>%
   kable(caption = paste("Exclusie van landgebruiken meetnet",
-                        "Leemstreek en Zandleemstreek.")) %>%
-  kableExtra::kable_styling(latex_options = "scale_down")
+                        "Leemstreek en Zandleemstreek."),
+        booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = c("scale_down", "striped")) %>%
+  kableExtra::row_spec(0, bold = TRUE)
 
 ```
 
@@ -127,8 +132,10 @@ tibble(
   )
 ) %>%
   kable(caption = paste("Selectie routes waarlangs telpunten gelegd kunnen",
-                        "worden.")) %>%
-  kableExtra::kable_styling(latex_options = "scale_down")
+                        "worden."),
+        booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = c("scale_down", "striped")) %>%
+  kableExtra::row_spec(0, bold = TRUE)
 
 ```
 
