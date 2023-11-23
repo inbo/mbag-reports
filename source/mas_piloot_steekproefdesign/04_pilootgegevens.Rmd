@@ -161,7 +161,7 @@ De uiteindelijk bekomen lijst van punten vormt het steekproefkader van het MAS p
 ```{=tex}
 \begin{figure}
   \makebox[\textwidth][c]{\includegraphics[width=1.1\textwidth]{media/steekproefkader_mas/mas_piloot_afbakening.png}}
-  \caption{Methodiek voor de afbakening van het steekproefkader. In A-C gevisualiseerd voor een kleine oppervlakte in het zuidelijk deel van de Oostelijke leemstreek (xmin = 200000, xmax = 207000, ymin = 155000, ymax = 160000). \textbf{A.} Exclusie van landgebruiken op basis van OpenStreetMap data (groen) over de polygoon van de Oostelijke leemstreek (rood). \textbf{B.} Selectie van paden, wegen en waterlopen. \textbf{C.} Omvorming van (water)wegennetwerk tot puntennetwerk. \textbf{D.} Selectie van de volledige doelpopulatie op basis van de VITO 2019 landgebruikskaart.}
+  \caption{Methodiek voor de afbakening van het steekproefkader. In \textbf{A}-\textbf{C} gevisualiseerd voor een kleine oppervlakte in het zuidelijk deel van de Oostelijke leemstreek (xmin = 200000, xmax = 207000, ymin = 155000, ymax = 160000). \textbf{A.} Exclusie van landgebruiken op basis van OpenStreetMap data (groen) over de polygoon van de Oostelijke leemstreek (rood). \textbf{B.} Selectie van paden, wegen en waterlopen. \textbf{C.} Omvorming van (water)wegennetwerk tot puntennetwerk. \textbf{D.} Selectie van de volledige doelpopulatie op basis van de VITO 2019 landgebruikskaart.}
   \label{fig:steekproef-afbakening}
 \end{figure}
 ```
@@ -270,44 +270,17 @@ Na manuele controle van de punten op bereikbaarheid, zichtbaarheid, overlap met 
 Daarna werden punten toebedeeld aan tellers.
 Tellers konden ook punten claimen door dit aan te geven in de Google Maps kaart.
 
-## Reproduceerbaarheid en traceerbaarheid
+## Reproduceerbaarheid en traceerbaarheid {#git-piloot}
 
-\textcolor{red}{renv, targets, github}
+De steekproeftrekking werd gedaan met R [@R] in RStudio [@RStudio] via de **targets** 'pipeline tool' package [@targets-package].
+Deze laatste is een computationele workflow die analyses uitvoert op een efficiënte en reproduceerbare manier.
+Via de **renv** package [@renv-package] werd een reproduceerbare omgeving gecreëerd die bijhield welke versies van R en welke (versies van) verschillende packages werden gebruikt in het project.
+Alle code werd beheert onder versiecontrole met Git op een online GitHub repository [@github-repo].
+Dit houdt in dat niet enkel de code zelf, maar ook alle wijzigingen in de code doorheen de tijd daar kunnen geraadpleegd worden.
 
-[@renv-package] v0.17.3
-
-[@targets-package] v1.0.0
-
-\textcolor{red}{Version control steekproef(kader)}
-
-[@git2rdata-package] 0.4.0
-
-Er zijn verschillende opties voor version control in de `targets` pipeline.
-Enkele nuttige links:\
-<https://books.ropensci.org/targets/targets.html#return-value>\
-<https://books.ropensci.org/targets/data.html#cloud-storage>\
-<https://books.ropensci.org/targets/data.html#data-version-control>\
-<https://docs.ropensci.org/gittargets/>\
-<https://docs.ropensci.org/gittargets/articles/git.html>
-
-1.  Hard coding
-    -   Voeg op einde target toe met argument `TRUE` of `FALSE` om bepaalde bestanden weg te schrijven
-    -   Verander argument naar `TRUE` als je finale steekproef wil runnen en zet daarna ev. terug naar `FALSE`
-    -   Versiecontrole met git (check .gitignore)
-2.  Cloud storage
-    -   Amazon of Google
-        -   Account?
-        -   Kosten?
-        -   Lange termijn?
-    -   Vooral voor grote projecten
-3.  Gittargets
-    -   Kan ook voor specifieke objecten: <https://docs.ropensci.org/gittargets/#performance>
-    -   Is het de moeite? Manueel werk --\> waarom niet ineens hard coden? Komt op zelfde neer?
-
-We kiezen voor optie 1.
-We gebruiken hiervoor de package [git2rdata](https://ropensci.github.io/git2rdata/).
-De package maakt het opslaan van dataframes onder versiebeheer efficiënter en handiger.
-Bovendien zijn de data en de metadata in een standaard en open formaat, waardoor ze leesbaar zijn voor andere software.
+\text{(1)} het steekproefkader, (2) de steekproef en (3) de finale steekproef na manuele controle (de punten die effectief werden bezocht in het veld) werden ook in de GitHub repository opgeslaan als *.tsv* bestanden via de **git2rdata** package [@git2rdata-package] in de folder *data/processed*.
+Deze staan bijgevolg ook onder versiebeheer.
+De hashes van de finale bestanden zijn te vinden in Bijlage \@ref(hashes-steekproef).
 
 ## Vrijwilligerswerking
 

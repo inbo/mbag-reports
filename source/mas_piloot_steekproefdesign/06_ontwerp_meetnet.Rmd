@@ -198,11 +198,14 @@ include_graphics(file.path("media", "kaartjes", "sbp_mbag_kaart.png"))
     Voor een vergelijking tussen 300 en 600 m thinning, zie steekproefontwerp_leemstreek.Rmd.
 
 9.  Overlap bestaande telpunten\
-    Ten slotte hebben we overlap met bestaande telpunten geautomatiseerd.
+    Overlap met bestaande telpunten werd geautomatiseerd.
     Zo kan optimaal gebruik worden gemaakt van data van telpunten die al meerdere jaren voordien zijn geteld.
     We vervangen bijgevolg alle telpunten uit de nieuwe steekproef door reeds bestaande punten indien ze voor minstens 50 % overlappen en ze tot hetzelfde stratum behoren.
     Indien er meerdere bestaande punten overlappen, nemen we het bestaande punt dat het meest overlapt.
     Omdat we nu een nieuwe laag van sbp gebruiken ten opzichte van de pilootstudie, is dit stratum opnieuw berekend voor de bestaande punten.
+
+10. Incorporatie versiecontrole in pipeline\
+    Automatisatie versiecontrole van het steekproefkader en de steekproef door deze functie toe te voegen op het einde van de targets pipeline (zie \@ref(git-mbag)).
 
 ### Steekproef Leemstreek
 
@@ -212,9 +215,13 @@ include_graphics(file.path("media", "kaartjes", "sbp_mbag_kaart.png"))
 
 ...
 
-## Reproduceerbaarheid en traceerbaarheid
+## Reproduceerbaarheid en traceerbaarheid {#git-mbag}
 
-...
+Omwille van de automatisatie van de versiecontrolestap van het steekproefkader en de steekproef, zijn deze in de online GitHub repository [@github-repo] te vinden onder de folder *mas-piloot/src/targets/mas_steekproef_zavelberg/output*.
+De finale steekproef na manuele controle (de punten die effectief werden bezocht in het veld) zijn te vinden in de folder *data/processed* zoals bij het pilootmeetnet (Sectie \@ref(git-piloot)).
+De hashes van de finale bestanden zijn te vinden in Bijlage \@ref(hashes-steekproef).
+Bij de uitrol naar alle landbouwgebieden in Vlaanderen zullen voor elk gebied bestanden centraal beschikbaar stellen via Zenodo (<https://zenodo.org/>).
+Dit zal zorgen dat deze bestanden nog beter traceerbaar zijn en het volledige meetnet aan een enkele DOI kan worden gelinkt.
 
 ## Vrijwilligerswerking
 
