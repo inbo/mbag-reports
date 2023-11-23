@@ -35,7 +35,10 @@ summary_mas_2018_2023 %>%
   arrange(regio, jaar) %>%
   kable(caption = paste(
     "Samenvattende tabel aantallen binnen het pilootmeetnet.",
-    "Aantal waarnemingen en soorten betreffen vogels."))
+    "Aantal waarnemingen en soorten betreffen vogels."),
+        booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::row_spec(0, bold = TRUE)
 ```
 
 ```{r telintensiteit, out.width = "90%", fig.cap = "Aantal tellingen per jaar in elke regio."}
@@ -318,9 +321,11 @@ hftlt_groepen %>%
   mutate(across(-gewasgroep, ~ ifelse(.x == 1, cur_column(), NA))) %>%
   unite(hoofdteelten, -gewasgroep, sep = "; ", na.rm = TRUE) %>%
   kable(caption = paste("Samenvattende tabel groepering hoofdteelten",
-                        "(gescheiden via puntkomma) in gewasgroepen.")) %>%
+                        "(gescheiden via puntkomma) in gewasgroepen."),
+        booktabs = TRUE) %>%
   kableExtra::column_spec(2, width = "5in") %>%
-  kableExtra::kable_styling(font_size = 7)
+  kableExtra::kable_styling(font_size = 7, latex_options = "striped") %>%
+  kableExtra::row_spec(0, bold = TRUE)
 ```
 
 **5. Effectief aantal hoofdteelten**\
@@ -361,9 +366,11 @@ vrtlt_groepen %>%
   mutate(across(-gewasgroep, ~ ifelse(.x == 1, cur_column(), NA))) %>%
   unite(voorteelten, -gewasgroep, sep = "; ", na.rm = TRUE) %>%
   kable(caption = paste("Samenvattende tabel groepering voorteelten",
-                        "(gescheiden via puntkomma) in gewasgroepen.")) %>%
+                        "(gescheiden via puntkomma) in gewasgroepen."),
+        booktabs = TRUE) %>%
   kableExtra::column_spec(2, width = "5in") %>%
-  kableExtra::kable_styling(font_size = 7)
+  kableExtra::kable_styling(font_size = 7, latex_options = "striped") %>%
+  kableExtra::row_spec(0, bold = TRUE)
 ```
 
 ### Secundaire variabelen {#sec-verklarende-variabelen}
@@ -582,9 +589,11 @@ summary_var_tab %>%
                         "beschouwd in de pilootstudie. De kolom `selectie'",
                         "geeft aan of de variabele door de selectie is geraakt",
                         "tijdens data exploratie (zie tekst)."),
-        longtable = TRUE) %>%
-  kableExtra::kable_styling(latex_options = c("repeat_header"), font_size = 8,
-                            repeat_header_text = "\\textit{(vervolg)}")
+        longtable = TRUE, booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = c("repeat_header", "striped"),
+                            font_size = 8,
+                            repeat_header_text = "\\textit{(vervolg)}") %>%
+  kableExtra::row_spec(0, bold = TRUE)
 ```
 
 ## Case studie: de Veldleeuwerik {#veldleeuwerik}
@@ -803,7 +812,10 @@ cbind(ds_veldleeuwerik_2018_2023$ddf$data,
   distinct() %>%
   arrange(regio, jaar) %>%
   kable(digits = 3,
-        caption = "Detectiekans per regio en jaar voor Veldleeuwerik.")
+        caption = "Detectiekans per regio en jaar voor Veldleeuwerik.",
+        booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::row_spec(0, bold = TRUE)
 ```
 
 ```{r detectiekans-jaar-plot, out.width = "90%", fig.cap = "Gemiddelde detectiecurve geplot over de data. De verticale streepjes op de x-as geven de locaties van de ruwe data aan."}
@@ -836,7 +848,10 @@ summary_results_2018_2023 %>%
         caption = paste("Abundantieschattingen per regio en jaar voor",
           "Veldleeuwerik. `lcl' staat voor `lower confidence limit' de",
           "ondergrens van het 95 \\% betrouwbaarheidsinterval en `ucl' (`upper",
-          "confidence limit') voor de bovengrens."))
+          "confidence limit') voor de bovengrens."),
+        booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::row_spec(0, bold = TRUE)
 ```
 
 ```{r densiteit-jaar}
@@ -846,7 +861,10 @@ summary_results_2018_2023 %>%
          lcl, ucl) %>%
   kable(digits = 2,
         caption = paste("Densiteitsschattingen per 100 ha per regio en jaar",
-                        "voor Veldleeuwerik."))
+                        "voor Veldleeuwerik."),
+        booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::row_spec(0, bold = TRUE)
 ```
 
 ```{r densiteit-jaar-plot, out.width = "90%", fig.cap = "Densiteitsschattingen per 100 ha met 95 \\% betrouwbaarheidsintervallen per jaar per regio."}
@@ -914,7 +932,10 @@ cbind(ds_veldleeuwerik_2022$ddf$data,
   arrange(jaar, openheid) %>%
   kable(digits = 3,
         caption = paste("Detectiekans per openheidsklasse en jaar voor",
-                        "Veldleeuwerik."))
+                        "Veldleeuwerik."),
+        booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::row_spec(0, bold = TRUE)
 ```
 
 ```{r detectiekans-stratum-plot, out.width = "90%", fig.cap = "Gemiddelde detectiecurve (stippellijn) geplot over de data voor model van elk jaar. Ter vergelijking zijn de detectiecurves per openheidsklasse ook aangegeven."}
@@ -961,7 +982,10 @@ summary_results_stratum %>%
   arrange(regio, jaar, openheid, sbp) %>%
   kable(digits = 1,
         caption = paste("Abundantieschattingen per stratum voor",
-          "Veldleeuwerik."))
+          "Veldleeuwerik."),
+        booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::row_spec(0, bold = TRUE)
 ```
 
 ```{r densiteit-stratum}
@@ -972,7 +996,10 @@ summary_results_stratum %>%
   arrange(regio, jaar, openheid, sbp) %>%
   kable(digits = 2,
         caption = paste("Densiteitsschattingen per 100 ha per stratum",
-                        "voor Veldleeuwerik."))
+                        "voor Veldleeuwerik."),
+        booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::row_spec(0, bold = TRUE)
 ```
 
 ```{r densiteit-stratum-plot, out.width = "90%", fig.cap = "Densiteitsschattingen per 100 ha met 95 \\% betrouwbaarheidsintervallen per stratum."}
@@ -1103,7 +1130,10 @@ tibble(beleid = c("nul", "laag", "middellaag", "middelhoog", "hoog"),
        area_prop_sb = c("0", "<0.04", "0.04-0.07", "0.07-0.1", ">0.1")) %>%
   kable(caption = paste("Classificatie oppervlakte-aandeel",
                         "soortbeschermingsmaatregelen",
-                        "binnen telcirkel."))
+                        "binnen telcirkel."),
+        booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::row_spec(0, bold = TRUE)
 ```
 
 Analyses werden voor beide regio's apart gedaan via Bayesiaanse modellen met de **brms** package.
