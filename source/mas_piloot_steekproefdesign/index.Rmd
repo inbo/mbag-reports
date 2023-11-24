@@ -49,8 +49,6 @@ reportnr: 1
 cover_photo: cover.jpg
 cover: cover.jpg
 cover_description: Gele kwikstaart (_Motacilla flava_). (© Johannes Jansen)
-header-includes:
-   - \usepackage[labelfont=bf,labelsep = period]{caption}
 output:
   INBOmd::gitbook: default
   INBOmd::pdf_report: default
