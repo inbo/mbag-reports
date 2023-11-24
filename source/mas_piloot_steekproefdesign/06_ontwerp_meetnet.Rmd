@@ -220,7 +220,7 @@ include_graphics(file.path("media", "kaartjes", "sbp_mbag_kaart.png"))
 Omwille van de automatisatie van de versiecontrolestap van het steekproefkader en de steekproef, zijn deze in de online GitHub repository [@github-repo] te vinden onder de folder *mas-piloot/src/targets/mas_steekproef_zavelberg/output*.
 De finale steekproef na manuele controle (de punten die effectief werden bezocht in het veld) zijn te vinden in de folder *data/processed* zoals bij het pilootmeetnet (Sectie \@ref(git-piloot)).
 De hashes van de finale bestanden zijn te vinden in Bijlage \@ref(hashes-steekproef).
-Bij de uitrol naar alle landbouwgebieden in Vlaanderen zullen voor elk gebied bestanden centraal beschikbaar stellen via Zenodo (<https://zenodo.org/>).
+Bij de uitrol naar alle landbouwgebieden in Vlaanderen zullen we voor elk gebied bestanden centraal beschikbaar stellen via Zenodo (<https://zenodo.org/>).
 Dit zal zorgen dat deze bestanden nog beter traceerbaar zijn en het volledige meetnet aan een enkele DOI kan worden gelinkt.
 
 ## Vrijwilligerswerking

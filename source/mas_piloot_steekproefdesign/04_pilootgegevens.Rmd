@@ -255,9 +255,8 @@ include_graphics(file.path("media", "kaartjes", "piloot_kaart.png"))
 
 ### Overlap met bestaande telpunten {#piloot-overlap}
 
-Er werd nagegaan welke *bestaande* MAS telpunten 'voldoende dicht' gelegen zijn bij getrokken telpunten.
+Er werd nagegaan welke *bestaande* MAS telpunten 'voldoende dicht' gelegen waren bij getrokken telpunten.
 Wanneer een nieuw punt op minder dan 300 m afstand lag van een bestaand punt, werd het nieuwe telpunt vervangen door het bestaande telpunt.
-
 Achteraf is deze regel versoepeld en zijn ook bestaande punten die op iets grotere afstand lagen als vervanging opgenomen.
 
 ### Manuele controle {#manuele-controle}
@@ -276,7 +275,7 @@ Via de **renv** package [@renv-package] werd een reproduceerbare omgeving gecreÃ
 Alle code werd beheert onder versiecontrole met Git op een online GitHub repository [@github-repo].
 Dit houdt in dat niet enkel de code zelf, maar ook alle wijzigingen in de code doorheen de tijd daar kunnen geraadpleegd worden.
 
-\text{(1)} het steekproefkader, (2) de steekproef en (3) de finale steekproef na manuele controle (de punten die effectief werden bezocht in het veld) werden ook in de GitHub repository opgeslaan als *.tsv* bestanden via de **git2rdata** package [@git2rdata-package] in de folder *data/processed*.
+\text{(1)} het steekproefkader, (2) de steekproef en (3) de finale steekproef na manuele controle (de punten die effectief werden bezocht in het veld) werden ook in de GitHub repository opgeslaan als *TSV*-bestanden via de **git2rdata** package [@git2rdata-package] in de folder *data/processed*.
 Deze staan bijgevolg ook onder versiebeheer.
 De hashes van de finale bestanden zijn te vinden in Bijlage \@ref(hashes-steekproef).
 
@@ -286,4 +285,3 @@ De hashes van de finale bestanden zijn te vinden in Bijlage \@ref(hashes-steekpr
 
 [^04_pilootgegevens-1]: Bij de steekproeftrekking wordt een methode gebruikt die zal vermijden dat telpunten en hun telcirkels overlappen.
     Het kan in deze fase dus geen kwaad dat potentiÃ«le telpunten op een afstand van minder dan 300 m van elkaar gelegen zijn.
-
