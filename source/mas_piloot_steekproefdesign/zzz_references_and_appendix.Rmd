@@ -47,9 +47,31 @@ tibble(
     # leemstreek steekproef finaal
     "c6fafd4063e289e8e7615f97e6d2d6c9af6411b5",
     "49c216e00f2eb720828024700a71e4dd32df22b9"),
+  bestand = c(
+    # piloot steekproefkader
+    "data/processed/steekproefkader_piloot.tsv",
+    "data/processed/steekproefkader_piloot.yml",
+    # piloot steekproef
+    "data/processed/steekproef_piloot.tsv",
+    "data/processed/steekproef_piloot.yml",
+    # piloot steekproef finaal
+    "data/processed/steekproef_piloot_avimap.tsv",
+    "data/processed/steekproef_piloot_avimap.yml",
+    # (zand)leemstreek steekproefkader
+    "src/targets/mas_steekproef_zavelberg/output/steekproefkader.tsv",
+    "src/targets/mas_steekproef_zavelberg/output/steekproefkader.yml",
+    # (zand)leemstreek steekproef
+    "src/targets/mas_steekproef_zavelberg/output/steekproef.tsv",
+    "src/targets/mas_steekproef_zavelberg/output/steekproef.yml",
+    # zandleemstreek steekproef finaal
+    "data/processed/steekproef_zandleemstreek_avimap.tsv",
+    "data/processed/steekproef_zandleemstreek_avimap.yml",
+    # leemstreek steekproef finaal
+    "data/processed/steekproef_leemstreek_avimap.tsv",
+    "data/processed/steekproef_leemstreek_avimap.yml"),
   ) %>%
   kable(booktabs = TRUE) %>%
-  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::kable_styling(latex_options = c("scale_down", "striped")) %>%
   kableExtra::row_spec(0, bold = TRUE)
 
 ```
