@@ -48,7 +48,7 @@ Deze twee elementen (landbouwstreek en openheid van het landschap) zullen dus sl
 Dit laatste zal nog niet mogelijk zijn met de data die tijdens dit pilootproject worden ingezameld, maar wordt wel mogelijk wanneer we dit "proof of concept" uitrollen naar de andere landbouwstreken in Vlaanderen (zie Hoofdstuk \@ref(ontwerp-meetnet)).
 
 Met deze aanpak beantwoorden we dus zowel de informatienoden voor beleidsmonitoring als de beheermonitoring op mesoniveau, althans wanneer uitgerold naar Vlaanderen.
-Een belangrijke doelstelling van het pilootproject is dan ook de haalbaarheid en opschaalbaarheid van deze monitoring in te schatten zodat in de toekomst meer inzicht wordt verkregen in (1) meer betrouwbare toestand en trend schattingen voor Vlaanderen, (2) regionale verschillen in toestand en trend, en (3) de effectiviteit van de geleverde inspanningen in zijn geheel (inclusief beheerovereenkomsten, soort(en)beschermingsprogramma's, conditionaliteiten, (pre-)ecoregelingen, agromilieuklimaatmaatregelen, niet-productieve investeringen via het Vlaams Investeringsfonds ...).
+Een belangrijke doelstelling van het pilootproject is dan ook de haalbaarheid en opschaalbaarheid van deze monitoring in te schatten zodat in de toekomst meer inzicht wordt verkregen in (1) meer betrouwbare toestand en trend schattingen voor Vlaanderen, (2) regionale verschillen in toestand en trend, en (3) de effectiviteit van de geleverde inspanningen in zijn geheel (inclusief beheerovereenkomsten, soort(en)beschermingsprogramma's, conditionaliteiten, (pre-)ecoregelingen, agromilieuklimaatmaatregelingen, niet-productieve investeringen via het Vlaams Investeringsfonds ...).
 
 Onze aanpak laat ook toe om een deel van de bestaande tellocaties te behouden.
 Binnen het pilootproject werd dit in de eerste plaats toegepast op de reeds bestaande tellocaties van het Meetnet Agrarische Soorten.
@@ -247,7 +247,7 @@ De reden voor zulke 'vals positieven' zijn:
 -   holle weg waar je mits je even op de kant klimt wel voldoende zichtbaarheid hebt
 -   punten langs 'waterwegen' liggen dieper in het landschap, terwijl je uiteraard niet in het water gaat staan maar op de oever er langs
 
-In een latere fase hebben we deze pijnpunten van een zichtbaarheidsanalyse vanaf één punt verbeterd door een cumulatieve zichtbaarheid te berekenen vanaf meerdere posities binnen een ruimere zone (van 25m) rond het telpunt (zone bewegingsvrijheid van de waarnemer) (zie \@ref(aanpassingen-meetnet)).
+In een latere fase hebben we deze pijnpunten van een zichtbaarheidsanalyse vanaf één punt verbeterd door een cumulatieve zichtbaarheid te berekenen vanaf meerdere posities binnen een ruimere zone (van 25 m) rond het telpunt (zone bewegingsvrijheid van de waarnemer) (zie \@ref(aanpassingen-meetnet)).
 
 ```{r steekproef-piloot, out.width = "100%", fig.cap = "Kaart van de finale steekproef (na manuele controle, zie verder) in De Moeren en de Oostelijke leemstreek."}
 include_graphics(file.path("media", "kaartjes", "piloot_kaart.png"))

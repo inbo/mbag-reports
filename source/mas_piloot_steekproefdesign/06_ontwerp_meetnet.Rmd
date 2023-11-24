@@ -20,7 +20,7 @@ Bij een deel van punten is er te veel overlap met andere telcirkels.
 We zien vooral problemen met zichtbaarheid omdat punten nog vallen in bossen, boomgaarden, holle wegen etc., hoewel er niet altijd info is waarom zichtbaarheid slecht is.
 Een belangrijk aandeel plots is ook ontoegankelijk omdat het te dicht bij een grote baan ligt, op privéterrein, langs water etc.
 Er zijn 7 punten waarbij geen info aanwezig is.
-In hoofstuk \@ref(uitbreiding-vlaanderen) leggen we uit hoe we hiermee rekening hebben gehouden voor uitbreiding van het MAS-meetnet in Vlaanderen.
+In Hoofdstuk \@ref(uitbreiding-vlaanderen) leggen we uit hoe we hiermee rekening hebben gehouden voor uitbreiding van het MAS-meetnet in Vlaanderen.
 
 ```{r issues-piloot}
 read_csv(file.path("media", "issues_pilootmeetnet",
@@ -193,7 +193,7 @@ include_graphics(file.path("media", "kaartjes", "sbp_mbag_kaart.png"))
     De methode garandeert dat deze nieuwe set ruimtelijk goed gespreid is en een aselecte steekproef is.
 
 8.  Uitduinnen van steekproef\
-    Om te veel overlap te voorkomen binnen enzelfde stratum, is voor elk punt binnen hetzelfde stratum nagegaan of een punt met grotere `sample_order` op minder dan 600 m (Zandleemstreek) afstand ligt.
+    Om te veel overlap te voorkomen binnen eenzelfde stratum, is voor elk punt binnen hetzelfde stratum nagegaan of een punt met grotere `sample_order` op minder dan 600 m (Zandleemstreek) afstand ligt.
     Als dit het geval is wordt het punt met de lagere `sample_order` weerhouden.
     Voor een vergelijking tussen 300 en 600 m thinning, zie steekproefontwerp_leemstreek.Rmd.
 

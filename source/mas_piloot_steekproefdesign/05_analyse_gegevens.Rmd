@@ -189,7 +189,7 @@ Kan een verschil in aantal soorten of aantal waarnemingen tussen professionele e
 We voegden de data met broedcode nul toe en maakten een extra dummyvariabele aan die een onderscheid maakt tussen data met broedcode nul $X_{broedcode} = 0$ en data met broedcode groter dan nul.
 
 $$
-g(\text{E}(Y_{ijk})) = \beta_0 + \beta_{1}X_{status, i} + \beta_{2}X_{broedcode, i} + \beta_{3}X_{status, i} \times X_{broedcodee, i}+ b_{1,jk} + b_{2,k}
+g(\text{E}(Y_{ijk})) = \beta_0 + \beta_{1}X_{status, i} + \beta_{2}X_{broedcode, i} + \beta_{3}X_{status, i} \times X_{broedcode, i}+ b_{1,jk} + b_{2,k}
 $$
 
 We besluiten dat er een significant verschillend effect van broedcode is als het 95 % credible interval van $\beta_3$ nul niet bevat.
@@ -1078,7 +1078,7 @@ Bovendien wordt er bij distance sampling meer gewicht gegeven aan lage aantallen
 Het verschil tussen beide methodes zal dus afhankelijk zijn van soort tot soort omwille van een combinatie van de detectiekans en zeldzaamheid van een soort (en mogelijk nog andere factoren die hier niet zijn beschouwd).
 Zoals in de vorige paragraaf vermeld, kan distance sampling ook als een minimumschatting genomen worden bij hoge detectiekansen, maar deze is mogelijks te strikt in vergelijking met de maxima-methode in ecologische context.
 Als er 3 broedgevallen gezien zijn in telperiodes 1, 2 en 3, maar 0 in periode 4, dan kan dit laatste puur per toeval zijn.
-Het is namelijk niet zo dat een nultelling in bijvoordbeeld de laatste ronde enigszins iets zegt over het aantal broedparen, die kunnen er wel geweest zijn, maar op dat moment stilgevallen (zingen/baltsen gebeurt enkel in de territoriumfase en eileg; als ze met jongen zitten of al uitgevlogen zijn, dan wordt er niet mee/veel minder gezongen).
+Het is namelijk niet zo dat een nultelling in bijvoorbeeld de laatste ronde enigszins iets zegt over het aantal broedparen, die kunnen er wel geweest zijn, maar op dat moment stilgevallen (zingen/baltsen gebeurt enkel in de territoriumfase en eileg; als ze met jongen zitten of al uitgevlogen zijn, dan wordt er niet mee/veel minder gezongen).
 Het zou dus logischer zijn om te besluiten dat er in die telcirkel effectief 3 broedgevallen zijn (maxima methode) en niet 2.25 (gemiddelde).
 Een meer diepgaande analyse tussen beide methodes van meerdere soorten met verschillende detectiekansen zou interessant kunnen zijn, maar dit valt buiten het doel van dit rapport.
 
@@ -1099,7 +1099,7 @@ include_graphics(file.path("media", "distance", "per_stratum",
 
 \textcolor{red}{uitbreiding distance sampling?} \textcolor{red}{stan etc.}
 
-We kunnen concluderen dat het schatten van densiteiten een evenwichtsoefening is tussen het maken van juiste beslissingen in ecologische context en anderzijds het gebruiken van een duidelijk en niet te complexe statistiche methode.
+We kunnen concluderen dat het schatten van densiteiten een evenwichtsoefening is tussen het maken van juiste beslissingen in ecologische context en anderzijds het gebruiken van een duidelijk en niet te complexe statistische methode.
 Deze eerste kan in rekening genomen worden door de data te filteren op broedcode groter dan nul en voor elke soort de telperiodes te selecteren die binnen de broedperiode van elke soort vallen.
 Een extra maatregel zou kunnen zijn om over die telperiodes (per telpunt per jaar) het maximum aantal te nemen als finale dataset voor verdere analyse (met effort = 1 omdat we dan niet meer corrigeren voor het aantal bezoeken, waardoor geen strikte uitmiddeling gebeurd).
 Voor Haas zou het bovendien nuttig zijn de oppervlaktes van de telcirkel te corrigeren voor de oppervlakte die effectief zichtbaar is voor de teller \textcolor{red}{(volgens viewshedanalyse, zie @ref(aanpassingen-meetnet))}, aangezien Haas steeds op de grond zit.
@@ -1119,7 +1119,7 @@ Dit omdat we vermoedden dat de meer beperkte data van voor het pilootproject mog
 Om de analyses eenvoudiger te maken zetten we de aantallen om naar het maximum aantal per telcirkel per jaar over de telperiodes heen.
 Twee variabelen werden gemeten op tellingniveau: (1) van variabele `n_predators` nemen we het gemiddelde aantal per telcirkel per jaar en (2) van variabele `status_teller` nemen we de status van de teller die in een bepaald jaar het meest frequent een bepaald telpunt heeft bezocht (in het zeldzame geval dat verschillende tellers hetzelfde telpunt in hetzelfde jaar tijdens verschillende telperiodes bezocht hadden).
 
-We beschouwden alle geselecteerde primaire en secundaire variabelen beschreven in Hoofstuk \@ref(verklarende-variabelen) (Tabel \@ref(tab:verklarende-vars-tab), behalve `openheid_klasse_300` omdat deze als continue variabele op 1000 m informatiever leek (`openheid_waarde_1000`) en `sbp` omwille van de sterke correlatie met de variabele van interesse `area_prop_sb` (Fig. \@ref(fig:sbp-areapropsb)).
+We beschouwden alle geselecteerde primaire en secundaire variabelen beschreven in Hoofdstuk \@ref(verklarende-variabelen) (Tabel \@ref(tab:verklarende-vars-tab), behalve `openheid_klasse_300` omdat deze als continue variabele op 1000 m informatiever leek (`openheid_waarde_1000`) en `sbp` omwille van de sterke correlatie met de variabele van interesse `area_prop_sb` (Fig. \@ref(fig:sbp-areapropsb)).
 Om de interpretatie van de resultaten te vereenvoudigen besloten we de continue variabele `area_prop_sb` op te delen volgens de agri-environment schemes (AES) classificatie besproken in @sharps2023 (Tabel \@ref(tab:classificatie-propsb)).
 Deze nieuwe categorische variabele is `area_prop_sb_cat`.
 Ten slotte voegden we de tertiaire variabele `jaar` toe als factorvariabele (`jaar.f`).

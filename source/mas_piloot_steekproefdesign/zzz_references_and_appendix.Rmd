@@ -16,10 +16,12 @@ Steekproef finaal is de steekproef na manuele controle en zijn dus de telpunten 
 
 ```{r hashes}
 tibble(
-  meetnet = rep(rep(c("piloot", "(zand)leemstreek", "zandleemstreek", "leemstreek"),
+  meetnet = rep(rep(c("piloot", "(zand)leemstreek", "zandleemstreek",
+                      "leemstreek"),
                     c(3, 2, 1, 1)),
                 each = 2),
-  dataset = rep(c(rep(c("steekproefkader", "steekproef", "steekproef finaal"), 2),
+  dataset = rep(c(rep(c("steekproefkader", "steekproef", "steekproef finaal"),
+                      2),
                   "steekproef finaal"),
                 each = 2),
   `type hash` = rep(c("data", "metadata"), 7),
