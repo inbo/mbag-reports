@@ -255,10 +255,8 @@ include_graphics(file.path("media", "kaartjes", "piloot_kaart.png"))
 
 ### Overlap met bestaande telpunten {#piloot-overlap}
 
-Aanpak *bestaande* MAS telpunten:
-
--   nagaan welke 'voldoende dichtbij' gelegen zijn bij getrokken telpunten
-    -   op minder dan 300 m afstand =\> nieuw telpunt vervangen door bestaand telpunt
+Er werd nagegaan welke *bestaande* MAS telpunten 'voldoende dicht' gelegen zijn bij getrokken telpunten.
+Wanneer een nieuw punt op minder dan 300 m afstand lag van een bestaand punt, werd het nieuwe telpunt vervangen door het bestaande telpunt.
 
 Achteraf is deze regel versoepeld en zijn ook bestaande punten die op iets grotere afstand lagen als vervanging opgenomen.
 
@@ -288,3 +286,4 @@ De hashes van de finale bestanden zijn te vinden in Bijlage \@ref(hashes-steekpr
 
 [^04_pilootgegevens-1]: Bij de steekproeftrekking wordt een methode gebruikt die zal vermijden dat telpunten en hun telcirkels overlappen.
     Het kan in deze fase dus geen kwaad dat potentiële telpunten op een afstand van minder dan 300 m van elkaar gelegen zijn.
+
