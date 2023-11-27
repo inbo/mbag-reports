@@ -14,9 +14,9 @@
 ### Enkele cijfers
 
 De volgende resultaten betreffen vogels.
-Zoogdieren worden besproken in Hoofdstuk \@ref(exploratie-zoogdieren).
+Zoogdieren worden besproken in Sectie \@ref(exploratie-zoogdieren).
 Binnen het pilootmeetnet worden al sinds 2018 tellingen verricht.
-\textcolor{red}{plan kiekendief ...} Zoals besproken in Hoofdstuk \@ref(pilootgegevens) zijn een aantal van deze punten hergebruikt bij de steekproeftrekking voor deze pilootstudie.
+\textcolor{red}{plan kiekendief ...} Zoals besproken in Sectie \@ref(piloot-overlap}) zijn een aantal van deze punten hergebruikt bij de steekproeftrekking voor deze pilootstudie.
 Verder zijn er sinds de pilootstudie (2022) veel telpunten bijgekomen in De Moeren en de Oostelijke leemstreek (Tabel \@ref(tab:samenvatting-aantallen)).
 De meeste telpunten werden vier maal per jaar bezocht (Fig. \@ref(fig:telintensiteit)).
 Figuren \@ref(fig:aantal-waarnemingen) en \@ref(fig:aantal-soorten) geven een meer gedetailleerd beeld van de verdelingen van respectievelijk het aantal waarnemingen en soorten per jaar.
@@ -35,7 +35,10 @@ summary_mas_2018_2023 %>%
   arrange(regio, jaar) %>%
   kable(caption = paste(
     "Samenvattende tabel aantallen binnen het pilootmeetnet.",
-    "Aantal waarnemingen en soorten betreffen vogels."))
+    "Aantal waarnemingen en soorten betreffen vogels."),
+        booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::row_spec(0, bold = TRUE)
 ```
 
 ```{r telintensiteit, out.width = "90%", fig.cap = "Aantal tellingen per jaar in elke regio."}
@@ -186,7 +189,7 @@ Kan een verschil in aantal soorten of aantal waarnemingen tussen professionele e
 We voegden de data met broedcode nul toe en maakten een extra dummyvariabele aan die een onderscheid maakt tussen data met broedcode nul $X_{broedcode} = 0$ en data met broedcode groter dan nul.
 
 $$
-g(\text{E}(Y_{ijk})) = \beta_0 + \beta_{1}X_{status, i} + \beta_{2}X_{broedcode, i} + \beta_{3}X_{status, i} \times X_{broedcodee, i}+ b_{1,jk} + b_{2,k}
+g(\text{E}(Y_{ijk})) = \beta_0 + \beta_{1}X_{status, i} + \beta_{2}X_{broedcode, i} + \beta_{3}X_{status, i} \times X_{broedcode, i}+ b_{1,jk} + b_{2,k}
 $$
 
 We besluiten dat er een significant verschillend effect van broedcode is als het 95 % credible interval van $\beta_3$ nul niet bevat.
@@ -318,9 +321,11 @@ hftlt_groepen %>%
   mutate(across(-gewasgroep, ~ ifelse(.x == 1, cur_column(), NA))) %>%
   unite(hoofdteelten, -gewasgroep, sep = "; ", na.rm = TRUE) %>%
   kable(caption = paste("Samenvattende tabel groepering hoofdteelten",
-                        "(gescheiden via puntkomma) in gewasgroepen.")) %>%
+                        "(gescheiden via puntkomma) in gewasgroepen."),
+        booktabs = TRUE) %>%
   kableExtra::column_spec(2, width = "5in") %>%
-  kableExtra::kable_styling(font_size = 7)
+  kableExtra::kable_styling(font_size = 7, latex_options = "striped") %>%
+  kableExtra::row_spec(0, bold = TRUE)
 ```
 
 **5. Effectief aantal hoofdteelten**\
@@ -361,9 +366,11 @@ vrtlt_groepen %>%
   mutate(across(-gewasgroep, ~ ifelse(.x == 1, cur_column(), NA))) %>%
   unite(voorteelten, -gewasgroep, sep = "; ", na.rm = TRUE) %>%
   kable(caption = paste("Samenvattende tabel groepering voorteelten",
-                        "(gescheiden via puntkomma) in gewasgroepen.")) %>%
+                        "(gescheiden via puntkomma) in gewasgroepen."),
+        booktabs = TRUE) %>%
   kableExtra::column_spec(2, width = "5in") %>%
-  kableExtra::kable_styling(font_size = 7)
+  kableExtra::kable_styling(font_size = 7, latex_options = "striped") %>%
+  kableExtra::row_spec(0, bold = TRUE)
 ```
 
 ### Secundaire variabelen {#sec-verklarende-variabelen}
@@ -382,7 +389,7 @@ De regio's van het pilootmeetnet (De Moeren en Oostelijke leemstreek).
 \textcolor{red}{Zowel binnen kerngebied als zoekzones zijn er soortbeschermende maatregelen (SB BO’s) gelegd (zie kaart VLM BO’s). In theorie waren deze maatregelen vooral bedoeld voor kerngebied, en zal daar een hogere dichtheid (bedekkingsgraad) liggen, maar de VLM heeft het toegelaten om ook in zoekzones deze maatregelen te sluiten (al was dat minder de prioriteit). Daar werd bv. in de Moeren geen rekening mee gehouden, en werden erg veel SB BO’s gelegd, ook omdat dit gebied wél kerngebied was van plan kiekendief (SBP Grauwe Kiekendief) waardoor er wel veel BO’s gesloten zijn. In de toekomst heeft VLM beloofd om meer/enkel rekening te houden met kerngebied. Voor het pilootmeetnet namen we de kerngebieden samen als onderzoeksgebied (binnen sbp) en alles hierbuiten beschouwen we als controle (buiten sbp).}
 
 **4. Status teller**\
-Analyses van telpunten die zowel door vrijwilligers als professionele teller zijn geteld, gaven duidelijk aan dat vrijwilligers een significant lager aantal waarnemingen en soorten zien dan een professionele teller (Hoofdstuk \@ref(dubbeltellingen)).
+Analyses van telpunten die zowel door vrijwilligers als professionele teller zijn geteld, gaven duidelijk aan dat vrijwilligers een significant lager aantal waarnemingen en soorten zien dan een professionele teller (Sectie \@ref(dubbeltellingen)).
 Voor elk telpunt hebben we dus ook nagegaan of er geteld is door een professionele teller of een vrijwilliger.
 
 **5. Oppervlakte-aandeel kleine landschapselementen**\
@@ -582,9 +589,11 @@ summary_var_tab %>%
                         "beschouwd in de pilootstudie. De kolom `selectie'",
                         "geeft aan of de variabele door de selectie is geraakt",
                         "tijdens data exploratie (zie tekst)."),
-        longtable = TRUE) %>%
-  kableExtra::kable_styling(latex_options = c("repeat_header"), font_size = 8,
-                            repeat_header_text = "\\textit{(vervolg)}")
+        longtable = TRUE, booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = c("repeat_header", "striped"),
+                            font_size = 8,
+                            repeat_header_text = "\\textit{(vervolg)}") %>%
+  kableExtra::row_spec(0, bold = TRUE)
 ```
 
 ## Case studie: de Veldleeuwerik {#veldleeuwerik}
@@ -803,7 +812,10 @@ cbind(ds_veldleeuwerik_2018_2023$ddf$data,
   distinct() %>%
   arrange(regio, jaar) %>%
   kable(digits = 3,
-        caption = "Detectiekans per regio en jaar voor Veldleeuwerik.")
+        caption = "Detectiekans per regio en jaar voor Veldleeuwerik.",
+        booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::row_spec(0, bold = TRUE)
 ```
 
 ```{r detectiekans-jaar-plot, out.width = "90%", fig.cap = "Gemiddelde detectiecurve geplot over de data. De verticale streepjes op de x-as geven de locaties van de ruwe data aan."}
@@ -824,7 +836,7 @@ summary_results_2018_2023 <- bind_rows(
   separate(Label, into = c("regio", "jaar"), sep = " - ")
 ```
 
-Rekening houdend met de detectiekans, verkrijgen we via de formules besproken in het vorige hoofdstuk de abundantieschattingen in Tabel \@ref(tab:abundantie-jaar).
+Rekening houdend met de detectiekans, verkrijgen we via de formules besproken in de vorige sectie de abundantieschattingen in Tabel \@ref(tab:abundantie-jaar).
 Door te delen door de oppervlaktes van elk stratum (regio, jaar) krijgen we de densiteitsschattingen in Tabel \@ref(tab:densiteit-jaar) (Fig. \@ref(fig:densiteit-jaar-plot)).
 
 ```{r abundantie-jaar}
@@ -836,7 +848,10 @@ summary_results_2018_2023 %>%
         caption = paste("Abundantieschattingen per regio en jaar voor",
           "Veldleeuwerik. `lcl' staat voor `lower confidence limit' de",
           "ondergrens van het 95 \\% betrouwbaarheidsinterval en `ucl' (`upper",
-          "confidence limit') voor de bovengrens."))
+          "confidence limit') voor de bovengrens."),
+        booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::row_spec(0, bold = TRUE)
 ```
 
 ```{r densiteit-jaar}
@@ -846,7 +861,10 @@ summary_results_2018_2023 %>%
          lcl, ucl) %>%
   kable(digits = 2,
         caption = paste("Densiteitsschattingen per 100 ha per regio en jaar",
-                        "voor Veldleeuwerik."))
+                        "voor Veldleeuwerik."),
+        booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::row_spec(0, bold = TRUE)
 ```
 
 ```{r densiteit-jaar-plot, out.width = "90%", fig.cap = "Densiteitsschattingen per 100 ha met 95 \\% betrouwbaarheidsintervallen per jaar per regio."}
@@ -914,7 +932,10 @@ cbind(ds_veldleeuwerik_2022$ddf$data,
   arrange(jaar, openheid) %>%
   kable(digits = 3,
         caption = paste("Detectiekans per openheidsklasse en jaar voor",
-                        "Veldleeuwerik."))
+                        "Veldleeuwerik."),
+        booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::row_spec(0, bold = TRUE)
 ```
 
 ```{r detectiekans-stratum-plot, out.width = "90%", fig.cap = "Gemiddelde detectiecurve (stippellijn) geplot over de data voor model van elk jaar. Ter vergelijking zijn de detectiecurves per openheidsklasse ook aangegeven."}
@@ -950,7 +971,7 @@ summary_results_2023 <- bind_rows(
 summary_results_stratum <- bind_rows(summary_results_2022, summary_results_2023)
 ```
 
-Rekening houdend met de detectiekans, verkrijgen we via de formules besproken in het vorige hoofdstuk de abundantieschattingen in Tabel \@ref(tab:abundantie-stratum).
+Rekening houdend met de detectiekans, verkrijgen we via de formules besproken in de vorige sectie de abundantieschattingen in Tabel \@ref(tab:abundantie-stratum).
 Door te delen door de oppervlaktes van elk stratum (regio, jaar) krijgen we de densiteitsschattingen in Tabel \@ref(tab:densiteit-stratum) (Fig. \@ref(fig:densiteit-stratum-plot)).
 
 ```{r abundantie-stratum}
@@ -961,7 +982,10 @@ summary_results_stratum %>%
   arrange(regio, jaar, openheid, sbp) %>%
   kable(digits = 1,
         caption = paste("Abundantieschattingen per stratum voor",
-          "Veldleeuwerik."))
+          "Veldleeuwerik."),
+        booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::row_spec(0, bold = TRUE)
 ```
 
 ```{r densiteit-stratum}
@@ -972,7 +996,10 @@ summary_results_stratum %>%
   arrange(regio, jaar, openheid, sbp) %>%
   kable(digits = 2,
         caption = paste("Densiteitsschattingen per 100 ha per stratum",
-                        "voor Veldleeuwerik."))
+                        "voor Veldleeuwerik."),
+        booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::row_spec(0, bold = TRUE)
 ```
 
 ```{r densiteit-stratum-plot, out.width = "90%", fig.cap = "Densiteitsschattingen per 100 ha met 95 \\% betrouwbaarheidsintervallen per stratum."}
@@ -984,7 +1011,7 @@ include_graphics(file.path("media", "distance", "per_stratum",
 
 Distance sampling is een statistische methode die over het algemeen goed werkt in combinatie met het MAS-protocol om densiteiten te schatten.
 Echter, we zagen wel dat de fit niet helemaal goed was voor de Veldleeuwerik.
-Een aanname van het model is namelijk dat de detectiekans afneemt over de afstand (zie assumpties hoofdstuk \@ref(inleiding-distance)).
+Een aanname van het model is namelijk dat de detectiekans afneemt over de afstand (zie assumpties Sectie \@ref(inleiding-distance)).
 @roodbergen2011 hadden voor de Veldleeuwerik gelijkaardige problemen om een passende detectiecurve te fitten.
 Zij stellen dat dit kan worden veroorzaakt doordat vogels zich verplaatsen als reactie op de waarnemer of het afronden van afstanden door waarnemers.
 Dit laatste is bij ons zeker niet het geval doordat waarnemers een punt aanduiden op de kaart via een app en niet manueel een afstand invoeren.
@@ -1051,7 +1078,7 @@ Bovendien wordt er bij distance sampling meer gewicht gegeven aan lage aantallen
 Het verschil tussen beide methodes zal dus afhankelijk zijn van soort tot soort omwille van een combinatie van de detectiekans en zeldzaamheid van een soort (en mogelijk nog andere factoren die hier niet zijn beschouwd).
 Zoals in de vorige paragraaf vermeld, kan distance sampling ook als een minimumschatting genomen worden bij hoge detectiekansen, maar deze is mogelijks te strikt in vergelijking met de maxima-methode in ecologische context.
 Als er 3 broedgevallen gezien zijn in telperiodes 1, 2 en 3, maar 0 in periode 4, dan kan dit laatste puur per toeval zijn.
-Het is namelijk niet zo dat een nultelling in bijvoordbeeld de laatste ronde enigszins iets zegt over het aantal broedparen, die kunnen er wel geweest zijn, maar op dat moment stilgevallen (zingen/baltsen gebeurt enkel in de territoriumfase en eileg; als ze met jongen zitten of al uitgevlogen zijn, dan wordt er niet mee/veel minder gezongen).
+Het is namelijk niet zo dat een nultelling in bijvoorbeeld de laatste ronde enigszins iets zegt over het aantal broedparen, die kunnen er wel geweest zijn, maar op dat moment stilgevallen (zingen/baltsen gebeurt enkel in de territoriumfase en eileg; als ze met jongen zitten of al uitgevlogen zijn, dan wordt er niet mee/veel minder gezongen).
 Het zou dus logischer zijn om te besluiten dat er in die telcirkel effectief 3 broedgevallen zijn (maxima methode) en niet 2.25 (gemiddelde).
 Een meer diepgaande analyse tussen beide methodes van meerdere soorten met verschillende detectiekansen zou interessant kunnen zijn, maar dit valt buiten het doel van dit rapport.
 
@@ -1072,10 +1099,10 @@ include_graphics(file.path("media", "distance", "per_stratum",
 
 \textcolor{red}{uitbreiding distance sampling?} \textcolor{red}{stan etc.}
 
-We kunnen concluderen dat het schatten van densiteiten een evenwichtsoefening is tussen het maken van juiste beslissingen in ecologische context en anderzijds het gebruiken van een duidelijk en niet te complexe statistiche methode.
+We kunnen concluderen dat het schatten van densiteiten een evenwichtsoefening is tussen het maken van juiste beslissingen in ecologische context en anderzijds het gebruiken van een duidelijk en niet te complexe statistische methode.
 Deze eerste kan in rekening genomen worden door de data te filteren op broedcode groter dan nul en voor elke soort de telperiodes te selecteren die binnen de broedperiode van elke soort vallen.
 Een extra maatregel zou kunnen zijn om over die telperiodes (per telpunt per jaar) het maximum aantal te nemen als finale dataset voor verdere analyse (met effort = 1 omdat we dan niet meer corrigeren voor het aantal bezoeken, waardoor geen strikte uitmiddeling gebeurd).
-Voor Haas zou het bovendien nuttig zijn de oppervlaktes van de telcirkel te corrigeren voor de oppervlakte die effectief zichtbaar is voor de teller \textcolor{red}{(volgens viewshedanalyse, zie  Hoofdstuk @ref(uitbreiding-vlaanderen))}, aangezien Haas steeds op de grond zit.
+Voor Haas zou het bovendien nuttig zijn de oppervlaktes van de telcirkel te corrigeren voor de oppervlakte die effectief zichtbaar is voor de teller \textcolor{red}{(volgens viewshedanalyse, zie @ref(aanpassingen-meetnet))}, aangezien Haas steeds op de grond zit.
 Distance sampling m.b.v. het **Distance** package bleek een relatief eenvoudige procedure (zowel mathematisch als gebruiksvriendelijkheid) om densiteitsschattingen (incl. onzekerheid) te maken rekening houdend met de detectiekans van een soort.
 \textcolor{red}{complex niet nodig, detectiekans kan wel in GLMM ofzo worden gebruikt? verder}
 
@@ -1092,7 +1119,7 @@ Dit omdat we vermoedden dat de meer beperkte data van voor het pilootproject mog
 Om de analyses eenvoudiger te maken zetten we de aantallen om naar het maximum aantal per telcirkel per jaar over de telperiodes heen.
 Twee variabelen werden gemeten op tellingniveau: (1) van variabele `n_predators` nemen we het gemiddelde aantal per telcirkel per jaar en (2) van variabele `status_teller` nemen we de status van de teller die in een bepaald jaar het meest frequent een bepaald telpunt heeft bezocht (in het zeldzame geval dat verschillende tellers hetzelfde telpunt in hetzelfde jaar tijdens verschillende telperiodes bezocht hadden).
 
-We beschouwden alle geselecteerde primaire en secundaire variabelen beschreven in Hoofstuk \@ref(verklarende-variabelen) (Tabel \@ref(tab:verklarende-vars-tab), behalve `openheid_klasse_300` omdat deze als continue variabele op 1000 m informatiever leek (`openheid_waarde_1000`) en `sbp` omwille van de sterke correlatie met de variabele van interesse `area_prop_sb` (Fig. \@ref(fig:sbp-areapropsb)).
+We beschouwden alle geselecteerde primaire en secundaire variabelen beschreven in Hoofdstuk \@ref(verklarende-variabelen) (Tabel \@ref(tab:verklarende-vars-tab), behalve `openheid_klasse_300` omdat deze als continue variabele op 1000 m informatiever leek (`openheid_waarde_1000`) en `sbp` omwille van de sterke correlatie met de variabele van interesse `area_prop_sb` (Fig. \@ref(fig:sbp-areapropsb)).
 Om de interpretatie van de resultaten te vereenvoudigen besloten we de continue variabele `area_prop_sb` op te delen volgens de agri-environment schemes (AES) classificatie besproken in @sharps2023 (Tabel \@ref(tab:classificatie-propsb)).
 Deze nieuwe categorische variabele is `area_prop_sb_cat`.
 Ten slotte voegden we de tertiaire variabele `jaar` toe als factorvariabele (`jaar.f`).
@@ -1103,7 +1130,10 @@ tibble(beleid = c("nul", "laag", "middellaag", "middelhoog", "hoog"),
        area_prop_sb = c("0", "<0.04", "0.04-0.07", "0.07-0.1", ">0.1")) %>%
   kable(caption = paste("Classificatie oppervlakte-aandeel",
                         "soortbeschermingsmaatregelen",
-                        "binnen telcirkel."))
+                        "binnen telcirkel."),
+        booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::row_spec(0, bold = TRUE)
 ```
 
 Analyses werden voor beide regio's apart gedaan via Bayesiaanse modellen met de **brms** package.

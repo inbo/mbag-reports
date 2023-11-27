@@ -12,40 +12,41 @@
 
 ### In het veld {#issues-veld}
 
-Ondanks de inspanningen om tijdens de steekproeftrekking al zoveel mogelijk rekening te houden met mogelijke problemen tijdens de effectieve tellingen in het veld (hoofdstuk \@ref(pilootgegevens)), werden nog 163 problematische telpunten gesignaleerd die dan werden vervangen door een reservepunt.
-Hierbij werden opmerkingen in het attributenveld van de kaartlaag genoteerd.
+Ondanks de inspanningen om tijdens de steekproeftrekking al zoveel mogelijk rekening te houden met mogelijke problemen tijdens de effectieve tellingen in het veld (Hoofdstuk \@ref(pilootgegevens)), werden nog 163 problematische telpunten gesignaleerd die dan werden vervangen door een reservepunt.
+Hierbij werden opmerkingen in het attributenveld van de kaartlaag genoteerd (\@ref(manuele-controle)).
 Deze werden met \`regular expressions' geanalyseerd en gecategoriseerd in vijf categorieën (Tabel \@ref(tab:issues-piloot)).
 Zo kregen we een algemeen overzicht waar de belangrijkste problemen zich nog bevonden.
 Bij een deel van punten is er te veel overlap met andere telcirkels.
 We zien vooral problemen met zichtbaarheid omdat punten nog vallen in bossen, boomgaarden, holle wegen etc., hoewel er niet altijd info is waarom zichtbaarheid slecht is.
 Een belangrijk aandeel plots is ook ontoegankelijk omdat het te dicht bij een grote baan ligt, op privéterrein, langs water etc.
 Er zijn 7 punten waarbij geen info aanwezig is.
-In hoofstuk \@ref(uitbreiding-vlaanderen) leggen we uit hoe we hiermee rekening hebben gehouden voor uitbreiding van het MAS-meetnet in Vlaanderen.
+In Hoofdstuk \@ref(uitbreiding-vlaanderen) leggen we uit hoe we hiermee rekening hebben gehouden voor uitbreiding van het MAS-meetnet in Vlaanderen.
 
 ```{r issues-piloot}
 read_csv(file.path("media", "issues_pilootmeetnet",
                    "issues_pilootmeetnet.csv"),
          show_col_types = FALSE) %>%
   kable(caption = paste("Overzicht van problematische telpunten in het",
-          "pilootmeetnet gecategoriseerd m.b.v. `regular expressions'."))
+          "pilootmeetnet gecategoriseerd m.b.v. `regular expressions'."),
+        booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::row_spec(0, bold = TRUE)
 ```
 
 ### Tijdens de analyses
 
 ## Uitbreiding van het akkervogelmeetnet voor Vlaanderen {#uitbreiding-vlaanderen}
 
-Het idee is om in de komende jaren het meetnet uit te breiden over de verschillende landbouwstreken (Fig. \@ref(fig:landbouwstreken)) met uitzondering van de Duinen en de Weidestreek.
+Het idee is om in de komende jaren het meetnet uit te breiden over de verschillende landbouwstreken (Hoofdstuk \@ref(pilootgegevens), Fig.
+\@ref(fig:landbouwstreken)) met uitzondering van de Duinen en de Weidestreek.
 In 2023 zijn we gestart met de Leemstreek en de Zandleemstreek.
 
-```{r landbouwstreken, out.width = "90%", fig.cap = "Landbouwstreken in Vlaanderen"}
-include_graphics(file.path("media", "kaartjes", "landbouwstreken-vl.png"))
-```
+### Aanpassingen ten opzichte van het pilootmeetnet {#aanpassingen-meetnet}
 
-### Aanpassingen ten opzichte van het pilootmeetnet
-
-In dit hoofdstuk geven we aan welke aanpassingen we doen aan de methodiek van het pilootmeetnet (ref hfdst!!) voor de Leemstreek en de Zandleemstreek en later voor heel Vlaanderen.
+In deze sectie geven we aan welke aanpassingen we doen aan de methodiek van het pilootmeetnet (zie \@ref(piloot-ontwerp)) voor de Leemstreek en de Zandleemstreek en later voor heel Vlaanderen.
 We duiden enkel wijzigingen aan.
 We herhalen geen stappen als die ongewijzigd bleven.
+Zie Bijlage \@ref(bijlage-uitrol-mas) (Fig. \@ref(fig:steekproef-afbakening-mbag)) voor de visualisatie van de methodiek (cf. Fig. \@ref(fig:steekproef-afbakening) in Sectie \@ref(piloot-ontwerp)).
 
 1.  Selectie openheid landschap\
     Expliciete selectie van HOL en OL in het begin van de pipeline.
@@ -101,8 +102,10 @@ tibble(
   )
 ) %>%
   kable(caption = paste("Exclusie van landgebruiken meetnet",
-                        "Leemstreek en Zandleemstreek.")) %>%
-  kableExtra::kable_styling(latex_options = "scale_down")
+                        "Leemstreek en Zandleemstreek."),
+        booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = c("scale_down", "striped")) %>%
+  kableExtra::row_spec(0, bold = TRUE)
 
 ```
 
@@ -129,8 +132,10 @@ tibble(
   )
 ) %>%
   kable(caption = paste("Selectie routes waarlangs telpunten gelegd kunnen",
-                        "worden.")) %>%
-  kableExtra::kable_styling(latex_options = "scale_down")
+                        "worden."),
+        booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = c("scale_down", "striped")) %>%
+  kableExtra::row_spec(0, bold = TRUE)
 
 ```
 
@@ -166,6 +171,13 @@ include_graphics(file.path("media", "visibility",
 
     -   SPB's andere soorten (download 2023-02-14): <https://www.vlaanderen.be/datavindplaats/catalogus/soortenbeschermingsprogrammas>
 
+Figuur \@ref(fig:sbp-zandleem) toont de nieuwe SBP gebieden voor de leemstreek en de zandleemstreek.
+Kaartlagen per soort zijn gevisualiseerd in Bijlage \@ref(bijlage-uitrol-mas) (Fig. \@ref(fig:sbp-per-soort)).
+
+```{r sbp-zandleem, out.width = "100%", fig.cap = "Perimeters van leemstreek en de zandleemstreek met aanduiding van het gebied binnen en buiten soortbeschermingsplan (SBP)."}
+include_graphics(file.path("media", "kaartjes", "sbp_mbag_kaart.png"))
+```
+
 7.  Steekproeftrekking\
     De stratificatiemethode is niet gewijzigd t.o.v. het pilootmeetnet.
     Omdat we nu met veel grotere gebieden werken, merkten we wel dat een maximale trekking niet voor een goede spatiale spreiding zorgt omdat het algorime niet genoeg vrijheid krijgt.
@@ -181,16 +193,19 @@ include_graphics(file.path("media", "visibility",
     De methode garandeert dat deze nieuwe set ruimtelijk goed gespreid is en een aselecte steekproef is.
 
 8.  Uitduinnen van steekproef\
-    Om te veel overlap te voorkomen binnen enzelfde stratum, is voor elk punt binnen hetzelfde stratum nagegaan of een punt met grotere `sample_order` op minder dan 600 m (Zandleemstreek) afstand ligt.
+    Om te veel overlap te voorkomen binnen eenzelfde stratum, is voor elk punt binnen hetzelfde stratum nagegaan of een punt met grotere `sample_order` op minder dan 600 m (Zandleemstreek) afstand ligt.
     Als dit het geval is wordt het punt met de lagere `sample_order` weerhouden.
     Voor een vergelijking tussen 300 en 600 m thinning, zie steekproefontwerp_leemstreek.Rmd.
 
 9.  Overlap bestaande telpunten\
-    Ten slotte hebben we overlap met bestaande telpunten geautomatiseerd.
+    Overlap met bestaande telpunten werd geautomatiseerd.
     Zo kan optimaal gebruik worden gemaakt van data van telpunten die al meerdere jaren voordien zijn geteld.
     We vervangen bijgevolg alle telpunten uit de nieuwe steekproef door reeds bestaande punten indien ze voor minstens 50 % overlappen en ze tot hetzelfde stratum behoren.
     Indien er meerdere bestaande punten overlappen, nemen we het bestaande punt dat het meest overlapt.
     Omdat we nu een nieuwe laag van sbp gebruiken ten opzichte van de pilootstudie, is dit stratum opnieuw berekend voor de bestaande punten.
+
+10. Incorporatie versiecontrole in pipeline\
+    Automatisatie versiecontrole van het steekproefkader en de steekproef door deze functie toe te voegen op het einde van de targets pipeline (zie \@ref(git-mbag)).
 
 ### Steekproef Leemstreek
 
@@ -199,3 +214,15 @@ include_graphics(file.path("media", "visibility",
 ### Steekproef Zandleemstreek
 
 ...
+
+## Reproduceerbaarheid en traceerbaarheid {#git-mbag}
+
+Omwille van de automatisatie van de versiecontrolestap van het steekproefkader en de steekproef, zijn deze in de online GitHub repository [@github-repo] te vinden onder de folder *mas-piloot/src/targets/mas_steekproef_zavelberg/output*.
+De finale steekproef na manuele controle (de punten die effectief werden bezocht in het veld) zijn te vinden in de folder *data/processed* zoals bij het pilootmeetnet (Sectie \@ref(git-piloot)).
+De hashes van de finale bestanden zijn te vinden in Bijlage \@ref(hashes-steekproef).
+Bij de uitrol naar alle landbouwgebieden in Vlaanderen zullen we voor elk gebied bestanden centraal beschikbaar stellen via Zenodo (<https://zenodo.org/>).
+Dit zal zorgen dat deze bestanden nog beter traceerbaar zijn en het volledige meetnet aan een enkele DOI kan worden gelinkt.
+
+## Vrijwilligerswerking
+
+\textcolor{red}{uitdagingen en verandering vrijwilligerswerking t.o.v. pilootproject}

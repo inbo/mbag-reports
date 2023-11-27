@@ -4,6 +4,91 @@
 INBOmd::references(appendix = TRUE)
 ```
 
-# Eerste hoofdstuk van de bijlage
+# Bijlagen {#bijlagen}
 
-Inhoud van de eerste bijlage
+## Traceerbaarheid van de steekproefkaders en steekproeven besproken in dit rapport {#hashes-steekproef}
+
+De steekproefkaders en steekproeven staan als *TSV*-bestanden onder versiecontrole in de GitHub repository.
+De combinatie van data en metadata hashes kunnen de datasets op unieke manier identificeren (en dus bijvoorbeeld onderscheiden van oudere versies).
+Deze hashes worden berekend wanneer de bestanden worden opgeslaan en weggeschreven met `git2rdata::write_vc()` functie.
+De hashes van data (`data_hash`) en metadata (`hash`) staan in het bijhorende *YML*-bestand.
+De onderstaande tabel geeft de hashes van de finale datasets.
+Het steekproefkader en de steekproef voor de zandleemstreek en de leemstreek zitten in hetzelfde bestand, maar niet de finale steekproef.
+Steekproef finaal is de steekproef na manuele controle en zijn dus de telpunten waar effectief tellingen werden verricht.
+
+```{r hashes}
+tibble(
+  meetnet = rep(rep(c("piloot", "(zand)leemstreek", "zandleemstreek",
+                      "leemstreek"),
+                    c(3, 2, 1, 1)),
+                each = 2),
+  dataset = rep(c(rep(c("steekproefkader", "steekproef", "steekproef finaal"),
+                      2),
+                  "steekproef finaal"),
+                each = 2),
+  `type hash` = rep(c("data", "metadata"), 7),
+  hash = c(
+    # piloot steekproefkader
+    "2d4919f9e647f493cf6db8330d8b599817844c50",
+    "0902a46e71c8fea68f120bc656f62bf07c4b148b",
+    # piloot steekproef
+    "7c9476fab3502eb6472063cf7435104032ba6445",
+    "9421896d02f7cf2519c807c16f3347bbf67d7ae7",
+    # piloot steekproef finaal
+    "b0c32a62866e236201d57f56f3902b59871acfd4",
+    "63d3ff7875416637bc34b83ecc5dedc9ce33ba83",
+    # (zand)leemstreek steekproefkader
+    "46336c6a31711fb46baaa799875b9d4cdadd4117",
+    "481216163d567179c533d358e0964dfd4f949a25",
+    # (zand)leemstreek steekproef
+    "25bec42554f5ee5d37b2fa6d7739aacbb74abe0f",
+    "153a72f46c886f06944a1de0b020d1e140c25838",
+    # zandleemstreek steekproef finaal
+    "aa5b9b9212844896ac5f21c777046b5f282b0baa",
+    "49c216e00f2eb720828024700a71e4dd32df22b9",
+    # leemstreek steekproef finaal
+    "c6fafd4063e289e8e7615f97e6d2d6c9af6411b5",
+    "49c216e00f2eb720828024700a71e4dd32df22b9"),
+  bestand = c(
+    # piloot steekproefkader
+    "data/processed/steekproefkader_piloot.tsv",
+    "data/processed/steekproefkader_piloot.yml",
+    # piloot steekproef
+    "data/processed/steekproef_piloot.tsv",
+    "data/processed/steekproef_piloot.yml",
+    # piloot steekproef finaal
+    "data/processed/steekproef_piloot_avimap.tsv",
+    "data/processed/steekproef_piloot_avimap.yml",
+    # (zand)leemstreek steekproefkader
+    "src/targets/mas_steekproef_zavelberg/output/steekproefkader.tsv",
+    "src/targets/mas_steekproef_zavelberg/output/steekproefkader.yml",
+    # (zand)leemstreek steekproef
+    "src/targets/mas_steekproef_zavelberg/output/steekproef.tsv",
+    "src/targets/mas_steekproef_zavelberg/output/steekproef.yml",
+    # zandleemstreek steekproef finaal
+    "data/processed/steekproef_zandleemstreek_avimap.tsv",
+    "data/processed/steekproef_zandleemstreek_avimap.yml",
+    # leemstreek steekproef finaal
+    "data/processed/steekproef_leemstreek_avimap.tsv",
+    "data/processed/steekproef_leemstreek_avimap.yml"),
+  ) %>%
+  kable(booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = c("scale_down", "striped")) %>%
+  kableExtra::row_spec(0, bold = TRUE)
+
+```
+
+\newpage
+
+## Aanvullende kaarten uitrol MAS Vlaanderen {#bijlage-uitrol-mas}
+
+```{=tex}
+\begin{figure}
+  \makebox[\textwidth][c]{\includegraphics[width=1.1\textwidth]{media/steekproefkader_mas/mas_zandleem_afbakening.png}}
+  \caption{Methodiek voor de afbakening van het steekproefkader voor de uitrol van MAS Vlaanderen, gevisualiseerd voor een kleine oppervlakte in de zandleemstreek (xmin = 150000, xmax = 177000, ymin = 160000, ymax = 180000). \textbf{A.} Selectie van open en halfopen landschap binnen de perimeter (rood). \textbf{B.} Exclusie van landgebruiken op basis van OpenStreetMap data (groen). \textbf{C.} Selectie van paden en wegen (blauw). \textbf{D.} Omvorming van wegennetwerk tot puntennetwerk.}
+  \label{fig:steekproef-afbakening-mbag}
+\end{figure}
+```
+```{r sbp-per-soort, out.width = "100%", fig.cap = "Gebruikte kaarten van soortbeschermingsplannen in de leemstreek en de zandleemstreek."}
+include_graphics(file.path("media", "kaartjes", "sbp_mbag_per_soort.png"))
+```
