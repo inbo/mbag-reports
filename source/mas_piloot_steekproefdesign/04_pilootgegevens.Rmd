@@ -272,7 +272,7 @@ Tellers konden ook punten claimen door dit aan te geven in de Google Maps kaart.
 De steekproeftrekking werd gedaan met R [@R] in RStudio [@RStudio] via de **targets** 'pipeline tool' package [@targets-package].
 Deze laatste is een computationele workflow die analyses uitvoert op een efficiënte en reproduceerbare manier.
 Via de **renv** package [@renv-package] werd een reproduceerbare omgeving gecreëerd die bijhield welke versies van R en welke (versies van) verschillende packages werden gebruikt in het project.
-Alle code werd beheert onder versiecontrole met Git op een online GitHub repository [@github-repo].
+Alle code werd beheerd onder versiecontrole met Git op een online GitHub repository [@github-repo].
 Dit houdt in dat niet enkel de code zelf, maar ook alle wijzigingen in de code doorheen de tijd daar kunnen geraadpleegd worden.
 
 \text{(1)} het steekproefkader, (2) de steekproef en (3) de finale steekproef na manuele controle (de punten die effectief werden bezocht in het veld) werden ook in de GitHub repository opgeslaan als *TSV*-bestanden via de **git2rdata** package [@git2rdata-package] in de folder *data/processed*.
