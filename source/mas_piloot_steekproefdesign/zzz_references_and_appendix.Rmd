@@ -10,6 +10,8 @@ INBOmd::references(appendix = TRUE)
 
 De steekproefkaders en steekproeven staan als *TSV*-bestanden onder versiecontrole in de GitHub repository.
 De combinatie van data en metadata hashes kunnen de datasets op unieke manier identificeren (en dus bijvoorbeeld onderscheiden van oudere versies).
+Deze hashes worden berekend wanneer de bestanden worden opgeslaan en weggeschreven met `git2rdata::write_vc()` functie.
+De hashes van data (`data_hash`) en metadata (`hash`) staan in het bijhorende *YML*-bestand.
 De onderstaande tabel geeft de hashes van de finale datasets.
 Het steekproefkader en de steekproef voor de zandleemstreek en de leemstreek zitten in hetzelfde bestand, maar niet de finale steekproef.
 Steekproef finaal is de steekproef na manuele controle en zijn dus de telpunten waar effectief tellingen werden verricht.
