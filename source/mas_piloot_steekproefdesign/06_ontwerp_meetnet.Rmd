@@ -34,6 +34,17 @@ Er werden tien telpunten in vier telperiodes en één telpunt in drie telperiode
 Dit neemt niet weg dat deze resultaten een nuttige indicatie zijn dat er moet blijven ingezet worden op doorlopende enthousiasmering en training van vrijwilligers bijvoorbeeld via gezamelijke excursies en studiedagen.
 Dit wordt verder besproken in Sectie \@ref(vrijwilligers-mbag) \textcolor{red}{zie ook de tijdlijn Fig. ...)}.
 
+Wanneer we de data meer in detail gingen analyseren, bleek duidelijk dat deze pilootstudie een rijke bron van data is.
+Enkele analysemogelijkheden werden in het vorige hoofdstuk geduid via een case studie voor de Veldleeuwerik (\@ref(veldleeuwerik)).
+Dit is echter maar het topje van de ijsberg.
+Een discussie van de verderzetting en uitbreiding van mogelijke statistische analyses wordt in het volgende hoofdstuk beschreven (\@ref(discussie)).
+Een belangrijke beperking was wel het aantal data in De Moeren.
+Zelfs voor een algemene soort als Veldleeuwerik zagen we relatief grote onzekerheid op parameterschattingen en voor minder algemene soorten convergeerden modellen moeilijk of verkregen we onbetrouwbare resultaten.
+Aangezien de MAS-uitbreiding naar Vlaanderen op macro-schaal gebeurt, verwachten we hier geen problemen.
+Wel kan het interessant zijn om tijdens latere analyses in te zoomen op kleinere deel(kern)gebieden binnen bepaalde landbouwstreken (meso-schaal).
+Daarbij stellen we voor dat een gebied ter grootte van De Moeren als minimumschaal wordt gehanteerd (of afgerond ten minste 5000 ha).
+Naast een minimum oppervlakte moet natuurlijk ook gewaarborgd worden dat het subgebied genoeg telpunten bevat, want deze zullen bepalen hoeveel data er per subgebied aanwezig is en bijgevolg de power van statistische analyses.
+
 ## Uitbreiding van het akkervogelmeetnet voor Vlaanderen {#uitbreiding-vlaanderen}
 
 Het idee is om in de komende jaren het meetnet uit te breiden over de verschillende landbouwstreken (Hoofdstuk \@ref(pilootgegevens), Fig.
