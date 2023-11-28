@@ -12,7 +12,7 @@ Bij een deel van punten is er te veel overlap met andere telcirkels.
 We zien vooral problemen met zichtbaarheid omdat punten nog vallen in bossen, boomgaarden, holle wegen etc., hoewel er niet altijd info is waarom zichtbaarheid slecht is.
 Een belangrijk aandeel plots is ook ontoegankelijk omdat het te dicht bij een grote baan ligt, op privéterrein, langs water etc.
 Er zijn 7 punten waarbij geen info aanwezig is.
-In Hoofdstuk \@ref(uitbreiding-vlaanderen) leggen we uit hoe we hiermee rekening hebben gehouden voor uitbreiding van het MAS-meetnet in Vlaanderen.
+In Sectie \@ref(uitbreiding-vlaanderen) leggen we uit hoe we hiermee rekening hebben gehouden voor uitbreiding van het MAS-meetnet in Vlaanderen.
 
 ```{r issues-piloot}
 read_csv(file.path("media", "issues_pilootmeetnet",
