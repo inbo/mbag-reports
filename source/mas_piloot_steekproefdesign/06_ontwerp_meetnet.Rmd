@@ -1,13 +1,5 @@
 # Ontwerp meetnet voor akkervogels Vlaanderen {#ontwerp-meetnet}
 
--   Wat hebben we geleerd uit het pilootmeetnet?
-    -   in het veld (vrijwilligers, problemen in het veld)
-    -   tijdens de analyses
--   Vrijwilligerswerking
--   Plannen van de gegevensanalyse
--   Plannen van rapportering en communicatie
--   Implementatie en kwaliteitszorg
-
 ## Wat hebben we geleerd uit het pilootmeetnet? {#issues-pilootmeetnet}
 
 ### In het veld {#issues-veld}
