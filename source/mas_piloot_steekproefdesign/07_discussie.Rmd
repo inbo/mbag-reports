@@ -1,1 +1,92 @@
 # Discussie {#discussie}
+
+## MAS telprotocol
+
+Korte recap wat het MAS telprotocol inhoudt.
+
+Aangebrachte verbeteringen:
+
+-   zone van 25 m rondom het telpunt (bewegingsruimte) in functie van zo goed mogelijke zichtbaarheid in de telcirkel
+-   belang van afstanden om detectiecurves op te stellen (dus niet tellen vanaf andere plaatsen dan het eigenlijke telpunt)
+-   ...
+
+Verschillen tussen vrijwilligers en professionelen:
+
+-   blijvende aandacht nodig voor opleiding
+-   ...
+
+Verschillen tussen MAS telprotocol en ABV telprotocol:
+
+-   5 min vs 10 min
+-   ABV genest meetdesign met 6 telpunten in een hok van 1 km x 1 km
+-   ABV vaak niet digitaal ingevoerd, geen maximale zoekafstand en geen bezoekstippen op kaart waardoor geen afstanden.
+-   ABV plaatsing van de eigenlijke tellocaties binnen het hok is volgens een theoretisch 2 x 3 grid, maar het is de waarnemer die deze kan verschuiven zonder dat daar concrete richtlijnen voor zijn.
+
+Conclusie: goede balans tussen snelheid van uitvoer en informatie-inhoud.
+
+## Beleidsmonitoring
+
+```{r eval=FALSE}
+# eventueel kan deze analyse toegevoegd worden in hs 5
+library(brms)
+library(dplyr)
+tabeldata <- summary_results_2018_2023 %>%
+  dplyr::filter(variable == "abundance") %>%
+  select(regio, jaar, "abundantie" = Estimate, "standaardfout" = se,
+         lcl, ucl) %>%
+  mutate(cjaar = jaar - 2021,
+         rfm = (ucl - lcl) / (2 * densiteit))
+brm(densiteit | se(standaardfout, sigma=TRUE) ~ 0 + regio + cjaar:regio,
+    data = tabeldata) -> trendm
+summary(trendm)
+conditional_effects(trendm, "cjaar:regio")
+```
+
+Voor dit pilootproject hebben we gebruik kunnen maken van al in het verleden (periode 2018 - 2021) uitgevoerde MAS tellingen.
+De MAS tellingen van deze bestaande meetpunten (die grotendeels ook gecontinueerd werden in 2022 en 2023 in kader van het pilootproject) leren ons bijvoorbeeld dat, voor soorten zoals de veldleeuwerik, wanneer we een lineaire trend veronderstellen tussen 2018 en 2023, er een significante toename is van de densiteit met jaarlijks $0.64 \pm 0.28$ per 100 ha in de Oostelijke leemstreek (een stijging van een densiteit van 11 naar 14 per 100 ha over de 6-jarige periode).
+De relatieve foutenmarge (halve breedte van het 95 % betrouwbaarheidsinterval gedeeld door de geschatte densiteit) op de jaarlijkse densiteitsschattingen in de Oostelijke leemstreek liggen voor Veldleeuwerik tussen 9 % en 18 %.
+Deze cijfers geven vertrouwen dat op een zesjarige periode er voldoende power zal zijn om ecologisch relevante trends (en verschillen in trends tussen strata) te detecteren.
+We moeten er echter wel over waken dat de steekproefgrootte per stratum voldoende groot blijft.
+Zo leren we bijvoorbeeld uit de cijfers van de Moeren dat de relatieve foutenmarge op de lineaire trend en toestandschattingen van Veldleeuwerik respectievelijk x2 en x4 is in vergelijking met de Oostelijke leemstreek.
+
+Uit de MAS tellingen van de periode 2018 - 2021 leren we ook dat er beperkingen zijn aan deze data: (1) uiteraard zijn ze gelimiteerd tot een deel van de leemstreek en een deel van de polders waardoor er niet kan veralgemeend worden naar de (effecten van beleid) in landbouwgebied in Vlaanderen, (2) er zijn uit deze periode geen tellingen in vergelijkbaar controlegebied (buiten SBP gebied), terwijl de zones binnen SBP al de zones waren met de beste kansen voor akkervogels nog voor er maatregelen werden genomen en (3) de telpunten werden niet aselect gekozen waardoor er een risico is op vertekening ten gevolge van de manier waarop tellocaties werden gekozen.
+
+Doordat er geen tellingen uit controlegebieden zijn voor de periode 2018 - 2021, kunnen we bijvoorbeeld niet weten of de significante toename van de densiteit aan Veldleeuweriken een effect is van de toename aan SBP maatregelen of een algemene verbetering van de populaties die zich ook elders in het landbouwgebied afspeelt.
+Ook weten we hierdoor niet wat de algemene gemiddelde toestand en trend is van soorten in (bijvoorbeeld) de volledige leemstreek (ongeacht welke beschermingsmaatregelen genomen worden).
+Door ook in vergelijkbare situaties buiten SBP zones te tellen en de tellocaties via een kanssteekproef te selecteren die representatief is binnen elk van de beschouwde strata, kunnen we beide euvels oplossen.
+We zullen dan immers in staat zijn om bijvoorbeeld de trend binnen en buiten SBP gebied met elkaar te vergelijken.
+We zullen ook de haalbaarheid van (o.b.v. trend) en het halen van (o.b.v. toestand) streefdoelen voor de populatiedensiteit van soorten kunnen aftoetsen.
+Ook kunnen we, door te wegen voor de oppervlakte van elk stratum (bijvoorbeeld open landschap binnen SBP in de Leemstreek), toestand- en trendschattingen bekomen die representatief zijn voor een volledige landbouwstreek (en op termijn dus ook voor alle landbouwgebied in Vlaanderen).
+
+Elk van bovenvermelde beperkingen zullen we op termijn dus kunnen wegwerken en een deel van de beperkingen hebben we binnen het pilootproject al aangepakt.
+In het meetnet dat we hebben opgezet voor deze pilootstudie zijn controlegebieden toegevoegd die vergelijkbaar zijn met de SBP zones (zelfde landbouwstreek, zelfde mate van openheid van het landschap).
+De uitbreiding hiervan naar de andere landbouwstreken, zal toelaten om zowel per landbouwstreek als voor heel Vlaanderen uitspraken te doen over effecten van het beleid (waarbij een opsplitsing kan gemaakt worden in de mate van uptake van beleid).
+In 2023 konden we al starten met deze uitrol naar de volledige leemstreek en zandleemstreek.
+In 2024 volgen de overige landbouwstreken.
+
+Voor een beleidsmonitoring op macroniveau is het ook interessant om - naast resultaten voor individuele soorten - ook uitspraken te doen over groepen van soorten (bijvoorbeeld alle doelsoorten van het SBP akkervogels).
+Dit kan bijvoorbeeld door - vergelijkbaar met hoe dit gedaan wordt voor de ABV monitoring - een multisoortenindex te berekenen die de relatieve wijziging weergeeft van een jaar met een referentiejaar op niveau Vlaanderen.
+Met de MAS data kunnen we dit principe ook toepassen per landbouwstreek en binnen versus buiten SBP zones.
+
+<!-- # TODO discussie over Samensporen met ABV; relevante referenties toevoegen-->
+
+## Beheermonitoring
+
+Wanneer we als doel hebben om na te gaan of de uitgevoerde beheermaatregelen het gewenste vooropgestelde ecologische resultaat (effectiviteit) opleveren, dienen we net een stap verder te gaan dan een loutere vergelijking van telpunten binnen en buiten SBP.
+Per telcirkel kunnen we exact bepalen welke oppervlakte aan maatregelen er genomen zijn en wanneer.
+Dit kunnen we zowel doen voor de maatregelen die worden genomen in kader van een SBP als voor de landbouwvoering (bijvoorbeeld oppervlakte-aandeel van een bepaald type hoofdteelt).
+Ook andere karakteristieken zoals (variatie in) perceelgroottes, kleine landschapselement ...) nemen we mee als verklarende variabelen in onze modellen.
+Dit laat ons toe om te bepalen welke factoren het meest gunstig zijn voor de densiteit aan akkervogels en laat ons ook beter toe om effecten van bepaalde maatregelen in te schatten conditioneel de andere factoren.
+
+Binnen dit pilootproject is al een eerste belangrijk stap gezet om deze modellen te fitten.
+We geloven echter dat hier nog een deel onontgonnen terrein ligt, om in nog meer detail de data te analyseren.
+In bovenstaande schets worden de verklarende variabelen samengevat per telcirkel en per jaar.
+De individuele tellingen geven ons echter informatie waar een soort gezien werd binnen de telcirkel in een bepaalde telperiode.
+Hierin kan mogelijk een sterker signaal verscholen liggen dat verloren gaat wanneer we aggregeren (uitmiddelen of een totaal berekenen) in een telcirkel.
+Een waarneming is uiteraard maar een momentopnamen, maar uit vele waarnemingen kan er zich wel een patroon aftekenen.
+Stel bijvoorbeeld dat Veldleeuwerik veel meer waargenomen wordt nabij een specifieke beheermaatregel of een specifieke teelt.
+Om zulke signalen op te pikken, moeten we modellen maken die de vertrekken vanaf de individuele waarnemingen en de daarmee via locatie en tijdstip van de waarneming verbonden toestand van de verklarende variabelen.
+Dit is echter voorwerp van verder onderzoek en kon niet binnen het tijdsbestek van dit pilootproject bekeken worden.
+In elk geval verwachten we dat zulke analyses en de analyses die we al uitgevoerd hebben, zullen toelaten om de effectiviteit van maatregelen beter in te schatten en daarmee ook aanbevelingen te kunnen doen om op middellange termijn maatregelen bij te sturen.
+Eveneens kan dit soort analyses signalen geven waar er nood is aan aanvullend verklarend onderzoek (*microniveau*).
+Dit type van onderzoek zal typisch heel gericht gaan kijken op een kleine schaal gedurende één of maximaal enkele jaren in functie van specifieke kennishiaten.
