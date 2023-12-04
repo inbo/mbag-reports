@@ -31,19 +31,19 @@ Conclusie: goede balans tussen snelheid van uitvoer en informatie-inhoud.
 library(brms)
 library(dplyr)
 tabeldata <- summary_results_2018_2023 %>%
-  dplyr::filter(variable == "abundance") %>%
-  select(regio, jaar, "abundantie" = Estimate, "standaardfout" = se,
+  dplyr::filter(variable == "density") %>%
+  select(regio, jaar, "densiteit" = Estimate, "standaardfout" = se,
          lcl, ucl) %>%
-  mutate(cjaar = jaar - 2021,
+  mutate(cjaar = as.numeric(jaar) - 2021,
          rfm = (ucl - lcl) / (2 * densiteit))
-brm(densiteit | se(standaardfout, sigma=TRUE) ~ 0 + regio + cjaar:regio,
+brm(densiteit | se(standaardfout, sigma = TRUE) ~ 0 + regio + cjaar:regio,
     data = tabeldata) -> trendm
 summary(trendm)
 conditional_effects(trendm, "cjaar:regio")
 ```
 
 Voor dit pilootproject hebben we gebruik kunnen maken van al in het verleden (periode 2018 - 2021) uitgevoerde MAS tellingen.
-De MAS tellingen van deze bestaande meetpunten (die grotendeels ook gecontinueerd werden in 2022 en 2023 in kader van het pilootproject) leren ons bijvoorbeeld dat, voor soorten zoals de veldleeuwerik, wanneer we een lineaire trend veronderstellen tussen 2018 en 2023, er een significante toename is van de densiteit met jaarlijks $0.64 \pm 0.28$ per 100 ha in de Oostelijke leemstreek (een stijging van een densiteit van 11 naar 14 per 100 ha over de 6-jarige periode).
+De MAS tellingen van deze bestaande meetpunten (die grotendeels ook gecontinueerd werden in 2022 en 2023 in kader van het pilootproject) leren ons bijvoorbeeld dat, voor soorten zoals de Veldleeuwerik, wanneer we een lineaire trend veronderstellen tussen 2018 en 2023, er een significante toename is van de densiteit met jaarlijks $0.64 \pm 0.28$ per 100 ha in de Oostelijke leemstreek (een stijging van een densiteit van 11 naar 14 per 100 ha over de 6-jarige periode).
 De relatieve foutenmarge (halve breedte van het 95 % betrouwbaarheidsinterval gedeeld door de geschatte densiteit) op de jaarlijkse densiteitsschattingen in de Oostelijke leemstreek liggen voor Veldleeuwerik tussen 9 % en 18 %.
 Deze cijfers geven vertrouwen dat op een zesjarige periode er voldoende power zal zijn om ecologisch relevante trends (en verschillen in trends tussen strata) te detecteren.
 We moeten er echter wel over waken dat de steekproefgrootte per stratum voldoende groot blijft.
@@ -64,8 +64,8 @@ De uitbreiding hiervan naar de andere landbouwstreken, zal toelaten om zowel per
 In 2023 konden we al starten met deze uitrol naar de volledige leemstreek en zandleemstreek.
 In 2024 volgen de overige landbouwstreken.
 
-Voor een beleidsmonitoring op macroniveau is het ook interessant om - naast resultaten voor individuele soorten - ook uitspraken te doen over groepen van soorten (bijvoorbeeld alle doelsoorten van het SBP akkervogels).
-Dit kan bijvoorbeeld door - vergelijkbaar met hoe dit gedaan wordt voor de ABV monitoring - een multisoortenindex te berekenen die de relatieve wijziging weergeeft van een jaar met een referentiejaar op niveau Vlaanderen.
+Voor een beleidsmonitoring op macroniveau is het ook interessant om – naast resultaten voor individuele soorten – ook uitspraken te doen over groepen van soorten (bijvoorbeeld alle doelsoorten van het SBP akkervogels).
+Dit kan bijvoorbeeld door – vergelijkbaar met hoe dit gedaan wordt voor de ABV monitoring – een multisoortenindex te berekenen die de relatieve wijziging weergeeft van een jaar met een referentiejaar op niveau Vlaanderen.
 Met de MAS data kunnen we dit principe ook toepassen per landbouwstreek en binnen versus buiten SBP zones.
 
 <!-- # TODO discussie over Samensporen met ABV; relevante referenties toevoegen-->
