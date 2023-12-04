@@ -1,13 +1,5 @@
 # Ontwerp meetnet voor akkervogels Vlaanderen {#ontwerp-meetnet}
 
--   Wat hebben we geleerd uit het pilootmeetnet?
-    -   in het veld (vrijwilligers, problemen in het veld)
-    -   tijdens de analyses
--   Vrijwilligerswerking
--   Plannen van de gegevensanalyse
--   Plannen van rapportering en communicatie
--   Implementatie en kwaliteitszorg
-
 ## Wat hebben we geleerd uit het pilootmeetnet? {#issues-pilootmeetnet}
 
 ### In het veld {#issues-veld}
@@ -20,7 +12,7 @@ Bij een deel van punten is er te veel overlap met andere telcirkels.
 We zien vooral problemen met zichtbaarheid omdat punten nog vallen in bossen, boomgaarden, holle wegen etc., hoewel er niet altijd info is waarom zichtbaarheid slecht is.
 Een belangrijk aandeel plots is ook ontoegankelijk omdat het te dicht bij een grote baan ligt, op privéterrein, langs water etc.
 Er zijn 7 punten waarbij geen info aanwezig is.
-In Hoofdstuk \@ref(uitbreiding-vlaanderen) leggen we uit hoe we hiermee rekening hebben gehouden voor uitbreiding van het MAS-meetnet in Vlaanderen.
+In Sectie \@ref(uitbreiding-vlaanderen) leggen we uit hoe we hiermee rekening hebben gehouden voor uitbreiding van het MAS-meetnet in Vlaanderen.
 
 ```{r issues-piloot}
 read_csv(file.path("media", "issues_pilootmeetnet",
@@ -28,28 +20,47 @@ read_csv(file.path("media", "issues_pilootmeetnet",
          show_col_types = FALSE) %>%
   kable(caption = paste("Overzicht van problematische telpunten in het",
           "pilootmeetnet gecategoriseerd m.b.v. `regular expressions'."),
-        booktabs = TRUE) %>%
-  kableExtra::kable_styling(latex_options = "striped") %>%
+        longtable = TRUE, booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = c("repeat_header", "striped"),
+                            repeat_header_text = "\\textit{(vervolg)}") %>%
   kableExtra::row_spec(0, bold = TRUE)
 ```
 
 ### Tijdens de analyses
 
+In Sectie \@ref(dubbeltellingen) toonden we aan dat vrijwilligers een significant minder aantal soorten en waarnemingen zagen dan een professionele teller die op dezelfde locatie in dezelfde telperiode ging hertellen.
+We vonden geen bewijs dat dit verschil anders was tussen data met broedcode 0 en broedcode \> 0, noch afhankelijk van de ervaring van de vrijwilligers (beginnende versus ervaren vrijwilligers).
+We moeten onderkennen dat dit slechts een beperkte analyse was en deze resultaten niet indicatief zijn voor het volledige pilootproject.
+Er werden tien telpunten in vier telperiodes en één telpunt in drie telperiodes dubbelgeteld van zeven vrijwilligers door een professionele teller en dit enkel in De Moeren.
+Dit neemt niet weg dat deze resultaten een nuttige indicatie zijn dat er moet blijven ingezet worden op doorlopende enthousiasmering en training van vrijwilligers bijvoorbeeld via gezamelijke excursies en studiedagen.
+Dit wordt verder besproken in Sectie \@ref(vrijwilligers-mbag) \textcolor{red}{zie ook de tijdlijn Fig. ...)}.
+
+Wanneer we de data meer in detail gingen analyseren, bleek duidelijk dat deze pilootstudie een rijke bron van data is.
+Enkele analysemogelijkheden werden in het vorige hoofdstuk geduid via een case studie voor de Veldleeuwerik (\@ref(veldleeuwerik)).
+Dit is echter maar het topje van de ijsberg.
+Een discussie van de verderzetting en uitbreiding van mogelijke statistische analyses wordt in het volgende hoofdstuk beschreven (\@ref(discussie)).
+Een belangrijke beperking was wel het aantal data in De Moeren.
+Zelfs voor een algemene soort als Veldleeuwerik zagen we relatief grote onzekerheid op parameterschattingen en voor minder algemene soorten convergeerden modellen moeilijk of verkregen we onbetrouwbare resultaten.
+Aangezien de MAS-uitbreiding naar Vlaanderen op macro-schaal gebeurt (zie verder), verwachten we hier geen problemen.
+Wel kan het interessant zijn om tijdens latere analyses in te zoomen op kleinere deel(kern)gebieden binnen bepaalde landbouwstreken (meso-schaal).
+Daarbij stellen we voor dat een gebied ter grootte van De Moeren als minimumschaal wordt gehanteerd (of afgerond ten minste 5000 ha).
+Naast een minimum oppervlakte moet natuurlijk ook gewaarborgd worden dat het subgebied genoeg telpunten bevat, want deze zullen de power van statistische analyses bepalen.
+
 ## Uitbreiding van het akkervogelmeetnet voor Vlaanderen {#uitbreiding-vlaanderen}
 
-Het idee is om in de komende jaren het meetnet uit te breiden over de verschillende landbouwstreken (Hoofdstuk \@ref(pilootgegevens), Fig.
+Het idee is om in de komende jaren het MAS-meetnet uit te breiden over de verschillende landbouwstreken in Vlaanderen (Hoofdstuk \@ref(pilootgegevens), Fig.
 \@ref(fig:landbouwstreken)) met uitzondering van de Duinen en de Weidestreek.
-In 2023 zijn we gestart met de Leemstreek en de Zandleemstreek.
+In 2023 zijn we reeds gestart met de leemstreek en de zandleemstreek.
 
 ### Aanpassingen ten opzichte van het pilootmeetnet {#aanpassingen-meetnet}
 
-In deze sectie geven we aan welke aanpassingen we doen aan de methodiek van het pilootmeetnet (zie \@ref(piloot-ontwerp)) voor de Leemstreek en de Zandleemstreek en later voor heel Vlaanderen.
+In deze sectie geven we aan welke aanpassingen we deden aan de methodiek van het pilootmeetnet (zie \@ref(piloot-ontwerp)) voor de leemstreek en de zandleemstreek en later voor de andere landbouwstreken in Vlaanderen.
 We duiden enkel wijzigingen aan.
 We herhalen geen stappen als die ongewijzigd bleven.
 Zie Bijlage \@ref(bijlage-uitrol-mas) (Fig. \@ref(fig:steekproef-afbakening-mbag)) voor de visualisatie van de methodiek (cf. Fig. \@ref(fig:steekproef-afbakening) in Sectie \@ref(piloot-ontwerp)).
 
 1.  Selectie openheid landschap\
-    Expliciete selectie van HOL en OL in het begin van de pipeline.
+    Expliciete selectie van HOL en OL in het begin van de **targets** pipeline.
     Dit werd voordien pas in een later stadium gedaan.
 
 2.  Exclusie van bepaalde landgebruiken\
@@ -57,7 +68,7 @@ Zie Bijlage \@ref(bijlage-uitrol-mas) (Fig. \@ref(fig:steekproef-afbakening-mbag
     Deze vooral om zoveel mogelijk een goede bereikbaarheid en zichtbaarheid te voorzien.
     Langs autosnelwegen liggen vaak parallelle paden; zelfs langs beide kanten van de snelweg.
     Dit kan in de steekproef tot gevolg hebben dat er met een hogere waarschijnlijkheid een punt wordt geselecteerd vlak bij een snelweg, omdat er veel van zulke punten zijn.
-    Enerzijds is dat een realiteit van het terrein die een invloed heeft op de waarnemingen (bv. vaak kraaien en buizerd langs snelwegen) en vrij zeker ook op de detecteerbaarheid (geluidsoverlast en beperkte zichtbaarheid).
+    Enerzijds is dat een realiteit van het terrein die een invloed heeft op de waarnemingen (bv. vaak kraaiachtigen en Buizerd langs snelwegen) en vrij zeker ook op de detecteerbaarheid (geluidsoverlast en beperkte zichtbaarheid).
     Daarom hebben we een extra exclusiecriterium in acht te genomen door een zone van 100 m buffer rond autosnelwegen en invoegstroken en afritten van autosnelwegen uit te sluiten.
     Op die manier gaan er nog steeds punten zijn waarvan de telcirkels het effect van snelwegen omvatten, maar sluiten we punten die te dicht tegen snelwegen liggen uit.
 
@@ -102,7 +113,7 @@ tibble(
   )
 ) %>%
   kable(caption = paste("Exclusie van landgebruiken meetnet",
-                        "Leemstreek en Zandleemstreek."),
+                        "leemstreek en zandleemstreek."),
         booktabs = TRUE) %>%
   kableExtra::kable_styling(latex_options = c("scale_down", "striped")) %>%
   kableExtra::row_spec(0, bold = TRUE)
@@ -110,7 +121,7 @@ tibble(
 ```
 
 3.  Bepalen geldige plaatsen waar telling kan uitgevoerd worden\
-    We beperken omwille van de bereikbaarheid de plaatsen waarlangs tellingen kunnen uitgevoerd worden \@ref(tab:inclusie-wegen). We gaan o.a. niet langer langs waterwegen telpunten leggen (bv. grachten, beken). Ook behouden we wel de holle wegen omdat deze een belangrijk onderdeel uitmaken van het agrarisch landschap. Indien de zichtbaarheid toch te laag is in een holle weg, wordt die er via de visibiliteitsberekening later nog uitgefilterd.
+    We beperken omwille van de bereikbaarheid de plaatsen waarlangs tellingen kunnen uitgevoerd worden (Tabel \@ref(tab:inclusie-wegen)). We gaan o.a. niet langer langs waterwegen telpunten leggen (bv. grachten, beken). Ook behouden we wel de holle wegen omdat deze een belangrijk onderdeel uitmaken van het agrarisch landschap. Indien de zichtbaarheid toch te laag is in een holle weg, wordt die er via de visibiliteitsberekening later nog uitgefilterd (zie verder).
 
 ```{r inclusie-wegen}
 tibble(
@@ -140,8 +151,8 @@ tibble(
 ```
 
 4.  Exclusie van potentiële telpunten op basis van zichtbaarheid\
-    We berekenden zichtbaarheid als de cumulatieve zichtbaarheidsindex (CVVI: cumulative viewshed visibility index) waarbij de waarnemer een bewegingsvrijheid heeft van 25 m rondom het telpunt (Fig. \@ref(fig:zichtbaarheid)). De zichtbaarheidsindex wordt berekend vanaf een set van locaties die 10 m van elkaar liggen in deze zone van bewegingsvrijheid en geeft de proportie aan van zichtbare rastercellen (resolutie 5 m) in de telcirkel met 300 m straal. De cumulatieve zichtbaarheidsindex is dan de proportie die zichtbaar is vanuit minstens één locatie binnen de zone van bewegingsvrijheid. Hierbij wordt gebruik gemaakt van [Digital Surface Model (DSM) en Digital Terrain Model (DTM)](https://www.vlaanderen.be/digitaal-vlaanderen/onze-oplossingen/earth-observation-data-science-eodas/het-digitaal-hoogtemodel). De code is op basis van aanpassingen aan code van de GVI package v1.1 [@GVI-package].\
-    In de targets pipeline werd gebruik gemaakt van batching per 200 telpunten om rekentijd in te perken (`tar_group_size()` functie van tarchetypes package v0.7.6 [@tarchetypes-package]). We verwijderen telpunten waar de CVVI kleiner is dan 0.10.
+    We berekenden zichtbaarheid als de cumulatieve zichtbaarheidsindex (CVVI: cumulative viewshed visibility index) waarbij de waarnemer een bewegingsvrijheid heeft van 25 m rondom het telpunt (Fig. \@ref(fig:zichtbaarheid)). De zichtbaarheidsindex wordt berekend vanaf een set van locaties die 10 m van elkaar liggen in deze zone van bewegingsvrijheid en geeft de proportie aan van zichtbare rastercellen (resolutie 5 m) in de telcirkel met straal 300 m. De cumulatieve zichtbaarheidsindex is dan de proportie die zichtbaar is vanuit minstens één locatie binnen de zone van bewegingsvrijheid. Hierbij wordt gebruik gemaakt van [Digital Surface Model (DSM) en Digital Terrain Model (DTM)](https://www.vlaanderen.be/digitaal-vlaanderen/onze-oplossingen/earth-observation-data-science-eodas/het-digitaal-hoogtemodel). De code is op basis van de functie `vvi_from_sf()` in de GVI package v1.1 [@GVI-package].\
+    In de **targets** pipeline werd gebruik gemaakt van batching per 200 telpunten om rekentijd in te perken (`tar_group_size()` functie van **tarchetypes** package v0.7.6 [@tarchetypes-package]). We verwijderen telpunten waar de CVVI kleiner is dan 0.10.
 
 ```{r zichtbaarheid, out.width = "80%", fig.cap = "Voorbeeld van CVVI berekening o.b.v. DSM en DTM."}
 include_graphics(file.path("media", "visibility",
@@ -152,10 +163,9 @@ include_graphics(file.path("media", "visibility",
     Gebruik kaartlaag van 2022 in plaats van 2021.
 
 6.  Binnen of buiten gebieden met soortbeschermingsplan\
-    Zowel binnen kerngebied als zoekzones zijn er soortbeschermende maatregelen (SB BO's) gelegd (zie kaart VLM BO's).
+    \textcolor{red}{Johannes uitschrijven, hier staat alvast een samenvatting uit mailcommunicatie} Zowel binnen kerngebied als zoekzones zijn er soortbeschermende maatregelen (SB BO's) gelegd (zie kaart VLM BO's).
     In theorie waren deze maatregelen vooral bedoeld voor kerngebied, en zal daar een hogere dichtheid (bedekkingsgraad) liggen, maar de VLM heeft het toegelaten om ook in zoekzones deze maatregelen te sluiten (al was dat minder de prioriteit).
-    Daar werd bv.
-    in de Moeren geen rekening mee gehouden, en werden erg veel SB BO's gelegd, ook omdat dit gebied wél kerngebied was van plan kiekendief (SBP Grauwe Kiekendief) waardoor er wel veel BO's gesloten zijn.
+    Daar werd bv.in de Moeren geen rekening mee gehouden, en werden erg veel SB BO's gelegd, ook omdat dit gebied wél kerngebied was van plan kiekendief (SBP Grauwe Kiekendief) waardoor er wel veel BO's gesloten zijn.
     In de toekomst heeft VLM beloofd om meer/enkel rekening te houden met kerngebied.
 
     We nemen kerngebieden en zoekzones samen als onderzoeksgebied en alles hierbuiten beschouwen we als controle.
@@ -193,36 +203,33 @@ include_graphics(file.path("media", "kaartjes", "sbp_mbag_kaart.png"))
     De methode garandeert dat deze nieuwe set ruimtelijk goed gespreid is en een aselecte steekproef is.
 
 8.  Uitduinnen van steekproef\
-    Om te veel overlap te voorkomen binnen eenzelfde stratum, is voor elk punt binnen hetzelfde stratum nagegaan of een punt met grotere `sample_order` op minder dan 600 m (Zandleemstreek) afstand ligt.
-    Als dit het geval is wordt het punt met de lagere `sample_order` weerhouden.
-    Voor een vergelijking tussen 300 en 600 m thinning, zie steekproefontwerp_leemstreek.Rmd.
+    Om te veel overlap van telpunten te voorkomen binnen eenzelfde stratum, is voor elk punt binnen hetzelfde stratum nagegaan of een punt met grotere `sample_order` op minder dan 600 m afstand ligt.
+    Als dit het geval is, wordt het punt met de lagere `sample_order` weerhouden.
 
 9.  Overlap bestaande telpunten\
     Overlap met bestaande telpunten werd geautomatiseerd.
     Zo kan optimaal gebruik worden gemaakt van data van telpunten die al meerdere jaren voordien zijn geteld.
     We vervangen bijgevolg alle telpunten uit de nieuwe steekproef door reeds bestaande punten indien ze voor minstens 50 % overlappen en ze tot hetzelfde stratum behoren.
     Indien er meerdere bestaande punten overlappen, nemen we het bestaande punt dat het meest overlapt.
-    Omdat we nu een nieuwe laag van sbp gebruiken ten opzichte van de pilootstudie, is dit stratum opnieuw berekend voor de bestaande punten.
+    Omdat we nu een nieuwe laag van SBP gebruiken ten opzichte van de pilootstudie, is dit stratum opnieuw berekend voor de bestaande punten.
 
 10. Incorporatie versiecontrole in pipeline\
-    Automatisatie versiecontrole van het steekproefkader en de steekproef door deze functie toe te voegen op het einde van de targets pipeline (zie \@ref(git-mbag)).
+    Automatisatie versiecontrole van het steekproefkader en de steekproef door een functie toe te voegen op het einde van de targets pipeline (zie \@ref(git-mbag)).
 
-### Steekproef Leemstreek
+### Steekproeftrekking (zand)leemstreek
 
-...
-
-### Steekproef Zandleemstreek
-
-...
+Als uiteindelijke steekproef trokken we voor de leemstreek en de zandleemstreek de eerste 50 telpunten (`sample_order`) per stratum (eerste set) en ook de volgende 50 punten per stratum voor als er een punt niet zou kunnen geteld worden in het veld (reserve set).
+Voor de leemstreek geven we enkel de punten mee die niet tot de Oostelijke leemstreek behoren.
+Zo selecteren we dus enkel nieuwe punten voor de Westelijk leemstreek; we behouden alle punten van de Oostelijke leemstreek van het pilootproject.
 
 ## Reproduceerbaarheid en traceerbaarheid {#git-mbag}
 
-Omwille van de automatisatie van de versiecontrolestap van het steekproefkader en de steekproef, zijn deze in de online GitHub repository [@github-repo] te vinden onder de folder *mas-piloot/src/targets/mas_steekproef_zavelberg/output*.
-De finale steekproef na manuele controle (de punten die effectief werden bezocht in het veld) zijn te vinden in de folder *data/processed* zoals bij het pilootmeetnet (Sectie \@ref(git-piloot)).
+Omwille van de automatisatie van de versiecontrolestap van het steekproefkader en de steekproef, zijn deze in de online GitHub repository [@github-repo] te vinden onder een ander folder (zie Bijlage \@ref(hashes-steekproef)).
+De finale steekproef na manuele controle (de punten die effectief werden bezocht in het veld) zijn wel nog te vinden in de folder *data/processed* zoals bij het pilootmeetnet (Sectie \@ref(git-piloot)).
 De hashes van de finale bestanden zijn te vinden in Bijlage \@ref(hashes-steekproef).
 Bij de uitrol naar alle landbouwgebieden in Vlaanderen zullen we voor elk gebied bestanden centraal beschikbaar stellen via Zenodo (<https://zenodo.org/>).
 Dit zal zorgen dat deze bestanden nog beter traceerbaar zijn en het volledige meetnet aan een enkele DOI kan worden gelinkt.
 
-## Vrijwilligerswerking
+## Vrijwilligerswerking {#vrijwilligers-mbag}
 
 \textcolor{red}{uitdagingen en verandering vrijwilligerswerking t.o.v. pilootproject}
