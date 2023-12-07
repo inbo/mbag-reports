@@ -135,7 +135,7 @@ include_graphics(file.path("media", "data_exploratie",
 ### Inleiding
 
 Tellingen worden verricht door zowel vrijwilligers als professionele tellers.
-In 2022 werden elf telpunten in De Moeren zowel door vrijwilligers als door een professionele teller in dezelfde telperiodes geteld.
+In 2022 werden elf telpunten in De Moeren zowel door vrijwilligers ($n = 7$) als door een professionele teller ($n = 1$) in dezelfde telperiodes geteld.
 Met deze opzet wilden we achterhalen of tellingen van vrijwilligers en een professionele teller gelijkaardige resultaten opleveren.
 We waren vooral geïnteresseerd in waarnemingen met broedcode groter dan nul, omdat waarnemingen met broedcode 0 meer op toeval berust zijn (trekkers/pleisteraars of roofvogels).
 
@@ -143,10 +143,10 @@ We waren vooral geïnteresseerd in waarnemingen met broedcode groter dan nul, om
 
 In totaal werden tien telpunten in vier telperiodes en één telpunt in drie telperiodes geteld door zowel een vrijwilliger als een professionele teller.
 We beschikten dus over `r 10 * 4 + 3` gepaarde datapunten.
-De telpunten werden geteld door zeven verschillende vrijwilligers die geclassificeerd konden worden als "beginner" en "ervaren".
+De telpunten werden geteld door zeven verschillende vrijwilligers die verder geclassificeerd konden worden als "beginner" en "ervaren".
 
 We wilden achterhalen of tellingen van vrijwilligers en een professionele teller gelijkaardige resultaten opleveren.
-Dit deden we door het aantal soorten en aantal waarnemingen te vergelijken tussen beide.
+Dit deden we door het aantal soorten en aantal waarnemingen van vogels te vergelijken tussen beide.
 Verder keken we ook naar het effect van broedcode en ervaring van de vrijwilligers.
 Analyses werden gedaan via Bayesiaanse generalized linear mixed models (GLMM's) met de **brms** package v2.19.0 [@bürkner2017; @bürkner2018; @bürkner2021] met standaard priors.
 We vergeleken telkens drie verschillende responsdistributies (en link functies $g()$).
@@ -161,14 +161,13 @@ We stelden de volgende onderzoeksvragen en bijbehorende modellen op:
 
 Is er een verschil in het aantal soorten/waarnemingen met broedcode groter dan nul gezien door de professionele teller vs. de vrijwilligers?
 
-Beschouw $Y_{ijk}$ een observatie $i$ van een aantal soorten/waarnemingen in plot $j$ en telperiode $k$.
+Beschouw $Y_{ijk}$ een observatie $i$ van een aantal soorten/waarnemingen van telpunt $j$ in telperiode $k$.
 Deze observaties zijn door zowel een professionele teller $X_{status} = 0$ als een vrijwillige teller $X_{status} = 1$ gedaan.
-We voegen een random effect toe van telperiode genest in plot $b_{1}$.
-Bovendien kunnen aantallen van eenzelfde plot meer op elkaar lijken dan aantallen dan aantallen van verschillende telpunten.
-We voegen ook een random effect toe van plot $b_{2}$.
+Aantallen van eenzelfde telpunt kunnen meer op elkaar lijken dan aantallen van verschillende telpunten.
+We voegen ook een random effect toe van telpunt ($b_{0,j}$) en een random effect van telperiode genest in telpunt ($b_{0,j:k}$).
 
 $$
-g(\text{E}(Y_{ijk})) = \beta_0 + \beta_{1}X_{status, i} + b_{1,jk} + b_{2,k}
+g(\text{E}(Y_{ijk})) = \beta_0 + \beta_{1}X_{status, i} + b_{0,j} + b_{0,j:k}
 $$
 
 We besluiten dat er een significant verschil is als het 95 % credible interval (CI) van $\beta_1$ nul niet bevat.
@@ -180,7 +179,7 @@ Kan een verschil in aantal soorten of aantal waarnemingen tussen professionele e
 We voegden de data met broedcode nul toe en maakten een extra dummyvariabele aan die een onderscheid maakt tussen data met broedcode nul $X_{broedcode} = 0$ en data met broedcode groter dan nul.
 
 $$
-g(\text{E}(Y_{ijk})) = \beta_0 + \beta_{1}X_{status, i} + \beta_{2}X_{broedcode, i} + \beta_{3}X_{status, i} \times X_{broedcode, i}+ b_{1,jk} + b_{2,k}
+g(\text{E}(Y_{ijk})) = \beta_0 + \beta_{1}X_{status, i} + \beta_{2}X_{broedcode, i} + \beta_{3}X_{status, i} \times X_{broedcode, i} + b_{0,j} + b_{0,j:k}
 $$
 
 We besluiten dat er een significant verschillend effect van broedcode is als het 95 % credible interval van $\beta_3$ nul niet bevat.
@@ -192,7 +191,7 @@ Is er een verschil in het aantal soorten of aantal waarnemingen met broedcode gr
 De professionele teller is ervaren, maar bij de vrijwilligers hebben we twee ervaringscategorieën: "beginner" ($X_{ervaring} = 0$) en "ervaren" ($X_{ervaring} = 1$).
 
 $$
-g(\text{E}(Y_{ijk})) = \beta_0 + \beta_{1}X_{status, i} + \beta_{2}X_{ervaring, i} + \beta_{3}X_{status, i} \times X_{ervaring, i} + b_{1,jk} + b_{2,k}
+g(\text{E}(Y_{ijk})) = \beta_0 + \beta_{1}X_{status, i} + \beta_{2}X_{ervaring, i} + \beta_{3}X_{status, i} \times X_{ervaring, i} + b_{0,j} + b_{0,j:k}
 $$
 
 We besluiten dat er een significant verschillend effect van broedcode is als het 95 % credible interval van $\beta_3$ nul niet bevat.
@@ -202,23 +201,23 @@ We besluiten dat er een significant verschillend effect van broedcode is als het
 Ten slotte onderzochten we het verband tussen het aantal soorten en het aantal waarnemingen met broedcode groter dan nul.
 Is er een verschil in de mate waarin aantal soorten toe- of afneemt met het aantal waarnemingen voor professionele teller in vergelijking met vrijwilligers?
 
-Beschouw $Y_{ij}$ een observatie $i$ van een aantal soorten in plot $j$ en $X_{wnm}$ een variabele van het aantal waarnemingen.
+Beschouw $Y_{ij}$ een observatie $i$ van een aantal soorten in telpunt $j$ en $X_{wnm}$ een variabele van het aantal waarnemingen.
 We fitten een model waarbij de intercepten voor zowel de professionele teller ($\beta_0$) als de vrijwilligers ($\beta_0 + \beta_2$) gelijk zijn aan nul (nul soorten bij nul waarnemingen).
 We hebben dus enkel een slope voor de professionele teller ($\beta_1$) en een slope voor de vrijwilligers ($\beta_1 + \beta_3$).
-We voegden random slopes toe per plot $j$ voor professionelen ($b_1$) en vrijwilligers ($b_1 + b_2$).
+We voegden random slopes toe per telpunt $j$ voor professionelen ($b_1$) en vrijwilligers ($b_1 + b_2$).
 
 $$
-\text{E}(Y_{ij}) = \beta_{1}\ln{(X_{wnm, i})} + \beta_{2}\ln{(X_{wnm, i})}\times X_{status, i}  + b_{1,j}\ln{(X_{wnm, i})} + b_{2,j}\ln{(X_{wnm, i})}\times X_{status, i}
+\text{E}(Y_{ij}) = \beta_{1}\ln{(X_{wnm, i})} + \beta_{3}\ln{(X_{wnm, i})}\times X_{status, i}  + b_{1,j}\ln{(X_{wnm, i})} + b_{2,j}\ln{(X_{wnm, i})}\times X_{status, i}
 $$
 
-We besluiten dat er een significant verschil is als het 95 % credible interval van $\beta_2$ nul niet bevat.
+We besluiten dat er een significant verschil is als het 95 % credible interval van $\beta_3$ nul niet bevat.
 
-We bemonsterden de posterior verdelingen voor de modellen met drie Markov Chain Monte Carlo (MCMC) chains, die elk 4000 iteraties draaiden, waarvan de eerste 2000 werden verwijderd als burn-in.
+We bemonsterden de posterior verdelingen voor de parameters in de modellen met drie Markov Chain Monte Carlo (MCMC) chains, die elk 4000 iteraties draaiden, waarvan de eerste 2000 werden verwijderd als burn-in.
 We onderzochten MCMC-convergentie door visuele beoordeling van trace plots en posterior densiteiten.
 We onderzochten ook de 'potential scale reduction factors' [@gelman1992] voor elke scalaire parameter in het model zoals voorgesteld door [@gelman2013].
 Ze lagen allemaal dicht bij 1, zoals vereist.
 
-Via leave-one-out cross-validation (CV) werd de 'expected log pointwise predictive density' (ELPD) berekend en vergeleken tussen verschillende modellen: (1) welke responsdistributie het best paste bij de data en (2) of het random effect van plot $b_{2}$ noodzakelijk was of niet (niet gedaan bij correlatie model).
+Via leave-one-out cross-validation (CV) werd de 'expected log pointwise predictive density' (ELPD) berekend en vergeleken tussen verschillende modellen: (1) welke responsdistributie het best paste bij de data en (2) of het random effect van telpunt $b_{0,j}$ noodzakelijk was of niet (n.v.t. bij het correlatiemodel).
 
 De model fit werd bevestigd op basis van 'posterior predictive checks' waarbij we de geobserveerde uitkomst vergeleken met gesimuleerde datasets van de 'posterior predictive distribution'.
 
@@ -246,8 +245,8 @@ Dit gaf eenvoudig interpreteerbare resultaten en was ook vaak niet problematisch
 In verschillende gevallen werden de resultaten van de Poisson en Negatief binomiaal modellen vergeleken met het Normaal model.
 Na omrekenen gaven deze modellen gelijkaardige resultaten.
 Bovendien waren we telkens geïnteresseerd in specifieke hypotheses.
-Hoewel precieze credible intervals van de verschillende modellen wel verschilden, gaven ze wel een eenduidig antwoord op onze vragen.
-Deze waren ook telkens in lijn met de data exploratie.
+Hoewel precieze credible intervals van de verschillende modellen wel verschilden, gaven ze telkens een eenduidig antwoord op onze vragen.
+Deze waren ook steeds in lijn met de data exploratie.
 
 Ten slotte kozen we het aantal soorten en het aantal waarnemingen als maten om te achterhalen of tellingen van vrijwilligers en de professionele teller gelijkaardige resultaten opleverden.
 Dit zijn geen onafhankelijke maten.
