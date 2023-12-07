@@ -120,12 +120,12 @@ include_graphics(file.path("media", "data_exploratie",
                            "soortenfreqs_zoogdieren_2022_2023.pdf"))
 ```
 
-```{r aantallen-haas, out.width = "100%", fig.cap = "Aantal individuen van Haas gezien tijdens het MAS pilootproject."}
+```{r aantallen-haas, out.width = "100%", fig.cap = "Aantal individuen van Haas gezien tijdens het MAS pilootproject. R1: 01/04--20/04, R2: 21/04--10/05, R3: 11/05--10/06, R4: 21/06--15/07."}
 include_graphics(file.path("media", "data_exploratie",
                            "aantallen_haas.pdf"))
 ```
 
-```{r relfreqs-haas, out.width = "100%", fig.cap = "Relatieve frequentie van de Haas in verschillende strata van 2022-2023."}
+```{r relfreqs-haas, out.width = "100%", fig.cap = "Relatieve frequentie van de Haas in verschillende strata van 2022-2023. HOL: half-open landschap, OL: open landschap, binnen: binnen soortbeschermingsplan (SBP), buiten: buiten SBP."}
 include_graphics(file.path("media", "data_exploratie",
                            "soortenfreqs_haas_per_strat.pdf"))
 ```
