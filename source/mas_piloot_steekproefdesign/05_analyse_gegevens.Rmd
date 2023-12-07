@@ -101,7 +101,7 @@ include_graphics(file.path("media", "data_exploratie",
                            "verschilfreq_total_mas_2022_2023.pdf"))
 ```
 
-```{r relfreqs-strata, out.width = "100%", fig.cap = "Relatieve frequentie van de doelsoorten in verschillende strata van 2022-2023. HOL: half-open landschap, OL: open landschap, binnen: binnen soortbeschermingsplan (SBP), buiten: buiten SBP. Elke punt is een relatieve frequentie in een bepaalde telperiode, stratum en regio."}
+```{r relfreqs-strata, out.width = "100%", fig.cap = "Relatieve frequentie van de doelsoorten in verschillende strata van 2022-2023. HOL: halfopen landschap, OL: open landschap, binnen: binnen soortbeschermingsplan (SBP), buiten: buiten SBP. Elke punt is een relatieve frequentie in een bepaalde telperiode, stratum en regio."}
 include_graphics(file.path("media", "data_exploratie",
                            "soortenfreqs_doel_per_strat.pdf"))
 ```
@@ -125,7 +125,7 @@ include_graphics(file.path("media", "data_exploratie",
                            "aantallen_haas.pdf"))
 ```
 
-```{r relfreqs-haas, out.width = "100%", fig.cap = "Relatieve frequentie van de Haas in verschillende strata van 2022-2023. HOL: half-open landschap, OL: open landschap, binnen: binnen soortbeschermingsplan (SBP), buiten: buiten SBP."}
+```{r relfreqs-haas, out.width = "100%", fig.cap = "Relatieve frequentie van de Haas in verschillende strata van 2022-2023. HOL: halfopen landschap, OL: open landschap, binnen: binnen soortbeschermingsplan (SBP), buiten: buiten SBP."}
 include_graphics(file.path("media", "data_exploratie",
                            "soortenfreqs_haas_per_strat.pdf"))
 ```
@@ -264,16 +264,17 @@ We kunnen concluderen dat het effect van teller status belangrijk kan zijn het v
 
 ## Berekening verklarende variabelen {#verklarende-variabelen}
 
-Binnen deze studie hebben we verschillende verklarende variabelen verzameld mogelijk die van belang zijn voor akkervogels.
+Binnen deze studie hebben we verschillende verklarende variabelen verzameld die potentieel van belang zijn voor akkervogels.
 We onderscheiden primaire, secundaire en tertiare variabelen.
 Primaire variabelen zijn variabelen die binnen het kader van de pilootstudie de hoogste interesse hebben om te weten wat het effect is op het aantal of de aanwezigheid van bepaalde akkervogels.
-Deze variabelen zijn sterk gelinkt aan het beleid.
+Deze variabelen zijn sterk gelinkt aan beleid.
 Secundaire variabelen zijn variabelen die mogelijk ook belangrijk zijn voor akkervogels, maar die vooral nodig zijn om modellen vollediger te maken.
 Ze zijn minder de focus van bepaalde, specifieke onderzoeksvragen.
 Deze variabelen zijn sterk gelinkt aan het voorkomen van soorten.
 Tertaire variabelen zijn structurele variabelen die eerder dienen om te corrigeren voor het monitoringsprotocol in tijd en ruimte bijvoorbeeld via random effects in mixed models.
 Deze variabelen zijn sterk gelinkt aan het studiedesign.
-Een overzicht wordt gegeven in Tabel \@ref(tab:verklarende-vars-tab) \textcolor{red}{en referenties naar de gebruikte kaartlagen in Bijlage x.}
+Een overzicht wordt gegeven in Tabel \@ref(tab:verklarende-vars-tab).
+\textcolor{red}{Referenties naar de gebruikte kaartlagen zijn beschikbaar in Bijlage x.}
 
 ### Primaire variabelen {#prim-verklarende-variabelen}
 
@@ -368,10 +369,12 @@ vrtlt_groepen %>%
 **1. Regio**\
 De regio's van het pilootmeetnet (De Moeren en Oostelijke leemstreek).
 
-**2. Openheid landschap 1000 m**\
-\textcolor{red}{uitleg al in hoofdstuk 4??, maar dan voor 300 m en categorisch}
+**2. Openheid landschap**\
+In Sectie \@ref(piloot-stratificatie) werd reeds uitgelegd hoe per telpunt de openheid van het landschap werd berekend op schaal van 300 m.
+Daarna werd deze continue variabele opgedeeld in verschillende klassen (OL: open landschap, HOL: halfopen landschap).
 
-\textcolor{red}{continu 1000 m ...}
+Naast deze categorische variabele berekenden we ook de openheid van het landschap als continue variabele op een schaal van 1000 m.
+Deze schaal zou meer relevant zijn voor akkervogels \textcolor{red}{(REF)} en een continue variabele bevat meer informatie voor gedetailleerdere statistische analyses en het identificeren van subtiele patronen in de data.
 
 **3. Soortbeschermingsplan**\
 \textcolor{red}{uitleg al in hoofdstuk 4??}

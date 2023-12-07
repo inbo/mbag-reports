@@ -192,7 +192,7 @@ Werkwijze:
 -   berekening "canopy height model" (CHM) door verschil te berekenen tussen DSM en DTM. Dit geeft dan hoogte boven het maaiveld (gebouwen, bodem, struiken ...).
 -   berekening van "positive topographic openness" (dit is een waarde tussen 0 en 2 in radialen) door voor elke rastercel van het CHM in 8 kijkrichtingen na te gaan wat de gemiddelde hoek is t.o.v. het zenit binnen een straal van 300 m. Deze hoek geeft aan hoe open het landschap is. Indien volledig open is de hoek 90° (of 1.57 radialen).
 -   met dit resultaat de gemiddelde (van de gemiddelde) topografische openheid berekenen in een cirkelvormig landschap rond elke cel met straal 300 m.
--   deze gemiddelden zijn daarna ingedeeld in drie klassen:
+-   deze gemiddelden zijn daarna ingedeeld in vier klassen:
     -   OL: open landschap (\> 86,5°),
     -   HOL: halfopen landschap (77,3° - 86,5°),
     -   HGL: halfgesloten landschap (71,6° - 77,3°)
