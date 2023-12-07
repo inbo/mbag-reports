@@ -49,7 +49,7 @@ include_graphics(file.path("media", "data_exploratie",
 
 ### Broedcodes
 
-Het gebruik van het scoren van verschillende broedcodes bij elke waarneming geeft het voordeel dat we uitspraken kunnen doen in termen van aantal broedgevallen door toevallige waarnemingen van een soort (bv. een overvliegend individu) uit te sluiten (broedcode nul).
+Het gebruik van het scoren van verschillende broedcodes bij elke waarneming geeft het voordeel dat we uitspraken kunnen doen in termen van aantal broedgevallen door toevallige waarnemingen van een soort (bv. een overvliegend individu) uit te sluiten (= broedcode nul).
 \textcolor{red}{referenties?} We beschouwen tien doelsoorten: Geelgors, Gele kwikstaart, Grasmus, Kievit, Kneu, Kwartel, Ringmus, Torenvalk, Veldleeuwerik en Witte kwikstaart.
 Als we kijken naar de data van 2022-2023, zien we dat de rapportage van broedcodes sterk kan verschillen van soort tot soort (Fig. \@ref(fig:broedcodes)).
 \textcolor{red}{bespreking Johannes? bv verschil witte kwik ringmus, torenvalk, veldleeuwerik? en uitleggen dat we voor roofvogels geen rekening houden met broedcodes}
