@@ -68,14 +68,14 @@ $$
 P = \sum_{i=1}^{N} I(n_i > 0) / N
 $$
 
-Waarbij $N$ het totaal aantal telpunten is in telperiode, jaar en regio en $n_i$ het aantal individuen van de beschouwde soort waargenomen aan telpunt $i$.
+Waarbij $N$ het totaal aantal telpunten is in een bepaalde telperiode, jaar en regio en $n_i$ het aantal individuen van de beschouwde soort waargenomen aan telpunt $i$.
 $I(\cdot)$ is de indicatorfunctie die 1 geeft als $n_i > 0$ en 0 anderzijds.
 We selecteerden enkel waarnemingen met broedcode groter dan nul.
 Voor roofvogels hielden we geen rekening met broedcode, \textcolor{red}{omdat?}.
 
-Figuur \@ref(fig:relfreqs-2018-2021) toont de relatieve frequenties van de 20 meest frequente soorten tussen 2018-2021 (gemiddeld over telperiode, jaar en regio).
+Figuur \@ref(fig:relfreqs-2018-2021) toont de relatieve frequenties van de 20 meest frequente soorten tussen 2018-2021 (gemiddeld per telperiode, jaar en regio).
 Tijdens het pilootproject (2022-2023) zien we andere soorten naar voor komen en ook lagere frequenties (Fig. \@ref(fig:relfreqs-2022-2023)).
-Dit is omdat we het controlegebied hadden toegevoegd (buiten sbp) waar minder vogels voorkomen.
+Dit is omdat we het controlegebied hadden toegevoegd (buiten soorbeschermingsplan (SBP)) waar minder vogels voorkomen.
 Het is bovendien duidelijk dat bepaalde soorten algemener zijn in de ene of de andere regio.
 Als we het verschil in relatieve frequentie tussen De Moeren en de Oostelijke leemstreek nemen, zien we om welke soorten het gaat (Fign \@ref(fig:verschilfreqs-2018-2021), \@ref(fig:verschilfreqs-2022-2023)).
 \textcolor{red}{Typische soorten van open landschap, water en rietkragen werden meer gezien in De Moeren zoals Kievit, Bruine kiekendief, Rietzanger, Wilde eend Kleine karrekiet enzovoort. In de Oostelijke leemstreek zien we dan weer soorten van meer halfopen landschap en kleine landschapselementen zoals Veldleeuwerik, Geelgors, Vink enzovoort.} Ook binnen specifieke strata is er voor sommige soorten een groot verschil in frequentie (Fig. \@ref(fig:relfreqs-strata)).
@@ -101,7 +101,7 @@ include_graphics(file.path("media", "data_exploratie",
                            "verschilfreq_total_mas_2022_2023.pdf"))
 ```
 
-```{r relfreqs-strata, out.width = "100%", fig.cap = "Relatieve frequentie van de doelsoorten in verschillende strata van 2022-2023. Elke punt is een relatieve frequentie in een bepaalde telperiode, stratum en regio."}
+```{r relfreqs-strata, out.width = "100%", fig.cap = "Relatieve frequentie van de doelsoorten in verschillende strata van 2022-2023. HOL: half-open landschap, OL: open landschap, binnen: binnen soortbeschermingsplan (SBP), buiten: buiten SBP. Elke punt is een relatieve frequentie in een bepaalde telperiode, stratum en regio."}
 include_graphics(file.path("media", "data_exploratie",
                            "soortenfreqs_doel_per_strat.pdf"))
 ```
