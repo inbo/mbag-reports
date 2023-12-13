@@ -377,8 +377,7 @@ Naast deze categorische variabele berekenden we ook de openheid van het landscha
 Deze schaal zou meer relevant zijn voor akkervogels \textcolor{red}{(REF)} en een continue variabele bevat meer informatie voor gedetailleerdere statistische analyses en het identificeren van subtiele patronen in de data.
 
 **3. Soortbeschermingsplan**\
-\textcolor{red}{uitleg al in hoofdstuk 4??}
-
+Categorische variabele binnen of buiten soortbeschermingsplan akkervogels (SBP).
 \textcolor{red}{Zowel binnen kerngebied als zoekzones zijn er soortbeschermende maatregelen (SB BO’s) gelegd (zie kaart VLM BO’s). In theorie waren deze maatregelen vooral bedoeld voor kerngebied, en zal daar een hogere dichtheid (bedekkingsgraad) liggen, maar de VLM heeft het toegelaten om ook in zoekzones deze maatregelen te sluiten (al was dat minder de prioriteit). Daar werd bv. in de Moeren geen rekening mee gehouden, en werden erg veel SB BO’s gelegd, ook omdat dit gebied wél kerngebied was van plan kiekendief (SBP Grauwe Kiekendief) waardoor er wel veel BO’s gesloten zijn. In de toekomst heeft VLM beloofd om meer/enkel rekening te houden met kerngebied. Voor het pilootmeetnet namen we de kerngebieden samen als onderzoeksgebied (binnen sbp) en alles hierbuiten beschouwen we als controle (buiten sbp).}
 
 **4. Status teller**\
@@ -427,7 +426,7 @@ Deze variabelen worden dus berekend op basis van de data van de tellingen zelf.
 We berekenden een maat voor de oppervlakte van nabije natuurgebieden waarbij we gebieden dichtbij meer gewicht geven dan gebieden veraf, en grotere gebieden meer gewicht geven dan kleine binnen een straal van 3 km [@moilanen2002].
 
 We selecteerden hiervoor alle natuurgebieden in Vlaanderen, Nederland, Frankrijk en Wallonië binnen een buffer van 20 km rond de perimeters van het pilootproject (Fig. \@ref(fig:natuurgebieden-perimeters)).
-\textcolor{red}{tabel met kaartlagen toevoegen} We splitsten alle gebieden op in aparte polygonen en berekenden de oppervlakte van elke polygoon en het middelpunt.
+\textcolor{red}{Referenties naar de gebruikte kaartlagen zijn beschikbaar in Bijlage x.} We splitsten alle gebieden op in aparte polygonen en berekenden de oppervlakte van elke polygoon en het middelpunt.
 
 ```{r natuurgebieden-perimeters, out.width = "100%", fig.cap = "Selectie van natuurgebieden in Vlaanderen, Nederland, Frankrijk en Wallonië binnen een buffer van 20 km rond de perimeters van het pilootproject."}
 include_graphics(file.path("media", "verklarende_variabelen",
@@ -554,7 +553,9 @@ We zien een groter aandeel soortbeschermingsplannen binnen sbp dan buiten sbp (F
 Ook zien we een verschillende trend over de jaren.
 Om deze beter te begrijpen, bekeken we de oppervlakte aan soortbeschermingsplannen binnen de volledige perimeter van de pilootstudie over de jaren (Fig. \@ref(fig:total-propsb)).
 We zien voor elk stratum een duidelijke toename tot 2022 en dan een lichte afname naar 2023.
-\textcolor{red}{wat houdt dit in voor de statistische analyses?}
+Dit houdt in dat we de correlatie tussen het aantal/de aanwezigheid van bepaalde akkervogels en soortbeschermingsmaatregelen zowel via kunnen nagaan via de categorische variabele `sbp` (binnen of buiten SBP) of via de continue variabele `area_prop_sb` (oppervlakte soortbeschermingsmaatregelen).
+Resultaten o.b.v. de eerste variable zullen eenvoudiger te interpreteren zijn, terwijl de tweede variabele meer informatie kan bevatten.
+Dat neemt niet weg dat de tweede variabele kan gecategoriseerd worden indien gewenst.
 
 ```{r sbp-areapropsb, out.width = "90%", fig.cap = "Relatie tussen oppervlakte-aandeel soortbeschermingsmaatregelen en binnen of buiten sbp per regio per jaar. Elk lijntje is een telpunt."}
 include_graphics(file.path("media", "data_exploratie",
@@ -597,46 +598,46 @@ summary_var_tab %>%
 
 \textcolor{red}{doen?}
 
-### Densiteitsschattingen en detectiekans {#densiteitsschattingen}
+### Abundanties en detectiekans {#intro-detectiekans}
 
-\textcolor{red}{densiteitsschattingen via distance sampling}
+Er zijn verschillende manieren om het aantal dieren in een populatie (= abundantie) te schatten.
+In de praktijk is het quasi nooit mogelijk om elk individu te tellen.
+Dieren staan constant in beweging en interageren op allerlei manier met elkaar en hun omgeving.
+Afhankelijk van de eigenschappen van een soort en de omgeving kan de de detectiekans van een soort verschillen.
+Een idee over de detectiekans van een soort is bijgevolg van belang om een schatting van de volledige populatie te maken vanuit de steekproef.
+Een bekende techniek om abundanties te schatten is capture-recapture.
+Hierbij zit de informatie over de detectiekans in de vangstgeschiedenis van verschillende individuen.
+Een andere techniek is distance sampling.
+Hierbij zit informatie over detecteerbaarheid vervat in de detectieafstanden.
+Het onderliggende idee van beide benaderingen is dat, als we de detectiekans kunnen schatten voor de individuen die we detecteren, we ook kunnen schatten hoeveel er niet opgemerkt werden.
+Op basis van die schatting van detectiekans, kunnen we de waargenomen tellingen corrigeren voor individuen die op de bemonsterde telpunten zijn gemist.
+Het voordeel van distance sampling ten opzichte van capture-recapture is dat het niet vereist is dat individuen worden gemarkeerd en opnieuw worden gevangen/waargenomen in de loop van de tijd.
+Bovendien kan slechts een enkele steekproef van de populatie voldoende zijn [@buckland2015; @buckland2001].
 
 #### Inleiding tot distance sampling {#inleiding-distance}
 
 Distance sampling is een techniek om de abundantie en/of densiteit van biologische populaties te schatten op basis van een steekproef uit de populatie.
-Het is namelijk in de praktijk quasi nooit mogelijk om elk individu te tellen.
-Dieren staan constant in beweging en interageren op allerlei manier met elkaar en hun omgeving.
-Afhankelijk van de eigenschappen van een soort en de omgeving kan de de detectiekans van een soort verschillen.
-Een idee over de detectiekans van een soort is bijgevolg van belang om een schatting van de volledige populatie te maken vanuit de steekproef.
-Een andere bekende techniek om abundanties te schatten is capture-recapture.
-Hierbij zit de informatie over de detectiekans in de vangstgeschiedenis van verschillende individuen.
-In distance sampling daarentegen zit informatie over detecteerbaarheid vervat in de detectieafstanden.
-Het onderliggende idee van beide benaderingen is dat, als we de detectiekans kunnen schatten voor de individuen die we detecteren, we ook kunnen schatten hoeveel er niet opgemerkt werden.
-Op basis van die schatting van detectiekans, kunnen we de waargenomen tellingen corrigeren voor individuen die op de bemonsterde telpunten zijn gemist.
-Het voordeel van distance sampling ten opzichte van capture-recapture is dat het niet vereist is dat individuen worden gemarkeerd en opnieuw worden gevangen/waargenomen in de loop van de tijd.
-Bovendien kan slechts een enkele steekproef van de populatie voldoende zijn [@buckland2015; @buckland2001].\
-
 Wanneer we het over distance sampling hebben in dit rapport, spreken we eigenlijk over conventional distance sampling (CDS).
 In CDS worden de data gebundeld voor het schatten van de detectiekans.
 Dit is in tegenstelling tot hierarchical distance sampling (HDS), waarbij de focus ligt op lokale populatiegroottes van de steekproefeenheden door het maken van expliciete modellen die de variatie in populatiegrootte tussen steekproefeenheden verklaren [@kéry2016].
 HDS wordt hier verder niet besproken.
 De belangrijkste aannames van de CDS-methode zijn [@buckland2001, hoofdstuk 2]:
 
-1.  Dieren zijn uniform verdeeld over de ruimte (steekproefdesign)\
+1.  Dieren zijn uniform verdeeld over de ruimte (*steekproefdesign*)\
     (= random plaatsing van steekproefeenheden t.o.v. verdeling dieren)
 
-2.  Detectiekans is een functie van afstand en is gelijk aan 1 op afstand 0 (model)
+2.  Detectiekans is een functie van afstand en is gelijk aan 1 op afstand 0 (*model*)
 
-3.  Individuen worden gedetecteerd op hun oorspronkelijke locatie (model)
+3.  Individuen worden gedetecteerd op hun oorspronkelijke locatie (*model*)
 
-4.  Afstanden worden foutloos gemeten (model)
+4.  Afstanden worden foutloos gemeten (*model*)
 
 Distance sampling is erg populair bij het tellen van vogels met behulp van punttransecten [@rosenstock2002; @buckland2001; @roodbergen2011].
 Een punttransect is een cirkelvormige plot met radius $w$ waar een waarnemer vanuit een centraal punt de radiale afstand $r_i$ meet tot elk van de gedetecteerde individuen $i = 1, ..., n$ met $n$ het totaal aantal waarnemingen (Fig. \@ref(fig:distance-methode)A).
 $w$ wordt ook wel de afknotafstand genoemd.
 
 Om de detectiekans te schatten maak je een model voor de probabiliteit dat een individu van een soort wordt gedetecteerd gegeven we de afstand tot het individu weten.
-Dit model is de detectiefunctie (ook wel detectiecurve genoemd) en wordt genoteerd als $g(r;\boldsymbol \theta)$ met $r$ de radiale afstand van waarneming tot teller/telpunt en $\boldsymbol \theta$ een vector van parameters die geschat moeten worden.
+Dit model is de detectiefunctie (ook wel detectiecurve genoemd) en wordt genoteerd als $g(r;\boldsymbol \theta)$ met $r$ de radiale afstand van waarneming tot teller/telpunt en $\boldsymbol \theta$ een vector van parameters die geschat moet worden.
 Het doel is de gemiddelde kans op detectie ($p$) te bepalen.
 Dit is het gemiddelde over afstand van 0 m tot de afknotafstand $w$, in ons geval $w = 300$.
 De term $\frac{2r}{w^2}$ is nodig om rekening te houden met de geometrie van de plot (cirkel).
@@ -652,7 +653,7 @@ Moest het aantal waarnemingen niet afnemen over de afstand, zouden de afstanden 
 Alles zou gezien zijn en de detectiekans op elke afstand is gelijk aan 1.
 De blauwe curve is een half-normale detectiecurve gefit op de data.
 De oppervlakte onder de curve binnen de box is de gemiddelde detectiekans $p$ (de geschatte fractie dieren die gezien zijn).
-De oppervlakte boven de curve binnen de box de geschatte fractie dieren die gemist zijn.
+De oppervlakte boven de curve binnen de box is de geschatte fractie dieren die gemist zijn.
 Als we de gemiddelde detectiekans weten, kunnen we dus eenvoudig berekenen hoeveel dieren we verwachten als we uitgaan van een uniforme verdeling van dieren over de telcirkel (zie verder).
 We controleren er dus voor dat het moeilijker is om dieren te detecteren op grotere afstand, terwijl we er van uitgaan dat er in werkelijkheid evenveel zitten op grotere als op kleinere afstanden.
 
@@ -728,7 +729,7 @@ De onzekerheid op de abundantie- en densiteitsschattingen komt van twee origines
 
 #### Methodiek densiteitsschattingen
 
-We voerden de distance sampling analyses uit met behulp van de **Distance** package [@R-Distance; @miller2019].
+We voerden de distance sampling analyses uit met behulp van de **Distance** package [@R-Distance; @miller2019] in R.
 We schatten (1) densiteiten per jaar (2018-2023) per regio (De Moeren, Oostelijke leemstreek) en (2) densiteiten per stratum (OL, HOL en binnen en buiten sbp) per regio binnen de pilootstudie (2022-2023).
 We beschouwen enkel waarnemingen van Veldleeuwerik met broedcode groter dan nul en houden ook rekening met het broedseizoen van de soort.
 Alle vier de verschillende telperiodes vallen binnen het broedseizoen van de soort (1 april - 15 juli) zodat we de data van alle telperiodes binnen het jaar konden gebruiken.
@@ -774,7 +775,43 @@ Indien de 'goodness of fit' niet goed was, werd het finale model opnieuw gefit w
 Densiteitsschattingen werden omgezet naar aantallen per 100 ha.
 De onzekerheid op de densiteitsschattingen werd berekend m.b.v. de standaard opties in de `ds()` functie.
 Zie @miller2019 en verwijzingen daarin voor meer informatie over de precieze berekeningen.
-De onzekerheid op de resultaten zijn telkens 95 % betrouwbaarheidsintervallen.
+Als onzekerheid op de resultaten tonen we telkens 95 % betrouwbaarheidsintervallen.
+Dit zijn log-normale betrouwbaarheidsintervallen geconstrueerd met behulp van een Satterthwaite-benadering voor de vrijheidsgraden [@buckland2001, p. 77].
+Dit wil zeggen dat we betrouwbaarheidsintervallen voor verschillen tussen densiteiten kunnen benaderen als volgt:
+
+Beschouw ter illustratie twee densiteitsschattingen $\hat{D}_1$ met standaard error $\hat{se}(\hat{D}_1)$ en $\hat{D}_2$ met standaard error $\hat{se}(\hat{D}_2)$.
+We willen een schatting van het verschil $\hat{D}_{v} = \hat{D}_1 - \hat{D}_2$ met $100(1-2\alpha)$ % betrouwbaarheidsinterval
+
+$$
+(\hat{D}_{v}/C, \hat{D}_{v} \cdot C)
+$$
+
+met
+
+$$
+\begin{align}
+C &= \exp\left(z_\alpha \cdot \hat{se}(\log(\hat{D}_{v})) \right)\\
+  &= \exp\left(z_\alpha \cdot \sqrt{\hat{var}(\log(\hat{D}_{v}))} \right)
+\end{align}
+$$
+
+In ons geval zal $\alpha = 0.025$ zijn voor een 95 % betrouwbaarheidsinterval waarbij $z_\alpha$ de z-score die overeenkomt met het buitenste 2.5 % gebied van de standaard normale verdeling ($Z \sim N(0, 1)$).
+De variantie van het natuurlijk logaritme het verschil $\hat{var}(\log(\hat{D}_{v}))$ kan als volgt berekend worden
+
+$$
+\hat{var}(\log(\hat{D}_{v})) = \hat{var}(\log(\hat{D}_1)) + \hat{var}(\log(\hat{D}_2))
+$$
+
+waarbij
+
+$$
+\hat{var}(\log(\hat{D}_1)) = \log\left(1 + \left( \frac{\hat{se}(\hat{D}_1)}{\hat{D}_1} \right)^2 \right)
+$$
+
+en identiek voor $\hat{var}(\log(\hat{D}_2))$
+
+Dit zal niet exact dezelfde resultaten geven als geïmplementeerd in **Distance** omdat we hier geen gebruik maken van de Satterthwaite-benadering.
+Desalnietemin zal het wel zeer dicht in de buurt liggen, vooral als we veel datapunten hebben.
 
 #### Resultaten densiteitsschattingen
 
@@ -1014,11 +1051,11 @@ Veldleeuwerikken vliegen gemakkelijk op bij verstoring waardoor we minder waarne
 Bovendien is de soort nog gemakkelijk te horen op grotere afstand zonder exact de locatie te weten.
 Hierdoor zien we opnieuw een stijging rond 250 m.
 @roodbergen2011 fitten daarom voor deze soort een detectiecurve m.b.v. afstandsintervallen.
-Wij groepeerden daarom de afstanden per 50 m.
+Wij groepeerden de afstanden per 50 m.
 Hoewel de fit er visueel beter uitzag, waren de densiteitsschattingen en hun onzekerheid quasi identiek aan de eerdere resultaten zonder groepering (resultaten niet getoond).
 De toepasbaarheid van de methodiek zal dus sterk verschillen van soort tot soort.
-Dit zien we bijvoorbeeld ook als we Kneu en Kievit vergelijken (Fig. \@ref(fig:detectiekans-vergelijking)) waarbij deze laatste ook een soort is die meestal op grotere afstanden wordt gezien o.w.v. het gedrag van de soort.
-Hoe dan ook wil dit niet zeggen dat we de resultaten niet kunnen gebruiken.
+Dit zien we bijvoorbeeld ook als we Kneu en Kievit vergelijken (Fig. \@ref(fig:detectiekans-vergelijking)), waarbij deze laatste ook een soort is die meestal op grotere afstanden wordt gezien o.w.v. het gedrag van de soort.
+Dit wil niet zeggen dat we deze resultaten niet kunnen gebruiken.
 Voor probleemgevallen zal de detectiefunctie niet dalen in het begin en de detectiekans zal dicht bij één liggen.
 Dit zorgt ervoor dat de schatting van de densiteit nog altijd kan gebruikt worden als minimumschatting waarbij de gecorrigeerde aantallen zeer dicht tegen de effectief getelde aantallen zullen liggen.
 
@@ -1063,7 +1100,7 @@ Het is ook mogelijk om densiteiten in te berekenen o.b.v. het maximum aantal bro
 Dit kan dan omgerekend worden naar densiteiten per stratum door het gemiddelde nemen per stratum en daarna te delen door de oppervlakte van een telcirkel.
 Via bootstrapping kan een betrouwbaarheidsinterval bekomen worden.
 De maxima komen voor Veldleeuwerik goed overeen met de resultaten van distance sampling (Fig. \@ref(fig:densiteit-methodiek-veldleeuw)).
-@wiersma2021 gebruiken de maxima om densiteiten van akkervogels in te schatten.
+@wiersma2021 gebruikten de maxima om densiteiten van akkervogels in te schatten.
 Ze stellen dat dit minimumschattingen zijn omdat ze niet voor onvolledige trefkans hebben gecorrigeerd.
 Echter, wij zien hier dat deze methode niet per se lagere resultaten bekomt dan via distance sampling.
 De maxima-methode zal lagere schattingen bekomen als de detectiekans van de soort lager is omdat er dan een sterkere correctie optreedt bij distance sampling die niet zal gebeuren bij de maxima-methode (bijvoorbeeld bij Kneu $\hat{P}_a =$ `r pa_kneu`, Fig. \@ref(fig:densiteit-methodiek-kneu)), maar dit is niet per se het geval voor soorten met een hogere detectiekans (bijvoorbeeld bij Fazant $\hat{P}_a =$ `r pa_fazant`, Fig. \@ref(fig:densiteit-methodiek-fazant)).
@@ -1090,12 +1127,27 @@ include_graphics(file.path("media", "distance", "per_stratum",
                            "densiteit_per_stratum_methods_fazant.pdf"))
 ```
 
-\textcolor{red}{uitbreiding distance sampling?} \textcolor{red}{stan etc.}
+\textcolor{red}{uitbreiding distance sampling?} \textcolor{red}{stan etc.} In **Distance** deden we aan zgn.
+conventional distance sampling (CDS) waarbij de afstanden werden gebundeld voor alle ruimtelijke locaties (i.c. telpunten) om de parameter(s) van de detectiefunctie te schatten, bijvoorbeeld voor de half-normaale functie.
+Dit werd gebruikt om een schatting van de densiteit te verkrijgen, en vervolgens werd de variantie gebaseerd op de variantie van de "encounter rate", die wel enige informatie uit de telpunten gebruikt.
+Bij CDS wordt er ook van uitgegaan dat dieren uniform worden verdeeld met betrekking tot transecten/telpunten en vereisen dus gerandomiseerde plaatsing van transecten/punten tijdens het steekproefdesign.
+Hierbij worden factoren die de abundantie tussen plots beïnvloeden verwaarloosd.
+In plaats van gegevens te bundelen zoals bij CDS, biedt hierarchical distance sampling (HDS) een expliciet model voor de variatie van de lokale populatiegrootte $N_i$ (de abundantie voor telpunt $i$).
+Dit zijn parametrisch modellen om variatie in abundantie tussen plots te beschrijven.
+Hierbij kunnen we expliciete modellen bouwen voor distance sampling data die verantwoordelijk zijn voor variatie in abundatie (of lokale densiteit) tussen steekproefeenheden (telpunten), waardoor inferentie over factoren die ruimtelijke invloed hebben op variatie in abundatie wordt vergemakkelijkt alsook expliciete spatiale predicties over abundantie.
+
+In de **unmarked** package [@unmarked-package] STAN
+
+his article is concernedwith combining spatial modelling techniques with distancesampling
+
+density surface modelling fits density surface models to spatially-referenced distance sampling data.
+Count data are corrected using detection function models fitted using mrds or Distance.
+Spatial models are constructed using generalized additive models
 
 We kunnen concluderen dat het schatten van densiteiten een evenwichtsoefening is tussen het maken van juiste beslissingen in ecologische context en anderzijds het gebruiken van een duidelijk en niet te complexe statistische methode.
 Deze eerste kan in rekening genomen worden door de data te filteren op broedcode groter dan nul en voor elke soort de telperiodes te selecteren die binnen de broedperiode van elke soort vallen.
 Een extra maatregel zou kunnen zijn om over die telperiodes (per telpunt per jaar) het maximum aantal te nemen als finale dataset voor verdere analyse (met effort = 1 omdat we dan niet meer corrigeren voor het aantal bezoeken, waardoor geen strikte uitmiddeling gebeurd).
-Voor Haas zou het bovendien nuttig zijn de oppervlaktes van de telcirkel te corrigeren voor de oppervlakte die effectief zichtbaar is voor de teller \textcolor{red}{(volgens viewshedanalyse, zie @ref(aanpassingen-meetnet))}, aangezien Haas steeds op de grond zit.
+Voor Haas zou het bovendien nuttig zijn de oppervlaktes van de telcirkel te corrigeren voor de oppervlakte die effectief zichtbaar is voor de teller (volgens viewshedanalyse, zie \@ref(aanpassingen-meetnet)), aangezien Haas steeds op de grond zit.
 Distance sampling m.b.v. het **Distance** package bleek een relatief eenvoudige procedure (zowel mathematisch als gebruiksvriendelijkheid) om densiteitsschattingen (incl. onzekerheid) te maken rekening houdend met de detectiekans van een soort.
 \textcolor{red}{complex niet nodig, detectiekans kan wel in GLMM ofzo worden gebruikt? verder}
 
