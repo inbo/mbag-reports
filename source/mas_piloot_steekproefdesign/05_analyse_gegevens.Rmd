@@ -775,31 +775,44 @@ Indien de 'goodness of fit' niet goed was, werd het finale model opnieuw gefit w
 Densiteitsschattingen werden omgezet naar aantallen per 100 ha.
 De onzekerheid op de densiteitsschattingen werd berekend m.b.v. de standaard opties in de `ds()` functie.
 Zie @miller2019 en verwijzingen daarin voor meer informatie over de precieze berekeningen.
+
 Als onzekerheid op de resultaten tonen we telkens 95 % betrouwbaarheidsintervallen.
 Dit zijn log-normale betrouwbaarheidsintervallen geconstrueerd met behulp van een Satterthwaite-benadering voor de vrijheidsgraden [@buckland2001, p. 77].
-Dit wil zeggen dat we betrouwbaarheidsintervallen voor verschillen tussen densiteiten kunnen benaderen als volgt:
-
-Beschouw ter illustratie twee densiteitsschattingen $\hat{D}_1$ met standaard error $\hat{se}(\hat{D}_1)$ en $\hat{D}_2$ met standaard error $\hat{se}(\hat{D}_2)$.
-We willen een schatting van het verschil $\hat{D}_{v} = \hat{D}_1 - \hat{D}_2$ met $100(1-2\alpha)$ % betrouwbaarheidsinterval
+Beschouw ter illustratie densiteitsschattingen in twee strata: (1) $\hat{D}_1$ met standaard error $\hat{se}(\hat{D}_1)$ en (2) de schatting in referentiestratum $r$ $\hat{D}_r$ met standaard error $\hat{se}(\hat{D}_r)$.
+Om het verschil tussen de eerste densiteit met de referentie te vergelijken kunnen we een zgn.
+'species change index' $SCI$ definiëren als ($\log()$ is het natuurlijk logaritme)
 
 $$
-(\hat{D}_{v}/C, \hat{D}_{v} \cdot C)
+\begin{align}
+  SCI &= \log(\hat{D}_1) - log(\hat{D}_r) - 1\\
+      &= \log\left( \frac{\hat{D}_1}{\hat{D}_r} \right) - 1
+\end{align}
+$$
+
+Een $SCI$ van 0.5 wil zeggen dat er 50 % meer (= toename met factor 1.5) broedparen per 100 ha in stratum 1 zijn dan in het referentiestratum $r$.
+
+We willen voor de $SCI$ een $100(1-2\alpha)$ % betrouwbaarheidsinterval opstellen.
+
+$$
+(SCI - C, SCI + C)
 $$
 
 met
 
 $$
 \begin{align}
-C &= \exp\left(z_\alpha \cdot \hat{se}(\log(\hat{D}_{v})) \right)\\
-  &= \exp\left(z_\alpha \cdot \sqrt{\hat{var}(\log(\hat{D}_{v}))} \right)
+  C &= z_\alpha \cdot \hat{se}(SCI)\\
+    &= z_\alpha \cdot \sqrt{\hat{var}(SCI)}
 \end{align}
 $$
 
-In ons geval zal $\alpha = 0.025$ zijn voor een 95 % betrouwbaarheidsinterval waarbij $z_\alpha$ de z-score die overeenkomt met het buitenste 2.5 % gebied van de standaard normale verdeling ($Z \sim N(0, 1)$).
-De variantie van het natuurlijk logaritme het verschil $\hat{var}(\log(\hat{D}_{v}))$ kan als volgt berekend worden
+In ons geval zal $\alpha = 0.025$ zijn voor een 95 % betrouwbaarheidsinterval.
+Omdat we hier in de log-schaal werken is $z_\alpha$ de z-score die overeenkomt met het buitenste 2.5 % gebied van de standaard normale verdeling (in de originele hadden we log-normale betrouwbaarheidsintervallen).
+We hebben dus $Z \sim N(0, 1)$ met $z_{0.025} =$ `r round(qnorm(0.975), 3)`.
+De variantie van de $SCI$, $\hat{var}(SCI)$, kan als volgt berekend worden
 
 $$
-\hat{var}(\log(\hat{D}_{v})) = \hat{var}(\log(\hat{D}_1)) + \hat{var}(\log(\hat{D}_2))
+\hat{var}(SCI) = \hat{var}(\log(\hat{D}_1)) + \hat{var}(\log(\hat{D}_r))
 $$
 
 waarbij
@@ -808,10 +821,13 @@ $$
 \hat{var}(\log(\hat{D}_1)) = \log\left(1 + \left( \frac{\hat{se}(\hat{D}_1)}{\hat{D}_1} \right)^2 \right)
 $$
 
-en identiek voor $\hat{var}(\log(\hat{D}_2))$
+en identiek voor $\hat{var}(\log(\hat{D}_r))$
 
 Dit zal niet exact dezelfde resultaten geven als geïmplementeerd in **Distance** omdat we hier geen gebruik maken van de Satterthwaite-benadering.
-Desalnietemin zal het wel zeer dicht in de buurt liggen, vooral als we veel datapunten hebben.
+Desalnietemin zal het wel zeer dicht in de buurt liggen, vooral als we veel vrijheidsgraden (en dus veel data) hebben.
+
+We definieerden een postief verschil met de referentie als de ondergrens van het 95 % betrouwbaarheidsinterval van de $SCI$ groter is dan nul, een negatief verschil als de bovengrens kleiner is dan nul, een stabiel (geen) verschil als het betrouwbaarheidsinterval nul bevat maar binnen de referentiewaarden valt (tussen toename van 25 % en afname van 20 %) en een onzeker verschil als het betrouwbaarheidsinterval nul en ten minste een van de referentiewaarden bevat.
+Hierbij werd gebruik gemaakt van de **effectclass** package [@onkelinx2023].
 
 #### Resultaten densiteitsschattingen
 
