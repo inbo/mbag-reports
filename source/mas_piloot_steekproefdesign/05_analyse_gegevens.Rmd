@@ -783,10 +783,10 @@ Om het verschil tussen de eerste densiteit met de referentie te vergelijken kunn
 'species change index' $SCI$ definiëren als ($\log()$ is het natuurlijk logaritme)
 
 $$
-\begin{align}
+\begin{aligned}
   SCI &= \log(\hat{D}_1) - log(\hat{D}_r) - 1\\
       &= \log\left( \frac{\hat{D}_1}{\hat{D}_r} \right) - 1
-\end{align}
+\end{aligned}
 $$
 
 Een $SCI$ van 0.5 wil zeggen dat er 50 % meer (= toename met factor 1.5) broedparen per 100 ha in stratum 1 zijn dan in het referentiestratum $r$.
@@ -800,10 +800,10 @@ $$
 met
 
 $$
-\begin{align}
+\begin{aligned}
   C &= z_\alpha \cdot \hat{se}(SCI)\\
     &= z_\alpha \cdot \sqrt{\hat{var}(SCI)}
-\end{align}
+\end{aligned}
 $$
 
 In ons geval zal $\alpha = 0.025$ zijn voor een 95 % betrouwbaarheidsinterval.
@@ -1288,3 +1288,4 @@ include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
                            "beleidstoestand_veldleeuwerik_coarse.pdf"))
 ```
+
