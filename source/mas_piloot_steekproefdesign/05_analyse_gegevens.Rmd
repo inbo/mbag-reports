@@ -335,7 +335,7 @@ Het aantal verschillende hoofdteelten (gewasgroepen) binnen een telcirkel.
 
 **7. Eveness aan hoofdteelten**\
 We delen het effectief aantal hoofdteelten (als alle proporties gelijk zouden zijn) door het absoluut aantal hoofdteelten.
-Deze maat is 1 als alle hoofteelten binnen de telcirkel in eenzelfde proportie voorkomen.
+Deze maat is 1 als alle hoofdteelten binnen de telcirkel in eenzelfde proportie voorkomen.
 
 **8. Oppervlakte-aandeel voorteelten**\
 46 aparte voorteelten werden gegroepeerd in 13 gewasgroepen (Tabel \@ref(tab:vrtlt-groepen)).
@@ -727,7 +727,7 @@ De onzekerheid op de abundantie- en densiteitsschattingen komt van twee origines
 1.  Detectiefunctie: Onzekerheid in parameterschattingen ($\boldsymbol \theta$)
 2.  Trefkans: Bemonsteringsvariabiliteit als gevolg van verschillen in het aantal waarnemingen per transect
 
-#### Methodiek densiteitsschattingen
+#### Methodiek densiteitsschattingen {#methodiek-distance}
 
 We voerden de distance sampling analyses uit met behulp van de **Distance** package [@R-Distance; @miller2019] in R.
 We schatten (1) densiteiten per jaar (2018-2023) per regio (De Moeren, Oostelijke leemstreek) en (2) densiteiten per stratum (OL, HOL en binnen en buiten sbp) per regio binnen de pilootstudie (2022-2023).
@@ -775,44 +775,67 @@ Indien de 'goodness of fit' niet goed was, werd het finale model opnieuw gefit w
 Densiteitsschattingen werden omgezet naar aantallen per 100 ha.
 De onzekerheid op de densiteitsschattingen werd berekend m.b.v. de standaard opties in de `ds()` functie.
 Zie @miller2019 en verwijzingen daarin voor meer informatie over de precieze berekeningen.
-
 Als onzekerheid op de resultaten tonen we telkens 95 % betrouwbaarheidsintervallen.
 Dit zijn log-normale betrouwbaarheidsintervallen geconstrueerd met behulp van een Satterthwaite-benadering voor de vrijheidsgraden [@buckland2001, p. 77].
-Beschouw ter illustratie densiteitsschattingen in twee strata: (1) $\hat{D}_1$ met standaard error $\hat{se}(\hat{D}_1)$ en (2) de schatting in referentiestratum $r$ $\hat{D}_r$ met standaard error $\hat{se}(\hat{D}_r)$.
-Om het verschil tussen de eerste densiteit met de referentie te vergelijken kunnen we een zgn.
-'species change index' $SCI$ definiëren als ($\log()$ is het natuurlijk logaritme)
+
+Onder de assumptie dat het logaritme van de densiteitsschattingen normaal verdeeld zijn, kunnen we ook betrouwbaarheidsintervallen opstellen voor de vergelijking tussen densiteitsschattingen in twee strata.
+Beschouw bijvoorbeeld (1) een schatting in stratum 1 $\hat{D}_1$ met standaardfout $\hat{se}(\hat{D}_1)$ en (2) $\hat{D}_r$ de schatting in referentiestratum $r$ met standaardfout $\hat{se}(\hat{D}_r)$.
+Om het verschil tussen de eerste densiteit met de referentie te kwantificeren, kunnen we een zgn.
+species change index ($SCI$) definiëren ($\log()$ is telkens het natuurlijk logaritme).
+Stel
+
+<!-- spell-check: ignore:start -->
 
 $$
 \begin{aligned}
-  SCI &= \log(\hat{D}_1) - log(\hat{D}_r) - 1\\
-      &= \log\left( \frac{\hat{D}_1}{\hat{D}_r} \right) - 1
+  \hat{D}_v &= \log(\hat{D}_1) - log(\hat{D}_r)\\
+            &= \log\left( \frac{\hat{D}_1}{\hat{D}_r} \right)
 \end{aligned}
 $$
+
+<!-- spell-check: ignore:end -->
+
+zodat
+
+<!-- spell-check: ignore:start -->
+
+$$
+\begin{aligned}
+  SCI &= \exp(\hat{D}_v) - 1\\
+      &= \frac{\hat{D}_1}{\hat{D}_r} - 1
+\end{aligned}
+$$
+
+<!-- spell-check: ignore:end -->
 
 Een $SCI$ van 0.5 wil zeggen dat er 50 % meer (= toename met factor 1.5) broedparen per 100 ha in stratum 1 zijn dan in het referentiestratum $r$.
 
 We willen voor de $SCI$ een $100(1-2\alpha)$ % betrouwbaarheidsinterval opstellen.
 
 $$
-(SCI - C, SCI + C)
+(\exp(\hat{D}_v - C) - 1, \exp(\hat{D}_v + C) - 1)
 $$
 
 met
 
+<!-- spell-check: ignore:start -->
+
 $$
 \begin{aligned}
-  C &= z_\alpha \cdot \hat{se}(SCI)\\
-    &= z_\alpha \cdot \sqrt{\hat{var}(SCI)}
+  C &= z_\alpha \cdot \hat{se}(\hat{D}_v)\\
+    &= z_\alpha \cdot \sqrt{\hat{var}(\hat{D}_v)}
 \end{aligned}
 $$
 
+<!-- spell-check: ignore:end -->
+
 In ons geval zal $\alpha = 0.025$ zijn voor een 95 % betrouwbaarheidsinterval.
-Omdat we hier in de log-schaal werken is $z_\alpha$ de z-score die overeenkomt met het buitenste 2.5 % gebied van de standaard normale verdeling (in de originele hadden we log-normale betrouwbaarheidsintervallen).
+Omdat we hier in de log-schaal werken is $z_\alpha$ de z-score die overeenkomt met het buitenste 2.5 % gebied van de standaard normale verdeling.
 We hebben dus $Z \sim N(0, 1)$ met $z_{0.025} =$ `r round(qnorm(0.975), 3)`.
-De variantie van de $SCI$, $\hat{var}(SCI)$, kan als volgt berekend worden
+De variantie van $\hat{D}_v$, $\hat{var}(\hat{D}_v)$, kan als volgt berekend worden
 
 $$
-\hat{var}(SCI) = \hat{var}(\log(\hat{D}_1)) + \hat{var}(\log(\hat{D}_r))
+\hat{var}(\hat{D}_v) = \hat{var}(\log(\hat{D}_1)) + \hat{var}(\log(\hat{D}_r))
 $$
 
 waarbij
@@ -823,11 +846,15 @@ $$
 
 en identiek voor $\hat{var}(\log(\hat{D}_r))$
 
-Dit zal niet exact dezelfde resultaten geven als geïmplementeerd in **Distance** omdat we hier geen gebruik maken van de Satterthwaite-benadering.
+Dit is niet exact dezelfde methodiek als geïmplementeerd in **Distance** omdat we hier geen gebruik maken van de Satterthwaite-benadering.
 Desalnietemin zal het wel zeer dicht in de buurt liggen, vooral als we veel vrijheidsgraden (en dus veel data) hebben.
 
-We definieerden een postief verschil met de referentie als de ondergrens van het 95 % betrouwbaarheidsinterval van de $SCI$ groter is dan nul, een negatief verschil als de bovengrens kleiner is dan nul, een stabiel (geen) verschil als het betrouwbaarheidsinterval nul bevat maar binnen de referentiewaarden valt (tussen toename van 25 % en afname van 20 %) en een onzeker verschil als het betrouwbaarheidsinterval nul en ten minste een van de referentiewaarden bevat.
+We definieerden een postief verschil in densiteit met de referentie als de ondergrens van het 95 % betrouwbaarheidsinterval van de $SCI$ groter is dan nul, een negatief verschil als de bovengrens kleiner is dan nul, een stabiel (geen) verschil als het betrouwbaarheidsinterval nul bevat maar binnen de referentiewaarden valt (tussen toename van 25 % en afname van 20 %) en een onzeker verschil als het betrouwbaarheidsinterval nul en ten minste een van de referentiewaarden bevat.
 Hierbij werd gebruik gemaakt van de **effectclass** package [@onkelinx2023].
+Deze resultaten zullen bijgevolg afhankelijk van de (arbitraire) keuze van de referentiewaarden (toename 25 % en afname 20 %) en het gebruik van het significantieniveau $\alpha$ (hier 5 %).
+Dit rapport richt zich voornamelijk op de methodiek, waarbij de nadruk ligt op de beschrijving van de gebruikte onderzoeksmethoden.
+Concepten zoals referentiewaarden en significantieniveau, en bijgevolg de ambivalentie van de resultaten, zijn in dit opzicht minder cruciaal voor de hoofdboodschap van het rapport.
+Binnen het rapport is er vooral naar gestreefd om consistente arbitraire waarden te gebruiken, met als doel uniformiteit in de presentatie en interpretatie.
 
 #### Resultaten densiteitsschattingen
 
@@ -916,6 +943,21 @@ summary_results_2018_2023 %>%
 ```{r densiteit-jaar-plot, out.width = "90%", fig.cap = "Densiteitsschattingen per 100 ha met 95 \\% betrouwbaarheidsintervallen per jaar per regio."}
 include_graphics(file.path("media", "distance", "per_jaar",
                            "densiteit_per_jaar_veldleeuwerik.pdf"))
+```
+
+We vergelijken de densiteiten aan de hand van species change indices (SCI's) in elke regio met de densiteit in 2018, het eerste jaar van de pilootstudie (Fig. \@ref(fig:sci-jaar-plot), zie ook Bijlage \@ref(bijlage-sci) (Tabel \@ref(tab:sci-jaar-tab))).
+We zien opnieuw relatief brede betrouwbaarheidsintervallen in De Moeren zodat we vaak onzeker zijn over het verschil met de densiteitsschatting van 2018.
+Enkel in 2022 zien we een significant positief verschil met 2018 in het de densiteit aan broedparen per 100 ha van de Veldleeuwerik.
+We zien in de Oostelijke leemstreek geen significante verschillen en in 2021 wel een significant hogere densiteit.
+In 2022 en 2023 zijn de trends opnieuw onzeker hoewel hier een kleine kanttekening bij kan gemaakt worden.
+Zoals besproken in de methodiek van de SCI-berekeningen, willen we meegeven dat deze resultaten op verschillende manieren kunnen ingedeeld worden en het niet de bedoeling is dat dit vaststaande feiten zijn.
+Voor de Oostelijke leemstreek zullen de onzekere trends van 2022 en 2023 afhankelijk zijn van de keuze van het significantieniveau.
+Bij een $\alpha$ van 0.1 zouden we hier waarschijnlijk toch besluiten dat er een positief verschil is.
+We hebben er in dit rapport echter steeds voor gekozen de resultaten voor $\alpha = 0.05$ te rapporteren.
+
+```{r sci-jaar-plot, out.width = "100%", fig.cap = "Betrouwbaarheidsintervallen ($\\alpha = 0.05$) van species change indices (SCI's) per regio per jaar t.o.v. 2018."}
+include_graphics(file.path("media", "distance", "per_jaar",
+                           "verschil_per_jaar_veldleeuwerik.pdf"))
 ```
 
 ##### Per stratum binnen pilootstudie
@@ -1051,6 +1093,17 @@ summary_results_stratum %>%
 ```{r densiteit-stratum-plot, out.width = "90%", fig.cap = "Densiteitsschattingen per 100 ha met 95 \\% betrouwbaarheidsintervallen per stratum."}
 include_graphics(file.path("media", "distance", "per_stratum",
                            "densiteit_per_stratum_veldleeuwerik.pdf"))
+```
+
+We vergelijken de densiteiten binnen soortbeschermingsplan (SBP) met densiteiten buiten SPB aan de hand van species change indices (SCI's) in elke regio per jaar per openheidsklasse (Fig. \@ref(fig:sci-stratum-plot), zie ook Bijlage \@ref(bijlage-sci) (Tabel \@ref(tab:sci-stratum-tab))).
+We zien telkens een positief verschil, behalve in 2023 in De Moeren waar we een onzekere trend hebben o.w.v. het brede interval.
+De positieve verschillen houden in dat er binnen SBP een significant hogere densiteit broedparen aanwezig is van de Veldleeuwerik dan buiten SBP Hierbij moet worden opgemerkt dat dit niet impliceert dat SBP's een positief effect op densiteit van Veldleeuwerik hebben.
+De SBP's zijn namelijk vastgelegd in gebieden waar er op voorhand al geweten was dat veel akkervogels voorkwamen en/of het een geschikte omgeving was voor deze dieren.
+Deze resultaten geven dus een correlatief verband maar impliceren geen causaliteit.
+
+```{r sci-stratum-plot, out.width = "100%", fig.cap = "Betrouwbaarheidsintervallen ($\\alpha = 0.05$) van species change indices (SCI's) binnen t.o.v. buiten soortbeschermingsplan per regio, jaar en openheidsklasse."}
+include_graphics(file.path("media", "distance", "per_stratum",
+                           "verschil_per_stratum_veldleeuwerik.pdf"))
 ```
 
 #### Discussie densiteitsschattingen
