@@ -80,6 +80,60 @@ tibble(
 
 \newpage
 
+## Resultaten van species change indices o.b.v. densiteiten {#bijlage-sci}
+
+In Sectie \@ref(methodiek-distance) beschreven we hoe we op basis van densiteitsschattingen via distance sampling species change indices (SCI's) en bijhorende betrouwbaarheidsintervallen konden berekenen.
+Beschouw bijvoorbeeld (1) een schatting in stratum 1 $\hat{D}_1$ met standaardfout $\hat{se}(\hat{D}_1)$ en (2) $\hat{D}_r$ de schatting in referentiestratum $r$ met standaardfout $\hat{se}(\hat{D}_r)$.
+
+$$
+SCI = \exp(\hat{D}_v) - 1
+$$
+
+met
+
+$$
+\hat{D}_v = \log(\hat{D}_1) - log(\hat{D}_r)
+$$
+
+De volgende tabellen geven meer uitgebreide resultaten van deze berekeningen.
+De kolom `log_diff` bevat waardes van $\hat{D}_v$ en `log_diff_se` de standaardfout $\hat{se}(\hat{D}_v)$.
+`sci` bevat de $SCI$ waardes waarbij `sci_lcl` en `sci_ucl` resp.
+de onder- en bovengrens het 95 % betrouwbaarheidsinterval aangeven.
+We definieerden (kolom `verschil`) een postief verschil in densiteit met de referentie als de ondergrens van het 95 % betrouwbaarheidsinterval van de $SCI$ groter is dan nul, een negatief verschil als de bovengrens kleiner is dan nul, een stabiel (geen) verschil als het betrouwbaarheidsinterval nul bevat maar binnen de referentiewaarden valt (tussen toename van 25 % en afname van 20 %) en een onzeker verschil als het betrouwbaarheidsinterval nul en ten minste een van de referentiewaarden bevat.
+
+```{r sci-jaar-tab}
+read_csv(file.path("media", "distance", "per_jaar",
+                   "sci_trends_per_jaar.csv"),
+         show_col_types = FALSE) %>%
+  dplyr::filter(soort == "Veldleeuwerik")  %>%
+  select(-soort) %>%
+  arrange(regio, jaar) %>%
+  kable(digits = 5,
+        caption = paste("Resultaten van species change indices (SCI's) per",
+                        "regio per jaar t.o.v. 2018."),
+        booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::row_spec(0, bold = TRUE)
+```
+
+```{r sci-stratum-tab}
+read_csv(file.path("media", "distance", "per_stratum",
+                   "sci_trends_per_stratum.csv"),
+         show_col_types = FALSE) %>%
+  dplyr::filter(soort == "Veldleeuwerik")  %>%
+  select(-soort) %>%
+    arrange(regio, jaar, openheid) %>%
+  kable(digits = 5,
+        caption = paste("Resultaten van species change indices (SCI's) binnen",
+                        "t.o.v. buiten soortbeschermingsplan per regio, jaar",
+                        "en openheidsklasse."),
+        booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = c("scale_down", "striped")) %>%
+  kableExtra::row_spec(0, bold = TRUE)
+```
+
+\newpage
+
 ## Aanvullende kaarten uitrol MAS Vlaanderen {#bijlage-uitrol-mas}
 
 ```{=tex}
