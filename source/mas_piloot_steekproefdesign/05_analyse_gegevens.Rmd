@@ -1196,29 +1196,42 @@ include_graphics(file.path("media", "distance", "per_stratum",
                            "densiteit_per_stratum_methods_fazant.pdf"))
 ```
 
-\textcolor{red}{uitbreiding distance sampling?} \textcolor{red}{stan etc.} In **Distance** deden we aan zgn.
+In **Distance** deden we aan zgn.
 conventional distance sampling (CDS) waarbij de afstanden werden gebundeld voor alle ruimtelijke locaties (i.c. telpunten) om de parameter(s) van de detectiefunctie te schatten, bijvoorbeeld voor de half-normaale functie.
 Dit werd gebruikt om een schatting van de densiteit te verkrijgen, en vervolgens werd de variantie gebaseerd op de variantie van de "encounter rate", die wel enige informatie uit de telpunten gebruikt.
 Bij CDS wordt er ook van uitgegaan dat dieren uniform worden verdeeld met betrekking tot transecten/telpunten en vereisen dus gerandomiseerde plaatsing van transecten/punten tijdens het steekproefdesign.
 Hierbij worden factoren die de abundantie tussen plots beïnvloeden verwaarloosd.
+Het is relevant om te overwegen dat er meer geavanceerde benaderingen en alternatieven beschikbaar zijn voor het verbeteren van onze schattingsmethoden en/of deze te koppelen aan vervolganalyses.
 In plaats van gegevens te bundelen zoals bij CDS, biedt hierarchical distance sampling (HDS) een expliciet model voor de variatie van de lokale populatiegrootte $N_i$ (de abundantie voor telpunt $i$).
-Dit zijn parametrisch modellen om variatie in abundantie tussen plots te beschrijven.
-Hierbij kunnen we expliciete modellen bouwen voor distance sampling data die verantwoordelijk zijn voor variatie in abundatie (of lokale densiteit) tussen steekproefeenheden (telpunten), waardoor inferentie over factoren die ruimtelijke invloed hebben op variatie in abundatie wordt vergemakkelijkt alsook expliciete spatiale predicties over abundantie.
+Dit zijn parametrisch modellen om variatie in abundantie tussen telpunten te beschrijven.
+Hierbij kunnen we expliciete modellen bouwen voor distance sampling data die verantwoordelijk zijn voor variatie in abundatie (of lokale densiteit) tussen steekproefeenheden (telpunten), waardoor inferentie over factoren die ruimtelijke invloed hebben op variatie in abundatie wordt vergemakkelijkt alsook expliciete spatiale predicties over abundantie [@hedley2004; @royle2004; @kéry2016].
+Een andere benadering is het gebruik van density surface modeling (DSM), waarbij ruimtelijke informatie wordt geïntegreerd om de dichtheid van akkervogels over het gehele studiegebied te voorspellen.
+Dit stelt ons in staat om ruimtelijke patronen in de dichtheid beter te begrijpen en kan resulteren in meer nauwkeurige schattingen, vooral in gebieden waar conventionele methoden tekortschieten [@miller2013].
+In beide gevallen biedt het de mogelijkheid om covariaten, zoals landschapskenmerken, op te nemen die van invloed kunnen zijn op de akkervogeldichtheid.
 
-In de **unmarked** package [@unmarked-package] STAN
-
-his article is concernedwith combining spatial modelling techniques with distancesampling
-
-density surface modelling fits density surface models to spatially-referenced distance sampling data.
-Count data are corrected using detection function models fitted using mrds or Distance.
-Spatial models are constructed using generalized additive models
+Het overwegen van dergelijke geavanceerde benaderingen in toekomstig onderzoek kan onze schattingsnauwkeurigheid vergroten en ons begrip van de factoren die de dichtheid van akkervogels beïnvloeden verdiepen.
+Het is echter van belang om de complexiteit van deze methoden te erkennen en zorgvuldig af te wegen of de toegevoegde waarde opweegt tegen de extra inspanningen die nodig zijn voor gegevensverzameling en analyse.
+Enkele alternatieven zijn in dit pilootproject uitgetest zoals de **unmarked** package [@kenneth2023; @unmarked-package] en Stan-modellen met **rstan** [@rstan-package] voor HDS en de **dsm** package voor DSM [@dsm-package].
+In Nederland werden ook reeds verschillende analysetechnieken besproken in kader van het MAS protocol [@roodbergen2011].
+Onze bevindingen zijn vooral een aanvulling hierop.
+Het was niet de intentie een uitgebreide revisie hierover te doen, maar wel te bepalen welke haalbare technieken zouden volstaan voor de analyse van de gegevens.
 
 We kunnen concluderen dat het schatten van densiteiten een evenwichtsoefening is tussen het maken van juiste beslissingen in ecologische context en anderzijds het gebruiken van een duidelijk en niet te complexe statistische methode.
-Deze eerste kan in rekening genomen worden door de data te filteren op broedcode groter dan nul en voor elke soort de telperiodes te selecteren die binnen de broedperiode van elke soort vallen.
+Hierbij konden we ook steunen op het onderzoek dat reeds in Nederland gedaan is m.b.t. het MAS protocol [@roodbergen2011].
+De ecologische context kan in rekening genomen worden door de data te filteren op broedcode groter dan nul en voor elke soort de telperiodes te selecteren die binnen de broedperiode van elke soort vallen.
 Een extra maatregel zou kunnen zijn om over die telperiodes (per telpunt per jaar) het maximum aantal te nemen als finale dataset voor verdere analyse (met effort = 1 omdat we dan niet meer corrigeren voor het aantal bezoeken, waardoor geen strikte uitmiddeling gebeurd).
 Voor Haas zou het bovendien nuttig zijn de oppervlaktes van de telcirkel te corrigeren voor de oppervlakte die effectief zichtbaar is voor de teller (volgens viewshedanalyse, zie \@ref(aanpassingen-meetnet)), aangezien Haas steeds op de grond zit.
 Distance sampling m.b.v. het **Distance** package bleek een relatief eenvoudige procedure (zowel mathematisch als gebruiksvriendelijkheid) om densiteitsschattingen (incl. onzekerheid) te maken rekening houdend met de detectiekans van een soort.
-\textcolor{red}{complex niet nodig, detectiekans kan wel in GLMM ofzo worden gebruikt? verder}
+We toonden bovendien aan dat we op basis hiervan ook specifieke hypotheses kunnen testen aan de hand van species change indices of ter uitbreiding multi species change indices waarbij een index zou berekend worden door trends van meerdere soorten te combineren.
+We zijn dan ook van mening dat complexere analyses niet nodig zijn.
+Een tweestapsmethodiek lijkt een valabele optie die enerzijds overzichtelijk blijft en de complexiteit (en bijgevolg tijdsinvestering) van de analyses breekt:
+
+1.  Densiteitsschattingen via CDS
+2.  Modelleren o.b.v. densiteitsschattingen
+    a.  Testen van hypotheses via change indices
+    b.  Modelleren van aantallen via generalized linear mixed models (GLMM's)
+        -   Detectiekans als offset in model
+        -   Onzekerheid van detectiekans moet meegenomen worden in model
 
 ### Toestand beheerovereenkomsten {#beheerovereenkomsten}
 
@@ -1341,4 +1354,3 @@ include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
                            "beleidstoestand_veldleeuwerik_coarse.pdf"))
 ```
-

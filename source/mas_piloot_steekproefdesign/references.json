@@ -1099,5 +1099,150 @@
         "title": "Trends op basis van de Algemene Broedvogelmonitoring Vlaanderen (ABV): Technisch achtergrondrapport voor de periode 2007-2022",
         "title-short": "Trends op basis van de Algemene Broedvogelmonitoring Vlaanderen (ABV)",
         "type": "report"
+    },
+    {
+        "DOI": "10.1111/2041-210x.12105",
+        "ISSN": "2041-210X",
+        "URL": "http://dx.doi.org/10.1111/2041-210X.12105",
+        "author": [
+            {
+                "family": "Miller",
+                "given": "David L."
+            },
+            {
+                "family": "Burt",
+                "given": "M. Louise"
+            },
+            {
+                "family": "Rexstad",
+                "given": "Eric A."
+            },
+            {
+                "family": "Thomas",
+                "given": "Len"
+            }
+        ],
+        "container-title": "Methods in Ecology and Evolution",
+        "container-title-short": "Methods Ecol Evol",
+        "editor": [
+            {
+                "family": "Gimenez",
+                "given": "Olivier"
+            }
+        ],
+        "id": "miller2013",
+        "is-referenced-by-count": "238",
+        "issue": "11",
+        "issued": {
+            "date-parts": [
+                [
+                    2013,
+                    8,
+                    27
+                ]
+            ]
+        },
+        "language": "en",
+        "member": "311",
+        "page": "1001-1010",
+        "prefix": "10.1111",
+        "providerkey": "doi",
+        "publisher": "Wiley",
+        "reference-count": "44",
+        "references-count": "44",
+        "score": "1",
+        "source": "Crossref",
+        "subject": "Ecological Modeling",
+        "title": "Spatial models for distance sampling data: recent developments and future directions",
+        "type": "article-journal",
+        "volume": "4"
+    },
+    {
+        "DOI": "10.1890/03-3127",
+        "ISSN": "0012-9658",
+        "URL": "http://dx.doi.org/10.1890/03-3127",
+        "author": [
+            {
+                "family": "Royle",
+                "given": "J. Andrew"
+            },
+            {
+                "family": "Dawson",
+                "given": "Deanna K."
+            },
+            {
+                "family": "Bates",
+                "given": "Scott"
+            }
+        ],
+        "container-title": "Ecology",
+        "container-title-short": "Ecology",
+        "id": "royle2004",
+        "is-referenced-by-count": "219",
+        "issue": "6",
+        "issued": {
+            "date-parts": [
+                [
+                    2004,
+                    6
+                ]
+            ]
+        },
+        "language": "en",
+        "member": "311",
+        "page": "1591-1597",
+        "prefix": "10.1002",
+        "providerkey": "doi",
+        "publisher": "Wiley",
+        "reference-count": "29",
+        "references-count": "29",
+        "score": "1",
+        "source": "Crossref",
+        "subject": "Ecology, Evolution, Behavior and Systematics",
+        "title": "MODELING ABUNDANCE EFFECTS IN DISTANCE SAMPLING",
+        "type": "article-journal",
+        "volume": "85"
+    },
+    {
+        "DOI": "10.1198/1085711043578",
+        "ISSN": "1085-7117",
+        "URL": "http://dx.doi.org/10.1198/1085711043578",
+        "author": [
+            {
+                "family": "Hedley",
+                "given": "Sharon L."
+            },
+            {
+                "family": "Buckland",
+                "given": "Stephen T."
+            }
+        ],
+        "container-title": "Journal of Agricultural, Biological, and Environmental Statistics",
+        "container-title-short": "JABES",
+        "id": "hedley2004",
+        "is-referenced-by-count": "206",
+        "issue": "2",
+        "issued": {
+            "date-parts": [
+                [
+                    2004,
+                    6
+                ]
+            ]
+        },
+        "language": "en",
+        "member": "297",
+        "page": "181-199",
+        "prefix": "10.1007",
+        "providerkey": "doi",
+        "publisher": "Springer Science and Business Media LLC",
+        "reference-count": "22",
+        "references-count": "22",
+        "score": "1",
+        "source": "Crossref",
+        "subject": "Applied Mathematics",
+        "title": "Spatial models for line transect sampling",
+        "type": "article-journal",
+        "volume": "9"
     }
 ]
