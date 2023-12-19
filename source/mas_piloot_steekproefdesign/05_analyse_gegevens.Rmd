@@ -1352,3 +1352,16 @@ include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
                            "beleidstoestand_veldleeuwerik_coarse.pdf"))
 ```
+
+### Correlaties met verklarende variabelen 2018-2023 {#correlaties-jaren}
+
+#### Inleiding
+
+De analyses in Sectie \@ref(beheerovereenkomsten) waren gericht op de correlatie met het aandeel beheerovereenkomsten (soortbeschermingsmaatregelen) per telcirkel.
+We kunnen dezelfde methodiek ook toepassen om correlaties te vinden met de andere verklarende variabelen die we hebben berekend (Sectie \@ref(verklarende-variabelen)).
+
+#### Materiaal en methoden
+
+#### Resultaten De Moeren
+
+#### Resultaten Oostelijke leemstreek
