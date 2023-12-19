@@ -594,10 +594,6 @@ summary_var_tab %>%
 
 \textcolor{red}{waarom veldleeuwerik ... De resultaten van andere soorten zullen in een ander rapport worden beschreven.}
 
-### Data exploratie {#exploratie-veldleeuwerik}
-
-\textcolor{red}{doen?}
-
 ### Abundanties en detectiekans {#intro-detectiekans}
 
 Er zijn verschillende manieren om het aantal dieren in een populatie (= abundantie) te schatten.
@@ -1237,7 +1233,9 @@ Een tweestapsmethodiek lijkt een valabele optie die enerzijds overzichtelijk bli
 
 #### Inleiding
 
-\textcolor{red}{tekst}
+De resultaten van distance sampling gaven al een beeld van het verschil binnen versus buiten soortbeschermingsplan (SBP).
+We hadden ook een continue variabele die het oppervlakte soortbeschermingsmaatregelen in elke telcirkel aangeeft.
+Deze variabele kan meer informatie kan bevatten waardoor correlatieve analyses in deze context ook interessant konden zijn.
 
 #### Materiaal en methoden
 
@@ -1288,7 +1286,7 @@ Hierin worden twee fases onderscheiden:
 1.  Zoekfase\
     De rangschikking van de verklarende variabelen, nl. de kleinst mogelijke subset van kandidaat-variabelen voor elk aantal variabelen, werd bepaald via forward search. Hierbij werd gespecifieerd dat de categorische variabele voor het oppervlakte-aandeel soortbeschermingsplannen zeker in het finale model moest aanwezig zijn (altijd rang 1). Maximale submodelgrootte werd ingesteld op 19 variabelen.
 2.  Evaluatiefase\
-    Berekening van voorspellende prestaties van de steeds complexer wordende submodellen langs de ranglijst van verklarende variabelen via 5-fold cross-validation (CV). Voorspellende prestaties werden gekwantificeerd als 'mean log predictive density' (MLPD). Dit is de expected log (pointwise) predictive density (ELPD) gedeeld door het aantal observaties.
+    Berekening van voorspellende prestaties van de steeds complexer wordende submodellen langs de ranglijst van verklarende variabelen via leave-one-out cross-validation (CV) voor De Moeren en 5-fold CV voor de Oostelijke leemstreek en . Voorspellende prestaties werden gekwantificeerd als 'mean log predictive density' (MLPD). Dit is de expected log (pointwise) predictive density (ELPD) gedeeld door het aantal observaties.
 
 Selectie van het aantal variabelen werd visueel gedaan door de MLPD te plotten als verschil met het referentiemodel in functie van submodelgrootte.
 Als de MLPD niet meer toeneemt met het aantal variabelen, dan voegen die extra variabelen geen voorspellende waarde meer toe aan het model en zullen ze niet geselecteerd worden.
@@ -1299,7 +1297,7 @@ Een cumulatieve ranking proportie voor variabele $x$ van 90 % bij \<= 5 ($= j$) 
 
 Finale modellen werden met de geselecteerde variabelen opnieuw gefit via **brms**.
 We fitten zowel een Poisson als zero-inflated Poisson model.
-Beide modellen werden vergeleken visueel via PPC's en o.b.v. het verschil in ELPD berekend via 5-fold cross-validation.
+Beide modellen werden vergeleken visueel via PPC's en o.b.v. het verschil in ELPD berekend via 5-fold CV.
 Voor de nabewerking en visualisatie van de resultaten hebben we gebruik gemaakt van de functionaliteiten uit de **tidybayes** package v3.0.4 [@R-tidybayes].
 We definieerden een postief verschil als de ondergrens van het 95 % credible interval groter is dan nul, een negatief verschil als de bovengrens kleiner is dan nul, een stabiel (geen) verschil als het credible interval nul bevat maar binnen de referentiewaarden valt (tussen toename van 25 % en afname van 20 %) en een onzeker verschil als het credible interval nul en ten minste een van de referentiewaarden bevat [@onkelinx2023].
 
