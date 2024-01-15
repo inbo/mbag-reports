@@ -1315,16 +1315,49 @@ include_graphics(file.path("media", "beheerovereenkomsten",
                            "cvvs_proporties_veldleeuwerik.pdf"))
 ```
 
-```{r beleid-df-veldleeuw1, out.width = "100%", fig.cap = "Posterior distributions van het verschil in maximum aantal broedparen per telcirkel met nulbeleid (= geen oppervlakte-aandeel soortbeschermingsmaatregelen aanwezig) voor het model van De Moeren. Het punt geeft de posterior mediaan aan en het interval het 95 \\% equal tail credible interval."}
+```{r}
+model_output_2022_2023 <- read_csv(
+  file.path("media", "beheerovereenkomsten", "model_output_2022_2023.csv"),
+  show_col_types = FALSE)
+
+model_output_2022_2023 %>%
+  dplyr::filter(soort == "Veldleeuwerik",
+                regio == "De Moeren") %>%
+  select(variabele, mediaan = schatting, standaardfout, lcl, ucl,
+         trend = trend_coarse) %>%
+  mutate(variabele = factor(variabele, levels = c(
+    "area_prop_sb_catlaagbeleid",
+    "area_prop_sb_catmiddellaagbeleid",
+    "area_prop_sb_catmiddelhoogbeleid",
+    "area_prop_sb_cathoogbeleid",
+    "boom",
+    "area_prop_sb_catlaagbeleid_weighted",
+    "area_prop_sb_cathoogbeleid_weighted"
+  ))) %>%
+  arrange(variabele) %>%
+  mutate(variabele = gsub("area_prop_sb_cat", "", variabele),
+         variabele = gsub("_weighted", "", variabele)) %>%
+  kable(digits = 3, booktabs = TRUE, caption = "...") %>%
+  kableExtra::pack_rows("Model", 1, 5) %>%
+  kableExtra::pack_rows("Geaggregeerd", 6, 7)
+```
+
+```{r beleid-dm-veldleeuw1, out.width = "100%", fig.cap = "Posterior distributions van het verschil in maximum aantal broedparen per telcirkel met nulbeleid (= geen oppervlakte-aandeel soortbeschermingsmaatregelen aanwezig) voor het model van De Moeren. Het punt geeft de posterior mediaan aan en het interval het 95 \\% equal tail credible interval."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "de_moeren",
                            "beleidstoestand_veldleeuwerik_fine.pdf"))
 ```
 
-```{r beleid-df-veldleeuw2, out.width = "100%", fig.cap = "Posterior distributions van het verschil in maximum aantal broedparen per telcirkel van laag- en hoogbeleid met nulbeleid voor het model van De Moeren."}
+```{r beleid-dm-veldleeuw2, out.width = "100%", fig.cap = "Posterior distributions van het verschil in maximum aantal broedparen per telcirkel van laag- en hoogbeleid met nulbeleid voor het model van De Moeren."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "de_moeren",
                            "beleidstoestand_veldleeuwerik_coarse.pdf"))
+```
+
+```{r boom-dm-veldleeuw, out.width = "100%", fig.cap = "..."}
+include_graphics(file.path("media", "beheerovereenkomsten",
+                           "de_moeren",
+                           "boom_veldleeuwerik_data.pdf"))
 ```
 
 #### Resultaten Oostelijke leemstreek
@@ -1341,6 +1374,36 @@ include_graphics(file.path("media", "beheerovereenkomsten",
                            "cvvs_proporties_veldleeuwerik.pdf"))
 ```
 
+```{r}
+model_output_2022_2023 %>%
+  dplyr::filter(soort == "Veldleeuwerik",
+                regio == "Oostelijke leemstreek") %>%
+  select(variabele, mediaan = schatting, standaardfout, lcl, ucl,
+         trend = trend_coarse) %>%
+  mutate(variabele = factor(variabele, levels = c(
+    "area_prop_sb_catlaagbeleid",
+    "area_prop_sb_catmiddellaagbeleid",
+    "area_prop_sb_catmiddelhoogbeleid",
+    "area_prop_sb_cathoogbeleid",
+    "openheid_waarde_1000",
+    "grasland_hfdtlt_pre",
+    "bosrand",
+    "haag",
+    "boom",
+    "bomenrij",
+    "meerjarige_fruitteelt_hfdtlt",
+    "houtkant",
+    "area_prop_sb_catlaagbeleid_weighted",
+    "area_prop_sb_cathoogbeleid_weighted"
+  ))) %>%
+  arrange(variabele) %>%
+  mutate(variabele = gsub("area_prop_sb_cat", "", variabele),
+         variabele = gsub("_weighted", "", variabele)) %>%
+  kable(digits = 3, booktabs = TRUE, caption = "...") %>%
+  kableExtra::pack_rows("Model", 1, 12) %>%
+  kableExtra::pack_rows("Geaggregeerd", 13, 14)
+```
+
 ```{r beleid-ol-veldleeuw1, out.width = "100%", fig.cap = "Posterior distributions van het verschil in maximum aantal broedparen per telcirkel met nulbeleid (= geen oppervlakte-aandeel soortbeschermingsmaatregelen aanwezig) voor het model van de Oostelijke leemstreek. Het punt geeft de posterior mediaan aan en het interval het 95 \\% equal tail credible interval."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
@@ -1351,6 +1414,12 @@ include_graphics(file.path("media", "beheerovereenkomsten",
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
                            "beleidstoestand_veldleeuwerik_coarse.pdf"))
+```
+
+```{r openheid-ol-veldleeuw, out.width = "100%", fig.cap = "..."}
+include_graphics(file.path("media", "beheerovereenkomsten",
+                           "oostelijke_leemstreek",
+                           "openheid_waarde_1000_veldleeuwerik_data.pdf"))
 ```
 
 ### Correlaties met verklarende variabelen 2018-2023 {#correlaties-jaren}
