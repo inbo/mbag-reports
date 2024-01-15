@@ -18,6 +18,7 @@ author:
       given: "Nicolas"
       family: "Van Overmeeren"
     email: "nicolas.vanovermeeren@inbo.be"
+    orcid: "0000-0002-5900-8109"
     affiliation: "Instituut voor Natuur- en Bosonderzoek (INBO)"
   - name:
       given: "Johannes"
