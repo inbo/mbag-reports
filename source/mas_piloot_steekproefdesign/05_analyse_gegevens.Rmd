@@ -1339,7 +1339,9 @@ model_output_2022_2023 %>%
          variabele = gsub("_weighted", "", variabele)) %>%
   kable(digits = 3, booktabs = TRUE, caption = "...") %>%
   kableExtra::pack_rows("Model", 1, 5) %>%
-  kableExtra::pack_rows("Geaggregeerd", 6, 7)
+  kableExtra::pack_rows("Geaggregeerd", 6, 7) %>%
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::row_spec(0, bold = TRUE)
 ```
 
 ```{r beleid-dm-veldleeuw1, out.width = "100%", fig.cap = "Posterior distributions van het verschil in maximum aantal broedparen per telcirkel met nulbeleid (= geen oppervlakte-aandeel soortbeschermingsmaatregelen aanwezig) voor het model van De Moeren. Het punt geeft de posterior mediaan aan en het interval het 95 \\% equal tail credible interval."}
@@ -1374,6 +1376,8 @@ include_graphics(file.path("media", "beheerovereenkomsten",
                            "cvvs_proporties_veldleeuwerik.pdf"))
 ```
 
+Zie Bijlage \@ref(extra-figs-2022-2023) voor extra figuren...
+
 ```{r}
 model_output_2022_2023 %>%
   dplyr::filter(soort == "Veldleeuwerik",
@@ -1401,7 +1405,9 @@ model_output_2022_2023 %>%
          variabele = gsub("_weighted", "", variabele)) %>%
   kable(digits = 3, booktabs = TRUE, caption = "...") %>%
   kableExtra::pack_rows("Model", 1, 12) %>%
-  kableExtra::pack_rows("Geaggregeerd", 13, 14)
+  kableExtra::pack_rows("Geaggregeerd", 13, 14) %>%
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::row_spec(0, bold = TRUE)
 ```
 
 ```{r beleid-ol-veldleeuw1, out.width = "100%", fig.cap = "Posterior distributions van het verschil in maximum aantal broedparen per telcirkel met nulbeleid (= geen oppervlakte-aandeel soortbeschermingsmaatregelen aanwezig) voor het model van de Oostelijke leemstreek. Het punt geeft de posterior mediaan aan en het interval het 95 \\% equal tail credible interval."}

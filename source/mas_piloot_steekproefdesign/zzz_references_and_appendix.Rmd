@@ -134,6 +134,34 @@ read_csv(file.path("media", "distance", "per_stratum",
 
 \newpage
 
+## Extra figuren trends verklarende variabelen Oostelijke leemstreek 2022-2023 {#extra-figs-2022-2023}
+
+```{r, out.width = "100%"}
+include_graphics(file.path("media", "beheerovereenkomsten",
+                           "oostelijke_leemstreek",
+                           "grasland_hfdtlt_pre_veldleeuwerik_data.pdf"))
+include_graphics(file.path("media", "beheerovereenkomsten",
+                           "oostelijke_leemstreek",
+                           "bosrand_veldleeuwerik_data.pdf"))
+include_graphics(file.path("media", "beheerovereenkomsten",
+                           "oostelijke_leemstreek",
+                           "haag_veldleeuwerik_data.pdf"))
+include_graphics(file.path("media", "beheerovereenkomsten",
+                           "oostelijke_leemstreek",
+                           "boom_veldleeuwerik_data.pdf"))
+include_graphics(file.path("media", "beheerovereenkomsten",
+                           "oostelijke_leemstreek",
+                           "bomenrij_veldleeuwerik_data.pdf"))
+include_graphics(file.path("media", "beheerovereenkomsten",
+                           "oostelijke_leemstreek",
+                           "meerjarige_fruitteelt_hfdtlt_veldleeuwerik_data.pdf"))
+include_graphics(file.path("media", "beheerovereenkomsten",
+                           "oostelijke_leemstreek",
+                           "houtkant_veldleeuwerik_data.pdf"))
+```
+
+\newpage
+
 ## Aanvullende kaarten uitrol MAS Vlaanderen {#bijlage-uitrol-mas}
 
 ```{=tex}
