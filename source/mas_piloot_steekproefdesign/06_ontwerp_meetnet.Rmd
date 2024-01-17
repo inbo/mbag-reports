@@ -224,6 +224,13 @@ Zo selecteren we dus enkel nieuwe punten voor de Westelijk leemstreek; we behoud
 
 ## Reproduceerbaarheid en traceerbaarheid {#git-mbag}
 
+De toestand van de GitHub repository op het moment van de steekproeftrekking voor de (zand)leemstreek kan geraadpleegd worden via de volgende commit hash:
+
+```{=tex}
+\begin{center}
+bafe6a6164dde186f309d1aacbcbff0ccde21735
+\end{center}
+```
 Omwille van de automatisatie van de versiecontrolestap van het steekproefkader en de steekproef, zijn deze in de online GitHub repository [@github-repo] te vinden onder een ander folder (zie Bijlage \@ref(hashes-steekproef)).
 De finale steekproef na manuele controle (de punten die effectief werden bezocht in het veld) zijn wel nog te vinden in de folder *data/processed* zoals bij het pilootmeetnet (Sectie \@ref(git-piloot)).
 De hashes van de finale bestanden zijn te vinden in Bijlage \@ref(hashes-steekproef).
@@ -233,3 +240,4 @@ Dit zal zorgen dat deze bestanden nog beter traceerbaar zijn en het volledige me
 ## Vrijwilligerswerking {#vrijwilligers-mbag}
 
 \textcolor{red}{uitdagingen en verandering vrijwilligerswerking t.o.v. pilootproject}
+
