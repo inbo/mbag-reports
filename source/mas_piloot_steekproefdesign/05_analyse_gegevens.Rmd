@@ -1315,7 +1315,7 @@ Voor de andere categorieën is de onzekerheid te groot (Fig. \@ref(fig:beleid-dm
 Dit komt omdat er voor sommige categorieën weinig data is.
 We kunnen de categoriën laag- en middellaagbeleid aggregeren tot laagbeleid via een gewogen gemiddelde waarbij de gewichten afhankelijk zijn van het aantal data per groep.
 Dit doen we ook voor hoogbeleid.
-We zien een onzeker verschil in aantal broedparen voor laagbeleid en een positief verschil voor hoogbeleid met nulbeleid.
+We zien een onzeker verschil in aantal broedparen voor laagbeleid en een positief verschil voor hoogbeleid met nulbeleid (Fig. \@ref(fig:beleid-dm-veldleeuw2)).
 Verder zien we een significante negatieve correlatie met de proportie bomen binnen de telcirkels.
 Het maximaal aantal broedparen neemt af met gemiddeld 48.1 % per toename van een standaarddeviatie in proportie bomen (Fig. \@ref(fig:boom-dm-veldleeuw)).
 
@@ -1353,8 +1353,14 @@ model_output_2022_2023 %>%
   arrange(variabele) %>%
   mutate(variabele = gsub("area_prop_sb_cat", "", variabele),
          variabele = gsub("_weighted", "", variabele)) %>%
-  kable(digits = 3, booktabs = TRUE, caption = "Samenvattende statistieken van de posterior distributions van de parameters in het finale model van De Moeren ($exp(\beta)-1$). De referentiegroep is nulbeleid (= geen oppervlakte‐aandeel soortbeschermingsmaatregelen aanwezig). ‘lcl’ staat voor ‘lower confidence
-limit’ de ondergrens van het 95 % credible interval en ‘ucl’ (‘upper confidence limit’) voor de bovengrens.") %>%
+  kable(digits = 3, booktabs = TRUE,
+        caption = paste(
+          "Samenvattende statistieken van de posterior distributions van de",
+          "parameters in het finale model van De Moeren ($exp(\\beta)-1$). De",
+          "referentiegroep is nulbeleid (= geen oppervlakte‐aandeel",
+          "soortbeschermingsmaatregelen aanwezig). ‘lcl’ staat voor ‘lower",
+          "confidence limit’ de ondergrens van het 95 \\% credible interval en",
+          "‘ucl’ (‘upper confidence limit’) voor de bovengrens.")) %>%
   kableExtra::pack_rows("Model", 1, 5) %>%
   kableExtra::pack_rows("Geaggregeerd", 6, 7) %>%
   kableExtra::kable_styling(latex_options = "striped") %>%
@@ -1373,13 +1379,24 @@ include_graphics(file.path("media", "beheerovereenkomsten",
                            "beleidstoestand_veldleeuwerik_coarse.pdf"))
 ```
 
-```{r boom-dm-veldleeuw, out.width = "100%", fig.cap = "Relatie tussen het maximum aantal broedparen in een telcirkel en de oppervlakte aan bomen. De zwarte lijn is de posterior mediaan en de onzekerheidsband toont het 95 % credible interval."}
+```{r boom-dm-veldleeuw, out.width = "100%", fig.cap = "Relatie tussen het maximum aantal broedparen in een telcirkel en de oppervlakte aan bomen. De zwarte lijn is de posterior mediaan en de onzekerheidsband toont het 95 \\% equal tail credible interval."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "de_moeren",
                            "boom_veldleeuwerik_data.pdf"))
 ```
 
 #### Resultaten Oostelijke leemstreek
+
+De voorspellende kracht van het model voor de Oostelijke leemstreek neemt niet meer toe na negen variabelen (Fig. \@ref(fig:ranking-ol-veldleeuw)).
+Naast de vaste `area_prop_sb_cat` hebben we nog de variabelen `openheid_waarde_1000`, `haag`, `houtkant`, `bomenrij`, `bosrand` en `boom` die in 100 % van de CV folds aanwezig waren en `meerjarige_fruitteelt_hfdtlt` en `grasland_hfdtlt_pre` in 80 % (Fig. \@ref(fig:cvprop-ol-veldleeuw)).
+Samenvattende statistieken van de parameters zijn gegeven in Tabel \@ref(tab:ol-veldleeuw-params).
+De referentiegroep is nulbeleid (= geen oppervlakte‐aandeel soortbeschermingsmaatregelen aanwezig).
+We zien significant meer broedparen in telcirkels met laag-, middelhoog- en hoogbeleid.
+Voor middellaagbeleid is de onzekerheid te groot (Fig. \@ref(fig:beleid-ol-veldleeuw1)).
+Wanneer we de categoriën aggregeren zien we een positief verschil in aantal broedparen voor laagbeleid en hoogbeleid met nulbeleid (Fig. \@ref(fig:beleid-ol-veldleeuw2)).
+Verder zien we een significante positieve correlatie met de openheid van het landschap op 1000 m schaal (Fig. \@ref(fig:openheid-ol-veldleeuw)) en negatieve correlatie met de andere continue variabelen (Bijlage \@ref(extra-figs-2022-2023)).
+Deze andere continue variabelen zijn zelf negatief gecorreleerd met openheid van het landschap (bv. hoe meer bomen, hagen ... hoe minder open het landschap) (Fig. \ref(fig:corrmat2)).
+Enkel het oppervlakte-aandeel hoofdteelt grasland van het jaar ervoor (`grasland_hfdtlt_pre`) is niet gerelateerd aan de openheid van het landschap.
 
 ```{r ranking-ol-veldleeuw, out.width = "100%", fig.cap = "Verschil in MLPD met referentiemodel (rode stippellijn) voor verschillende submodelgroottes voor het model van de Oostelijke leemstreek."}
 include_graphics(file.path("media", "beheerovereenkomsten",
@@ -1393,9 +1410,7 @@ include_graphics(file.path("media", "beheerovereenkomsten",
                            "cvvs_proporties_veldleeuwerik.pdf"))
 ```
 
-Zie Bijlage \@ref(extra-figs-2022-2023) voor extra figuren...
-
-```{r}
+```{r ol-veldleeuw-params}
 model_output_2022_2023 %>%
   dplyr::filter(soort == "Veldleeuwerik",
                 regio == "Oostelijke leemstreek") %>%
@@ -1420,7 +1435,15 @@ model_output_2022_2023 %>%
   arrange(variabele) %>%
   mutate(variabele = gsub("area_prop_sb_cat", "", variabele),
          variabele = gsub("_weighted", "", variabele)) %>%
-  kable(digits = 3, booktabs = TRUE, caption = "...") %>%
+  kable(digits = 3, booktabs = TRUE,
+        caption = paste(
+          "Samenvattende statistieken van de posterior distributions van de",
+          "parameters in het finale model van de Oostelijke leemstreek",
+          "($exp(\\beta)-1$). De",
+          "referentiegroep is nulbeleid (= geen oppervlakte‐aandeel",
+          "soortbeschermingsmaatregelen aanwezig). ‘lcl’ staat voor ‘lower",
+          "confidence limit’ de ondergrens van het 95 \\% credible interval en",
+          "‘ucl’ (‘upper confidence limit’) voor de bovengrens.")) %>%
   kableExtra::pack_rows("Model", 1, 12) %>%
   kableExtra::pack_rows("Geaggregeerd", 13, 14) %>%
   kableExtra::kable_styling(latex_options = "striped") %>%
@@ -1439,7 +1462,7 @@ include_graphics(file.path("media", "beheerovereenkomsten",
                            "beleidstoestand_veldleeuwerik_coarse.pdf"))
 ```
 
-```{r openheid-ol-veldleeuw, out.width = "100%", fig.cap = "..."}
+```{r openheid-ol-veldleeuw, out.width = "100%", fig.cap = "Relatie tussen het maximum aantal broedparen in een telcirkel en de openheid van het landschap op 1000 m schaal (grotere waardes betekenen een meer open landschap). De zwarte lijn is de posterior mediaan en de onzekerheidsband toont het 95 \\% equal tail credible interval."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
                            "openheid_waarde_1000_veldleeuwerik_data.pdf"))
