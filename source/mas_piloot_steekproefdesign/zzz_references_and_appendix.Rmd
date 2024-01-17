@@ -10,7 +10,7 @@ INBOmd::references(appendix = TRUE)
 
 De steekproefkaders en steekproeven staan als *TSV*-bestanden onder versiecontrole in de GitHub repository.
 De combinatie van data en metadata hashes kunnen de datasets op unieke manier identificeren (en dus bijvoorbeeld onderscheiden van oudere versies).
-Deze hashes worden berekend wanneer de bestanden worden opgeslaan en weggeschreven met `git2rdata::write_vc()` functie.
+Deze hashes worden berekend wanneer de bestanden worden opgeslagen en weggeschreven met `git2rdata::write_vc()` functie.
 De hashes van data (`data_hash`) en metadata (`hash`) staan in het bijhorende *YML*-bestand.
 De onderstaande tabel geeft de hashes van de finale datasets.
 Het steekproefkader en de steekproef voor de zandleemstreek en de leemstreek zitten in hetzelfde bestand, maar niet de finale steekproef.
@@ -99,7 +99,7 @@ De volgende tabellen geven meer uitgebreide resultaten van deze berekeningen.
 De kolom `log_diff` bevat waardes van $\hat{D}_v$ en `log_diff_se` de standaardfout $\hat{se}(\hat{D}_v)$.
 `sci` bevat de $SCI$ waardes waarbij `sci_lcl` en `sci_ucl` resp.
 de onder- en bovengrens het 95 % betrouwbaarheidsinterval aangeven.
-We definieerden (kolom `verschil`) een postief verschil in densiteit met de referentie als de ondergrens van het 95 % betrouwbaarheidsinterval van de $SCI$ groter is dan nul, een negatief verschil als de bovengrens kleiner is dan nul, een stabiel (geen) verschil als het betrouwbaarheidsinterval nul bevat maar binnen de referentiewaarden valt (tussen toename van 25 % en afname van 20 %) en een onzeker verschil als het betrouwbaarheidsinterval nul en ten minste een van de referentiewaarden bevat.
+We definieerden (kolom `verschil`) een positief verschil in densiteit met de referentie als de ondergrens van het 95 % betrouwbaarheidsinterval van de $SCI$ groter is dan nul, een negatief verschil als de bovengrens kleiner is dan nul, een stabiel (geen) verschil als het betrouwbaarheidsinterval nul bevat maar binnen de referentiewaarden valt (tussen toename van 25 % en afname van 20 %) en een onzeker verschil als het betrouwbaarheidsinterval nul en ten minste een van de referentiewaarden bevat.
 
 ```{r sci-jaar-tab}
 read_csv(file.path("media", "distance", "per_jaar",
@@ -152,9 +152,10 @@ include_graphics(file.path("media", "beheerovereenkomsten",
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
                            "bomenrij_veldleeuwerik_data.pdf"))
-include_graphics(file.path("media", "beheerovereenkomsten",
-                           "oostelijke_leemstreek",
-                           "meerjarige_fruitteelt_hfdtlt_veldleeuwerik_data.pdf"))
+include_graphics(file.path(
+  "media", "beheerovereenkomsten", "oostelijke_leemstreek",
+  "meerjarige_fruitteelt_hfdtlt_veldleeuwerik_data.pdf"
+  ))
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
                            "houtkant_veldleeuwerik_data.pdf"))

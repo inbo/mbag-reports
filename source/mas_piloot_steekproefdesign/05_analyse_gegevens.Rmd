@@ -843,9 +843,9 @@ $$
 en identiek voor $\hat{var}(\log(\hat{D}_r))$
 
 Dit is niet exact dezelfde methodiek als geïmplementeerd in **Distance** omdat we hier geen gebruik maken van de Satterthwaite-benadering.
-Desalnietemin zal het wel zeer dicht in de buurt liggen, vooral als we veel vrijheidsgraden (en dus veel data) hebben.
+Desalniettemin zal het wel zeer dicht in de buurt liggen, vooral als we veel vrijheidsgraden (en dus veel data) hebben.
 
-We definieerden een postief verschil in densiteit met de referentie als de ondergrens van het 95 % betrouwbaarheidsinterval van de $SCI$ groter is dan nul, een negatief verschil als de bovengrens kleiner is dan nul, een stabiel (geen) verschil als het betrouwbaarheidsinterval nul bevat maar binnen de referentiewaarden valt (tussen toename van 25 % en afname van 20 %) en een onzeker verschil als het betrouwbaarheidsinterval nul en ten minste een van de referentiewaarden bevat.
+We definieerden een positief verschil in densiteit met de referentie als de ondergrens van het 95 % betrouwbaarheidsinterval van de $SCI$ groter is dan nul, een negatief verschil als de bovengrens kleiner is dan nul, een stabiel (geen) verschil als het betrouwbaarheidsinterval nul bevat maar binnen de referentiewaarden valt (tussen toename van 25 % en afname van 20 %) en een onzeker verschil als het betrouwbaarheidsinterval nul en ten minste een van de referentiewaarden bevat.
 Hierbij werd gebruik gemaakt van de **effectclass** package [@onkelinx2023].
 Deze resultaten zullen bijgevolg afhankelijk van de (arbitraire) keuze van de referentiewaarden (toename 25 % en afname 20 %) en het gebruik van het significantieniveau $\alpha$ (hier 5 %).
 Dit rapport richt zich voornamelijk op de methodiek, waarbij de nadruk ligt op de beschrijving van de gebruikte onderzoeksmethoden.
@@ -1193,14 +1193,14 @@ include_graphics(file.path("media", "distance", "per_stratum",
 ```
 
 In **Distance** deden we aan zgn.
-conventional distance sampling (CDS) waarbij de afstanden werden gebundeld voor alle ruimtelijke locaties (i.c. telpunten) om de parameter(s) van de detectiefunctie te schatten, bijvoorbeeld voor de half-normaale functie.
+conventional distance sampling (CDS) waarbij de afstanden werden gebundeld voor alle ruimtelijke locaties (i.c. telpunten) om de parameter(s) van de detectiefunctie te schatten, bijvoorbeeld voor de half-normale functie.
 Dit werd gebruikt om een schatting van de densiteit te verkrijgen, en vervolgens werd de variantie gebaseerd op de variantie van de "encounter rate", die wel enige informatie uit de telpunten gebruikt.
 Bij CDS wordt er ook van uitgegaan dat dieren uniform worden verdeeld met betrekking tot transecten/telpunten en vereisen dus gerandomiseerde plaatsing van transecten/punten tijdens het steekproefdesign.
 Hierbij worden factoren die de abundantie tussen plots beïnvloeden verwaarloosd.
 Het is relevant om te overwegen dat er meer geavanceerde benaderingen en alternatieven beschikbaar zijn voor het verbeteren van onze schattingsmethoden en/of deze te koppelen aan vervolganalyses.
 In plaats van gegevens te bundelen zoals bij CDS, biedt hierarchical distance sampling (HDS) een expliciet model voor de variatie van de lokale populatiegrootte $N_i$ (de abundantie voor telpunt $i$).
 Dit zijn parametrisch modellen om variatie in abundantie tussen telpunten te beschrijven.
-Hierbij kunnen we expliciete modellen bouwen voor distance sampling data die verantwoordelijk zijn voor variatie in abundatie (of lokale densiteit) tussen steekproefeenheden (telpunten), waardoor inferentie over factoren die ruimtelijke invloed hebben op variatie in abundatie wordt vergemakkelijkt alsook expliciete spatiale predicties over abundantie [@hedley2004; @royle2004; @kéry2016].
+Hierbij kunnen we expliciete modellen bouwen voor distance sampling data die verantwoordelijk zijn voor variatie in abundantie (of lokale densiteit) tussen steekproefeenheden (telpunten), waardoor inferentie over factoren die ruimtelijke invloed hebben op variatie in abundantie wordt vergemakkelijkt alsook expliciete spatiale predicties over abundantie [@hedley2004; @royle2004; @kéry2016].
 Een andere benadering is het gebruik van density surface modeling (DSM), waarbij ruimtelijke informatie wordt geïntegreerd om de dichtheid van akkervogels over het gehele studiegebied te voorspellen.
 Dit stelt ons in staat om ruimtelijke patronen in de dichtheid beter te begrijpen en kan resulteren in meer nauwkeurige schattingen, vooral in gebieden waar conventionele methoden tekortschieten [@miller2013].
 In beide gevallen biedt het de mogelijkheid om covariaten, zoals landschapskenmerken, op te nemen die van invloed kunnen zijn op de akkervogeldichtheid.
@@ -1293,7 +1293,7 @@ Als de MLPD niet meer toeneemt met het aantal variabelen, dan voegen die extra v
 Ook bekeken we de variabiliteit in de rangschikking van de verklarende variabelen aan de hand van de (cumulatieve) ranking proporties.
 De ranking proportie van variabele $x$ bij submodelgrootte $j$ is de proportie van CV folds die variabele $x$ hebben op positie $j$ van hun rangschikking van de verklarende variabelen.
 De cumulatieve ranking proporties worden opgeteld naarmate submodelgrootte toeneemt.
-Een cumulatieve ranking proportie voor variabele $x$ van 90 % bij \<= 5 ($= j$) will bijvoorbeeld zeggen dat $x$ in 90 % van de CV folds een ranking kleiner of gelijk aan 5 heeft.
+Een cumulatieve ranking proportie voor variabele $x$ van 90 % bij \<= 5 ($= j$) wil bijvoorbeeld zeggen dat $x$ in 90 % van de CV folds een ranking kleiner of gelijk aan 5 heeft.
 
 Finale modellen werden met de geselecteerde variabelen opnieuw gefit via **brms**.
 We fitten zowel een Poisson als zero-inflated Poisson model.
@@ -1302,7 +1302,7 @@ Voor de nabewerking en visualisatie van de resultaten hebben we gebruik gemaakt 
 We rapporteren steeds de posterior mediaan van $exp(\beta) - 1$ als maat voor het centrale tendens van variabele $x$, en de standaard deviatie (= standaardfout) en 95 % equal tail credible interval als maat voor onzekerheid.
 Indien voor variabele $x$ de mediaan van $exp(\beta) - 1$ gelijk is aan 0,5, dan verwachten we gemiddeld gezien 50 % meer broedparen (toename met factor 1,5) als $x$ toeneemt met één standaarddeviatie (omdat de data geschaald is) en alle andere variabelen constant worden gehouden.
 Aangezien we geen interacties beschouwen is deze trend gelijk voor alle categorieën van categorische variabelen.
-We definieerden een postief verschil als de ondergrens van het 95 % credible interval groter is dan nul, een negatief verschil als de bovengrens kleiner is dan nul, een stabiel (geen) verschil als het credible interval nul bevat maar binnen de referentiewaarden valt (tussen toename van 25 % en afname van 20 %) en een onzeker verschil als het credible interval nul en ten minste een van de referentiewaarden bevat [@onkelinx2023].
+We definieerden een positief verschil als de ondergrens van het 95 % credible interval groter is dan nul, een negatief verschil als de bovengrens kleiner is dan nul, een stabiel (geen) verschil als het credible interval nul bevat maar binnen de referentiewaarden valt (tussen toename van 25 % en afname van 20 %) en een onzeker verschil als het credible interval nul en ten minste een van de referentiewaarden bevat [@onkelinx2023].
 
 #### Resultaten De Moeren
 
@@ -1313,7 +1313,7 @@ De referentiegroep is nulbeleid (= geen oppervlakte‐aandeel soortbeschermingsm
 We zien enkel een significant meer broedparen in telcirkels met hoogbeleid (gemiddeld gezien 119 % meer).
 Voor de andere categorieën is de onzekerheid te groot (Fig. \@ref(fig:beleid-dm-veldleeuw1)).
 Dit komt omdat er voor sommige categorieën weinig data is.
-We kunnen de categoriën laag- en middellaagbeleid aggregeren tot laagbeleid via een gewogen gemiddelde waarbij de gewichten afhankelijk zijn van het aantal data per groep.
+We kunnen de categorieën laag- en middellaagbeleid aggregeren tot laagbeleid via een gewogen gemiddelde waarbij de gewichten afhankelijk zijn van het aantal data per groep.
 Dit doen we ook voor hoogbeleid.
 We zien een onzeker verschil in aantal broedparen voor laagbeleid en een positief verschil voor hoogbeleid met nulbeleid (Fig. \@ref(fig:beleid-dm-veldleeuw2)).
 Verder zien we een significante negatieve correlatie met de proportie bomen binnen de telcirkels.
@@ -1393,7 +1393,7 @@ Samenvattende statistieken van de parameters zijn gegeven in Tabel \@ref(tab:ol-
 De referentiegroep is nulbeleid (= geen oppervlakte‐aandeel soortbeschermingsmaatregelen aanwezig).
 We zien significant meer broedparen in telcirkels met laag-, middelhoog- en hoogbeleid.
 Voor middellaagbeleid is de onzekerheid te groot (Fig. \@ref(fig:beleid-ol-veldleeuw1)).
-Wanneer we de categoriën aggregeren zien we een positief verschil in aantal broedparen voor laagbeleid en hoogbeleid met nulbeleid (Fig. \@ref(fig:beleid-ol-veldleeuw2)).
+Wanneer we de categorieën aggregeren zien we een positief verschil in aantal broedparen voor laagbeleid en hoogbeleid met nulbeleid (Fig. \@ref(fig:beleid-ol-veldleeuw2)).
 Verder zien we een significante positieve correlatie met de openheid van het landschap op 1000 m schaal (Fig. \@ref(fig:openheid-ol-veldleeuw)) en negatieve correlatie met de andere continue variabelen (Bijlage \@ref(extra-figs-2022-2023)).
 Deze andere continue variabelen zijn zelf negatief gecorreleerd met openheid van het landschap (bv. hoe meer bomen, hagen ... hoe minder open het landschap; Fig. \@ref(fig:corrmat2)).
 Enkel het oppervlakte-aandeel hoofdteelt grasland van het jaar ervoor (`grasland_hfdtlt_pre`) is niet gerelateerd aan de openheid van het landschap.

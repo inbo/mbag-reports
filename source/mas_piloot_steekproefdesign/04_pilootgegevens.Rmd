@@ -281,7 +281,7 @@ De toestand van de GitHub repository op het moment van de steekproeftrekking voo
 7d0cdbc83765719876fbf0954082873d992f33de
 \end{center}
 ```
-\text{(1)} het steekproefkader, (2) de steekproef en (3) de finale steekproef na manuele controle (de punten die effectief werden bezocht in het veld) werden ook in de GitHub repository opgeslaan als *TSV*-bestanden via de **git2rdata** package [@git2rdata-package] in de folder *data/processed*.
+\text{(1)} het steekproefkader, (2) de steekproef en (3) de finale steekproef na manuele controle (de punten die effectief werden bezocht in het veld) werden ook in de GitHub repository opgeslagen als *TSV*-bestanden via de **git2rdata** package [@git2rdata-package] in de folder *data/processed*.
 Deze staan bijgevolg ook onder versiebeheer.
 De hashes van de finale bestanden zijn te vinden in Bijlage \@ref(hashes-steekproef).
 
@@ -291,4 +291,3 @@ De hashes van de finale bestanden zijn te vinden in Bijlage \@ref(hashes-steekpr
 
 [^04_pilootgegevens-1]: Bij de steekproeftrekking wordt een methode gebruikt die zal vermijden dat telpunten en hun telcirkels overlappen.
     Het kan in deze fase dus geen kwaad dat potentiële telpunten op een afstand van minder dan 300 m van elkaar gelegen zijn.
-

@@ -64,7 +64,7 @@ Zie Bijlage \@ref(bijlage-uitrol-mas) (Fig. \@ref(fig:steekproef-afbakening-mbag
     Dit werd voordien pas in een later stadium gedaan.
 
 2.  Exclusie van bepaalde landgebruiken\
-    Op basis van de problemen gesignaliseerd tijdens terreinbezoeken, sluiten we meer landgebruiken uit dan voordien (Tabel \@ref(tab:exclusie-landgebruik)).
+    Op basis van de problemen gesignaleerd tijdens terreinbezoeken, sluiten we meer landgebruiken uit dan voordien (Tabel \@ref(tab:exclusie-landgebruik)).
     Deze vooral om zoveel mogelijk een goede bereikbaarheid en zichtbaarheid te voorzien.
     Langs autosnelwegen liggen vaak parallelle paden; zelfs langs beide kanten van de snelweg.
     Dit kan in de steekproef tot gevolg hebben dat er met een hogere waarschijnlijkheid een punt wordt geselecteerd vlak bij een snelweg, omdat er veel van zulke punten zijn.
@@ -165,7 +165,8 @@ include_graphics(file.path("media", "visibility",
 6.  Binnen of buiten gebieden met soortbeschermingsplan\
     \textcolor{red}{Johannes uitschrijven, hier staat alvast een samenvatting uit mailcommunicatie} Zowel binnen kerngebied als zoekzones zijn er soortbeschermende maatregelen (SB BO's) gelegd (zie kaart VLM BO's).
     In theorie waren deze maatregelen vooral bedoeld voor kerngebied, en zal daar een hogere dichtheid (bedekkingsgraad) liggen, maar de VLM heeft het toegelaten om ook in zoekzones deze maatregelen te sluiten (al was dat minder de prioriteit).
-    Daar werd bv.in de Moeren geen rekening mee gehouden, en werden erg veel SB BO's gelegd, ook omdat dit gebied wél kerngebied was van plan kiekendief (SBP Grauwe Kiekendief) waardoor er wel veel BO's gesloten zijn.
+    Daar werd bv.
+    in de Moeren geen rekening mee gehouden, en werden erg veel SB BO's gelegd, ook omdat dit gebied wél kerngebied was van plan kiekendief (SBP Grauwe Kiekendief) waardoor er wel veel BO's gesloten zijn.
     In de toekomst heeft VLM beloofd om meer/enkel rekening te houden met kerngebied.
 
     We nemen kerngebieden en zoekzones samen als onderzoeksgebied en alles hierbuiten beschouwen we als controle.
@@ -190,7 +191,7 @@ include_graphics(file.path("media", "kaartjes", "sbp_mbag_kaart.png"))
 
 7.  Steekproeftrekking\
     De stratificatiemethode is niet gewijzigd t.o.v. het pilootmeetnet.
-    Omdat we nu met veel grotere gebieden werken, merkten we wel dat een maximale trekking niet voor een goede spatiale spreiding zorgt omdat het algorime niet genoeg vrijheid krijgt.
+    Omdat we nu met veel grotere gebieden werken, merkten we wel dat een maximale trekking niet voor een goede spatiale spreiding zorgt omdat het algoritme niet genoeg vrijheid krijgt.
     Daarom besloten we uiteindelijk om 1/20ste (5 %) van het aantal elementen in het steekproefkader te nemen per stratum.
     Dit is niet de finale steekproef, maar een (veel) grotere steekproef waaruit later het gewenste aantal telpunten wordt geselecteerd.
     Het algoritme kent een volgorde toe bij de steekproeftrekking en het is aan de hand van deze volgorde dat het gewenste aantal telpunten wordt geselecteerd.
@@ -202,7 +203,7 @@ include_graphics(file.path("media", "kaartjes", "sbp_mbag_kaart.png"))
     Indien een punt uitvalt, kan dit vervangen worden door het eerstvolgende uit de reeks dat nog niet toegewezen werd (het 301ste).
     De methode garandeert dat deze nieuwe set ruimtelijk goed gespreid is en een aselecte steekproef is.
 
-8.  Uitduinnen van steekproef\
+8.  Uitdunnen van steekproef\
     Om te veel overlap van telpunten te voorkomen binnen eenzelfde stratum, is voor elk punt binnen hetzelfde stratum nagegaan of een punt met grotere `sample_order` op minder dan 600 m afstand ligt.
     Als dit het geval is, wordt het punt met de lagere `sample_order` weerhouden.
 
@@ -240,4 +241,3 @@ Dit zal zorgen dat deze bestanden nog beter traceerbaar zijn en het volledige me
 ## Vrijwilligerswerking {#vrijwilligers-mbag}
 
 \textcolor{red}{uitdagingen en verandering vrijwilligerswerking t.o.v. pilootproject}
-
