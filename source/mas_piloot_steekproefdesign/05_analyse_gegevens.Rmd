@@ -1244,7 +1244,7 @@ Dit omdat we vermoedden dat de meer beperkte data van voor het pilootproject mog
 Om de analyses eenvoudiger te maken zetten we de aantallen om naar het maximum aantal per telcirkel per jaar over de telperiodes heen.
 Twee variabelen werden gemeten op tellingniveau: (1) van variabele `n_predators` nemen we het gemiddelde aantal per telcirkel per jaar en (2) van variabele `status_teller` nemen we de status van de teller die in een bepaald jaar het meest frequent een bepaald telpunt heeft bezocht (in het zeldzame geval dat verschillende tellers hetzelfde telpunt in hetzelfde jaar tijdens verschillende telperiodes bezocht hadden).
 
-We beschouwden alle geselecteerde primaire en secundaire variabelen beschreven in Hoofdstuk \@ref(verklarende-variabelen) (Tabel \@ref(tab:verklarende-vars-tab), behalve `openheid_klasse_300` omdat deze als continue variabele op 1000 m informatiever leek (`openheid_waarde_1000`) en `sbp` omwille van de sterke correlatie met de variabele van interesse `area_prop_sb` (Fig. \@ref(fig:sbp-areapropsb)).
+We beschouwden alle geselecteerde primaire en secundaire variabelen beschreven in Hoofdstuk \@ref(verklarende-variabelen) (Tabel \@ref(tab:verklarende-vars-tab), behalve `openheid_klasse_300` omdat deze als continue variabele op 1000 m informatiever leek (`openheid_waarde_1000`) en `sbp` omwille van de sterke correlatie met de variabele van interesse (`area_prop_sb`) (Fig. \@ref(fig:sbp-areapropsb)).
 Om de interpretatie van de resultaten te vereenvoudigen besloten we de continue variabele `area_prop_sb` op te delen volgens de agri-environment schemes (AES) classificatie besproken in @sharps2023 (Tabel \@ref(tab:classificatie-propsb)).
 Deze nieuwe categorische variabele is `area_prop_sb_cat`.
 Ten slotte voegden we de tertiaire variabele `jaar` toe als factorvariabele (`jaar.f`).
@@ -1266,7 +1266,7 @@ Selectie van variabelen werd gedaan via projection predictive variable selection
 Het doel van PPVS is het vinden van een zo klein mogelijke subset van kandidaat-variabelen met een voorspellende kracht die zo dicht mogelijk ligt bij die van het referentiemodel.
 Als referentiemodel specificeerden we voor elke regio een Poisson model met alle variabelen in kwestie en is het best presterende model (in termen van voorspellende prestaties) dat we tot onze beschikking hebben.
 Voor de regressiecoëfficienten ($\beta$-parameters) gebruikten we de 'R2-D2 shrinkage prior' [@zhang2016; @yanchenko2021].
-Voor het intercept gebruiken we de default prior van **brms**.
+Voor het intercept gebruikten we de default prior van **brms**.
 De R2-D2 prior specificeert een verdeling voor de determinatiecoëfficiënt $R^2$ en induceert dan een prior op de individuele $\beta$'s.
 Het idee achter 'shrinkage priors' is om de geschatte parameters van een model naar een centrale waarde te trekken of ze naar nul te laten krimpen.
 Deze regularisatie moedigt zo simpelere modellen aan en kunnen dus gebruikt worden in variabelenselectie.
@@ -1286,7 +1286,7 @@ Hierin worden twee fases onderscheiden:
 1.  Zoekfase\
     De rangschikking van de verklarende variabelen, nl. de kleinst mogelijke subset van kandidaat-variabelen voor elk aantal variabelen, werd bepaald via forward search. Hierbij werd gespecifieerd dat de categorische variabele voor het oppervlakte-aandeel soortbeschermingsplannen zeker in het finale model moest aanwezig zijn (altijd rang 1). Maximale submodelgrootte werd ingesteld op 19 variabelen.
 2.  Evaluatiefase\
-    Berekening van voorspellende prestaties van de steeds complexer wordende submodellen langs de ranglijst van verklarende variabelen via leave-one-out cross-validation (CV) voor De Moeren en 5-fold CV voor de Oostelijke leemstreek en . Voorspellende prestaties werden gekwantificeerd als 'mean log predictive density' (MLPD). Dit is de expected log (pointwise) predictive density (ELPD) gedeeld door het aantal observaties.
+    Berekening van voorspellende prestaties van de steeds complexer wordende submodellen langs de ranglijst van verklarende variabelen via leave-one-out cross-validation (CV) voor De Moeren en 5-fold CV voor de Oostelijke leemstreek. Voorspellende prestaties werden gekwantificeerd als 'mean log predictive density' (MLPD). Dit is de 'expected log (pointwise) predictive density' (ELPD) gedeeld door het aantal observaties.
 
 Selectie van het aantal variabelen werd visueel gedaan door de MLPD te plotten als verschil met het referentiemodel in functie van submodelgrootte.
 Als de MLPD niet meer toeneemt met het aantal variabelen, dan voegen die extra variabelen geen voorspellende waarde meer toe aan het model en zullen ze niet geselecteerd worden.
@@ -1306,7 +1306,7 @@ We definieerden een postief verschil als de ondergrens van het 95 % credible int
 
 #### Resultaten De Moeren
 
-De voorspellende kracht van het model voor De Moeren bereikt reeds een maximum bij twee variabelen (Fig. \@ref(fig:ranking-dm-veldleeuw)).
+De voorspellende kracht van het model voor De Moeren bereikte reeds een maximum bij twee variabelen (Fig. \@ref(fig:ranking-dm-veldleeuw)).
 Naast de vaste `area_prop_sb_cat` hebben we nog de variabele `boom` die in 100 % van de CV folds aanwezig was (Fig. \@ref(fig:cvprop-dm-veldleeuw)).
 Samenvattende statistieken van de parameters zijn gegeven in Tabel \@ref(tab:dm-veldleeuw-params).
 De referentiegroep is nulbeleid (= geen oppervlakte‐aandeel soortbeschermingsmaatregelen aanwezig).
@@ -1355,7 +1355,7 @@ model_output_2022_2023 %>%
          variabele = gsub("_weighted", "", variabele)) %>%
   kable(digits = 3, booktabs = TRUE,
         caption = paste(
-          "Samenvattende statistieken van de posterior distributions van de",
+          "Samenvattende statistieken van de posterior verdelingen van de",
           "parameters in het finale model van De Moeren ($exp(\\beta)-1$). De",
           "referentiegroep is nulbeleid (= geen oppervlakte‐aandeel",
           "soortbeschermingsmaatregelen aanwezig). ‘lcl’ staat voor ‘lower",
@@ -1367,19 +1367,19 @@ model_output_2022_2023 %>%
   kableExtra::row_spec(0, bold = TRUE)
 ```
 
-```{r beleid-dm-veldleeuw1, out.width = "100%", fig.cap = "Posterior distributions van het verschil in maximum aantal broedparen per telcirkel met nulbeleid (= geen oppervlakte-aandeel soortbeschermingsmaatregelen aanwezig) voor het model van De Moeren. Het punt geeft de posterior mediaan aan en het interval het 95 \\% equal tail credible interval."}
+```{r beleid-dm-veldleeuw1, out.width = "100%", fig.cap = "Posterior verdelingen van het verschil in maximum aantal broedparen per telcirkel met nulbeleid (= geen oppervlakte-aandeel soortbeschermingsmaatregelen aanwezig) voor het model van De Moeren. Het punt geeft de posterior mediaan aan en het interval het 95 \\% equal tail credible interval."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "de_moeren",
                            "beleidstoestand_veldleeuwerik_fine.pdf"))
 ```
 
-```{r beleid-dm-veldleeuw2, out.width = "100%", fig.cap = "Posterior distributions van het verschil in maximum aantal broedparen per telcirkel van laag- en hoogbeleid met nulbeleid voor het model van De Moeren."}
+```{r beleid-dm-veldleeuw2, out.width = "100%", fig.cap = "Posterior verdelingen van het verschil in maximum aantal broedparen per telcirkel van laag- en hoogbeleid met nulbeleid voor het model van De Moeren."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "de_moeren",
                            "beleidstoestand_veldleeuwerik_coarse.pdf"))
 ```
 
-```{r boom-dm-veldleeuw, out.width = "100%", fig.cap = "Relatie tussen het maximum aantal broedparen in een telcirkel en de oppervlakte aan bomen. De zwarte lijn is de posterior mediaan en de onzekerheidsband toont het 95 \\% equal tail credible interval."}
+```{r boom-dm-veldleeuw, out.width = "100%", fig.cap = "Relatie tussen het maximum aantal broedparen in een telcirkel en de oppervlakte aan bomen. De zwarte lijn is de posterior mediaan en de onzekerheidsband toont het 95 \\% equal tail credible interval. Voor betere visualisatie hebben we een pseudo-log-transformatie langs de y-as gedaan."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "de_moeren",
                            "boom_veldleeuwerik_data.pdf"))
@@ -1388,14 +1388,14 @@ include_graphics(file.path("media", "beheerovereenkomsten",
 #### Resultaten Oostelijke leemstreek
 
 De voorspellende kracht van het model voor de Oostelijke leemstreek neemt niet meer toe na negen variabelen (Fig. \@ref(fig:ranking-ol-veldleeuw)).
-Naast de vaste `area_prop_sb_cat` hebben we nog de variabelen `openheid_waarde_1000`, `haag`, `houtkant`, `bomenrij`, `bosrand` en `boom` die in 100 % van de CV folds aanwezig waren en `meerjarige_fruitteelt_hfdtlt` en `grasland_hfdtlt_pre` in 80 % (Fig. \@ref(fig:cvprop-ol-veldleeuw)).
+Naast de vaste `area_prop_sb_cat` hebben we nog de variabelen `openheid_waarde_1000`, `haag`, `houtkant`, `bomenrij`, `bosrand` en `boom` die in 100 % van de CV folds aanwezig waren bij deze submodelgrootte en `meerjarige_fruitteelt_hfdtlt` en `grasland_hfdtlt_pre` in 80 % (Fig. \@ref(fig:cvprop-ol-veldleeuw)).
 Samenvattende statistieken van de parameters zijn gegeven in Tabel \@ref(tab:ol-veldleeuw-params).
 De referentiegroep is nulbeleid (= geen oppervlakte‐aandeel soortbeschermingsmaatregelen aanwezig).
 We zien significant meer broedparen in telcirkels met laag-, middelhoog- en hoogbeleid.
 Voor middellaagbeleid is de onzekerheid te groot (Fig. \@ref(fig:beleid-ol-veldleeuw1)).
 Wanneer we de categoriën aggregeren zien we een positief verschil in aantal broedparen voor laagbeleid en hoogbeleid met nulbeleid (Fig. \@ref(fig:beleid-ol-veldleeuw2)).
 Verder zien we een significante positieve correlatie met de openheid van het landschap op 1000 m schaal (Fig. \@ref(fig:openheid-ol-veldleeuw)) en negatieve correlatie met de andere continue variabelen (Bijlage \@ref(extra-figs-2022-2023)).
-Deze andere continue variabelen zijn zelf negatief gecorreleerd met openheid van het landschap (bv. hoe meer bomen, hagen ... hoe minder open het landschap) (Fig. \ref(fig:corrmat2)).
+Deze andere continue variabelen zijn zelf negatief gecorreleerd met openheid van het landschap (bv. hoe meer bomen, hagen ... hoe minder open het landschap; Fig. \@ref(fig:corrmat2)).
 Enkel het oppervlakte-aandeel hoofdteelt grasland van het jaar ervoor (`grasland_hfdtlt_pre`) is niet gerelateerd aan de openheid van het landschap.
 
 ```{r ranking-ol-veldleeuw, out.width = "100%", fig.cap = "Verschil in MLPD met referentiemodel (rode stippellijn) voor verschillende submodelgroottes voor het model van de Oostelijke leemstreek."}
@@ -1437,7 +1437,7 @@ model_output_2022_2023 %>%
          variabele = gsub("_weighted", "", variabele)) %>%
   kable(digits = 3, booktabs = TRUE,
         caption = paste(
-          "Samenvattende statistieken van de posterior distributions van de",
+          "Samenvattende statistieken van de posterior verdelingen van de",
           "parameters in het finale model van de Oostelijke leemstreek",
           "($exp(\\beta)-1$). De",
           "referentiegroep is nulbeleid (= geen oppervlakte‐aandeel",
@@ -1450,19 +1450,19 @@ model_output_2022_2023 %>%
   kableExtra::row_spec(0, bold = TRUE)
 ```
 
-```{r beleid-ol-veldleeuw1, out.width = "100%", fig.cap = "Posterior distributions van het verschil in maximum aantal broedparen per telcirkel met nulbeleid (= geen oppervlakte-aandeel soortbeschermingsmaatregelen aanwezig) voor het model van de Oostelijke leemstreek. Het punt geeft de posterior mediaan aan en het interval het 95 \\% equal tail credible interval."}
+```{r beleid-ol-veldleeuw1, out.width = "100%", fig.cap = "Posterior verdelingen van het verschil in maximum aantal broedparen per telcirkel met nulbeleid (= geen oppervlakte-aandeel soortbeschermingsmaatregelen aanwezig) voor het model van de Oostelijke leemstreek. Het punt geeft de posterior mediaan aan en het interval het 95 \\% equal tail credible interval."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
                            "beleidstoestand_veldleeuwerik_fine.pdf"))
 ```
 
-```{r beleid-ol-veldleeuw2, out.width = "100%", fig.cap = "Posterior distributions van het verschil in maximum aantal broedparen per telcirkel van laag- en hoogbeleid met nulbeleid voor het model van de Oostelijke leemstreek."}
+```{r beleid-ol-veldleeuw2, out.width = "100%", fig.cap = "Posterior verdelingen van het verschil in maximum aantal broedparen per telcirkel van laag- en hoogbeleid met nulbeleid voor het model van de Oostelijke leemstreek."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
                            "beleidstoestand_veldleeuwerik_coarse.pdf"))
 ```
 
-```{r openheid-ol-veldleeuw, out.width = "100%", fig.cap = "Relatie tussen het maximum aantal broedparen in een telcirkel en de openheid van het landschap op 1000 m schaal (grotere waardes betekenen een meer open landschap). De zwarte lijn is de posterior mediaan en de onzekerheidsband toont het 95 \\% equal tail credible interval."}
+```{r openheid-ol-veldleeuw, out.width = "100%", fig.cap = "Relatie tussen het maximum aantal broedparen in een telcirkel en de openheid van het landschap op 1000 m schaal (grotere waardes betekenen een meer open landschap). De zwarte lijn is de posterior mediaan en de onzekerheidsband toont het 95 \\% equal tail credible interval. Voor betere visualisatie hebben we een pseudo-log-transformatie langs de y-as gedaan."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
                            "openheid_waarde_1000_veldleeuwerik_data.pdf"))
