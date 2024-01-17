@@ -1299,9 +1299,25 @@ Finale modellen werden met de geselecteerde variabelen opnieuw gefit via **brms*
 We fitten zowel een Poisson als zero-inflated Poisson model.
 Beide modellen werden vergeleken visueel via PPC's en o.b.v. het verschil in ELPD berekend via 5-fold CV.
 Voor de nabewerking en visualisatie van de resultaten hebben we gebruik gemaakt van de functionaliteiten uit de **tidybayes** package v3.0.4 [@R-tidybayes].
+We rapporteren steeds de posterior mediaan van $exp(\beta) - 1$ als maat voor het centrale tendens van variabele $x$, en de standaard deviatie (= standaardfout) en 95 % equal tail credible interval als maat voor onzekerheid.
+Indien voor variabele $x$ de mediaan van $exp(\beta) - 1$ gelijk is aan 0,5, dan verwachten we gemiddeld gezien 50 % meer broedparen (toename met factor 1,5) als $x$ toeneemt met één standaarddeviatie (omdat de data geschaald is) en alle andere variabelen constant worden gehouden.
+Aangezien we geen interacties beschouwen is deze trend gelijk voor alle categorieën van categorische variabelen.
 We definieerden een postief verschil als de ondergrens van het 95 % credible interval groter is dan nul, een negatief verschil als de bovengrens kleiner is dan nul, een stabiel (geen) verschil als het credible interval nul bevat maar binnen de referentiewaarden valt (tussen toename van 25 % en afname van 20 %) en een onzeker verschil als het credible interval nul en ten minste een van de referentiewaarden bevat [@onkelinx2023].
 
 #### Resultaten De Moeren
+
+De voorspellende kracht van het model voor De Moeren bereikt reeds een maximum bij twee variabelen (Fig. \@ref(fig:ranking-dm-veldleeuw)).
+Naast de vaste `area_prop_sb_cat` hebben we nog de variabele `boom` die in 100 % van de CV folds aanwezig was (Fig. \@ref(fig:cvprop-dm-veldleeuw)).
+Samenvattende statistieken van de parameters zijn gegeven in Tabel \@ref(tab:dm-veldleeuw-params).
+De referentiegroep is nulbeleid (= geen oppervlakte‐aandeel soortbeschermingsmaatregelen aanwezig).
+We zien enkel een significant meer broedparen in telcirkels met hoogbeleid (gemiddeld gezien 119 % meer).
+Voor de andere categorieën is de onzekerheid te groot (Fig. \@ref(fig:beleid-dm-veldleeuw1)).
+Dit komt omdat er voor sommige categorieën weinig data is.
+We kunnen de categoriën laag- en middellaagbeleid aggregeren tot laagbeleid via een gewogen gemiddelde waarbij de gewichten afhankelijk zijn van het aantal data per groep.
+Dit doen we ook voor hoogbeleid.
+We zien een onzeker verschil in aantal broedparen voor laagbeleid en een positief verschil voor hoogbeleid met nulbeleid.
+Verder zien we een significante negatieve correlatie met de proportie bomen binnen de telcirkels.
+Het maximaal aantal broedparen neemt af met gemiddeld 48.1 % per toename van een standaarddeviatie in proportie bomen (Fig. \@ref(fig:boom-dm-veldleeuw)).
 
 ```{r ranking-dm-veldleeuw, out.width = "100%", fig.cap = "Verschil in MLPD met referentiemodel (rode stippellijn) voor verschillende submodelgroottes voor het model van De Moeren."}
 include_graphics(file.path("media", "beheerovereenkomsten",
@@ -1315,7 +1331,7 @@ include_graphics(file.path("media", "beheerovereenkomsten",
                            "cvvs_proporties_veldleeuwerik.pdf"))
 ```
 
-```{r}
+```{r dm-veldleeuw-params}
 model_output_2022_2023 <- read_csv(
   file.path("media", "beheerovereenkomsten", "model_output_2022_2023.csv"),
   show_col_types = FALSE)
@@ -1324,7 +1340,7 @@ model_output_2022_2023 %>%
   dplyr::filter(soort == "Veldleeuwerik",
                 regio == "De Moeren") %>%
   select(variabele, mediaan = schatting, standaardfout, lcl, ucl,
-         trend = trend_coarse) %>%
+         verschil = trend_coarse) %>%
   mutate(variabele = factor(variabele, levels = c(
     "area_prop_sb_catlaagbeleid",
     "area_prop_sb_catmiddellaagbeleid",
@@ -1337,7 +1353,8 @@ model_output_2022_2023 %>%
   arrange(variabele) %>%
   mutate(variabele = gsub("area_prop_sb_cat", "", variabele),
          variabele = gsub("_weighted", "", variabele)) %>%
-  kable(digits = 3, booktabs = TRUE, caption = "...") %>%
+  kable(digits = 3, booktabs = TRUE, caption = "Samenvattende statistieken van de posterior distributions van de parameters in het finale model van De Moeren ($exp(\beta)-1$). De referentiegroep is nulbeleid (= geen oppervlakte‐aandeel soortbeschermingsmaatregelen aanwezig). ‘lcl’ staat voor ‘lower confidence
+limit’ de ondergrens van het 95 % credible interval en ‘ucl’ (‘upper confidence limit’) voor de bovengrens.") %>%
   kableExtra::pack_rows("Model", 1, 5) %>%
   kableExtra::pack_rows("Geaggregeerd", 6, 7) %>%
   kableExtra::kable_styling(latex_options = "striped") %>%
@@ -1356,7 +1373,7 @@ include_graphics(file.path("media", "beheerovereenkomsten",
                            "beleidstoestand_veldleeuwerik_coarse.pdf"))
 ```
 
-```{r boom-dm-veldleeuw, out.width = "100%", fig.cap = "..."}
+```{r boom-dm-veldleeuw, out.width = "100%", fig.cap = "Relatie tussen het maximum aantal broedparen in een telcirkel en de oppervlakte aan bomen. De zwarte lijn is de posterior mediaan en de onzekerheidsband toont het 95 % credible interval."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "de_moeren",
                            "boom_veldleeuwerik_data.pdf"))
@@ -1383,7 +1400,7 @@ model_output_2022_2023 %>%
   dplyr::filter(soort == "Veldleeuwerik",
                 regio == "Oostelijke leemstreek") %>%
   select(variabele, mediaan = schatting, standaardfout, lcl, ucl,
-         trend = trend_coarse) %>%
+         verschil = trend_coarse) %>%
   mutate(variabele = factor(variabele, levels = c(
     "area_prop_sb_catlaagbeleid",
     "area_prop_sb_catmiddellaagbeleid",
