@@ -148,7 +148,7 @@ De telpunten werden geteld door zeven verschillende vrijwilligers die verder gec
 We wilden achterhalen of tellingen van vrijwilligers en een professionele teller gelijkaardige resultaten opleveren.
 Dit deden we door het aantal soorten en aantal waarnemingen van vogels te vergelijken tussen beide.
 Verder keken we ook naar het effect van broedcode en ervaring van de vrijwilligers.
-Analyses werden gedaan via Bayesiaanse generalized linear mixed models (GLMM's) met de **brms** package v2.19.0 [@bürkner2017; @bürkner2018; @bürkner2021] met standaard priors.
+Analyses werden gedaan via Bayesiaanse generalized linear mixed models (GLMM's) met de **brms** package [@bürkner2017; @bürkner2018; @bürkner2021] met standaard priors.
 We vergeleken telkens drie verschillende responsdistributies (en link functies $g()$).
 
 -   Normaal verdeling (identity link)
@@ -1216,7 +1216,7 @@ Hierbij konden we ook steunen op het onderzoek dat reeds in Nederland gedaan is 
 De ecologische context kan in rekening genomen worden door de data te filteren op broedcode groter dan nul en voor elke soort de telperiodes te selecteren die binnen de broedperiode van elke soort vallen.
 Een extra maatregel zou kunnen zijn om over die telperiodes (per telpunt per jaar) het maximum aantal te nemen als finale dataset voor verdere analyse (met effort = 1 omdat we dan niet meer corrigeren voor het aantal bezoeken, waardoor geen strikte uitmiddeling gebeurd).
 Voor Haas zou het bovendien nuttig zijn de oppervlaktes van de telcirkel te corrigeren voor de oppervlakte die effectief zichtbaar is voor de teller (volgens viewshedanalyse, zie \@ref(aanpassingen-meetnet)), aangezien Haas steeds op de grond zit.
-Distance sampling m.b.v. het **Distance** package bleek een relatief eenvoudige procedure (zowel mathematisch als gebruiksvriendelijkheid) om densiteitsschattingen (incl. onzekerheid) te maken rekening houdend met de detectiekans van een soort.
+Distance sampling m.b.v. de **Distance** package bleek een relatief eenvoudige procedure (zowel mathematisch als gebruiksvriendelijkheid) om densiteitsschattingen (incl. onzekerheid) te maken rekening houdend met de detectiekans van een soort.
 We toonden bovendien aan dat we op basis hiervan ook specifieke hypotheses kunnen testen aan de hand van species change indices of ter uitbreiding multi species change indices waarbij een index zou berekend worden door trends van meerdere soorten te combineren.
 We zijn dan ook van mening dat complexere analyses niet nodig zijn.
 Een tweestapsmethodiek lijkt een valabele optie die enerzijds overzichtelijk blijft en de complexiteit (en bijgevolg tijdsinvestering) van de analyses breekt:
@@ -1279,7 +1279,7 @@ We onderzochten ook de 'potential scale reduction factors' voor elke scalaire pa
 Ze lagen allemaal dicht bij 1, zoals vereist.
 De model fit werd bevestigd op basis van 'posterior predictive checks' (PPC) waarbij we de geobserveerde uitkomst vergeleken met gesimuleerde datasets van de 'posterior predictive distribution'.
 
-Na het fitten van de referentiemodellen voor elke regio PPVS toegepast met de **projpred** package v2.6.0 [@R-projpred].
+Na het fitten van de referentiemodellen voor elke regio PPVS toegepast met de **projpred** package [@R-projpred].
 Hierin worden twee fases onderscheiden:
 
 1.  Zoekfase\
@@ -1297,7 +1297,7 @@ Een cumulatieve ranking proportie voor variabele $x$ van 90 % bij \<= 5 ($= j$) 
 Finale modellen werden met de geselecteerde variabelen opnieuw gefit via **brms**.
 We fitten zowel een Poisson als zero-inflated Poisson model.
 Beide modellen werden vergeleken visueel via PPC's en o.b.v. het verschil in ELPD berekend via 5-fold CV.
-Voor de nabewerking en visualisatie van de resultaten hebben we gebruik gemaakt van de functionaliteiten uit de **tidybayes** package v3.0.4 [@R-tidybayes].
+Voor de nabewerking en visualisatie van de resultaten hebben we gebruik gemaakt van de functionaliteiten uit de **tidybayes** package [@R-tidybayes].
 We rapporteren steeds de posterior mediaan van $exp(\beta) - 1$ als maat voor het centrale tendens van variabele $x$, en de standaard deviatie (= standaardfout) en 95 % equal tail credible interval als maat voor onzekerheid.
 Indien voor variabele $x$ de mediaan van $exp(\beta) - 1$ gelijk is aan 0,5, dan verwachten we gemiddeld gezien 50 % meer broedparen (toename met factor 1,5) als $x$ toeneemt met één standaarddeviatie (omdat de data geschaald is) en alle andere variabelen constant worden gehouden.
 Aangezien we geen interacties beschouwen is deze trend gelijk voor alle categorieën van categorische variabelen.

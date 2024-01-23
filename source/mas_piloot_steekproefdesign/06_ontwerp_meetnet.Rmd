@@ -152,7 +152,7 @@ tibble(
 
 4.  Exclusie van potentiële telpunten op basis van zichtbaarheid\
     We berekenden zichtbaarheid als de cumulatieve zichtbaarheidsindex (CVVI: cumulative viewshed visibility index) waarbij de waarnemer een bewegingsvrijheid heeft van 25 m rondom het telpunt (Fig. \@ref(fig:zichtbaarheid)). De zichtbaarheidsindex wordt berekend vanaf een set van locaties die 10 m van elkaar liggen in deze zone van bewegingsvrijheid en geeft de proportie aan van zichtbare rastercellen (resolutie 5 m) in de telcirkel met straal 300 m. De cumulatieve zichtbaarheidsindex is dan de proportie die zichtbaar is vanuit minstens één locatie binnen de zone van bewegingsvrijheid. Hierbij wordt gebruik gemaakt van [Digital Surface Model (DSM) en Digital Terrain Model (DTM)](https://www.vlaanderen.be/digitaal-vlaanderen/onze-oplossingen/earth-observation-data-science-eodas/het-digitaal-hoogtemodel). De code is op basis van de functie `vvi_from_sf()` in de GVI package v1.1 [@GVI-package].\
-    In de **targets** pipeline werd gebruik gemaakt van batching per 200 telpunten om rekentijd in te perken (`tar_group_size()` functie van **tarchetypes** package v0.7.6 [@tarchetypes-package]). We verwijderen telpunten waar de CVVI kleiner is dan 0.10.
+    In de **targets** pipeline werd gebruik gemaakt van batching per 200 telpunten om rekentijd in te perken (`tar_group_size()` functie van **tarchetypes** package [@tarchetypes-package]). We verwijderen telpunten waar de CVVI kleiner is dan 0.10.
 
 ```{r zichtbaarheid, out.width = "80%", fig.cap = "Voorbeeld van CVVI berekening o.b.v. DSM en DTM."}
 include_graphics(file.path("media", "visibility",
