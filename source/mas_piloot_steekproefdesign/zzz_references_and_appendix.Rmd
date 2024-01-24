@@ -75,14 +75,107 @@ tibble(
   kable(booktabs = TRUE) %>%
   kableExtra::kable_styling(latex_options = c("scale_down", "striped")) %>%
   kableExtra::row_spec(0, bold = TRUE)
-
 ```
+
+\newpage
+
+## Uitleg specifieke en Engelstalige termen bij statistische analyses {#statistische-termen}
+
+Het gebruik van zowel frequentistische als Bayesiaanse statistische methodes introduceert verschillende termen waarmee de lezer mogelijks niet bekend is.
+Deze termen, en termen waarvoor geen eenvoudige vertaling naar het Nederlands voorhanden is, worden hier samengevat.
+
+**generalized linear mixed model (GLMM)**
+
+Een statistisch model dat wordt gebruikt om de relatie tussen een afhankelijke variabele en één of meer onafhankelijke variabelen te bestuderen, waarbij het model rekening houdt met zowel vaste effecten als willekeurige effecten.
+Ze stellen onderzoekers in staat om de invloed van verschillende variabelen op een responsvariabele te onderzoeken, rekening houdend met de variabiliteit tussen individuele onderwerpen of groepen.
+Het is een krachtig instrument voor het modelleren van complexe gegevensstructuren waarin herhaalde metingen, clustering of hiërarchische structuur aanwezig is.
+
+**a-prioriverdeling** [EN: prior (distribution)]
+
+De kansverdeling die we toekennen aan een parameter vóórdat we de gegevens analyseren.
+We spreken van een **niet-informatieve a-prioriverdeling** indien de keuze van deze verdeling een minimale invloed uitoefent op de **a-posterioriverdeling** (zie verder).
+Een **shrinkage prior** is een informatieve a-prioriverdeling die een vorm van regularisatie of inkrimping naar een centrale waarde, meestal nul, omvat.
+
+**a-posterioriverdeling** [EN: posterior (distribution)]
+
+De kansverdeling van een parameter nadat we nieuwe gegevens hebben waargenomen en deze hebben gecombineerd met onze **a-prioriverdeling** (zie hierboven).
+We spreken van **posterior mediaan, gemiddelde, standaard deviatie ...** als we de mediaan, gemiddelde, standaard deviatie ...
+van de **a-posterioriverdeling** berekenen.
+Een enkele waarde van de a-posterioriverdeling heet een **posterior sample** of een monster uit de **a-posterioriverdeling**.
+De **posterior densiteit** is een grafiek die voor elke sample-waarde de densiteit of de **a-posteriorikans** weergeeft.
+
+**Markov chain Monte Carlo (MCMC)**
+
+Een numerieke methode die wordt gebruikt om willekeurige steekproeven (**posterior samples**, zie hierboven) te genereren uit een kansverdeling (de **a-posterioriverdeling**, zie hierboven).
+**Ketens** zijn verschillende parallelle paden of sequenties waarlangs het algoritme evolueert.
+Meerdere ketens kunnen worden gestart om de convergentie van het algoritme te controleren.
+Elke stap in de MCMC-methode wordt een **iteratie** genoemd.
+De **burn-in** periode verwijst naar het begin van de **MCMC-keten** waarin de keten wordt gestabiliseerd.
+De **posterior samples** genomen tijdens de **burn-in** worden verwijderd omdat ze niet representatief zijn voor de uiteindelijke verdeling.
+De waarde van elk monster uit de **a-posterioriverdeling** in functie van de iteratie wordt gevisualiseerd in een zgn.
+**traceplot**.
+Om de autocorrelatie tussen opeenvolgende **posterior samples** te verminderen kan een **verdunningsfactor** (EN: thinning factor) worden toegepast.
+Dit betekent dat niet alle gegenereerde samples worden behouden, maar dat er slechts af en toe een sample wordt opgenomen over alle **iteraties**.
+
+**potential scale reduction factors**
+
+Ook Gelman-Rubin statistiek.
+Een maatstaf die wordt gebruikt om de convergentie van meerdere parallelle ketens in een **MCMC** (zie hierboven) te beoordelen.
+Een waarde van 1 suggereert dat de **ketens** (zie hierboven) goed zijn geconvergeerd, terwijl waarden groter dan 1 aangeven dat er mogelijk nog sprake is van divergentie.
+
+**posterior predictive check (PPC)**
+
+Een techniek binnen de Bayesiaanse statistiek om de adequaatheid van een model te evalueren, nadat een model is gefit aan de beschikbare gegevens en de **a-posteriorverdeling** is verkregen.
+Er worden synthetische datasets worden gegenereerd (= **posterior predictive distribution**) op basis van de geschatte **a-posterioriverdeling** van de parameters in het model.
+Deze synthetische datasets representeren wat we zouden verwachten te zien als de Bayesiaanse modellering correct is.
+Vervolgens worden deze synthetische datasets vergeleken met de werkelijke observaties.
+
+**projection predictive variable selection (PPVS)**
+
+De techniek zoekt de subset van kandidaat-variabelen met een voorspellende kracht die zo dicht mogelijk ligt bij die van een referentiemodel.
+Met als doel de meest relevante variabelen te selecteren voor modelbouw.
+
+**cross-validation**
+
+Een statistische techniek die wordt gebruikt om de prestaties van een voorspellend model te evalueren en tegelijkertijd overfitting te verminderen.
+Het doel is om inzicht te krijgen in hoe goed het model zal presteren op nieuwe, ongeziene gegevens.
+Het basisidee van cross-validation is om de beschikbare dataset op te splitsen in twee (of meer) subsets: een trainingsset en een testset.
+Het model wordt vervolgens getraind op de trainingsset en geëvalueerd op de testset.
+Deze procedure wordt herhaald door verschillende combinaties van trainings- en testsets te gebruiken, en de prestaties worden gemiddeld over deze herhalingen.
+Een maat om de voorspellende prestaties van verschillende modellen te vergelijken is de **expected log pointwise predictive density** of de **mean log predictive density** (**MLPD**).
+Deze laatste is de **ELPD** gedeeld door het aantal observaties.
+
+Er zijn verschillende vormen van cross-validatie, waaronder:
+
+1.  **K-fold cross-validation:** De dataset wordt in $K$ gelijke delen verdeeld.
+    Het model wordt $K$ keer getraind en geëvalueerd, waarbij telkens een andere deel als testset wordt gebruikt en de overige delen als trainingsset.
+
+2.  **leave-one-out cross-validation:** Elke observatie wordt één voor één als testset gebruikt, en het model wordt getraind op de overige observaties.
+    Dit proces wordt herhaald totdat elke observatie als testset is gebruikt.
+
+**geloofwaardigheidsinterval** [EN: credible interval]
+
+Een geloofwaardigheidsinterval wordt gebruikt in de context van Bayesiaanse statistiek om de onzekerheid rondom een geschatte parameter te kwantificeren.
+Het representeert een interval waarbinnen we geloven dat een parameter met een bepaalde waarschijnlijkheid valt, gegeven de geobserveerde gegevens en de **a-priorikennis** (zie hierboven).
+Het geloofwaardigheidsinterval wordt bepaald door de **a-posteriorverdeling** van de parameter (zie hierboven) en geeft de waarschijnlijkheidsmassa aan tussen twee grenzen.
+In dit rapport gebruiken we de 2.5 en 97.5 % quantielen zodat we telkens 95 % gelijkstaartige geloofwaardigheidsintervallen bekomen (EN: 95 % equal tail credible intervals).
+
+In de context van frequentistische statistiek spreken we van een **betrouwbaarheidsinterval** (EN: confidence interval) om de onzekerheid van een parameter weer te geven.
+Dit interval is gebaseerd op herhaalde steekproeven en heeft betrekking op de mate van vertrouwen die we hebben dat het interval de ware waarde van de parameter bevat.
+In frequentistische statistiek wordt aangenomen dat de parameter een vaste waarde heeft, maar we kennen het interval niet.
+Een 95 % **betrouwbaarheidsinterval** betekent dat als we herhaalde steekproeven zouden trekken en voor elk van hen een **betrouwbaarheidsinterval** zouden berekenen, ongeveer 95 % van deze intervallen de ware waarde van de parameter zou bevatten.
+
+**species change index (SCI)**
+
+Een trend van een soort (= **species index**, **SI**) voor een bepaalde periode/stratum ten opzichte van de trend in een andere periode/stratum.
+Op dezelfde manier is een **multi-species change index** (**MSCI**) een gemiddelde trend voor meerdere soorten (= **multi-species index**, **MSI**) voor een bepaalde periode ten opzichte van de trend in een andere periode.
+Zie ook Bijlage \@ref(bijlage-sci).
 
 \newpage
 
 ## Resultaten van species change indices o.b.v. densiteiten {#bijlage-sci}
 
-In Sectie \@ref(methodiek-distance) beschreven we hoe we op basis van densiteitsschattingen via distance sampling species change indices (SCI's) en bijhorende betrouwbaarheidsintervallen konden berekenen.
+In Sectie \@ref(methodiek-distance) beschreven we hoe we op basis van densiteitsschattingen via distance sampling *species change indices* (SCIs) en bijhorende betrouwbaarheidsintervallen konden berekenen.
 Beschouw bijvoorbeeld (1) een schatting in stratum 1 $\hat{D}_1$ met standaardfout $\hat{se}(\hat{D}_1)$ en (2) $\hat{D}_r$ de schatting in referentiestratum $r$ met standaardfout $\hat{se}(\hat{D}_r)$.
 
 $$
