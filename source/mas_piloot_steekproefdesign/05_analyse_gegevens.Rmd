@@ -1258,7 +1258,51 @@ Een tweestapsmethodiek lijkt een valabele optie die enerzijds overzichtelijk bli
 
 #### Materiaal en methoden
 
-...
+We selecteerden de data van 2022-2023 in de Oostelijke leemstreek in OL en HOL met broedcode \> 0 voor Veldleeuwerik.
+We sommeren de aantallen per telcirkel, telperiode en jaar.
+We voegen ook afwezigheden (nullen) toe.
+We voegen de detectiekansen van het distance sampling model toe aan deze dataset (Tabel \@ref(tab:detectiekans-stratum)).
+
+We fitten een Poisson model met $Y_{jk}$ het aantal individuen in telcirkel $j$ in telperiode $k$
+
+$$
+Y_{jk} \sim Pois(\lambda_{jk})
+$$
+
+met
+
+$$
+\ln(\lambda_{jk}) = \beta_0 + f(x_j, y_j) + b_{0,j} + b_{1,j:t} + \ln(p_s) + \ln\left(\frac{A_{telcirkel}}{10^6\ \text{m}^2/100\ \text{ha}}\right)
+$$
+
+Waarbij $p_s$ de detectiekans van de soort is in stratum $s$ (per jaar, openheid landschap) en $A_{telcirkel}$ de oppervlakte van een telcirkel $A_{telcirkel} = \pi * 300^2 =$ `r round((pi * 300^2) * 10^-6, 3)` km².
+We kunnen deze offset-termen samennemen.
+
+$$
+\ln(\lambda_{jk}) = \beta_0 + f(x_j, y_j) + b_{0,j} + b_{1,j:k} + \ln(\text{offset})
+$$
+
+zodat
+
+$$
+\ln\left(\frac{\lambda_{jk}}{\text{offset}}\right) = \beta_0 + f(x_j, y_j) + b_{0,j} + b_{1,j:k}
+$$
+
+Waarbij $f()$ de standaard *smoothing function* is van de `s()` functie van de **mgcv** package (= *thin plate regression spline*) [@wood2003; @wood2017] en $x_j$, $y_j$ resp.
+de X- en Y-coördinaten van telpunt $j$.
+$\text{offset}$ is gelijk aan de detectiekans vermenigvuldigd met een factor om het aantal individuen per telcirkel om te zetten naar aantal individuen per 100 ha.
+Zo krijgen we een model voor het gemiddeld aantal broedparen per 100 ha waarbij we corrigeren voor detectiekans.
+
+Dit model werd gefit met de **brms** package.
+We bemonsterden de a-posterioriverdelingen voor de modellen met drie *Markov chain Monte Carlo* (*MCMC*) ketens, die elk 2500 iteraties draaiden, waarvan de eerste 500 werden verwijderd als *burn-in*.
+We onderzochten *MCMC*-convergentie door visuele beoordeling van traceplots en posterior densiteiten.
+We onderzochten ook de *potential scale reduction factors* voor elke scalaire parameter in het model.
+Ze lagen allemaal dicht bij 1, zoals vereist.
+De model fit werd bevestigd op basis van *posterior predictive check* (*PPC*) waarbij we de geobserveerde uitkomst vergeleken met gesimuleerde datasets van de *posterior predictive distribution*.
+
+Ter visualisatie maakten we een raster met cellen van dezelfde oppervlakte als de telcirkels en leggen deze over het steekproefkader in de Oostelijke leemstreek (= telpunten steekproefkader met buffer van 300 m, Figuur \@ref(fig:oppervlakte-steekproefkader-jaar)).
+Voor de centroïde van elke grid cell maakten we een predictie o.b.v. het model.
+We rapporteren de posterior mediaan als maat voor het centrale tendens voor de densiteit aan broedvogels Veldleeuwerik per rastercel en 95 % geloofwaardigheidsinterval als maat voor onzekerheid.
 
 #### Resultaten
 
@@ -1321,7 +1365,7 @@ De ketens werden verdund met een factor 3 zodat 2000 *posterior samples* per ket
 We onderzochten *MCMC*-convergentie door visuele beoordeling van traceplots en posterior densiteiten.
 We onderzochten ook de *potential scale reduction factors* voor elke scalaire parameter in het model.
 Ze lagen allemaal dicht bij 1, zoals vereist.
-De model fit werd bevestigd op basis van *potential scale reduction factors* (PPC) waarbij we de geobserveerde uitkomst vergeleken met gesimuleerde datasets van de *posterior predictive distribution*.
+De model fit werd bevestigd op basis van *posterior predictive check* (*PPC*) waarbij we de geobserveerde uitkomst vergeleken met gesimuleerde datasets van de *posterior predictive distribution*.
 
 Na het fitten van de referentiemodellen voor elke regio *PPVS* toegepast met de **projpred** package [@R-projpred].
 Hierin worden twee fases onderscheiden:
