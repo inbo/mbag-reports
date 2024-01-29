@@ -90,6 +90,14 @@ Een statistisch model dat wordt gebruikt om de relatie tussen een afhankelijke v
 Ze stellen onderzoekers in staat om de invloed van verschillende variabelen op een responsvariabele te onderzoeken, rekening houdend met de variabiliteit tussen individuele onderwerpen of groepen.
 Het is een krachtig instrument voor het modelleren van complexe gegevensstructuren waarin herhaalde metingen, clustering of hiërarchische structuur aanwezig is.
 
+**smoothing function**
+
+Een functie met als doel om soepele patronen in de gegevens te modelleren.
+Dit is vooral handig wanneer de relatie tussen een predictorvariabele en de responsvariabele complexe en niet-lineaire patronen vertoont.
+Het doel is om de vorm van de relatie uit de gegevens af te leiden, waardoor het model flexibeler wordt en beter in staat is om complexe patronen te vatten.
+In het geval van de `s()` functie in de **mgcv** package, wordt standaard een **thin plate regression spline** gebruikt als standaard smoothing functie.
+Dit is een soort flexibele curve die zich kan aanpassen aan de patronen in de data zonder dat expliciet wordt gespecificeerd hoe deze curve eruit moet zien.
+
 **a-prioriverdeling** [EN: prior (distribution)]
 
 De kansverdeling die we toekennen aan een parameter vóórdat we de gegevens analyseren.
