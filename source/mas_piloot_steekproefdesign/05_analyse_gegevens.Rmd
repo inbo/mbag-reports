@@ -289,7 +289,6 @@ Deze variabelen zijn sterk gelinkt aan het voorkomen van soorten.
 Tertaire variabelen zijn structurele variabelen die eerder dienen om te corrigeren voor het monitoringsprotocol in tijd en ruimte bijvoorbeeld via random effects in mixed models.
 Deze variabelen zijn sterk gelinkt aan het studiedesign.
 Een overzicht wordt gegeven in Tabel \@ref(tab:verklarende-vars-tab).
-\textcolor{red}{Referenties naar de gebruikte kaartlagen zijn beschikbaar in Bijlage x.}
 
 ### Primaire variabelen {#prim-verklarende-variabelen}
 
@@ -306,8 +305,8 @@ Dit is dezelfde kaartlaag als bij de soortbeschermingsmaatregelen maar een ander
 Het aandeel oppervlakte van elke gewasgroep binnen de telcirkels werd berekend per jaar.
 We verwijderden de polygonen die tot de beheerovereenkomstenlaag (zie hierboven) behoren.
 Indien twee polygonen met verschillende teelten overlapten in de kaarlaag, telde die oppervlakte voor elke teelt maar voor 50 % mee.
-De kaartlaag van de landbouwgebruikspercelen is vrij verkrijgbaar via het Departement Landbouw en Visserij (Dept. LV).
-De gebruikte kaart voor 2023 was nog niet definitief (extractie 26-06-2023).
+De kaartlaag van de landbouwgebruikspercelen is vrij verkrijgbaar via @landbouwgebruikspercelen.
+De gebruikte kaart voor 2023 was nog niet definitief (extractie 26-06-2023: dit is de voorlopige toestand van de percelen op die datum).
 
 **4. Oppervlakte-aandeel hoofdteelten jaar ervoor**\
 Zelfde als het vorige puntje, maar dan telkens de proportie hoofdteelten die het jaar ervoor aanwezig waren volgens de landbouwgebruikspercelenkaart.
@@ -400,8 +399,8 @@ Analyses van telpunten die zowel door vrijwilligers als professionele teller zij
 Voor elk telpunt hebben we dus ook nagegaan of er geteld is door een professionele teller of een vrijwilliger.
 
 **5. Oppervlakte-aandeel kleine landschapselementen**\
-Het aandeel oppervlakte van elke subklasse kleine landschapselementen binnen de telcirkels werd berekend via landschapselementen op of aangrenzend aan landbouwgebruikspercelen in Vlaanderen (onderzoek 2017 op basis van gegevens 2015, Dept. LV).
-De kaartlaag is vrij verkrijgbaar.
+Het aandeel oppervlakte van elke subklasse kleine landschapselementen binnen de telcirkels werd berekend via landschapselementen op of aangrenzend aan landbouwgebruikspercelen in Vlaanderen (onderzoek 2017 op basis van gegevens 2015).
+De kaartlaag is vrij verkrijgbaar via @landschapselementen.
 De verschillende subklasses zijn: (1) bomengroep, (2) bomenrij, (3) boom, (4) bosrand, (5) haag, (6) houtkant.
 
 **6. Perceelsgrootte (mediaan, IQR en CV)**\
@@ -441,7 +440,11 @@ Deze variabelen worden dus berekend op basis van de data van de tellingen zelf.
 We berekenden een maat voor de oppervlakte van nabije natuurgebieden waarbij we gebieden dichtbij meer gewicht geven dan gebieden veraf, en grotere gebieden meer gewicht geven dan kleine binnen een straal van 3 km [@moilanen2002].
 
 We selecteerden hiervoor alle natuurgebieden in Vlaanderen, Nederland, Frankrijk en Wallonië binnen een buffer van 20 km rond de perimeters van het pilootproject (Fig. \@ref(fig:natuurgebieden-perimeters)).
-\textcolor{red}{Referenties naar de gebruikte kaartlagen zijn beschikbaar in Bijlage x.} We splitsten alle gebieden op in aparte polygonen en berekenden de oppervlakte van elke polygoon en het middelpunt.
+Voor Vlaanderen gebruikten we de kaart van natuurbeheerplannen met exclusie van natuurbeheerplannen type I en beperkte bosbeheerplannen [@natuurbeheerplannen].
+Voor Nederland gebruikten we de kaart van Natuurnetwerk Nederland [@natuurnetwerk].
+Voor Frankrijk gebruikten we de kaart voor "Zones Naturelles d’Intérêt Ecologique Faunistique et Floristique de type 1" [@ZNIEFF1].
+Voor Wallonië gebruikten we de kaart van "Réseau Natura 2000 en vigueur" [@reseau-natura] en Conservation de la nature met exclusie van "parcs naturels" en RAMSAR perimeters [@consnat].
+We splitsten alle gebieden op in aparte polygonen en berekenden de oppervlakte van elke polygoon en het middelpunt.
 
 ```{r natuurgebieden-perimeters, out.width = "100%", fig.cap = "Selectie van natuurgebieden in Vlaanderen, Nederland, Frankrijk en Wallonië binnen een buffer van 20 km rond de perimeters van het pilootproject."}
 include_graphics(file.path("media", "verklarende_variabelen",
