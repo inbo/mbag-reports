@@ -1254,7 +1254,8 @@ Een tweestapsmethodiek lijkt een valabele optie die enerzijds overzichtelijk bli
 
 #### Inleiding
 
-...
+In dit voorbeeld gaan we na hoe we een verspreidingskaart kunnen maken voor de densiteit Veldleeuwerik waarbij we de detectiekans meerekenen.
+Dit soort kaarten kunnen helpen om kernzones te identificeren met hoge densiteiten.
 
 #### Materiaal en methoden
 
