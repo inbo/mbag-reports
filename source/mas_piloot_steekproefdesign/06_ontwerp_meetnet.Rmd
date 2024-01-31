@@ -18,8 +18,8 @@ In Sectie \@ref(uitbreiding-vlaanderen) leggen we uit hoe we hiermee rekening he
 read_csv(file.path("media", "issues_pilootmeetnet",
                    "issues_pilootmeetnet.csv"),
          show_col_types = FALSE) %>%
-  kable(caption = paste('Overzicht van problematische telpunten in het',
-          'pilootmeetnet gecategoriseerd m.b.v. "regular expressions".'),
+  kable(caption = paste("Overzicht van problematische telpunten in het",
+          "pilootmeetnet gecategoriseerd m.b.v. ''regular expressions''."),
         longtable = TRUE, booktabs = TRUE) %>%
   kableExtra::kable_styling(latex_options = c("repeat_header", "striped"),
                             repeat_header_text = "\\textit{(vervolg)}") %>%
