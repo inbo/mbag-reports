@@ -1325,7 +1325,23 @@ include_graphics(file.path("media", "spatiale_densiteiten",
 
 #### Discussie
 
-...
+We gebruikten een tweefasenaanpak om een model te creëren waarmee we de dichtheidsschattingen konden extrapoleren naar een groter studiegebied, nl.
+het steekproefkader in de Oostelijke leemstreek.
+De eerste fase is het schatten van de detectiekans door het fitten van een detectiecurve.
+De tweede fase is de ruimtelijke modellering via een soepele *smoothing function*.
+Tweefasemodellen hebben het nadeel dat de onzekerheid van de detectiefunctie en de ruimtelijke modellen op de juiste manier moet gecombineerd worden [@miller2013].
+Wij hebben hier de onzekerheid van het detectieproces genegeerd wat te smalle geloofwaardigheidsintervallen kan opleveren voor schattingen van de densiteit.
+Bovendien zijn we voorlopig niet dieper ingegaan op de keuze voor de smoothing function $f()$.
+Ook hier kunnen verschillende afwegingen gemaakt worden [@wood2017].
+In dit stadium van de pilootstudie was het niet mogelijk dieper in te gaan op deze tekortkomingen.
+Bij de uitbreiding van een MAS voor heel Vlaanderen, zal deze methode verder op punt gesteld worden.
+
+Indien we subgebieden willen afbakenen, bijvoorbeeld om interessante kernzones te identificeren, kunnen we gridcellen clusteren en daarna de predictie van de cluster vergelijken met een vooraf afgesproken waarde (bv., Is het aantal broedparen per 100 ha significant meer dan 10?).
+Hierbij moeten we een een methode vinden waarbij we op correcte wijze de onzekerheid berekenen op clusterniveau.
+Een eerste mogelijkheid is om een variogram op te stellen o.b.v. de fitted values om een idee te krijgen van spatiale autocorrelatie.
+Deze info kan dan gebruikt worden om de onzekerheid op clusterniveau te bepalen.
+Een tweede mogelijkheid is om andere methodes en R packages te bekijken die dergelijke berekeningen integraal uitvoeren.
+Ook deze mogelijkheden zullen in een later stadium onderzocht moeten worden.
 
 ### Correlaties met verklarende variabelen {#beheerovereenkomsten}
 
@@ -1564,3 +1580,4 @@ include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
                            "openheid_waarde_1000_veldleeuwerik_data.pdf"))
 ```
+
