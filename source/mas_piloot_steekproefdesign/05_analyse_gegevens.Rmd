@@ -11,7 +11,7 @@ Bayesiaanse statistiek maakt gebruik van de Bayesiaanse waarschijnlijkheidstheor
 Hierbij bekomen we geen betrouwbaarheidsintervallen maar zgn.
 geloofwaardigheidsintervallen.
 Het gebruik van beide statistische methodes heeft geen invloed op de interpretatie van de resultaten, maar zorgt er wel voor dat nieuwe termen worden geïntroduceerd, zoals a-priorikans, *Markov chain Monte Carlo* en a-posterioriverdeling.
-Dit ermen die waarmee de lezer mogelijk niet bekend of waarvoor geen eenvoudige vertaling naar het Nederlands voorhanden is.
+Dit zijn termen die waarmee de lezer mogelijk niet bekend of waarvoor geen eenvoudige vertaling naar het Nederlands voorhanden is.
 Deze worden samengevat in Bijlage \@ref(statistische-termen).
 Engelstalige termen worden in cursief aangeduid.
 
@@ -181,9 +181,13 @@ Deze observaties zijn door zowel een professionele teller $X_{status} = 0$ als e
 Aantallen van eenzelfde telpunt kunnen meer op elkaar lijken dan aantallen van verschillende telpunten.
 We voegen ook een random effect toe van telpunt ($b_{0,j}$) en een random effect van telperiode genest in telpunt ($b_{0,j:k}$).
 
+<!-- spell-check: ignore:start -->
+
 $$
 g(\text{E}(Y_{ijk})) = \beta_0 + \beta_{1}X_{status, i} + b_{0,j} + b_{0,j:k}
 $$
+
+<!-- spell-check: ignore:end -->
 
 We besluiten dat er een significant verschil is als het 95 % geloofwaardigheidsinterval (GI) van $\beta_1$ nul niet bevat.
 
@@ -193,9 +197,13 @@ Kan een verschil in aantal soorten of aantal waarnemingen tussen professionele e
 
 We voegden de data met broedcode nul toe en maakten een extra dummyvariabele aan die een onderscheid maakt tussen data met broedcode nul $X_{broedcode} = 0$ en data met broedcode groter dan nul.
 
+<!-- spell-check: ignore:start -->
+
 $$
 g(\text{E}(Y_{ijk})) = \beta_0 + \beta_{1}X_{status, i} + \beta_{2}X_{broedcode, i} + \beta_{3}X_{status, i} \times X_{broedcode, i} + b_{0,j} + b_{0,j:k}
 $$
+
+<!-- spell-check: ignore:end -->
 
 We besluiten dat er een significant verschillend effect van broedcode is als het 95 % GI van $\beta_3$ nul niet bevat.
 
@@ -205,9 +213,13 @@ Is er een verschil in het aantal soorten of aantal waarnemingen met broedcode gr
 
 De professionele teller is ervaren, maar bij de vrijwilligers hebben we twee ervaringscategorieën: "beginner" ($X_{ervaring} = 0$) en "ervaren" ($X_{ervaring} = 1$).
 
+<!-- spell-check: ignore:start -->
+
 $$
 g(\text{E}(Y_{ijk})) = \beta_0 + \beta_{1}X_{status, i} + \beta_{2}X_{ervaring, i} + \beta_{3}X_{status, i} \times X_{ervaring, i} + b_{0,j} + b_{0,j:k}
 $$
+
+<!-- spell-check: ignore:end -->
 
 We besluiten dat er een significant verschillend effect van broedcode is als het 95 % GI van $\beta_3$ nul niet bevat.
 
@@ -221,9 +233,13 @@ We fitten een model waarbij de intercepten voor zowel de professionele teller ($
 We hebben dus enkel een slope voor de professionele teller ($\beta_1$) en een slope voor de vrijwilligers ($\beta_1 + \beta_3$).
 We voegden random slopes toe per telpunt $j$ voor professionelen ($b_1$) en vrijwilligers ($b_1 + b_2$).
 
+<!-- spell-check: ignore:start -->
+
 $$
 \text{E}(Y_{ij}) = \beta_{1}\ln{(X_{wnm, i})} + \beta_{3}\ln{(X_{wnm, i})}\times X_{status, i}  + b_{1,j}\ln{(X_{wnm, i})} + b_{2,j}\ln{(X_{wnm, i})}\times X_{status, i}
 $$
+
+<!-- spell-check: ignore:end -->
 
 We besluiten dat er een significant verschil is als het 95 % GI van $\beta_3$ nul niet bevat.
 
@@ -465,15 +481,23 @@ We beschouwden twee verschillende vervalfuncties (Fig. \@ref(fig:vervalfunctie))
 
 1.  Logistische vervalfunctie
 
+<!-- spell-check: ignore:start -->
+
 $$
 f(x) = \frac{1}{1 + \exp(b(x-m))}
 $$
 
+<!-- spell-check: ignore:end -->
+
 2.  Exponentiële vervalfunctie
+
+<!-- spell-check: ignore:start -->
 
 $$
 f(x) = \frac{1}{1 + bx^m}
 $$
+
+<!-- spell-check: ignore:end -->
 
 ```{r vervalfunctie, out.width = "90%", fig.cap = "Voorbeeld van een logistische en exponentiële vervalfunctie over 3 km."}
 include_graphics(file.path("media", "verklarende_variabelen",
@@ -635,9 +659,9 @@ Bovendien kan slechts een enkele steekproef van de populatie voldoende zijn [@bu
 #### Inleiding tot distance sampling {#inleiding-distance}
 
 Distance sampling is een techniek om de abundantie en/of densiteit van biologische populaties te schatten op basis van een steekproef uit de populatie.
-Wanneer we het over distance sampling hebben in dit rapport, spreken we eigenlijk over 'conventional distance sampling' (CDS).
+Wanneer we het over distance sampling hebben in dit rapport, spreken we eigenlijk over "conventional distance sampling" (CDS).
 In CDS worden de data gebundeld voor het schatten van de detectiekans.
-Dit is in tegenstelling tot 'hierarchical distance sampling' (HDS), waarbij de focus ligt op lokale populatiegroottes van de steekproefeenheden door het maken van expliciete modellen die de variatie in populatiegrootte tussen steekproefeenheden verklaren [@kéry2016].
+Dit is in tegenstelling tot "hierarchical distance sampling" (HDS), waarbij de focus ligt op lokale populatiegroottes van de steekproefeenheden door het maken van expliciete modellen die de variatie in populatiegrootte tussen steekproefeenheden verklaren [@kéry2016].
 HDS wordt hier verder niet besproken.
 De belangrijkste aannames van de CDS-methode zijn [@buckland2001, hoofdstuk 2]:
 
@@ -660,9 +684,13 @@ Het doel is de gemiddelde kans op detectie ($p$) te bepalen.
 Dit is het gemiddelde over afstand van 0 m tot de afknotafstand $w$, in ons geval $w = 300$.
 De term $\frac{2r}{w^2}$ is nodig om rekening te houden met de geometrie van de plot (cirkel).
 
+<!-- spell-check: ignore:start -->
+
 $$
 p = \int_0^w\frac{2r}{w^2}g(r;\boldsymbol \theta)\,dr
 $$
+
+<!-- spell-check: ignore:end -->
 
 $p$ is dus de oppervlakte onder de detectiecurve.
 Figuur \@ref(fig:distance-methode)B toont een fictief voorbeeld van een histogram met afstanden van 0 tot 300 meter ($w = 300$).
@@ -681,30 +709,46 @@ include_graphics(file.path("media", "distance", "methode_distance.png"))
 
 Voor de formulatie van de detectiefunctie beschouwen we half-normal en hazard-rate sleutelfuncties die we laten afhangen van categorische covariaten $\mathbf{z_i}$ (bv. jaar, regio).
 Met $\mathbf{z_i}$ een vector van $J$ covariaten geassocieerd met observatie $i$.
-Dit wordt ook wel 'multiple-covariate distance sampling' (MCDS) genoemd [@marques2007].
+Dit wordt ook wel "multiple-covariate distance sampling" (MCDS) genoemd [@marques2007].
 De detectiekans wordt dan berekend conditioneel aan de waargenomen waarden van de covariaten.
+
+<!-- spell-check: ignore:start -->
 
 $$
 p(\mathbf{z_i}) = \int_0^w\frac{2r}{w^2}g(r, \mathbf{z_i};\boldsymbol \theta)\,dr
 $$
 
+<!-- spell-check: ignore:end -->
+
 De half-normal sleutelfunctie is van de vorm
+
+<!-- spell-check: ignore:start -->
 
 $$
 g(r, \mathbf{z};\boldsymbol \theta) = \exp{\left( -\frac{r^2}{2\sigma(\mathbf{z})^2} \right)}
 $$
 
+<!-- spell-check: ignore:end -->
+
 en de hazard-rate sleutelfunctie
+
+<!-- spell-check: ignore:start -->
 
 $$
 g(r, \mathbf{z};\boldsymbol \theta) = 1 - \exp{\left( \left( -\frac{r}{\sigma(\mathbf{z})}\right)^{-b} \right)}
 $$
 
+<!-- spell-check: ignore:end -->
+
 waarbij de scale parameter in beide gevallen gelijk is aan
+
+<!-- spell-check: ignore:start -->
 
 $$
 \sigma(\mathbf{z}) = \exp{\left( \beta_0 + \sum_{j = 1}^{J} \beta_j z_j \right)}
 $$
+
+<!-- spell-check: ignore:end -->
 
 De hazard-rate key function heeft naast de scale parameter ook nog de shape parameter $b$.
 
@@ -784,11 +828,11 @@ We vergeleken voor (1) en (2) de AIC van de verschillende modellen.
 Als het verschil tussen AIC's kleiner is dan 2, kiezen we het eenvoudigste van deze modellen (model met minste parameters).
 Modellen met vergelijkbare AIC's hebben vergelijkbare geschatte detectiekansen, dus in de praktijk is er weinig verschil in de keuze tussen deze modellen [@miller2019].
 
-Om te controleren of onze finale modellen voor (1) en (2) goed pasten bij de data (= 'goodness of fit') maakten we een Q-Q plot waarbij de cumulatieve distributiefunctie van de gefitte detectiefunctie (CDF) wordt vergeleken met de distributie van de data (EDF).
+Om te controleren of onze finale modellen voor (1) en (2) goed pasten bij de data (= "goodness of fit") maakten we een Q-Q plot waarbij de cumulatieve distributiefunctie van de gefitte detectiefunctie (CDF) wordt vergeleken met de distributie van de data (EDF).
 We voerden ook de Cramér-von Mises test uit.
 Deze kwantificeert de informatie van de Q-Q-plot door te testen of punten van de EDF en CDF uit dezelfde verdeling komen [@buckland2015; @miller2019].
 Finaal bekeken we ook de kansdichtheidsfunctieplots.
-Indien het finale model niet goed paste bij de data (slechte 'goodness of fit'), werd het dit model opnieuw gefit waarbij we de afstanden gegroepeerd werden in intervallen van 50 m.
+Indien het finale model niet goed paste bij de data (slechte "goodness of fit"), werd het dit model opnieuw gefit waarbij we de afstanden gegroepeerd werden in intervallen van 50 m.
 
 Densiteitsschattingen werden omgezet naar aantallen per 100 ha.
 De onzekerheid op de densiteitsschattingen werd berekend m.b.v. de standaard opties in de `ds()` functie.
@@ -830,9 +874,13 @@ Een $SCI$ van 0.5 wil zeggen dat er 50 % meer (= toename met factor 1.5) broedpa
 
 We willen voor de $SCI$ een $100(1-2\alpha)$ % betrouwbaarheidsinterval opstellen.
 
+<!-- spell-check: ignore:start -->
+
 $$
 (\exp(\hat{D}_v - C) - 1, \exp(\hat{D}_v + C) - 1)
 $$
+
+<!-- spell-check: ignore:end -->
 
 met
 
@@ -852,15 +900,23 @@ Omdat we hier in de log-schaal werken is $z_\alpha$ de z-score die overeenkomt m
 We hebben dus $Z \sim N(0, 1)$ met $z_{0.025} =$ `r round(qnorm(0.975), 3)`.
 De variantie van $\hat{D}_v$, $\hat{var}(\hat{D}_v)$, kan als volgt berekend worden
 
+<!-- spell-check: ignore:start -->
+
 $$
 \hat{var}(\hat{D}_v) = \hat{var}(\log(\hat{D}_1)) + \hat{var}(\log(\hat{D}_r))
 $$
 
+<!-- spell-check: ignore:end -->
+
 waarbij
+
+<!-- spell-check: ignore:start -->
 
 $$
 \hat{var}(\log(\hat{D}_1)) = \log\left(1 + \left( \frac{\hat{se}(\hat{D}_1)}{\hat{D}_1} \right)^2 \right)
 $$
+
+<!-- spell-check: ignore:end -->
 
 en identiek voor $\hat{var}(\log(\hat{D}_r))$
 
@@ -888,7 +944,7 @@ sum_veldleeuwerik_2018_2023 <- summary(ds_veldleeuwerik_2018_2023)
 Het Hazard-rate model waarbij de detectiekans afhankelijk is van regio en jaar scoorde het best.
 De detectiekansen zijn dus verschillend per regio en jaar (Tabel \@ref(tab:detectiekans-jaar)).
 De gemiddelde detectiekans $\hat{P}_a$ is gelijk aan `r round(sum_veldleeuwerik_2018_2023$ds$average.p, digits = 3)` met standaardfout `r round(sum_veldleeuwerik_2018_2023$ds$average.p.se[1, 1], digits = 5)`.
-Omwille van de slechtere 'goodness of fit' werd dit model opnieuw gefit waarbij de afstanden gegroepeerd werden in intervallen van 50 m.
+Omwille van de slechtere "goodness of fit" werd dit model opnieuw gefit waarbij de afstanden gegroepeerd werden in intervallen van 50 m.
 De fit was dan beter maar nog altijd niet ideaal.
 Dit is ook te zien wanneer we de gemiddelde detectiecurve op de data plotten (Fig. \@ref(fig:detectiekans-jaar-plot)).
 
@@ -1012,7 +1068,7 @@ pa_veldleeuwerik <- round(
 Het Hazard-rate model waarbij de detectiekans afhankelijk is van openheid scoorde het best voor zowel het model met data van 2022 als van 2023.
 De detectiekansen zijn dus verschillend per openheidsklasse HOL en OL (Tabel \@ref(tab:detectiekans-stratum)).
 De gemiddelde detectiekans $\hat{P}_a$ is gelijk aan `r pa_veldleeuwerik`, `r round(sum_veldleeuwerik_2022$ds$average.p, digits = 3)` met standaardfout `r round(sum_veldleeuwerik_2022$ds$average.p.se[1, 1], digits = 5)` voor 2022 en `r round(sum_veldleeuwerik_2023$ds$average.p, digits = 3)` met standaardfout `r round(sum_veldleeuwerik_2023$ds$average.p.se[1, 1], digits = 5)`.
-Omwille van de slechtere 'goodness of fit' werd dit model opnieuw gefit waarbij de afstanden gegroepeerd werden in intervallen van 50 m.
+Omwille van de slechtere "goodness of fit" werd dit model opnieuw gefit waarbij de afstanden gegroepeerd werden in intervallen van 50 m.
 De fit was dan beter maar nog altijd niet ideaal.
 Dit is ook te zien wanneer we de gemiddelde detectiecurve op de data plotten (Fig. \@ref(fig:detectiekans-stratum-plot)).
 
@@ -1214,12 +1270,12 @@ include_graphics(file.path("media", "distance", "per_stratum",
 ```
 
 In **Distance** deden we aan zgn.
-'conventional distance sampling' (CDS) waarbij de afstanden werden gebundeld voor alle ruimtelijke locaties (i.c. telpunten) om de parameter(s) van de detectiefunctie te schatten, bijvoorbeeld voor de half-normale functie.
+"conventional distance sampling" (CDS) waarbij de afstanden werden gebundeld voor alle ruimtelijke locaties (i.c. telpunten) om de parameter(s) van de detectiefunctie te schatten, bijvoorbeeld voor de half-normale functie.
 Dit werd gebruikt om een schatting van de densiteit te verkrijgen, en vervolgens werd de variantie gebaseerd op de variantie van de "encounter rate", die wel enige informatie uit de telpunten gebruikt.
 Bij CDS wordt er ook van uitgegaan dat dieren uniform worden verdeeld met betrekking tot transecten/telpunten en vereisen dus gerandomiseerde plaatsing van transecten/punten tijdens het steekproefdesign.
 Hierbij worden factoren die de abundantie tussen plots beïnvloeden verwaarloosd.
 Het is relevant om te overwegen dat er meer geavanceerde benaderingen en alternatieven beschikbaar zijn voor het verbeteren van onze schattingsmethoden en/of deze te koppelen aan vervolganalyses.
-In plaats van gegevens te bundelen zoals bij CDS, biedt 'hierarchical distance sampling' (HDS) een expliciet model voor de variatie van de lokale populatiegrootte $N_i$ (de abundantie voor telpunt $i$).
+In plaats van gegevens te bundelen zoals bij CDS, biedt "hierarchical distance sampling" (HDS) een expliciet model voor de variatie van de lokale populatiegrootte $N_i$ (de abundantie voor telpunt $i$).
 Dit zijn parametrisch modellen om variatie in abundantie tussen telpunten te beschrijven.
 Hierbij kunnen we expliciete modellen bouwen voor distance sampling data die verantwoordelijk zijn voor variatie in abundantie (of lokale densiteit) tussen steekproefeenheden (telpunten), waardoor inferentie over factoren die ruimtelijke invloed hebben op variatie in abundantie wordt vergemakkelijkt alsook expliciete spatiale predicties over abundantie [@hedley2004; @royle2004; @kéry2016].
 Een andere benadering is het gebruik van density surface modeling (DSM), waarbij ruimtelijke informatie wordt geïntegreerd om de dichtheid van akkervogels over het gehele studiegebied te voorspellen.
@@ -1245,8 +1301,8 @@ Een tweestapsmethodiek lijkt een valabele optie die enerzijds overzichtelijk bli
 
 1.  Densiteitsschattingen via CDS
 2.  Modelleren o.b.v. densiteitsschattingen
-    a.  Testen van hypotheses via change indices
-    b.  Modelleren van aantallen via generalized linear mixed models (GLMM's)
+    a.  Testen van hypotheses via *change indices*
+    b.  Modelleren van aantallen via *generalized linear mixed models* (*GLMMs*)
         -   Detectiekans als offset in model
         -   Onzekerheid van detectiekans moet meegenomen worden in model
 
@@ -1266,28 +1322,44 @@ We voegen de detectiekansen van het distance sampling model toe aan deze dataset
 
 We fitten een Poisson model met $Y_{jk}$ het aantal individuen in telcirkel $j$ in telperiode $k$
 
+<!-- spell-check: ignore:start -->
+
 $$
 Y_{jk} \sim Pois(\lambda_{jk})
 $$
 
+<!-- spell-check: ignore:end -->
+
 met
+
+<!-- spell-check: ignore:start -->
 
 $$
 \ln(\lambda_{jk}) = \beta_0 + f(x_j, y_j) + b_{0,j} + b_{1,j:t} + \ln(p_s) + \ln\left(\frac{A_{telcirkel}}{10^6\ \text{m}^2/100\ \text{ha}}\right)
 $$
 
+<!-- spell-check: ignore:end -->
+
 Waarbij $p_s$ de detectiekans van de soort is in stratum $s$ (per jaar, openheid landschap) en $A_{telcirkel}$ de oppervlakte van een telcirkel $A_{telcirkel} = \pi * 300^2 =$ `r round((pi * 300^2) * 10^-6, 3)` km².
 We kunnen deze offset-termen samennemen.
+
+<!-- spell-check: ignore:start -->
 
 $$
 \ln(\lambda_{jk}) = \beta_0 + f(x_j, y_j) + b_{0,j} + b_{1,j:k} + \ln(\text{offset})
 $$
 
+<!-- spell-check: ignore:end -->
+
 zodat
+
+<!-- spell-check: ignore:start -->
 
 $$
 \ln\left(\frac{\lambda_{jk}}{\text{offset}}\right) = \beta_0 + f(x_j, y_j) + b_{0,j} + b_{1,j:k}
 $$
+
+<!-- spell-check: ignore:end -->
 
 Waarbij $f()$ de standaard *smoothing function* is van de `s()` functie van de **mgcv** package (= *thin plate regression spline*) [@wood2003; @wood2017] en $x_j$, $y_j$ resp.
 de X- en Y-coördinaten van telpunt $j$.
@@ -1311,7 +1383,7 @@ Uit de densiteitsschattingen via distance sampling (Sectie \@ref(res-distance-st
 Dit vertaalt zich ook op ruimtelijke schaal in de bekomen densiteitskaart waarbij we vooral in het zuiden en het oosten van de Oostelijke leemstreek hogere densiteiten zien (Fig. \@ref(fig:densiteitskaart), vergelijk met Fign \@ref(fig:perimeters-sbp), \@ref(fig:oppervlakte-steekproefkader-stratum)).
 In de gebieden met hogere densiteiten is de onzekerheid ook het grootst.
 Dit is eigen aan de Poisson verdeling waarbij het gemiddelde en de variantie gelijk zijn.
-De relatieve foutenmarge (halve breedte van het 95 % betrouwbaarheidsinterval gedeeld door de geschatte densiteit (= mediaan)) is onafhankelijk van de gemiddelde schatting en toont een hogere onzekerheid aan de periferie, zoals verwacht (Fig. \@ref(fig:relfout-densiteitskaart)).
+De relatieve foutenmarge (halve breedte van het 95 % geloofwaardigheidsinterval gedeeld door de geschatte densiteit (= mediaan)) is onafhankelijk van de gemiddelde schatting en toont een hogere onzekerheid aan de periferie, zoals verwacht (Fig. \@ref(fig:relfout-densiteitskaart)).
 
 ```{r densiteitskaart, out.width = "100%", fig.cap = "Aantal broedparen Veldleeuwerik per 100 ha per rastercel voor het steekproefkader van de Oostelijke leemstreek met contourlijnen. Posterior mediaan als maat voor het centrale tendens. Q2.5 is de ondergrens van het 95 \\% geloofwaardigheidsinterval en Q97.5 de bovengrens."}
 include_graphics(file.path("media", "spatiale_densiteiten",
@@ -1327,9 +1399,9 @@ include_graphics(file.path("media", "spatiale_densiteiten",
 
 We gebruikten een tweefasenaanpak om een model te creëren waarmee we de dichtheidsschattingen konden extrapoleren naar een groter studiegebied, nl.
 het steekproefkader in de Oostelijke leemstreek.
-De eerste fase is het schatten van de detectiekans door het fitten van een detectiecurve.
+De eerste fase is het schatten van de detectiekans door het fitten van een detectiecurve (Sectie \@ref(res-distance-stratum)).
 De tweede fase is de ruimtelijke modellering via een soepele *smoothing function*.
-Tweefasemodellen hebben het nadeel dat de onzekerheid van de detectiefunctie en de ruimtelijke modellen op de juiste manier moet gecombineerd worden [@miller2013].
+Tweefasemodellen hebben het nadeel dat de onzekerheid van de detectiefunctie en de ruimtelijke modellen op de juiste manier gecombineerd moeten worden [@miller2013].
 Wij hebben hier de onzekerheid van het detectieproces genegeerd wat te smalle geloofwaardigheidsintervallen kan opleveren voor schattingen van de densiteit.
 Bovendien zijn we voorlopig niet dieper ingegaan op de keuze voor de smoothing function $f()$.
 Ook hier kunnen verschillende afwegingen gemaakt worden [@wood2017].
@@ -1337,7 +1409,7 @@ In dit stadium van de pilootstudie was het niet mogelijk dieper in te gaan op de
 Bij de uitbreiding van een MAS voor heel Vlaanderen, zal deze methode verder op punt gesteld worden.
 
 Indien we subgebieden willen afbakenen, bijvoorbeeld om interessante kernzones te identificeren, kunnen we gridcellen clusteren en daarna de predictie van de cluster vergelijken met een vooraf afgesproken waarde (bv., Is het aantal broedparen per 100 ha significant meer dan 10?).
-Hierbij moeten we een een methode vinden waarbij we op correcte wijze de onzekerheid berekenen op clusterniveau.
+Hierbij moeten we een een methode vinden waarbij we op correcte wijze de onzekerheid berekenen op clusterniveau [@wadoux2023].
 Een eerste mogelijkheid is om een variogram op te stellen o.b.v. de fitted values om een idee te krijgen van spatiale autocorrelatie.
 Deze info kan dan gebruikt worden om de onzekerheid op clusterniveau te bepalen.
 Een tweede mogelijkheid is om andere methodes en R packages te bekijken die dergelijke berekeningen integraal uitvoeren.

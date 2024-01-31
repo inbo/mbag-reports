@@ -133,7 +133,7 @@ Een waarde van 1 suggereert dat de **ketens** (zie hierboven) goed zijn geconver
 
 **posterior predictive check (PPC)**
 
-Een techniek binnen de Bayesiaanse statistiek om de adequaatheid van een model te evalueren, nadat een model is gefit aan de beschikbare gegevens en de **a-posteriorverdeling** is verkregen.
+Een techniek binnen de Bayesiaanse statistiek om de adequaatheid van een model te evalueren, nadat een model is gefit aan de beschikbare gegevens en de **a-posterioriverdeling** is verkregen.
 Er worden synthetische datasets worden gegenereerd (= **posterior predictive distribution**) op basis van de geschatte **a-posterioriverdeling** van de parameters in het model.
 Deze synthetische datasets representeren wat we zouden verwachten te zien als de Bayesiaanse modellering correct is.
 Vervolgens worden deze synthetische datasets vergeleken met de werkelijke observaties.
@@ -153,7 +153,7 @@ Deze procedure wordt herhaald door verschillende combinaties van trainings- en t
 Een maat om de voorspellende prestaties van verschillende modellen te vergelijken is de **expected log pointwise predictive density** of de **mean log predictive density** (**MLPD**).
 Deze laatste is de **ELPD** gedeeld door het aantal observaties.
 
-Er zijn verschillende vormen van cross-validatie, waaronder:
+Er zijn verschillende vormen van cross-validation, waaronder:
 
 1.  **K-fold cross-validation:** De dataset wordt in $K$ gelijke delen verdeeld.
     Het model wordt $K$ keer getraind en geëvalueerd, waarbij telkens een andere deel als testset wordt gebruikt en de overige delen als trainingsset.
@@ -165,7 +165,7 @@ Er zijn verschillende vormen van cross-validatie, waaronder:
 
 Een geloofwaardigheidsinterval wordt gebruikt in de context van Bayesiaanse statistiek om de onzekerheid rondom een geschatte parameter te kwantificeren.
 Het representeert een interval waarbinnen we geloven dat een parameter met een bepaalde waarschijnlijkheid valt, gegeven de geobserveerde gegevens en de **a-priorikennis** (zie hierboven).
-Het geloofwaardigheidsinterval wordt bepaald door de **a-posteriorverdeling** van de parameter (zie hierboven) en geeft de waarschijnlijkheidsmassa aan tussen twee grenzen.
+Het geloofwaardigheidsinterval wordt bepaald door de **a-posterioriverdeling** van de parameter (zie hierboven) en geeft de waarschijnlijkheidsmassa aan tussen twee grenzen.
 In dit rapport gebruiken we de 2.5 en 97.5 % quantielen zodat we telkens 95 % gelijkstaartige geloofwaardigheidsintervallen bekomen (EN: 95 % equal tail credible intervals).
 
 In de context van frequentistische statistiek spreken we van een **betrouwbaarheidsinterval** (EN: confidence interval) om de onzekerheid van een parameter weer te geven.

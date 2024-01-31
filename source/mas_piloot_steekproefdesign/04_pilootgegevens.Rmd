@@ -153,7 +153,11 @@ Deze landgebruikskaart geeft ons betere informatie om de oppervlaktes aan akker,
 Deze straal komt overeen met de telcirkel uit het MAS telprotocol.
 We zijn enkel geïnteresseerd in potentiële telpunten waar de samenstelling van het landgebruik in een buffer van 300 m rond het punt voldoet aan volgende regel:
 
+<!-- spell-check: ignore:start -->
+
 -   Akker + Grasland \> 40% én Grasland + Bos + Struikgewas + Akker \> 50%
+
+<!-- spell-check: ignore:end -->
 
 Met deze regel slagen we er in om potentiële telpunten uit te sluiten die bijvoorbeeld te dicht bij bebouwing gelegen zijn (Fig. \@ref(fig:steekproef-afbakening)D).
 De uiteindelijk bekomen lijst van punten vormt het steekproefkader van het MAS pilootproject.
@@ -230,7 +234,7 @@ Ondanks de ruimtelijke spreiding, was omwille van hoge densiteit aan telpunten e
 In die gevallen werd enkel het overlappende telpunt met laagste volgnummer weerhouden (Fig. \@ref(fig:steekproef-piloot)).
 
 Deze geselecteerde telpunten werden zowel in 2022 als in 2023 geteld in het kader van het MAS pilootproject.
-Voor de steekproef over Vlaanderen is het best mogelijk dat een ander temporeel design nodig is zoals een 'rotating panel design' of een 'augmented panel design'.
+Voor de steekproef over Vlaanderen is het best mogelijk dat een ander temporeel design nodig is zoals een "rotating panel design" of een "augmented panel design".
 
 <!--# De meest open landschappen zitten volledig binnen de perimeter van het SBP plan. De vergelijking van HOL binnen versus buiten plan en OL binnen versus buiten plan is dus bemoeilijkt omdat de gemiddelde openheid systematisch hoger zal liggen binnen de SBP perimeter. Een ander confounding probleem is dat HOL gemiddeld noordelijker gelegen zijn buiten SBP perimeter.-->
 
@@ -241,11 +245,11 @@ Voor de steekproef over Vlaanderen is het best mogelijk dat een ander temporeel 
 Er werd ook een poging ondernomen om telpunten met slechte zichtbaarheid te verwijderen door enkel voor de getrokken telpunten een zichtbaarheidsindex te berekenen [@GVI-package].
 In deze fase werden telpunten niet automatisch verwijderd op basis van de zichtbaarheidsindex.
 De reden hiervoor was dat er nog vrij veel situaties zijn waar de zichtbaarheidsindex laag was, terwijl de terreinsituatie toch een goede zichtbaarheid toelaat.
-De reden voor zulke 'vals positieven' zijn:
+De reden voor zulke "vals positieven" zijn:
 
 -   bomenrijen waar je door kan kijken
 -   holle weg waar je mits je even op de kant klimt wel voldoende zichtbaarheid hebt
--   punten langs 'waterwegen' liggen dieper in het landschap, terwijl je uiteraard niet in het water gaat staan maar op de oever er langs
+-   punten langs "waterwegen" liggen dieper in het landschap, terwijl je uiteraard niet in het water gaat staan maar op de oever er langs
 
 In een latere fase hebben we deze pijnpunten van een zichtbaarheidsanalyse vanaf één punt verbeterd door een cumulatieve zichtbaarheid te berekenen vanaf meerdere posities binnen een ruimere zone (van 25 m) rond het telpunt (zone bewegingsvrijheid van de waarnemer) (zie \@ref(aanpassingen-meetnet)).
 
@@ -255,7 +259,7 @@ include_graphics(file.path("media", "kaartjes", "piloot_kaart.png"))
 
 ### Overlap met bestaande telpunten {#piloot-overlap}
 
-Er werd nagegaan welke *bestaande* MAS telpunten 'voldoende dicht' gelegen waren bij getrokken telpunten.
+Er werd nagegaan welke *bestaande* MAS telpunten "voldoende dicht" gelegen waren bij getrokken telpunten.
 Wanneer een nieuw punt op minder dan 300 m afstand lag van een bestaand punt, werd het nieuwe telpunt vervangen door het bestaande telpunt.
 Achteraf is deze regel versoepeld en zijn ook bestaande punten die op iets grotere afstand lagen als vervanging opgenomen.
 
@@ -269,7 +273,7 @@ Tellers konden ook punten claimen door dit aan te geven in de Google Maps kaart.
 
 ## Reproduceerbaarheid en traceerbaarheid {#git-piloot}
 
-De steekproeftrekking werd gedaan met R [@R] in RStudio [@RStudio] via de **targets** 'pipeline tool' package [@targets-package].
+De steekproeftrekking werd gedaan met R [@R] in RStudio [@RStudio] via de **targets** "pipeline tool" package [@targets-package].
 Deze laatste is een computationele workflow die analyses uitvoert op een efficiënte en reproduceerbare manier.
 Via de **renv** package [@renv-package] werd een reproduceerbare omgeving gecreëerd die bijhield welke versies van R en welke (versies van) verschillende packages werden gebruikt in het project.
 Alle code werd beheerd onder versiecontrole met Git op een online GitHub repository [@github-repo].

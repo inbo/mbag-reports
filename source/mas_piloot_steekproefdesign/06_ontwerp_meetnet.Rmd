@@ -6,7 +6,7 @@
 
 Ondanks de inspanningen om tijdens de steekproeftrekking al zoveel mogelijk rekening te houden met mogelijke problemen tijdens de effectieve tellingen in het veld (Hoofdstuk \@ref(pilootgegevens)), werden nog 163 problematische telpunten gesignaleerd die dan werden vervangen door een reservepunt.
 Hierbij werden opmerkingen in het attributenveld van de kaartlaag genoteerd (\@ref(manuele-controle)).
-Deze werden met \`regular expressions' geanalyseerd en gecategoriseerd in vijf categorieën (Tabel \@ref(tab:issues-piloot)).
+Deze werden met "regular expressions" geanalyseerd en gecategoriseerd in vijf categorieën (Tabel \@ref(tab:issues-piloot)).
 Zo kregen we een algemeen overzicht waar de belangrijkste problemen zich nog bevonden.
 Bij een deel van punten is er te veel overlap met andere telcirkels.
 We zien vooral problemen met zichtbaarheid omdat punten nog vallen in bossen, boomgaarden, holle wegen etc., hoewel er niet altijd info is waarom zichtbaarheid slecht is.
@@ -18,8 +18,8 @@ In Sectie \@ref(uitbreiding-vlaanderen) leggen we uit hoe we hiermee rekening he
 read_csv(file.path("media", "issues_pilootmeetnet",
                    "issues_pilootmeetnet.csv"),
          show_col_types = FALSE) %>%
-  kable(caption = paste("Overzicht van problematische telpunten in het",
-          "pilootmeetnet gecategoriseerd m.b.v. `regular expressions'."),
+  kable(caption = paste('Overzicht van problematische telpunten in het',
+          'pilootmeetnet gecategoriseerd m.b.v. "regular expressions".'),
         longtable = TRUE, booktabs = TRUE) %>%
   kableExtra::kable_styling(latex_options = c("repeat_header", "striped"),
                             repeat_header_text = "\\textit{(vervolg)}") %>%
