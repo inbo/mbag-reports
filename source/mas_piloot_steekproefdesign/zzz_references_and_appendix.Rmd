@@ -235,7 +235,47 @@ read_csv(file.path("media", "distance", "per_stratum",
 
 \newpage
 
+## Samenvattende statistieken verklarende variabelen De Moeren en Oostelijke leemstreek 2022-2023 {#mean-sd-contvars}
+
+Enkele samenvattende statistieken van de verklarende variabelen voor de correlatieve modellen van de Veldleeuwerik in De Moeren en Oostelijke leemstreek van 2022-2023.
+Oppervlaktevariabelen zijn proporties tussen nul en een.
+"sd" staat voor standaarddeviatie, "Q25" voor het 25 % quantiel en "Q75" voor het 75 % quantiel.
+
+```{r}
+data_stats_veldleeuwerik <- read_csv(
+  file.path("media", "beheerovereenkomsten", "data_stats_veldleeuwerik.csv"),
+  show_col_types = FALSE)
+
+data_stats_veldleeuwerik %>%
+  mutate(naam2 = gsub("_pre$", "", naam)) %>%
+  left_join(summary_var_tab_clean, by = join_by(naam2 == naam)) %>%
+  mutate(variabele = ifelse(grepl("_pre$", naam),
+                            paste(variabele, "jaar ervoor"),
+                            variabele)) %>%
+  select(variabele, naam, regio, gemiddelde, sd = standaarddeviatie,
+         mediaan, Q25, Q75) %>%
+  mutate(naam = factor(naam, levels = c(
+    "openheid_waarde_1000",
+    "grasland_hfdtlt_pre",
+    "bosrand",
+    "haag",
+    "boom",
+    "bomenrij",
+    "meerjarige_fruitteelt_hfdtlt",
+    "houtkant"
+  ))) %>%
+  arrange(regio, naam) %>%
+  kable(digits = 5,
+        booktabs = TRUE) %>%
+  kableExtra::kable_styling(latex_options = c("scale_down", "striped")) %>%
+  kableExtra::row_spec(0, bold = TRUE)
+```
+
+\newpage
+
 ## Extra figuren trends verklarende variabelen Oostelijke leemstreek 2022-2023 {#extra-figs-2022-2023}
+
+Extra figuren van de trends van de verklarende voor het correlatieve model van de Veldleeuwerik in de Oostelijke leemstreek van 2022-2023.
 
 ```{r, out.width = "100%"}
 include_graphics(file.path("media", "beheerovereenkomsten",
