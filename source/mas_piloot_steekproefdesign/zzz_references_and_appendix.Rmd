@@ -276,6 +276,9 @@ data_stats_veldleeuwerik %>%
 ## Extra figuren trends verklarende variabelen Oostelijke leemstreek 2022-2023 {#extra-figs-2022-2023}
 
 Extra figuren van de trends van de verklarende voor het correlatieve model van de Veldleeuwerik in de Oostelijke leemstreek van 2022-2023.
+De overige variabelen zij telkens constant gehouden op hun gemiddelde per categorie.
+De zwarte lijn is de posterior mediaan en de onzekerheidsband toont het 95 % geloofwaardigheidsinterval.
+Voor betere visualisatie hebben we een pseudo-log-transformatie langs de y-as gedaan.
 
 ```{r, out.width = "100%"}
 include_graphics(file.path("media", "beheerovereenkomsten",
