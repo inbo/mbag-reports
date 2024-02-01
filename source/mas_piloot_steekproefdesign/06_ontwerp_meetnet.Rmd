@@ -201,7 +201,7 @@ include_graphics(file.path("media", "kaartjes", "sbp_mbag_kaart.png"))
     De eerste bv.
     300 (laagste volgnummers) zullen dan de set zijn voor de zandleemstreek, die kan verdeeld worden over de medewerkers.
     Indien een punt uitvalt, kan dit vervangen worden door het eerstvolgende uit de reeks dat nog niet toegewezen werd (het 301ste).
-    De methode garandeert dat deze nieuwe set ruimtelijk goed gespreid is en een aselecte steekproef is.
+    De methode garandeert dat deze nieuwe set ruimtelijk goed gespreid is en een aselecte steekproef is. \textcolor{red}{hier per stratum even veel punten!! 5}
 
 8.  Uitdunnen van steekproef\
     Om te veel overlap van telpunten te voorkomen binnen eenzelfde stratum, is voor elk punt binnen hetzelfde stratum nagegaan of een punt met grotere `sample_order` op minder dan 600 m afstand ligt.
