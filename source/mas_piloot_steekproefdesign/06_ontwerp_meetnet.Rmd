@@ -190,7 +190,6 @@ include_graphics(file.path("media", "kaartjes", "sbp_mbag_kaart.png"))
 ```
 
 7.  Steekproeftrekking\
-    De stratificatiemethode is niet gewijzigd t.o.v. het pilootmeetnet.
     Omdat we nu met veel grotere gebieden werken, merkten we wel dat een maximale trekking niet voor een goede spatiale spreiding zorgt omdat het algoritme niet genoeg vrijheid krijgt.
     Daarom besloten we uiteindelijk om 1/20ste (5 %) van het aantal elementen in het steekproefkader te nemen per stratum.
     Dit is niet de finale steekproef, maar een (veel) grotere steekproef waaruit later het gewenste aantal telpunten wordt geselecteerd.
@@ -201,7 +200,12 @@ include_graphics(file.path("media", "kaartjes", "sbp_mbag_kaart.png"))
     De eerste bv.
     300 (laagste volgnummers) zullen dan de set zijn voor de zandleemstreek, die kan verdeeld worden over de medewerkers.
     Indien een punt uitvalt, kan dit vervangen worden door het eerstvolgende uit de reeks dat nog niet toegewezen werd (het 301ste).
-    De methode garandeert dat deze nieuwe set ruimtelijk goed gespreid is en een aselecte steekproef is. \textcolor{red}{hier per stratum even veel punten!! 5}
+    De methode garandeert dat deze nieuwe set ruimtelijk goed gespreid is en een aselecte steekproef is.
+    De stratificatiemethode is licht gewijzigd t.o.v. het pilootmeetnet.
+    We gaan het aantal telpunten niet meer proportioneel alloceren o.b.v. de oppervlakte aan OL en HOL.
+    In plaats daarvan nemen we voor elk stratum (OL binnen SBP, OL buiten SBP, HOL binnen SBP, HOL buiten SBP) 50 punten.
+    Zo zorgen we ervoor dat we ook in zeldzamere strata genoeg data zullen verzamelen, waardoor we uitspraken kunnen doen voor elk stratum apart en we onderlinge de strata kunnen vergelijken.
+    Hier tegenover staat wel dat, indien we uitspraken willen doen op hogere niveaus (bv. landbouwregio), we hiermee moeten rekening houden in de analyses door gewichten toe te kennen proportioneel aan de oppervlakte aan OL en HOL.
 
 8.  Uitdunnen van steekproef\
     Om te veel overlap van telpunten te voorkomen binnen eenzelfde stratum, is voor elk punt binnen hetzelfde stratum nagegaan of een punt met grotere `sample_order` op minder dan 600 m afstand ligt.
