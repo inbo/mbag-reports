@@ -1658,14 +1658,16 @@ include_graphics(file.path("media", "beheerovereenkomsten",
 Zowel in De Moeren als in de Oostelijke leemstreek zien we een groter maximum aantal broedparen per telcirkel als de proportie soortbeschermingsmaatregelen groter is.
 Dit verschil is onzeker in klasses met weinig data.
 We moeten hierbij benadrukken dat dit een puur correlatief en géén causaal verband is.
-De soortbeschermingsmaatregelen zijn gekozen op plaatsen die reeds gunstig waren voor akkervogels \textcolor{red}{[REF]}.
+De soortbeschermingsmaatregelen zijn gekozen op plaatsen die reeds gunstig waren voor akkervogels [@agentschapvoornatuurenbos2021].
 Deze analyses tonen de toestand van Veldleeuwerik in verschillende klasses van soortbeschermingsmaatregelen, geen trend.
 
 De andere variabelen die werden geselecteerd o.b.v. *PPVS* hadden allemaal een significante effect op het aantal broedparen in beide regio's.
 Deze variabelen zijn sterk gecorreleerd met de openheid van het landschap.
 We zien enerzijds een sterke positieve correlatie in de Oostelijke leemstreek (`openheid_waarde_1000`).
 Anderzijds zijn de andere continue variabelen zelf negatief gecorreleerd met openheid van het landschap (bv. hoe meer bomen, hagen ... hoe minder open het landschap; Fig. \@ref(fig:corrmat2)).
-Enkel het oppervlakte-aandeel hoofdteelt grasland van het jaar ervoor (`grasland_hfdtlt_pre`) in de Oostelijke leemstreek is niet gerelateerd aan de openheid van het landschap.
-\textcolor{red}{waarom deze variabele voor Veldleeuwerik?}
+Zowel eerdere Vlaamse als Nederlandse studies over akkervogels toonden dergelijke verbanden [@klaassen2022; @dochy2005; @dochy2021, zie ook @agentschapvoornatuurenbos2021].
+Enkel het oppervlakte-aandeel hoofdteelt grasland van het jaar ervoor (`grasland_hfdtlt_pre`) in de Oostelijke leemstreek is niet sterk gecorreleerd met `openheid_waarde_1000`, maar toonde wel een positieve correlatie met hagen, houtkanten, bomen en bomenrijen (\@ref(fig:corrmat2)).
+Hoofdteelt grasland bevat een range van meer en minder intensieve graslandtypes (Tabel \@ref(tab:hftlt-groepen)).
+Meer gedetailleerde data hieromtrent (bv. veranderingen doorheen het jaar) zou allicht beter kunnen verklaren waarom we deze negatieve correlatie met het maximum aantal broedparen zien.
 
 Gebruik PPVS, ...
