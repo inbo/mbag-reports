@@ -1288,5 +1288,256 @@
         "type": "article-journal",
         "update-policy": "http://dx.doi.org/10.1002/crossmark_policy",
         "volume": "14"
+    },
+    {
+        "author": [
+            {
+                "family": "Klaassen",
+                "given": "Raymond"
+            },
+            {
+                "family": "Schultinga",
+                "given": "Marjon"
+            },
+            {
+                "family": "Sirks",
+                "given": "Aniëla"
+            },
+            {
+                "family": "Kleyheeg",
+                "given": "Erik"
+            },
+            {
+                "family": "Wiersma",
+                "given": "Popko"
+            }
+        ],
+        "genre": "GKA-rapport 2022-01",
+        "id": "klaassen2022",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "key": "P7DDYTLK",
+        "language": "nl",
+        "libraryid": "1",
+        "page": "60",
+        "providerkey": "2509FBBE-5BB0-44C4-B119-6083A81ED673",
+        "publisher": "Grauwe Kiekendief – Kenniscentrum Akkervogels",
+        "publisher-place": "Scheemda",
+        "source": "Zotero",
+        "title": "Evaluatie van de effecten van het agrarisch natuurbeheer op voorkomen en trends van akkervogels in de provincie Groningen 2015 - 2020",
+        "type": "report"
+    },
+    {
+        "author": [
+            {
+                "family": "Klaassen",
+                "given": "Raymond"
+            },
+            {
+                "family": "Schultinga",
+                "given": "Marjon"
+            },
+            {
+                "family": "Sirks",
+                "given": "Aniëla"
+            },
+            {
+                "family": "Kleyheeg",
+                "given": "Erik"
+            },
+            {
+                "family": "Wiersma",
+                "given": "Popko"
+            }
+        ],
+        "genre": "GKA-rapport 2022-01",
+        "id": "klaassen2022",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "key": "P7DDYTLK",
+        "language": "nl",
+        "libraryid": "1",
+        "page": "60",
+        "providerkey": "2509FBBE-5BB0-44C4-B119-6083A81ED673",
+        "publisher": "Grauwe Kiekendief – Kenniscentrum Akkervogels",
+        "publisher-place": "Scheemda",
+        "source": "Zotero",
+        "title": "Evaluatie van de effecten van het agrarisch natuurbeheer op voorkomen en trends van akkervogels in de provincie Groningen 2015 - 2020",
+        "type": "report"
+    },
+    {
+        "author": [
+            {
+                "family": "Klaassen",
+                "given": "Raymond"
+            },
+            {
+                "family": "Schultinga",
+                "given": "Marjon"
+            },
+            {
+                "family": "Sirks",
+                "given": "Aniëla"
+            },
+            {
+                "family": "Kleyheeg",
+                "given": "Erik"
+            },
+            {
+                "family": "Wiersma",
+                "given": "Popko"
+            }
+        ],
+        "genre": "GKA-rapport 2022-01",
+        "id": "klaassen2022",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "key": "P7DDYTLK",
+        "language": "nl",
+        "libraryid": "1",
+        "page": "60",
+        "providerkey": "2509FBBE-5BB0-44C4-B119-6083A81ED673",
+        "publisher": "Grauwe Kiekendief – Kenniscentrum Akkervogels",
+        "publisher-place": "Scheemda",
+        "source": "Zotero",
+        "title": "Evaluatie van de effecten van het agrarisch natuurbeheer op voorkomen en trends van akkervogels in de provincie Groningen 2015 - 2020",
+        "type": "report"
+    },
+    {
+        "author": [
+            {
+                "family": "Klaassen",
+                "given": "Raymond"
+            },
+            {
+                "family": "Schultinga",
+                "given": "Marjon"
+            },
+            {
+                "family": "Sirks",
+                "given": "Aniëla"
+            },
+            {
+                "family": "Kleyheeg",
+                "given": "Erik"
+            },
+            {
+                "family": "Wiersma",
+                "given": "Popko"
+            }
+        ],
+        "genre": "GKA-rapport 2022-01",
+        "id": "klaassen2022",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "key": "P7DDYTLK",
+        "language": "nl",
+        "libraryid": "1",
+        "page": "60",
+        "providerkey": "2509FBBE-5BB0-44C4-B119-6083A81ED673",
+        "publisher": "Grauwe Kiekendief – Kenniscentrum Akkervogels",
+        "publisher-place": "Scheemda",
+        "source": "Zotero",
+        "title": "Evaluatie van de effecten van het agrarisch natuurbeheer op voorkomen en trends van akkervogels in de provincie Groningen 2015 - 2020",
+        "type": "report"
+    },
+    {
+        "author": [
+            {
+                "family": "Agentschap voor Natuur en Bos"
+            }
+        ],
+        "id": "agentschapvoornatuurenbos2021",
+        "issued": {
+            "date-parts": [
+                [
+                    2021
+                ]
+            ]
+        },
+        "key": "9P35NJJ9",
+        "libraryid": "1",
+        "number": "MB 20/12/2021",
+        "providerkey": "2509FBBE-5BB0-44C4-B119-6083A81ED673",
+        "title": "Achtergrondrapport bij het soortenbeschermingsprogramma voor de akkervogels",
+        "type": "report"
+    },
+    {
+        "author": [
+            {
+                "family": "Dochy",
+                "given": "Olivier"
+            }
+        ],
+        "id": "dochy2021",
+        "issued": {
+            "date-parts": [
+                [
+                    2021
+                ]
+            ]
+        },
+        "key": "2LF8M4ZB",
+        "language": "nl",
+        "libraryid": "1",
+        "page": "115",
+        "providerkey": "2509FBBE-5BB0-44C4-B119-6083A81ED673",
+        "publisher": "Provincie West-Vlaanderen",
+        "publisher-place": "Brugge",
+        "source": "Zotero",
+        "title": "Resultaten van de Frans-Belgische inventarisatie van plattelandsvogels in 2013 en 2019",
+        "type": "report"
+    },
+    {
+        "accessed": {
+            "date-parts": []
+        },
+        "author": [
+            {
+                "family": "Dochy",
+                "given": "Olivier"
+            },
+            {
+                "family": "Hens"
+            }
+        ],
+        "collection-title": "Rapport van het Instituut voor Natuurbehoud",
+        "genre": "Rapport van het Instituut voor Natuurbehoud",
+        "id": "dochy2005",
+        "issued": {
+            "date-parts": [
+                [
+                    2005
+                ]
+            ]
+        },
+        "key": "T9ZFPBPI",
+        "language": "nl",
+        "libraryid": "1",
+        "number": "IN.R.2005.01",
+        "providerkey": "2509FBBE-5BB0-44C4-B119-6083A81ED673",
+        "publisher-place": "Brussel, i.s.m. het provinciebestuur West-Vlaanderen, Brugge",
+        "title": "Van de stakkers van de akkers naar de helden van de velden. Beschermingsmaatregelen voor akkervogels.",
+        "type": "report"
     }
 ]
