@@ -1665,9 +1665,20 @@ De andere variabelen die werden geselecteerd o.b.v. *PPVS* hadden allemaal een s
 Deze variabelen zijn sterk gecorreleerd met de openheid van het landschap.
 We zien enerzijds een sterke positieve correlatie in de Oostelijke leemstreek (`openheid_waarde_1000`).
 Anderzijds zijn de andere continue variabelen zelf negatief gecorreleerd met openheid van het landschap (bv. hoe meer bomen, hagen ... hoe minder open het landschap; Fig. \@ref(fig:corrmat2)).
-Zowel eerdere Vlaamse als Nederlandse studies over akkervogels toonden dergelijke verbanden [@klaassen2022; @dochy2005; @dochy2021, zie ook @agentschapvoornatuurenbos2021].
+Zowel eerdere Vlaamse als Nederlandse studies over akkervogels toonden dergelijke verbanden [@dochy2005; @dochy2021; @klaassen2022; zie ook @agentschapvoornatuurenbos2021].
 Enkel het oppervlakte-aandeel hoofdteelt grasland van het jaar ervoor (`grasland_hfdtlt_pre`) in de Oostelijke leemstreek is niet sterk gecorreleerd met `openheid_waarde_1000`, maar toonde wel een positieve correlatie met hagen, houtkanten, bomen en bomenrijen (\@ref(fig:corrmat2)).
 Hoofdteelt grasland bevat een range van meer en minder intensieve graslandtypes (Tabel \@ref(tab:hftlt-groepen)).
 Meer gedetailleerde data hieromtrent (bv. veranderingen doorheen het jaar) zou allicht beter kunnen verklaren waarom we deze negatieve correlatie met het maximum aantal broedparen zien.
 
-Gebruik PPVS, ...
+Uit de resultaten blijkt dat PPVS een werkbaren methode is om relevante variabelen te selecteren.
+Het grootste nadeel is dat deze methode veel rekentijd vraagt, maar met de juiste instellingen, is het mogelijk dit te beperken (voornamelijk het gebruik van *5-fold cross-validation* i.p.v. *leave-one-out cross-validation* en het standaardiseren van de data).
+De grootste verbeteringen die hier vantoepassing zijn, zijn eerder gerelateerd aan de aggregatie van de data.
+In deze analyses gebruikten we het maximum aantal broedvogels per telcirkel per jaar als responsvariabele.
+Dit wil zeggen dat we geen rekening houden met de telperiodes, noch de exacte locatie waar een individu is waargenomen binnen de telcirkel.
+We zijn er dan ook van overtuigd dat verdere analyses nog meer uit de data kan halen.
+Enerzijds kunnen variabelen, zoals de aanwezigheid van hoofdteelten, veranderen over het jaar heen, wat de inclusie van tellingen per telperiode interessant maakt.
+Anderzijds kunnen we aan elke specifiek observatie variabelen hangen.
+Zo kan een vogel in een bepaald perceel met een bepaalde hoofdteelt worden geobserveerd waarbij er zich ook andere percelen met andere teelten in de telcirkel bevinden.
+Nu aggregeren we de informatie van al die percelen op telcirkelniveau waarbij we deze informatie koppelen aan die observatie, zonder de exacte locatie van de observatie zelf te bekijken.
+Minder aggregeren betekend meer data waardoor we meer subtiele verbanden kunnen waarnemen.
+Dit moeten in evenwicht zijn met de complexiteit van de modellen en de tijd die nodig is om deze te fitten.
