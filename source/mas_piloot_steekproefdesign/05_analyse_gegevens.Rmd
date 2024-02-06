@@ -1672,7 +1672,7 @@ Meer gedetailleerde data hieromtrent (bv. veranderingen doorheen het jaar) zou a
 
 Uit de resultaten blijkt dat PPVS een werkbaren methode is om relevante variabelen te selecteren.
 Het grootste nadeel is dat deze methode veel rekentijd vraagt, maar met de juiste instellingen, is het mogelijk dit te beperken (voornamelijk het gebruik van *5-fold cross-validation* i.p.v. *leave-one-out cross-validation* en het standaardiseren van de data).
-De grootste verbeteringen die hier vantoepassing zijn, zijn eerder gerelateerd aan de aggregatie van de data.
+De grootste verbeteringen die hier van toepassing zijn, zijn eerder gerelateerd aan de aggregatie van de data.
 In deze analyses gebruikten we het maximum aantal broedvogels per telcirkel per jaar als responsvariabele.
 Dit wil zeggen dat we geen rekening houden met de telperiodes, noch de exacte locatie waar een individu is waargenomen binnen de telcirkel.
 We zijn er dan ook van overtuigd dat verdere analyses nog meer uit de data kan halen.
