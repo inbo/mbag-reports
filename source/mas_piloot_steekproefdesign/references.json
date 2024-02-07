@@ -1081,7 +1081,7 @@
                 "given": "Koen"
             }
         ],
-        "collection-title": "Rapporten van het Instituut voor Natuur‐ en Bosonderzoek 2023",
+        "collection-title": "Rapporten van het Instituut voor Natuur‐ en Bosonderzoek",
         "id": "onkelinx2023a",
         "issued": {
             "date-parts": [
@@ -1092,6 +1092,7 @@
         },
         "key": "CNITUX2T",
         "libraryid": "1",
+        "number": "93",
         "providerkey": "2509FBBE-5BB0-44C4-B119-6083A81ED673",
         "publisher": "Instituut voor Natuur- en Bosonderzoek",
         "publisher-place": "Brussel",
@@ -1538,6 +1539,48 @@
         "providerkey": "2509FBBE-5BB0-44C4-B119-6083A81ED673",
         "publisher-place": "Brussel, i.s.m. het provinciebestuur West-Vlaanderen, Brugge",
         "title": "Van de stakkers van de akkers naar de helden van de velden. Beschermingsmaatregelen voor akkervogels.",
+        "type": "report"
+    },
+    {
+        "URL": "https://doi.org/10.21436/inbor.15674942",
+        "accessed": {
+            "date-parts": []
+        },
+        "author": [
+            {
+                "family": "Vermeersch",
+                "given": "Glenn"
+            },
+            {
+                "family": "Ledegen",
+                "given": "Hannes"
+            },
+            {
+                "family": "Feys",
+                "given": "Simon"
+            }
+        ],
+        "collection-title": "Rapporten van het Instituut voor Natuur- en Bosonderzoek",
+        "genre": "Rapporten van het Instituut voor Natuur- en Bosonderzoek",
+        "id": "vermeersch2018",
+        "issued": {
+            "date-parts": [
+                [
+                    2018,
+                    12,
+                    31
+                ]
+            ]
+        },
+        "key": "ET9XYNXV",
+        "language": "Nederlands",
+        "libraryid": "1",
+        "number": "93",
+        "providerkey": "2509FBBE-5BB0-44C4-B119-6083A81ED673",
+        "publisher": "Instituut",
+        "publisher-place": "Brussel",
+        "source": "pureportal.inbo.be",
+        "title": "Methodehandleiding bij het project Algemene Broedvogelmonitoring Vlaanderen (ABV)",
         "type": "report"
     }
 ]
