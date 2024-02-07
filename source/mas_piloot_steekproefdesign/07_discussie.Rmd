@@ -15,7 +15,7 @@ Verschillen tussen vrijwilligers en professionelen:
 -   blijvende aandacht nodig voor opleiding
 -   ...
 
-Verschillen tussen het MAS-telprotocol en het telprotocol van de Algemene Broedvogelmonitoring Vlaanderen (ABV) [@vermeersch2018] omvatten onder andere de tijdsduur van de telling (resp. 10 min vs. 5 min) en het aantal telperiodes per jaar (resp. 4 vs 3 periodes).
+Verschillen tussen het MAS-telprotocol en het telprotocol van de Algemene Broedvogelmonitoring Vlaanderen (ABV) [@vermeersch2018] omvatten onder andere de tijdsduur van de telling (resp. 10 min vs. 5 min) en het aantal telperiodes per jaar (resp. 4 vs. 3 periodes).
 De ABV maakt bovendien gebruik van een genest design met 6 telpunten in een hok van 1 km x 1 km.
 Deze punten zijn geplaatst in een theoretisch 2 x 3 grid binnen het hok, maar de waarnemer kan deze verschuiven zonder concrete richtlijnen.
 In tegenstelling tot het MAS, wordt de ABV vaak niet digitaal ingevoerd, ontbreekt een maximale zoekafstand, en worden er geen observaties vastgelegd op de kaart, waardoor afstanden tot de waarnemer niet direct beschikbaar zijn.
@@ -109,8 +109,6 @@ In 2024 volgen de overige landbouwstreken.
 Voor een beleidsmonitoring op macroniveau is het ook interessant om -- naast resultaten voor individuele soorten -- ook uitspraken te doen over groepen van soorten (bijvoorbeeld alle doelsoorten van het SBP akkervogels).
 Dit kan bijvoorbeeld door -- vergelijkbaar met hoe dit gedaan wordt voor de ABV monitoring -- een multisoortenindex te berekenen die de relatieve wijziging weergeeft van een jaar met een referentiejaar op niveau Vlaanderen.
 Met de MAS data kunnen we dit principe ook toepassen per landbouwstreek en binnen versus buiten SBP zones.
-
-<!-- # TODO discussie over Samensporen met ABV; relevante referenties toevoegen-->
 
 ## Beheermonitoring
 
