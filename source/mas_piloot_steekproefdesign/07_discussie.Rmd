@@ -98,7 +98,7 @@ Ook weten we hierdoor niet wat de algemene gemiddelde toestand en trend is van s
 Door ook in vergelijkbare situaties buiten SBP zones te tellen en de tellocaties via een kanssteekproef te selecteren die representatief is binnen elk van de beschouwde strata, kunnen we beide euvels oplossen.
 We zullen dan immers in staat zijn om bijvoorbeeld de trend binnen en buiten SBP gebied met elkaar te vergelijken.
 We zullen ook de haalbaarheid van (o.b.v. trend) en het halen van (o.b.v. toestand) streefdoelen voor de populatiedensiteit van soorten kunnen aftoetsen.
-Ook kunnen we, door te wegen voor de oppervlakte van elk stratum (bijvoorbeeld open landschap binnen SBP in de Leemstreek), toestand- en trendschattingen bekomen die representatief zijn voor een volledige landbouwstreek (en op termijn dus ook voor alle landbouwgebied in Vlaanderen).
+Ook kunnen we, door te wegen voor de oppervlakte van elk stratum (bijvoorbeeld open landschap binnen SBP in de leemstreek), toestand- en trendschattingen bekomen die representatief zijn voor een volledige landbouwstreek (en op termijn dus ook voor alle landbouwgebied in Vlaanderen).
 
 Elk van bovenvermelde beperkingen zullen we op termijn dus kunnen wegwerken en een deel van de beperkingen hebben we binnen het pilootproject al aangepakt.
 In het meetnet dat we hebben opgezet voor deze pilootstudie zijn controlegebieden toegevoegd die vergelijkbaar zijn met de SBP zones (zelfde landbouwstreek, zelfde mate van openheid van het landschap).
@@ -107,7 +107,7 @@ In 2023 konden we al starten met deze uitrol naar de volledige leemstreek en zan
 In 2024 volgen de overige landbouwstreken.
 
 Voor een beleidsmonitoring op macroniveau is het ook interessant om -- naast resultaten voor individuele soorten -- ook uitspraken te doen over groepen van soorten (bijvoorbeeld alle doelsoorten van het SBP akkervogels).
-Dit kan bijvoorbeeld door -- vergelijkbaar met hoe dit gedaan wordt voor de ABV monitoring -- een multisoortenindex te berekenen die de relatieve wijziging weergeeft van een jaar met een referentiejaar op niveau Vlaanderen.
+Dit kan bijvoorbeeld door -- vergelijkbaar met hoe dit gedaan wordt voor de ABV monitoring -- een multisoortenindex te berekenen die de relatieve wijziging weergeeft van een jaar met een referentiejaar op niveau Vlaanderen (= *multi species change index*).
 Met de MAS data kunnen we dit principe ook toepassen per landbouwstreek en binnen versus buiten SBP zones.
 
 ## Beheermonitoring
@@ -123,7 +123,7 @@ We geloven echter dat hier nog een deel onontgonnen terrein ligt, om in nog meer
 In bovenstaande schets worden de verklarende variabelen samengevat per telcirkel en per jaar.
 De individuele tellingen geven ons echter informatie waar een soort gezien werd binnen de telcirkel in een bepaalde telperiode.
 Hierin kan mogelijk een sterker signaal verscholen liggen dat verloren gaat wanneer we aggregeren (uitmiddelen of een totaal berekenen) in een telcirkel.
-Een waarneming is uiteraard maar een momentopnamen, maar uit vele waarnemingen kan er zich wel een patroon aftekenen.
+Een waarneming is uiteraard maar een momentopname, maar uit vele waarnemingen kan er zich wel een patroon aftekenen.
 Stel bijvoorbeeld dat Veldleeuwerik veel meer waargenomen wordt nabij een specifieke beheermaatregel of een specifieke teelt.
 Om zulke signalen op te pikken, moeten we modellen maken die de vertrekken vanaf de individuele waarnemingen en de daarmee via locatie en tijdstip van de waarneming verbonden toestand van de verklarende variabelen.
 Dit is echter voorwerp van verder onderzoek en kon niet binnen het tijdsbestek van dit pilootproject bekeken worden.
