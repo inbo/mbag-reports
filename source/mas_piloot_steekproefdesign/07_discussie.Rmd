@@ -22,10 +22,10 @@ In tegenstelling tot het MAS, wordt de ABV vaak niet digitaal ingevoerd, ontbree
 Omwille van deze methodologische verschillen is het niet vanzelfsprekend ABV-data te combineren met de data van het MAS, vooral als we rekening willen houden met detectiekans.
 
 Bij de ABV gebeurt stratificatie van hokken op basis van de Biologische Waarderingskaart (minstens 80 % landbouw) [@onkelinx2023a].
-Bij het MAS gebeurt stratificatie van punten op basis van een engere definitie van landbouwgebied door een combinatie van regels (beschreven in Secties …).
+Bij het MAS gebeurt stratificatie van punten op basis van een engere definitie van landbouwgebied door een combinatie van regels (beschreven in Secties \@ref(piloot-steekproefkader) en \@ref(aanpassingen-meetnet)).
 Dit zorgt ervoor dat de informatie-inhoud van de data over vogels in landbouwgebied groter zal zijn in kader van het MAS en dit meetnet meer doelgerichte vragen kan beantwoorden in dit verband.
-Anderzijds kunnen punten van de ABV sneller worden geteld (zowel tijdsduur als afstand tussen punten) zodat dit meetnet nuttig is om meer algemene trends te detecteren op een goedkopere manier.
-Wij stellen voor beide meetnetten 6 jaar parallel te laten verlopen zodat we tijdreeksen kunnen vergelijken.
+Anderzijds kunnen punten van de ABV sneller worden geteld (zowel de tijdsduur per telpunt als afstand tussen punten is kleiner) zodat dit meetnet nuttig is om meer algemene trends te detecteren op een goedkopere manier.
+Wij stellen voor beide meetnetten zeker 5 jaar parallel te laten verlopen zodat we tijdreeksen kunnen vergelijken.
 Bovendien is er momenteel nog geen tijdreeksdata beschikbaar voor MAS op gelijkaardige schaal als ABV.
 
 ## Beleidsmonitoring
