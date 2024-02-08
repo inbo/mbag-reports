@@ -640,7 +640,7 @@ In dit rapport presenteren we een case studie van de analyses en resultaten met 
 Het voornaamste doel is om een overzicht te geven van de mogelijke analyses die we kunnen doen op de MAS-data.
 De Veldleeuwerik is een handige testsoort, omdat veel data voorhanden is waardoor verschillende methodieken onder verschillende scenario's konden worden uitgetest.
 De analyses besproken in deze sectie zijn in de meeste gevallen ook reeds uitgevoerd voor andere soorten.
-In het toekomstige rapport, gewijd aan bredere analyses en resultaten van het MAS, zullen de bevindingen voor deze andere soorten worden besproken.
+In een toekomstige rapport, gewijd aan bredere analyses en resultaten van het MAS, zullen de bevindingen voor deze andere soorten worden besproken.
 
 ### Abundanties en detectiekans {#intro-detectiekans}
 
@@ -1681,4 +1681,4 @@ Anderzijds kunnen we aan elke specifiek observatie variabelen hangen.
 Zo kan een vogel in een bepaald perceel met een bepaalde hoofdteelt worden geobserveerd waarbij er zich ook andere percelen met andere teelten in de telcirkel bevinden.
 Nu aggregeren we de informatie van al die percelen op telcirkelniveau waarbij we deze informatie koppelen aan die observatie, zonder de exacte locatie van de observatie zelf te bekijken.
 Minder aggregeren betekend meer data waardoor we meer subtiele verbanden kunnen waarnemen.
-Dit moeten in evenwicht zijn met de complexiteit van de modellen en de tijd die nodig is om deze te fitten.
+Dit moet in evenwicht zijn met de complexiteit van de modellen en de tijd die nodig is om deze te fitten.
