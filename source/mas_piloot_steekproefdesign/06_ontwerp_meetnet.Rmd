@@ -203,7 +203,7 @@ include_graphics(file.path("media", "kaartjes", "sbp_mbag_kaart.png"))
     De methode garandeert dat deze nieuwe set ruimtelijk goed gespreid is en een aselecte steekproef is.
     De stratificatiemethode is licht gewijzigd t.o.v. het pilootmeetnet.
     We gaan het aantal telpunten niet meer proportioneel alloceren o.b.v. de oppervlakte aan OL en HOL.
-    In plaats daarvan nemen we voor elk stratum (OL binnen SBP, OL buiten SBP, HOL binnen SBP, HOL buiten SBP) 50 punten.
+    In plaats daarvan nemen we voor elk stratum (OL binnen SBP, OL buiten SBP, HOL binnen SBP, HOL buiten SBP) evenveel punten.
     Zo zorgen we ervoor dat we ook in zeldzamere strata genoeg data zullen verzamelen, waardoor we uitspraken kunnen doen voor elk stratum apart en we onderlinge de strata kunnen vergelijken.
     Hier tegenover staat wel dat, indien we uitspraken willen doen op hogere niveaus (bv. landbouwregio), we hiermee moeten rekening houden in de analyses door gewichten toe te kennen proportioneel aan de oppervlakte aan OL en HOL.
 
