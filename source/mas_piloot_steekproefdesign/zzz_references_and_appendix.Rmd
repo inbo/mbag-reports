@@ -114,7 +114,7 @@ De **posterior densiteit** is een grafiek die voor elke sample-waarde de densite
 
 **Markov chain Monte Carlo (MCMC)**
 
-Een numerieke methode die wordt gebruikt om willekeurige steekproeven (**posterior samples**, zie hierboven) te genereren uit een kansverdeling (de **a-posterioriverdeling**, zie hierboven).
+Een numerieke methode die wordt gebruikt om steekproeven (**posterior samples**, zie hierboven) te genereren die representatief zijn voor de gezamenlijke **a-posteriori** verdeling van de te schatten modelparameters (de **a-posterioriverdeling**, zie hierboven).
 **Ketens** zijn verschillende parallelle paden of sequenties waarlangs het algoritme evolueert.
 Meerdere ketens kunnen worden gestart om de convergentie van het algoritme te controleren.
 Elke stap in de MCMC-methode wordt een **iteratie** genoemd.
@@ -134,14 +134,14 @@ Een waarde van 1 suggereert dat de **ketens** (zie hierboven) goed zijn geconver
 **posterior predictive check (PPC)**
 
 Een techniek binnen de Bayesiaanse statistiek om de adequaatheid van een model te evalueren, nadat een model is gefit aan de beschikbare gegevens en de **a-posterioriverdeling** is verkregen.
-Er worden synthetische datasets worden gegenereerd (= **posterior predictive distribution**) op basis van de geschatte **a-posterioriverdeling** van de parameters in het model.
+Er worden synthetische datasets gegenereerd (= **posterior predictive distribution**) op basis van de geschatte **a-posterioriverdeling** van de parameters in het model.
 Deze synthetische datasets representeren wat we zouden verwachten te zien als de Bayesiaanse modellering correct is.
 Vervolgens worden deze synthetische datasets vergeleken met de werkelijke observaties.
 
 **projection predictive variable selection (PPVS)**
 
 De techniek zoekt de subset van kandidaat-variabelen met een voorspellende kracht die zo dicht mogelijk ligt bij die van een referentiemodel.
-Met als doel de meest relevante variabelen te selecteren voor modelbouw.
+Met als doel de meest relevante variabelen te selecteren.
 
 **cross-validation**
 
@@ -175,8 +175,8 @@ Een 95 % **betrouwbaarheidsinterval** betekent dat als we herhaalde steekproeven
 
 **species change index (SCI)**
 
-Een trend van een soort (= **species index**, **SI**) voor een bepaalde periode/stratum ten opzichte van de trend in een andere periode/stratum.
-Op dezelfde manier is een **multi-species change index** (**MSCI**) een gemiddelde trend voor meerdere soorten (= **multi-species index**, **MSI**) voor een bepaalde periode ten opzichte van de trend in een andere periode.
+Een trend of effect van een soort (= **species index**, **SI**) voor een bepaalde periode/stratum ten opzichte van een andere periode/stratum die als referentie beschouwd wordt.
+Op dezelfde manier is een **multi-species change index** (**MSCI**) een gemiddelde voor meerdere soorten (= **multi-species index**, **MSI**) voor een bepaalde periode/stratum ten opzichte van een periode/stratum die als referentie dienst doet.
 Zie ook Bijlage \@ref(bijlage-sci).
 
 \newpage
