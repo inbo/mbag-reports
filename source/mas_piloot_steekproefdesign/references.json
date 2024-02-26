@@ -966,7 +966,7 @@
         "type": "article"
     },
     {
-        "URL": "https://archief-algemeen.omgeving.vlaanderen.be/xmlui/bitstream/handle/acd/449392/Landgebruik_en_Ruimtebeslag_2019_def_correctie.pdf?sequence=1&isAllowed=y",
+        "URL": "https://archief.algemeen.omgeving.vlaanderen.be/xmlui/handle/acd/449392",
         "accessed": {
             "date-parts": []
         },
@@ -1098,6 +1098,446 @@
         "source": "DOI.org (Crossref)",
         "title": "Trends op basis van de Algemene Broedvogelmonitoring Vlaanderen (ABV): Technisch achtergrondrapport voor de periode 2007-2022",
         "title-short": "Trends op basis van de Algemene Broedvogelmonitoring Vlaanderen (ABV)",
+        "type": "report"
+    },
+    {
+        "DOI": "10.1111/2041-210x.12105",
+        "ISSN": "2041-210X",
+        "URL": "http://dx.doi.org/10.1111/2041-210X.12105",
+        "author": [
+            {
+                "family": "Miller",
+                "given": "David L."
+            },
+            {
+                "family": "Burt",
+                "given": "M. Louise"
+            },
+            {
+                "family": "Rexstad",
+                "given": "Eric A."
+            },
+            {
+                "family": "Thomas",
+                "given": "Len"
+            }
+        ],
+        "container-title": "Methods in Ecology and Evolution",
+        "container-title-short": "Methods Ecol Evol",
+        "editor": [
+            {
+                "family": "Gimenez",
+                "given": "Olivier"
+            }
+        ],
+        "id": "miller2013",
+        "is-referenced-by-count": "238",
+        "issue": "11",
+        "issued": {
+            "date-parts": [
+                [
+                    2013,
+                    8,
+                    27
+                ]
+            ]
+        },
+        "language": "en",
+        "member": "311",
+        "page": "1001-1010",
+        "prefix": "10.1111",
+        "providerkey": "doi",
+        "publisher": "Wiley",
+        "reference-count": "44",
+        "references-count": "44",
+        "score": "1",
+        "source": "Crossref",
+        "subject": "Ecological Modeling",
+        "title": "Spatial models for distance sampling data: recent developments and future directions",
+        "type": "article-journal",
+        "volume": "4"
+    },
+    {
+        "DOI": "10.1890/03-3127",
+        "ISSN": "0012-9658",
+        "URL": "http://dx.doi.org/10.1890/03-3127",
+        "author": [
+            {
+                "family": "Royle",
+                "given": "J. Andrew"
+            },
+            {
+                "family": "Dawson",
+                "given": "Deanna K."
+            },
+            {
+                "family": "Bates",
+                "given": "Scott"
+            }
+        ],
+        "container-title": "Ecology",
+        "container-title-short": "Ecology",
+        "id": "royle2004",
+        "is-referenced-by-count": "219",
+        "issue": "6",
+        "issued": {
+            "date-parts": [
+                [
+                    2004,
+                    6
+                ]
+            ]
+        },
+        "language": "en",
+        "member": "311",
+        "page": "1591-1597",
+        "prefix": "10.1002",
+        "providerkey": "doi",
+        "publisher": "Wiley",
+        "reference-count": "29",
+        "references-count": "29",
+        "score": "1",
+        "source": "Crossref",
+        "subject": "Ecology, Evolution, Behavior and Systematics",
+        "title": "MODELING ABUNDANCE EFFECTS IN DISTANCE SAMPLING",
+        "type": "article-journal",
+        "volume": "85"
+    },
+    {
+        "DOI": "10.1198/1085711043578",
+        "ISSN": "1085-7117",
+        "URL": "http://dx.doi.org/10.1198/1085711043578",
+        "author": [
+            {
+                "family": "Hedley",
+                "given": "Sharon L."
+            },
+            {
+                "family": "Buckland",
+                "given": "Stephen T."
+            }
+        ],
+        "container-title": "Journal of Agricultural, Biological, and Environmental Statistics",
+        "container-title-short": "JABES",
+        "id": "hedley2004",
+        "is-referenced-by-count": "206",
+        "issue": "2",
+        "issued": {
+            "date-parts": [
+                [
+                    2004,
+                    6
+                ]
+            ]
+        },
+        "language": "en",
+        "member": "297",
+        "page": "181-199",
+        "prefix": "10.1007",
+        "providerkey": "doi",
+        "publisher": "Springer Science and Business Media LLC",
+        "reference-count": "22",
+        "references-count": "22",
+        "score": "1",
+        "source": "Crossref",
+        "subject": "Applied Mathematics",
+        "title": "Spatial models for line transect sampling",
+        "type": "article-journal",
+        "volume": "9"
+    },
+    {
+        "DOI": "10.1111/2041-210x.14106",
+        "ISSN": "2041-210X",
+        "URL": "http://dx.doi.org/10.1111/2041-210X.14106",
+        "author": [
+            {
+                "family": "Wadoux",
+                "given": "Alexandre M. J.‐C."
+            },
+            {
+                "family": "Heuvelink",
+                "given": "Gerard B. M."
+            }
+        ],
+        "container-title": "Methods in Ecology and Evolution",
+        "container-title-short": "Methods Ecol Evol",
+        "id": "wadoux2023",
+        "is-referenced-by-count": "0",
+        "issue": "5",
+        "issued": {
+            "date-parts": [
+                [
+                    2023,
+                    4,
+                    10
+                ]
+            ]
+        },
+        "language": "en",
+        "member": "311",
+        "page": "1320-1332",
+        "prefix": "10.1111",
+        "providerkey": "doi",
+        "publisher": "Wiley",
+        "reference-count": "64",
+        "references-count": "64",
+        "score": "1",
+        "source": "Crossref",
+        "subject": "Ecological Modeling",
+        "title": "Uncertainty of spatial averages and totals of natural resource maps",
+        "type": "article-journal",
+        "update-policy": "http://dx.doi.org/10.1002/crossmark_policy",
+        "volume": "14"
+    },
+    {
+        "author": [
+            {
+                "family": "Klaassen",
+                "given": "Raymond"
+            },
+            {
+                "family": "Schultinga",
+                "given": "Marjon"
+            },
+            {
+                "family": "Sirks",
+                "given": "Aniëla"
+            },
+            {
+                "family": "Kleyheeg",
+                "given": "Erik"
+            },
+            {
+                "family": "Wiersma",
+                "given": "Popko"
+            }
+        ],
+        "genre": "GKA-rapport 2022-01",
+        "id": "klaassen2022",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "key": "P7DDYTLK",
+        "language": "nl",
+        "libraryid": "1",
+        "page": "60",
+        "providerkey": "2509FBBE-5BB0-44C4-B119-6083A81ED673",
+        "publisher": "Grauwe Kiekendief – Kenniscentrum Akkervogels",
+        "publisher-place": "Scheemda",
+        "source": "Zotero",
+        "title": "Evaluatie van de effecten van het agrarisch natuurbeheer op voorkomen en trends van akkervogels in de provincie Groningen 2015 - 2020",
+        "type": "report"
+    },
+    {
+        "author": [
+            {
+                "family": "Klaassen",
+                "given": "Raymond"
+            },
+            {
+                "family": "Schultinga",
+                "given": "Marjon"
+            },
+            {
+                "family": "Sirks",
+                "given": "Aniëla"
+            },
+            {
+                "family": "Kleyheeg",
+                "given": "Erik"
+            },
+            {
+                "family": "Wiersma",
+                "given": "Popko"
+            }
+        ],
+        "genre": "GKA-rapport 2022-01",
+        "id": "klaassen2022",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "key": "P7DDYTLK",
+        "language": "nl",
+        "libraryid": "1",
+        "page": "60",
+        "providerkey": "2509FBBE-5BB0-44C4-B119-6083A81ED673",
+        "publisher": "Grauwe Kiekendief – Kenniscentrum Akkervogels",
+        "publisher-place": "Scheemda",
+        "source": "Zotero",
+        "title": "Evaluatie van de effecten van het agrarisch natuurbeheer op voorkomen en trends van akkervogels in de provincie Groningen 2015 - 2020",
+        "type": "report"
+    },
+    {
+        "author": [
+            {
+                "family": "Klaassen",
+                "given": "Raymond"
+            },
+            {
+                "family": "Schultinga",
+                "given": "Marjon"
+            },
+            {
+                "family": "Sirks",
+                "given": "Aniëla"
+            },
+            {
+                "family": "Kleyheeg",
+                "given": "Erik"
+            },
+            {
+                "family": "Wiersma",
+                "given": "Popko"
+            }
+        ],
+        "genre": "GKA-rapport 2022-01",
+        "id": "klaassen2022",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "key": "P7DDYTLK",
+        "language": "nl",
+        "libraryid": "1",
+        "page": "60",
+        "providerkey": "2509FBBE-5BB0-44C4-B119-6083A81ED673",
+        "publisher": "Grauwe Kiekendief – Kenniscentrum Akkervogels",
+        "publisher-place": "Scheemda",
+        "source": "Zotero",
+        "title": "Evaluatie van de effecten van het agrarisch natuurbeheer op voorkomen en trends van akkervogels in de provincie Groningen 2015 - 2020",
+        "type": "report"
+    },
+    {
+        "author": [
+            {
+                "family": "Klaassen",
+                "given": "Raymond"
+            },
+            {
+                "family": "Schultinga",
+                "given": "Marjon"
+            },
+            {
+                "family": "Sirks",
+                "given": "Aniëla"
+            },
+            {
+                "family": "Kleyheeg",
+                "given": "Erik"
+            },
+            {
+                "family": "Wiersma",
+                "given": "Popko"
+            }
+        ],
+        "genre": "GKA-rapport 2022-01",
+        "id": "klaassen2022",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "key": "P7DDYTLK",
+        "language": "nl",
+        "libraryid": "1",
+        "page": "60",
+        "providerkey": "2509FBBE-5BB0-44C4-B119-6083A81ED673",
+        "publisher": "Grauwe Kiekendief – Kenniscentrum Akkervogels",
+        "publisher-place": "Scheemda",
+        "source": "Zotero",
+        "title": "Evaluatie van de effecten van het agrarisch natuurbeheer op voorkomen en trends van akkervogels in de provincie Groningen 2015 - 2020",
+        "type": "report"
+    },
+    {
+        "author": [
+            {
+                "family": "Agentschap voor Natuur en Bos"
+            }
+        ],
+        "id": "agentschapvoornatuurenbos2021",
+        "issued": {
+            "date-parts": [
+                [
+                    2021
+                ]
+            ]
+        },
+        "key": "9P35NJJ9",
+        "libraryid": "1",
+        "number": "MB 20/12/2021",
+        "providerkey": "2509FBBE-5BB0-44C4-B119-6083A81ED673",
+        "title": "Achtergrondrapport bij het soortenbeschermingsprogramma voor de akkervogels",
+        "type": "report"
+    },
+    {
+        "author": [
+            {
+                "family": "Dochy",
+                "given": "Olivier"
+            }
+        ],
+        "id": "dochy2021",
+        "issued": {
+            "date-parts": [
+                [
+                    2021
+                ]
+            ]
+        },
+        "key": "2LF8M4ZB",
+        "language": "nl",
+        "libraryid": "1",
+        "page": "115",
+        "providerkey": "2509FBBE-5BB0-44C4-B119-6083A81ED673",
+        "publisher": "Provincie West-Vlaanderen",
+        "publisher-place": "Brugge",
+        "source": "Zotero",
+        "title": "Resultaten van de Frans-Belgische inventarisatie van plattelandsvogels in 2013 en 2019",
+        "type": "report"
+    },
+    {
+        "accessed": {
+            "date-parts": []
+        },
+        "author": [
+            {
+                "family": "Dochy",
+                "given": "Olivier"
+            },
+            {
+                "family": "Hens"
+            }
+        ],
+        "collection-title": "Rapport van het Instituut voor Natuurbehoud",
+        "genre": "Rapport van het Instituut voor Natuurbehoud",
+        "id": "dochy2005",
+        "issued": {
+            "date-parts": [
+                [
+                    2005
+                ]
+            ]
+        },
+        "key": "T9ZFPBPI",
+        "language": "nl",
+        "libraryid": "1",
+        "number": "IN.R.2005.01",
+        "providerkey": "2509FBBE-5BB0-44C4-B119-6083A81ED673",
+        "publisher-place": "Brussel, i.s.m. het provinciebestuur West-Vlaanderen, Brugge",
+        "title": "Van de stakkers van de akkers naar de helden van de velden. Beschermingsmaatregelen voor akkervogels.",
         "type": "report"
     }
 ]

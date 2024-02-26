@@ -1,13 +1,19 @@
-# Analyse beschikbare ABV- en MAS-gegevens {#analyse-gegevens}
+# Analyse beschikbare MAS-gegevens {#analyse-gegevens}
 
--   Berekening verklarende variabelen (GIS-analyse)
--   Resultaten
-    -   Data exploratie
-    -   analyse dubbeltellingen
--   Case study veldleeuwerik
-    -   densiteitsschattingen distance sampling
-    -   beheerovereenkomsten analyse
-    -   totaalanalyse projpred
+Alle analyses werden gedaan met R [@R] in RStudio [@RStudio].
+Via de **renv** package [@renv-package] werd een reproduceerbare omgeving gecreëerd die bijhield welke versies van R en welke (versies van) verschillende packages werden gebruikt.
+Alle code werd beheerd onder versiecontrole met Git op een online GitHub repository [@github-repo].
+
+Voor dit rapport maakten we zowel gebruik van frequentistische als Bayesiaanse statistische methodes voor de gegevensanalyses.
+We gebruiken telkens een $\alpha = 5$ % significantieniveau voor statistische besluitvorming.
+De frequentistische statistiek concentreert zich op het afleiden van conclusies over een populatie op basis van herhaalde steekproeven en maakt gebruik van klassieke methoden zoals het berekenen van betrouwbaarheidsintervallen, p-waardes enzovoort.
+Bayesiaanse statistiek maakt gebruik van de Bayesiaanse waarschijnlijkheidstheorie, waarbij initiële informatie (a priori kennis) wordt gecombineerd met gegevens om de waarschijnlijkheid van hypotheses bij te werken (a-posterioriverdeling van parameters).
+Hierbij bekomen we geen betrouwbaarheidsintervallen maar zgn.
+geloofwaardigheidsintervallen.
+Het gebruik van beide statistische methodes heeft geen invloed op de interpretatie van de resultaten, maar zorgt er wel voor dat nieuwe termen worden geïntroduceerd, zoals a-priorikans, *Markov chain Monte Carlo* en a-posterioriverdeling.
+Dit zijn termen waarmee de lezer mogelijk niet bekend of waarvoor geen eenvoudige vertaling naar het Nederlands voorhanden is.
+Deze worden samengevat in Bijlage \@ref(statistische-termen).
+Engelstalige termen worden in cursief aangeduid.
 
 ## Data exploratie MAS-tellingen {#exploratie-tellingen}
 
@@ -16,8 +22,8 @@
 De volgende resultaten betreffen vogels.
 Zoogdieren worden besproken in Sectie \@ref(exploratie-zoogdieren).
 Binnen het pilootmeetnet worden al sinds 2018 tellingen verricht.
-\textcolor{red}{plan kiekendief ...} Zoals besproken in Sectie \@ref(piloot-overlap}) zijn een aantal van deze punten hergebruikt bij de steekproeftrekking voor deze pilootstudie.
-Verder zijn er sinds de pilootstudie (2022) veel telpunten bijgekomen in De Moeren en de Oostelijke leemstreek (Tabel \@ref(tab:samenvatting-aantallen)).
+\textcolor{red}{plan kiekendief ...} Zoals besproken in Sectie \@ref(piloot-overlap), zijn een aantal van deze punten hergebruikt bij de steekproeftrekking voor deze pilootstudie.
+Verder zijn er sinds de pilootstudie (sinds 2022) veel telpunten bijgekomen in De Moeren en de Oostelijke leemstreek (Tabel \@ref(tab:samenvatting-aantallen)).
 De meeste telpunten werden vier maal per jaar bezocht (Fig. \@ref(fig:telintensiteit)).
 Figuren \@ref(fig:aantal-waarnemingen) en \@ref(fig:aantal-soorten) geven een meer gedetailleerd beeld van de verdelingen van respectievelijk het aantal waarnemingen en soorten per jaar.
 
@@ -41,29 +47,29 @@ summary_mas_2018_2023 %>%
   kableExtra::row_spec(0, bold = TRUE)
 ```
 
-```{r telintensiteit, out.width = "90%", fig.cap = "Aantal tellingen per jaar in elke regio."}
+```{r telintensiteit, out.width = "90%", fig.cap = "Aantal tellingen per jaar in elke regio voor alle telperiodes. R1: 01/04–20/04, R2: 21/04–10/05, R3: 11/05–10/06, R4: 21/06–15/07."}
 include_graphics(file.path("media", "data_exploratie",
                            "tellingen_mas_2018_2023.pdf"))
 ```
 
-```{r aantal-waarnemingen, out.width = "100%", fig.cap = "Verdeling van het aantal waarnemingen van vogels per jaar in elke regio."}
+```{r aantal-waarnemingen, out.width = "100%", fig.cap = "Verdeling van het aantal waarnemingen van vogels in een telcirkel per jaar, telperiode en regio."}
 include_graphics(file.path("media", "data_exploratie",
                            "waarnemingen_mas_2018_2023.pdf"))
 ```
 
-```{r aantal-soorten, out.width = "100%", fig.cap = "Verdeling van het aantal vogelsoorten per jaar in elke regio."}
+```{r aantal-soorten, out.width = "100%", fig.cap = "Verdeling van het aantal vogelsoorten in een telcirkel per jaar, telperiode en regio."}
 include_graphics(file.path("media", "data_exploratie",
                            "soorten_mas_2018_2023.pdf"))
 ```
 
 ### Broedcodes
 
-Het gebruik van het scoren van verschillende broedcodes bij elke waarneming geeft het voordeel dat we uitspraken kunnen doen in termen van aantal broedgevallen door toevallige waarnemingen van een soort (bv. een overvliegend individu) uit te sluiten (broedcode nul).
-\textcolor{red}{referenties?} We beschouwen tien doelsoorten: Geelgors, Gele kwikstaart, Grasmus, Kievit, Kneu, Kwartel, Ringmus, Torenvalk, Veldleeuwerik en Witte kwikstaart.
+Het gebruik van broedcodes bij elke waarneming geeft het voordeel dat we uitspraken kunnen doen in termen van aantal broedgevallen door toevallige waarnemingen van een soort (bv. een overvliegend individu) uit te sluiten (= broedcode nul) [@roodbergen2011].
+We beschouwen tien doelsoorten: Geelgors, Gele kwikstaart, Grasmus, Kievit, Kneu, Kwartel, Ringmus, Torenvalk, Veldleeuwerik en Witte kwikstaart.
 Als we kijken naar de data van 2022-2023, zien we dat de rapportage van broedcodes sterk kan verschillen van soort tot soort (Fig. \@ref(fig:broedcodes)).
 \textcolor{red}{bespreking Johannes? bv verschil witte kwik ringmus, torenvalk, veldleeuwerik? en uitleggen dat we voor roofvogels geen rekening houden met broedcodes}
 
-```{r broedcodes, out.width = "90%", fig.cap = "Aantal tellingen per broedcode per doelsoort voor 2022-2023."}
+```{r broedcodes, out.width = "90%", fig.cap = "Aantal tellingen per broedcode per doelsoort voor 2022-2023. De linker y-as toont het aantal tellingen in De Moeren en de rechter y-as het aantal in de Oostelijke leemstreek."}
 include_graphics(file.path("media", "data_exploratie",
                            "broedcode_mas_2022_2023.pdf"))
 ```
@@ -77,14 +83,14 @@ $$
 P = \sum_{i=1}^{N} I(n_i > 0) / N
 $$
 
-Waarbij $N$ het totaal aantal telpunten is in telperiode, jaar en regio en $n_i$ het aantal individuen van de beschouwde soort waargenomen aan telpunt $i$.
+Waarbij $N$ het totaal aantal telpunten is in een bepaalde telperiode, jaar en regio en $n_i$ het aantal individuen van de beschouwde soort waargenomen aan telpunt $i$.
 $I(\cdot)$ is de indicatorfunctie die 1 geeft als $n_i > 0$ en 0 anderzijds.
 We selecteerden enkel waarnemingen met broedcode groter dan nul.
-Voor roofvogels hielden we geen rekening met broedcode, \textcolor{red}{omdat?}.
+Voor roofvogels hielden we geen rekening met broedcode, omdat we voor deze soorten meer algemeen geïnteresseerd zijn in predatiedruk op de akkervogels.
 
-Figuur \@ref(fig:relfreqs-2018-2021) toont de relatieve frequenties van de 20 meest frequente soorten tussen 2018-2021 (gemiddeld over telperiode, jaar en regio).
+Figuur \@ref(fig:relfreqs-2018-2021) toont de relatieve frequenties van de 20 meest frequente soorten tussen 2018-2021 (gemiddeld per telperiode, jaar en regio).
 Tijdens het pilootproject (2022-2023) zien we andere soorten naar voor komen en ook lagere frequenties (Fig. \@ref(fig:relfreqs-2022-2023)).
-Dit is omdat we het controlegebied hadden toegevoegd (buiten sbp) waar minder vogels voorkomen.
+Dit is omdat we het controlegebied hadden toegevoegd (buiten soorbeschermingsplan (SBP)) waar minder vogels voorkomen.
 Het is bovendien duidelijk dat bepaalde soorten algemener zijn in de ene of de andere regio.
 Als we het verschil in relatieve frequentie tussen De Moeren en de Oostelijke leemstreek nemen, zien we om welke soorten het gaat (Fign \@ref(fig:verschilfreqs-2018-2021), \@ref(fig:verschilfreqs-2022-2023)).
 \textcolor{red}{Typische soorten van open landschap, water en rietkragen werden meer gezien in De Moeren zoals Kievit, Bruine kiekendief, Rietzanger, Wilde eend Kleine karrekiet enzovoort. In de Oostelijke leemstreek zien we dan weer soorten van meer halfopen landschap en kleine landschapselementen zoals Veldleeuwerik, Geelgors, Vink enzovoort.} Ook binnen specifieke strata is er voor sommige soorten een groot verschil in frequentie (Fig. \@ref(fig:relfreqs-strata)).
@@ -110,7 +116,7 @@ include_graphics(file.path("media", "data_exploratie",
                            "verschilfreq_total_mas_2022_2023.pdf"))
 ```
 
-```{r relfreqs-strata, out.width = "100%", fig.cap = "Relatieve frequentie van de doelsoorten in verschillende strata van 2022-2023. Elke punt is een relatieve frequentie in een bepaalde telperiode, stratum en regio."}
+```{r relfreqs-strata, out.width = "100%", fig.cap = "Relatieve frequentie van de doelsoorten in verschillende strata van 2022-2023. HOL: halfopen landschap, OL: open landschap, binnen: binnen soortbeschermingsplan (SBP), buiten: buiten SBP. Elke punt is een relatieve frequentie in een bepaalde telperiode, stratum en regio."}
 include_graphics(file.path("media", "data_exploratie",
                            "soortenfreqs_doel_per_strat.pdf"))
 ```
@@ -134,7 +140,7 @@ include_graphics(file.path("media", "data_exploratie",
                            "aantallen_haas.pdf"))
 ```
 
-```{r relfreqs-haas, out.width = "100%", fig.cap = "Relatieve frequentie van de Haas in verschillende strata van 2022-2023."}
+```{r relfreqs-haas, out.width = "100%", fig.cap = "Relatieve frequentie van de Haas in verschillende strata van 2022-2023. HOL: halfopen landschap, OL: open landschap, binnen: binnen soortbeschermingsplan (SBP), buiten: buiten SBP."}
 include_graphics(file.path("media", "data_exploratie",
                            "soortenfreqs_haas_per_strat.pdf"))
 ```
@@ -144,7 +150,7 @@ include_graphics(file.path("media", "data_exploratie",
 ### Inleiding
 
 Tellingen worden verricht door zowel vrijwilligers als professionele tellers.
-In 2022 werden elf telpunten in De Moeren zowel door vrijwilligers als door een professionele teller in dezelfde telperiodes geteld.
+In 2022 werden elf telpunten in De Moeren zowel door vrijwilligers ($n = 7$) als door een professionele teller ($n = 1$) in dezelfde telperiodes geteld.
 Met deze opzet wilden we achterhalen of tellingen van vrijwilligers en een professionele teller gelijkaardige resultaten opleveren.
 We waren vooral geïnteresseerd in waarnemingen met broedcode groter dan nul, omdat waarnemingen met broedcode 0 meer op toeval berust zijn (trekkers/pleisteraars of roofvogels).
 
@@ -152,12 +158,12 @@ We waren vooral geïnteresseerd in waarnemingen met broedcode groter dan nul, om
 
 In totaal werden tien telpunten in vier telperiodes en één telpunt in drie telperiodes geteld door zowel een vrijwilliger als een professionele teller.
 We beschikten dus over `r 10 * 4 + 3` gepaarde datapunten.
-De telpunten werden geteld door zeven verschillende vrijwilligers die geclassificeerd konden worden als "beginner" en "ervaren".
+De telpunten werden geteld door zeven verschillende vrijwilligers die verder geclassificeerd konden worden als "beginner" en "ervaren".
 
 We wilden achterhalen of tellingen van vrijwilligers en een professionele teller gelijkaardige resultaten opleveren.
-Dit deden we door het aantal soorten en aantal waarnemingen te vergelijken tussen beide.
+Dit deden we door het aantal soorten en aantal waarnemingen van vogels te vergelijken tussen beide.
 Verder keken we ook naar het effect van broedcode en ervaring van de vrijwilligers.
-Analyses werden gedaan via Bayesiaanse generalized linear mixed models (GLMM's) met de **brms** package v2.19.0 [@bürkner2017; @bürkner2018; @bürkner2021] met standaard priors.
+Analyses werden gedaan via Bayesiaanse *generalized linear mixed models* (*GLMMs*) met de **brms** package [@bürkner2017; @bürkner2018; @bürkner2021] met standaard (niet-informatieve) a-prioriverdelingen.
 We vergeleken telkens drie verschillende responsdistributies (en link functies $g()$).
 
 -   Normaal verdeling (identity link)
@@ -170,17 +176,20 @@ We stelden de volgende onderzoeksvragen en bijbehorende modellen op:
 
 Is er een verschil in het aantal soorten/waarnemingen met broedcode groter dan nul gezien door de professionele teller vs. de vrijwilligers?
 
-Beschouw $Y_{ijk}$ een observatie $i$ van een aantal soorten/waarnemingen in plot $j$ en telperiode $k$.
+Beschouw $Y_{ijk}$ een observatie $i$ van een aantal soorten/waarnemingen van telpunt $j$ in telperiode $k$.
 Deze observaties zijn door zowel een professionele teller $X_{status} = 0$ als een vrijwillige teller $X_{status} = 1$ gedaan.
-We voegen een random effect toe van telperiode genest in plot $b_{1}$.
-Bovendien kunnen aantallen van eenzelfde plot meer op elkaar lijken dan aantallen dan aantallen van verschillende telpunten.
-We voegen ook een random effect toe van plot $b_{2}$.
+Aantallen van eenzelfde telpunt kunnen meer op elkaar lijken dan aantallen van verschillende telpunten.
+We voegen daarom ook een random effect toe van telpunt ($b_{0,j}$) en een random effect van telperiode genest in telpunt ($b_{0,j:k}$).
+
+<!-- spell-check: ignore:start -->
 
 $$
-g(\text{E}(Y_{ijk})) = \beta_0 + \beta_{1}X_{status, i} + b_{1,jk} + b_{2,k}
+g(\text{E}(Y_{ijk})) = \beta_0 + \beta_{1}X_{status, i} + b_{0,j} + b_{0,j:k}
 $$
 
-We besluiten dat er een significant verschil is als het 95 % credible interval (CI) van $\beta_1$ nul niet bevat.
+<!-- spell-check: ignore:end -->
+
+We besluiten dat er een significant verschil is als het 95 % geloofwaardigheidsinterval (GI) van $\beta_1$ nul niet bevat.
 
 **Effect van broedcode**
 
@@ -188,11 +197,15 @@ Kan een verschil in aantal soorten of aantal waarnemingen tussen professionele e
 
 We voegden de data met broedcode nul toe en maakten een extra dummyvariabele aan die een onderscheid maakt tussen data met broedcode nul $X_{broedcode} = 0$ en data met broedcode groter dan nul.
 
+<!-- spell-check: ignore:start -->
+
 $$
-g(\text{E}(Y_{ijk})) = \beta_0 + \beta_{1}X_{status, i} + \beta_{2}X_{broedcode, i} + \beta_{3}X_{status, i} \times X_{broedcode, i}+ b_{1,jk} + b_{2,k}
+g(\text{E}(Y_{ijk})) = \beta_0 + \beta_{1}X_{status, i} + \beta_{2}X_{broedcode, i} + \beta_{3}X_{status, i} \times X_{broedcode, i} + b_{0,j} + b_{0,j:k}
 $$
 
-We besluiten dat er een significant verschillend effect van broedcode is als het 95 % credible interval van $\beta_3$ nul niet bevat.
+<!-- spell-check: ignore:end -->
+
+We besluiten dat er een significant verschillend effect van broedcode is als het 95 % GI van $\beta_3$ nul niet bevat.
 
 **Effect van ervaring**
 
@@ -200,53 +213,61 @@ Is er een verschil in het aantal soorten of aantal waarnemingen met broedcode gr
 
 De professionele teller is ervaren, maar bij de vrijwilligers hebben we twee ervaringscategorieën: "beginner" ($X_{ervaring} = 0$) en "ervaren" ($X_{ervaring} = 1$).
 
+<!-- spell-check: ignore:start -->
+
 $$
-g(\text{E}(Y_{ijk})) = \beta_0 + \beta_{1}X_{status, i} + \beta_{2}X_{ervaring, i} + \beta_{3}X_{status, i} \times X_{ervaring, i} + b_{1,jk} + b_{2,k}
+g(\text{E}(Y_{ijk})) = \beta_0 + \beta_{1}X_{status, i} + \beta_{2}X_{ervaring, i} + \beta_{3}X_{status, i} \times X_{ervaring, i} + b_{0,j} + b_{0,j:k}
 $$
 
-We besluiten dat er een significant verschillend effect van broedcode is als het 95 % credible interval van $\beta_3$ nul niet bevat.
+<!-- spell-check: ignore:end -->
+
+We besluiten dat er een significant verschillend effect van broedcode is als het 95 % GI van $\beta_3$ nul niet bevat.
 
 **Correlatie tussen aantal soorten en aantal waarnemingen**
 
 Ten slotte onderzochten we het verband tussen het aantal soorten en het aantal waarnemingen met broedcode groter dan nul.
 Is er een verschil in de mate waarin aantal soorten toe- of afneemt met het aantal waarnemingen voor professionele teller in vergelijking met vrijwilligers?
 
-Beschouw $Y_{ij}$ een observatie $i$ van een aantal soorten in plot $j$ en $X_{wnm}$ een variabele van het aantal waarnemingen.
+Beschouw $Y_{ij}$ een observatie $i$ van een aantal soorten in telpunt $j$ en $X_{wnm}$ een variabele van het aantal waarnemingen.
 We fitten een model waarbij de intercepten voor zowel de professionele teller ($\beta_0$) als de vrijwilligers ($\beta_0 + \beta_2$) gelijk zijn aan nul (nul soorten bij nul waarnemingen).
 We hebben dus enkel een slope voor de professionele teller ($\beta_1$) en een slope voor de vrijwilligers ($\beta_1 + \beta_3$).
-We voegden random slopes toe per plot $j$ voor professionelen ($b_1$) en vrijwilligers ($b_1 + b_2$).
+We voegden random slopes toe per telpunt $j$ voor professionelen ($b_1$) en vrijwilligers ($b_1 + b_2$).
+
+<!-- spell-check: ignore:start -->
 
 $$
-\text{E}(Y_{ij}) = \beta_{1}\ln{(X_{wnm, i})} + \beta_{2}\ln{(X_{wnm, i})}\times X_{status, i}  + b_{1,j}\ln{(X_{wnm, i})} + b_{2,j}\ln{(X_{wnm, i})}\times X_{status, i}
+\text{E}(Y_{ij}) = \beta_{1}\ln{(X_{wnm, i})} + \beta_{3}\ln{(X_{wnm, i})}\times X_{status, i}  + b_{1,j}\ln{(X_{wnm, i})} + b_{2,j}\ln{(X_{wnm, i})}\times X_{status, i}
 $$
 
-We besluiten dat er een significant verschil is als het 95 % credible interval van $\beta_2$ nul niet bevat.
+<!-- spell-check: ignore:end -->
 
-We bemonsterden de posterior verdelingen voor de modellen met drie Markov Chain Monte Carlo (MCMC) chains, die elk 4000 iteraties draaiden, waarvan de eerste 2000 werden verwijderd als burn-in.
-We onderzochten MCMC-convergentie door visuele beoordeling van trace plots en posterior densiteiten.
-We onderzochten ook de 'potential scale reduction factors' [@gelman1992] voor elke scalaire parameter in het model zoals voorgesteld door [@gelman2013].
+We besluiten dat er een significant verschil is als het 95 % GI van $\beta_3$ nul niet bevat.
+
+We bemonsterden de a-posterioriverdelingen voor de parameters in de modellen met drie *Markov chain Monte Carlo* (*MCMC*) ketens, die elk 4000 iteraties draaiden, waarvan de eerste 2000 werden verwijderd als *burn-in*.
+We onderzochten *MCMC*-convergentie door visuele beoordeling van traceplots en posterior densiteiten.
+We onderzochten ook de *potential scale reduction factors* [@gelman1992] voor elke scalaire parameter in het model zoals voorgesteld door [@gelman2013].
 Ze lagen allemaal dicht bij 1, zoals vereist.
 
-Via leave-one-out cross-validation (CV) werd de 'expected log pointwise predictive density' (ELPD) berekend en vergeleken tussen verschillende modellen: (1) welke responsdistributie het best paste bij de data en (2) of het random effect van plot $b_{2}$ noodzakelijk was of niet (niet gedaan bij correlatie model).
+Via *leave-one-out cross-validation* werd de *expected log pointwise predictive density* (*ELPD*) berekend en vergeleken tussen verschillende modellen: (1) welke responsdistributie het best paste bij de data en (2) of het random effect van telpunt $b_{0,j}$ noodzakelijk was of niet (n.v.t. bij het correlatiemodel).
 
-De model fit werd bevestigd op basis van 'posterior predictive checks' waarbij we de geobserveerde uitkomst vergeleken met gesimuleerde datasets van de 'posterior predictive distribution'.
+De model fit werd bevestigd op basis van *posterior predictive checks* waarbij we de geobserveerde uitkomst vergeleken met gesimuleerde datasets van de *posterior predictive distribution*.
 
 ### Resultaten en discussie {#dubbeltellingen-resultaten}
 
 Onze primaire interesse ging uit naar een verschil tussen professionele teller en vrijwilligers voor soorten met broedcode groter dan nul.
-We zagen dat vrijwilligers een significant minder aantal waarnemingen (95 % CI: -5,94 tot -3,04) en soorten (95 % CI: -4,22 tot -2.20) meldden dan de professionele teller (Fig. \@ref(fig:dubbeltellingen-aantallen)).
-Verdere exploratie maakte duidelijk dat dit verschil in aantal soorten gelijkaardig is voor broedcode nul en broedcode groter dan nul (95 % CI: -0,21 tot 0,25).
+We zagen dat vrijwilligers een significant minder aantal waarnemingen (95 % GI: -5,94 tot -3,04) en soorten (95 % GI: -4,22 tot -2.20) meldden dan de professionele teller (Fig. \@ref(fig:dubbeltellingen-aantallen)).
+Verdere exploratie maakte duidelijk dat dit verschil in aantal soorten gelijkaardig is voor broedcode nul en broedcode groter dan nul (95 % GI: -0,21 tot 0,25).
 Model fit was niet ideaal en in werkelijkheid verwachten we zelfs dat het verschil in aantal soorten met broedcode 0 nog lager ligt voor vrijwilligers in vergelijking met het verschil bij broedcode groter dan 0 omdat het aantal nultellingen door het model onderschat werd.
 We hebben dus zeker geen bewijs dat er compensatie zou zijn bij de vrijwilligers waarbij ze wel meer soorten zouden noteren met broedcode nul, maar minder met broedcode groter dan nul.
-Voor aantal waarnemingen konden we hetzelfde besluiten (95 % CI: -0,2 tot 0,24).
+Voor aantal waarnemingen konden we hetzelfde besluiten (95 % GI: -0,2 tot 0,24).
 
-```{r dubbeltellingen-aantallen, out.width = "90%", fig.cap = "Verschil in aantal soorten en waarnemingen van vogels met broedcode groter dan nul tussen vrijwilligers en professionele tellers met aanduiding van posterior gemiddelde en 95  \\% credible interval."}
+```{r dubbeltellingen-aantallen, out.width = "90%", fig.cap = "Verschil in aantal soorten en waarnemingen van vogels met broedcode groter dan nul tussen vrijwilligers en professionele tellers met aanduiding van het posterior gemiddelde en 95 \\% geloofwaardigheidsinterval."}
 include_graphics(file.path("media", "dubbeltellingen",
                            "vergelijk_aantallen.pdf"))
 ```
 
-Ook vonden we dat er geen significant verschil was in aantal soorten (data broedcode \> 0) tussen beginnende en ervaren vrijwilligers (95 % CI: -1,86 tot 1,13).
-Voor aantal waarnemingen konden we hetzelfde besluiten (95 % CI: -1,09 tot 3,73).
+Ook vonden we dat er geen significant verschil was in aantal soorten (data broedcode \> 0) tussen beginnende en ervaren vrijwilligers (95 % GI: -1,86 tot 1,13).
+Voor aantal waarnemingen konden we hetzelfde besluiten (95 % GI: -1,09 tot 3,73).
 
 We moeten opmerken dat deze resultaten gebaseerd zijn op modellen die niet altijd een goede weerspiegeling waren van de data.
 De responsdata waren aantallen en dus positief en discreet van aard.
@@ -255,17 +276,17 @@ Dit gaf eenvoudig interpreteerbare resultaten en was ook vaak niet problematisch
 In verschillende gevallen werden de resultaten van de Poisson en Negatief binomiaal modellen vergeleken met het Normaal model.
 Na omrekenen gaven deze modellen gelijkaardige resultaten.
 Bovendien waren we telkens geïnteresseerd in specifieke hypotheses.
-Hoewel precieze credible intervals van de verschillende modellen wel verschilden, gaven ze wel een eenduidig antwoord op onze vragen.
-Deze waren ook telkens in lijn met de data exploratie.
+Hoewel precieze geloofwaardigheidsintervallen van de verschillende modellen wel verschilden, gaven ze telkens een eenduidig antwoord op onze vragen.
+Deze waren ook steeds in lijn met de data exploratie.
 
 Ten slotte kozen we het aantal soorten en het aantal waarnemingen als maten om te achterhalen of tellingen van vrijwilligers en de professionele teller gelijkaardige resultaten opleverden.
 Dit zijn geen onafhankelijke maten.
 Zoals verwacht toonden we aan dat deze log-lineair verwant zijn aan elkaar.
 Hoe meer waarnemingen, hoe meer soorten.
 Naarmate het aantal waarnemingen een bepaalde grootte overschrijdt, vlakt het aantal soorten af.
-Ook hier zagen we een verschil tussen professionele en vrijwillige tellers met over de totale range van aantal waarnemingen een lager aantal soorten gezien door vrijwillige tellers (95 % CI: -1,2 tot -0,28) (Fig. \@ref(fig:dubbeltellingen-correlatie)).
+Ook hier zagen we een verschil tussen professionele en vrijwillige tellers met over de totale range van aantal waarnemingen een lager aantal soorten gezien door vrijwillige tellers (95 % GI: -1,2 tot -0,28) (Fig. \@ref(fig:dubbeltellingen-correlatie)).
 
-```{r dubbeltellingen-correlatie, out.width = "90%", fig.cap = "Verband tussen het aantal soorten en aantal waarnemingen van vogels met broedcode groter dan nul (posterior gemiddelde en 95  \\% credible interval)."}
+```{r dubbeltellingen-correlatie, out.width = "90%", fig.cap = "Verband tussen het aantal soorten en aantal waarnemingen van vogels met broedcode groter dan nul (posterior gemiddelde en 95 \\% geloofwaardigheidsinterval)."}
 include_graphics(file.path("media", "dubbeltellingen",
                            "correlatie_aantallen.pdf"))
 ```
@@ -274,16 +295,16 @@ We kunnen concluderen dat het effect van teller status belangrijk kan zijn het v
 
 ## Berekening verklarende variabelen {#verklarende-variabelen}
 
-Binnen deze studie hebben we verschillende verklarende variabelen verzameld mogelijk die van belang zijn voor akkervogels.
+Binnen deze studie hebben we verschillende verklarende variabelen verzameld die potentieel van belang zijn voor akkervogels.
 We onderscheiden primaire, secundaire en tertiare variabelen.
 Primaire variabelen zijn variabelen die binnen het kader van de pilootstudie de hoogste interesse hebben om te weten wat het effect is op het aantal of de aanwezigheid van bepaalde akkervogels.
-Deze variabelen zijn sterk gelinkt aan het beleid.
+Deze variabelen zijn sterk gelinkt aan beleid.
 Secundaire variabelen zijn variabelen die mogelijk ook belangrijk zijn voor akkervogels, maar die vooral nodig zijn om modellen vollediger te maken.
 Ze zijn minder de focus van bepaalde, specifieke onderzoeksvragen.
 Deze variabelen zijn sterk gelinkt aan het voorkomen van soorten.
 Tertaire variabelen zijn structurele variabelen die eerder dienen om te corrigeren voor het monitoringsprotocol in tijd en ruimte bijvoorbeeld via random effects in mixed models.
 Deze variabelen zijn sterk gelinkt aan het studiedesign.
-Een overzicht wordt gegeven in Tabel \@ref(tab:verklarende-vars-tab) \textcolor{red}{en referenties naar de gebruikte kaartlagen in Bijlage x.}
+Een overzicht wordt gegeven in Tabel \@ref(tab:verklarende-vars-tab).
 
 ### Primaire variabelen {#prim-verklarende-variabelen}
 
@@ -299,9 +320,9 @@ Dit is dezelfde kaartlaag als bij de soortbeschermingsmaatregelen maar een ander
 206 aparte hoofdteelten werden gegroepeerd in 20 gewasgroepen (Tabel \@ref(tab:hftlt-groepen)).
 Het aandeel oppervlakte van elke gewasgroep binnen de telcirkels werd berekend per jaar.
 We verwijderden de polygonen die tot de beheerovereenkomstenlaag (zie hierboven) behoren.
-Indien twee polygonen met verschillende teelten overlapten in de kaarlaag, telde die oppervlakte voor elke teelt maar voor 50 % mee.
-De kaartlaag van de landbouwgebruikspercelen is vrij verkrijgbaar via het Departement Landbouw en Visserij (Dept. LV).
-De gebruikte kaart voor 2023 was nog niet definitief (extractie 26-06-2023).
+Indien twee polygonen met verschillende teelten overlapten in de kaartlaag, telde die oppervlakte voor elke teelt maar voor 50 % mee.
+De kaartlaag van de landbouwgebruikspercelen is vrij verkrijgbaar via @landbouwgebruikspercelen.
+De gebruikte kaart voor 2023 was nog niet definitief (extractie 26-06-2023: dit is de voorlopige toestand van de percelen op die datum).
 
 **4. Oppervlakte-aandeel hoofdteelten jaar ervoor**\
 Zelfde als het vorige puntje, maar dan telkens de proportie hoofdteelten die het jaar ervoor aanwezig waren volgens de landbouwgebruikspercelenkaart.
@@ -344,7 +365,7 @@ Het aantal verschillende hoofdteelten (gewasgroepen) binnen een telcirkel.
 
 **7. Eveness aan hoofdteelten**\
 We delen het effectief aantal hoofdteelten (als alle proporties gelijk zouden zijn) door het absoluut aantal hoofdteelten.
-Deze maat is 1 als alle hoofteelten binnen de telcirkel in eenzelfde proportie voorkomen.
+Deze maat is 1 als alle hoofdteelten binnen de telcirkel in eenzelfde proportie voorkomen.
 
 **8. Oppervlakte-aandeel voorteelten**\
 46 aparte voorteelten werden gegroepeerd in 13 gewasgroepen (Tabel \@ref(tab:vrtlt-groepen)).
@@ -378,28 +399,29 @@ vrtlt_groepen %>%
 **1. Regio**\
 De regio's van het pilootmeetnet (De Moeren en Oostelijke leemstreek).
 
-**2. Openheid landschap 1000 m**\
-\textcolor{red}{uitleg al in hoofdstuk 4??, maar dan voor 300 m en categorisch}
+**2. Openheid landschap**\
+In Sectie \@ref(piloot-stratificatie) werd reeds uitgelegd hoe per telpunt de openheid van het landschap werd berekend op schaal van 300 m.
+Daarna werd deze continue variabele opgedeeld in verschillende klassen (OL: open landschap, HOL: halfopen landschap).
 
-\textcolor{red}{continu 1000 m ...}
+Naast deze categorische variabele berekenden we ook de openheid van het landschap als continue variabele op een schaal van 1000 m.
+Deze schaal zou meer relevant zijn voor akkervogels \textcolor{red}{(REF)} en een continue variabele bevat meer informatie voor gedetailleerdere statistische analyses en het identificeren van subtiele patronen in de data.
 
 **3. Soortbeschermingsplan**\
-\textcolor{red}{uitleg al in hoofdstuk 4??}
-
-\textcolor{red}{Zowel binnen kerngebied als zoekzones zijn er soortbeschermende maatregelen (SB BO’s) gelegd (zie kaart VLM BO’s). In theorie waren deze maatregelen vooral bedoeld voor kerngebied, en zal daar een hogere dichtheid (bedekkingsgraad) liggen, maar de VLM heeft het toegelaten om ook in zoekzones deze maatregelen te sluiten (al was dat minder de prioriteit). Daar werd bv. in de Moeren geen rekening mee gehouden, en werden erg veel SB BO’s gelegd, ook omdat dit gebied wél kerngebied was van plan kiekendief (SBP Grauwe Kiekendief) waardoor er wel veel BO’s gesloten zijn. In de toekomst heeft VLM beloofd om meer/enkel rekening te houden met kerngebied. Voor het pilootmeetnet namen we de kerngebieden samen als onderzoeksgebied (binnen sbp) en alles hierbuiten beschouwen we als controle (buiten sbp).}
+Categorische variabele binnen of buiten soortbeschermingsplan akkervogels (SBP).
+\textcolor{red}{Zowel binnen kerngebied als zoekzones zijn er soortbeschermende maatregelen (SB BO’s) gelegd (zie kaart VLM BO’s). In theorie waren deze maatregelen vooral bedoeld voor kerngebied, en zal daar een hogere dichtheid (bedekkingsgraad) liggen, maar de VLM heeft het toegelaten om ook in zoekzones deze maatregelen te sluiten (al was dat minder de prioriteit). Daar werd bv. in de Moeren geen rekening mee gehouden, en werden erg veel SB BO’s gelegd, ook omdat dit gebied wél kerngebied was van plan kiekendief (SBP Grauwe Kiekendief) waardoor er wel veel BO’s gesloten zijn. In de toekomst wil men meer rekening houden met kerngebied. Voor het pilootmeetnet namen we de kerngebieden samen als onderzoeksgebied (binnen sbp) en alles hierbuiten beschouwen we als controle (buiten sbp).}
 
 **4. Status teller**\
 Analyses van telpunten die zowel door vrijwilligers als professionele teller zijn geteld, gaven duidelijk aan dat vrijwilligers een significant lager aantal waarnemingen en soorten zien dan een professionele teller (Sectie \@ref(dubbeltellingen)).
 Voor elk telpunt hebben we dus ook nagegaan of er geteld is door een professionele teller of een vrijwilliger.
 
 **5. Oppervlakte-aandeel kleine landschapselementen**\
-Het aandeel oppervlakte van elke subklasse kleine landschapselementen binnen de telcirkels werd berekend via landschapselementen op of aangrenzend aan landbouwgebruikspercelen in Vlaanderen (onderzoek 2017 op basis van gegevens 2015, Dept. LV).
-De kaartlaag is vrij verkrijgbaar.
+Het aandeel oppervlakte van elke subklasse kleine landschapselementen binnen de telcirkels werd berekend via landschapselementen op of aangrenzend aan landbouwgebruikspercelen in Vlaanderen (onderzoek 2017 op basis van gegevens 2015).
+De kaartlaag is vrij verkrijgbaar via @landschapselementen.
 De verschillende subklasses zijn: (1) bomengroep, (2) bomenrij, (3) boom, (4) bosrand, (5) haag, (6) houtkant.
 
-**6. Perceelsgrootte (mediaan, IQR en CV)**\
-Mediaan, interkwartielafstand (IQR) en variatiecoëfficiënt (CV) van groottes van percelen die overlappen met telcirkels (Fig. \@ref(fig:perceelsgrootte-methode)).
-De CV is de IQR gedeeld door de mediaan.
+**6. Perceelsgrootte (mediaan, IQR en robuuste CV)**\
+Mediaan, interkwartielafstand (IQR) en robuuste variatiecoëfficiënt (CV) van groottes van percelen die overlappen met telcirkels (Fig. \@ref(fig:perceelsgrootte-methode)).
+De robuuste CV is de IQR gedeeld door de mediaan.
 Een perceel is de combinatie van aaneenliggende landbouwgebruikspercelen met dezelfde hoofdteelt.
 We gebruikten hiervoor dus opnieuw de kaartlaag van landbouwgebruikspercelen.
 
@@ -412,7 +434,7 @@ include_graphics(file.path("media", "verklarende_variabelen",
 Gewogen gemiddelde van jaar sinds implementatie soortbeschermingsmaatregelen per telcirkel.
 
 -   Geen beheerovereenkomst: 0
--   Wel beheerovereekomst: Gewogen (oppervlakte beheerovereenkomst) gemiddelde van
+-   Wel beheerovereenkomst: Gewogen (oppervlakte beheerovereenkomst) gemiddelde van
     -   1: start beheerovereenkomst in zelfde jaar als telling
     -   2: start beheerovereenkomst 1 jaar vóór telling
     -   3: start beheerovereenkomst 2 jaar vóór telling
@@ -434,7 +456,11 @@ Deze variabelen worden dus berekend op basis van de data van de tellingen zelf.
 We berekenden een maat voor de oppervlakte van nabije natuurgebieden waarbij we gebieden dichtbij meer gewicht geven dan gebieden veraf, en grotere gebieden meer gewicht geven dan kleine binnen een straal van 3 km [@moilanen2002].
 
 We selecteerden hiervoor alle natuurgebieden in Vlaanderen, Nederland, Frankrijk en Wallonië binnen een buffer van 20 km rond de perimeters van het pilootproject (Fig. \@ref(fig:natuurgebieden-perimeters)).
-\textcolor{red}{tabel met kaartlagen toevoegen} We splitsten alle gebieden op in aparte polygonen en berekenden de oppervlakte van elke polygoon en het middelpunt.
+Voor Vlaanderen gebruikten we de kaart van natuurbeheerplannen met exclusie van natuurbeheerplannen type I en beperkte bosbeheerplannen [@natuurbeheerplannen].
+Voor Nederland gebruikten we de kaart van Natuurnetwerk Nederland [@natuurnetwerk].
+Voor Frankrijk gebruikten we de kaart voor "Zones Naturelles d’Intérêt Ecologique Faunistique et Floristique de type 1" [@ZNIEFF1].
+Voor Wallonië gebruikten we de kaart van "Réseau Natura 2000 en vigueur" [@reseau-natura] en Conservation de la nature met exclusie van "parcs naturels" en RAMSAR perimeters [@consnat].
+We splitsten alle gebieden op in aparte polygonen en berekenden de oppervlakte van elke polygoon en het middelpunt.
 
 ```{r natuurgebieden-perimeters, out.width = "100%", fig.cap = "Selectie van natuurgebieden in Vlaanderen, Nederland, Frankrijk en Wallonië binnen een buffer van 20 km rond de perimeters van het pilootproject."}
 include_graphics(file.path("media", "verklarende_variabelen",
@@ -455,15 +481,23 @@ We beschouwden twee verschillende vervalfuncties (Fig. \@ref(fig:vervalfunctie))
 
 1.  Logistische vervalfunctie
 
+<!-- spell-check: ignore:start -->
+
 $$
 f(x) = \frac{1}{1 + \exp(b(x-m))}
 $$
 
+<!-- spell-check: ignore:end -->
+
 2.  Exponentiële vervalfunctie
+
+<!-- spell-check: ignore:start -->
 
 $$
 f(x) = \frac{1}{1 + bx^m}
 $$
+
+<!-- spell-check: ignore:end -->
 
 ```{r vervalfunctie, out.width = "90%", fig.cap = "Voorbeeld van een logistische en exponentiële vervalfunctie over 3 km."}
 include_graphics(file.path("media", "verklarende_variabelen",
@@ -509,9 +543,9 @@ We behielden voor de bivariate exploratie enkel de proportie afwezige voorteelt.
 
 ### Bivariate exploratie
 
-Zowel de Pearsons als Spearman correlatiematrices toonden gelijkaardige patronen (Fig. \@ref(fig:corrmat1)).
+Zowel de Pearson als Spearman correlatiematrices toonden gelijkaardige patronen (Fig. \@ref(fig:corrmat1)).
 De Spearman correlatie gaf gelijkaardige resultaten, maar alle correlaties waren sterker.
-De Pearson correlatie tussen twee variabelen zal hoog zijn wanneer waarnemingen een positief lineair verband vertonen en laag wanneer ze een positief lineair verband vertonen.
+De Pearson correlatie tussen twee variabelen is een waarde tussen -1 en +1. Een correlatie rond 0 duidt op lineaire onafhankelijkheid. Een sterk positieve correlatie zien we wanneer variabelen een sterk positief lineair verband vertonen en een sterk negatieve correlatie zien we wanneer ze een sterk negatief lineair verband vertonen.
 De Spearman correlatie tussen twee variabelen zal hoog zijn wanneer waarnemingen een vergelijkbare (of identieke) rangorde hebben tussen de twee variabelen, en laag wanneer waarnemingen een ongelijke (of volledig tegengestelde) rangorde hebben tussen de twee variabelen.
 
 De openheidsvariabele was negatief gecorreleerd met de variabelen van de kleine landschapselementen.
@@ -522,12 +556,12 @@ Dan zal het landschap inderdaad meer open zijn.
 We zagen wel dat de verbanden niet altijd lineair zijn.
 
 De mediaan en interkwartielafstand van perceelsgroottes waren sterk gecorreleerd.
-Ook de gewasdiversiteit (Shannon en absolute aantal gewassen) waren op dezelfde laag van de perceelsgroottes gebasseerd en we zien een sterke negatieve correlatie, maar niet met de variatiecoëfficient.
+Ook de gewasdiversiteit (Shannon en absolute aantal gewassen) waren op dezelfde laag van de perceelsgroottes gebaseerd en we zien een sterke negatieve correlatie, maar niet met de variatiecoëfficiënt.
 De eveness maat is ook gecorreleerd met de gewasdiversiteitmaten.
 Alle uitspraken voor `..hfdtlt` gelden ook voor `..hfdtlt_pre` (hoofdteelt jaar ervoor).
 Hun overeenkomstige correlaties zijn hier niet van belang.
 Proportie hagen en meerjarige fruitteelt waren vrij sterk positief gecorreleerd.
-Verder zagen we nog dat er minder hagen, houkanten en bomen zijn als de gewaseveness toeneemt, als er meer afwezigheid is aan voorteelten en als percelen gemiddeld groter zijn.
+Verder zagen we nog dat er minder hagen, houtkanten en bomen zijn als de gewaseveness toeneemt, als er meer afwezigheid is aan voorteelten en als percelen gemiddeld groter zijn.
 Hagen, houtkanten en bomen waren onderling positief gecorreleerd.
 Aantal predatorsoorten en individuen waren ook positief gecorreleerd.
 
@@ -546,12 +580,12 @@ Alle uitspraken voor `..hfdtlt` gelden ook voor `..hfdtlt_pre`:
 De nieuwe Pearson correlatiematrix is gevisualiseerd in Figuur \@ref(fig:corrmat2).
 Een PCA toonde gelijkaardige resultaten.
 
-```{r corrmat1, out.width = "100%", fig.cap = "Pearson correlatiematrix tussen continue variabelen die overbleven na univariate data exploratie. We visualiseren enkel correlaties sterker of gelijk aan 0,2."}
+```{r corrmat1, out.width = "100%", fig.cap = "Pearson correlatiematrix tussen continue variabelen die overbleven na univariate data exploratie. We visualiseren enkel correlaties sterker of gelijk aan 0,2 in absolute waarde."}
 include_graphics(file.path("media", "verklarende_variabelen",
                            "corrmat1.pdf"))
 ```
 
-```{r corrmat2, out.width = "100%", fig.cap = "Pearson correlatiematrix tussen continue variabelen die overbleven na univariate en bivariate data exploratie. We visualiseren enkel correlaties sterker of gelijk aan 0,2."}
+```{r corrmat2, out.width = "100%", fig.cap = "Pearson correlatiematrix tussen continue variabelen die overbleven na univariate en bivariate data exploratie. We visualiseren enkel correlaties sterker of gelijk aan 0,2 in absolute waarde."}
 include_graphics(file.path("media", "verklarende_variabelen",
                            "corrmat2.pdf"))
 ```
@@ -561,7 +595,9 @@ We zien een groter aandeel soortbeschermingsplannen binnen sbp dan buiten sbp (F
 Ook zien we een verschillende trend over de jaren.
 Om deze beter te begrijpen, bekeken we de oppervlakte aan soortbeschermingsplannen binnen de volledige perimeter van de pilootstudie over de jaren (Fig. \@ref(fig:total-propsb)).
 We zien voor elk stratum een duidelijke toename tot 2022 en dan een lichte afname naar 2023.
-\textcolor{red}{wat houdt dit in voor de statistische analyses?}
+Dit houdt in dat we de correlatie tussen het aantal/de aanwezigheid van bepaalde akkervogels en soortbeschermingsmaatregelen zowel via de categorische variabele `sbp` (binnen of buiten SBP) als via de continue variabele `area_prop_sb` (oppervlakte soortbeschermingsmaatregelen) kunnen nagaan.
+Resultaten o.b.v. de eerste variable zullen eenvoudiger te interpreteren zijn, terwijl de tweede variabele meer informatie kan bevatten.
+Dat neemt niet weg dat de tweede variabele kan gecategoriseerd worden indien gewenst.
 
 ```{r sbp-areapropsb, out.width = "90%", fig.cap = "Relatie tussen oppervlakte-aandeel soortbeschermingsmaatregelen en binnen of buiten sbp per regio per jaar. Elk lijntje is een telpunt."}
 include_graphics(file.path("media", "data_exploratie",
@@ -578,13 +614,15 @@ summary_var_tab <- read_delim(file.path("media", "verklarende_variabelen",
                                         "verklarende_variabelen_tabel.csv"),
                               show_col_types = FALSE)
 
-summary_var_tab %>%
+summary_var_tab_clean <- summary_var_tab %>%
   arrange(id) %>%
   select(categorie, variabele, naam, eenheid, selectie) %>%
   mutate(variabele = gsub("oppervlakte-aandeel", "oppervlakte", variabele),
          variabele = gsub("hoofdteelt", "oppervlakte hoofdteelt", variabele),
          variabele = gsub("voorteelt", "oppervlakte voorteelt", variabele)) %>%
-  mutate(selectie = ifelse(selectie == "ja", "X", "")) %>%
+  mutate(selectie = ifelse(selectie == "ja", "X", ""))
+
+summary_var_tab_clean %>%
   kable(caption = paste("Samenvattende tabel van alle verklarende variabelen",
                         "beschouwd in de pilootstudie. De kolom `selectie'",
                         "geeft aan of de variabele door de selectie is geraakt",
@@ -598,59 +636,63 @@ summary_var_tab %>%
 
 ## Case studie: de Veldleeuwerik {#veldleeuwerik}
 
-\textcolor{red}{waarom veldleeuwerik ... De resultaten van andere soorten zullen in een ander rapport worden beschreven.}
+In dit rapport presenteren we een case studie van de analyses en resultaten met betrekking tot de Veldleeuwerik.
+Het voornaamste doel is om een overzicht te geven van de mogelijke analyses die we kunnen doen op de MAS-data.
+De Veldleeuwerik is een handige testsoort, omdat veel data voorhanden is waardoor verschillende methodieken onder verschillende scenario's konden worden uitgetest.
+De analyses besproken in deze sectie zijn in de meeste gevallen ook reeds uitgevoerd voor andere soorten.
+In het toekomstige rapport, gewijd aan bredere analyses en resultaten van het MAS, zullen de bevindingen voor deze andere soorten worden besproken.
 
-### Data exploratie {#exploratie-veldleeuwerik}
+### Abundanties en detectiekans {#intro-detectiekans}
 
-\textcolor{red}{doen?}
-
-### Densiteitsschattingen en detectiekans {#densiteitsschattingen}
-
-\textcolor{red}{densiteitsschattingen via distance sampling}
+Er zijn verschillende manieren om het aantal dieren in een populatie (= abundantie) te schatten.
+In de praktijk is het quasi nooit mogelijk om elk individu te tellen.
+Dieren zijn constant in beweging en interageren op allerlei manier met elkaar en hun omgeving.
+Afhankelijk van de eigenschappen van een soort en de omgeving kan de de detectiekans van een soort verschillen.
+Een idee over de detectiekans van een soort is bijgevolg van belang om een schatting van de volledige populatie te maken vanuit de steekproef.
+Een bekende techniek om abundanties te schatten is capture-recapture.
+Hierbij zit de informatie over de detectiekans in de vangstgeschiedenis van verschillende individuen.
+Een andere techniek is distance sampling.
+Hierbij zit informatie over detecteerbaarheid vervat in de detectieafstanden.
+Het onderliggende idee van beide benaderingen is dat, als we de detectiekans kunnen schatten voor de individuen die we detecteren, we ook kunnen schatten hoeveel er niet opgemerkt werden.
+Op basis van die schatting van detectiekans, kunnen we de waargenomen tellingen corrigeren voor individuen die op de bemonsterde telpunten zijn gemist.
+Het voordeel van distance sampling ten opzichte van capture-recapture is dat het niet vereist is dat individuen worden gemarkeerd en opnieuw worden gevangen/waargenomen in de loop van de tijd.
+Bovendien kan slechts een enkele steekproef van de populatie voldoende zijn [@buckland2015; @buckland2001].
 
 #### Inleiding tot distance sampling {#inleiding-distance}
 
 Distance sampling is een techniek om de abundantie en/of densiteit van biologische populaties te schatten op basis van een steekproef uit de populatie.
-Het is namelijk in de praktijk quasi nooit mogelijk om elk individu te tellen.
-Dieren staan constant in beweging en interageren op allerlei manier met elkaar en hun omgeving.
-Afhankelijk van de eigenschappen van een soort en de omgeving kan de de detectiekans van een soort verschillen.
-Een idee over de detectiekans van een soort is bijgevolg van belang om een schatting van de volledige populatie te maken vanuit de steekproef.
-Een andere bekende techniek om abundanties te schatten is capture-recapture.
-Hierbij zit de informatie over de detectiekans in de vangstgeschiedenis van verschillende individuen.
-In distance sampling daarentegen zit informatie over detecteerbaarheid vervat in de detectieafstanden.
-Het onderliggende idee van beide benaderingen is dat, als we de detectiekans kunnen schatten voor de individuen die we detecteren, we ook kunnen schatten hoeveel er niet opgemerkt werden.
-Op basis van die schatting van detectiekans, kunnen we de waargenomen tellingen corrigeren voor individuen die op de bemonsterde telpunten zijn gemist.
-Het voordeel van distance sampling ten opzichte van capture-recapture is dat het niet vereist is dat individuen worden gemarkeerd en opnieuw worden gevangen/waargenomen in de loop van de tijd.
-Bovendien kan slechts een enkele steekproef van de populatie voldoende zijn [@buckland2015; @buckland2001].\
-
-Wanneer we het over distance sampling hebben in dit rapport, spreken we eigenlijk over conventional distance sampling (CDS).
+Wanneer we het over distance sampling hebben in dit rapport, spreken we eigenlijk over "conventional distance sampling" (CDS).
 In CDS worden de data gebundeld voor het schatten van de detectiekans.
-Dit is in tegenstelling tot hierarchical distance sampling (HDS), waarbij de focus ligt op lokale populatiegroottes van de steekproefeenheden door het maken van expliciete modellen die de variatie in populatiegrootte tussen steekproefeenheden verklaren [@kéry2016].
+Dit is in tegenstelling tot "hierarchical distance sampling" (HDS), waarbij de focus ligt op lokale populatiegroottes van de steekproefeenheden door het maken van expliciete modellen die de variatie in populatiegrootte tussen steekproefeenheden verklaren [@kéry2016].
 HDS wordt hier verder niet besproken.
 De belangrijkste aannames van de CDS-methode zijn [@buckland2001, hoofdstuk 2]:
 
-1.  Dieren zijn uniform verdeeld over de ruimte (steekproefdesign)\
+1.  Dieren zijn uniform verdeeld over de ruimte (*steekproefdesign*)\
     (= random plaatsing van steekproefeenheden t.o.v. verdeling dieren)
 
-2.  Detectiekans is een functie van afstand en is gelijk aan 1 op afstand 0 (model)
+2.  Detectiekans is een functie van afstand en is gelijk aan 1 op afstand 0 (*model*)
 
-3.  Individuen worden gedetecteerd op hun oorspronkelijke locatie (model)
+3.  Individuen worden gedetecteerd op hun oorspronkelijke locatie (*model*)
 
-4.  Afstanden worden foutloos gemeten (model)
+4.  Afstanden worden foutloos gemeten (*model*)
 
 Distance sampling is erg populair bij het tellen van vogels met behulp van punttransecten [@rosenstock2002; @buckland2001; @roodbergen2011].
 Een punttransect is een cirkelvormige plot met radius $w$ waar een waarnemer vanuit een centraal punt de radiale afstand $r_i$ meet tot elk van de gedetecteerde individuen $i = 1, ..., n$ met $n$ het totaal aantal waarnemingen (Fig. \@ref(fig:distance-methode)A).
 $w$ wordt ook wel de afknotafstand genoemd.
 
-Om de detectiekans te schatten maak je een model voor de probabiliteit dat een individu van een soort wordt gedetecteerd gegeven we de afstand tot het individu weten.
-Dit model is de detectiefunctie (ook wel detectiecurve genoemd) en wordt genoteerd als $g(r;\boldsymbol \theta)$ met $r$ de radiale afstand van waarneming tot teller/telpunt en $\boldsymbol \theta$ een vector van parameters die geschat moeten worden.
+Om de detectiekans te schatten maak je een model voor de probabiliteit dat een individu van een soort wordt gedetecteerd gegeven dat we de afstand tot het individu weten.
+Dit model is de detectiefunctie (ook wel detectiecurve genoemd) en wordt genoteerd als $g(r;\boldsymbol \theta)$ met $r$ de radiale afstand van waarneming tot teller/telpunt en $\boldsymbol \theta$ een vector van parameters die geschat moet worden.
 Het doel is de gemiddelde kans op detectie ($p$) te bepalen.
 Dit is het gemiddelde over afstand van 0 m tot de afknotafstand $w$, in ons geval $w = 300$.
 De term $\frac{2r}{w^2}$ is nodig om rekening te houden met de geometrie van de plot (cirkel).
 
+<!-- spell-check: ignore:start -->
+
 $$
 p = \int_0^w\frac{2r}{w^2}g(r;\boldsymbol \theta)\,dr
 $$
+
+<!-- spell-check: ignore:end -->
 
 $p$ is dus de oppervlakte onder de detectiecurve.
 Figuur \@ref(fig:distance-methode)B toont een fictief voorbeeld van een histogram met afstanden van 0 tot 300 meter ($w = 300$).
@@ -659,7 +701,7 @@ Moest het aantal waarnemingen niet afnemen over de afstand, zouden de afstanden 
 Alles zou gezien zijn en de detectiekans op elke afstand is gelijk aan 1.
 De blauwe curve is een half-normale detectiecurve gefit op de data.
 De oppervlakte onder de curve binnen de box is de gemiddelde detectiekans $p$ (de geschatte fractie dieren die gezien zijn).
-De oppervlakte boven de curve binnen de box de geschatte fractie dieren die gemist zijn.
+De oppervlakte boven de curve binnen de box is de geschatte fractie dieren die gemist zijn.
 Als we de gemiddelde detectiekans weten, kunnen we dus eenvoudig berekenen hoeveel dieren we verwachten als we uitgaan van een uniforme verdeling van dieren over de telcirkel (zie verder).
 We controleren er dus voor dat het moeilijker is om dieren te detecteren op grotere afstand, terwijl we er van uitgaan dat er in werkelijkheid evenveel zitten op grotere als op kleinere afstanden.
 
@@ -669,30 +711,46 @@ include_graphics(file.path("media", "distance", "methode_distance.png"))
 
 Voor de formulatie van de detectiefunctie beschouwen we half-normal en hazard-rate sleutelfuncties die we laten afhangen van categorische covariaten $\mathbf{z_i}$ (bv. jaar, regio).
 Met $\mathbf{z_i}$ een vector van $J$ covariaten geassocieerd met observatie $i$.
-Dit wordt ook wel multiple-covariate distance sampling (MCDS) genoemd [@marques2007].
+Dit wordt ook wel "multiple-covariate distance sampling" (MCDS) genoemd [@marques2007].
 De detectiekans wordt dan berekend conditioneel aan de waargenomen waarden van de covariaten.
+
+<!-- spell-check: ignore:start -->
 
 $$
 p(\mathbf{z_i}) = \int_0^w\frac{2r}{w^2}g(r, \mathbf{z_i};\boldsymbol \theta)\,dr
 $$
 
+<!-- spell-check: ignore:end -->
+
 De half-normal sleutelfunctie is van de vorm
+
+<!-- spell-check: ignore:start -->
 
 $$
 g(r, \mathbf{z};\boldsymbol \theta) = \exp{\left( -\frac{r^2}{2\sigma(\mathbf{z})^2} \right)}
 $$
 
+<!-- spell-check: ignore:end -->
+
 en de hazard-rate sleutelfunctie
+
+<!-- spell-check: ignore:start -->
 
 $$
 g(r, \mathbf{z};\boldsymbol \theta) = 1 - \exp{\left( \left( -\frac{r}{\sigma(\mathbf{z})}\right)^{-b} \right)}
 $$
 
+<!-- spell-check: ignore:end -->
+
 waarbij de scale parameter in beide gevallen gelijk is aan
+
+<!-- spell-check: ignore:start -->
 
 $$
 \sigma(\mathbf{z}) = \exp{\left( \beta_0 + \sum_{j = 1}^{J} \beta_j z_j \right)}
 $$
+
+<!-- spell-check: ignore:end -->
 
 De hazard-rate key function heeft naast de scale parameter ook nog de shape parameter $b$.
 
@@ -731,18 +789,18 @@ $$
 De onzekerheid op de abundantie- en densiteitsschattingen komt van twee origines [@miller2019]:
 
 1.  Detectiefunctie: Onzekerheid in parameterschattingen ($\boldsymbol \theta$)
-2.  Trefkans: Bemonsteringsvariabiliteit als gevolg van verschillen in het aantal waarnemingen per transect
+2.  Trefkans: Bemonsteringsvariabiliteit als gevolg van verschillen in het aantal waarnemingen per telcirkel
 
-#### Methodiek densiteitsschattingen
+#### Materiaal en methoden densiteitsschattingen {#methodiek-distance}
 
-We voerden de distance sampling analyses uit met behulp van de **Distance** package [@R-Distance; @miller2019].
+We voerden de distance sampling analyses uit met behulp van de **Distance** package [@R-Distance; @miller2019] in R.
 We schatten (1) densiteiten per jaar (2018-2023) per regio (De Moeren, Oostelijke leemstreek) en (2) densiteiten per stratum (OL, HOL en binnen en buiten sbp) per regio binnen de pilootstudie (2022-2023).
 We beschouwen enkel waarnemingen van Veldleeuwerik met broedcode groter dan nul en houden ook rekening met het broedseizoen van de soort.
 Alle vier de verschillende telperiodes vallen binnen het broedseizoen van de soort (1 april - 15 juli) zodat we de data van alle telperiodes binnen het jaar konden gebruiken.
 
 Voor (1) beschouwden we alle telpunten van 2018-2021 en voegden enkel telpunten van 2022 en 2023 toe als ze minstens eenmaal geteld waren in een van de voorgaande jaren.
 Om abundanties te schatten, moesten we de oppervlakte van de regio's berekenen voor extrapolatie.
-We trokken daarvoor een buffer van 300 m rond het steekproefkader: OL in De Moeren, en OL en HOL in de Oostelijke leemstreek (Fig. \@ref(fig:oppervlakte-steekproefkader-jaar)).
+We trokken daarvoor een buffer van 300 m rond alle potentiële telpunten uit het steekproefkader: OL in De Moeren, en OL en HOL in de Oostelijke leemstreek (Fig. \@ref(fig:oppervlakte-steekproefkader-jaar)).
 Voor de formulatie van de detectiefunctie beschouwden we half-normal en hazard-rate sleutelfuncties die we lieten afhangen van covariaten regio en jaar.
 
 ```{r oppervlakte-steekproefkader-jaar, out.width = "90%", fig.cap = "Oppervlaktes per regio voor berekening densiteiten per jaar per regio."}
@@ -754,7 +812,7 @@ Voor (2) beschouwden we enkel de tellingen binnen het pilootproject (alle telpun
 We trokken daarvoor ook een buffer van 300 m rond het steekproefkader, deze keer opgesplitst per stratum (Fig. \@ref(fig:oppervlakte-steekproefkader-stratum)).
 Voor de formulatie van de detectiefunctie beschouwden we half-normal en hazard-rate sleutelfuncties die we lieten afhangen van covariaten regio, openheid (HOL of OL) en sbp (binnen of buiten sbp).
 Analyses werden voor 2022 en 2023 apart gedaan.
-Dit was puur om wille van tijdsoverwegingen, maar dit kan ook in eenzelfde analyse worden gedaan (zoals we in (1) doen).
+Dit was puur omwille van tijdsoverwegingen, maar dit kan ook in eenzelfde analyse worden gedaan (zoals we in (1) doen).
 Het gevolg is dat de detectiekansen dus zeker zullen verschillen tussen de jaren ook al beschouwden we jaar niet als covariant in de detectiefunctie.
 
 ```{r oppervlakte-steekproefkader-stratum, out.width = "100%", fig.cap = "Oppervlaktes per regio voor berekening densiteiten per stratum per regio."}
@@ -772,16 +830,107 @@ We vergeleken voor (1) en (2) de AIC van de verschillende modellen.
 Als het verschil tussen AIC's kleiner is dan 2, kiezen we het eenvoudigste van deze modellen (model met minste parameters).
 Modellen met vergelijkbare AIC's hebben vergelijkbare geschatte detectiekansen, dus in de praktijk is er weinig verschil in de keuze tussen deze modellen [@miller2019].
 
-Om te controleren of onze finale modellen voor (1) en (2) goed pasten bij de data ('goodness of fit') maakten we een Q-Q plot waarbij de cumulatieve distributiefunctie van de gefitte detectiefunctie (CDF) wordt vergeleken met de distributie van de data (EDF).
+Om te controleren of onze finale modellen voor (1) en (2) goed pasten bij de data (= "goodness of fit") maakten we een Q-Q plot waarbij de cumulatieve distributiefunctie van de gefitte detectiefunctie (CDF) wordt vergeleken met de distributie van de data (EDF).
 We voerden ook de Cramér-von Mises test uit.
 Deze kwantificeert de informatie van de Q-Q-plot door te testen of punten van de EDF en CDF uit dezelfde verdeling komen [@buckland2015; @miller2019].
 Finaal bekeken we ook de kansdichtheidsfunctieplots.
-Indien de 'goodness of fit' niet goed was, werd het finale model opnieuw gefit waarbij we de afstanden gegroepeerd werden in intervallen van 50 m.
+Indien het finale model niet goed paste bij de data (slechte "goodness of fit"), werd dit model opnieuw gefit waarbij de afstanden gegroepeerd werden in intervallen van 50 m.
 
 Densiteitsschattingen werden omgezet naar aantallen per 100 ha.
 De onzekerheid op de densiteitsschattingen werd berekend m.b.v. de standaard opties in de `ds()` functie.
 Zie @miller2019 en verwijzingen daarin voor meer informatie over de precieze berekeningen.
-De onzekerheid op de resultaten zijn telkens 95 % betrouwbaarheidsintervallen.
+Als onzekerheid op de resultaten tonen we telkens 95 % betrouwbaarheidsintervallen.
+Dit zijn log-normale betrouwbaarheidsintervallen geconstrueerd met behulp van een Satterthwaite-benadering voor de vrijheidsgraden [@buckland2001, p. 77].
+
+Onder de assumptie dat het logaritme van de densiteitsschattingen normaal verdeeld zijn, kunnen we ook betrouwbaarheidsintervallen opstellen voor de vergelijking tussen densiteitsschattingen in twee strata.
+Beschouw bijvoorbeeld (1) een schatting in stratum 1 $\hat{D}_1$ met standaardfout $\hat{se}(\hat{D}_1)$ en (2) $\hat{D}_r$ de schatting in referentiestratum $r$ met standaardfout $\hat{se}(\hat{D}_r)$.
+Om het verschil tussen de eerste densiteit met de referentie te kwantificeren, kunnen we een zgn.
+*species change index* ($SCI$) definiëren ($\log()$ is telkens het natuurlijk logaritme).
+Stel
+
+<!-- spell-check: ignore:start -->
+
+$$
+\begin{aligned}
+  \hat{D}_v &= \log(\hat{D}_1) - log(\hat{D}_r)\\
+            &= \log\left( \frac{\hat{D}_1}{\hat{D}_r} \right)
+\end{aligned}
+$$
+
+<!-- spell-check: ignore:end -->
+
+zodat
+
+<!-- spell-check: ignore:start -->
+
+$$
+\begin{aligned}
+  SCI &= \exp(\hat{D}_v) - 1\\
+      &= \frac{\hat{D}_1}{\hat{D}_r} - 1
+\end{aligned}
+$$
+
+<!-- spell-check: ignore:end -->
+
+Een $SCI$ van 0.5 wil zeggen dat er 50 % meer (= toename met factor 1.5) broedparen per 100 ha in stratum 1 zijn dan in het referentiestratum $r$.
+
+We willen voor de $SCI$ een $100(1-2\alpha)$ % betrouwbaarheidsinterval opstellen.
+
+<!-- spell-check: ignore:start -->
+
+$$
+(\exp(\hat{D}_v - C) - 1, \exp(\hat{D}_v + C) - 1)
+$$
+
+<!-- spell-check: ignore:end -->
+
+met
+
+<!-- spell-check: ignore:start -->
+
+$$
+\begin{aligned}
+  C &= z_\alpha \cdot \hat{se}(\hat{D}_v)\\
+    &= z_\alpha \cdot \sqrt{\hat{var}(\hat{D}_v)}
+\end{aligned}
+$$
+
+<!-- spell-check: ignore:end -->
+
+In ons geval zal $\alpha = 0.025$ zijn voor een 95 % betrouwbaarheidsinterval.
+Omdat we hier in de log-schaal werken is $z_\alpha$ de z-score die overeenkomt met het buitenste 2.5 % gebied van de standaard normale verdeling.
+We hebben dus $Z \sim N(0, 1)$ met $z_{0.025} =$ `r round(qnorm(0.975), 3)`.
+De variantie van $\hat{D}_v$, $\hat{var}(\hat{D}_v)$, kan als volgt berekend worden
+
+<!-- spell-check: ignore:start -->
+
+$$
+\hat{var}(\hat{D}_v) = \hat{var}(\log(\hat{D}_1)) + \hat{var}(\log(\hat{D}_r))
+$$
+
+<!-- spell-check: ignore:end -->
+
+waarbij
+
+<!-- spell-check: ignore:start -->
+
+$$
+\hat{var}(\log(\hat{D}_1)) = \log\left(1 + \left( \frac{\hat{se}(\hat{D}_1)}{\hat{D}_1} \right)^2 \right)
+$$
+
+<!-- spell-check: ignore:end -->
+
+en identiek voor $\hat{var}(\log(\hat{D}_r))$
+
+Dit is niet exact dezelfde methodiek als geïmplementeerd in **Distance** omdat we hier geen gebruik maken van de Satterthwaite-benadering.
+Desalniettemin zal het wel zeer dicht in de buurt liggen, vooral als we veel vrijheidsgraden (en dus veel data) hebben.
+
+We definieerden een positief verschil in densiteit met de referentie als de ondergrens van het 95 % betrouwbaarheidsinterval van de $SCI$ groter is dan nul, een negatief verschil als de bovengrens kleiner is dan nul, een stabiel (geen) verschil als het betrouwbaarheidsinterval nul bevat maar binnen de referentiewaarden valt (tussen toename van 25 % en afname van 20 %) en een onzeker verschil als het betrouwbaarheidsinterval nul en ten minste een van de referentiewaarden bevat.
+Hierbij werd gebruik gemaakt van de **effectclass** package [@onkelinx2023].
+Deze resultaten zullen bijgevolg afhankelijk van de (arbitraire) keuze van de referentiewaarden (toename 25 % is gelijk aan $\times 5/4$ en afname 20 % is gelijk aan $\times 4/5$) en het gebruik van het significantieniveau $\alpha$ (hier 5 %).
+Dit rapport richt zich voornamelijk op de methodiek, waarbij de nadruk ligt op de beschrijving van de gebruikte onderzoeksmethoden.
+Concepten zoals referentiewaarden en significantieniveau, en bijgevolg de ambivalentie van de resultaten, zijn in dit opzicht minder cruciaal voor de hoofdboodschap van het rapport.
+Binnen het rapport is er vooral naar gestreefd om consistente arbitraire waarden te gebruiken, met als doel uniformiteit in de presentatie en interpretatie.
 
 #### Resultaten densiteitsschattingen
 
@@ -797,7 +946,7 @@ sum_veldleeuwerik_2018_2023 <- summary(ds_veldleeuwerik_2018_2023)
 Het Hazard-rate model waarbij de detectiekans afhankelijk is van regio en jaar scoorde het best.
 De detectiekansen zijn dus verschillend per regio en jaar (Tabel \@ref(tab:detectiekans-jaar)).
 De gemiddelde detectiekans $\hat{P}_a$ is gelijk aan `r round(sum_veldleeuwerik_2018_2023$ds$average.p, digits = 3)` met standaardfout `r round(sum_veldleeuwerik_2018_2023$ds$average.p.se[1, 1], digits = 5)`.
-Omwille van de slechtere 'goodness of fit' werd dit model opnieuw gefit waarbij de afstanden gegroepeerd werden in intervallen van 50 m.
+Omwille van de slechtere "goodness of fit" werd dit model opnieuw gefit waarbij de afstanden gegroepeerd werden in intervallen van 50 m.
 De fit was dan beter maar nog altijd niet ideaal.
 Dit is ook te zien wanneer we de gemiddelde detectiecurve op de data plotten (Fig. \@ref(fig:detectiekans-jaar-plot)).
 
@@ -843,12 +992,11 @@ Door te delen door de oppervlaktes van elk stratum (regio, jaar) krijgen we de d
 summary_results_2018_2023 %>%
   dplyr::filter(variable == "abundance") %>%
   select(regio, jaar, "abundantie" = Estimate, "standaardfout" = se,
-         lcl, ucl) %>%
+         Q2.5 = lcl, Q97.5 = ucl) %>%
   kable(digits = 1,
         caption = paste("Abundantieschattingen per regio en jaar voor",
-          "Veldleeuwerik. `lcl' staat voor `lower confidence limit' de",
-          "ondergrens van het 95 \\% betrouwbaarheidsinterval en `ucl' (`upper",
-          "confidence limit') voor de bovengrens."),
+          "Veldleeuwerik. Q2.5 is de ondergrens van het 95 \\%",
+          "betrouwbaarheidsinterval en Q97.5 de bovengrens."),
         booktabs = TRUE) %>%
   kableExtra::kable_styling(latex_options = "striped") %>%
   kableExtra::row_spec(0, bold = TRUE)
@@ -858,7 +1006,7 @@ summary_results_2018_2023 %>%
 summary_results_2018_2023 %>%
   dplyr::filter(variable == "density") %>%
   select(regio, jaar, "densiteit" = Estimate, "standaardfout" = se,
-         lcl, ucl) %>%
+         Q2.5 = lcl, Q97.5 = ucl) %>%
   kable(digits = 2,
         caption = paste("Densiteitsschattingen per 100 ha per regio en jaar",
                         "voor Veldleeuwerik."),
@@ -872,7 +1020,22 @@ include_graphics(file.path("media", "distance", "per_jaar",
                            "densiteit_per_jaar_veldleeuwerik.pdf"))
 ```
 
-##### Per stratum binnen pilootstudie
+We vergelijken de densiteiten aan de hand van *species change indices* (*SCIs*) in elke regio met de densiteit in 2018, het eerste jaar van de pilootstudie (Fig. \@ref(fig:sci-jaar-plot), zie ook Bijlage \@ref(bijlage-sci) (Tabel \@ref(tab:sci-jaar-tab))).
+We zien opnieuw relatief brede betrouwbaarheidsintervallen in De Moeren zodat we vaak onzeker zijn over het verschil met de densiteitsschatting van 2018.
+Enkel in 2022 zien we een significant positief verschil met 2018 in het de densiteit aan broedparen per 100 ha van de Veldleeuwerik.
+We zien in de Oostelijke leemstreek geen significante verschillen en in 2021 wel een significant hogere densiteit.
+In 2022 en 2023 zijn de trends opnieuw onzeker hoewel hier een kleine kanttekening bij kan gemaakt worden.
+Zoals besproken in de methodiek van de SCI-berekeningen, willen we meegeven dat deze resultaten op verschillende manieren kunnen ingedeeld worden en het niet de bedoeling is dat dit vaststaande feiten zijn.
+Voor de Oostelijke leemstreek zullen de onzekere trends van 2022 en 2023 afhankelijk zijn van de keuze van het significantieniveau.
+Bij een $\alpha$ van 0.1 zouden we hier waarschijnlijk toch besluiten dat er een positief verschil is.
+We hebben er in dit rapport echter steeds voor gekozen de resultaten voor $\alpha = 0.05$ te rapporteren.
+
+```{r sci-jaar-plot, out.width = "100%", fig.cap = "Betrouwbaarheidsintervallen ($\\alpha = 0.05$) van \\textit{species change indices} (\\textit{SCIs}) per regio per jaar t.o.v. 2018."}
+include_graphics(file.path("media", "distance", "per_jaar",
+                           "verschil_per_jaar_veldleeuwerik.pdf"))
+```
+
+##### Per stratum binnen pilootstudie {#res-distance-stratum}
 
 ```{r}
 # 2022
@@ -907,7 +1070,7 @@ pa_veldleeuwerik <- round(
 Het Hazard-rate model waarbij de detectiekans afhankelijk is van openheid scoorde het best voor zowel het model met data van 2022 als van 2023.
 De detectiekansen zijn dus verschillend per openheidsklasse HOL en OL (Tabel \@ref(tab:detectiekans-stratum)).
 De gemiddelde detectiekans $\hat{P}_a$ is gelijk aan `r pa_veldleeuwerik`, `r round(sum_veldleeuwerik_2022$ds$average.p, digits = 3)` met standaardfout `r round(sum_veldleeuwerik_2022$ds$average.p.se[1, 1], digits = 5)` voor 2022 en `r round(sum_veldleeuwerik_2023$ds$average.p, digits = 3)` met standaardfout `r round(sum_veldleeuwerik_2023$ds$average.p.se[1, 1], digits = 5)`.
-Omwille van de slechtere 'goodness of fit' werd dit model opnieuw gefit waarbij de afstanden gegroepeerd werden in intervallen van 50 m.
+Omwille van de slechtere "goodness of fit" werd dit model opnieuw gefit waarbij de afstanden gegroepeerd werden in intervallen van 50 m.
 De fit was dan beter maar nog altijd niet ideaal.
 Dit is ook te zien wanneer we de gemiddelde detectiecurve op de data plotten (Fig. \@ref(fig:detectiekans-stratum-plot)).
 
@@ -978,7 +1141,7 @@ Door te delen door de oppervlaktes van elk stratum (regio, jaar) krijgen we de d
 summary_results_stratum %>%
   dplyr::filter(variable == "abundance") %>%
   select(regio, jaar, openheid, sbp, "abundantie" = Estimate,
-         "standaardfout" = se, lcl, ucl) %>%
+         "standaardfout" = se, Q2.5 = lcl, Q97.5 = ucl) %>%
   arrange(regio, jaar, openheid, sbp) %>%
   kable(digits = 1,
         caption = paste("Abundantieschattingen per stratum voor",
@@ -992,7 +1155,7 @@ summary_results_stratum %>%
 summary_results_stratum %>%
   dplyr::filter(variable == "density") %>%
   select(regio, jaar, openheid, sbp, "densiteit" = Estimate,
-         "standaardfout" = se, lcl, ucl) %>%
+         "standaardfout" = se, Q2.5 = lcl, Q97.5 = ucl) %>%
   arrange(regio, jaar, openheid, sbp) %>%
   kable(digits = 2,
         caption = paste("Densiteitsschattingen per 100 ha per stratum",
@@ -1005,6 +1168,17 @@ summary_results_stratum %>%
 ```{r densiteit-stratum-plot, out.width = "90%", fig.cap = "Densiteitsschattingen per 100 ha met 95 \\% betrouwbaarheidsintervallen per stratum."}
 include_graphics(file.path("media", "distance", "per_stratum",
                            "densiteit_per_stratum_veldleeuwerik.pdf"))
+```
+
+We vergelijken de densiteiten binnen soortbeschermingsplan (SBP) met densiteiten buiten SBP aan de hand van *species change indices* (*SCIs*) in elke regio per jaar per openheidsklasse (Fig. \@ref(fig:sci-stratum-plot), zie ook Bijlage \@ref(bijlage-sci) (Tabel \@ref(tab:sci-stratum-tab))).
+We zien telkens een positief verschil, behalve in 2023 in De Moeren waar we een onzekere trend hebben o.w.v. het brede interval.
+De positieve verschillen houden in dat er binnen SBP een significant hogere densiteit broedparen aanwezig is van de Veldleeuwerik dan buiten SBP Hierbij moet worden opgemerkt dat dit niet impliceert dat SBP's een positief effect op densiteit van Veldleeuwerik hebben.
+De SBP's zijn namelijk vastgelegd in gebieden waar er op voorhand al geweten was dat veel akkervogels voorkwamen en/of het een geschikte omgeving was voor deze dieren.
+Deze resultaten geven dus een correlatief verband maar impliceren geen causaliteit.
+
+```{r sci-stratum-plot, out.width = "100%", fig.cap = "Betrouwbaarheidsintervallen ($\\alpha = 0.05$) van \\textit{species change indices} (\\textit{SCIs}) binnen t.o.v. buiten soortbeschermingsplan per regio, jaar en openheidsklasse."}
+include_graphics(file.path("media", "distance", "per_stratum",
+                           "verschil_per_stratum_veldleeuwerik.pdf"))
 ```
 
 #### Discussie densiteitsschattingen
@@ -1021,11 +1195,11 @@ Veldleeuwerikken vliegen gemakkelijk op bij verstoring waardoor we minder waarne
 Bovendien is de soort nog gemakkelijk te horen op grotere afstand zonder exact de locatie te weten.
 Hierdoor zien we opnieuw een stijging rond 250 m.
 @roodbergen2011 fitten daarom voor deze soort een detectiecurve m.b.v. afstandsintervallen.
-Wij groepeerden daarom de afstanden per 50 m.
+Wij groepeerden de afstanden per 50 m.
 Hoewel de fit er visueel beter uitzag, waren de densiteitsschattingen en hun onzekerheid quasi identiek aan de eerdere resultaten zonder groepering (resultaten niet getoond).
 De toepasbaarheid van de methodiek zal dus sterk verschillen van soort tot soort.
-Dit zien we bijvoorbeeld ook als we Kneu en Kievit vergelijken (Fig. \@ref(fig:detectiekans-vergelijking)) waarbij deze laatste ook een soort is die meestal op grotere afstanden wordt gezien o.w.v. het gedrag van de soort.
-Hoe dan ook wil dit niet zeggen dat we de resultaten niet kunnen gebruiken.
+Dit zien we bijvoorbeeld ook als we Kneu en Kievit vergelijken (Fig. \@ref(fig:detectiekans-vergelijking)), waarbij deze laatste ook een soort is die meestal op grotere afstanden wordt gezien o.w.v. het gedrag van de soort.
+Dit wil niet zeggen dat we deze resultaten niet kunnen gebruiken.
 Voor probleemgevallen zal de detectiefunctie niet dalen in het begin en de detectiekans zal dicht bij één liggen.
 Dit zorgt ervoor dat de schatting van de densiteit nog altijd kan gebruikt worden als minimumschatting waarbij de gecorrigeerde aantallen zeer dicht tegen de effectief getelde aantallen zullen liggen.
 
@@ -1066,11 +1240,11 @@ nc2_kneu <- sum_kneu_2023$ds$Nhat
 pa_kneu <- round((n1_kneu + n2_kneu) / (nc1_kneu + nc2_kneu), 2)
 ```
 
-Het is ook mogelijk om densiteiten in te berekenen o.b.v. het maximum aantal broedparen over de telperiodes heen per telpunt per jaar.
+Het is ook mogelijk om densiteiten te berekenen o.b.v. het maximum aantal broedparen over de telperiodes heen per telpunt per jaar.
 Dit kan dan omgerekend worden naar densiteiten per stratum door het gemiddelde nemen per stratum en daarna te delen door de oppervlakte van een telcirkel.
 Via bootstrapping kan een betrouwbaarheidsinterval bekomen worden.
 De maxima komen voor Veldleeuwerik goed overeen met de resultaten van distance sampling (Fig. \@ref(fig:densiteit-methodiek-veldleeuw)).
-@wiersma2021 gebruiken de maxima om densiteiten van akkervogels in te schatten.
+@wiersma2021 gebruikten de maxima om densiteiten van akkervogels in te schatten.
 Ze stellen dat dit minimumschattingen zijn omdat ze niet voor onvolledige trefkans hebben gecorrigeerd.
 Echter, wij zien hier dat deze methode niet per se lagere resultaten bekomt dan via distance sampling.
 De maxima-methode zal lagere schattingen bekomen als de detectiekans van de soort lager is omdat er dan een sterkere correctie optreedt bij distance sampling die niet zal gebeuren bij de maxima-methode (bijvoorbeeld bij Kneu $\hat{P}_a =$ `r pa_kneu`, Fig. \@ref(fig:densiteit-methodiek-kneu)), maar dit is niet per se het geval voor soorten met een hogere detectiekans (bijvoorbeeld bij Fazant $\hat{P}_a =$ `r pa_fazant`, Fig. \@ref(fig:densiteit-methodiek-fazant)).
@@ -1097,29 +1271,169 @@ include_graphics(file.path("media", "distance", "per_stratum",
                            "densiteit_per_stratum_methods_fazant.pdf"))
 ```
 
-\textcolor{red}{uitbreiding distance sampling?} \textcolor{red}{stan etc.}
+In **Distance** deden we aan zgn.
+"conventional distance sampling" (CDS) waarbij de afstanden werden gebundeld voor alle ruimtelijke locaties (i.c. telpunten) om de parameter(s) van de detectiefunctie te schatten, bijvoorbeeld voor de half-normale functie.
+Dit werd gebruikt om een schatting van de densiteit te verkrijgen, en vervolgens werd de variantie gebaseerd op de variantie van de "encounter rate", die wel enige informatie uit de telpunten gebruikt.
+Bij CDS wordt er ook van uitgegaan dat dieren uniform worden verdeeld met betrekking tot transecten/telpunten en vereisen dus gerandomiseerde plaatsing van transecten/punten tijdens het steekproefdesign.
+Hierbij worden factoren die de abundantie tussen plots beïnvloeden verwaarloosd.
+Het is relevant om te overwegen dat er meer geavanceerde benaderingen en alternatieven beschikbaar zijn voor het verbeteren van onze schattingsmethoden en/of deze te koppelen aan vervolganalyses.
+In plaats van gegevens te bundelen zoals bij CDS, biedt "hierarchical distance sampling" (HDS) een expliciet model voor de variatie van de lokale populatiegrootte $N_i$ (de abundantie voor telpunt $i$).
+Dit zijn parametrisch modellen om variatie in abundantie tussen telpunten te beschrijven.
+Hierbij kunnen we expliciete modellen bouwen voor distance sampling data die verantwoordelijk zijn voor variatie in abundantie (of lokale densiteit) tussen steekproefeenheden (telpunten), waardoor inferentie over factoren die ruimtelijke invloed hebben op variatie in abundantie wordt vergemakkelijkt alsook expliciete spatiale predicties over abundantie [@hedley2004; @royle2004; @kéry2016].
+Een andere benadering is het gebruik van density surface modeling (DSM), waarbij ruimtelijke informatie wordt geïntegreerd om de dichtheid van akkervogels over het gehele studiegebied te voorspellen.
+Dit stelt ons in staat om ruimtelijke patronen in de dichtheid beter te begrijpen en kan resulteren in meer nauwkeurige schattingen, vooral in gebieden waar conventionele methoden tekortschieten [@miller2013].
+In beide gevallen biedt het de mogelijkheid om covariaten, zoals landschapskenmerken, op te nemen die van invloed kunnen zijn op de akkervogeldichtheid.
+
+Het overwegen van dergelijke geavanceerde benaderingen in toekomstig onderzoek kan onze schattingsnauwkeurigheid vergroten en ons begrip van de factoren die de dichtheid van akkervogels beïnvloeden verdiepen.
+Het is echter van belang om de complexiteit van deze methoden te erkennen en zorgvuldig af te wegen of de toegevoegde waarde opweegt tegen de extra inspanningen die nodig zijn voor gegevensverzameling en analyse.
+Enkele alternatieven zijn in dit pilootproject uitgetest zoals de **unmarked** package [@kenneth2023; @unmarked-package] en Stan-modellen met **rstan** [@rstan-package] voor HDS en de **dsm** package voor DSM [@dsm-package].
+In Nederland werden ook reeds verschillende analysetechnieken besproken in kader van het MAS protocol [@roodbergen2011].
+Onze bevindingen zijn vooral een aanvulling hierop.
+Het was niet de intentie een uitgebreide revisie hierover te doen, maar wel te bepalen welke haalbare technieken zouden volstaan voor de analyse van de gegevens.
 
 We kunnen concluderen dat het schatten van densiteiten een evenwichtsoefening is tussen het maken van juiste beslissingen in ecologische context en anderzijds het gebruiken van een duidelijk en niet te complexe statistische methode.
-Deze eerste kan in rekening genomen worden door de data te filteren op broedcode groter dan nul en voor elke soort de telperiodes te selecteren die binnen de broedperiode van elke soort vallen.
+Hierbij konden we ook steunen op het onderzoek dat reeds in Nederland gedaan is m.b.t. het MAS protocol [@roodbergen2011].
+De ecologische context kan in rekening genomen worden door de data te filteren op broedcode groter dan nul en voor elke soort de telperiodes te selecteren die binnen de broedperiode van elke soort vallen.
 Een extra maatregel zou kunnen zijn om over die telperiodes (per telpunt per jaar) het maximum aantal te nemen als finale dataset voor verdere analyse (met effort = 1 omdat we dan niet meer corrigeren voor het aantal bezoeken, waardoor geen strikte uitmiddeling gebeurd).
-Voor Haas zou het bovendien nuttig zijn de oppervlaktes van de telcirkel te corrigeren voor de oppervlakte die effectief zichtbaar is voor de teller \textcolor{red}{(volgens viewshedanalyse, zie @ref(aanpassingen-meetnet))}, aangezien Haas steeds op de grond zit.
-Distance sampling m.b.v. het **Distance** package bleek een relatief eenvoudige procedure (zowel mathematisch als gebruiksvriendelijkheid) om densiteitsschattingen (incl. onzekerheid) te maken rekening houdend met de detectiekans van een soort.
-\textcolor{red}{complex niet nodig, detectiekans kan wel in GLMM ofzo worden gebruikt? verder}
+Voor Haas zou het bovendien nuttig zijn de oppervlaktes van de telcirkel te corrigeren voor de oppervlakte die effectief zichtbaar is voor de teller (volgens viewshedanalyse, zie \@ref(aanpassingen-meetnet)), aangezien Haas steeds op de grond zit.
+Distance sampling m.b.v. de **Distance** package bleek een relatief eenvoudige procedure (zowel mathematisch als gebruiksvriendelijkheid) om densiteitsschattingen (incl. onzekerheid) te maken rekening houdend met de detectiekans van een soort.
+We toonden bovendien aan dat we op basis hiervan ook specifieke hypotheses kunnen testen aan de hand van *species change indices* of ter uitbreiding *multi species change indices* waarbij een index zou berekend worden door trends van meerdere soorten te combineren.
+We zijn dan ook van mening dat complexere analyses niet nodig zijn.
+Een tweestapsmethodiek lijkt een valabele optie die enerzijds overzichtelijk blijft en de complexiteit (en bijgevolg tijdsinvestering) van de analyses breekt:
 
-### Toestand beheerovereenkomsten {#beheerovereenkomsten}
+1.  Densiteitsschattingen via CDS
+2.  Modelleren o.b.v. densiteitsschattingen
+    a.  Testen van hypotheses via *change indices*
+    b.  Modelleren van aantallen via *generalized linear mixed models* (*GLMMs*)
+        -   Detectiekans als offset in model
+        -   Onzekerheid van detectiekans moet meegenomen worden in model
 
-#### Inleiding
+### Densiteitskaart Oostelijke leemstreek {#densiteitskaart}
 
-\textcolor{red}{tekst}
+#### Inleiding densiteitskaart
 
-#### Materiaal en methoden
+In dit voorbeeld gaan we na hoe we een verspreidingskaart kunnen maken voor de densiteit Veldleeuwerik waarbij we de detectiekans meerekenen.
+Dit soort kaarten kunnen helpen om kernzones te identificeren met hoge densiteiten.
+
+#### Materiaal en methoden densiteitskaart
+
+We selecteerden de data van 2022-2023 in de Oostelijke leemstreek in OL en HOL met broedcode \> 0 voor Veldleeuwerik.
+We sommeren de aantallen per telcirkel, telperiode en jaar.
+We voegen ook afwezigheden (nullen) toe.
+We voegen de detectiekansen van het distance sampling model toe aan deze dataset (Tabel \@ref(tab:detectiekans-stratum)).
+
+We fitten een Poisson model met $Y_{jk}$ het aantal individuen in telcirkel $j$ in telperiode $k$
+
+<!-- spell-check: ignore:start -->
+
+$$
+Y_{jk} \sim Pois(\lambda_{jk})
+$$
+
+<!-- spell-check: ignore:end -->
+
+met
+
+<!-- spell-check: ignore:start -->
+
+$$
+\ln(\lambda_{jk}) = \beta_0 + f(x_j, y_j) + b_{0,j} + b_{1,j:t} + \ln(p_s) + \ln\left(\frac{A_{telcirkel}}{10^6\ \text{m}^2/100\ \text{ha}}\right)
+$$
+
+<!-- spell-check: ignore:end -->
+
+Waarbij $p_s$ de detectiekans van de soort is in stratum $s$ (per jaar, openheid landschap) en $A_{telcirkel}$ de oppervlakte van een telcirkel $A_{telcirkel} = \pi * 300^2 =$ `r round((pi * 300^2) * 10^-6, 3)` km².
+We kunnen deze offset-termen samennemen.
+
+<!-- spell-check: ignore:start -->
+
+$$
+\ln(\lambda_{jk}) = \beta_0 + f(x_j, y_j) + b_{0,j} + b_{1,j:k} + \ln(\text{offset})
+$$
+
+<!-- spell-check: ignore:end -->
+
+zodat
+
+<!-- spell-check: ignore:start -->
+
+$$
+\ln\left(\frac{\lambda_{jk}}{\text{offset}}\right) = \beta_0 + f(x_j, y_j) + b_{0,j} + b_{1,j:k}
+$$
+
+<!-- spell-check: ignore:end -->
+
+Waarbij $f()$ de standaard *smoothing function* is van de `s()` functie van de **mgcv** package (= *thin plate regression spline*) [@wood2003; @wood2017] en $x_j$, $y_j$ resp.
+de X- en Y-coördinaten van telpunt $j$.
+$\text{offset}$ is gelijk aan de detectiekans vermenigvuldigd met een factor om het aantal individuen per telcirkel om te zetten naar aantal individuen per 100 ha.
+Zo krijgen we een model voor het gemiddeld aantal broedparen per 100 ha waarbij we corrigeren voor detectiekans.
+
+Dit model werd gefit met de **brms** package.
+We bemonsterden de a-posterioriverdelingen voor de modellen met drie *Markov chain Monte Carlo* (*MCMC*) ketens, die elk 2500 iteraties draaiden, waarvan de eerste 500 werden verwijderd als *burn-in*.
+We onderzochten *MCMC*-convergentie door visuele beoordeling van traceplots en posterior densiteiten.
+We onderzochten ook de *potential scale reduction factors* voor elke scalaire parameter in het model.
+Ze lagen allemaal dicht bij 1, zoals vereist.
+De model fit werd bevestigd op basis van *posterior predictive check* (*PPC*) waarbij we de geobserveerde uitkomst vergeleken met gesimuleerde datasets van de *posterior predictive distribution*.
+
+Ter visualisatie maakten we een raster met cellen van dezelfde oppervlakte als de telcirkels en leggen deze over het steekproefkader in de Oostelijke leemstreek (= telpunten steekproefkader met buffer van 300 m, Figuur \@ref(fig:oppervlakte-steekproefkader-jaar)).
+Voor de centroïde van elke grid cell maakten we een predictie o.b.v. het model.
+We rapporteren de posterior mediaan als maat voor het centrale tendens voor de densiteit aan broedvogels Veldleeuwerik per rastercel en 95 % geloofwaardigheidsinterval als maat voor onzekerheid.
+
+#### Resultaten densiteitskaart
+
+Uit de densiteitsschattingen via distance sampling (Sectie \@ref(res-distance-stratum)) over verschillende strata werd reeds duidelijk dat de densiteit broedparen Veldleeuwerik significant groter is binnen soortbeschermingsplan (SBP).
+Dit vertaalt zich ook op ruimtelijke schaal in de bekomen densiteitskaart waarbij we vooral in het zuiden en het oosten van de Oostelijke leemstreek hogere densiteiten zien (Fig. \@ref(fig:densiteitskaart), vergelijk met Fign \@ref(fig:perimeters-sbp), \@ref(fig:oppervlakte-steekproefkader-stratum)).
+In de gebieden met hogere densiteiten is de onzekerheid ook het grootst.
+Dit is eigen aan de Poisson verdeling waarbij het gemiddelde en de variantie gelijk zijn.
+De relatieve foutenmarge (halve breedte van het 95 % geloofwaardigheidsinterval gedeeld door de geschatte densiteit (= mediaan)) is onafhankelijk van de gemiddelde schatting en toont een hogere onzekerheid aan de periferie, zoals verwacht (Fig. \@ref(fig:relfout-densiteitskaart)).
+
+```{r densiteitskaart, out.width = "100%", fig.cap = "Aantal broedparen Veldleeuwerik per 100 ha per rastercel voor het steekproefkader van de Oostelijke leemstreek met contourlijnen. Posterior mediaan als maat voor het centrale tendens. Q2.5 is de ondergrens van het 95 \\% geloofwaardigheidsinterval en Q97.5 de bovengrens."}
+include_graphics(file.path("media", "spatiale_densiteiten",
+                           "veldleeuwerik_dens_ol2.pdf"))
+```
+
+```{r relfout-densiteitskaart, out.width = "100%", fig.cap = "Spatiale distributie van de relatieve foutenmarge op het aantal broedparen Veldleeuwerik per 100 ha per rastercel."}
+include_graphics(file.path("media", "spatiale_densiteiten",
+                           "veldleeuwerik_dens_ol3.pdf"))
+```
+
+#### Discussie densiteitskaart
+
+We gebruikten een tweefasenaanpak om een model te creëren waarmee we de dichtheidsschattingen konden extrapoleren naar een groter studiegebied, nl.
+het steekproefkader in de Oostelijke leemstreek.
+De eerste fase is het schatten van de detectiekans door het fitten van een detectiecurve (Sectie \@ref(res-distance-stratum)).
+De tweede fase is de ruimtelijke modellering via een soepele *smoothing function*.
+Tweefasemodellen hebben het nadeel dat de onzekerheid van de detectiefunctie en de ruimtelijke modellen op de juiste manier gecombineerd moeten worden [@miller2013].
+Wij hebben hier de onzekerheid van het detectieproces genegeerd wat te smalle geloofwaardigheidsintervallen kan opleveren voor schattingen van de densiteit.
+Bovendien zijn we voorlopig niet dieper ingegaan op de keuze voor de smoothing function $f()$.
+Ook hier kunnen verschillende afwegingen gemaakt worden [@wood2017].
+In dit stadium van de pilootstudie was het niet mogelijk dieper in te gaan op deze tekortkomingen.
+Bij de uitbreiding van een MAS voor heel Vlaanderen, zal deze methode verder op punt gesteld worden.
+
+Indien we subgebieden willen afbakenen, bijvoorbeeld om interessante kernzones te identificeren, kunnen we gridcellen clusteren en daarna de predictie van de cluster vergelijken met een vooraf afgesproken waarde (bv., Is het aantal broedparen per 100 ha significant meer dan 10?).
+Hierbij moeten we een methode vinden waarbij we op correcte wijze de onzekerheid berekenen op clusterniveau [@wadoux2023].
+Een eerste mogelijkheid is om een variogram op te stellen o.b.v. de fitted values om een idee te krijgen van spatiale autocorrelatie.
+Deze info kan dan gebruikt worden om de onzekerheid op clusterniveau te bepalen.
+Een tweede mogelijkheid is om andere methodes en R packages te bekijken die dergelijke berekeningen integraal uitvoeren.
+Ook deze mogelijkheden zullen in een later stadium onderzocht moeten worden.
+
+### Modellering in functie van verklarende variabelen {#beheerovereenkomsten}
+
+#### Inleiding modellering
+
+De resultaten van distance sampling gaven al een beeld van het verschil binnen versus buiten soortbeschermingsplan (SBP).
+We hadden ook een continue variabele die het oppervlakte soortbeschermingsmaatregelen in elke telcirkel aangeeft.
+Deze variabele kan meer informatie kan bevatten waardoor correlatieve analyses in deze context ook interessant konden zijn.
+Ook kunnen we binnen dit kader relaties met andere variabelen onderzoeken die we in Sectie \@ref(verklarende-variabelen) besproken hebben.
+
+#### Materiaal en methoden modellering
 
 We selecteerden de data van 2022-2023 van Veldleeuwerik met broedcode groter dan nul.
 Dit omdat we vermoedden dat de meer beperkte data van voor het pilootproject mogelijke effecten/trends zou vertroebelen in deze context.
 Om de analyses eenvoudiger te maken zetten we de aantallen om naar het maximum aantal per telcirkel per jaar over de telperiodes heen.
 Twee variabelen werden gemeten op tellingniveau: (1) van variabele `n_predators` nemen we het gemiddelde aantal per telcirkel per jaar en (2) van variabele `status_teller` nemen we de status van de teller die in een bepaald jaar het meest frequent een bepaald telpunt heeft bezocht (in het zeldzame geval dat verschillende tellers hetzelfde telpunt in hetzelfde jaar tijdens verschillende telperiodes bezocht hadden).
 
-We beschouwden alle geselecteerde primaire en secundaire variabelen beschreven in Hoofdstuk \@ref(verklarende-variabelen) (Tabel \@ref(tab:verklarende-vars-tab), behalve `openheid_klasse_300` omdat deze als continue variabele op 1000 m informatiever leek (`openheid_waarde_1000`) en `sbp` omwille van de sterke correlatie met de variabele van interesse `area_prop_sb` (Fig. \@ref(fig:sbp-areapropsb)).
+We beschouwden alle geselecteerde primaire en secundaire variabelen beschreven in Hoofdstuk \@ref(verklarende-variabelen) (Tabel \@ref(tab:verklarende-vars-tab), behalve `openheid_klasse_300` omdat deze als continue variabele op 1000 m informatiever leek (`openheid_waarde_1000`) en `sbp` omwille van de sterke correlatie met de variabele van interesse (`area_prop_sb`) (Fig. \@ref(fig:sbp-areapropsb)).
 Om de interpretatie van de resultaten te vereenvoudigen besloten we de continue variabele `area_prop_sb` op te delen volgens de agri-environment schemes (AES) classificatie besproken in @sharps2023 (Tabel \@ref(tab:classificatie-propsb)).
 Deze nieuwe categorische variabele is `area_prop_sb_cat`.
 Ten slotte voegden we de tertiaire variabele `jaar` toe als factorvariabele (`jaar.f`).
@@ -1137,48 +1451,63 @@ tibble(beleid = c("nul", "laag", "middellaag", "middelhoog", "hoog"),
 ```
 
 Analyses werden voor beide regio's apart gedaan via Bayesiaanse modellen met de **brms** package.
-Selectie van variabelen werd gedaan via projection predictive variable selection methode (PPVS) [@piironen2017; @piironen2020; @catalina2022; @mclatchie2023].
-Het doel van PPVS is het vinden van een zo klein mogelijke subset van kandidaat-variabelen met een voorspellende kracht die zo dicht mogelijk ligt bij die van het referentiemodel.
+Selectie van variabelen werd gedaan via *projection predictive variable selection* methode (*PPVS*) [@piironen2017; @piironen2020; @catalina2022; @mclatchie2023].
+Het doel van *PPVS* is het vinden van een zo klein mogelijke subset van kandidaat-variabelen met een voorspellende kracht die zo dicht mogelijk ligt bij die van het referentiemodel.
 Als referentiemodel specificeerden we voor elke regio een Poisson model met alle variabelen in kwestie en is het best presterende model (in termen van voorspellende prestaties) dat we tot onze beschikking hebben.
-Voor de regressiecoëfficienten ($\beta$-parameters) gebruikten we de 'R2-D2 shrinkage prior' [@zhang2016; @yanchenko2021].
-Voor het intercept gebruiken we de default prior van **brms**.
-De R2-D2 prior specificeert een verdeling voor de determinatiecoëfficiënt $R^2$ en induceert dan een prior op de individuele $\beta$'s.
-Het idee achter 'shrinkage priors' is om de geschatte parameters van een model naar een centrale waarde te trekken of ze naar nul te laten krimpen.
+Voor de regressiecoëfficienten ($\beta$-parameters) gebruikten we de R2-D2 *shrinkage prior* [@zhang2016; @yanchenko2021].
+Voor het intercept gebruikten we de standaard (niet-informatieve) a-prioriverdelingen van **brms**.
+De R2-D2 prior specificeert een verdeling voor de determinatiecoëfficiënt $R^2$ en induceert dan een a-prioriverdeling voor de individuele $\beta$'s.
+Het idee achter *shrinkage priors* is om de geschatte parameters van een model naar een centrale waarde te trekken of ze naar nul te laten krimpen.
 Deze regularisatie moedigt zo simpelere modellen aan en kunnen dus gebruikt worden in variabelenselectie.
 Voor de hyperparameters gebruiken we 0,5 voor het gemiddelde van de Beta prior op $R^2$, 2 voor de precisie van de Beta prior en 1 voor de concentratievector van de Dirichlet prior op de variantie decompositieparameter (lagere waardes beteken een sterkere shrinkage).
 Deze werden bepaald o.b.v. exploratieve analyses en bijlage B in @mclatchie2023.
 
-We bemonsterden de posterior verdelingen voor de modellen met drie Markov Chain Monte Carlo (MCMC) chains, die elk 8000 iteraties draaiden, waarvan de eerste 2000 werden verwijderd als burn-in.
-De ketens werden verdund met thinning factor 3 zodat 2000 posterior samples per chain overbleven en dus 6000 posterior samples in totaal.
-We onderzochten MCMC-convergentie door visuele beoordeling van trace plots en posterior densiteiten.
-We onderzochten ook de 'potential scale reduction factors' voor elke scalaire parameter in het model.
+We bemonsterden de a-posterioriverdelingen voor de modellen met drie *Markov chain Monte Carlo* (*MCMC*) ketens, die elk 8000 iteraties draaiden, waarvan de eerste 2000 werden verwijderd als *burn-in*.
+De ketens werden verdund met een factor 3 zodat 2000 *posterior samples* per keten overbleven en dus 6000 *posterior samples* in totaal.
+We onderzochten *MCMC*-convergentie door visuele beoordeling van traceplots en posterior densiteiten.
+We onderzochten ook de *potential scale reduction factors* voor elke scalaire parameter in het model.
 Ze lagen allemaal dicht bij 1, zoals vereist.
-De model fit werd bevestigd op basis van 'posterior predictive checks' (PPC) waarbij we de geobserveerde uitkomst vergeleken met gesimuleerde datasets van de 'posterior predictive distribution'.
+De model fit werd bevestigd op basis van *posterior predictive check* (*PPC*) waarbij we de geobserveerde uitkomst vergeleken met gesimuleerde datasets van de *posterior predictive distribution*.
 
-Na het fitten van de referentiemodellen voor elke regio PPVS toegepast met de **projpred** package v2.6.0 [@R-projpred].
+Na het fitten van de referentiemodellen voor elke regio werd *PPVS* toegepast met de **projpred** package [@R-projpred].
 Hierin worden twee fases onderscheiden:
 
 1.  Zoekfase\
     De rangschikking van de verklarende variabelen, nl. de kleinst mogelijke subset van kandidaat-variabelen voor elk aantal variabelen, werd bepaald via forward search. Hierbij werd gespecifieerd dat de categorische variabele voor het oppervlakte-aandeel soortbeschermingsplannen zeker in het finale model moest aanwezig zijn (altijd rang 1). Maximale submodelgrootte werd ingesteld op 19 variabelen.
 2.  Evaluatiefase\
-    Berekening van voorspellende prestaties van de steeds complexer wordende submodellen langs de ranglijst van verklarende variabelen via 5-fold cross-validation (CV). Voorspellende prestaties werden gekwantificeerd als 'mean log predictive density' (MLPD). Dit is de expected log (pointwise) predictive density (ELPD) gedeeld door het aantal observaties.
+    Berekening van voorspellende prestaties van de steeds complexer wordende submodellen langs de ranglijst van verklarende variabelen via *leave-one-out cross-validation* voor De Moeren en *5-fold cross-validation* voor de Oostelijke leemstreek. Voorspellende prestaties werden gekwantificeerd als *mean log predictive density* (*MLPD*). Dit is de *expected log (pointwise) predictive density* (*ELPD*) gedeeld door het aantal observaties.
 
-Selectie van het aantal variabelen werd visueel gedaan door de MLPD te plotten als verschil met het referentiemodel in functie van submodelgrootte.
-Als de MLPD niet meer toeneemt met het aantal variabelen, dan voegen die extra variabelen geen voorspellende waarde meer toe aan het model en zullen ze niet geselecteerd worden.
+Selectie van het aantal variabelen werd visueel gedaan door de *MLPD* te plotten als verschil met het referentiemodel in functie van submodelgrootte.
+Als de *MLPD* niet meer toeneemt met het aantal variabelen, dan voegen die extra variabelen geen voorspellende waarde meer toe aan het model en zullen ze niet geselecteerd worden.
 Ook bekeken we de variabiliteit in de rangschikking van de verklarende variabelen aan de hand van de (cumulatieve) ranking proporties.
-De ranking proportie van variabele $x$ bij submodelgrootte $j$ is de proportie van CV folds die variabele $x$ hebben op positie $j$ van hun rangschikking van de verklarende variabelen.
+De ranking proportie van variabele $x$ bij submodelgrootte $j$ is de proportie van *cross-validation folds* die variabele $x$ hebben op positie $j$ van hun rangschikking van de verklarende variabelen.
 De cumulatieve ranking proporties worden opgeteld naarmate submodelgrootte toeneemt.
-Een cumulatieve ranking proportie voor variabele $x$ van 90 % bij \<= 5 ($= j$) will bijvoorbeeld zeggen dat $x$ in 90 % van de CV folds een ranking kleiner of gelijk aan 5 heeft.
+Een cumulatieve ranking proportie voor variabele $x$ van 90 % bij $\leq$ 5 ($= j$) wil bijvoorbeeld zeggen dat $x$ in 90 % van de *cross-validation folds* folds een ranking kleiner of gelijk aan 5 heeft.
 
 Finale modellen werden met de geselecteerde variabelen opnieuw gefit via **brms**.
 We fitten zowel een Poisson als zero-inflated Poisson model.
-Beide modellen werden vergeleken visueel via PPC's en o.b.v. het verschil in ELPD berekend via 5-fold cross-validation.
-Voor de nabewerking en visualisatie van de resultaten hebben we gebruik gemaakt van de functionaliteiten uit de **tidybayes** package v3.0.4 [@R-tidybayes].
-We definieerden een postief verschil als de ondergrens van het 95 % credible interval groter is dan nul, een negatief verschil als de bovengrens kleiner is dan nul, een stabiel (geen) verschil als het credible interval nul bevat maar binnen de referentiewaarden valt (tussen toename van 25 % en afname van 20 %) en een onzeker verschil als het credible interval nul en ten minste een van de referentiewaarden bevat [@onkelinx2023].
+Beide modellen werden vergeleken visueel via *PPCs* en o.b.v. het verschil in *ELPD* berekend via *5-fold cross-validation*.
+Voor de nabewerking en visualisatie van de resultaten hebben we gebruik gemaakt van de functionaliteiten uit de **tidybayes** package [@R-tidybayes].
+We rapporteren steeds de posterior mediaan van $exp(\beta_j) - 1$ als maat voor het centrale tendens van variabele $x_j$, en de standaard deviatie (= standaardfout) en 95 % geloofwaardigheidsinterval als maat voor onzekerheid.
+Samenvattende statistieken van de verklarende variabelen zijn gegeven in Bijlage \@ref(mean-sd-contvars).
+Aangezien we geen interacties beschouwen, zijn de trends gelijk voor alle categorieën van categorische variabelen.
+We definieerden een positief verschil als de ondergrens van het 95 % geloofwaardigheidsinterval groter is dan nul, een negatief verschil als de bovengrens kleiner is dan nul, een stabiel (geen) verschil als het geloofwaardigheidsinterval nul bevat maar binnen de referentiewaarden valt (tussen toename van 25 % en afname van 20 %) en een onzeker verschil als het geloofwaardigheidsinterval nul en ten minste een van de referentiewaarden bevat [@onkelinx2023].
 
-#### Resultaten De Moeren
+#### Resultaten modellering De Moeren
 
-```{r ranking-dm-veldleeuw, out.width = "100%", fig.cap = "Verschil in MLPD met referentiemodel (rode stippellijn) voor verschillende submodelgroottes voor het model van De Moeren."}
+De voorspellende kracht van het model voor De Moeren bereikte reeds een maximum bij twee variabelen (Fig. \@ref(fig:ranking-dm-veldleeuw)).
+Naast de vaste `area_prop_sb_cat` hebben we nog de variabele `boom` die in 100 % van de *cross-validation folds* aanwezig was (Fig. \@ref(fig:cvprop-dm-veldleeuw)).
+Samenvattende statistieken van de parameters zijn gegeven in Tabel \@ref(tab:dm-veldleeuw-params).
+De referentiegroep is nulbeleid (= geen oppervlakte‐aandeel soortbeschermingsmaatregelen aanwezig).
+We zien enkel significant meer broedparen in telcirkels met hoogbeleid (gemiddeld gezien 119 % meer).
+Voor de andere categorieën is de onzekerheid te groot (Fig. \@ref(fig:beleid-dm-veldleeuw1)).
+Dit komt omdat er voor sommige categorieën weinig data is.
+We kunnen de categorieën laag- en middellaagbeleid aggregeren tot laagbeleid via een gewogen gemiddelde waarbij de gewichten afhankelijk zijn van het aantal data per groep.
+Dit doen we ook voor hoogbeleid.
+We zien een onzeker verschil in aantal broedparen voor laagbeleid en een positief verschil voor hoogbeleid met nulbeleid (gemiddeld gezien 109 % meer; Fig. \@ref(fig:beleid-dm-veldleeuw2)).
+Verder zien we een significant negatief effect van de proportie bomen binnen de telcirkels (Fig. \@ref(fig:boom-dm-veldleeuw)).
+
+```{r ranking-dm-veldleeuw, out.width = "100%", fig.cap = "Verschil in \\textit{MLPD} met referentiemodel (rode stippellijn) voor verschillende submodelgroottes voor het model van De Moeren."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "de_moeren",
                            "cvvs_ranking_veldleeuwerik.pdf"))
@@ -1190,21 +1519,72 @@ include_graphics(file.path("media", "beheerovereenkomsten",
                            "cvvs_proporties_veldleeuwerik.pdf"))
 ```
 
-```{r beleid-df-veldleeuw1, out.width = "100%", fig.cap = "Posterior distributions van het verschil in maximum aantal broedparen per telcirkel met nulbeleid (= geen oppervlakte-aandeel soortbeschermingsmaatregelen aanwezig) voor het model van De Moeren. Het punt geeft de posterior mediaan aan en het interval het 95 \\% equal tail credible interval."}
+```{r dm-veldleeuw-params}
+model_output_2022_2023 <- read_csv(
+  file.path("media", "beheerovereenkomsten", "model_output_2022_2023.csv"),
+  show_col_types = FALSE)
+
+model_output_2022_2023 %>%
+  dplyr::filter(soort == "Veldleeuwerik",
+                regio == "De Moeren") %>%
+  select(variabele, mediaan = schatting, standaardfout, Q2.5 = lcl, Q97.5 = ucl,
+         verschil = trend_coarse) %>%
+  mutate(variabele = factor(variabele, levels = c(
+    "area_prop_sb_catlaagbeleid",
+    "area_prop_sb_catmiddellaagbeleid",
+    "area_prop_sb_catmiddelhoogbeleid",
+    "area_prop_sb_cathoogbeleid",
+    "boom",
+    "area_prop_sb_catlaagbeleid_weighted",
+    "area_prop_sb_cathoogbeleid_weighted"
+  ))) %>%
+  arrange(variabele) %>%
+  mutate(variabele = gsub("area_prop_sb_cat", "", variabele),
+         variabele = gsub("_weighted", "", variabele)) %>%
+  kable(digits = 3, booktabs = TRUE,
+        caption = paste(
+          "Samenvattende statistieken van de a-posterioriverdelingen van de",
+          "parameters in het finale model van De Moeren ($exp(\\beta)-1$). De",
+          "referentiegroep is nulbeleid (= geen oppervlakte‐aandeel",
+          "soortbeschermingsmaatregelen aanwezig). Q2.5 is de ondergrens van",
+          "het 95 \\% geloofwaardigheidsinterval en Q97.5 de bovengrens.")) %>%
+  kableExtra::pack_rows("Model", 1, 5) %>%
+  kableExtra::pack_rows("Geaggregeerd", 6, 7) %>%
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::row_spec(0, bold = TRUE)
+```
+
+```{r beleid-dm-veldleeuw1, out.width = "100%", fig.cap = "A-posterioriverdelingen van het verschil in maximum aantal broedparen per telcirkel met nulbeleid (= geen oppervlakte-aandeel soortbeschermingsmaatregelen aanwezig) voor het model van De Moeren. Het punt geeft de posterior mediaan aan en het interval het 95 \\% geloofwaardigheidsinterval."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "de_moeren",
                            "beleidstoestand_veldleeuwerik_fine.pdf"))
 ```
 
-```{r beleid-df-veldleeuw2, out.width = "100%", fig.cap = "Posterior distributions van het verschil in maximum aantal broedparen per telcirkel van laag- en hoogbeleid met nulbeleid voor het model van De Moeren."}
+```{r beleid-dm-veldleeuw2, out.width = "100%", fig.cap = "A-posterioriverdelingen van het verschil in maximum aantal broedparen per telcirkel van laag- en hoogbeleid met nulbeleid voor het model van De Moeren."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "de_moeren",
                            "beleidstoestand_veldleeuwerik_coarse.pdf"))
 ```
 
-#### Resultaten Oostelijke leemstreek
+```{r boom-dm-veldleeuw, out.width = "100%", fig.cap = "Relatie tussen het maximum aantal broedparen in een telcirkel en de oppervlakte aan bomen. De zwarte lijn is de posterior mediaan en de onzekerheidsband toont het 95 \\% geloofwaardigheidsinterval. Voor betere visualisatie hebben we een pseudo-log-transformatie langs de y-as gedaan."}
+include_graphics(file.path("media", "beheerovereenkomsten",
+                           "de_moeren",
+                           "boom_veldleeuwerik_data.pdf"))
+```
 
-```{r ranking-ol-veldleeuw, out.width = "100%", fig.cap = "Verschil in MLPD met referentiemodel (rode stippellijn) voor verschillende submodelgroottes voor het model van de Oostelijke leemstreek."}
+#### Resultaten modellering Oostelijke leemstreek
+
+De voorspellende kracht van het model voor de Oostelijke leemstreek neemt niet meer toe na negen variabelen (Fig. \@ref(fig:ranking-ol-veldleeuw)).
+Naast de vaste `area_prop_sb_cat` hebben we nog de variabelen `openheid_waarde_1000`, `haag`, `houtkant`, `bomenrij`, `bosrand` en `boom` die in 100 % van de *cross-validation folds* aanwezig waren bij deze submodelgrootte en `meerjarige_fruitteelt_hfdtlt` en `grasland_hfdtlt_pre` in 80 % (Fig. \@ref(fig:cvprop-ol-veldleeuw)).
+Samenvattende statistieken van de parameters zijn gegeven in Tabel \@ref(tab:ol-veldleeuw-params).
+De referentiegroep is nulbeleid (= geen oppervlakte‐aandeel soortbeschermingsmaatregelen aanwezig).
+We zien significant meer broedparen in telcirkels met laag-, middelhoog- en hoogbeleid (resp. gemiddeld 16 %, 49 % en 43 % meer).
+Voor middellaagbeleid is de onzekerheid te groot (Fig. \@ref(fig:beleid-ol-veldleeuw1)).
+Wanneer we de categorieën aggregeren zien we een positief verschil in aantal broedparen voor laagbeleid en hoogbeleid met nulbeleid Fig.
+\@ref(fig:beleid-ol-veldleeuw2)).
+Verder zien we een significant positief effect van de openheid van het landschap op 1000 m schaal (Fig. \@ref(fig:openheid-ol-veldleeuw)) en negatieve effecten van de andere continue variabelen (Bijlage \@ref(extra-figs-2022-2023)).
+
+```{r ranking-ol-veldleeuw, out.width = "100%", fig.cap = "Verschil in \\textit{MLPD} met referentiemodel (rode stippellijn) voor verschillende submodelgroottes voor het model van de Oostelijke leemstreek."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
                            "cvvs_ranking_veldleeuwerik.pdf"))
@@ -1216,14 +1596,89 @@ include_graphics(file.path("media", "beheerovereenkomsten",
                            "cvvs_proporties_veldleeuwerik.pdf"))
 ```
 
-```{r beleid-ol-veldleeuw1, out.width = "100%", fig.cap = "Posterior distributions van het verschil in maximum aantal broedparen per telcirkel met nulbeleid (= geen oppervlakte-aandeel soortbeschermingsmaatregelen aanwezig) voor het model van de Oostelijke leemstreek. Het punt geeft de posterior mediaan aan en het interval het 95 \\% equal tail credible interval."}
+```{r ol-veldleeuw-params}
+model_output_2022_2023 %>%
+  dplyr::filter(soort == "Veldleeuwerik",
+                regio == "Oostelijke leemstreek") %>%
+  select(variabele, mediaan = schatting, standaardfout, Q2.5 = lcl, Q97.5 = ucl,
+         verschil = trend_coarse) %>%
+  mutate(variabele = factor(variabele, levels = c(
+    "area_prop_sb_catlaagbeleid",
+    "area_prop_sb_catmiddellaagbeleid",
+    "area_prop_sb_catmiddelhoogbeleid",
+    "area_prop_sb_cathoogbeleid",
+    "openheid_waarde_1000",
+    "grasland_hfdtlt_pre",
+    "bosrand",
+    "haag",
+    "boom",
+    "bomenrij",
+    "meerjarige_fruitteelt_hfdtlt",
+    "houtkant",
+    "area_prop_sb_catlaagbeleid_weighted",
+    "area_prop_sb_cathoogbeleid_weighted"
+  ))) %>%
+  arrange(variabele) %>%
+  mutate(variabele = gsub("area_prop_sb_cat", "", variabele),
+         variabele = gsub("_weighted", "", variabele)) %>%
+  kable(digits = 3, booktabs = TRUE,
+        caption = paste(
+          "Samenvattende statistieken van de a-posterioriverdelingen van de",
+          "parameters in het finale model van de Oostelijke leemstreek",
+          "($exp(\\beta)-1$). De",
+          "referentiegroep is nulbeleid (= geen oppervlakte‐aandeel",
+          "soortbeschermingsmaatregelen aanwezig). Q2.5 is de ondergrens van",
+          "het 95 \\% geloofwaardigheidsinterval en Q97.5 de bovengrens.")) %>%
+  kableExtra::pack_rows("Model", 1, 12) %>%
+  kableExtra::pack_rows("Geaggregeerd", 13, 14) %>%
+  kableExtra::kable_styling(latex_options = "striped") %>%
+  kableExtra::row_spec(0, bold = TRUE)
+```
+
+```{r beleid-ol-veldleeuw1, out.width = "100%", fig.cap = "A-posterioriverdelingen van het verschil in maximum aantal broedparen per telcirkel met nulbeleid (= geen oppervlakte-aandeel soortbeschermingsmaatregelen aanwezig) voor het model van de Oostelijke leemstreek. Het punt geeft de posterior mediaan aan en het interval het 95 \\% geloofwaardigheidsinterval."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
                            "beleidstoestand_veldleeuwerik_fine.pdf"))
 ```
 
-```{r beleid-ol-veldleeuw2, out.width = "100%", fig.cap = "Posterior distributions van het verschil in maximum aantal broedparen per telcirkel van laag- en hoogbeleid met nulbeleid voor het model van de Oostelijke leemstreek."}
+```{r beleid-ol-veldleeuw2, out.width = "100%", fig.cap = "A-posterioriverdelingen van het verschil in maximum aantal broedparen per telcirkel van laag- en hoogbeleid met nulbeleid voor het model van de Oostelijke leemstreek."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
                            "beleidstoestand_veldleeuwerik_coarse.pdf"))
 ```
+
+```{r openheid-ol-veldleeuw, out.width = "100%", fig.cap = "Relatie tussen het maximum aantal broedparen in een telcirkel en de openheid van het landschap op 1000 m schaal (grotere waardes betekenen een meer open landschap) waarbij de andere variabelen constant zijn gehouden op hun gemiddelde per categorie. De zwarte lijn is de posterior mediaan en de onzekerheidsband toont het 95 \\% geloofwaardigheidsinterval. Voor betere visualisatie hebben we een pseudo-log-transformatie langs de y-as gedaan."}
+include_graphics(file.path("media", "beheerovereenkomsten",
+                           "oostelijke_leemstreek",
+                           "openheid_waarde_1000_veldleeuwerik_data.pdf"))
+```
+
+#### Discussie modellering
+
+Zowel in De Moeren als in de Oostelijke leemstreek zien we een groter maximum aantal broedparen per telcirkel als de proportie soortbeschermingsmaatregelen groter is.
+Dit verschil is onzeker in klasses met weinig data.
+We moeten hierbij benadrukken dat deze effecten niet noodzakelijk wijzen op een causaal verband. Het betreft hier een immers observationele data met  belangrijke tekortkomingen om geobserveerde effecten te kunnen attribueren aan oorzakelijke verbanden.
+De soortbeschermingsmaatregelen zijn immers gekozen op plaatsen die reeds gunstig waren voor akkervogels [@agentschapvoornatuurenbos2021].
+Bovendoen, tonen deze analyses de toestand van Veldleeuwerik in verschillende klasses van soortbeschermingsmaatregelen, geen trend.
+
+De andere variabelen die werden geselecteerd o.b.v. *PPVS* hadden allemaal een significant effect op het aantal broedparen in beide regio's.
+Deze variabelen zijn sterk gecorreleerd met de openheid van het landschap.
+We zien enerzijds een sterke positieve correlatie in de Oostelijke leemstreek (`openheid_waarde_1000`).
+Anderzijds zijn de andere continue variabelen zelf negatief gecorreleerd met openheid van het landschap (bv. hoe meer bomen, hagen ... hoe minder open het landschap; Fig. \@ref(fig:corrmat2)).
+Zowel eerdere Vlaamse als Nederlandse studies over akkervogels toonden dergelijke verbanden [@dochy2005; @dochy2021; @klaassen2022; zie ook @agentschapvoornatuurenbos2021].
+Enkel het oppervlakte-aandeel hoofdteelt grasland van het jaar ervoor (`grasland_hfdtlt_pre`) in de Oostelijke leemstreek is niet sterk gecorreleerd met `openheid_waarde_1000`, maar toonde wel een positieve correlatie met hagen, houtkanten, bomen en bomenrijen (\@ref(fig:corrmat2)).
+Hoofdteelt grasland bevat een range van meer en minder intensieve graslandtypes (Tabel \@ref(tab:hftlt-groepen)).
+Meer gedetailleerde data hieromtrent (bv. veranderingen doorheen het jaar) zou allicht beter kunnen verklaren waarom we een afname zien van het maximum aantal broedparen met het oppervlakte-aandeel hoofdteelt grasland van het jaar ervoor.
+
+Uit de resultaten blijkt dat PPVS een werkbaren methode is om relevante variabelen te selecteren.
+Het grootste nadeel is dat deze methode veel rekentijd vraagt, maar met de juiste instellingen, is het mogelijk dit te beperken (voornamelijk het gebruik van *5-fold cross-validation* i.p.v. *leave-one-out cross-validation* en het standaardiseren van de data).
+De grootste verbeteringen die hier van toepassing zijn, zijn eerder gerelateerd aan de aggregatie van de data.
+In deze analyses gebruikten we het maximum aantal broedvogels per telcirkel per jaar als responsvariabele.
+Dit wil zeggen dat we geen rekening houden met de telperiodes, noch de exacte locatie waar een individu is waargenomen binnen de telcirkel.
+We zijn er dan ook van overtuigd dat verdere analyses nog meer uit de data kan halen.
+Enerzijds kunnen variabelen, zoals de aanwezigheid van hoofdteelten, veranderen over het jaar heen, wat de inclusie van tellingen per telperiode interessant maakt.
+Anderzijds kunnen we aan elke specifiek observatie variabelen hangen.
+Zo kan een vogel in een bepaald perceel met een bepaalde hoofdteelt worden geobserveerd waarbij er zich ook andere percelen met andere teelten in de telcirkel bevinden.
+Nu aggregeren we de informatie van al die percelen op telcirkelniveau waarbij we deze informatie koppelen aan die observatie, zonder de exacte locatie van de observatie zelf te bekijken.
+Minder aggregeren betekend meer data waardoor we meer subtiele verbanden kunnen waarnemen.
+Dit moet echter in evenwicht zijn met de complexiteit van de modellen en de tijd die nodig is om deze te fitten.

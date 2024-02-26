@@ -6,7 +6,7 @@
 
 Ondanks de inspanningen om tijdens de steekproeftrekking al zoveel mogelijk rekening te houden met mogelijke problemen tijdens de effectieve tellingen in het veld (Hoofdstuk \@ref(pilootgegevens)), werden nog 163 problematische telpunten gesignaleerd die dan werden vervangen door een reservepunt.
 Hierbij werden opmerkingen in het attributenveld van de kaartlaag genoteerd (\@ref(manuele-controle)).
-Deze werden met \`regular expressions' geanalyseerd en gecategoriseerd in vijf categorieën (Tabel \@ref(tab:issues-piloot)).
+Deze werden met "regular expressions" geanalyseerd en gecategoriseerd in vijf categorieën (Tabel \@ref(tab:issues-piloot)).
 Zo kregen we een algemeen overzicht waar de belangrijkste problemen zich nog bevonden.
 Bij een deel van punten is er te veel overlap met andere telcirkels.
 We zien vooral problemen met zichtbaarheid omdat punten nog vallen in bossen, boomgaarden, holle wegen etc., hoewel er niet altijd info is waarom zichtbaarheid slecht is.
@@ -19,7 +19,7 @@ read_csv(file.path("media", "issues_pilootmeetnet",
                    "issues_pilootmeetnet.csv"),
          show_col_types = FALSE) %>%
   kable(caption = paste("Overzicht van problematische telpunten in het",
-          "pilootmeetnet gecategoriseerd m.b.v. `regular expressions'."),
+          "pilootmeetnet gecategoriseerd m.b.v. ''regular expressions''."),
         longtable = TRUE, booktabs = TRUE) %>%
   kableExtra::kable_styling(latex_options = c("repeat_header", "striped"),
                             repeat_header_text = "\\textit{(vervolg)}") %>%
@@ -64,7 +64,7 @@ Zie Bijlage \@ref(bijlage-uitrol-mas) (Fig. \@ref(fig:steekproef-afbakening-mbag
     Dit werd voordien pas in een later stadium gedaan.
 
 2.  Exclusie van bepaalde landgebruiken\
-    Op basis van de problemen gesignaliseerd tijdens terreinbezoeken, sluiten we meer landgebruiken uit dan voordien (Tabel \@ref(tab:exclusie-landgebruik)).
+    Op basis van de problemen gesignaleerd tijdens terreinbezoeken, sluiten we meer landgebruiken uit dan voordien (Tabel \@ref(tab:exclusie-landgebruik)).
     Deze vooral om zoveel mogelijk een goede bereikbaarheid en zichtbaarheid te voorzien.
     Langs autosnelwegen liggen vaak parallelle paden; zelfs langs beide kanten van de snelweg.
     Dit kan in de steekproef tot gevolg hebben dat er met een hogere waarschijnlijkheid een punt wordt geselecteerd vlak bij een snelweg, omdat er veel van zulke punten zijn.
@@ -151,8 +151,8 @@ tibble(
 ```
 
 4.  Exclusie van potentiële telpunten op basis van zichtbaarheid\
-    We berekenden zichtbaarheid als de cumulatieve zichtbaarheidsindex (CVVI: cumulative viewshed visibility index) waarbij de waarnemer een bewegingsvrijheid heeft van 25 m rondom het telpunt (Fig. \@ref(fig:zichtbaarheid)). De zichtbaarheidsindex wordt berekend vanaf een set van locaties die 10 m van elkaar liggen in deze zone van bewegingsvrijheid en geeft de proportie aan van zichtbare rastercellen (resolutie 5 m) in de telcirkel met straal 300 m. De cumulatieve zichtbaarheidsindex is dan de proportie die zichtbaar is vanuit minstens één locatie binnen de zone van bewegingsvrijheid. Hierbij wordt gebruik gemaakt van [Digital Surface Model (DSM) en Digital Terrain Model (DTM)](https://www.vlaanderen.be/digitaal-vlaanderen/onze-oplossingen/earth-observation-data-science-eodas/het-digitaal-hoogtemodel). De code is op basis van de functie `vvi_from_sf()` in de GVI package v1.1 [@GVI-package].\
-    In de **targets** pipeline werd gebruik gemaakt van batching per 200 telpunten om rekentijd in te perken (`tar_group_size()` functie van **tarchetypes** package v0.7.6 [@tarchetypes-package]). We verwijderen telpunten waar de CVVI kleiner is dan 0.10.
+    We berekenden zichtbaarheid als de cumulatieve zichtbaarheidsindex (CVVI: cumulative viewshed visibility index) waarbij de waarnemer een bewegingsvrijheid heeft van 25 m rondom het telpunt (Fig. \@ref(fig:zichtbaarheid)). De zichtbaarheidsindex wordt berekend vanaf een set van locaties die 10 m van elkaar liggen in deze zone van bewegingsvrijheid en geeft de proportie aan van zichtbare rastercellen (resolutie 5 m) in de telcirkel met straal 300 m. De cumulatieve zichtbaarheidsindex is dan de proportie die zichtbaar is vanuit minstens één locatie binnen de zone van bewegingsvrijheid. Hierbij wordt gebruik gemaakt van het DSM (digitaal oppervlakte model - DHMV II Vlaanderen, @DSM) en het DTM (digitaal terrein model, @DTM) op 5 m resolutie. De code is op basis van de functie `vvi_from_sf()` in de GVI package v1.1 [@GVI-package].\
+    In de **targets** pipeline werd gebruik gemaakt van batching per 200 telpunten om rekentijd in te perken (`tar_group_size()` functie van **tarchetypes** package [@tarchetypes-package]). We verwijderen telpunten waar de CVVI kleiner is dan 0.10.
 
 ```{r zichtbaarheid, out.width = "80%", fig.cap = "Voorbeeld van CVVI berekening o.b.v. DSM en DTM."}
 include_graphics(file.path("media", "visibility",
@@ -160,12 +160,13 @@ include_graphics(file.path("media", "visibility",
 ```
 
 5.  Berekening oppervlakte-aandeel beheerovereenkomsten\
-    Gebruik kaartlaag van 2022 in plaats van 2021.
+    Gebruik kaartlaag VLM van 2022 in plaats van 2021.
 
 6.  Binnen of buiten gebieden met soortbeschermingsplan\
     \textcolor{red}{Johannes uitschrijven, hier staat alvast een samenvatting uit mailcommunicatie} Zowel binnen kerngebied als zoekzones zijn er soortbeschermende maatregelen (SB BO's) gelegd (zie kaart VLM BO's).
     In theorie waren deze maatregelen vooral bedoeld voor kerngebied, en zal daar een hogere dichtheid (bedekkingsgraad) liggen, maar de VLM heeft het toegelaten om ook in zoekzones deze maatregelen te sluiten (al was dat minder de prioriteit).
-    Daar werd bv.in de Moeren geen rekening mee gehouden, en werden erg veel SB BO's gelegd, ook omdat dit gebied wél kerngebied was van plan kiekendief (SBP Grauwe Kiekendief) waardoor er wel veel BO's gesloten zijn.
+    Daar werd bv.
+    in de Moeren geen rekening mee gehouden, en werden erg veel SB BO's gelegd, ook omdat dit gebied wél kerngebied was van plan kiekendief (SBP Grauwe Kiekendief) waardoor er wel veel BO's gesloten zijn.
     In de toekomst heeft VLM beloofd om meer/enkel rekening te houden met kerngebied.
 
     We nemen kerngebieden en zoekzones samen als onderzoeksgebied en alles hierbuiten beschouwen we als controle.
@@ -189,8 +190,7 @@ include_graphics(file.path("media", "kaartjes", "sbp_mbag_kaart.png"))
 ```
 
 7.  Steekproeftrekking\
-    De stratificatiemethode is niet gewijzigd t.o.v. het pilootmeetnet.
-    Omdat we nu met veel grotere gebieden werken, merkten we wel dat een maximale trekking niet voor een goede spatiale spreiding zorgt omdat het algorime niet genoeg vrijheid krijgt.
+    Omdat we nu met veel grotere gebieden werken, merkten we wel dat een maximale trekking niet voor een goede spatiale spreiding zorgt omdat het algoritme niet genoeg vrijheid krijgt.
     Daarom besloten we uiteindelijk om 1/20ste (5 %) van het aantal elementen in het steekproefkader te nemen per stratum.
     Dit is niet de finale steekproef, maar een (veel) grotere steekproef waaruit later het gewenste aantal telpunten wordt geselecteerd.
     Het algoritme kent een volgorde toe bij de steekproeftrekking en het is aan de hand van deze volgorde dat het gewenste aantal telpunten wordt geselecteerd.
@@ -201,8 +201,13 @@ include_graphics(file.path("media", "kaartjes", "sbp_mbag_kaart.png"))
     300 (laagste volgnummers) zullen dan de set zijn voor de zandleemstreek, die kan verdeeld worden over de medewerkers.
     Indien een punt uitvalt, kan dit vervangen worden door het eerstvolgende uit de reeks dat nog niet toegewezen werd (het 301ste).
     De methode garandeert dat deze nieuwe set ruimtelijk goed gespreid is en een aselecte steekproef is.
+    De stratificatiemethode is licht gewijzigd t.o.v. het pilootmeetnet.
+    We gaan het aantal telpunten niet meer proportioneel alloceren o.b.v. de oppervlakte aan OL en HOL.
+    In plaats daarvan nemen we voor elk stratum (OL binnen SBP, OL buiten SBP, HOL binnen SBP, HOL buiten SBP) 50 punten.
+    Zo zorgen we ervoor dat we ook in zeldzamere strata genoeg data zullen verzamelen, waardoor we uitspraken kunnen doen voor elk stratum apart en we onderlinge de strata kunnen vergelijken.
+    Hier tegenover staat wel dat, indien we uitspraken willen doen op hogere niveaus (bv. landbouwregio), we hiermee moeten rekening houden in de analyses door gewichten toe te kennen proportioneel aan de oppervlakte aan OL en HOL.
 
-8.  Uitduinnen van steekproef\
+8.  Uitdunnen van steekproef\
     Om te veel overlap van telpunten te voorkomen binnen eenzelfde stratum, is voor elk punt binnen hetzelfde stratum nagegaan of een punt met grotere `sample_order` op minder dan 600 m afstand ligt.
     Als dit het geval is, wordt het punt met de lagere `sample_order` weerhouden.
 
@@ -224,6 +229,13 @@ Zo selecteren we dus enkel nieuwe punten voor de Westelijk leemstreek; we behoud
 
 ## Reproduceerbaarheid en traceerbaarheid {#git-mbag}
 
+De toestand van de GitHub repository op het moment van de steekproeftrekking voor de (zand)leemstreek kan geraadpleegd worden via de volgende commit hash:
+
+```{=tex}
+\begin{center}
+bafe6a6164dde186f309d1aacbcbff0ccde21735
+\end{center}
+```
 Omwille van de automatisatie van de versiecontrolestap van het steekproefkader en de steekproef, zijn deze in de online GitHub repository [@github-repo] te vinden onder een ander folder (zie Bijlage \@ref(hashes-steekproef)).
 De finale steekproef na manuele controle (de punten die effectief werden bezocht in het veld) zijn wel nog te vinden in de folder *data/processed* zoals bij het pilootmeetnet (Sectie \@ref(git-piloot)).
 De hashes van de finale bestanden zijn te vinden in Bijlage \@ref(hashes-steekproef).

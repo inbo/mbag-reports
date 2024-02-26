@@ -18,6 +18,7 @@ author:
       given: "Nicolas"
       family: "Van Overmeeren"
     email: "nicolas.vanovermeeren@inbo.be"
+    orcid: "0000-0002-5900-8109"
     affiliation: "Instituut voor Natuur- en Bosonderzoek (INBO)"
   - name:
       given: "Johannes"
@@ -41,10 +42,10 @@ community: "inbo"
 publication_type: report
 funder: Instituut voor Natuur- en Bosonderzoek (INBO)
 rightsholder: Instituut voor Natuur- en Bosonderzoek (INBO)
-bibliography: [references.json, references.bib]
+bibliography: [references.json, references.bib, layers.bib]
 link-citations: TRUE
 site: bookdown::bookdown_site
-year: 2023
+year: 2024
 reportnr: 1
 cover_photo: cover.jpg
 cover: cover.jpg
