@@ -52,24 +52,24 @@ include_graphics(file.path("media", "data_exploratie",
                            "tellingen_mas_2018_2023.pdf"))
 ```
 
-```{r aantal-waarnemingen, out.width = "100%", fig.cap = "Verdeling van het aantal waarnemingen van vogels per jaar in elke regio."}
+```{r aantal-waarnemingen, out.width = "100%", fig.cap = "Verdeling van het aantal waarnemingen van vogels in een telcirkel per jaar, telperiode en regio."}
 include_graphics(file.path("media", "data_exploratie",
                            "waarnemingen_mas_2018_2023.pdf"))
 ```
 
-```{r aantal-soorten, out.width = "100%", fig.cap = "Verdeling van het aantal vogelsoorten per jaar in elke regio."}
+```{r aantal-soorten, out.width = "100%", fig.cap = "Verdeling van het aantal vogelsoorten in een telcirkel per jaar, telperiode en regio."}
 include_graphics(file.path("media", "data_exploratie",
                            "soorten_mas_2018_2023.pdf"))
 ```
 
 ### Broedcodes
 
-Het gebruik van broedcodes bij elke waarneming geeft het voordeel dat we uitspraken kunnen doen in termen van aantal broedgevallen door toevallige waarnemingen van een soort (bv. een overvliegend individu) uit te sluiten (= broedcode nul).
-\textcolor{red}{referenties?} We beschouwen tien doelsoorten: Geelgors, Gele kwikstaart, Grasmus, Kievit, Kneu, Kwartel, Ringmus, Torenvalk, Veldleeuwerik en Witte kwikstaart.
+Het gebruik van broedcodes bij elke waarneming geeft het voordeel dat we uitspraken kunnen doen in termen van aantal broedgevallen door toevallige waarnemingen van een soort (bv. een overvliegend individu) uit te sluiten (= broedcode nul) [@roodbergen2011].
+We beschouwen tien doelsoorten: Geelgors, Gele kwikstaart, Grasmus, Kievit, Kneu, Kwartel, Ringmus, Torenvalk, Veldleeuwerik en Witte kwikstaart.
 Als we kijken naar de data van 2022-2023, zien we dat de rapportage van broedcodes sterk kan verschillen van soort tot soort (Fig. \@ref(fig:broedcodes)).
 \textcolor{red}{bespreking Johannes? bv verschil witte kwik ringmus, torenvalk, veldleeuwerik? en uitleggen dat we voor roofvogels geen rekening houden met broedcodes}
 
-```{r broedcodes, out.width = "90%", fig.cap = "Aantal tellingen per broedcode per doelsoort voor 2022-2023."}
+```{r broedcodes, out.width = "90%", fig.cap = "Aantal tellingen per broedcode per doelsoort voor 2022-2023. De linker y-as toont het aantal tellingen in De Moeren en de rechter y-as het aantal in de Oostelijke leemstreek."}
 include_graphics(file.path("media", "data_exploratie",
                            "broedcode_mas_2022_2023.pdf"))
 ```
@@ -86,7 +86,7 @@ $$
 Waarbij $N$ het totaal aantal telpunten is in een bepaalde telperiode, jaar en regio en $n_i$ het aantal individuen van de beschouwde soort waargenomen aan telpunt $i$.
 $I(\cdot)$ is de indicatorfunctie die 1 geeft als $n_i > 0$ en 0 anderzijds.
 We selecteerden enkel waarnemingen met broedcode groter dan nul.
-Voor roofvogels hielden we geen rekening met broedcode, \textcolor{red}{omdat?}.
+Voor roofvogels hielden we geen rekening met broedcode, omdat we voor deze soorten meer algemeen geïnteresseerd zijn in predatiedruk op de akkervogels.
 
 Figuur \@ref(fig:relfreqs-2018-2021) toont de relatieve frequenties van de 20 meest frequente soorten tussen 2018-2021 (gemiddeld per telperiode, jaar en regio).
 Tijdens het pilootproject (2022-2023) zien we andere soorten naar voor komen en ook lagere frequenties (Fig. \@ref(fig:relfreqs-2022-2023)).
@@ -419,9 +419,9 @@ Het aandeel oppervlakte van elke subklasse kleine landschapselementen binnen de 
 De kaartlaag is vrij verkrijgbaar via @landschapselementen.
 De verschillende subklasses zijn: (1) bomengroep, (2) bomenrij, (3) boom, (4) bosrand, (5) haag, (6) houtkant.
 
-**6. Perceelsgrootte (mediaan, IQR en CV)**\
-Mediaan, interkwartielafstand (IQR) en variatiecoëfficiënt (CV) van groottes van percelen die overlappen met telcirkels (Fig. \@ref(fig:perceelsgrootte-methode)).
-De CV is de IQR gedeeld door de mediaan.
+**6. Perceelsgrootte (mediaan, IQR en robuuste CV)**\
+Mediaan, interkwartielafstand (IQR) en robuuste variatiecoëfficiënt (CV) van groottes van percelen die overlappen met telcirkels (Fig. \@ref(fig:perceelsgrootte-methode)).
+De robuuste CV is de IQR gedeeld door de mediaan.
 Een perceel is de combinatie van aaneenliggende landbouwgebruikspercelen met dezelfde hoofdteelt.
 We gebruikten hiervoor dus opnieuw de kaartlaag van landbouwgebruikspercelen.
 
@@ -545,7 +545,7 @@ We behielden voor de bivariate exploratie enkel de proportie afwezige voorteelt.
 
 Zowel de Pearsons als Spearman correlatiematrices toonden gelijkaardige patronen (Fig. \@ref(fig:corrmat1)).
 De Spearman correlatie gaf gelijkaardige resultaten, maar alle correlaties waren sterker.
-De Pearson correlatie tussen twee variabelen zal hoog zijn wanneer waarnemingen een positief lineair verband vertonen en laag wanneer ze een positief lineair verband vertonen.
+De Pearson correlatie tussen twee variabelen is een waarde tussen -1 en +1. Een correlatie rond 0 duidt op lineaire onafhankelijkheid. Een sterk positieve correlatie zien we wanneer variabelen een sterk positief lineair verband vertonen en een sterk negatieve correlatie zien we wanneer ze een sterk negatief lineair verband vertonen.
 De Spearman correlatie tussen twee variabelen zal hoog zijn wanneer waarnemingen een vergelijkbare (of identieke) rangorde hebben tussen de twee variabelen, en laag wanneer waarnemingen een ongelijke (of volledig tegengestelde) rangorde hebben tussen de twee variabelen.
 
 De openheidsvariabele was negatief gecorreleerd met de variabelen van de kleine landschapselementen.
@@ -580,12 +580,12 @@ Alle uitspraken voor `..hfdtlt` gelden ook voor `..hfdtlt_pre`:
 De nieuwe Pearson correlatiematrix is gevisualiseerd in Figuur \@ref(fig:corrmat2).
 Een PCA toonde gelijkaardige resultaten.
 
-```{r corrmat1, out.width = "100%", fig.cap = "Pearson correlatiematrix tussen continue variabelen die overbleven na univariate data exploratie. We visualiseren enkel correlaties sterker of gelijk aan 0,2."}
+```{r corrmat1, out.width = "100%", fig.cap = "Pearson correlatiematrix tussen continue variabelen die overbleven na univariate data exploratie. We visualiseren enkel correlaties sterker of gelijk aan 0,2 in absolute waarde."}
 include_graphics(file.path("media", "verklarende_variabelen",
                            "corrmat1.pdf"))
 ```
 
-```{r corrmat2, out.width = "100%", fig.cap = "Pearson correlatiematrix tussen continue variabelen die overbleven na univariate en bivariate data exploratie. We visualiseren enkel correlaties sterker of gelijk aan 0,2."}
+```{r corrmat2, out.width = "100%", fig.cap = "Pearson correlatiematrix tussen continue variabelen die overbleven na univariate en bivariate data exploratie. We visualiseren enkel correlaties sterker of gelijk aan 0,2 in absolute waarde."}
 include_graphics(file.path("media", "verklarende_variabelen",
                            "corrmat2.pdf"))
 ```
@@ -800,7 +800,7 @@ Alle vier de verschillende telperiodes vallen binnen het broedseizoen van de soo
 
 Voor (1) beschouwden we alle telpunten van 2018-2021 en voegden enkel telpunten van 2022 en 2023 toe als ze minstens eenmaal geteld waren in een van de voorgaande jaren.
 Om abundanties te schatten, moesten we de oppervlakte van de regio's berekenen voor extrapolatie.
-We trokken daarvoor een buffer van 300 m rond het steekproefkader: OL in De Moeren, en OL en HOL in de Oostelijke leemstreek (Fig. \@ref(fig:oppervlakte-steekproefkader-jaar)).
+We trokken daarvoor een buffer van 300 m rond alle potentiële telpunten uit het steekproefkader: OL in De Moeren, en OL en HOL in de Oostelijke leemstreek (Fig. \@ref(fig:oppervlakte-steekproefkader-jaar)).
 Voor de formulatie van de detectiefunctie beschouwden we half-normal en hazard-rate sleutelfuncties die we lieten afhangen van covariaten regio en jaar.
 
 ```{r oppervlakte-steekproefkader-jaar, out.width = "90%", fig.cap = "Oppervlaktes per regio voor berekening densiteiten per jaar per regio."}
@@ -812,7 +812,7 @@ Voor (2) beschouwden we enkel de tellingen binnen het pilootproject (alle telpun
 We trokken daarvoor ook een buffer van 300 m rond het steekproefkader, deze keer opgesplitst per stratum (Fig. \@ref(fig:oppervlakte-steekproefkader-stratum)).
 Voor de formulatie van de detectiefunctie beschouwden we half-normal en hazard-rate sleutelfuncties die we lieten afhangen van covariaten regio, openheid (HOL of OL) en sbp (binnen of buiten sbp).
 Analyses werden voor 2022 en 2023 apart gedaan.
-Dit was puur om wille van tijdsoverwegingen, maar dit kan ook in eenzelfde analyse worden gedaan (zoals we in (1) doen).
+Dit was puur omwille van tijdsoverwegingen, maar dit kan ook in eenzelfde analyse worden gedaan (zoals we in (1) doen).
 Het gevolg is dat de detectiekansen dus zeker zullen verschillen tussen de jaren ook al beschouwden we jaar niet als covariant in de detectiefunctie.
 
 ```{r oppervlakte-steekproefkader-stratum, out.width = "100%", fig.cap = "Oppervlaktes per regio voor berekening densiteiten per stratum per regio."}
@@ -1240,7 +1240,7 @@ nc2_kneu <- sum_kneu_2023$ds$Nhat
 pa_kneu <- round((n1_kneu + n2_kneu) / (nc1_kneu + nc2_kneu), 2)
 ```
 
-Het is ook mogelijk om densiteiten in te berekenen o.b.v. het maximum aantal broedparen over de telperiodes heen per telpunt per jaar.
+Het is ook mogelijk om densiteiten te berekenen o.b.v. het maximum aantal broedparen over de telperiodes heen per telpunt per jaar.
 Dit kan dan omgerekend worden naar densiteiten per stratum door het gemiddelde nemen per stratum en daarna te delen door de oppervlakte van een telcirkel.
 Via bootstrapping kan een betrouwbaarheidsinterval bekomen worden.
 De maxima komen voor Veldleeuwerik goed overeen met de resultaten van distance sampling (Fig. \@ref(fig:densiteit-methodiek-veldleeuw)).
@@ -1417,16 +1417,16 @@ Deze info kan dan gebruikt worden om de onzekerheid op clusterniveau te bepalen.
 Een tweede mogelijkheid is om andere methodes en R packages te bekijken die dergelijke berekeningen integraal uitvoeren.
 Ook deze mogelijkheden zullen in een later stadium onderzocht moeten worden.
 
-### Correlaties met verklarende variabelen {#beheerovereenkomsten}
+### Modellering in functie van verklarende variabelen {#beheerovereenkomsten}
 
-#### Inleiding correlaties
+#### Inleiding modellering
 
 De resultaten van distance sampling gaven al een beeld van het verschil binnen versus buiten soortbeschermingsplan (SBP).
 We hadden ook een continue variabele die het oppervlakte soortbeschermingsmaatregelen in elke telcirkel aangeeft.
 Deze variabele kan meer informatie kan bevatten waardoor correlatieve analyses in deze context ook interessant konden zijn.
-Ook kunnen we binnen dit kader correlaties met andere variabelen onderzoeken die we in Sectie \@ref(verklarende-variabelen) besproken hebben.
+Ook kunnen we binnen dit kader relaties met andere variabelen onderzoeken die we in Sectie \@ref(verklarende-variabelen) besproken hebben.
 
-#### Materiaal en methoden correlaties
+#### Materiaal en methoden modellering
 
 We selecteerden de data van 2022-2023 van Veldleeuwerik met broedcode groter dan nul.
 Dit omdat we vermoedden dat de meer beperkte data van voor het pilootproject mogelijke effecten/trends zou vertroebelen in deze context.
@@ -1490,10 +1490,10 @@ Beide modellen werden vergeleken visueel via *PPCs* en o.b.v. het verschil in *E
 Voor de nabewerking en visualisatie van de resultaten hebben we gebruik gemaakt van de functionaliteiten uit de **tidybayes** package [@R-tidybayes].
 We rapporteren steeds de posterior mediaan van $exp(\beta_j) - 1$ als maat voor het centrale tendens van variabele $x_j$, en de standaard deviatie (= standaardfout) en 95 % geloofwaardigheidsinterval als maat voor onzekerheid.
 Samenvattende statistieken van de verklarende variabelen zijn gegeven in Bijlage \@ref(mean-sd-contvars).
-Aangezien we geen interacties beschouwen zijn de trends gelijk voor alle categorieën van categorische variabelen.
+Aangezien we geen interacties beschouwen, zijn de trends gelijk voor alle categorieën van categorische variabelen.
 We definieerden een positief verschil als de ondergrens van het 95 % geloofwaardigheidsinterval groter is dan nul, een negatief verschil als de bovengrens kleiner is dan nul, een stabiel (geen) verschil als het geloofwaardigheidsinterval nul bevat maar binnen de referentiewaarden valt (tussen toename van 25 % en afname van 20 %) en een onzeker verschil als het geloofwaardigheidsinterval nul en ten minste een van de referentiewaarden bevat [@onkelinx2023].
 
-#### Resultaten correlaties De Moeren
+#### Resultaten modellering De Moeren
 
 De voorspellende kracht van het model voor De Moeren bereikte reeds een maximum bij twee variabelen (Fig. \@ref(fig:ranking-dm-veldleeuw)).
 Naast de vaste `area_prop_sb_cat` hebben we nog de variabele `boom` die in 100 % van de *cross-validation folds* aanwezig was (Fig. \@ref(fig:cvprop-dm-veldleeuw)).
@@ -1572,7 +1572,7 @@ include_graphics(file.path("media", "beheerovereenkomsten",
                            "boom_veldleeuwerik_data.pdf"))
 ```
 
-#### Resultaten correlaties Oostelijke leemstreek
+#### Resultaten modellering Oostelijke leemstreek
 
 De voorspellende kracht van het model voor de Oostelijke leemstreek neemt niet meer toe na negen variabelen (Fig. \@ref(fig:ranking-ol-veldleeuw)).
 Naast de vaste `area_prop_sb_cat` hebben we nog de variabelen `openheid_waarde_1000`, `haag`, `houtkant`, `bomenrij`, `bosrand` en `boom` die in 100 % van de *cross-validation folds* aanwezig waren bij deze submodelgrootte en `meerjarige_fruitteelt_hfdtlt` en `grasland_hfdtlt_pre` in 80 % (Fig. \@ref(fig:cvprop-ol-veldleeuw)).
@@ -1653,7 +1653,7 @@ include_graphics(file.path("media", "beheerovereenkomsten",
                            "openheid_waarde_1000_veldleeuwerik_data.pdf"))
 ```
 
-#### Discussie correlaties
+#### Discussie modellering
 
 Zowel in De Moeren als in de Oostelijke leemstreek zien we een groter maximum aantal broedparen per telcirkel als de proportie soortbeschermingsmaatregelen groter is.
 Dit verschil is onzeker in klasses met weinig data.
@@ -1668,7 +1668,7 @@ Anderzijds zijn de andere continue variabelen zelf negatief gecorreleerd met ope
 Zowel eerdere Vlaamse als Nederlandse studies over akkervogels toonden dergelijke verbanden [@dochy2005; @dochy2021; @klaassen2022; zie ook @agentschapvoornatuurenbos2021].
 Enkel het oppervlakte-aandeel hoofdteelt grasland van het jaar ervoor (`grasland_hfdtlt_pre`) in de Oostelijke leemstreek is niet sterk gecorreleerd met `openheid_waarde_1000`, maar toonde wel een positieve correlatie met hagen, houtkanten, bomen en bomenrijen (\@ref(fig:corrmat2)).
 Hoofdteelt grasland bevat een range van meer en minder intensieve graslandtypes (Tabel \@ref(tab:hftlt-groepen)).
-Meer gedetailleerde data hieromtrent (bv. veranderingen doorheen het jaar) zou allicht beter kunnen verklaren waarom we deze negatieve correlatie met het maximum aantal broedparen zien.
+Meer gedetailleerde data hieromtrent (bv. veranderingen doorheen het jaar) zou allicht beter kunnen verklaren waarom we een afname zien van het maximum aantal broedparen met het oppervlakte-aandeel hoofdteelt grasland van het jaar ervoor.
 
 Uit de resultaten blijkt dat PPVS een werkbaren methode is om relevante variabelen te selecteren.
 Het grootste nadeel is dat deze methode veel rekentijd vraagt, maar met de juiste instellingen, is het mogelijk dit te beperken (voornamelijk het gebruik van *5-fold cross-validation* i.p.v. *leave-one-out cross-validation* en het standaardiseren van de data).
