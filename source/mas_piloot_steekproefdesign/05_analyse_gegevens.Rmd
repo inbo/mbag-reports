@@ -320,7 +320,7 @@ Dit is dezelfde kaartlaag als bij de soortbeschermingsmaatregelen maar een ander
 206 aparte hoofdteelten werden gegroepeerd in 20 gewasgroepen (Tabel \@ref(tab:hftlt-groepen)).
 Het aandeel oppervlakte van elke gewasgroep binnen de telcirkels werd berekend per jaar.
 We verwijderden de polygonen die tot de beheerovereenkomstenlaag (zie hierboven) behoren.
-Indien twee polygonen met verschillende teelten overlapten in de kaarlaag, telde die oppervlakte voor elke teelt maar voor 50 % mee.
+Indien twee polygonen met verschillende teelten overlapten in de kaartlaag, telde die oppervlakte voor elke teelt maar voor 50 % mee.
 De kaartlaag van de landbouwgebruikspercelen is vrij verkrijgbaar via @landbouwgebruikspercelen.
 De gebruikte kaart voor 2023 was nog niet definitief (extractie 26-06-2023: dit is de voorlopige toestand van de percelen op die datum).
 
@@ -434,7 +434,7 @@ include_graphics(file.path("media", "verklarende_variabelen",
 Gewogen gemiddelde van jaar sinds implementatie soortbeschermingsmaatregelen per telcirkel.
 
 -   Geen beheerovereenkomst: 0
--   Wel beheerovereekomst: Gewogen (oppervlakte beheerovereenkomst) gemiddelde van
+-   Wel beheerovereenkomst: Gewogen (oppervlakte beheerovereenkomst) gemiddelde van
     -   1: start beheerovereenkomst in zelfde jaar als telling
     -   2: start beheerovereenkomst 1 jaar vóór telling
     -   3: start beheerovereenkomst 2 jaar vóór telling
@@ -543,7 +543,7 @@ We behielden voor de bivariate exploratie enkel de proportie afwezige voorteelt.
 
 ### Bivariate exploratie
 
-Zowel de Pearsons als Spearman correlatiematrices toonden gelijkaardige patronen (Fig. \@ref(fig:corrmat1)).
+Zowel de Pearson als Spearman correlatiematrices toonden gelijkaardige patronen (Fig. \@ref(fig:corrmat1)).
 De Spearman correlatie gaf gelijkaardige resultaten, maar alle correlaties waren sterker.
 De Pearson correlatie tussen twee variabelen is een waarde tussen -1 en +1. Een correlatie rond 0 duidt op lineaire onafhankelijkheid. Een sterk positieve correlatie zien we wanneer variabelen een sterk positief lineair verband vertonen en een sterk negatieve correlatie zien we wanneer ze een sterk negatief lineair verband vertonen.
 De Spearman correlatie tussen twee variabelen zal hoog zijn wanneer waarnemingen een vergelijkbare (of identieke) rangorde hebben tussen de twee variabelen, en laag wanneer waarnemingen een ongelijke (of volledig tegengestelde) rangorde hebben tussen de twee variabelen.
@@ -556,12 +556,12 @@ Dan zal het landschap inderdaad meer open zijn.
 We zagen wel dat de verbanden niet altijd lineair zijn.
 
 De mediaan en interkwartielafstand van perceelsgroottes waren sterk gecorreleerd.
-Ook de gewasdiversiteit (Shannon en absolute aantal gewassen) waren op dezelfde laag van de perceelsgroottes gebasseerd en we zien een sterke negatieve correlatie, maar niet met de variatiecoëfficient.
+Ook de gewasdiversiteit (Shannon en absolute aantal gewassen) waren op dezelfde laag van de perceelsgroottes gebaseerd en we zien een sterke negatieve correlatie, maar niet met de variatiecoëfficiënt.
 De eveness maat is ook gecorreleerd met de gewasdiversiteitmaten.
 Alle uitspraken voor `..hfdtlt` gelden ook voor `..hfdtlt_pre` (hoofdteelt jaar ervoor).
 Hun overeenkomstige correlaties zijn hier niet van belang.
 Proportie hagen en meerjarige fruitteelt waren vrij sterk positief gecorreleerd.
-Verder zagen we nog dat er minder hagen, houkanten en bomen zijn als de gewaseveness toeneemt, als er meer afwezigheid is aan voorteelten en als percelen gemiddeld groter zijn.
+Verder zagen we nog dat er minder hagen, houtkanten en bomen zijn als de gewaseveness toeneemt, als er meer afwezigheid is aan voorteelten en als percelen gemiddeld groter zijn.
 Hagen, houtkanten en bomen waren onderling positief gecorreleerd.
 Aantal predatorsoorten en individuen waren ook positief gecorreleerd.
 
