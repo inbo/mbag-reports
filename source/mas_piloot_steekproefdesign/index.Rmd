@@ -107,3 +107,32 @@ if (interactive()) {
   )
 }
 ```
+
+```{r googledrive, include = FALSE}
+# authenticatie google drive
+library(googledrive)
+googledrive::drive_auth(email = "*@inbo.be")
+
+# source functie om figuren te downloaden van google drive
+source("../include_from_drive.R")
+
+# google drive verwijzing naar figuren
+sdf <- shared_drive_find("PRJ_MBAG") %>%
+  drive_ls(pattern = "4a_mas", type = "folder") %>%
+  drive_ls(pattern = "rapporten", type = "folder") %>%
+  drive_ls(pattern = "mas_piloot_steekproefdesign", type = "folder") %>%
+  drive_ls(pattern = "media", type = "folder")
+
+figs <- sdf %>%
+  drive_ls(recursive = TRUE) %>%
+  drive_reveal(what = "webViewLink") %>%
+  drive_reveal(what = "webContentLink") %>%
+  drive_reveal(what = "path") %>%
+  drive_reveal(what = "fileExtension")
+
+# get figures from google drive
+# set overwrite = TRUE if necessary!
+for (file_name in figs$name) {
+  include_from_drive(name = file_name, figures = figs, overwrite = FALSE)
+}
+```
