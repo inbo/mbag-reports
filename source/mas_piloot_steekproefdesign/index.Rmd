@@ -124,7 +124,7 @@ sdf <- shared_drive_find("PRJ_MBAG") %>%
   drive_ls(pattern = "media", type = "folder")
 
 figs <- sdf %>%
-  drive_ls(recursive = TRUE, type = c("pdf", "jpg", "png", "rds")) %>%
+  drive_ls(recursive = TRUE) %>%
   drive_reveal(what = "webViewLink") %>%
   drive_reveal(what = "webContentLink") %>%
   drive_reveal(what = "path") %>%
