@@ -209,9 +209,6 @@ Onder kleinschalig landschap verstaat men een landschap waar de percelen relatie
 De manier waarop we openheid van het landschap hebben bepaald laat niet toe om KLA te bepalen zonder bijkomende berekeningen.
 KLA zullen een subset zijn van wat wij HOL noemen, met name HOL waar de gemiddelde perceelsgrootte relatief klein is.
 
-Naast bovenstaande stratificaties, hebben we ook nog het **oppervlakte-aandeel aan soortbeschermingsmaatregelen** berekend (toestand beheerovereenkomsten 2021) omdat we kunnen verwachten dat die gerelateerd zijn met de relatieve populatiegroottes van de akkervogels en omdat we graag willen leren vanaf welk minimaal oppervlakte-aandeel er positieve effecten te verwachten zijn.
-Deze oppervlakte brengen we mee in rekening bij de steekproeftrekking (zie \@ref(piloot-steekproefgrootte)).
-
 ### Steekproefgrootte, allocatie steekproefgrootte over strata en steekproeftrekking {#piloot-steekproefgrootte}
 
 De **steekproefgrootte** voor de Oostelijke Leemstreek en De Moeren hebben we voor de pilootfase laten afhangen van een *a priori* inschatting van wat er haalbaar was met professionelen en vrijwilligers.

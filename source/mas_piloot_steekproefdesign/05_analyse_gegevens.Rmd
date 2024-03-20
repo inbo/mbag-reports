@@ -310,7 +310,7 @@ Een overzicht wordt gegeven in Tabel \@ref(tab:verklarende-vars-tab).
 
 **1. Oppervlakte-aandeel soortbeschermingsmaatregelen**\
 Het aandeel oppervlakte aan beheerovereenkomsten (soortbeschermingsmaatregelen) binnen de telcirkels per jaar.
-De kaartlaag voor de beheerovereenkomsten werd aangevraagd via de Vlaamse Landmaatschappij (VLM) en is niet openlijk beschikbaar.
+De kaartlaag voor de beheerovereenkomsten werd aangevraagd via de Vlaamse Landmaatschappij (VLM, versie 2022) en is niet openlijk beschikbaar.
 
 **2. Oppervlakte-aandeel erosiebeheer en bufferstroken**\
 Het aandeel oppervlakte aan beheerovereenkomsten (erosiebeheer en bufferstroken) binnen de telcirkels per jaar.

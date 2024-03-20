@@ -160,10 +160,7 @@ include_graphics(file.path("media", "visibility",
                            "voorbeeld_zichtbaarheid.pdf"))
 ```
 
-5.  Berekening oppervlakte-aandeel beheerovereenkomsten\
-    Gebruik kaartlaag VLM van 2022 in plaats van 2021.
-
-6.  Binnen of buiten gebieden met soortbeschermingsplan\
+5.  Binnen of buiten gebieden met soortbeschermingsplan\
     \textcolor{red}{Johannes uitschrijven, hier staat alvast een samenvatting uit mailcommunicatie} Zowel binnen kerngebied als zoekzones zijn er soortbeschermende maatregelen (SB BO's) gelegd (zie kaart VLM BO's).
     In theorie waren deze maatregelen vooral bedoeld voor kerngebied, en zal daar een hogere dichtheid (bedekkingsgraad) liggen, maar de VLM heeft het toegelaten om ook in zoekzones deze maatregelen te sluiten (al was dat minder de prioriteit).
     Daar werd bv.
@@ -189,6 +186,10 @@ Kaartlagen per soort zijn gevisualiseerd in Bijlage \@ref(bijlage-uitrol-mas) (F
 ```{r sbp-zandleem, out.width = "100%", fig.cap = "Perimeters van leemstreek en de zandleemstreek met aanduiding van het gebied binnen en buiten soortbeschermingsplan (SBP)."}
 include_graphics(file.path("media", "kaartjes", "sbp_mbag_kaart.png"))
 ```
+
+6.  Berekening oppervlakte-aandeel beheerovereenkomsten\
+    Naast de stratificaties, berekenen we tevens het oppervlakte‐aandeel aan soortbeschermingsmaatregelen (zie \@ref(prim-verklarende-variabelen)), omdat we kunnen verwachten dat die gerelateerd zijn met de relatieve populatiegroottes van de akkervogels en omdat we graag willen leren vanaf welk minimaal oppervlakte‐aandeel er positieve effecten te verwachten zijn.
+    Deze variabele brengen we mee in rekening bij de steekproeftrekking zodat we niet alleen een ruimtelijk gebalanceerde steekproef krijgen, maar ook een gebalanceerde steekproef in functie van deze variabele.
 
 7.  Steekproeftrekking\
     Omdat we nu met veel grotere gebieden werken, merkten we wel dat een maximale trekking niet voor een goede spatiale spreiding zorgt omdat het algoritme niet genoeg vrijheid krijgt.
