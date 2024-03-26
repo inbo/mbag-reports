@@ -32,7 +32,7 @@ In Sectie \@ref(dubbeltellingen) toonden we aan dat vrijwilligers een significan
 We vonden geen bewijs dat dit verschil anders was tussen data met broedcode 0 en broedcode \> 0, noch afhankelijk van de ervaring van de vrijwilligers (beginnende versus ervaren vrijwilligers).
 We moeten onderkennen dat dit slechts een beperkte analyse was en deze resultaten niet indicatief zijn voor het volledige pilootproject.
 Er werden tien telpunten in vier telperiodes en één telpunt in drie telperiodes dubbelgeteld van zeven vrijwilligers door een professionele teller en dit enkel in De Moeren.
-Dit neemt niet weg dat deze resultaten een nuttige indicatie zijn dat er moet blijven ingezet worden op doorlopende enthousiasmering en training van vrijwilligers bijvoorbeeld via gezamelijke excursies en studiedagen.
+Dit neemt niet weg dat deze resultaten een nuttige indicatie zijn dat er moet blijven ingezet worden op doorlopende enthousiasmering en training van vrijwilligers bijvoorbeeld via gezamenlijke excursies en studiedagen.
 Dit wordt verder besproken in Sectie \@ref(vrijwilligers-mbag) \textcolor{red}{zie ook de tijdlijn Fig. ...)}.
 
 Wanneer we de data meer in detail gingen analyseren, bleek duidelijk dat deze pilootstudie een rijke bron van data is.

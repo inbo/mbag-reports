@@ -262,7 +262,7 @@ Achteraf is deze regel versoepeld en zijn ook bestaande punten die op iets grote
 ### Manuele controle {#manuele-controle}
 
 De steekproef werd geëxporteerd naar een *KML*-bestand en gedeeld als een kaart in Google Maps met de tellers.
-Deze potentiële punten werden dan een voor een gescreend op bereikbaarheid en zichtbarheid.
+Deze potentiële punten werden dan een voor een gescreend op bereikbaarheid en zichtbaarheid.
 Op basis van satellietbeelden en Google Street View (waar beschikbaar) werd nagegaan of de plek effectief bereikbaar was.
 Hierbij werden punten op paden of wegen die duidelijk ontoegankelijk waren (afgesloten met een hek, op privéterrein of op een militair domein of naast een vliegveld) verwijderd.
 Om de efficiëntie van de tellingen te bewaken, werd ook verzekerd dat een telpunt bereikbaar is met een wagen, of niet verder dan 300 m te voet vanaf een parkeerplaats.

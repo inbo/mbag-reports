@@ -239,7 +239,7 @@ read_csv(file.path("media", "distance", "per_stratum",
 
 Enkele samenvattende statistieken van de verklarende variabelen voor de correlatieve modellen van de Veldleeuwerik in De Moeren en Oostelijke leemstreek van 2022-2023.
 Oppervlaktevariabelen zijn proporties tussen nul en een.
-"sd" staat voor standaarddeviatie, "Q25" voor het 25 % quantiel en "Q75" voor het 75 % quantiel.
+"sd" staat voor standaarddeviatie, "Q25" voor het 25 % kwantiel en "Q75" voor het 75 % kwantiel.
 
 ```{r}
 data_stats_veldleeuwerik <- read_csv(
