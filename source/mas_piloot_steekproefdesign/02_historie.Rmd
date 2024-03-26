@@ -1,16 +1,1 @@
 # Historie akkervogelmeetnetten {#historie}
-
--   Projecten
-    -   ABV
-    -   MAS
-        -   Plan Kiekendief
-        -   Plan Leeuwerik
-        -   Akkervogelonderzoek UHasselt
--   Telling vogels
-    -   ABV (Veldprotocol, steekproefontwerp)
-    -   MAS (Veldprotocol, steekproefontwerp)
--   Andere indicatoren (niet relevant?)
--   Lessons learned buitenland
-    -   MAS Nederland
-    -   UK
-    -   ...
