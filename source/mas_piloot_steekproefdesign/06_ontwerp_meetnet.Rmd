@@ -49,7 +49,7 @@ Naast een minimum oppervlakte moet natuurlijk ook gewaarborgd worden dat het sub
 ## Uitbreiding van het akkervogelmeetnet voor Vlaanderen {#uitbreiding-vlaanderen}
 
 Het idee is om in de komende jaren het MAS-meetnet uit te breiden over de verschillende landbouwstreken in Vlaanderen (Hoofdstuk \@ref(pilootgegevens), Fig.
-\@ref(fig:landbouwstreken)) met uitzondering van de Duinen en de Weidestreek.
+\@ref(fig:landbouwstreken)).
 In 2023 zijn we reeds gestart met de leemstreek en de zandleemstreek.
 
 ### Aanpassingen ten opzichte van het pilootmeetnet {#aanpassingen-meetnet}

@@ -21,8 +21,7 @@ Engelstalige termen worden in cursief aangeduid.
 
 De volgende resultaten betreffen vogels.
 Zoogdieren worden besproken in Sectie \@ref(exploratie-zoogdieren).
-Binnen het pilootmeetnet worden al sinds 2018 tellingen verricht.
-\textcolor{red}{plan kiekendief ...} Zoals besproken in Sectie \@ref(piloot-overlap), zijn een aantal van deze punten hergebruikt bij de steekproeftrekking voor deze pilootstudie.
+\textcolor{red}{Sinds 2018 worden in het kader van plan kiekendief MAS tellingen uitgevoerd, in dezelfde deelgebieden waar deze piloot studie zich op richt.} Zoals besproken in Sectie \@ref(piloot-overlap), zijn een aantal van deze punten hergebruikt bij de steekproeftrekking voor deze pilootstudie.
 Verder zijn er sinds de pilootstudie (sinds 2022) veel telpunten bijgekomen in De Moeren en de Oostelijke leemstreek (Tabel \@ref(tab:samenvatting-aantallen)).
 De meeste telpunten werden vier maal per jaar bezocht (Fig. \@ref(fig:telintensiteit)).
 Figuren \@ref(fig:aantal-waarnemingen) en \@ref(fig:aantal-soorten) geven een meer gedetailleerd beeld van de verdelingen van respectievelijk het aantal waarnemingen en soorten per jaar.
@@ -1685,4 +1684,3 @@ Zo kan een vogel in een bepaald perceel met een bepaalde hoofdteelt worden geobs
 Nu aggregeren we de informatie van al die percelen op telcirkelniveau waarbij we deze informatie koppelen aan die observatie, zonder de exacte locatie van de observatie zelf te bekijken.
 Minder aggregeren betekend meer data waardoor we meer subtiele verbanden kunnen waarnemen.
 Dit moet echter in evenwicht zijn met de complexiteit van de modellen en de tijd die nodig is om deze te fitten.
-
