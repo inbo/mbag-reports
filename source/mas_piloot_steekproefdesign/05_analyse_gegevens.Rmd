@@ -1339,7 +1339,7 @@ met
 <!-- spell-check: ignore:start -->
 
 $$
-\ln(\lambda_{jk}) = \beta_0 + f(x_j, y_j) + b_{0,j} + b_{1,j:t} + \ln(p_s) + \ln\left(\frac{A_{telcirkel}}{10^6\ \text{m}^2/100\ \text{ha}}\right)
+\ln(\lambda_{jk}) = \beta_0 + f(x_j, y_j) + b_{0,j} + b_{1,j:k} + \ln(p_s) + \ln\left(\frac{A_{telcirkel}}{10^6\ \text{m}^2/100\ \text{ha}}\right)
 $$
 
 <!-- spell-check: ignore:end -->
