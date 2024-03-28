@@ -48,7 +48,7 @@ site: bookdown::bookdown_site
 year: 2024
 reportnr: 1
 cover_photo: cover.jpg
-cover: cover.jpg
+#cover: cover.pdf
 cover_description: Gele kwikstaart (_Motacilla flava_). (© Johannes Jansen)
 header-includes:
   - \usepackage[left]{lineno}
@@ -162,4 +162,3 @@ for (file_name in figs$name) {
   include_from_drive(name = file_name, figures = figs, overwrite = FALSE)
 }
 ```
-
