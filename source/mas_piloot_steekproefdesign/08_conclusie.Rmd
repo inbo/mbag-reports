@@ -1,1 +1,23 @@
 # Conclusies {#conclusie}
+
+-   Potentieel van MAS methodiek aangetoond
+-   Relatie stijging areaal BOs en akkervogelpopulaties nog niet aantoonbaar
+    -   Belang controlegebieden aangetoond
+    -   Belang opschaling en continuering aangetoond
+-   Nood aan effectiviteitsmonitoring en micro-onderzoek
+-   GLB middelen voorzien hiervoor
+
+\textcolour{red}{nog uitschrijven, voorstel van Peter om advocaat van de duivel te spelen: "Zeg ook op welke vragen je wél kan beantwoorden." voorbeeld hieronder}
+
+Er zijn al initiatieven geweest om de effectiviteit van beheerovereenkomsten aan te tonen.
+Wanneer zal het MAS meetnet dit kunnen bewerkstelligen?
+
+Het MAS meetnet Vlaanderen is opgevat als een Before-After Control-Impact (BACI) design, een methode om veranderingen te evalueren als gevolg van een interventie, zoals het implementeren van beheerovereenkomsten.
+Met dit ontwerp kunnen we controlegebieden evalueren die niet zijn onderworpen aan de interventie, waardoor we een betrouwbare vergelijking kunnen maken.
+Om de effectiviteit van beheerovereenkomsten voor akkervogels aan te tonen, is het noodzakelijk het meetnet gedurende minstens vijf jaar te onderhouden.
+Door deze langdurige monitoring kunnen we de trends in de populaties van akkervogels nauwkeurig volgen en eventuele veranderingen correleren met de implementatie van de beheerovereenkomsten.
+Daarnaast is een gedetailleerde analyse op waarnemingpuntniveau van cruciaal belang.
+Dit houdt in dat we niet alleen kijken naar de algemene trends in de akkervogelpopulaties, maar ook naar specifieke observaties linken aan percelen waar de beheerovereenkomsten zijn toegepast.
+Door deze gegevens op puntbasis te analyseren, kunnen we nauwkeuriger bepalen welke effecten het beheer heeft op de aanwezigheid en het gedrag van akkervogels in die specifieke gebieden.
+De combinatie van de aanduiding van controlegebieden, een opschaling en continuering van de studie, en analyses op zowel telpunt als observatieniveau, maken deze studie uniek en het meest geschikt om statistisch bewijs te leveren voor de effectiviteit van beheerovereenkomsten voor akkervogels (en Haas).
+
