@@ -42,14 +42,17 @@ community: "inbo"
 publication_type: report
 funder: Instituut voor Natuur- en Bosonderzoek (INBO)
 rightsholder: Instituut voor Natuur- en Bosonderzoek (INBO)
-bibliography: [references.json, references.bib, layers.bib]
+bibliography: [software.bib, references.bib, layers.bib]
 link-citations: TRUE
 site: bookdown::bookdown_site
 year: 2024
 reportnr: 1
 cover_photo: cover.jpg
-cover: cover.jpg
+#cover: cover.pdf
 cover_description: Gele kwikstaart (_Motacilla flava_). (© Johannes Jansen)
+header-includes:
+  - \usepackage[left]{lineno}
+  - \linenumbers
 output:
   INBOmd::gitbook: default
   INBOmd::pdf_report: default
@@ -62,7 +65,30 @@ output:
 
 # Dankwoord {.unnumbered}
 
-Deze studie is tot stand gekomen dankzij een samenwerkingsovereenkomst tussen het INBO en
+Deze studie is tot stand gekomen dankzij een samenwerkingsovereenkomst tussen de Vlaamse Landmaatschappij, het Agentschap Natuur en Bos, het Agentschap Landbouw en Zeevisserij en het Instituut voor Natuur- en Bosonderzoek.
+We willen deze instanties bedanken voor de steun, de middelen en de expertise.
+In het bijzonder willen we de PDPO-steun bedanken, die via de Vlaamse Landmaatschappij werd aangebracht.
+De samenwerkingsovereenkomst werd opgestart in januari 2022.
+
+De eerste stappen die tot deze pilootstudie hebben geleid werden echter al eerder gezet, met name in het kader van plan kiekendief.
+Dit soortbeschermingsplan voor de grauwe kiekendief in Vlaanderen had onder andere de opdracht om de voedselbeschikbaarheid van deze soort in kaart te brengen en op te volgen, waarvoor binnen de perimeter van dit plan een meetnet werd uitgerold.
+Onze dankbaarheid gaat uit naar de drijvende krachten achter dit plan, zowel instanties ANB en VLM, als de partner organisaties Regionaal Landschap Zuid-Hageland, Werkgroep Grauwe Gors en Kenniscentrum Akkervogels Grauwe Kiekendief.
+In het bijzonder gaat onze dank uit naar de vrijwilligers die sinds 2018 tellingen uitvoeren en zoekwerk verrichten, om zowel grauwe kiekendieven als hun prooi op te volgen.
+Deze groep vrijwilligers is langzaam maar zeker gegroeid, en blijft een vaste waarde binnen de onderzoeksgebieden die we voor deze pilootstudie verder konden blijven betrekken, waarvoor een grote merci!
+
+Ook de aanbeveling in het soortbeschermingsplan akkervogels stelde de noodzaak van monitoring terecht aan de kaak.
+We willen daarbij iedereen bedanken die aan dit plan heeft meegewerkt, de goedkeuring ervan in december 2021 heeft dit werk bekrachtigd.
+
+De samenwerking met onze Nederlandse collega’s van zowel Kenniscentrum akkervogels Grauwe Kiekendief als SOVON verliep heel joviaal, we konden op flexibel raad en daad krijgen.
+
+Als we er een aantal van de reeks hierboven met naam noemen, zijn Koen Devos, Myriam Dumortier, Peter Van Gossum, Ben Koks, Popko Wiersma en Freek Verdonckt sleutelfiguren geweest om deze pilootstudie tot stand te brengen, alsook Dirk Zoetebier en Bernice Goffin voor de effectieve uitrol.
+
+Uiteraard willen we alle collega’s bedanken die hebben meegewerkt, of zijdelings advies hebben gegeven.
+Merci ook aan de leden van de stuurgroep, voor de opbouwende feedback en bijsturing waar nodig.
+
+We bedanken Koen Devos nogmaals voor het kritisch nalezen van het eindrapport.
+
+En we willen u bedanken, als lezer, voor uw interesse in dit rapport, dat hopelijk verklarend en inspirerend kan werken.
 
 # Samenvatting {.unnumbered}
 
@@ -105,5 +131,34 @@ if (interactive()) {
       theme_set(theme_inbo(base_size = 12))
     }
   )
+}
+```
+
+```{r googledrive, include = FALSE}
+# authenticatie google drive
+library(googledrive)
+googledrive::drive_auth(email = "*@inbo.be")
+
+# source functie om figuren te downloaden van google drive
+source("../include_from_drive.R")
+
+# google drive verwijzing naar figuren
+sdf <- shared_drive_find("PRJ_MBAG") %>%
+  drive_ls(pattern = "4a_mas", type = "folder") %>%
+  drive_ls(pattern = "rapporten", type = "folder") %>%
+  drive_ls(pattern = "mas_piloot_steekproefdesign", type = "folder") %>%
+  drive_ls(pattern = "media", type = "folder")
+
+figs <- sdf %>%
+  drive_ls(recursive = TRUE) %>%
+  drive_reveal(what = "webViewLink") %>%
+  drive_reveal(what = "webContentLink") %>%
+  drive_reveal(what = "path") %>%
+  drive_reveal(what = "fileExtension")
+
+# get figures from google drive
+# set overwrite = TRUE if necessary!
+for (file_name in figs$name) {
+  include_from_drive(name = file_name, figures = figs, overwrite = FALSE)
 }
 ```

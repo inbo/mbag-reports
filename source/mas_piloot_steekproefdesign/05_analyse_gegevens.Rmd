@@ -21,8 +21,7 @@ Engelstalige termen worden in cursief aangeduid.
 
 De volgende resultaten betreffen vogels.
 Zoogdieren worden besproken in Sectie \@ref(exploratie-zoogdieren).
-Binnen het pilootmeetnet worden al sinds 2018 tellingen verricht.
-\textcolor{red}{plan kiekendief ...} Zoals besproken in Sectie \@ref(piloot-overlap), zijn een aantal van deze punten hergebruikt bij de steekproeftrekking voor deze pilootstudie.
+\textcolor{red}{Sinds 2018 worden in het kader van plan kiekendief MAS tellingen uitgevoerd, in dezelfde deelgebieden waar deze piloot studie zich op richt.} Zoals besproken in Sectie \@ref(piloot-overlap), zijn een aantal van deze punten hergebruikt bij de steekproeftrekking voor deze pilootstudie.
 Verder zijn er sinds de pilootstudie (sinds 2022) veel telpunten bijgekomen in De Moeren en de Oostelijke leemstreek (Tabel \@ref(tab:samenvatting-aantallen)).
 De meeste telpunten werden vier maal per jaar bezocht (Fig. \@ref(fig:telintensiteit)).
 Figuren \@ref(fig:aantal-waarnemingen) en \@ref(fig:aantal-soorten) geven een meer gedetailleerd beeld van de verdelingen van respectievelijk het aantal waarnemingen en soorten per jaar.
@@ -90,7 +89,7 @@ Voor roofvogels hielden we geen rekening met broedcode, omdat we voor deze soort
 
 Figuur \@ref(fig:relfreqs-2018-2021) toont de relatieve frequenties van de 20 meest frequente soorten tussen 2018-2021 (gemiddeld per telperiode, jaar en regio).
 Tijdens het pilootproject (2022-2023) zien we andere soorten naar voor komen en ook lagere frequenties (Fig. \@ref(fig:relfreqs-2022-2023)).
-Dit is omdat we het controlegebied hadden toegevoegd (buiten soorbeschermingsplan (SBP)) waar minder vogels voorkomen.
+Dit is omdat we het controlegebied hadden toegevoegd (buiten soortbeschermingsplan (SBP)) waar minder vogels voorkomen.
 Het is bovendien duidelijk dat bepaalde soorten algemener zijn in de ene of de andere regio.
 Als we het verschil in relatieve frequentie tussen De Moeren en de Oostelijke leemstreek nemen, zien we om welke soorten het gaat (Fign \@ref(fig:verschilfreqs-2018-2021), \@ref(fig:verschilfreqs-2022-2023)).
 \textcolor{red}{Typische soorten van open landschap, water en rietkragen werden meer gezien in De Moeren zoals Kievit, Bruine kiekendief, Rietzanger, Wilde eend Kleine karrekiet enzovoort. In de Oostelijke leemstreek zien we dan weer soorten van meer halfopen landschap en kleine landschapselementen zoals Veldleeuwerik, Geelgors, Vink enzovoort.} Ook binnen specifieke strata is er voor sommige soorten een groot verschil in frequentie (Fig. \@ref(fig:relfreqs-strata)).
@@ -310,7 +309,7 @@ Een overzicht wordt gegeven in Tabel \@ref(tab:verklarende-vars-tab).
 
 **1. Oppervlakte-aandeel soortbeschermingsmaatregelen**\
 Het aandeel oppervlakte aan beheerovereenkomsten (soortbeschermingsmaatregelen) binnen de telcirkels per jaar.
-De kaartlaag voor de beheerovereenkomsten werd aangevraagd via de Vlaamse Landmaatschappij (VLM) en is niet openlijk beschikbaar.
+De kaartlaag voor de beheerovereenkomsten werd aangevraagd via de Vlaamse Landmaatschappij (VLM, versie 2022) en is niet openlijk beschikbaar.
 
 **2. Oppervlakte-aandeel erosiebeheer en bufferstroken**\
 Het aandeel oppervlakte aan beheerovereenkomsten (erosiebeheer en bufferstroken) binnen de telcirkels per jaar.
@@ -476,7 +475,8 @@ $$
 w_{ij} = f(d_{ij})
 $$
 
-met $d_{ij}$ de afstand tussen telpunt $i$ en het centrum van natuurgebied $j$.\
+met $d_{ij}$ de afstand tussen telpunt $i$ en het centrum van natuurgebied $j$.
+
 We beschouwden twee verschillende vervalfuncties (Fig. \@ref(fig:vervalfunctie)).
 
 1.  Logistische vervalfunctie
@@ -545,7 +545,9 @@ We behielden voor de bivariate exploratie enkel de proportie afwezige voorteelt.
 
 Zowel de Pearson als Spearman correlatiematrices toonden gelijkaardige patronen (Fig. \@ref(fig:corrmat1)).
 De Spearman correlatie gaf gelijkaardige resultaten, maar alle correlaties waren sterker.
-De Pearson correlatie tussen twee variabelen is een waarde tussen -1 en +1. Een correlatie rond 0 duidt op lineaire onafhankelijkheid. Een sterk positieve correlatie zien we wanneer variabelen een sterk positief lineair verband vertonen en een sterk negatieve correlatie zien we wanneer ze een sterk negatief lineair verband vertonen.
+De Pearson correlatie tussen twee variabelen is een waarde tussen -1 en +1.
+Een correlatie rond 0 duidt op lineaire onafhankelijkheid.
+Een sterk positieve correlatie zien we wanneer variabelen een sterk positief lineair verband vertonen en een sterk negatieve correlatie zien we wanneer ze een sterk negatief lineair verband vertonen.
 De Spearman correlatie tussen twee variabelen zal hoog zijn wanneer waarnemingen een vergelijkbare (of identieke) rangorde hebben tussen de twee variabelen, en laag wanneer waarnemingen een ongelijke (of volledig tegengestelde) rangorde hebben tussen de twee variabelen.
 
 De openheidsvariabele was negatief gecorreleerd met de variabelen van de kleine landschapselementen.
@@ -557,11 +559,11 @@ We zagen wel dat de verbanden niet altijd lineair zijn.
 
 De mediaan en interkwartielafstand van perceelsgroottes waren sterk gecorreleerd.
 Ook de gewasdiversiteit (Shannon en absolute aantal gewassen) waren op dezelfde laag van de perceelsgroottes gebaseerd en we zien een sterke negatieve correlatie, maar niet met de variatiecoëfficiënt.
-De eveness maat is ook gecorreleerd met de gewasdiversiteitmaten.
+De eveness maat is ook gecorreleerd met de gewasdiversiteitsmaten.
 Alle uitspraken voor `..hfdtlt` gelden ook voor `..hfdtlt_pre` (hoofdteelt jaar ervoor).
 Hun overeenkomstige correlaties zijn hier niet van belang.
 Proportie hagen en meerjarige fruitteelt waren vrij sterk positief gecorreleerd.
-Verder zagen we nog dat er minder hagen, houtkanten en bomen zijn als de gewaseveness toeneemt, als er meer afwezigheid is aan voorteelten en als percelen gemiddeld groter zijn.
+Verder zagen we nog dat er minder hagen, houtkanten en bomen zijn als de gewas-eveness toeneemt, als er meer afwezigheid is aan voorteelten en als percelen gemiddeld groter zijn.
 Hagen, houtkanten en bomen waren onderling positief gecorreleerd.
 Aantal predatorsoorten en individuen waren ook positief gecorreleerd.
 
@@ -640,7 +642,7 @@ In dit rapport presenteren we een case studie van de analyses en resultaten met 
 Het voornaamste doel is om een overzicht te geven van de mogelijke analyses die we kunnen doen op de MAS-data.
 De Veldleeuwerik is een handige testsoort, omdat veel data voorhanden is waardoor verschillende methodieken onder verschillende scenario's konden worden uitgetest.
 De analyses besproken in deze sectie zijn in de meeste gevallen ook reeds uitgevoerd voor andere soorten.
-In het toekomstige rapport, gewijd aan bredere analyses en resultaten van het MAS, zullen de bevindingen voor deze andere soorten worden besproken.
+In een toekomstige rapport, gewijd aan bredere analyses en resultaten van het MAS, zullen de bevindingen voor deze andere soorten worden besproken.
 
 ### Abundanties en detectiekans {#intro-detectiekans}
 
@@ -832,7 +834,7 @@ Modellen met vergelijkbare AIC's hebben vergelijkbare geschatte detectiekansen, 
 
 Om te controleren of onze finale modellen voor (1) en (2) goed pasten bij de data (= "goodness of fit") maakten we een Q-Q plot waarbij de cumulatieve distributiefunctie van de gefitte detectiefunctie (CDF) wordt vergeleken met de distributie van de data (EDF).
 We voerden ook de Cramér-von Mises test uit.
-Deze kwantificeert de informatie van de Q-Q-plot door te testen of punten van de EDF en CDF uit dezelfde verdeling komen [@buckland2015; @miller2019].
+Deze kwantificeert de informatie van de Q-Q plot door te testen of punten van de EDF en CDF uit dezelfde verdeling komen [@buckland2015; @miller2019].
 Finaal bekeken we ook de kansdichtheidsfunctieplots.
 Indien het finale model niet goed paste bij de data (slechte "goodness of fit"), werd dit model opnieuw gefit waarbij de afstanden gegroepeerd werden in intervallen van 50 m.
 
@@ -1337,7 +1339,7 @@ met
 <!-- spell-check: ignore:start -->
 
 $$
-\ln(\lambda_{jk}) = \beta_0 + f(x_j, y_j) + b_{0,j} + b_{1,j:t} + \ln(p_s) + \ln\left(\frac{A_{telcirkel}}{10^6\ \text{m}^2/100\ \text{ha}}\right)
+\ln(\lambda_{jk}) = \beta_0 + f(x_j, y_j) + b_{0,j} + b_{1,j:k} + \ln(p_s) + \ln\left(\frac{A_{telcirkel}}{10^6\ \text{m}^2/100\ \text{ha}}\right)
 $$
 
 <!-- spell-check: ignore:end -->
@@ -1473,7 +1475,7 @@ Na het fitten van de referentiemodellen voor elke regio werd *PPVS* toegepast me
 Hierin worden twee fases onderscheiden:
 
 1.  Zoekfase\
-    De rangschikking van de verklarende variabelen, nl. de kleinst mogelijke subset van kandidaat-variabelen voor elk aantal variabelen, werd bepaald via forward search. Hierbij werd gespecifieerd dat de categorische variabele voor het oppervlakte-aandeel soortbeschermingsplannen zeker in het finale model moest aanwezig zijn (altijd rang 1). Maximale submodelgrootte werd ingesteld op 19 variabelen.
+    De rangschikking van de verklarende variabelen, nl. de kleinst mogelijke subset van kandidaat-variabelen voor elk aantal variabelen, werd bepaald via forward search. Hierbij werd gespecificeerd dat de categorische variabele voor het oppervlakte-aandeel soortbeschermingsplannen zeker in het finale model moest aanwezig zijn (altijd rang 1). Maximale submodelgrootte werd ingesteld op 19 variabelen.
 2.  Evaluatiefase\
     Berekening van voorspellende prestaties van de steeds complexer wordende submodellen langs de ranglijst van verklarende variabelen via *leave-one-out cross-validation* voor De Moeren en *5-fold cross-validation* voor de Oostelijke leemstreek. Voorspellende prestaties werden gekwantificeerd als *mean log predictive density* (*MLPD*). Dit is de *expected log (pointwise) predictive density* (*ELPD*) gedeeld door het aantal observaties.
 
@@ -1657,9 +1659,10 @@ include_graphics(file.path("media", "beheerovereenkomsten",
 
 Zowel in De Moeren als in de Oostelijke leemstreek zien we een groter maximum aantal broedparen per telcirkel als de proportie soortbeschermingsmaatregelen groter is.
 Dit verschil is onzeker in klasses met weinig data.
-We moeten hierbij benadrukken dat deze effecten niet noodzakelijk wijzen op een causaal verband. Het betreft hier een immers observationele data met  belangrijke tekortkomingen om geobserveerde effecten te kunnen attribueren aan oorzakelijke verbanden.
+We moeten hierbij benadrukken dat deze effecten niet noodzakelijk wijzen op een causaal verband.
+Het betreft hier een immers observationele data met belangrijke tekortkomingen om geobserveerde effecten te kunnen attribueren aan oorzakelijke verbanden.
 De soortbeschermingsmaatregelen zijn immers gekozen op plaatsen die reeds gunstig waren voor akkervogels [@agentschapvoornatuurenbos2021].
-Bovendoen, tonen deze analyses de toestand van Veldleeuwerik in verschillende klasses van soortbeschermingsmaatregelen, geen trend.
+Bovendien, tonen deze analyses de toestand van Veldleeuwerik in verschillende klasses van soortbeschermingsmaatregelen, geen trend.
 
 De andere variabelen die werden geselecteerd o.b.v. *PPVS* hadden allemaal een significant effect op het aantal broedparen in beide regio's.
 Deze variabelen zijn sterk gecorreleerd met de openheid van het landschap.

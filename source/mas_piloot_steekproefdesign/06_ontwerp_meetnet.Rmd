@@ -32,7 +32,7 @@ In Sectie \@ref(dubbeltellingen) toonden we aan dat vrijwilligers een significan
 We vonden geen bewijs dat dit verschil anders was tussen data met broedcode 0 en broedcode \> 0, noch afhankelijk van de ervaring van de vrijwilligers (beginnende versus ervaren vrijwilligers).
 We moeten onderkennen dat dit slechts een beperkte analyse was en deze resultaten niet indicatief zijn voor het volledige pilootproject.
 Er werden tien telpunten in vier telperiodes en één telpunt in drie telperiodes dubbelgeteld van zeven vrijwilligers door een professionele teller en dit enkel in De Moeren.
-Dit neemt niet weg dat deze resultaten een nuttige indicatie zijn dat er moet blijven ingezet worden op doorlopende enthousiasmering en training van vrijwilligers bijvoorbeeld via gezamelijke excursies en studiedagen.
+Dit neemt niet weg dat deze resultaten een nuttige indicatie zijn dat er moet blijven ingezet worden op doorlopende enthousiasmering en training van vrijwilligers bijvoorbeeld via gezamenlijke excursies en studiedagen.
 Dit wordt verder besproken in Sectie \@ref(vrijwilligers-mbag) \textcolor{red}{zie ook de tijdlijn Fig. ...)}.
 
 Wanneer we de data meer in detail gingen analyseren, bleek duidelijk dat deze pilootstudie een rijke bron van data is.
@@ -49,7 +49,7 @@ Naast een minimum oppervlakte moet natuurlijk ook gewaarborgd worden dat het sub
 ## Uitbreiding van het akkervogelmeetnet voor Vlaanderen {#uitbreiding-vlaanderen}
 
 Het idee is om in de komende jaren het MAS-meetnet uit te breiden over de verschillende landbouwstreken in Vlaanderen (Hoofdstuk \@ref(pilootgegevens), Fig.
-\@ref(fig:landbouwstreken)) met uitzondering van de Duinen en de Weidestreek.
+\@ref(fig:landbouwstreken)).
 In 2023 zijn we reeds gestart met de leemstreek en de zandleemstreek.
 
 ### Aanpassingen ten opzichte van het pilootmeetnet {#aanpassingen-meetnet}
@@ -71,6 +71,7 @@ Zie Bijlage \@ref(bijlage-uitrol-mas) (Fig. \@ref(fig:steekproef-afbakening-mbag
     Enerzijds is dat een realiteit van het terrein die een invloed heeft op de waarnemingen (bv. vaak kraaiachtigen en Buizerd langs snelwegen) en vrij zeker ook op de detecteerbaarheid (geluidsoverlast en beperkte zichtbaarheid).
     Daarom hebben we een extra exclusiecriterium in acht te genomen door een zone van 100 m buffer rond autosnelwegen en invoegstroken en afritten van autosnelwegen uit te sluiten.
     Op die manier gaan er nog steeds punten zijn waarvan de telcirkels het effect van snelwegen omvatten, maar sluiten we punten die te dicht tegen snelwegen liggen uit.
+    Een recentere versie van de OpenStreetMap data werd gedownload op 16-03-2023.
 
 ```{r exclusie-landgebruik}
 tibble(
@@ -159,10 +160,7 @@ include_graphics(file.path("media", "visibility",
                            "voorbeeld_zichtbaarheid.pdf"))
 ```
 
-5.  Berekening oppervlakte-aandeel beheerovereenkomsten\
-    Gebruik kaartlaag VLM van 2022 in plaats van 2021.
-
-6.  Binnen of buiten gebieden met soortbeschermingsplan\
+5.  Binnen of buiten gebieden met soortbeschermingsplan\
     \textcolor{red}{Johannes uitschrijven, hier staat alvast een samenvatting uit mailcommunicatie} Zowel binnen kerngebied als zoekzones zijn er soortbeschermende maatregelen (SB BO's) gelegd (zie kaart VLM BO's).
     In theorie waren deze maatregelen vooral bedoeld voor kerngebied, en zal daar een hogere dichtheid (bedekkingsgraad) liggen, maar de VLM heeft het toegelaten om ook in zoekzones deze maatregelen te sluiten (al was dat minder de prioriteit).
     Daar werd bv.
@@ -189,6 +187,10 @@ Kaartlagen per soort zijn gevisualiseerd in Bijlage \@ref(bijlage-uitrol-mas) (F
 include_graphics(file.path("media", "kaartjes", "sbp_mbag_kaart.png"))
 ```
 
+6.  Berekening oppervlakte-aandeel beheerovereenkomsten\
+    Naast de stratificaties, berekenen we tevens het oppervlakte‐aandeel aan soortbeschermingsmaatregelen (zie \@ref(prim-verklarende-variabelen)), omdat we kunnen verwachten dat die gerelateerd zijn met de relatieve populatiegroottes van de akkervogels en omdat we graag willen leren vanaf welk minimaal oppervlakte‐aandeel er positieve effecten te verwachten zijn.
+    Deze variabele brengen we mee in rekening bij de steekproeftrekking zodat we niet alleen een ruimtelijk gebalanceerde steekproef krijgen, maar ook een gebalanceerde steekproef in functie van deze variabele.
+
 7.  Steekproeftrekking\
     Omdat we nu met veel grotere gebieden werken, merkten we wel dat een maximale trekking niet voor een goede spatiale spreiding zorgt omdat het algoritme niet genoeg vrijheid krijgt.
     Daarom besloten we uiteindelijk om 1/20ste (5 %) van het aantal elementen in het steekproefkader te nemen per stratum.
@@ -203,7 +205,7 @@ include_graphics(file.path("media", "kaartjes", "sbp_mbag_kaart.png"))
     De methode garandeert dat deze nieuwe set ruimtelijk goed gespreid is en een aselecte steekproef is.
     De stratificatiemethode is licht gewijzigd t.o.v. het pilootmeetnet.
     We gaan het aantal telpunten niet meer proportioneel alloceren o.b.v. de oppervlakte aan OL en HOL.
-    In plaats daarvan nemen we voor elk stratum (OL binnen SBP, OL buiten SBP, HOL binnen SBP, HOL buiten SBP) 50 punten.
+    In plaats daarvan nemen we voor elk stratum (OL binnen SBP, OL buiten SBP, HOL binnen SBP, HOL buiten SBP) evenveel punten.
     Zo zorgen we ervoor dat we ook in zeldzamere strata genoeg data zullen verzamelen, waardoor we uitspraken kunnen doen voor elk stratum apart en we onderlinge de strata kunnen vergelijken.
     Hier tegenover staat wel dat, indien we uitspraken willen doen op hogere niveaus (bv. landbouwregio), we hiermee moeten rekening houden in de analyses door gewichten toe te kennen proportioneel aan de oppervlakte aan OL en HOL.
 
