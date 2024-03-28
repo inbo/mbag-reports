@@ -1,6 +1,6 @@
 # Conclusies {#conclusie}
 
-\textcolour{red}{nog uitschrijven}
+\textcolor{red}{nog uitschrijven}
 
 -   Potentieel van MAS methodiek aangetoond
 -   Relatie stijging areaal BOs en akkervogelpopulaties nog niet aantoonbaar
@@ -9,7 +9,7 @@
 -   Nood aan effectiviteitsmonitoring en micro-onderzoek
 -   GLB middelen voorzien hiervoor
 
-\textcolour{red}{voorstel van Peter om advocaat van de duivel te spelen: "Zeg ook op welke vragen je wél kan beantwoorden." voorbeeld hieronder}
+\textcolor{red}{voorstel van Peter om advocaat van de duivel te spelen: "Zeg ook op welke vragen je wél kan beantwoorden." voorbeeld hieronder}
 
 Er zijn al initiatieven geweest om de effectiviteit van beheerovereenkomsten aan te tonen.
 Er is vaak meer tijd en/of middelen nodig.
