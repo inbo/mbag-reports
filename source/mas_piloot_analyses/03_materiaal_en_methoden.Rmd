@@ -1,6 +1,0 @@
-# Materiaal en methoden {#materiaal-en-methoden}
-
--   Steekproeftrekking en veldwerk
--   Selectie data
--   Distance sampling
--   GLMM
