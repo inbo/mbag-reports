@@ -406,8 +406,7 @@ Naast deze categorische variabele berekenden we ook de openheid van het landscha
 Deze schaal zou meer relevant zijn voor akkervogels \textcolor{red}{(REF)} en een continue variabele bevat meer informatie voor gedetailleerdere statistische analyses en het identificeren van subtiele patronen in de data.
 
 **3. Soortbeschermingsplan**\
-Categorische variabele binnen of buiten soortbeschermingsplan akkervogels (SBP).
-\textcolor{red}{Zowel binnen kerngebied als zoekzones zijn er soortbeschermende maatregelen (SB BO’s) gelegd (zie kaart VLM BO’s). In theorie waren deze maatregelen vooral bedoeld voor kerngebied, en zal daar een hogere dichtheid (bedekkingsgraad) liggen, maar de VLM heeft het toegelaten om ook in zoekzones deze maatregelen te sluiten (al was dat minder de prioriteit). Daar werd bv. in de Moeren geen rekening mee gehouden, en werden erg veel SB BO’s gelegd, ook omdat dit gebied wél kerngebied was van plan kiekendief (SBP Grauwe Kiekendief) waardoor er wel veel BO’s gesloten zijn. In de toekomst wil men meer rekening houden met kerngebied. Voor het pilootmeetnet namen we de kerngebieden samen als onderzoeksgebied (binnen sbp) en alles hierbuiten beschouwen we als controle (buiten sbp).}
+Categorische variabele binnen of buiten soortbeschermingsplan akkervogels (SBP) [@akkervogelgebieden].
 
 **4. Status teller**\
 Analyses van telpunten die zowel door vrijwilligers als professionele teller zijn geteld, gaven duidelijk aan dat vrijwilligers een significant lager aantal waarnemingen en soorten zien dan een professionele teller (Sectie \@ref(dubbeltellingen)).
