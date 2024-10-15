@@ -163,7 +163,7 @@ include_graphics(file.path("media", "visibility",
 5.  Binnen of buiten gebieden met soortbeschermingsplan\
     We breiden soorbeschermingsplangebieden uit.
     We nemen kerngebieden en zoekzones samen als onderzoeksgebied en alles hierbuiten beschouwen we als controle.
-    Voor het nieuwe SBP-gebied combineren we meerdere SBP lagen:
+    Voor het nieuwe SBP gebied combineren we meerdere SBP lagen:
 
     -   nieuwe perimeter SBP akkervogels [@jansen2022adviesakkervogels]
     -   SBP grauwe kiekendief
