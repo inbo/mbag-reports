@@ -79,7 +79,7 @@ Dit geeft voldoende mogelijkheden om telpunten buiten deze SBP gebieden te kunne
 In het geval van De Moeren, is er direct vertrokken van een perimeter die al gebruikt werd door de MAS werking van dat gebied en die ons aangeleverd is.
 Dit was nog geen officiële SBP akkervogels perimeter, maar het is wel een gebied waar gelijkaardige inspanningen werden geleverd en we beschouwen het daarom als "SBP" gebied.
 Om voor De Moeren ook een controlegebied te hebben (buiten SBP), werd een buffer gelegd rond het noordoostelijke deel van De Moeren die in oppervlakte nagenoeg gelijk is aan het gedeelte binnen "SBP" (ten zuiden van De Moeren zitten we in Frankrijk en ten westen zitten we in duingebied).
-Deze perimeter ligt grotendeels binnen de polders landbouwstreek (een klein deel van de bufferzone ligt in de zandleemstreek), maar is slechts een klein deel van de volledige polders [@akkervogelgebieden, Fig. \@ref(fig:perimeters-sbp)].
+Deze perimeter ligt grotendeels binnen de polders landbouwstreek (een klein deel van de bufferzone ligt in de zandleemstreek), maar is slechts een klein deel van de volledige polders [@akkervogelgebieden; Fig. \@ref(fig:perimeters-sbp)].
 De Oostelijke leemstreek omvat een zeer groot deel van de volledige leemstreek en is daarom te beschouwen als **de betere casus** van de twee pilootgebieden om dienst te doen als test voor de uitrol naar andere landbouwstreken in Vlaanderen.
 
 ```{r landbouwstreken, out.width = "100%", fig.cap = "Landbouwstreken in Vlaanderen"}
