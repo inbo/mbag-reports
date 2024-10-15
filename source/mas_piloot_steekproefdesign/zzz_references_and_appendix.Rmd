@@ -202,21 +202,6 @@ De kolom `log_diff` bevat waardes van $\hat{D}_v$ en `log_diff_se` de standaardf
 de onder- en bovengrens het 95 % betrouwbaarheidsinterval aangeven.
 We definieerden (kolom `verschil`) een positief verschil in densiteit met de referentie als de ondergrens van het 95 % betrouwbaarheidsinterval van de $SCI$ groter is dan nul, een negatief verschil als de bovengrens kleiner is dan nul, een stabiel (geen) verschil als het betrouwbaarheidsinterval nul bevat maar binnen de referentiewaarden valt (tussen toename van 25 % en afname van 20 %) en een onzeker verschil als het betrouwbaarheidsinterval nul en ten minste een van de referentiewaarden bevat.
 
-```{r sci-jaar-tab}
-read_csv(file.path("media", "distance", "per_jaar",
-                   "sci_trends_per_jaar.csv"),
-         show_col_types = FALSE) %>%
-  dplyr::filter(soort == "Veldleeuwerik")  %>%
-  select(-soort) %>%
-  arrange(regio, jaar) %>%
-  kable(digits = 5,
-        caption = paste("Resultaten van species change indices (SCI's) per",
-                        "regio per jaar t.o.v. 2018."),
-        booktabs = TRUE) %>%
-  kableExtra::kable_styling(latex_options = "striped") %>%
-  kableExtra::row_spec(0, bold = TRUE)
-```
-
 ```{r sci-stratum-tab}
 read_csv(file.path("media", "distance", "per_stratum",
                    "sci_trends_per_stratum.csv"),
