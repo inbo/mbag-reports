@@ -902,7 +902,7 @@ $$
 In ons geval zal $\alpha = 0.025$ zijn voor een 95 % betrouwbaarheidsinterval.
 Omdat we hier in de log-schaal werken is $z_\alpha$ de z-score die overeenkomt met het buitenste 2.5 % gebied van de standaard normale verdeling.
 We hebben dus $Z \sim N(0, 1)$ met $z_{0.025} =$ `r round(qnorm(0.975), 3)`.
-De variantie van $\hat{D}_v$, $\hat{var}(\hat{D}_v)$, kan als volgt berekend worden
+De variantie van $\hat{D}_v$, $\hat{var}(\hat{D}_v)$, kan als volgt berekend worden indien de strata onafhankelijk zijn van elkaar
 
 <!-- spell-check: ignore:start -->
 
@@ -1020,21 +1020,6 @@ summary_results_2018_2023 %>%
 ```{r densiteit-jaar-plot, out.width = "90%", fig.cap = "Densiteitsschattingen per 100 ha met 95 \\% betrouwbaarheidsintervallen per jaar per regio."}
 include_graphics(file.path("media", "distance", "per_jaar",
                            "densiteit_per_jaar_veldleeuwerik.pdf"))
-```
-
-We vergelijken de densiteiten aan de hand van *species change indices* (*SCIs*) in elke regio met de densiteit in 2018, het eerste jaar van de pilootstudie (Fig. \@ref(fig:sci-jaar-plot), zie ook Bijlage \@ref(bijlage-sci) (Tabel \@ref(tab:sci-jaar-tab))).
-We zien opnieuw relatief brede betrouwbaarheidsintervallen in De Moeren zodat we vaak onzeker zijn over het verschil met de densiteitsschatting van 2018.
-Enkel in 2022 zien we een significant positief verschil met 2018 in het de densiteit aan broedparen per 100 ha van de Veldleeuwerik.
-We zien in de Oostelijke leemstreek geen significante verschillen en in 2021 wel een significant hogere densiteit.
-In 2022 en 2023 zijn de trends opnieuw onzeker hoewel hier een kleine kanttekening bij kan gemaakt worden.
-Zoals besproken in de methodiek van de SCI-berekeningen, willen we meegeven dat deze resultaten op verschillende manieren kunnen ingedeeld worden en het niet de bedoeling is dat dit vaststaande feiten zijn.
-Voor de Oostelijke leemstreek zullen de onzekere trends van 2022 en 2023 afhankelijk zijn van de keuze van het significantieniveau.
-Bij een $\alpha$ van 0.1 zouden we hier waarschijnlijk toch besluiten dat er een positief verschil is.
-We hebben er in dit rapport echter steeds voor gekozen de resultaten voor $\alpha = 0.05$ te rapporteren.
-
-```{r sci-jaar-plot, out.width = "100%", fig.cap = "Betrouwbaarheidsintervallen ($\\alpha = 0.05$) van \\textit{species change indices} (\\textit{SCIs}) per regio per jaar t.o.v. 2018."}
-include_graphics(file.path("media", "distance", "per_jaar",
-                           "verschil_per_jaar_veldleeuwerik.pdf"))
 ```
 
 ##### Per stratum binnen pilootstudie {#res-distance-stratum}
