@@ -161,24 +161,15 @@ include_graphics(file.path("media", "visibility",
 ```
 
 5.  Binnen of buiten gebieden met soortbeschermingsplan\
-    \textcolor{red}{Johannes uitschrijven, hier staat alvast een samenvatting uit mailcommunicatie} Zowel binnen kerngebied als zoekzones zijn er soortbeschermende maatregelen (SB BO's) gelegd (zie kaart VLM BO's).
-    In theorie waren deze maatregelen vooral bedoeld voor kerngebied, en zal daar een hogere dichtheid (bedekkingsgraad) liggen, maar de VLM heeft het toegelaten om ook in zoekzones deze maatregelen te sluiten (al was dat minder de prioriteit).
-    Daar werd bv.
-    in de Moeren geen rekening mee gehouden, en werden erg veel SB BO's gelegd, ook omdat dit gebied wél kerngebied was van plan kiekendief (SBP Grauwe Kiekendief) waardoor er wel veel BO's gesloten zijn.
-    In de toekomst heeft VLM beloofd om meer/enkel rekening te houden met kerngebied.
-
+    We breiden soorbeschermingsplangebieden uit.
     We nemen kerngebieden en zoekzones samen als onderzoeksgebied en alles hierbuiten beschouwen we als controle.
-    Als SBP laag gebruiken we perimeter SBP akkervogels, SBP grauwe kiekendief, SBP bruine kiekendief, SBP zomertortel en SBP hamster.
-    De SBP laag voor de specifieke soorten werd als volgt samengesteld:
+    Voor het nieuwe SBP-gebied combineren we meerdere SBP lagen:
 
-    -   De nieuwe (door INBO voorgestelde) nieuwe perimeter voor SBP Grauwe kiekendief.
-        Dat is nog niet goedgekeurd, en nog niet van kracht, dus enkel ter voorbereiding van de toekomstige steekproef.
-        (mail Johannes 2023-02-14)
-
-    -   De oude perimeter van SBP Grauwe kiekendief (in gebruik van 2018 t/m 2022).
-        (mail Johannes 2023-02-14)
-
-    -   SPB's andere soorten (download 2023-02-14): <https://www.vlaanderen.be/datavindplaats/catalogus/soortenbeschermingsprogrammas>
+    -   nieuwe perimeter SBP akkervogels [@jansen2022adviesakkervogels]
+    -   SBP grauwe kiekendief
+        -   oude perimeter van in gebruik van 2018 t/m 2022 [@vandegehuchte2015grauwekiekendief]
+        -   nieuwe (door INBO voorgestelde) perimeter [@spanoghe2022grauwekiekendief]
+    -   SBP bruine kiekendief, SBP zomertortel en SBP hamster [@overigeSBPs]
 
 Figuur \@ref(fig:sbp-zandleem) toont de nieuwe SBP gebieden voor de leemstreek en de zandleemstreek.
 Kaartlagen per soort zijn gevisualiseerd in Bijlage \@ref(bijlage-uitrol-mas) (Fig. \@ref(fig:sbp-per-soort)).
