@@ -362,7 +362,7 @@ We herschaalden deze proporties wel zodat de ze opsomden tot 1 per telcirkel per
 **6. Absoluut aantal hoofdteelten**\
 Het aantal verschillende hoofdteelten (gewasgroepen) binnen een telcirkel.
 
-**7. Eveness aan hoofdteelten**\
+**7. Evenness aan hoofdteelten**\
 We delen het effectief aantal hoofdteelten (als alle proporties gelijk zouden zijn) door het absoluut aantal hoofdteelten.
 Deze maat is 1 als alle hoofdteelten binnen de telcirkel in eenzelfde proportie voorkomen.
 
@@ -558,7 +558,7 @@ We zagen wel dat de verbanden niet altijd lineair zijn.
 
 De mediaan en interkwartielafstand van perceelsgroottes waren sterk gecorreleerd.
 Ook de gewasdiversiteit (Shannon en absolute aantal gewassen) waren op dezelfde laag van de perceelsgroottes gebaseerd en we zien een sterke negatieve correlatie, maar niet met de variatiecoëfficiënt.
-De eveness maat is ook gecorreleerd met de gewasdiversiteitsmaten.
+De evenness maat is ook gecorreleerd met de gewasdiversiteitsmaten.
 Alle uitspraken voor `..hfdtlt` gelden ook voor `..hfdtlt_pre` (hoofdteelt jaar ervoor).
 Hun overeenkomstige correlaties zijn hier niet van belang.
 Proportie hagen en meerjarige fruitteelt waren vrij sterk positief gecorreleerd.
