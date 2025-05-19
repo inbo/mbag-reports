@@ -45,16 +45,17 @@ tabeldata <- summary_results_2018_2023 %>%
          rfm = (ucl - lcl) / (2 * densiteit))
 
 rfm_stats <- tabeldata %>%
-    dplyr::filter(regio == "Oostelijke leemstreek") %>%
-    summarise(min = min(rfm) * 100,
-              max = max(rfm) * 100)
+  dplyr::filter(regio == "Oostelijke leemstreek") %>%
+  summarise(min = min(rfm) * 100,
+            max = max(rfm) * 100)
 
 # Fit model
 trendm <- brm(
   densiteit | se(standaardfout, sigma = TRUE) ~ 0 + regio + cjaar:regio,
   data = tabeldata,
   cores = 4,
-  seed = 123)
+  seed = 123
+)
 
 # Resultaten Oostelijke leemstreek
 trendm_sum <- summary(trendm)
@@ -65,19 +66,22 @@ intercept_est <- subset(
   summary,
   param == "regioOostelijkeleemstreek",
   Estimate,
-  drop = TRUE)
+  drop = TRUE
+)
 
 interactie_est <- subset(
   summary,
   param == "regioOostelijkeleemstreek:cjaar",
   Estimate,
-  drop = TRUE)
+  drop = TRUE
+)
 
 interactie_se <- subset(
   summary,
   param == "regioOostelijkeleemstreek:cjaar",
   Est.Error,
-  drop = TRUE)
+  drop = TRUE
+)
 
 est_2018 <- round(intercept_est + ((2018 - 2021) * interactie_est))
 est_2023 <- round(intercept_est + ((2023 - 2021) * interactie_est))

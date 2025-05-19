@@ -48,7 +48,8 @@ tibble(
     "49c216e00f2eb720828024700a71e4dd32df22b9",
     # leemstreek steekproef finaal
     "c6fafd4063e289e8e7615f97e6d2d6c9af6411b5",
-    "49c216e00f2eb720828024700a71e4dd32df22b9"),
+    "49c216e00f2eb720828024700a71e4dd32df22b9"
+  ),
   bestand = c(
     # piloot steekproefkader
     "data/processed/steekproefkader_piloot.tsv",
@@ -70,8 +71,9 @@ tibble(
     "data/processed/steekproef_zandleemstreek_avimap.yml",
     # leemstreek steekproef finaal
     "data/processed/steekproef_leemstreek_avimap.tsv",
-    "data/processed/steekproef_leemstreek_avimap.yml"),
-  ) %>%
+    "data/processed/steekproef_leemstreek_avimap.yml"
+  ),
+) %>%
   kable(booktabs = TRUE) %>%
   kableExtra::kable_styling(latex_options = c("scale_down", "striped")) %>%
   kableExtra::row_spec(0, bold = TRUE)
@@ -166,7 +168,7 @@ Er zijn verschillende vormen van cross-validation, waaronder:
 Een geloofwaardigheidsinterval wordt gebruikt in de context van Bayesiaanse statistiek om de onzekerheid rondom een geschatte parameter te kwantificeren.
 Het representeert een interval waarbinnen we geloven dat een parameter met een bepaalde waarschijnlijkheid valt, gegeven de geobserveerde gegevens en de **a-priorikennis** (zie hierboven).
 Het geloofwaardigheidsinterval wordt bepaald door de **a-posterioriverdeling** van de parameter (zie hierboven) en geeft de waarschijnlijkheidsmassa aan tussen twee grenzen.
-In dit rapport gebruiken we de 2.5 en 97.5 % quantielen zodat we telkens 95 % gelijkstaartige geloofwaardigheidsintervallen bekomen (EN: 95 % equal tail credible intervals).
+In dit rapport gebruiken we de 2.5 en 97.5 % quantielen zodat we telkens 95 % gelijkstaartige geloofwaardigheidsintervallen bekomen (EN: 95 % equal tail credible intervals).<!-- spell-check: ignore -->
 
 In de context van frequentistische statistiek spreken we van een **betrouwbaarheidsinterval** (EN: confidence interval) om de onzekerheid van een parameter weer te geven.
 Dit interval is gebaseerd op herhaalde steekproeven en heeft betrekking op de mate van vertrouwen die we hebben dat het interval de ware waarde van de parameter bevat.
@@ -208,7 +210,7 @@ read_csv(file.path("media", "distance", "per_stratum",
          show_col_types = FALSE) %>%
   dplyr::filter(soort == "Veldleeuwerik")  %>%
   select(-soort) %>%
-    arrange(regio, jaar, openheid) %>%
+  arrange(regio, jaar, openheid) %>%
   kable(digits = 5,
         caption = paste("Resultaten van species change indices (SCI's) binnen",
                         "t.o.v. buiten soortbeschermingsplan per regio, jaar",
@@ -229,7 +231,8 @@ Oppervlaktevariabelen zijn proporties tussen nul en een.
 ```{r}
 data_stats_veldleeuwerik <- read_csv(
   file.path("media", "beheerovereenkomsten", "data_stats_veldleeuwerik.csv"),
-  show_col_types = FALSE)
+  show_col_types = FALSE
+)
 
 data_stats_veldleeuwerik %>%
   mutate(naam2 = gsub("_pre$", "", naam)) %>%
@@ -284,7 +287,7 @@ include_graphics(file.path("media", "beheerovereenkomsten",
 include_graphics(file.path(
   "media", "beheerovereenkomsten", "oostelijke_leemstreek",
   "meerjarige_fruitteelt_hfdtlt_veldleeuwerik_data.pdf"
-  ))
+))
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
                            "houtkant_veldleeuwerik_data.pdf"))
@@ -294,13 +297,12 @@ include_graphics(file.path("media", "beheerovereenkomsten",
 
 ## Aanvullende kaarten uitrol MAS Vlaanderen {#bijlage-uitrol-mas}
 
-```{=tex}
 \begin{figure}
   \makebox[\textwidth][c]{\includegraphics[width=1.1\textwidth]{media/steekproefkader_mas/mas_zandleem_afbakening.png}}
   \caption{Methodiek voor de afbakening van het steekproefkader voor de uitrol van MAS Vlaanderen, gevisualiseerd voor een kleine oppervlakte in de zandleemstreek (xmin = 150000, xmax = 177000, ymin = 160000, ymax = 180000). \textbf{A.} Selectie van open en halfopen landschap binnen de perimeter (rood). \textbf{B.} Exclusie van landgebruiken op basis van OpenStreetMap data (groen). \textbf{C.} Selectie van paden en wegen (blauw). \textbf{D.} Omvorming van wegennetwerk tot puntennetwerk.}
   \label{fig:steekproef-afbakening-mbag}
 \end{figure}
-```
+
 ```{r sbp-per-soort, out.width = "100%", fig.cap = "Gebruikte kaarten van soortbeschermingsplannen in de leemstreek en de zandleemstreek."}
 include_graphics(file.path("media", "kaartjes", "sbp_mbag_per_soort.png"))
 ```

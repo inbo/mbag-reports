@@ -18,9 +18,14 @@ In Sectie \@ref(uitbreiding-vlaanderen) leggen we uit hoe we hiermee rekening he
 read_csv(file.path("media", "issues_pilootmeetnet",
                    "issues_pilootmeetnet.csv"),
          show_col_types = FALSE) %>%
-  kable(caption = paste("Overzicht van problematische telpunten in het",
-          "pilootmeetnet gecategoriseerd m.b.v. ''regular expressions''."),
-        longtable = TRUE, booktabs = TRUE) %>%
+  kable(
+    caption = paste(
+      "Overzicht van problematische telpunten in het",
+      "pilootmeetnet gecategoriseerd m.b.v. ''regular expressions''."
+    ),
+    longtable = TRUE,
+    booktabs = TRUE
+  ) %>%
   kableExtra::kable_styling(latex_options = c("repeat_header", "striped"),
                             repeat_header_text = "\\textit{(vervolg)}") %>%
   kableExtra::row_spec(0, bold = TRUE)
@@ -224,11 +229,10 @@ Zo selecteren we dus enkel nieuwe punten voor de Westelijk leemstreek; we behoud
 
 De toestand van de GitHub repository op het moment van de steekproeftrekking voor de (zand)leemstreek kan geraadpleegd worden via de volgende commit hash:
 
-```{=tex}
 \begin{center}
 bafe6a6164dde186f309d1aacbcbff0ccde21735
 \end{center}
-```
+
 Omwille van de automatisatie van de versiecontrolestap van het steekproefkader en de steekproef, zijn deze in de online GitHub repository [@github-repo] te vinden onder een ander folder (zie Bijlage \@ref(hashes-steekproef)).
 De finale steekproef na manuele controle (de punten die effectief werden bezocht in het veld) zijn wel nog te vinden in de folder *data/processed* zoals bij het pilootmeetnet (Sectie \@ref(git-piloot)).
 De hashes van de finale bestanden zijn te vinden in Bijlage \@ref(hashes-steekproef).

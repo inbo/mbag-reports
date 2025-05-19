@@ -38,10 +38,13 @@ summary_mas_2018_2023 %>%
   select(regio, jaar, `aantal telpunten`, `aantal waarnemingen`,
          `aantal soorten` = aantal_soorten_regiojaar) %>%
   arrange(regio, jaar) %>%
-  kable(caption = paste(
-    "Samenvattende tabel aantallen binnen het pilootmeetnet.",
-    "Aantal waarnemingen en soorten betreffen vogels."),
-        booktabs = TRUE) %>%
+  kable(
+    caption = paste(
+      "Samenvattende tabel aantallen binnen het pilootmeetnet.",
+      "Aantal waarnemingen en soorten betreffen vogels."
+    ),
+    booktabs = TRUE
+  ) %>%
   kableExtra::kable_styling(latex_options = "striped") %>%
   kableExtra::row_spec(0, bold = TRUE)
 ```
@@ -953,11 +956,11 @@ Dit is ook te zien wanneer we de gemiddelde detectiecurve op de data plotten (Fi
 
 ```{r detectiekans-jaar}
 veldleeuwerik_covars <- c("regio", "jaar")
-cbind(ds_veldleeuwerik_2018_2023$ddf$data,
-      "detectiekans" = predict(ds_veldleeuwerik_2018_2023,
-                       se.fit = TRUE)$fitted,
-      "standaardfout" = predict(ds_veldleeuwerik_2018_2023,
-                                 se.fit = TRUE)$se) %>%
+cbind(
+  ds_veldleeuwerik_2018_2023$ddf$data,
+  "detectiekans" = predict(ds_veldleeuwerik_2018_2023, se.fit = TRUE)$fitted,
+  "standaardfout" = predict(ds_veldleeuwerik_2018_2023, se.fit = TRUE)$se
+) %>%
   select(all_of(veldleeuwerik_covars), "detectiekans", "standaardfout") %>%
   distinct() %>%
   arrange(regio, jaar) %>%
@@ -981,7 +984,7 @@ summary_results_2018_2023 <- bind_rows(
   sum_veldleeuwerik_2018_2023$dht$individuals$N %>%
     mutate(variable = "abundance",
            type = "Totaal aantal broedparen")
-  ) %>%
+) %>%
   dplyr::filter(Label != "Total") %>%
   separate(Label, into = c("regio", "jaar"), sep = " - ")
 ```
@@ -994,11 +997,15 @@ summary_results_2018_2023 %>%
   dplyr::filter(variable == "abundance") %>%
   select(regio, jaar, "abundantie" = Estimate, "standaardfout" = se,
          Q2.5 = lcl, Q97.5 = ucl) %>%
-  kable(digits = 1,
-        caption = paste("Abundantieschattingen per regio en jaar voor",
-          "Veldleeuwerik. Q2.5 is de ondergrens van het 95 \\%",
-          "betrouwbaarheidsinterval en Q97.5 de bovengrens."),
-        booktabs = TRUE) %>%
+  kable(
+    digits = 1,
+    caption = paste(
+      "Abundantieschattingen per regio en jaar voor",
+      "Veldleeuwerik. Q2.5 is de ondergrens van het 95 \\%",
+      "betrouwbaarheidsinterval en Q97.5 de bovengrens."
+    ),
+    booktabs = TRUE
+  ) %>%
   kableExtra::kable_styling(latex_options = "striped") %>%
   kableExtra::row_spec(0, bold = TRUE)
 ```
@@ -1050,7 +1057,8 @@ nc2_veldleeuwerik <- sum_veldleeuwerik_2023$ds$Nhat
 pa_veldleeuwerik <- round(
   (n1_veldleeuwerik + n2_veldleeuwerik) /
     (nc1_veldleeuwerik + nc2_veldleeuwerik),
-  digits = 3)
+  digits = 3
+)
 ```
 
 Het Hazard-rate model waarbij de detectiekans afhankelijk is van openheid scoorde het best voor zowel het model met data van 2022 als van 2023.
@@ -1062,19 +1070,19 @@ Dit is ook te zien wanneer we de gemiddelde detectiecurve op de data plotten (Fi
 
 ```{r detectiekans-stratum}
 veldleeuwerik_covars <- c("openheid", "jaar")
-cbind(ds_veldleeuwerik_2022$ddf$data,
-      "detectiekans" = predict(ds_veldleeuwerik_2022,
-                       se.fit = TRUE)$fitted,
-      "standaardfout" = predict(ds_veldleeuwerik_2022,
-                                 se.fit = TRUE)$se) %>%
+cbind(
+  ds_veldleeuwerik_2022$ddf$data,
+  "detectiekans" = predict(ds_veldleeuwerik_2022, se.fit = TRUE)$fitted,
+  "standaardfout" = predict(ds_veldleeuwerik_2022, se.fit = TRUE)$se
+) %>%
   mutate(jaar = 2022) %>%
   bind_rows(
-    cbind(ds_veldleeuwerik_2023$ddf$data,
-      "detectiekans" = predict(ds_veldleeuwerik_2023,
-                       se.fit = TRUE)$fitted,
-      "standaardfout" = predict(ds_veldleeuwerik_2023,
-                                 se.fit = TRUE)$se) %>%
-    mutate(jaar = 2023)
+    cbind(
+      ds_veldleeuwerik_2023$ddf$data,
+      "detectiekans" = predict(ds_veldleeuwerik_2023, se.fit = TRUE)$fitted,
+      "standaardfout" = predict(ds_veldleeuwerik_2023, se.fit = TRUE)$se
+    ) %>%
+      mutate(jaar = 2023)
   ) %>%
   select(all_of(veldleeuwerik_covars), "detectiekans", "standaardfout") %>%
   distinct() %>%
@@ -1100,7 +1108,7 @@ summary_results_2022 <- bind_rows(
   sum_veldleeuwerik_2022$dht$individuals$N %>%
     mutate(variable = "abundance",
            type = "Totaal aantal broedparen")
-  ) %>%
+) %>%
   dplyr::filter(Label != "Total") %>%
   separate(Label, into = c("regio", "openheid", "sbp"), sep = " - ") %>%
   mutate(jaar = 2022)
@@ -1112,7 +1120,7 @@ summary_results_2023 <- bind_rows(
   sum_veldleeuwerik_2023$dht$individuals$N %>%
     mutate(variable = "abundance",
            type = "Totaal aantal broedparen")
-  ) %>%
+) %>%
   dplyr::filter(Label != "Total") %>%
   separate(Label, into = c("regio", "openheid", "sbp"), sep = " - ") %>%
   mutate(jaar = 2023)
@@ -1129,10 +1137,11 @@ summary_results_stratum %>%
   select(regio, jaar, openheid, sbp, "abundantie" = Estimate,
          "standaardfout" = se, Q2.5 = lcl, Q97.5 = ucl) %>%
   arrange(regio, jaar, openheid, sbp) %>%
-  kable(digits = 1,
-        caption = paste("Abundantieschattingen per stratum voor",
-          "Veldleeuwerik."),
-        booktabs = TRUE) %>%
+  kable(
+    digits = 1,
+    caption = "Abundantieschattingen per stratum voor Veldleeuwerik.",
+    booktabs = TRUE
+  ) %>%
   kableExtra::kable_styling(latex_options = "striped") %>%
   kableExtra::row_spec(0, bold = TRUE)
 ```
@@ -1508,7 +1517,8 @@ include_graphics(file.path("media", "beheerovereenkomsten",
 ```{r dm-veldleeuw-params}
 model_output_2022_2023 <- read_csv(
   file.path("media", "beheerovereenkomsten", "model_output_2022_2023.csv"),
-  show_col_types = FALSE)
+  show_col_types = FALSE
+)
 
 model_output_2022_2023 %>%
   dplyr::filter(soort == "Veldleeuwerik",
@@ -1527,13 +1537,17 @@ model_output_2022_2023 %>%
   arrange(variabele) %>%
   mutate(variabele = gsub("area_prop_sb_cat", "", variabele),
          variabele = gsub("_weighted", "", variabele)) %>%
-  kable(digits = 3, booktabs = TRUE,
-        caption = paste(
-          "Samenvattende statistieken van de a-posterioriverdelingen van de",
-          "parameters in het finale model van De Moeren ($exp(\\beta)-1$). De",
-          "referentiegroep is nulbeleid (= geen oppervlakte‐aandeel",
-          "soortbeschermingsmaatregelen aanwezig). Q2.5 is de ondergrens van",
-          "het 95 \\% geloofwaardigheidsinterval en Q97.5 de bovengrens.")) %>%
+  kable(
+    digits = 3,
+    booktabs = TRUE,
+    caption = paste(
+      "Samenvattende statistieken van de a-posterioriverdelingen van de",
+      "parameters in het finale model van De Moeren ($exp(\\beta)-1$). De",
+      "referentiegroep is nulbeleid (= geen oppervlakte‐aandeel",
+      "soortbeschermingsmaatregelen aanwezig). Q2.5 is de ondergrens van",
+      "het 95 \\% geloofwaardigheidsinterval en Q97.5 de bovengrens."
+    )
+  ) %>%
   kableExtra::pack_rows("Model", 1, 5) %>%
   kableExtra::pack_rows("Geaggregeerd", 6, 7) %>%
   kableExtra::kable_styling(latex_options = "striped") %>%
@@ -1607,14 +1621,18 @@ model_output_2022_2023 %>%
   arrange(variabele) %>%
   mutate(variabele = gsub("area_prop_sb_cat", "", variabele),
          variabele = gsub("_weighted", "", variabele)) %>%
-  kable(digits = 3, booktabs = TRUE,
-        caption = paste(
-          "Samenvattende statistieken van de a-posterioriverdelingen van de",
-          "parameters in het finale model van de Oostelijke leemstreek",
-          "($exp(\\beta)-1$). De",
-          "referentiegroep is nulbeleid (= geen oppervlakte‐aandeel",
-          "soortbeschermingsmaatregelen aanwezig). Q2.5 is de ondergrens van",
-          "het 95 \\% geloofwaardigheidsinterval en Q97.5 de bovengrens.")) %>%
+  kable(
+    digits = 3,
+    booktabs = TRUE,
+    caption = paste(
+      "Samenvattende statistieken van de a-posterioriverdelingen van de",
+      "parameters in het finale model van de Oostelijke leemstreek",
+      "($exp(\\beta)-1$). De",
+      "referentiegroep is nulbeleid (= geen oppervlakte‐aandeel",
+      "soortbeschermingsmaatregelen aanwezig). Q2.5 is de ondergrens van",
+      "het 95 \\% geloofwaardigheidsinterval en Q97.5 de bovengrens."
+    )
+  ) %>%
   kableExtra::pack_rows("Model", 1, 12) %>%
   kableExtra::pack_rows("Geaggregeerd", 13, 14) %>%
   kableExtra::kable_styling(latex_options = "striped") %>%

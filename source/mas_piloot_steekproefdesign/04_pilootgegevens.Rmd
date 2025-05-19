@@ -209,8 +209,7 @@ Werkwijze:
 We stratificeerden binnen de Oostelijke leemstreek volgens OL en HOL.
 Binnen De Moeren was er enkel voldoende OL aanwezig en vervalt het HOL stratum.
 Akkervogelgemeenschappen worden vaak ingedeeld volgens hun affiniteit met open landschap (OLA - Open landschap Akkervogels), half-open landschap (HOLA) en kleinschalig landschap (KLA) [@dochy2005].
-Onder kleinschalig landschap verstaat men een landschap waar de percelen relatief klein zijn en het landschap in sterke mate dooraderd is door hagen, rietkragen en andere lijn- of puntvormige kleine landschapselementen (KLE's).
-De manier waarop we openheid van het landschap hebben bepaald laat niet toe om KLA te bepalen zonder bijkomende berekeningen.
+Onder kleinschalig landschap verstaat men een landschap waar de percelen relatief klein zijn en het landschap in sterke mate dooraderd is door hagen, rietkragen en andere lijn- of puntvormige kleine landschapselementen (KLE's).<!-- spell-check: ignore --> De manier waarop we openheid van het landschap hebben bepaald laat niet toe om KLA te bepalen zonder bijkomende berekeningen.
 KLA zullen een subset zijn van wat wij HOL noemen, met name HOL waar de gemiddelde perceelsgrootte relatief klein is.
 
 ### Steekproefgrootte, allocatie steekproefgrootte over strata en steekproeftrekking {#piloot-steekproefgrootte}
