@@ -7,7 +7,7 @@ Er is zowel een behoefte aan een meer verfijnd en betrouwbaar beeld van de toest
 
 De monitoringnoden kunnen we definiëren op drie schaalniveaus:
 
-1.  **Beleidsmonitoring** (*macroniveau*) i.v.m. soorten of ruimere agrobiodiversiteit in het *landbouwgebied in Vlaanderen* focust op een breed spectrum aan soorten (bv. vogels, insecten ...) en aangepaste landbouwpraktijken.
+1.  **Beleidsmonitoring** (*macroniveau*) gaat over soorten of ruimere agrobiodiversiteit in het *landbouwgebied in Vlaanderen* en focust op een breed spectrum aan soorten (bv. vogels, insecten ...) en aangepaste landbouwpraktijken.
     De nadruk ligt op de impact van het beleid (landbouw- en natuurbeleid) op lange termijn trends in het landbouwgebied.
     De resulterende rapportering en de daaruit afgeleide aanbevelingen zijn bruikbaar in een lange termijn beleidsplanning, over meerdere regeer- en GLB-programmaperiodes heen.
     Beleidsmonitoring overstijgt het evalueren van één instrument zoals beheerovereenkomsten maar kan wel een belangrijk toetsingskader vormen.
@@ -34,11 +34,11 @@ Een voorwaarde voor synergie is dat meetmethoden zo goed mogelijk op elkaar word
 Binnen dit pilootproject werken we een strategie uit die toelaat om te beantwoorden aan de monitoringnoden op het raakvlak tussen macro- en mesoschaalniveau voor wat betreft de soorten die kunnen opgevolgd worden via het MAS telprotocol.
 Dit zijn voornamelijk vogels die courant voorkomen in landbouwgebied, evenals sommige zoogdieren die met dit telprotocol kunnen worden waargenomen.
 We zullen deze aanpak uitwerken voor twee ver uiteengelegen piloot gebieden: (1) de Oostelijke leemstreek aan de ene kant van het gewest en (2) De Moeren aan de andere kant (zie \@ref(piloot-steekproefkader) voor de exacte ruimtelijke afbakening).
-Het speelt in ons voordeel dat er binnen deze gebieden al MAS tellingen gebeuren sinds 2018 met een actieve vrijwilligerswerking.
+Het speelt in ons voordeel dat er binnen deze gebieden al MAS-tellingen gebeuren sinds 2018 met een actieve vrijwilligerswerking.
 
 We combineren de vragen om enerzijds een meer verfijnd en betrouwbaar beeld te krijgen van de toestand van vogels in het landbouwgebied in Vlaanderen (inclusief detectie van regionale verschillen), en anderzijds met de vraag om een beter inzicht te krijgen in de effectiviteit van de maatregelen zonder hierbij te focussen op een individuele specifieke maatregel.
 De meeste beschermingsmaatregelen worden geconcentreerd toegepast in de zogenaamde kerngebieden of prioritaire gebieden.
-Het zijn ook deze gebieden waar de vroegere MAS tellingen zich op concentreerden.
+Het zijn ook deze gebieden waar de vroegere MAS-tellingen zich op concentreerden.
 De historische data laten ons dus al toe om na te gaan of er, gezamenlijk met de toename in oppervlakte aan beschermingsmaatregelen, ook een verbetering te zien is in de populatiegroottes van de soorten.
 Deze data kunnen ons echter niet vertellen of een eventuele verbetering zich misschien ook heeft voorgedaan buiten deze kerngebieden, waardoor we met minder grote stelligheid kunnen beweren dat de maatregelen een effect hebben.
 Het is daarom nodig dat we het meetnet uitbreiden en ook gaan tellen in zones met weinig of geen beschermingsmaatregelen.
@@ -46,7 +46,7 @@ Daarbij moeten we ervoor zorgen dat deze zones zo goed mogelijk vergelijkbaar zi
 Het type van landbouwvoering moet vergelijkbaar zijn en dit hangt sterk af van onder andere de bodem, het reliëf en het klimaat.
 Dit zijn aspecten die vrij goed gecapteerd worden door de landbouwstreken van België.
 Binnen eenzelfde landbouwstreek verwachten we dus gelijkaardige landbouwvoering (De Moeren ligt bijvoorbeeld in de polders en de Oostelijke leemstreek maakt deel uit van de leemstreek).
-Daarnaast weten we dat - zeker voor akkervogels - de openheid van het landschap een sterk bepalende factor is voor het voorkomen van deze soorten.
+Daarnaast weten we dat — zeker voor akkervogels — de openheid van het landschap een sterk bepalende factor is voor het voorkomen van deze soorten.
 Sommige soorten komen voor in zeer open landschappen en andere soorten komen eerder voor in half-open landschappen.
 Deze twee elementen (landbouwstreek en openheid van het landschap) zullen dus sleutelelementen worden in ons meetnetontwerp.
 Ze zullen ons enerzijds toelaten om "vergelijkbare" situaties te vinden binnen en buiten kerngebieden, en anderzijds, biedt de opdeling in landbouwstreken een antwoord op de wens om ook zicht te krijgen op regionale verschillen in toestand en trend van relatieve populatiegroottes van de soorten.
@@ -85,7 +85,7 @@ Dit geeft voldoende mogelijkheden om telpunten buiten deze SBP gebieden te kunne
 In het geval van De Moeren, is er direct vertrokken van een perimeter die al gebruikt werd door de MAS werking van dat gebied en die ons aangeleverd is.
 Dit was nog geen officiële SBP akkervogels perimeter, maar het is wel een gebied waar gelijkaardige inspanningen werden geleverd en we beschouwen het daarom als "SBP" gebied.
 Om voor De Moeren ook een controlegebied te hebben (buiten SBP), werd een buffer gelegd rond het noordoostelijke deel van De Moeren die in oppervlakte nagenoeg gelijk is aan het gedeelte binnen "SBP" (ten zuiden van De Moeren zitten we in Frankrijk en ten westen zitten we in duingebied).
-Deze perimeter ligt grotendeels binnen de polders landbouwstreek (een klein deel van de bufferzone ligt in de zandleemstreek), maar is slechts een klein deel van de volledige polders [@akkervogelgebieden; Fig. \@ref(fig:perimeters-sbp)].
+Deze perimeter ligt grotendeels binnen de polders landbouwstreek (een klein deel van de bufferzone ligt in de zandleemstreek), maar is slechts een klein deel van de volledige polders [@akkervogelgebieden, Fig. \@ref(fig:perimeters-sbp)].
 De Oostelijke leemstreek omvat een zeer groot deel van de volledige leemstreek en is daarom te beschouwen als **de betere casus** van de twee pilootgebieden om dienst te doen als test voor de uitrol naar andere landbouwstreken in Vlaanderen.
 
 ```{r landbouwstreken, out.width = "100%", fig.cap = "Landbouwstreken in Vlaanderen"}
@@ -96,7 +96,8 @@ include_graphics(file.path("media", "kaartjes", "landbouwstreken_vl.png"))
 include_graphics(file.path("media", "kaartjes", "sbp_piloot_kaart.png"))
 ```
 
-We bekomen dus twee polygonen (één voor De Moeren en één voor de Oostelijke leemstreek, beide bevatten zowel zones binnen als buiten SBP gebieden voor akkervogels).
+We bekomen dus twee polygonen (één voor De Moeren en één voor de Oostelijke leemstreek).
+Beide bevatten zowel zones binnen als buiten SBP gebieden voor akkervogels.
 We moeten nu echter het steekproefkader verder verfijnen.
 In eerste instantie doen we dit door *exclusie* van een aantal landgebruiken op basis van OpenStreetMap data [@openstreetmapcontributors2022] (Fig. \@ref(fig:steekproef-afbakening)A):
 
@@ -116,7 +117,7 @@ In eerste instantie doen we dit door *exclusie* van een aantal landgebruiken op 
     -   OSM definitie: `landuse = cemetery`
     -   OSM Wiki: <https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dcemetery>
 
-MAS tellingen gebeuren altijd vanaf een openbare weg of pad, er worden in principe nooit (landbouw)percelen betreden.
+MAS-tellingen gebeuren altijd vanaf een openbare weg of pad, er worden in principe nooit (landbouw)percelen betreden.
 We gebruiken daarom een extractie uit OpenStreetMap van alle wegentypes die in aanmerkingen komen (positieve selectie, dus autosnelwegen en dergelijke worden hier indirect uitgesloten) (Fig. \@ref(fig:steekproef-afbakening)B):
 
 -   OSM Wiki: <https://wiki.openstreetmap.org/wiki/Key:highway>
@@ -293,6 +294,8 @@ De toestand van de GitHub repository op het moment van de steekproeftrekking voo
 \text{(1)} het steekproefkader, (2) de steekproef en (3) de finale steekproef na manuele controle (de punten die effectief werden bezocht in het veld) werden ook in de GitHub repository opgeslagen als *TSV*-bestanden via de **git2rdata** package [@git2rdata-package] in de folder *data/processed*.
 Deze staan bijgevolg ook onder versiebeheer.
 De hashes van de finale bestanden zijn te vinden in Bijlage \@ref(hashes-steekproef).
+
+Een overzicht van alle databestanden is gegeven in @dmp-mas.
 
 ## Vrijwilligerswerking
 

@@ -43,7 +43,7 @@ Dit wordt verder besproken in Sectie \@ref(vrijwilligers-mbag) \textcolor{red}{z
 Wanneer we de data meer in detail gingen analyseren, bleek duidelijk dat deze pilootstudie een rijke bron van data is.
 Enkele analysemogelijkheden werden in het vorige hoofdstuk geduid via een case studie voor de Veldleeuwerik (\@ref(veldleeuwerik)).
 Dit is echter maar het topje van de ijsberg.
-Een discussie van de verderzetting en uitbreiding van mogelijke statistische analyses wordt in het volgende hoofdstuk beschreven (\@ref(discussie)).
+Een discussie van de verderzetting en uitbreiding van mogelijke statistische analyses wordt in het volgende hoofdstuk beschreven (Hoofdstuk \@ref(discussie)).
 Een belangrijke beperking was wel het aantal data in De Moeren.
 Zelfs voor een algemene soort als Veldleeuwerik zagen we relatief grote onzekerheid op parameterschattingen en voor minder algemene soorten convergeerden modellen moeilijk of verkregen we onbetrouwbare resultaten.
 Aangezien de MAS-uitbreiding naar Vlaanderen op macro-schaal gebeurt (zie verder), verwachten we hier geen problemen.
@@ -237,7 +237,7 @@ Omwille van de automatisatie van de versiecontrolestap van het steekproefkader e
 De finale steekproef na manuele controle (de punten die effectief werden bezocht in het veld) zijn wel nog te vinden in de folder *data/processed* zoals bij het pilootmeetnet (Sectie \@ref(git-piloot)).
 De hashes van de finale bestanden zijn te vinden in Bijlage \@ref(hashes-steekproef).
 Bij de uitrol naar alle landbouwgebieden in Vlaanderen zullen we voor elk gebied bestanden centraal beschikbaar stellen via Zenodo (<https://zenodo.org/>).
-Dit zal zorgen dat deze bestanden nog beter traceerbaar zijn en het volledige meetnet aan een enkele DOI kan worden gelinkt.
+Dit zal zorgen dat deze bestanden nog beter traceerbaar zijn en het volledige meetnet aan een enkele DOI kan worden gelinkt [@dmp-mas].
 
 ## Vrijwilligerswerking {#vrijwilligers-mbag}
 

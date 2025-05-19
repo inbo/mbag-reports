@@ -15,13 +15,13 @@ Dit zijn termen waarmee de lezer mogelijk niet bekend of waarvoor geen eenvoudig
 Deze worden samengevat in Bijlage \@ref(statistische-termen).
 Engelstalige termen worden in cursief aangeduid.
 
-## Data exploratie MAS tellingen {#exploratie-tellingen}
+## Data exploratie MAS-tellingen {#exploratie-tellingen}
 
 ### Enkele cijfers
 
 De volgende resultaten betreffen vogels.
 Zoogdieren worden besproken in Sectie \@ref(exploratie-zoogdieren).
-\textcolor{red}{Sinds 2018 worden in het kader van plan kiekendief MAS tellingen uitgevoerd, in dezelfde deelgebieden waar deze piloot studie zich op richt.} Zoals besproken in Sectie \@ref(piloot-overlap), zijn een aantal van deze punten hergebruikt bij de steekproeftrekking voor deze pilootstudie.
+\textcolor{red}{Sinds 2018 worden in het kader van plan kiekendief MAS-tellingen uitgevoerd, in dezelfde deelgebieden waar deze piloot studie zich op richt.} Zoals besproken in Sectie \@ref(piloot-overlap), zijn een aantal van deze punten hergebruikt bij de steekproeftrekking voor deze pilootstudie.
 Verder zijn er sinds de pilootstudie (sinds 2022) veel telpunten bijgekomen in De Moeren en de Oostelijke leemstreek (Tabel \@ref(tab:samenvatting-aantallen)).
 De meeste telpunten werden vier maal per jaar bezocht (Fig. \@ref(fig:telintensiteit)).
 Figuren \@ref(fig:aantal-waarnemingen) en \@ref(fig:aantal-soorten) geven een meer gedetailleerd beeld van de verdelingen van respectievelijk het aantal waarnemingen en soorten per jaar.
