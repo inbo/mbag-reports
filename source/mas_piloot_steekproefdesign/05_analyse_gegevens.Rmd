@@ -15,7 +15,7 @@ Dit zijn termen waarmee de lezer mogelijk niet bekend of waarvoor geen eenvoudig
 Deze worden samengevat in Bijlage \@ref(statistische-termen).
 Engelstalige termen worden in cursief aangeduid.
 
-## Data exploratie MAS-tellingen {#exploratie-tellingen}
+## Data exploratie MAS tellingen {#exploratie-tellingen}
 
 ### Enkele cijfers
 

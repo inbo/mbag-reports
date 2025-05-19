@@ -5,20 +5,21 @@
 De vermelde projecten die we hebben besproken in Hoofdstuk \@ref(historie) en Hoofdstuk \@ref(lopende-meetnetten) volstaan niet om aan alle monitoringnoden in Vlaanderen te voldoen.
 Er is zowel een behoefte aan een meer verfijnd en betrouwbaar beeld van de toestand van vogels in het landbouwgebied in Vlaanderen (inclusief detectie van regionale verschillen), als aan een beter inzicht in de oorzaken van de huidige trends en de effectiviteit van maatregelen om negatieve trends om te keren.
 
-De monitoringnoden in meest brede zin zijn:
+De monitoringnoden kunnen we definiëren op drie schaalniveaus:
 
 1.  **Beleidsmonitoring** (*macroniveau*) i.v.m. soorten of ruimere agrobiodiversiteit in het *landbouwgebied in Vlaanderen* focust op een breed spectrum aan soorten (bv. vogels, insecten ...) en aangepaste landbouwpraktijken.
-    De nadruk ligt op de impact van het beleid (GLB en natuurbeleid) op lange termijn trends in het landbouwgebied.
-    De resulterende rapportering en de daaruit afgeleide aanbevelingen zijn bruikbaar in een lange termijn beleidsplanning.
+    De nadruk ligt op de impact van het beleid (landbouw- en natuurbeleid) op lange termijn trends in het landbouwgebied.
+    De resulterende rapportering en de daaruit afgeleide aanbevelingen zijn bruikbaar in een lange termijn beleidsplanning, over meerdere regeer- en GLB-programmaperiodes heen.
     Beleidsmonitoring overstijgt het evalueren van één instrument zoals beheerovereenkomsten maar kan wel een belangrijk toetsingskader vormen.
 
 2.  **Beheermonitoring** (*mesoniveau*) heeft als doel na te gaan of de uitgevoerde beheermaatregelen op *gebiedsniveau* het gewenste vooropgestelde ecologische resultaat (effectiviteit) opleveren.
     Beheermonitoring wordt bij voorkeur uitgevoerd in prioritaire gebieden met hoge densiteit aan maatregelen en in aanliggende controlegebieden met een gelijkaardig potentieel maar zonder maatregelen.
     Hierbij worden op een voldoende fijn schaalniveau naast verschillende ecologische parameters (doelsoorten) (= responsvariabelen) ook voldoende gebiedskarakteristieken (bv. teelten, perceelgroottes, permanente landschappelijke infrastructuur -- onverharde wegen, houtkanten ...) (= verklarende variabelen) meegenomen die het (verklarende) zeggenschap van de verzamelde ecologische data kunnen verhogen.
-    Rapportering en aanbevelingen laten toe om op middellange termijn maatregelen bij te sturen.
+    Rapportering en aanbevelingen laten toe om op middellange termijn maatregelen bij te sturen, naar een volgende regeer- en GLB-programmaperiode toe.
 
 3.  **Aanvullend verklarend onderzoek** (*microniveau*).
-    Op basis van de resultaten van beleids- en beheermonitoring is het vaak aangewezen om aanvullend ook monitoring van bepaalde beheerindicatoren op microniveau of meer diepgaand soortspecifiek onderzoek uit te voeren om een beter inzicht te verkrijgen in de factoren die de waargenomen trends kunnen verklaren of om de ecologische validatie te doen van specifieke nieuwe of aangepaste maatregelen.
+    Op basis van de resultaten van beleids- en beheermonitoring is het vaak aangewezen om aanvullend ook monitoring van bepaalde beheerindicatoren op microniveau of meer diepgaand soortspecifiek onderzoek uit te voeren.
+    Dat is nodig om een beter inzicht te verkrijgen in de factoren die de waargenomen trends kunnen verklaren of om de ecologische validatie te doen van specifieke nieuwe of aangepaste maatregelen.
     Onder andere de SWOT-analyse van het Soortenbeschermingsprogramma (SBP) akkervogels [@agentschapvoornatuurenbos2021] onderschrijft deze noodzaak.
     Verschillende sleutelactoren werken hiervoor nauw samen waardoor binnen de uitvoeringstermijn van een instrument feedback mogelijk is naar de landbouwer en op middellange termijn een onderbouwde bijsturing (evidence-based) van bepaalde maatregelen mogelijk wordt.
 
@@ -26,32 +27,37 @@ Deze verschillende noden vergen een verschillend meetnetontwerp of onderzoeksopz
 Beleidsmonitoring vraagt om een aselecte steekproef om onvertekende uitspraken te kunnen doen.
 Naarmate de vraagstelling meer gericht is, zoals het geval is bij de vraag naar de effectiviteit van specifieke maatregelen voor een bepaalde soort, zal ook een meer gericht ontwerp nodig zijn.
 Niettemin kan er naar synergie gestreefd worden tussen de verschillende niveaus van monitoring.
-Een nodige voorwaarde voor synergie is dat meetmethoden zo goed mogelijk op elkaar worden afgestemd.
+Een voorwaarde voor synergie is dat meetmethoden zo goed mogelijk op elkaar worden afgestemd.
 
 ## Plan van aanpak
 
-Binnen dit pilootproject werken we een strategie uit die toelaat om te beantwoorden aan de monitoringnoden op het raakvlak tussen macro- en mesoschaalniveau voor wat betreft de soorten die kunnen opgevolgd worden via het MAS telprotocol (i.e. voornamelijk vogels die courant voorkomen in landbouwgebied, evenals sommige zoogdieren die met dit telprotocol kunnen worden waargenomen).
-We zullen deze aanpak uitwerken voor enerzijds de Oostelijke leemstreek en anderzijds De Moeren (zie \@ref(piloot-steekproefkader) voor de exacte ruimtelijke afbakening), omdat binnen deze gebieden er al MAS tellingen gebeuren sinds 2018 met een actieve vrijwilligerswerking.
+Binnen dit pilootproject werken we een strategie uit die toelaat om te beantwoorden aan de monitoringnoden op het raakvlak tussen macro- en mesoschaalniveau voor wat betreft de soorten die kunnen opgevolgd worden via het MAS telprotocol.
+Dit zijn voornamelijk vogels die courant voorkomen in landbouwgebied, evenals sommige zoogdieren die met dit telprotocol kunnen worden waargenomen.
+We zullen deze aanpak uitwerken voor twee ver uiteengelegen piloot gebieden: (1) de Oostelijke leemstreek aan de ene kant van het gewest en (2) De Moeren aan de andere kant (zie \@ref(piloot-steekproefkader) voor de exacte ruimtelijke afbakening).
+Het speelt in ons voordeel dat er binnen deze gebieden al MAS tellingen gebeuren sinds 2018 met een actieve vrijwilligerswerking.
 
-We combineren de vragen om enerzijds een meer verfijnd en betrouwbaar beeld van de toestand van vogels in het landbouwgebied in Vlaanderen (inclusief detectie van regionale verschillen), en anderzijds met de vraag om een beter inzicht te krijgen in de effectiviteit van de maatregelen zonder hierbij te focussen op een individuele specifieke maatregel.
+We combineren de vragen om enerzijds een meer verfijnd en betrouwbaar beeld te krijgen van de toestand van vogels in het landbouwgebied in Vlaanderen (inclusief detectie van regionale verschillen), en anderzijds met de vraag om een beter inzicht te krijgen in de effectiviteit van de maatregelen zonder hierbij te focussen op een individuele specifieke maatregel.
 De meeste beschermingsmaatregelen worden geconcentreerd toegepast in de zogenaamde kerngebieden of prioritaire gebieden.
 Het zijn ook deze gebieden waar de vroegere MAS tellingen zich op concentreerden.
 De historische data laten ons dus al toe om na te gaan of er, gezamenlijk met de toename in oppervlakte aan beschermingsmaatregelen, ook een verbetering te zien is in de populatiegroottes van de soorten.
 Deze data kunnen ons echter niet vertellen of een eventuele verbetering zich misschien ook heeft voorgedaan buiten deze kerngebieden, waardoor we met minder grote stelligheid kunnen beweren dat de maatregelen een effect hebben.
-Het is daarom nodig dat we het meetnet uitbreiden en ook gaan tellen in zones met weinig of geen beschermingsmaatregelen en daarbij moeten we ervoor zorgen dat deze zones zo goed mogelijk vergelijkbaar zijn met deze van de kerngebieden.
+Het is daarom nodig dat we het meetnet uitbreiden en ook gaan tellen in zones met weinig of geen beschermingsmaatregelen.
+Daarbij moeten we ervoor zorgen dat deze zones zo goed mogelijk vergelijkbaar zijn met deze van de kerngebieden.
 Het type van landbouwvoering moet vergelijkbaar zijn en dit hangt sterk af van onder andere de bodem, het reliëf en het klimaat.
 Dit zijn aspecten die vrij goed gecapteerd worden door de landbouwstreken van België.
-Binnen eenzelfde landbouwstreek verwachten we dus gelijkaardige landbouwvoering (De Moeren ligt bijvoorbeeld in de polders en de Oostelijke leemstreek maakt deel uit van de leemstreek) Daarnaast weten we dat - zeker voor akkervogels - de openheid van het landschap een sterk bepalende factor is voor het voorkomen van deze soorten.
+Binnen eenzelfde landbouwstreek verwachten we dus gelijkaardige landbouwvoering (De Moeren ligt bijvoorbeeld in de polders en de Oostelijke leemstreek maakt deel uit van de leemstreek).
+Daarnaast weten we dat - zeker voor akkervogels - de openheid van het landschap een sterk bepalende factor is voor het voorkomen van deze soorten.
 Sommige soorten komen voor in zeer open landschappen en andere soorten komen eerder voor in half-open landschappen.
-Deze twee elementen (landbouwstreek en openheid van het landschap) zullen dus sleutelelementen worden in ons meetnetontwerp en zullen ons enerzijds toelaten om "vergelijkbare" situaties te vinden binnen en buiten kerngebieden, en anderzijds, biedt de verkaveling in landbouwstreken een antwoord op de wens om ook zicht te krijgen op regionale verschillen in toestand en trend van relatieve populatiegroottes van de soorten.
-Dit laatste zal nog niet mogelijk zijn met de data die tijdens dit pilootproject worden ingezameld, maar wordt wel mogelijk wanneer we dit "proof of concept" uitrollen naar de andere landbouwstreken in Vlaanderen (zie Hoofdstuk \@ref(ontwerp-meetnet)).
+Deze twee elementen (landbouwstreek en openheid van het landschap) zullen dus sleutelelementen worden in ons meetnetontwerp.
+Ze zullen ons enerzijds toelaten om "vergelijkbare" situaties te vinden binnen en buiten kerngebieden, en anderzijds, biedt de opdeling in landbouwstreken een antwoord op de wens om ook zicht te krijgen op regionale verschillen in toestand en trend van relatieve populatiegroottes van de soorten.
+Dit laatste zal nog niet mogelijk zijn met de data die tijdens dit pilootproject zijn ingezameld, maar wordt wel mogelijk wanneer we dit bewezen recept uitrollen naar de andere landbouwstreken in Vlaanderen (zie Hoofdstuk \@ref(ontwerp-meetnet)).
 
 Met deze aanpak beantwoorden we dus zowel de informatienoden voor beleidsmonitoring als de beheermonitoring op mesoniveau, althans wanneer uitgerold naar Vlaanderen.
-Een belangrijke doelstelling van het pilootproject is dan ook de haalbaarheid en opschaalbaarheid van deze monitoring in te schatten zodat in de toekomst meer inzicht wordt verkregen in (1) meer betrouwbare toestand en trend schattingen voor Vlaanderen, (2) regionale verschillen in toestand en trend, en (3) de effectiviteit van de geleverde inspanningen in zijn geheel (inclusief beheerovereenkomsten, soort(en)beschermingsprogramma's, conditionaliteiten, (pre-)ecoregelingen, agromilieuklimaatmaatregelingen, niet-productieve investeringen via het Vlaams Investeringsfonds ...).
+Een belangrijke doelstelling van het pilootproject is dan ook de haalbaarheid en opschaalbaarheid van deze monitoring in te schatten zodat in de toekomst meer inzicht wordt verkregen in (1) meer betrouwbare toestand en trend schattingen voor Vlaanderen, (2) regionale verschillen in toestand en trend, en (3) de effectiviteit van de geleverde inspanningen in zijn geheel (inclusief beheerovereenkomsten, soortbeschermingsprogramma's, conditionaliteiten, (pre-)ecoregelingen, agromilieuklimaatmaatregelingen, niet-productieve investeringen via het Vlaams Investeringsfonds ...).
 
 Onze aanpak laat ook toe om een deel van de bestaande tellocaties te behouden.
 Binnen het pilootproject werd dit in de eerste plaats toegepast op de reeds bestaande tellocaties van het Meetnet Agrarische Soorten.
-Principieel kan het principe dat we hiervoor gebruikt hebben echter ook worden toegepast op ABV telhokken (met daarbinnen tellocaties).
+Eventueel kan het principe dat we hiervoor gebruikt hebben echter ook worden toegepast op ABV telhokken (met daarbinnen tellocaties), mits we de vergelijkbaarheid kunnen waarborgen (zie hoofdstuk \@ref(discussie)).
 
 In Sectie \@ref(piloot-ontwerp) volgt een meer technische bespreking van de aanpak.
 
@@ -161,13 +167,12 @@ We zijn enkel geïnteresseerd in potentiële telpunten waar de samenstelling van
 Met deze regel slagen we er in om potentiële telpunten uit te sluiten die bijvoorbeeld te dicht bij bebouwing gelegen zijn (Fig. \@ref(fig:steekproef-afbakening)D).
 De uiteindelijk bekomen lijst van punten vormt het steekproefkader van het MAS pilootproject.
 
-```{=tex}
 \begin{figure}
   \makebox[\textwidth][c]{\includegraphics[width=1.1\textwidth]{media/steekproefkader_mas/mas_piloot_afbakening.png}}
   \caption{Methodiek voor de afbakening van het steekproefkader. In \textbf{A}-\textbf{C} gevisualiseerd voor een kleine oppervlakte in het zuidelijk deel van de Oostelijke leemstreek (xmin = 200000, xmax = 207000, ymin = 155000, ymax = 160000). \textbf{A.} Exclusie van landgebruiken op basis van OpenStreetMap data (groen) over de polygoon van de Oostelijke leemstreek (rood). \textbf{B.} Selectie van paden, wegen en waterlopen. \textbf{C.} Omvorming van (water)wegennetwerk tot puntennetwerk. \textbf{D.} Selectie van de volledige doelpopulatie op basis van de VITO 2019 landgebruikskaart.}
   \label{fig:steekproef-afbakening}
 \end{figure}
-```
+
 In een laatste stap was het de bedoeling om ook nog een exclusie van potentiële telpunten uit te voeren op basis van slechte zichtbaarheid vanaf het telpunt.
 Hier was al gedeeltelijk mee rekening gehouden door holle wegen uit te sluiten.
 Mogelijk zijn echter niet alle holle wegen gekend in OpenStreetMap en er zijn ook andere landschapsconfiguraties die maken dat observatie van vogels lastig is.
@@ -282,11 +287,10 @@ Alle code werd beheerd onder versiecontrole met Git op een online GitHub reposit
 Dit houdt in dat niet enkel de code zelf, maar ook alle wijzigingen in de code doorheen de tijd daar kunnen geraadpleegd worden.
 De toestand van de GitHub repository op het moment van de steekproeftrekking voor de pilootstudie kan geraadpleegd worden via de volgende commit hash:
 
-```{=tex}
 \begin{center}
 7d0cdbc83765719876fbf0954082873d992f33de
 \end{center}
-```
+
 \text{(1)} het steekproefkader, (2) de steekproef en (3) de finale steekproef na manuele controle (de punten die effectief werden bezocht in het veld) werden ook in de GitHub repository opgeslagen als *TSV*-bestanden via de **git2rdata** package [@git2rdata-package] in de folder *data/processed*.
 Deze staan bijgevolg ook onder versiebeheer.
 De hashes van de finale bestanden zijn te vinden in Bijlage \@ref(hashes-steekproef).
