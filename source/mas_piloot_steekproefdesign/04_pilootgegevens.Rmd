@@ -34,11 +34,11 @@ Een voorwaarde voor synergie is dat meetmethoden zo goed mogelijk op elkaar word
 Binnen dit pilootproject werken we een strategie uit die toelaat om te beantwoorden aan de monitoringnoden op het raakvlak tussen macro- en mesoschaalniveau voor wat betreft de soorten die kunnen opgevolgd worden via het MAS telprotocol.
 Dit zijn voornamelijk vogels die courant voorkomen in landbouwgebied, evenals sommige zoogdieren die met dit telprotocol kunnen worden waargenomen.
 We zullen deze aanpak uitwerken voor twee ver uiteengelegen piloot gebieden: (1) de Oostelijke leemstreek aan de ene kant van het gewest en (2) De Moeren aan de andere kant (zie \@ref(piloot-steekproefkader) voor de exacte ruimtelijke afbakening).
-Het speelt in ons voordeel dat er binnen deze gebieden al MAS tellingen gebeuren sinds 2018 met een actieve vrijwilligerswerking.
+Het speelt in ons voordeel dat er binnen deze gebieden al MAS-tellingen gebeuren sinds 2018 met een actieve vrijwilligerswerking.
 
 We combineren de vragen om enerzijds een meer verfijnd en betrouwbaar beeld te krijgen van de toestand van vogels in het landbouwgebied in Vlaanderen (inclusief detectie van regionale verschillen), en anderzijds met de vraag om een beter inzicht te krijgen in de effectiviteit van de maatregelen zonder hierbij te focussen op een individuele specifieke maatregel.
 De meeste beschermingsmaatregelen worden geconcentreerd toegepast in de zogenaamde kerngebieden of prioritaire gebieden.
-Het zijn ook deze gebieden waar de vroegere MAS tellingen zich op concentreerden.
+Het zijn ook deze gebieden waar de vroegere MAS-tellingen zich op concentreerden.
 De historische data laten ons dus al toe om na te gaan of er, gezamenlijk met de toename in oppervlakte aan beschermingsmaatregelen, ook een verbetering te zien is in de populatiegroottes van de soorten.
 Deze data kunnen ons echter niet vertellen of een eventuele verbetering zich misschien ook heeft voorgedaan buiten deze kerngebieden, waardoor we met minder grote stelligheid kunnen beweren dat de maatregelen een effect hebben.
 Het is daarom nodig dat we het meetnet uitbreiden en ook gaan tellen in zones met weinig of geen beschermingsmaatregelen.
@@ -117,7 +117,7 @@ In eerste instantie doen we dit door *exclusie* van een aantal landgebruiken op 
     -   OSM definitie: `landuse = cemetery`
     -   OSM Wiki: <https://wiki.openstreetmap.org/wiki/Tag:landuse%3Dcemetery>
 
-MAS tellingen gebeuren altijd vanaf een openbare weg of pad, er worden in principe nooit (landbouw)percelen betreden.
+MAS-tellingen gebeuren altijd vanaf een openbare weg of pad, er worden in principe nooit (landbouw)percelen betreden.
 We gebruiken daarom een extractie uit OpenStreetMap van alle wegentypes die in aanmerkingen komen (positieve selectie, dus autosnelwegen en dergelijke worden hier indirect uitgesloten) (Fig. \@ref(fig:steekproef-afbakening)B):
 
 -   OSM Wiki: <https://wiki.openstreetmap.org/wiki/Key:highway>
