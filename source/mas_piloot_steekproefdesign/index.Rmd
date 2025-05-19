@@ -29,10 +29,10 @@ author:
     corresponding: true
 reviewer:
   - name:
-      given: "Koen"
-      family: "Devos"
-    email: "koen.devos@inbo.be"
-    orcid: "0000-0001-7265-6349"
+      given: "Peter"
+      family: "Van Gossum"
+    email: "peter.vangossum@inbo.be"
+    orcid: "0000-0002-1595-7126"
     affiliation: "Instituut voor Natuur- en Bosonderzoek (INBO)"
 lang: nl
 style: INBO
