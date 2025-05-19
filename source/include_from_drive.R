@@ -18,14 +18,16 @@ include_from_drive <- function(name, figures, overwrite = FALSE, ...) {
       googledrive::drive_download(
         file = the_fig[i, ],
         path = local_path[i],
-        overwrite = overwrite)
+        overwrite = overwrite
+      )
     }
     # 2: bestand bestaat nog niet, download het
     if (!file.exists(local_path[i])) {
       googledrive::drive_download(
         file = the_fig[i, ],
         path = local_path[i],
-        overwrite = overwrite)
+        overwrite = overwrite
+      )
     }
   }
 }

@@ -69,4 +69,4 @@ Dit kan door deze code in je console te runnen:
 tinytex::reinstall_tinytex()
 ```
 
-Je kan ook zelf een repository specifieren, bijvoorbeeld `tinytex::reinstall_tinytex(repository = "illinois")`.
+Je kan ook zelf een repository specificeren, bijvoorbeeld `tinytex::reinstall_tinytex(repository = "illinois")`.
