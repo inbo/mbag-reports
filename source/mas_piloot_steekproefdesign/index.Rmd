@@ -40,16 +40,19 @@ floatbarrier: subsubsection
 keywords: "akkerfauna; monitoring; akkervogels; meetnet; landbouw"
 community: "inbo"
 publication_type: report
+publisher: Research Institute for Nature and Forest (INBO)
 funder: Instituut voor Natuur- en Bosonderzoek (INBO)
 rightsholder: Instituut voor Natuur- en Bosonderzoek (INBO)
 bibliography: [software.bib, references.bib, layers.bib]
 link-citations: TRUE
 site: bookdown::bookdown_site
-year: 2024
-reportnr: 1
+year: 2025
+reportnr: 30
 cover_photo: cover.jpg
 #cover: cover.pdf
 cover_description: Gele kwikstaart (_Motacilla flava_). (© Johannes Jansen)
+doi: 10.21436/inbor.126766638
+depotnr: D/2025/3241/194
 header-includes:
   - \usepackage[left]{lineno}
   - \linenumbers
