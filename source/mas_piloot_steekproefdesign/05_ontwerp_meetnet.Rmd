@@ -53,9 +53,9 @@ Naast een minimum oppervlakte moet natuurlijk ook gewaarborgd worden dat het sub
 
 ## Uitbreiding van het akkervogelmeetnet voor Vlaanderen {#uitbreiding-vlaanderen}
 
-Het idee is om in de komende jaren het MAS-meetnet uit te breiden over de verschillende landbouwstreken in Vlaanderen (Hoofdstuk \@ref(pilootgegevens), Fig.
+Het idee is opgevat om het MAS-meetnet gradueel uit te breiden over de verschillende landbouwstreken in Vlaanderen (Hoofdstuk \@ref(pilootgegevens), Fig.
 \@ref(fig:landbouwstreken)).
-In 2023 zijn we reeds gestart met de leemstreek en de zandleemstreek.
+In 2023 werd reeds gestart met de leemstreek en de zandleemstreek. In 2024 werd de uitrol over heel Vlaanderen gerealiseerd.
 
 ### Aanpassingen ten opzichte van het pilootmeetnet {#aanpassingen-meetnet}
 
@@ -73,7 +73,7 @@ Zie Bijlage \@ref(bijlage-uitrol-mas) (Fig. \@ref(fig:steekproef-afbakening-mbag
     Deze vooral om zoveel mogelijk een goede bereikbaarheid en zichtbaarheid te voorzien.
     Langs autosnelwegen liggen vaak parallelle paden; zelfs langs beide kanten van de snelweg.
     Dit kan in de steekproef tot gevolg hebben dat er met een hogere waarschijnlijkheid een punt wordt geselecteerd vlak bij een snelweg, omdat er veel van zulke punten zijn.
-    Enerzijds is dat een realiteit van het terrein die een invloed heeft op de waarnemingen (bv. vaak kraaiachtigen en Buizerd langs snelwegen) en vrij zeker ook op de detecteerbaarheid (geluidsoverlast en beperkte zichtbaarheid).
+    Enerzijds is dat een realiteit van het terrein die een invloed heeft op de waarnemingen (bv. vaak kraaiachtigen en Buizerd langs snelwegen) en vrij zeker ook op de detecteerbaarheid van vogels (geluidsoverlast en beperkte zichtbaarheid).
     Daarom hebben we een extra exclusiecriterium in acht te genomen door een zone van 100 m buffer rond autosnelwegen en invoegstroken en afritten van autosnelwegen uit te sluiten.
     Op die manier gaan er nog steeds punten zijn waarvan de telcirkels het effect van snelwegen omvatten, maar sluiten we punten die te dicht tegen snelwegen liggen uit.
     Een recentere versie van de OpenStreetMap data werd gedownload op 16-03-2023.
