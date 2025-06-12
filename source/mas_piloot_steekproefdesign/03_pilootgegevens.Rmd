@@ -2,7 +2,7 @@
 
 ## Informatiebehoefte-analyse
 
-De vermelde projecten die we hebben besproken in Hoofdstuk \@ref(historie) en Hoofdstuk \@ref(lopende-meetnetten) volstaan niet om aan alle monitoringnoden in Vlaanderen te voldoen.
+De vermelde projecten die we hebben besproken in Hoofdstuk \@ref(historie) volstaan niet om aan alle monitoringnoden in Vlaanderen te voldoen.
 Er is zowel een behoefte aan een meer verfijnd en betrouwbaar beeld van de toestand van vogels in het landbouwgebied in Vlaanderen (inclusief detectie van regionale verschillen), als aan een beter inzicht in de oorzaken van de huidige trends en de effectiviteit van maatregelen om negatieve trends om te keren.
 
 De monitoringnoden kunnen we definiëren op drie schaalniveaus:
