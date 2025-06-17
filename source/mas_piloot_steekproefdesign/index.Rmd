@@ -114,18 +114,18 @@ De inleiding gaat dieper in op de biodiversiteit in landbouwgebieden en het bela
 De boerenlandvogelindex (farmland bird index, FBI) wordt genoemd als een belangrijke indicator.
 Huidige monitoringsprojecten en -initiatieven worden als waardevolle basis gezien, maar er is een behoefte aan meer gedetailleerde trendgegevens en inzicht in de oorzaken van trends en de effectiviteit van maatregelen.
 
-Hoofdstuk 2 bespreekt de historie en lopende vogelmeetnetten in Vlaanderen, waaronder Algemene Broedvogels Vlaanderen (ABV), Bijzondere Broedvogels Vlaanderen (BBV), de Vlaamse Vogelatlas, en het Meetnet Agrarische Soorten (MAS).
+Hoofdstuk \@ref(historie) bespreekt de historie en lopende vogelmeetnetten in Vlaanderen, waaronder Algemene Broedvogels Vlaanderen (ABV), Bijzondere Broedvogels Vlaanderen (BBV), de Vlaamse Vogelatlas, en het Meetnet Agrarische Soorten (MAS).
 Regionale initiatieven zoals PDPO-monitoring en het Partridge-project worden ook besproken.
 
-Hoofdstuk 3 gaat in op het ontwerp van de inzameling van pilootgegevens in 2022-2023.
+Hoofdstuk \@ref(pilootgegevens) gaat in op het ontwerp van de inzameling van pilootgegevens in 2022-2023.
 Er wordt een informatiebehoefte-analyse uitgevoerd, waarbij monitoringsnoden op drie schaalniveaus worden gedefinieerd: beleidsmonitoring (macroniveau), beheermonitoring (mesoniveau) en aanvullend verklarend onderzoek (microniveau).
 Het plan van aanpak richt zich op het raakvlak tussen macro- en mesoschaalniveau voor soorten die via het MAS-telprotocol kunnen worden opgevolgd.
 De steekproeftrekking, stratificatie, steekproefgrootte, allocatie en overlap met bestaande telpunten worden gedetailleerd beschreven.
 
-Hoofdstuk 4 analyseert de beschikbare MAS-gegevens, inclusief data exploratie, broedcodes, relatieve frequenties, zoogdieren, en een vergelijking van gepaarde tellingen tussen vrijwilligers en professionele tellers.
+Hoofdstuk \@ref(analyse-gegevens) analyseert de beschikbare MAS-gegevens, inclusief data exploratie, broedcodes, relatieve frequenties, zoogdieren, en een vergelijking van gepaarde tellingen tussen vrijwilligers en professionele tellers.
 Ook worden de berekende verklarende variabelen besproken, zoals oppervlakte-aandelen van soortbeschermingsmaatregelen en hoofdteelten, openheid van het landschap, en de aanwezigheid van predatoren.
 
-Daarna beschrijven we in hoofdstuk 5 het ontwerp van een meetnet voor heel Vlaanderen, met de lessen die we uit deze pilootstudie hebben geleerd.
+Daarna beschrijven we in Hoofdstuk \@ref(ontwerp-meetnet) het ontwerp van een meetnet voor heel Vlaanderen, met de lessen die we uit deze pilootstudie hebben geleerd.
 De aanpassingen die nodig zijn om een steekproef te nemen in andere landbouwgebieden worden opgelijst.
 We verzamelen tips om een vrijwilligerswerking uit te bouwen.
 
@@ -215,4 +215,3 @@ for (file_name in figs$name) {
   include_from_drive(name = file_name, figures = figs, overwrite = FALSE)
 }
 ```
-
