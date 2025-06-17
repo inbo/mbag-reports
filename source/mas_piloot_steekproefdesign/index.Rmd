@@ -96,6 +96,12 @@ We bedanken Peter Van Gossum nogmaals voor het kritisch nalezen van het eindrapp
 
 En we willen u bedanken, als lezer, voor uw interesse in dit rapport, dat hopelijk verklarend en inspirerend kan werken.
 
+\vfill
+\begin{figure}[H]
+    \centering
+    \href{https://lv.vlaanderen.be/landbouwbeleid/plattelandsontwikkeling}{\includegraphics[width=0.5\textwidth]{media/logos/logo_vo_elfpo_0.jpg}}
+\end{figure}
+
 # Samenvatting {.unnumbered}
 
 <!-- description: start -->
