@@ -55,7 +55,8 @@ Naast een minimum oppervlakte moet natuurlijk ook gewaarborgd worden dat het sub
 
 Het idee is opgevat om het MAS-meetnet gradueel uit te breiden over de verschillende landbouwstreken in Vlaanderen (Hoofdstuk \@ref(pilootgegevens), Fig.
 \@ref(fig:landbouwstreken)).
-In 2023 werd reeds gestart met de leemstreek en de zandleemstreek. In 2024 werd de uitrol over heel Vlaanderen gerealiseerd.
+In 2023 werd reeds gestart met de leemstreek en de zandleemstreek.
+In 2024 werd de uitrol over heel Vlaanderen gerealiseerd.
 
 ### Aanpassingen ten opzichte van het pilootmeetnet {#aanpassingen-meetnet}
 
@@ -72,9 +73,9 @@ Zie Bijlage \@ref(bijlage-uitrol-mas) (Fig. \@ref(fig:steekproef-afbakening-mbag
     Op basis van de problemen gesignaleerd tijdens terreinbezoeken, sluiten we meer landgebruiken uit dan voordien (Tabel \@ref(tab:exclusie-landgebruik)).
     Deze vooral om zoveel mogelijk een goede bereikbaarheid en zichtbaarheid te voorzien.
     Langs autosnelwegen liggen vaak parallelle paden; zelfs langs beide kanten van de snelweg.
-    Dit kan in de steekproef tot gevolg hebben dat er met een hogere waarschijnlijkheid een punt wordt geselecteerd vlak bij een snelweg, omdat er veel van zulke punten zijn.
+    Dit kan in de steekproef tot gevolg hebben dat er met een hogere waarschijnlijkheid een punt wordt geselecteerd vlakbij een snelweg, omdat er veel van zulke punten zijn.
     Enerzijds is dat een realiteit van het terrein die een invloed heeft op de waarnemingen (bv. vaak kraaiachtigen en Buizerd langs snelwegen) en vrij zeker ook op de detecteerbaarheid van vogels (geluidsoverlast en beperkte zichtbaarheid).
-    Daarom hebben we een extra exclusiecriterium in acht te genomen door een zone van 100 m buffer rond autosnelwegen en invoegstroken en afritten van autosnelwegen uit te sluiten.
+    Daarom hebben we een extra exclusiecriterium in acht genomen door een zone van 100 m buffer rond autosnelwegen en invoegstroken en afritten van autosnelwegen uit te sluiten.
     Op die manier gaan er nog steeds punten zijn waarvan de telcirkels het effect van snelwegen omvatten, maar sluiten we punten die te dicht tegen snelwegen liggen uit.
     Een recentere versie van de OpenStreetMap data werd gedownload op 16-03-2023.
 
@@ -241,4 +242,16 @@ Dit zal zorgen dat deze bestanden nog beter traceerbaar zijn en het volledige me
 
 ## Vrijwilligerswerking {#vrijwilligers-mbag}
 
-\textcolor{red}{uitdagingen en verandering vrijwilligerswerking t.o.v. pilootproject}
+Het verzekeren van voldoende vrijwilligers bij vogelmonitoringsprojecten blijkt de laatste jaren niet evident.
+Zo loopt het aantal vrijwilligers die deelnemen aan ABV gestaag terug, waardoor het beoogde aantal hokken niet gehaald wordt puur op vrijwillige basis.
+Ook de inbreng van vrijwilligers in het veldwerk voor de nieuwe vogelatlas, daar bleven nog gaten oningevuld bij gebrek aan vrijwilligers.
+Het spreekt voor zich dat we daarmee rekening moeten houden voor de verderzetting van MAS-tellingen met ervaren vrijwilligers, alsook voor de uitrol van een nieuw meetnet naar nieuwe regio’s.
+Uit de ervaring opgedaan tijdens het piloot project bleek dat vrijwilligers via de tellingen een bijdrage willen leveren aan de bescherming van akkervogels, en daar voldoende \textcolor{red}{...} Ook bleek dat groepsgevoel, gezamenlijke activiteiten (regionaal) en communicatie van groot belang is.
+Daarbij werd voorzien in het jaarlijks opfrissen van de methodiek, het bespreken van broedcodes, identificatie van soorten op zicht en op geluid, zowel als webinar als in het veld tijdens trainingsdagen.
+Het lijkt ook een meerwaarde te zijn als de vrijwilligers jaarrond met het thema geactiveerd blijven, waarbij vrijwilligersorganisaties ook buiten het broedseizoen activiteiten en tellingen voorzien in het buitengebied.
+Sprekende voorbeelden daarvan zijn het opzetten van slaapplaatstellingen van kiekendieven, seizoensbijeenkomsten met informatiedoorstroom van analyses, excursies rond het thema wintervoedsel.
+Op die manier zijn we er in geslaagd om continuïteit te voorzien van vaste tellers, die jaarlijks opnieuw willen deelnemen, alsook een lichte groei aan nieuwe vrijwilligers die telpunten opnemen.
+Bij een uitrol in nieuwe regio’s is het onrealistisch om meteen van het ene jaar op het andere jaar te verwachten dat een aanzienlijk aandeel telpunten meteen wordt opgenomen door lokale vrijwilligers.
+Het garanderen dat alle punten van de steekproef geteld geraken, vooral in nieuwe en controlegebieden, is enkel mogelijk bij een aanzienlijk professionele ondersteuning van vrijwilligers (waarbij gewerkt kan worden aan communicatie, training en opvolging) alsook van betaalde krachten die telpunten tellen.
+Als realistisch streefdoel stellen we voorop dat in dit meetnet naar schatting 20 % van de telpunten kan opgenomen worden door vrijwilligers, met groeipotentieel om dat na verloop van enkele jaren uit te breiden naar 40 %.
+

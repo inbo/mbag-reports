@@ -2,18 +2,21 @@
 
 ## MAS telprotocol
 
-\textcolor{red}{Korte recap wat het MAS telprotocol inhoudt.}
+De analyse van beschikbare data bracht enkele afwegingen en discussiepunten met zich mee.
+Zo bleek de inschatting van de zichtbaarheid \textcolor{red}{...} Het verplaatsen van de meetpunt, waarbij de waarnemer zelf nog kan schuiven richting een plek met beter zicht, hebben we verboden.
+Dit toelaten zou het random aspect van de steekproeftrekking te veel kunnen beïnvloeden.
+Omdat een waarnemer niet exact op het puntcoördinaat zal plaatsnemen, met een nauwkeurigheid van een meter, hebben we daar wel wat flexibiliteit in aangebracht.
+De telcirkel zelf blijft waar die ligt, maar de waarnemer mag zich wel binnen een zone van 25 m rondom het telpunt (bewegingsruimte) positioneren in functie van zo goed mogelijke zichtbaarheid in de telcirkel.
+Deze wijziging hebben we op verschillende manieren gecommuniceerd, via de nieuwsbrief, webinars, op trainingsdagen en bij het overlopen van analyses.
+Dit moet jaarlijks best herhaald worden.
 
-Aangebrachte verbeteringen:
+Een ander aspect is het belang van afstanden om detectiecurves op te stellen, waarbij de afstand van de waarnemer ten opzichte van de vogel zo exact mogelijk moet gebeuren.
+Wat we dus niet kunnen toelaten is het tellen vanaf andere plaatsen dan het eigenlijke telpunt, omdat vanop een afstand observeren ook de inschatting van, alsook het effect van het al dan niet aanwezig zijn in het centrum van de telcirkel.
 
--   zone van 25 m rondom het telpunt (bewegingsruimte) in functie van zo goed mogelijke zichtbaarheid in de telcirkel
--   belang van afstanden om detectiecurves op te stellen (dus niet tellen vanaf andere plaatsen dan het eigenlijke telpunt)
--   ...
-
-Verschillen tussen vrijwilligers en professionelen:
-
--   blijvende aandacht nodig voor opleiding
--   ...
+Verschillen tussen vrijwilligers en professionelen waren significant, tijdens de beperkte vergelijkende studie.
+We willen hier vooral geen kwaad bloed zetten, of het werk van professionals ophemelen.
+Het toont vooral aan dat er blijvende aandacht nodig is voor opleiding, met herhaalde infosessies en oefeningen om de kwaliteit van de tellingen hoog te houden.
+Daar waar vrijwilligers nog ervaring of vertrouwen missen, zou het goed zijn om een inloopperiode te voorzien, waarbij iemand mee kan gaan om tellingen uit te voeren samen met een ervaren teller.
 
 Verschillen tussen het MAS-telprotocol en het telprotocol van de Algemene Broedvogelmonitoring Vlaanderen (ABV) [@vermeersch2018] omvatten onder andere de tijdsduur van de telling (resp. 10 min vs. 5 min) en het aantal telperiodes per jaar (resp. 4 vs. 3 periodes).
 De ABV maakt bovendien gebruik van een genest design met 6 telpunten in een hok van 1 km x 1 km.
@@ -118,11 +121,11 @@ Met de MAS data kunnen we dit principe ook toepassen per landbouwstreek en binne
 
 Wanneer we als doel hebben om na te gaan of de uitgevoerde beheermaatregelen het gewenste vooropgestelde ecologische resultaat (effectiviteit) opleveren, dienen we net een stap verder te gaan dan een loutere vergelijking van telpunten binnen en buiten SBP.
 Per telcirkel kunnen we exact bepalen welke oppervlakte aan maatregelen er genomen zijn en wanneer.
-Dit kunnen we zowel doen voor de maatregelen die worden genomen in kader van een SBP als voor de landbouwvoering (bijvoorbeeld oppervlakte-aandeel van een bepaald type hoofdteelt).
+Dit kunnen we zowel doen voor de maatregelen die worden genomen in kader van een SBP als voor de landbouwbedrijfsvoering (bijvoorbeeld oppervlakte-aandeel van een bepaald type hoofdteelt).
 Ook andere karakteristieken zoals (variatie in) perceelgroottes, kleine landschapselement ...) nemen we mee als verklarende variabelen in onze modellen.
 Dit laat ons toe om te bepalen welke factoren het meest gunstig zijn voor de densiteit aan akkervogels en laat ons ook beter toe om effecten van bepaalde maatregelen in te schatten conditioneel de andere factoren.
 
-Binnen dit pilootproject is al een eerste belangrijk stap gezet om deze modellen te fitten.
+Binnen dit pilootproject is al een eerste belangrijke stap gezet om deze modellen te fitten.
 We geloven echter dat hier nog een deel onontgonnen terrein ligt, om in nog meer detail de data te analyseren.
 In bovenstaande schets worden de verklarende variabelen samengevat per telcirkel en per jaar.
 De individuele tellingen geven ons echter informatie waar een soort gezien werd binnen de telcirkel in een bepaalde telperiode.
