@@ -100,7 +100,44 @@ En we willen u bedanken, als lezer, voor uw interesse in dit rapport, dat hopeli
 
 <!-- description: start -->
 
-...
+Dit rapport beschrijft de uitwerking van het meetnet voor agrarische soorten (MAS) in Vlaanderen, van een lokale pilootstudie tot een Vlaams monitoringsinstrument.
+Het steekproefdesign wordt uitgebreid besproken.
+
+Het document begint met een dankwoord aan verschillende instanties en personen die hebben bijgedragen aan de studie.
+Het onderzoek bouwt voort op eerdere initiatieven zoals plan kiekendief en het soortbeschermingsplan akkervogels.
+
+De aanbevelingen voor het beleid benadrukken de noodzaak van een verfijnder en betrouwbaarder beeld van de toestand van vogels in het landbouwgebied, inclusief regionale verschillen.
+Er wordt gepleit voor een combinatie van beleids- en beheermonitoring, met nadruk op jaarlijkse beheermonitoring.
+Ook wordt de continuïteit van maatregelen op lange termijn aangemoedigd.
+
+De inleiding gaat dieper in op de biodiversiteit in landbouwgebieden en het belang van akkervogels als indicator.
+De boerenlandvogelindex (farmland bird index, FBI) wordt genoemd als een belangrijke indicator.
+Huidige monitoringsprojecten en -initiatieven worden als waardevolle basis gezien, maar er is een behoefte aan meer gedetailleerde trendgegevens en inzicht in de oorzaken van trends en de effectiviteit van maatregelen.
+
+Hoofdstuk 2 bespreekt de historie en lopende vogelmeetnetten in Vlaanderen, waaronder Algemene Broedvogels Vlaanderen (ABV), Bijzondere Broedvogels Vlaanderen (BBV), de Vlaamse Vogelatlas, en het Meetnet Agrarische Soorten (MAS).
+Regionale initiatieven zoals PDPO-monitoring en het Partridge-project worden ook besproken.
+
+Hoofdstuk 3 gaat in op het ontwerp van de inzameling van pilootgegevens in 2022-2023.
+Er wordt een informatiebehoefte-analyse uitgevoerd, waarbij monitoringsnoden op drie schaalniveaus worden gedefinieerd: beleidsmonitoring (macroniveau), beheermonitoring (mesoniveau) en aanvullend verklarend onderzoek (microniveau).
+Het plan van aanpak richt zich op het raakvlak tussen macro- en mesoschaalniveau voor soorten die via het MAS-telprotocol kunnen worden opgevolgd.
+De steekproeftrekking, stratificatie, steekproefgrootte, allocatie en overlap met bestaande telpunten worden gedetailleerd beschreven.
+
+Hoofdstuk 4 analyseert de beschikbare MAS-gegevens, inclusief data exploratie, broedcodes, relatieve frequenties, zoogdieren, en een vergelijking van gepaarde tellingen tussen vrijwilligers en professionele tellers.
+Ook worden de berekende verklarende variabelen besproken, zoals oppervlakte-aandelen van soortbeschermingsmaatregelen en hoofdteelten, openheid van het landschap, en de aanwezigheid van predatoren.
+
+Daarna beschrijven we in hoofdstuk 5 het ontwerp van een meetnet voor heel Vlaanderen, met de lessen die we uit deze pilootstudie hebben geleerd.
+De aanpassingen die nodig zijn om een steekproef te nemen in andere landbouwgebieden worden opgelijst.
+We verzamelen tips om een vrijwilligerswerking uit te bouwen.
+
+In de discussie gaan we dieper in op de voor- en nadelen van de gekozen MAS-methodiek.
+De afwegingen van het werken met vrijwilligers komt aan bod.
+We beargumenteren ook het potentieel van deze methode voor zowel beleid- als beheermonitoring.
+
+We concluderen dat deze opzet voor een meetnet geschikt is voor de noden die we vooropgesteld hebben.
+Deze steekproef kan inzicht geven in densiteiten, regionale verschillen en afbakening van kerngebieden voor akkervogels.
+Dit hebben we kunnen illustreren voor de Veldleeuwerik, één van de soorten die opgenomen is in de boerenlandvogelindex en een doelsoort van het soortbeschermingsplan akkervogels.
+Het potentieel is aangetoond om, mits verderzetting van meerdere jaren, trends te kunnen detecteren voor doelsoorten.
+Mits de densiteit aan meetpunten hoog genoeg ligt, kunnen effecten op landschapsschaal gemeten worden.
 
 <!-- description: end -->
 
@@ -168,3 +205,4 @@ for (file_name in figs$name) {
   include_from_drive(name = file_name, figures = figs, overwrite = FALSE)
 }
 ```
+
