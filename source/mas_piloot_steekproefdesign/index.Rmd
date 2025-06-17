@@ -143,6 +143,16 @@ Mits de densiteit aan meetpunten hoog genoeg ligt, kunnen effecten op landschaps
 
 # Aanbevelingen voor beheer en/of beleid {.unnumbered}
 
+Historische en lopende monitoringprojecten en -initiatieven (zie hoofdstuk 2) bieden een waardevolle basis, maar volstaan niet om alle monitoringsbehoeften in Vlaanderen volledig te dekken.
+Er is een behoefte aan een verfijnder en betrouwbaarder beeld van de toestand van vogels in het landbouwgebied, inclusief het detecteren van regionale verschillen.
+Die toestand moet langdurig gemonitord worden, om het beleid te kunnen evalueren.
+Best wordt er gekozen om een combinatie van beleid- en beheermonitoring verder te zetten, met nadruk op een jaarlijkse beheermonitoring, om nauwgezet jaarlijkse bijsturing mogelijk te maken.
+Om verklaringen te vinden moet meer in detail, op micro-niveau, onderzocht worden welke recepten en factoren bepalend zijn.
+
+Ook voor de inzet van maatregelen bevelen we aan om te zorgen voor continuïteit, door maatregelen op langere termijn en met vergelijkbare voorwaarden verder te kunnen zetten.
+Dat zou ook een duurzame verankering in het landschap en op bedrijfsniveau in de hand werken.
+Het zal niet enkel het onderzoek en de evaluatie vergemakkelijken, maar is ook gunstig (en gewenst) voor de akkervogels en voor de landbouwers die hieraan meewerken.
+
 ```{r setup, include = FALSE}
 library(knitr)
 opts_chunk$set(
