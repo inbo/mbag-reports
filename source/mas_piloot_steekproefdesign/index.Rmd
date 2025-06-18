@@ -99,7 +99,7 @@ En we willen u bedanken, als lezer, voor uw interesse in dit rapport, dat hopeli
 \vfill
 \begin{figure}[H]
     \centering
-    \href{https://lv.vlaanderen.be/landbouwbeleid/plattelandsontwikkeling}{\includegraphics[width=0.5\textwidth]{media/logos/logo_vo_elfpo_0.jpg}}
+    \href{https://lv.vlaanderen.be/landbouwbeleid/plattelandsontwikkeling}{\includegraphics[width=0.5\textwidth]{media/logos/logo-vo-elfpo-0.jpg}}
 \end{figure}
 
 # Samenvatting {.unnumbered}
