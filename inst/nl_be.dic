@@ -1,3 +1,5 @@
+'Plan
++
 +1
 -bestand
 -bestanden
@@ -6,6 +8,7 @@
 -parameters
 .Rproj
 .log-bestand
+2019-landgebruikskaart
 301ste
 5-fold
 7d0cdbc83765719876fbf0954082873d992f33de
@@ -62,10 +65,13 @@ K-fold
 KLA
 KLE
 KML
+Kiekendief'
 MAS-data
 MAS-gegevens
 MAS-meetnet
 MAS-methodiek
+MAS-netwerk
+MAS-pilootstudie
 MAS-protocol
 MAS-tellingen
 MAS-telprotocol
@@ -83,8 +89,10 @@ Mises
 Motacilla
 Naturelles
 Natuur-
+Niet-landbouwgebruiken
 OL
 OLA
+OpenStreetMap-gegevens
 PDPO
 PDPO-monitoring
 PDPO-steun
@@ -98,12 +106,14 @@ Popko
 Q-Q
 Q25
 Q75
+R-packages
 R-project
 R2-D2
 RAMSAR
 Réseau
 SBP
 SBP's
+SBP-gebieden
 SCI
 SCIs
 SOVON
@@ -118,6 +128,7 @@ Telpunt
 TinyTeX
 Tweefasemodellen
 UHasselt
+Veldleeuwerikpopulatie
 Verdonckt
 Vlaanderen’
 Voorteelt
@@ -158,6 +169,7 @@ beleid-
 beleids-
 bird
 boerenlandvogelindex
+boerenlandvogels
 bootstrapping
 brms
 broed-
@@ -200,6 +212,7 @@ encounter
 enthousiasmering
 evenness
 evidence-based
+exclusiecriteria
 exclusiecriterium
 expected
 expressions
@@ -233,6 +246,7 @@ hashes
 hazard-rate
 height
 herschaalden
+hertelden
 hierarchical
 hoogbeleid
 identity
