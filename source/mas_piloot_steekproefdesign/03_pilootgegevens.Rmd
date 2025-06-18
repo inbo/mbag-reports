@@ -99,7 +99,15 @@ include_graphics(file.path("media", "kaartjes", "sbp_piloot_kaart.png"))
 We bekomen dus twee polygonen (één voor De Moeren en één voor de Oostelijke leemstreek).
 Beide bevatten zowel zones binnen als buiten SBP gebieden voor akkervogels.
 We moeten nu echter het steekproefkader verder verfijnen.
-In eerste instantie doen we dit door *exclusie* van een aantal landgebruiken op basis van OpenStreetMap data [@openstreetmapcontributors2022] (Fig. \@ref(fig:steekproef-afbakening)A):
+In eerste instantie doen we dit door *exclusie* van een aantal landgebruiken op basis van OpenStreetMap (OSM) data [@openstreetmapcontributors2022] (Fig. \@ref(fig:steekproef-afbakening)A).
+OSM is een wereldwijd, open samenwerkingsproject waarin vrijwilligers geografische gegevens verzamelen en beschikbaar stellen.
+Deze vrij toegankelijke databron biedt een zeer gedetailleerde en actuele kaart van de wereld, die continu wordt bijgewerkt door een actieve gemeenschap van gebruikers.
+Hoewel de kwaliteit van OSM over het algemeen hoog is, kunnen er lokaal nog onvolkomenheden voorkomen.
+Zo kan de kaart op bepaalde plaatsen verouderd zijn of kunnen bijdragen van vrijwilligers leiden tot kleine classificatiefouten.
+Dankzij de open en dynamische aard van het project kunnen deze fouten echter relatief snel gesignaleerd en gecorrigeerd worden.
+OSM werd bijvoorbeeld gebruikt voor het opstellen van een open-ruimte-kaart voor Patrijs in functie van jachtregelmentering [@onkelinx2022].
+
+De volgende landgebruiken sluiten we uit:
 
 -   parkgebieden
     -   OSM definitie: `leisure = park`
