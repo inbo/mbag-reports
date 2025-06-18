@@ -1688,3 +1688,24 @@ Zo kan een vogel in een bepaald perceel met een bepaalde hoofdteelt worden geobs
 Nu aggregeren we de informatie van al die percelen op telcirkelniveau waarbij we deze informatie koppelen aan die observatie, zonder de exacte locatie van de observatie zelf te bekijken.
 Minder aggregeren betekend meer data waardoor we meer subtiele verbanden kunnen waarnemen.
 Dit moet echter in evenwicht zijn met de complexiteit van de modellen en de tijd die nodig is om deze te fitten.
+
+## Over analyses van de Haas {#analyses-haas}
+
+Het MAS-project beoogt een beter inzicht te verkrijgen in de ecologische toestand van zowel vogels als de Haas in het Vlaamse landbouwgebied.
+Het MAS-protocol is, naast de toepassing op vogelsoorten, ook geschikt gebleken voor de monitoring van zoogdieren, met bijzondere aandacht voor de Haas.
+Hoewel de nadruk in dit rapport hoofdzakelijk ligt op akkervogels, zijn de gehanteerde analysemethoden eveneens toepasbaar op de Haas.
+In deze sectie worden de belangrijkste bevindingen met betrekking tot deze soort toegelicht.
+
+Tijdens het veldwerk wordt door de waarnemers geregistreerd of zij tijdens hun bezoek al dan niet zoogdieren hebben geteld.
+Dit maakt het mogelijk om in de analyses een onderscheid te maken tussen afwezigheid als gevolg van niet zoeken en afwezigheid als gevolg van niet waarnemen.
+Het gebruik van broedcodes, dat relevant is voor vogels, is voor de Haas niet van toepassing.
+
+Analyse van de beschikbare MAS-gegevens van het pilootproject toont aan dat de Haas minder frequent wordt waargenomen tijdens de laatste telperiode.
+Een plausibele verklaring hiervoor is dat de soort in deze periode minder zichtbaar is vanwege de hogere vegetatiestructuur.
+Het verdient dan ook aanbeveling om deze telperiode uit te sluiten van verdere analyses met betrekking tot de haas.
+
+Densiteitsschattingen op basis van *distance sampling* lijken de werkelijke populatiedichtheid van de Haas te onderschatten.
+Dit kan deels worden toegeschreven aan het feit dat de detectiekans van de haas vermoedelijk hoger is bij valavond, wanneer er geen MAS-tellingen plaatsvinden.
+Daarnaast wordt in de analyses aangenomen dat de volledige telcirkel waarneembaar is, terwijl visuele barrières in het landschap (zoals vegetatie en reliëf) in werkelijkheid het zicht kunnen beperken.
+
+Hoewel de gegevens van de Haas op vergelijkbare wijze kunnen worden geanalyseerd als die van akkervogels, is het essentieel om de resultaten met de nodige voorzichtigheid te interpreteren, gezien de specifieke detectieproblemen en ecologische kenmerken van deze soort.

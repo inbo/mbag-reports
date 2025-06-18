@@ -21,7 +21,6 @@
 *.pdf
 *.rds
 *.log
-*.tex
 docs
 libs
 output

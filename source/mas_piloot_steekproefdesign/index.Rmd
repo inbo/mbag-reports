@@ -53,12 +53,11 @@ cover_photo: cover.jpg
 cover_description: Gele kwikstaart (_Motacilla flava_). (© Johannes Jansen)
 doi: 10.21436/inbor.126766638
 depotnr: D/2025/3241/194
-header-includes:
-  - \usepackage[left]{lineno}
-  - \linenumbers
 output:
   INBOmd::gitbook: default
-  INBOmd::pdf_report: default
+  INBOmd::pdf_report:
+    includes:
+      in_header: preamble.tex
   INBOmd::epub_book: default
 # Don't run the format below.
 # Only required for RStudio to recognise the project as a bookdown project.
