@@ -145,7 +145,7 @@ Voor een beleidsmonitoring op macroniveau is het ook waardevol om – naast resu
 Dit kan bijvoorbeeld door een multisoortenindex te berekenen, analoog met hoe dit gedaan wordt voor de ABV monitoring, die de relatieve wijziging weergeeft van een jaar met een referentiejaar op niveau Vlaanderen (= *multi species change index*).
 Met de MAS data kunnen we dit principe ook toepassen per landbouwstreek en binnen versus buiten SBP zones.
 
-## Beheermonitoring op microniveau
+## Beheermonitoring
 
 ### Gedetailleerde effectinschatting van beheermaatregelen
 
