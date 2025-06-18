@@ -100,8 +100,8 @@ Q25
 Q75
 R-project
 R2-D2
-Réseau
 RAMSAR
+Réseau
 SBP
 SBP's
 SCI
@@ -180,7 +180,6 @@ covariaten
 credible
 cross-validation
 cumulative
-d’Intérêt
 data/processed
 decompositieparameter
 dens
@@ -190,6 +189,7 @@ distance
 distribution
 dsm
 dubbelgeteld
+d’Intérêt
 ecoregelingen
 effectclass
 effecten/trends
@@ -224,8 +224,8 @@ git2rdata
 goodness
 graslandtypes
 grid
-grid’
 gridcellen
+grid’
 half-normal
 half-normale
 half-open
@@ -244,6 +244,7 @@ informatienoden
 intercept
 intercepten
 interkwartielafstand
+jachtregelmentering
 kansdichtheidsfunctieplots
 karrekiet
 key
@@ -289,6 +290,7 @@ nultellingen
 o.w.v
 offset-termen
 onvertekende
+open-ruimte-kaart
 openness
 opgeslaan
 opschaalbaarheid
