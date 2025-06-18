@@ -142,7 +142,7 @@ Dankzij deze opzet kunnen we in de toekomst de trends binnen en buiten SBP-gebie
 ### Mogelijkheid tot multisoortenindices
 
 Voor een beleidsmonitoring op macroniveau is het ook waardevol om – naast resultaten voor individuele soorten – ook uitspraken te doen over groepen van soorten, bijvoorbeeld alle doelsoorten van het SBP akkervogels.
-Dit kan bijvoorbeeld door een multisoortenindex te berekenen, anaalog met hoe dit gedaan wordt voor de ABV monitoring, die de relatieve wijziging weergeeft van een jaar met een referentiejaar op niveau Vlaanderen (= *multi species change index*).
+Dit kan bijvoorbeeld door een multisoortenindex te berekenen, analoog met hoe dit gedaan wordt voor de ABV monitoring, die de relatieve wijziging weergeeft van een jaar met een referentiejaar op niveau Vlaanderen (= *multi species change index*).
 Met de MAS data kunnen we dit principe ook toepassen per landbouwstreek en binnen versus buiten SBP zones.
 
 ## Beheermonitoring op microniveau
