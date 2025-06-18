@@ -10,7 +10,7 @@ Voor broedvogels vormen de volgende initiatieven de kern:
 
 Het project ‘Algemene Broedvogels Vlaanderen’ (ABV) richt zich op het detecteren van trends onder meer algemene soorten.
 Het meetnet bestaat uit 1200 kilometerhokken verspreid over Vlaanderen en gelegen in diverse landschapstypes.
-De doelstelling is om 900 van deze hokken via puntellingen op te volgen tijdens een driejaarlijkse cyclus (300 per jaar).
+De doelstelling is om 900 van deze hokken via punttellingen op te volgen tijdens een driejaarlijkse cyclus (300 per jaar).
 De opvolging gebeurt sinds 2007.
 Elke locatie wordt drie keer tijdens het broedseizoen geïnventariseerd.
 De coördinatie ligt bij het INBO, dat ook de rapportering verzorgt, terwijl Natuurpunt het vrijwilligersnetwerk aanstuurt.
@@ -22,7 +22,8 @@ Hierdoor zijn de resultaten over het algemeen goed vergelijkbaar tussen gebieden
 Deze soorten zijn zo zeldzaam, of komen zo geconcentreerd voor, dat ze jaarlijks in geheel Vlaanderen dienen geïnventariseerd te worden om een wetenschappelijk verantwoorde analyse van de resultaten mogelijk te maken.
 Het project loopt sinds 1994 en de inventarisatie gebeurt jaarlijks.
 Het gaat om zeldzame soorten zoals Bruine kiekendief en Grauwe gors.
-De volledigheid van de tellingen varieert afhankelijk van de soort, regio, verspreiding, broedgedrag en de beschikbaarheid van tellers.Daarnaast wordt sinds 1994 een steekproefmethode gehanteerd, waarbij een beperkt aantal gebieden wordt geteld om de ontwikkeling van zeldzame en minder algemene broedvogels te volgen.
+De volledigheid van de tellingen varieert afhankelijk van de soort, regio, verspreiding, broedgedrag en de beschikbaarheid van tellers.
+Daarnaast wordt sinds 1994 een steekproefmethode gehanteerd, waarbij een beperkt aantal gebieden wordt geteld om de ontwikkeling van zeldzame en minder algemene broedvogels te volgen.
 
 De Vlaamse Vogelatlas 2020-2024 heeft vooral als doel de verspreiding van broed- en wintervogels in kaart te brengen, naast het maken van nieuwe populatieschattingen sinds de vorige atlas (2000-2002).
 Ook hierbij worden punttellingen in geselecteerde km-hokjes uitgevoerd, het zogenaamde ‘gouden grid’.
@@ -47,3 +48,4 @@ Dit alles wordt door INBO-medewerkers uitgevoerd en loopt tot 2023.
 Het onderzoek naar beheerovereenkomsten voor akkervogels is uitgevoerd door UHasselt tussen 2018 en 2021 met PDPO middelen.
 In gebieden met hoge dekking wordt naast MAS-tellingen ook dieper ingegaan op ruimtegebruik (met GPS-loggers), broedsucces en voedselbeschikbaarheid (bijvoorbeeld insectenmonitoring).
 Deze projecten streven niet alleen naar het volgen van lokale trends, maar ook naar het koppelen van de resultaten aan beheermaatregelen, zodat deze op een evidence-based manier kunnen worden bijgestuurd voor betere resultaten.
+
