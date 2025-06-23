@@ -212,9 +212,11 @@ read_csv(file.path("media", "distance", "per_stratum",
   select(-soort) %>%
   arrange(regio, jaar, openheid) %>%
   kable(digits = 5,
-        caption = paste("Resultaten van species change indices (SCI's) binnen",
-                        "t.o.v. buiten soortenbeschermingsprogramma per regio, jaar",
-                        "en openheidsklasse."),
+        caption = paste(
+          "Resultaten van species change indices (SCI's) binnen",
+          "t.o.v. buiten soortenbeschermingsprogramma per regio, jaar",
+          "en openheidsklasse."
+        ),
         booktabs = TRUE) %>%
   kableExtra::kable_styling(latex_options = c("scale_down", "striped")) %>%
   kableExtra::row_spec(0, bold = TRUE)
