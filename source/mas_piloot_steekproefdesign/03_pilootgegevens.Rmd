@@ -53,7 +53,7 @@ Ze zullen ons enerzijds toelaten om "vergelijkbare" situaties te vinden binnen e
 Dit laatste zal nog niet mogelijk zijn met de data die tijdens dit pilootproject zijn ingezameld, maar wordt wel mogelijk wanneer we dit bewezen recept uitrollen naar de andere landbouwstreken in Vlaanderen (zie Hoofdstuk \@ref(ontwerp-meetnet)).
 
 Met deze aanpak beantwoorden we dus zowel de informatienoden voor beleidsmonitoring als de beheermonitoring op mesoniveau, althans wanneer uitgerold naar Vlaanderen.
-Een belangrijke doelstelling van het pilootproject is dan ook de haalbaarheid en opschaalbaarheid van deze monitoring in te schatten zodat in de toekomst meer inzicht wordt verkregen in (1) meer betrouwbare toestand en trend schattingen voor Vlaanderen, (2) regionale verschillen in toestand en trend, en (3) de effectiviteit van de geleverde inspanningen in zijn geheel (inclusief beheerovereenkomsten, soortbeschermingsprogramma's, conditionaliteiten, (pre-)ecoregelingen, agromilieuklimaatmaatregelingen, niet-productieve investeringen via het Vlaams landbouwinvesteringsfonds ...).
+Een belangrijke doelstelling van het pilootproject is dan ook de haalbaarheid en opschaalbaarheid van deze monitoring in te schatten zodat in de toekomst meer inzicht wordt verkregen in (1) meer betrouwbare toestand en trend schattingen voor Vlaanderen, (2) regionale verschillen in toestand en trend, en (3) de effectiviteit van de geleverde inspanningen in zijn geheel (inclusief beheerovereenkomsten, soortenbeschermingsprogramma's, conditionaliteiten, (pre-)ecoregelingen, agromilieuklimaatmaatregelingen, niet-productieve investeringen via het Vlaams landbouwinvesteringsfonds ...).
 
 Onze aanpak laat ook toe om een deel van de bestaande tellocaties te behouden.
 Binnen het pilootproject werd dit in de eerste plaats toegepast op de reeds bestaande tellocaties van het Meetnet Agrarische Soorten.
@@ -80,7 +80,7 @@ In het geval van het MAS pilootproject maken we een lijst aan van potentiële te
 Voor de afbakening van het steekproefkader, starten we met een intersectie van de landbouwstreken van België met de contour van Vlaanderen.
 Dit geeft ons een kaart van de landbouwstreken in Vlaanderen (Fig. \@ref(fig:landbouwstreken)).
 De meeste landbouwstreken zijn opgebouwd uit meerdere polygonen.
-Vervolgens beperken we dit daarom voor de Oostelijke leemstreek tot enkel de polygoon die overlapt met de perimeters van de soortbeschermingsplannen voor akkervogels van de Oostelijke leemstreek.
+Vervolgens beperken we dit daarom voor de Oostelijke leemstreek tot enkel de polygoon die overlapt met de perimeter van het soortenbeschermingsprogramma voor akkervogels.
 Dit geeft voldoende mogelijkheden om telpunten buiten deze SBP gebieden te kunnen selecteren (64 % van de oppervlakte ligt buiten SBP).
 In het geval van De Moeren, is er direct vertrokken van een perimeter die al gebruikt werd door de MAS werking van dat gebied en die ons aangeleverd is.
 Dit was nog geen officiële SBP akkervogels perimeter, maar het is wel een gebied waar gelijkaardige inspanningen werden geleverd en we beschouwen het daarom als "SBP" gebied.
@@ -92,7 +92,7 @@ De Oostelijke leemstreek omvat een zeer groot deel van de volledige leemstreek e
 include_graphics(file.path("media", "kaartjes", "landbouwstreken_vl.png"))
 ```
 
-```{r perimeters-sbp, out.width = "100%", fig.cap = "Perimeters van De Moeren (\\textbf{A}) en de Oostelijke leemstreek (\\textbf{B}), met aanduiding van het gebied binnen en buiten soortbeschermingsplan (SBP) en als achtergrond de landbouwstreken."}
+```{r perimeters-sbp, out.width = "100%", fig.cap = "Perimeters van De Moeren (\\textbf{A}) en de Oostelijke leemstreek (\\textbf{B}), met aanduiding van het gebied binnen en buiten soortenbeschermingsprogramma's (SBP) en als achtergrond de landbouwstreken."}
 include_graphics(file.path("media", "kaartjes", "sbp_piloot_kaart.png"))
 ```
 

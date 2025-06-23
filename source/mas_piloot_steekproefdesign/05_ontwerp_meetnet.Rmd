@@ -55,8 +55,7 @@ Naast een minimum oppervlakte moet natuurlijk ook gewaarborgd worden dat het sub
 
 Het idee is opgevat om het MAS-meetnet gradueel uit te breiden over de verschillende landbouwstreken in Vlaanderen (Hoofdstuk \@ref(pilootgegevens), Fig.
 \@ref(fig:landbouwstreken)).
-In 2023 werd reeds gestart met de leemstreek en de zandleemstreek.
-In 2024 werd de uitrol over heel Vlaanderen gerealiseerd.
+In 2023 zijn we reeds gestart met uitrol naar de Westelijke leemstreek en de zandleemstreek.
 
 ### Aanpassingen ten opzichte van het pilootmeetnet {#aanpassingen-meetnet}
 
@@ -166,8 +165,8 @@ include_graphics(file.path("media", "visibility",
                            "voorbeeld_zichtbaarheid.pdf"))
 ```
 
-5.  Binnen of buiten gebieden met soortbeschermingsplan\
-    We breiden soorbeschermingsplangebieden uit.
+5.  Binnen of buiten gebieden met soortenbeschermingsprogramma\
+    We breiden soortenbeschermingsprogrammagebieden uit.
     We nemen kerngebieden en zoekzones samen als onderzoeksgebied en alles hierbuiten beschouwen we als controle.
     Voor het nieuwe SBP gebied combineren we meerdere SBP lagen:
 
@@ -180,7 +179,7 @@ include_graphics(file.path("media", "visibility",
 Figuur \@ref(fig:sbp-zandleem) toont de nieuwe SBP gebieden voor de leemstreek en de zandleemstreek.
 Kaartlagen per soort zijn gevisualiseerd in Bijlage \@ref(bijlage-uitrol-mas) (Fig. \@ref(fig:sbp-per-soort)).
 
-```{r sbp-zandleem, out.width = "100%", fig.cap = "Perimeters van leemstreek en de zandleemstreek met aanduiding van het gebied binnen en buiten soortbeschermingsplan (SBP)."}
+```{r sbp-zandleem, out.width = "100%", fig.cap = "Perimeters van leemstreek en de zandleemstreek met aanduiding van het gebied binnen en buiten soortenbeschermingsprogramma (SBP)."}
 include_graphics(file.path("media", "kaartjes", "sbp_mbag_kaart.png"))
 ```
 
@@ -254,4 +253,3 @@ Op die manier zijn we er in geslaagd om continuïteit te voorzien van vaste tell
 Bij een uitrol in nieuwe regio’s is het onrealistisch om meteen van het ene jaar op het andere jaar te verwachten dat een aanzienlijk aandeel telpunten meteen wordt opgenomen door lokale vrijwilligers.
 Het garanderen dat alle punten van de steekproef geteld geraken, vooral in nieuwe en controlegebieden, is enkel mogelijk bij een aanzienlijk professionele ondersteuning van vrijwilligers (waarbij gewerkt kan worden aan communicatie, training en opvolging) alsook van betaalde krachten die telpunten tellen.
 Als realistisch streefdoel stellen we voorop dat in dit meetnet naar schatting 20 % van de telpunten kan opgenomen worden door vrijwilligers, met groeipotentieel om dat na verloop van enkele jaren uit te breiden naar 40 %.
-

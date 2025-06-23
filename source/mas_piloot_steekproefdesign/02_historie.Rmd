@@ -12,9 +12,9 @@ Het project ‘Algemene Broedvogels Vlaanderen’ (ABV) richt zich op het detect
 Het meetnet bestaat uit 1200 kilometerhokken verspreid over Vlaanderen en gelegen in diverse landschapstypes.
 De doelstelling is om 900 van deze hokken via punttellingen op te volgen tijdens een driejaarlijkse cyclus (300 per jaar).
 De opvolging gebeurt sinds 2007.
-Elke locatie wordt drie keer tijdens het broedseizoen geïnventariseerd.
-De coördinatie ligt bij het INBO, dat ook de rapportering verzorgt, terwijl Natuurpunt het vrijwilligersnetwerk aanstuurt.
-Momenteel is de vrijwilligersbijdrage onvoldoende om het doel van 300 hokken per jaar te halen; er wordt gewerkt aan uitbreiding van de inzet..
+Elk hok wordt drie keer tijdens het broedseizoen geïnventariseerd, waarbij elk van zes telpunten telkens 5 minuten worden geteld.
+De coördinatie ligt bij het INBO, dat ook de analyses en rapportering verzorgt, terwijl Natuurpunt het vrijwilligersnetwerk aanstuurt waarop het meetnet bijna volledig berust voor het uitvoeren van de tellingen.
+Momenteel is de vrijwilligersbijdrage onvoldoende om het doel van 300 hokken per jaar te halen; er wordt gewerkt aan uitbreiding van de inzet.
 Betrouwbare trends kunnen worden afgeleid voor soorten die algemeen voorkomen en verspreid zijn, zoals Veldleeuwerik en Gele Kwikstaart.
 
 Het project ‘Bijzondere Broedvogels Vlaanderen’ (BBV) brengt territoria in kaart.
@@ -32,20 +32,21 @@ Het INBO coördineert de rapportering aan regionale, nationale en internationale
 
 Eerder waren er al regionale initiatieven die zich richten op akkervogels:
 
-Het ‘Meetnet Agrarische Soorten’ (MAS) werd sinds 2017 opgestart in Vlaanderen binnen het kader van Plan Kiekendief en het SBP Grauwe Kiekendief.
+Het ‘Meetnet Agrarische Soorten’ (MAS) werd sinds 2017 opgestart in Vlaanderen binnen het kader van Plan Kiekendief (uitvoering van het soortenbeschermingsprogramma Grauwe kiekendief).
 Tellingen werden voornamelijk door vrijwilligers gedaan in twee gebieden: de Leemstreek en de Moeren.
 Deze tellingen werden geëvalueerd om de voedselbeschikbaarheid voor Grauwe kiekendief te monitoren, in de gebieden waar sterk werd ingezet op maatregelen.
-De voornaamste conclusie was dat er controlegebied ontbrak om de effectiviteit van die acties te evalueren.
+De voornaamste conclusie was dat, door een beperkte looptijd en een gebrek aan controlepunten, de statistische kracht ontbrak om de effectiviteit van die acties te evalueren.
 
-De PDPO-monitoring, die tussen 2010 en 2018 in 16 Vlaamse gebieden werd uitgevoerd om de effectiviteit van beheerovereenkomsten voor akker- en weidevogels te evalueren.
-Hierbij werden territoriumkarteringen en wintertellingen gebruikt, uitgevoerd door het INBO.
+Eerder al werden in De Moeren en zeventien andere PDPO-gebieden gemonitord om de effecten van beheerovereenkomsten te evalueren [@debruyn2019].
+Tussen 2010 en 2018 werd dit uitgevoerd om de effectiviteit van beheerovereenkomsten voor akker- en weidevogels te evalueren.
+Er werden territoriumkarteringen en wintertellingen gebruikt, uitgevoerd door het INBO.
+Hierbij werd ook geconcludeerd dat voor de relevante soorten geen duidelijke trend kon worden vastgesteld.
 
-Het Partridge-project, dat sinds 2016 broed- en overwinteringsvogels in vier gebieden volgt.
-In twee demogebieden worden maatregelen genomen, vooral gericht op Patrijs, en worden hun effectiviteit en het broedsucces onderzocht via traject- en territoriumtellingen.
-Ook wintertellingen volgens de MAS-methodiek maken deel uit van het project.
-Dit alles wordt door INBO-medewerkers uitgevoerd en loopt tot 2023.
+Het Partridge-project, volgde sinds 2016 broed- en overwinteringsvogels in vier gebieden [@petersen2023].
+In twee demogebieden werden maatregelen genomen, vooral gericht op Patrijs, en werd hun effectiviteit en het broedsucces onderzocht via traject- en territoriumtellingen.
+Ook wintertellingen volgens de MAS-methodiek maakten deel uit van het project.
+Dit alles werd door INBO-medewerkers uitgevoerd en liep tot 2023.
 
 Het onderzoek naar beheerovereenkomsten voor akkervogels is uitgevoerd door UHasselt tussen 2018 en 2021 met PDPO middelen.
 In gebieden met hoge dekking wordt naast MAS-tellingen ook dieper ingegaan op ruimtegebruik (met GPS-loggers), broedsucces en voedselbeschikbaarheid (bijvoorbeeld insectenmonitoring).
 Deze projecten streven niet alleen naar het volgen van lokale trends, maar ook naar het koppelen van de resultaten aan beheermaatregelen, zodat deze op een evidence-based manier kunnen worden bijgestuurd voor betere resultaten.
-
