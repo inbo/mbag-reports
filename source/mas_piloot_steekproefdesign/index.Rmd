@@ -106,13 +106,14 @@ En we willen u bedanken, als lezer, voor uw interesse in dit rapport, dat hopeli
 <!-- description: start -->
 
 Dit rapport beschrijft de uitwerking van het Meetnet Agrarische Soorten (MAS) in Vlaanderen.
-Het hoofddoel van het MAS is om een verfijnder en betrouwbaarder inzicht te bieden in de toestand van vogels in landbouwgebieden, inclusief regionale verschillen, en om inzicht te krijgen in de oorzaken van waargenomen trends en de effectiviteit van natuurbeschermingsmaatregelen.
-Dit is cruciaal, aangezien de biodiversiteit in Vlaamse landbouwgebieden onder grote druk staat als gevolg van intensieve landbouw, met boerenlandvogels als belangrijke indicatoren die veelal achteruitgaan.
-De Boerenlandvogelindex (FBI) is weliswaar een sleutelindicator die in Europese en Vlaamse regelgeving is opgenomen, maar bestaande monitoringprojecten volstaan niet om alle monitoringsbehoeften in Vlaanderen volledig te dekken.
+Het hoofddoel van het MAS is om een verfijnder en betrouwbaarder inzicht te bieden in de toestand van vogels in landbouwgebieden, inclusief regionale verschillen, en om inzicht te krijgen in de oorzaken van waargenomen trends en de effectiviteit van soortbeschermingsmaatregelen.
+Dit is cruciaal, aangezien de biodiversiteit in Vlaamse landbouwgebieden onder grote druk staat, o.a.
+als gevolg van intensieve landbouw, met boerenlandvogels als belangrijke indicatorsoorten die veelal achteruitgaan.
+De Boerenlandvogelindex is weliswaar een sleutelindicator die in Europese en Vlaamse regelgeving is opgenomen, maar bestaande monitoringprojecten volstaan niet om alle monitoringsbehoeften in Vlaanderen volledig te dekken.
 Er is een dringende behoefte aan meer gedetailleerde trendgegevens en inzicht in de effectiviteit van genomen maatregelen.
 
 De MAS-pilootstudie van 2022-2023 richtte zich op het snijvlak tussen beleidsmonitoring (macroniveau) en beheermonitoring (mesoniveau).
-Deze studie bouwde voort op eerdere MAS-tellingen die sinds 2018 plaatsvonden in het kader van 'Plan Kiekendief'.
+Deze studie bouwde voort op eerdere MAS-tellingen die sinds 2017 plaatsvonden in het kader van 'Plan Kiekendief'.
 De twee pilootgebieden waren de Oostelijke leemstreek en De Moeren.
 Het steekproefkader werd afgebakend door de landbouwstreken van België te kruisen met de contour van Vlaanderen.
 Niet-landbouwgebruiken, zoals parken, woongebieden, militaire zones, industriegebieden en begraafplaatsen, werden uitgesloten op basis van OpenStreetMap-gegevens om de focus op agrarisch gebied te waarborgen.
@@ -123,26 +124,37 @@ Het project maakte gebruik van ruimtelijk gebalanceerde en gestratificeerde stee
 Zowel vrijwilligers als professionele tellers werden ingezet voor het veldwerk, waarbij de vrijwilligers een sleutelrol speelden in kostenefficiëntie.
 
 De analyse van de beschikbare MAS-gegevens leverde belangrijke inzichten op, met name uit de casestudie van de Veldleeuwerik.
+Omdat van deze soort veel data voorhanden zijn, konden verschillende statistische methodes getest worden waaronder (1) dichtheidsschattingen met correctie voor detectiekans, (2) spatiale modellen en (3) correlatieve model met verklarende variabelen.
+Uit de dichtheidsschattingen, die met behulp van *distance sampling* werden uitgevoerd, bleek de Veldleeuwerik een hogere dichtheid te hebben binnen SBP-gebieden dan daarbuiten.
+We benadrukken echter dat dit een correlatief verband is en geen causaliteit impliceert, aangezien SBP-gebieden vaak al gunstig waren voor akkervogels voordat maatregelen werden genomen.
+Het bevestigt dat de afbakening nog actueel is, en er in de meest kansrijke gebieden ingezet wordt met maatregelen, daar waar nog de hoogste dichtheden van Veldleeuwerik voorkomen.
+We tonen ook aan dat regionale verschillen detecteerbaar zijn met MAS, waarbij binnen SBP-gebied ongeveer drie keer zo veel broedparen Veldleeuwerik berekend worden per 100 hectare in de Oostelijke leemstreek dan in De Moeren.
+De analyses in functie van verklarende variabelen leverde verwachte resultaten op.
+De openheid van het landschap op grotere schaal (1000 m) bleek een significant positief effect te hebben op de Veldleeuwerikpopulatie, terwijl elementen zoals bomen, hagen en bosranden een negatief effect hadden.
+De resultaten wijzen erop dat de meeste geteste analyses kunnen uitgevoerd worden op de MAS data en dat deze nuttige inzichten kunnen leveren in de beoogde doelstellingen.
+Daarbij stellen we vast dat een gebied ter grootte van De Moeren als minimumschaal moet worden gehanteerd (afgerond ten minste 5000 ha) en dat eventuele subgebieden genoeg telpunten bevatten om voldoende statistische power te waarborgen.
+
+De studie kon beroep doen op een reeds bestaande poule van vrijwilligersgroep die al ervaring had met het uitvoeren van MAS-tellingen.
+In beide pilootgebieden werd deze groep bijna integraal voortgezet en aangevuld met enkele nieuwe vrijwilligers, we konden hen overtuigen van waarde van de nieuwe steekproef zodat zowel .
+In de Oostelijke leemstreek groeide het aantal vrijwillig getelde punten licht, tot een verhouding van 20% vrijwilligerspunten.
+De Moeren werd volledig door vrijwilligers geteld, daar werden enkele punten dubbel geteld door een professionele teller, om de vergelijkbaarheid te analyseren.
 Een belangrijke bevinding was dat vrijwilligers significant minder waarnemingen en soorten rapporteerden dan professionele tellers die op dezelfde locatie hertelden.
 Dit verschil was vergelijkbaar voor waarnemingen met en zonder broedcode en was niet afhankelijk van de ervaring van de vrijwilligers.
 Dit onderstreept de noodzaak voor voortdurende training, opvolging en communicatie met vrijwilligers.
-Wat betreft de dichtheidsschattingen, die met behulp van *distance sampling* werden uitgevoerd, bleek de Veldleeuwerik een hogere dichtheid te hebben binnen SBP-gebieden dan daarbuiten.
-Het rapport benadrukt echter dat dit een correlatief verband is en geen causaliteit impliceert, aangezien SBP-gebieden vaak al gunstig waren voor akkervogels voordat maatregelen werden genomen.
-De openheid van het landschap op grotere schaal (1000 m) bleek een significant positief effect te hebben op de Veldleeuwerikpopulatie, terwijl elementen zoals bomen, hagen en bosranden een negatief effect hadden.
-De studie ondervond uitdagingen bij het fitten van detectiecurves voor de Veldleeuwerik als gevolg van hun gedrag (gemakkelijk opvliegen bij verstoring), wat leidde tot minimumschattingen voor de dichtheid.
-De beperkte hoeveelheid data in De Moeren resulteerde ook in een relatief hoge onzekerheid van de parameterschattingen.
 
 Op basis van de bevindingen doet het rapport verschillende aanbevelingen voor de toekomst van het MAS.
-Het ontwerp van het meetnet wordt als geschikt beschouwd voor het verkrijgen van inzicht in densiteiten, regionale verschillen en het afbakenen van kerngebieden voor akkervogels.
+Het ontwerp van het meetnet wordt als geschikt beschouwd voor het verkrijgen van inzicht in densiteiten, regionale verschillen en het bevestigen van kerngebieden voor akkervogels.
 Voor het detecteren van betekenisvolle trends en het evalueren van de effectiviteit van beleid is langetermijnmonitoring van minimaal vijf jaar essentieel.
 Een combinatie van beleids- en beheermonitoring wordt aanbevolen, met een focus op jaarlijkse beheermonitoring voor tijdige bijsturing.
-Ook de continuïteit van maatregelen is van belang voor een duurzame verankering in het landschap.
-Het MAS-netwerk zal geleidelijk worden uitgebreid over alle landbouwstreken in Vlaanderen, voortbouwend op de lessen uit de pilootstudie met betrekking tot locatiekeuze en zichtbaarheid.
-Nieuwe aanpassingen omvatten strengere exclusiecriteria voor bepaalde landgebruiken en verbeterde berekeningen van zichtbaarheid vanuit het telpunt (cumulatieve zichtbaarheidsindex) .
-De studie maakt gebruik van een Before-After Control-Impact (BACI) design, wat cruciaal is voor het betrouwbaar evalueren van de effectiviteit van conservatiemaatregelen door controlegebieden te betrekken.
-Toekomstige analyses moeten dieper ingaan op individuele waarnemingen om subtielere patronen te ontdekken en deze direct te koppelen aan specifieke beheeracties.
-Het bieden van voldoende ondersteuning aan vrijwilligers, inclusief training, opvolging en communicatie, is van vitaal belang voor de datakwaliteit en het langetermijnsucces van het monitoringnetwerk, met een realistisch streefdoel van 20 % vrijwilligersdeelname dat kan groeien naar 40 %, aangevuld met betaald personeel.
+Ook de continuïteit van maatregelen is van belang voor een duurzame verankering in het landschap, zowel \textcolor{red}{...} Het MAS-netwerk werd op basis van deze pilootstudie geleidelijk uitgebreid over alle landbouwstreken in Vlaanderen, voortbouwend op de lessen met betrekking tot locatiekeuze en zichtbaarheid.
+Nieuwe aanpassingen omvatten strengere exclusiecriteria voor bepaalde landgebruiken en verbeterde berekeningen van zichtbaarheid vanuit het telpunt (cumulatieve zichtbaarheidsindex).
+De studie maakt gebruik van een Before-After Control-Impact (BACI) design, wat cruciaal is voor het betrouwbaar evalueren van de effectiviteit van soortbeschermingsmaatregelen door controlegebieden te betrekken.
 De data-analyse en steekproeftrekking zijn volledig reproduceerbaar gemaakt met behulp van R-packages en versiebeheer via GitHub.
+Toekomstige analyses moeten dieper ingaan op individuele waarnemingen om subtielere patronen te ontdekken en deze direct te koppelen aan specifieke beheeracties.
+Het bieden van voldoende ondersteuning aan vrijwilligers, inclusief training, opvolging en communicatie, is van vitaal belang voor de datakwaliteit en het langetermijnsucces van het monitoringnetwerk, met een realistisch streefdoel van 20 % vrijwilligersdeelname dat kan groeien naar 40 %, aangevuld met professionele tellers.
+Bij de inzet van betaalde tellers, is een mix aanbevolen van jaarrond betaald personeel met seizoenskrachten.
+Een klein team jaarrond personeel is nodig om continuïteit in analyses, outputs en vrijwilligerswerking te voorzien.
+Tijdens het broedseizoen is de inzet van tijdelijke werknemers, jobstudenten en freelancers een uitgelezen manier om kosten-efficiënt te werken, met daarbij kwaliteitswaarborging door selectie, opleiding en datacontrole.
 
 <!-- description: end -->
 

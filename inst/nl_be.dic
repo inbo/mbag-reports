@@ -22,6 +22,7 @@ BBV
 Before-After
 Bemonsteringsvariabiliteit
 Beta
+Boerenlandvogelindex
 Bosonderzoek
 CDS
 CDS-methode
@@ -112,10 +113,11 @@ Q75
 R-packages
 R-project
 R2-D2
-RAMSAR
 Réseau
+RAMSAR
 SBP
 SBP's
+SBP-gebied
 SBP-gebieden
 SCI
 SCIs
@@ -128,6 +130,7 @@ Stratificatie-variabelen
 TSV
 Telperiode
 Telpunt
+Telpunten
 TinyTeX
 Tweefasemodellen
 UHasselt
@@ -196,6 +199,7 @@ covariaten
 credible
 cross-validation
 cumulative
+d’Intérêt
 data/processed
 decompositieparameter
 dens
@@ -205,7 +209,6 @@ distance
 distribution
 dsm
 dubbelgeteld
-d’Intérêt
 ecoregelingen
 effectclass
 effecten/trends
@@ -241,8 +244,8 @@ git2rdata
 goodness
 graslandtypes
 grid
-gridcellen
 grid’
+gridcellen
 half-normal
 half-normale
 half-open
@@ -257,6 +260,7 @@ identity
 index.Rmd
 index.Rmd\
 indicatorfunctie
+indicatorsoorten
 informatiedoorstroom
 informatienoden
 intercept
@@ -270,7 +274,9 @@ key-value
 kilometerhok
 klasses
 km-hokjes
+kosten-efficiënt
 kostenoptimale
+kwaliteitswaarborging
 landbouw-
 landgebruiken\
 landschap\
@@ -314,6 +320,7 @@ open-ruimte-kaart
 openness
 opgeslaan
 opschaalbaarheid
+outputs
 overwrite
 p-waardes
 parcs
@@ -363,8 +370,6 @@ sleutelactoren
 slope
 slopes
 smoothing
-soorbeschermingsplangebieden
-soortbeschermingsplan\
 soorten/waarnemingen
 soortenbeschermingsprogramma\
 spatiale
