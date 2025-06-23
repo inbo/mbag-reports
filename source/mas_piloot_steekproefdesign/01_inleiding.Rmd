@@ -9,7 +9,7 @@ Als indicator voor die biodiversiteit worden akkervogels gezien.
 Akkervogels zijn typische soorten die voorkomen in landbouwgebieden, waarbij de meeste van hen tijdens de broedperiode afhankelijk zijn van akkers en/of akkerranden voor nestgelegenheid en voedsel.
 Enkele kritische soorten zijn inmiddels vrijwel verdwenen uit Vlaanderen zoals Ortolaan en Grauwe gors.
 Zelfs vroeger algemeen voorkomende akker- en weidevogelsoorten zoals Veldleeuwerik, Kievit en Patrijs hebben het tegenwoordig moeilijk.
-Om deze redenen krijgt deze groep soorten aandacht in het beleid, bijvoorbeeld via soortbeschermingsprogramma’s voor akkervogels en weidevogels, en door het invoeren van diverse maatregelen in landbouwgebieden.
+Om deze redenen krijgt deze groep soorten aandacht in het beleid, bijvoorbeeld via soortenbeschermingsprogramma’s voor akkervogels en weidevogels, en door het invoeren van diverse maatregelen in landbouwgebieden.
 
 De boerenlandvogelindex (farmland bird index, FBI) is een belangrijke indicator, waarbij de gegevens van een set aan broedvogelsoorten gerelateerd aan het agrarisch gebied internationaal opgevolgd worden.
 Deze indicator is ook opgenomen in de Europese natuurherstelverordening en in de Europese Verordening inzake milieu-economische rekeningen van 27 november 2024.
@@ -17,7 +17,7 @@ Het is ook een Vlaamse Openbare Statistiek (VOS).
 
 Huidige monitoringsprojecten en -initiatieven (zie Hoofdstuk \@ref(historie)) bieden een waardevolle basis, maar volstaan niet om alle monitoringsbehoeften in Vlaanderen volledig te dekken.
 Er is een dringende behoefte aan een verfijnder en betrouwbaarder beeld van de toestand van vogels in het landbouwgebied, inclusief het detecteren van regionale verschillen.
-Zo zijn in het soortbeschermingsplan akkervogels [@agentschapvoornatuurenbos2021] concrete strategische doelen bepaald.
+Zo zijn in het soortenbeschermingsprogramma voor akkervogels [@agentschapvoornatuurenbos2021] concrete strategische doelen bepaald.
 Volgende broeddensiteiten (aantal broedparen/100 ha) worden vooropgesteld voor een leefgebied met hoge leefgebiedkwaliteit: 12,5 bij Geelgors, 15 bij Veldleeuwerik, 10 bij Grauwe gors en 4 bij Patrijs.
 Om deze aantallen te bepalen en op te volgen ontbrak vooralsnog de data en monitoringsplan.
 Daarnaast is het essentieel om beter inzicht te krijgen in de factoren die trends beïnvloeden en de mate waarin genomen maatregelen daadwerkelijk effect sorteren.

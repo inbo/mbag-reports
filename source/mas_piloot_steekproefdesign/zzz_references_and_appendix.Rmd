@@ -213,7 +213,7 @@ read_csv(file.path("media", "distance", "per_stratum",
   arrange(regio, jaar, openheid) %>%
   kable(digits = 5,
         caption = paste("Resultaten van species change indices (SCI's) binnen",
-                        "t.o.v. buiten soortbeschermingsplan per regio, jaar",
+                        "t.o.v. buiten soortenbeschermingsprogramma per regio, jaar",
                         "en openheidsklasse."),
         booktabs = TRUE) %>%
   kableExtra::kable_styling(latex_options = c("scale_down", "striped")) %>%
@@ -303,6 +303,6 @@ include_graphics(file.path("media", "beheerovereenkomsten",
   \label{fig:steekproef-afbakening-mbag}
 \end{figure}
 
-```{r sbp-per-soort, out.width = "100%", fig.cap = "Gebruikte kaarten van soortbeschermingsplannen in de leemstreek en de zandleemstreek."}
+```{r sbp-per-soort, out.width = "100%", fig.cap = "Gebruikte kaarten van soortenbeschermingsprogramma's in de leemstreek en de zandleemstreek."}
 include_graphics(file.path("media", "kaartjes", "sbp_mbag_per_soort.png"))
 ```
