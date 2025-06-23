@@ -55,8 +55,7 @@ Naast een minimum oppervlakte moet natuurlijk ook gewaarborgd worden dat het sub
 
 Het idee is opgevat om het MAS-meetnet gradueel uit te breiden over de verschillende landbouwstreken in Vlaanderen (Hoofdstuk \@ref(pilootgegevens), Fig.
 \@ref(fig:landbouwstreken)).
-In 2023 werd reeds gestart met de leemstreek en de zandleemstreek.
-In 2024 werd de uitrol over heel Vlaanderen gerealiseerd.
+In 2023 zijn we reeds gestart met uitrol naar de Westelijke leemstreek en de zandleemstreek.
 
 ### Aanpassingen ten opzichte van het pilootmeetnet {#aanpassingen-meetnet}
 
