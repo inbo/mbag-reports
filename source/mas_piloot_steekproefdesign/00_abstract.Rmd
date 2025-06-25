@@ -29,6 +29,8 @@ Most analytical approaches tested proved feasible for use with MAS data and prov
 It was concluded that an area at least the size of “De Moeren” (approximately 5000 ha) is the minimum scale for reliable analysis, and that subareas should contain enough survey points to ensure sufficient statistical power.
 
 The study benefited from an existing pool of experienced volunteers, who largely continued their involvement in the pilot areas, supplemented by new participants.
+In both pilot areas this group was continued almost entirely and supplemented with a few new volunteers.
+We were able to show them of the value of the new sample, in which both existing counting locations were continued and new locations were included.
 In the Eastern Loam Region, the proportion of volunteer-surveyed points grew slightly to about 20 %.
 In “De Moeren”, all surveys were conducted by volunteers, with some sites resurveyed by professionals to assess consistency.
 A key finding was that volunteers consistently reported fewer observations and species than professionals surveying the same sites, regardless of volunteer experience or the use of breeding codes.
@@ -38,8 +40,10 @@ The report makes several recommendations for the future of MAS.
 The current sampling design is suitable for monitoring densities, regional differences, and the identification of core farmland bird areas.
 Long-term monitoring (minimum five years) is essential to detect meaningful trends and evaluate conservation effectiveness.
 A combination of policy and management monitoring is recommended, with annual management monitoring enabling timely interventions.
-The continuity of conservation measures is vital for sustainable integration into the landscape.
-Based on pilot study lessons, the MAS network is being gradually expanded across all Flemish agricultural regions, with improved site selection, stricter exclusion criteria for certain land uses, and enhanced visibility calculations using a cumulative visibility index.
+The continuity of conservation measures is vital for sustainable integration into the landscape, both for the quality of the habitat for farmland birds and for research.
+
+The MAS network was gradually expanded across all agricultural regions in Flanders based on this pilot study, building on the lessons learned regarding location choice and visibility.
+New adjustments include stricter exclusion criteria for certain land uses and improved calculations of visibility from the counting location (cumulative visibility index).
 The study applies a Before-After Control-Impact (BACI) design, which is critical for robustly assessing the impact of conservation measures by comparing intervention areas to control sites.
 The data collection, sampling design, and analyses are fully reproducible using R and version-controlled code on GitHub.
 Future analyses should increasingly focus on individual observations to detect more subtle patterns and directly link them to specific management actions.
@@ -48,4 +52,3 @@ A realistic initial target of 20% volunteer participation is proposed, with pote
 For paid surveyors, a mix of year-round staff and seasonal workers (including students and freelancers) is recommended to balance continuity, quality assurance, and cost-efficiency.
 
 \eenglish
-
