@@ -8,8 +8,7 @@ De biodiversiteit in landbouwgebieden staat onder grote druk, ook in Vlaanderen.
 Onze landbouw is vaak zeer intensief en gericht op hoge opbrengsten.
 Akkervogels zijn een goede indicator voor de biodiversiteit in het agrarisch gebied.
 Het zijn typische soorten die voorkomen in landbouwgebieden, waarbij de meeste van hen tijdens de broedperiode afhankelijk zijn van akkers en/of akkerranden voor nestgelegenheid en voedsel.
-Enkele soorten gebonden aan kleinschalige landbouw zijn sinds 2000 als broedvogel uit Vlaanderen verdwenen [@vermeersch2004], zoals Ortolaan en Paapje (op een sporadisch niet-jaarlijks broedgeval na).
-Akker- en weidevogelsoorten, zoals Veldleeuwerik, Grauwe gors, Kievit en Patrijs, die 20 jaar geleden nog algemeen en talrijk voorkwamen hebben het tegenwoordig erg moeilijk; ze zijn sterk in aantal en verspreiding afgenomen.
+Enkele soorten gebonden aan kleinschalige landbouw zijn sinds 2000 als broedvogel uit Vlaanderen verdwenen [@vermeersch2004], zoals Ortolaan en Paapje (op een sporadisch niet-jaarlijks broedgeval na).<!-- spell-check: ignore --> Akker- en weidevogelsoorten, zoals Veldleeuwerik, Grauwe gors, Kievit en Patrijs, die 20 jaar geleden nog algemeen en talrijk voorkwamen hebben het tegenwoordig erg moeilijk; ze zijn sterk in aantal en verspreiding afgenomen.
 Om deze redenen krijgt deze groep soorten beleidsaandacht, bijvoorbeeld via soortenbeschermingsprogramma’s voor akkervogels en weidevogels, en door het invoeren van diverse maatregelen in landbouwgebieden.
 
 De boerenlandvogelindex (farmland bird index, FBI) is een belangrijke indicator, waarbij de gegevens van een set aan broedvogelsoorten gerelateerd aan het agrarisch gebied internationaal opgevolgd worden.
