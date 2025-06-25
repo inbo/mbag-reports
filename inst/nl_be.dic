@@ -15,6 +15,7 @@
 ABV-data
 ABV-meetnet
 AES
+ALZ
 Abundanties
 Akkervogelgemeenschappen
 BACI
@@ -88,6 +89,7 @@ MSCI
 MSI
 Maps
 Markov
+Melckebeke
 Mises
 Motacilla
 Naturelles
@@ -113,8 +115,8 @@ Q75
 R-packages
 R-project
 R2-D2
-Réseau
 RAMSAR
+Réseau
 SBP
 SBP's
 SBP-gebied
@@ -171,6 +173,7 @@ akkervogelpopulaties
 augmented
 bafe6a6164dde186f309d1aacbcbff0ccde21735
 batching
+beheer-
 beheerovereenkomsten\
 beleid-
 beleids-
@@ -199,7 +202,6 @@ covariaten
 credible
 cross-validation
 cumulative
-d’Intérêt
 data/processed
 decompositieparameter
 dens
@@ -209,6 +211,7 @@ distance
 distribution
 dsm
 dubbelgeteld
+d’Intérêt
 ecoregelingen
 effectclass
 effecten/trends
@@ -244,8 +247,8 @@ git2rdata
 goodness
 graslandtypes
 grid
-grid’
 gridcellen
+grid’
 half-normal
 half-normale
 half-open
@@ -278,6 +281,7 @@ kosten-efficiënt
 kostenoptimale
 kwaliteitswaarborging
 landbouw-
+landbouwvogeltrend
 landgebruiken\
 landschap\
 leave-one-out
@@ -435,6 +439,7 @@ viewshed
 viewshedanalyse
 vigueur
 visibility
+voorjaarstellingen
 voorteelt
 voorteelten
 waarnemingpuntniveau
