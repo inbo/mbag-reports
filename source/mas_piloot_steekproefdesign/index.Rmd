@@ -67,33 +67,35 @@ output:
 
 # Dankwoord {.unnumbered}
 
-Deze studie is tot stand gekomen dankzij een samenwerkingsovereenkomst tussen de Vlaamse Landmaatschappij (VLM), het Agentschap Natuur en Bos (ANB), het Agentschap Landbouw en Zeevisserij en het Instituut voor Natuur- en Bosonderzoek.
+Deze studie is tot stand gekomen dankzij een samenwerkingsovereenkomst tussen de Vlaamse Landmaatschappij (VLM), het Agentschap Natuur en Bos (ANB), het Agentschap Landbouw en Zeevisserij (ALZ) en het Instituut voor Natuur- en Bosonderzoek (INBO).
 We willen deze instanties bedanken voor de steun, de middelen en de expertise.
-In het bijzonder willen we de PDPO-steun bedanken, die via de Vlaamse Landmaatschappij werd aangebracht.
+In het bijzonder willen we de VLM en ALZ bedanken voor het aanbrengen van PDPO-steun (Europees Landbouwfonds voor Plattelandsontwikkeling).
 De samenwerkingsovereenkomst werd opgestart in januari 2022.
 
-De eerste stappen die tot deze pilootstudie hebben geleid werden echter al enkele jaren gezet, met name in het kader van 'Plan Kiekendief'.
-Dit soortenbeschermingsprogramma voor de Grauwe kiekendief in Vlaanderen had onder andere de opdracht om de voedselbeschikbaarheid van deze soort in kaart te brengen en op te volgen.
+De eerste stappen die tot deze pilootstudie hebben geleid werden enkele jaren geleden gezet, in het kader van 'Plan Kiekendief'.
+Deze uitvoering van het soortenbeschermingsprogramma voor de Grauwe kiekendief in Vlaanderen had onder andere tot doel om de voedselbeschikbaarheid van deze soort in kaart te brengen en op te volgen.
 Grauwe kiekendief jaagt vooral op muizen en akkervogels.
-Daarvoor werd binnen de perimeter van dit plan een meetnet uitgerold.
-Onze dankbaarheid gaat uit naar de drijvende krachten achter dit plan, zowel instanties ANB en VLM, als de partner organisaties Regionaal Landschap Zuid-Hageland, Werkgroep Grauwe Gors en Kenniscentrum Akkervogels Grauwe Kiekendief.
-In het bijzonder gaat onze dank uit naar de vrijwilligers die sinds 2018 tellingen uitvoeren en zoekwerk verrichten, om zowel grauwe kiekendieven als hun prooi op te volgen.
-Deze groep vrijwilligers is langzaam maar zeker gegroeid, en blijft een vaste waarde binnen de onderzoeksgebieden die we voor deze pilootstudie verder konden blijven betrekken, waarvoor een grote merci!
+Daarvoor werd binnen de perimeter van dit plan een akkervogelmeetnet uitgerold.
+Onze dank gaat uit naar de drijvende krachten achter dit plan: ANB en VLM, alsook de partnerorganisaties Regionaal Landschap Zuid-Hageland, Werkgroep Grauwe Gors en Kenniscentrum Akkervogels Grauwe Kiekendief.
+In het bijzonder gaat onze dank uit naar de vrijwilligers die sinds 2017 tellingen uitvoeren en zoekwerk verrichten, om zowel Grauwe kiekendieven als hun prooi op te volgen.
+Deze groep vrijwilligers is langzaam maar zeker gegroeid, en kon verder betrokken worden in de onderzoeksgebieden die voor deze pilootstudie uitgekozen waren.
 
-Ook de aanbeveling in het soortenbeschermingsprogramma akkervogels stelde de noodzaak van monitoring terecht aan de kaak.
-We willen daarbij iedereen bedanken die aan dit plan heeft meegewerkt.
-De goedkeuring ervan in december 2021 heeft dit werk bekrachtigd.
+De aanbeveling in het soortenbeschermingsprogramma akkervogels stelde de noodzaak van monitoring terecht aan de kaak.
+We willen hierbij iedereen bedanken die aan het opmaken van dit programma heeft meegewerkt.
+De goedkeuring van het SBP akkervogels in december 2021 gaf aanleiding tot het opstarten van \textcolor{red}{...}
 
-De samenwerking met onze Nederlandse collega’s van zowel Kenniscentrum akkervogels Grauwe Kiekendief als SOVON verliep heel joviaal, we konden flexibel raad en daad krijgen, hartelijk dank daarvoor.
+Veel ervaring en kennis haalden we bij onze noorderburen, waar de gekozen methodiek zijn oorsprong kent.
+De samenwerking met onze Nederlandse collega’s van zowel Kenniscentrum akkervogels Grauwe Kiekendief als SOVON verliep heel joviaal.
+We konden flexibel raad en daad krijgen, hartelijk dank daarvoor.
 
-Als we een aantal personen van de organisaties hierboven met naam willen noemen, dan zijn Koen Devos, Myriam Dumortier, Peter Van Gossum, Karolien Michiel, Ben Koks, Popko Wiersma en Freek Verdonckt sleutelfiguren geweest om deze pilootstudie tot stand te brengen, alsook Dirk Zoetebier en Bernice Goffin voor de effectieve uitrol.
+Als we een aantal personen van de organisaties hierboven met naam willen noemen, dan zijn zij de belangrijkste: Koen Devos, Myriam Dumortier, Peter Van Gossum, Karolien Michiel, Ben Koks, Popko Wiersma en Freek Verdonckt.
+Zij zijn allen sleutelfiguren geweest om deze pilootstudie tot stand te brengen.
+We danken ook Dirk Zoetebier en Bernice Goffin graag met naam voor de effectieve uitrol ervan.
 
-Uiteraard willen we alle collega’s bedanken die hebben meegewerkt, of zijdelings advies hebben gegeven.
-Merci ook aan de leden van de stuurgroep, voor de opbouwende feedback en bijsturing waar nodig.
+Uiteraard willen we alle leden van de stuurgroep en collega’s die hebben meegewerkt, of advies hebben gegeven voor de opbouwende kritiek en bijsturing.
+We bedanken Peter Van Gossum en Jef Melckebeke voor het integraal en kritisch nalezen van het eindrapport.
 
-We bedanken Peter Van Gossum nogmaals voor het kritisch nalezen van het eindrapport.
-
-En we willen u bedanken, als lezer, voor uw interesse in dit rapport, dat hopelijk verklarend en inspirerend kan werken.
+Tot slot bedanken we u als lezer, voor uw interesse in dit rapport, dat hopelijk verklarend en inspirerend kan werken.
 
 \vfill
 \begin{figure}[H]
@@ -135,8 +137,9 @@ De resultaten wijzen erop dat de meeste geteste analyses kunnen uitgevoerd worde
 Daarbij stellen we vast dat een gebied ter grootte van De Moeren als minimumschaal moet worden gehanteerd (afgerond ten minste 5000 ha) en dat eventuele subgebieden genoeg telpunten bevatten om voldoende statistische power te waarborgen.
 
 De studie kon beroep doen op een reeds bestaande poule van vrijwilligersgroep die al ervaring had met het uitvoeren van MAS-tellingen.
-In beide pilootgebieden werd deze groep bijna integraal voortgezet en aangevuld met enkele nieuwe vrijwilligers, we konden hen overtuigen van waarde van de nieuwe steekproef zodat zowel .
-In de Oostelijke leemstreek groeide het aantal vrijwillig getelde punten licht, tot een verhouding van 20% vrijwilligerspunten.
+In beide pilootgebieden werd deze groep bijna integraal voortgezet en aangevuld met enkele nieuwe vrijwilligers.
+We konden hen overtuigen van waarde van de nieuwe steekproef waarbijzowel bestaande telpunten werden verdergezet als nieuwe telpunten werden opgenomen.
+In de Oostelijke leemstreek groeide het aantal vrijwillig getelde punten licht, tot een verhouding van 20 % vrijwilligerspunten.
 De Moeren werd volledig door vrijwilligers geteld, daar werden enkele punten dubbel geteld door een professionele teller, om de vergelijkbaarheid te analyseren.
 Een belangrijke bevinding was dat vrijwilligers significant minder waarnemingen en soorten rapporteerden dan professionele tellers die op dezelfde locatie hertelden.
 Dit verschil was vergelijkbaar voor waarnemingen met en zonder broedcode en was niet afhankelijk van de ervaring van de vrijwilligers.
@@ -146,7 +149,8 @@ Op basis van de bevindingen doet het rapport verschillende aanbevelingen voor de
 Het ontwerp van het meetnet wordt als geschikt beschouwd voor het verkrijgen van inzicht in densiteiten, regionale verschillen en het bevestigen van kerngebieden voor akkervogels.
 Voor het detecteren van betekenisvolle trends en het evalueren van de effectiviteit van beleid is langetermijnmonitoring van minimaal vijf jaar essentieel.
 Een combinatie van beleids- en beheermonitoring wordt aanbevolen, met een focus op jaarlijkse beheermonitoring voor tijdige bijsturing.
-Ook de continuïteit van maatregelen is van belang voor een duurzame verankering in het landschap, zowel \textcolor{red}{...} Het MAS-netwerk werd op basis van deze pilootstudie geleidelijk uitgebreid over alle landbouwstreken in Vlaanderen, voortbouwend op de lessen met betrekking tot locatiekeuze en zichtbaarheid.
+Ook de continuïteit van maatregelen is van belang voor een duurzame verankering in het landschap, zowel voor de kwaliteit van het leefgebied voor akkervogels als voor het onderzoek.
+Het MAS-netwerk werd op basis van deze pilootstudie geleidelijk uitgebreid over alle landbouwstreken in Vlaanderen, voortbouwend op de lessen met betrekking tot locatiekeuze en zichtbaarheid.
 Nieuwe aanpassingen omvatten strengere exclusiecriteria voor bepaalde landgebruiken en verbeterde berekeningen van zichtbaarheid vanuit het telpunt (cumulatieve zichtbaarheidsindex).
 De studie maakt gebruik van een Before-After Control-Impact (BACI) design, wat cruciaal is voor het betrouwbaar evalueren van de effectiviteit van soortbeschermingsmaatregelen door controlegebieden te betrekken.
 De data-analyse en steekproeftrekking zijn volledig reproduceerbaar gemaakt met behulp van R-packages en versiebeheer via GitHub.
@@ -160,20 +164,24 @@ Tijdens het broedseizoen is de inzet van tijdelijke werknemers, jobstudenten en 
 
 # Aanbevelingen voor beheer en/of beleid {.unnumbered}
 
-Historische en lopende monitoringprojecten en -initiatieven (zie hoofdstuk 2) bieden een waardevolle basis, maar volstaan niet om alle monitoringsbehoeften in Vlaanderen volledig te dekken.
+Historische en lopende monitoringprojecten en -initiatieven (zie hoofdstuk 2) bleken een waardevolle referentie van geleerde lessen en enkele langlopende monitoringsprojecten beschouwen we als basis om aanvullend op verder te werken.
+Deze volstaan actueel echter niet om alle monitoringsbehoeften in Vlaanderen te dekken.
 Er is een behoefte aan een verfijnder en betrouwbaarder beeld van de toestand van vogels in het landbouwgebied, inclusief het detecteren van regionale verschillen.
-Die toestand moet langdurig gemonitord worden, om het beleid te kunnen evalueren.
-Best wordt er gekozen om een combinatie van beleid- en beheermonitoring verder te zetten, met nadruk op een jaarlijkse beheermonitoring, om nauwgezet jaarlijkse bijsturing mogelijk te maken.
-Om verklaringen te vinden moet meer in detail, op micro-niveau, onderzocht worden welke recepten en factoren bepalend zijn.
+Die toestand moet langdurig gemonitord worden, om de effectiviteit van het beleid te kunnen evalueren.
+Best wordt ervoor gekozen om een combinatie van beleid- en beheermonitoring verder te zetten, met de nadruk op een jaarlijkse beheermonitoring, om nauwgezet bijsturing mogelijk te maken.
+Men kon tot dusver niet aantonen wat er nodig is om akkervogelpopulaties te laten herstellen.
+Recepten werden opgesteld als een combinatie van acties (zoals vb. nestbescherming) en maatregelen (waaronder beheerovereenkomsten, ecoregelingen maar ook maai- en onderhoudsbeheer).
+Maar vooralsnog hebben die recepten de Vlaamse landbouwvogeltrend nog niet positief gemaakt.
+Om verklaringen te vinden moet daarom meer in detail, op beheer- en perceelsniveau, onderzocht worden waar recepten succesvol zijn en welke factoren daarbij bepalend zijn.
 
-Ook voor de inzet van maatregelen bevelen we aan om te zorgen voor continuïteit, door maatregelen op langere termijn en met vergelijkbare voorwaarden verder te kunnen zetten.
-Dat zou ook een duurzame verankering in het landschap en op bedrijfsniveau in de hand werken.
-Het zal niet enkel het onderzoek en de evaluatie vergemakkelijken, maar is ook gunstig (en gewenst) voor de akkervogels en voor de landbouwers die hieraan meewerken.
+Ook voor de inzet van maatregelen bevelen we aan om te zorgen voor continuïteit, door maatregelen op lange termijn en met vergelijkbare voorwaarden verder te zetten.
+Dat werkt tevens een duurzame verankering in het landschap en op bedrijfsniveau in de hand.
+Het zal niet enkel het onderzoek en de evaluatie vergemakkelijken, maar het is ook gunstig (en gewenst) voor de akkervogels en voor de landbouwers die hieraan meewerken.
 
 # Leeswijzer {.unnumbered}
 
 De inleiding gaat dieper in op de biodiversiteit in landbouwgebieden en het belang van akkervogels als indicator.
-De boerenlandvogelindex (farmland bird index, FBI) wordt genoemd als een belangrijke indicator.
+De boerenlandvogelindex (farmland bird index, FBI) wordt in dit hoofdstuk genoemd als een belangrijke indicator.
 Huidige monitoringsprojecten en -initiatieven worden als waardevolle basis gezien, maar er is een behoefte aan meer gedetailleerde trendgegevens en inzicht in de oorzaken van trends en de effectiviteit van maatregelen.
 
 Hoofdstuk \@ref(historie) bespreekt de historie en lopende vogelmeetnetten in Vlaanderen, waaronder Algemene Broedvogels Vlaanderen (ABV), Bijzondere Broedvogels Vlaanderen (BBV), de Vlaamse Vogelatlas, en het Meetnet Agrarische Soorten (MAS).
@@ -197,9 +205,9 @@ We beargumenteren ook het potentieel van deze methode voor zowel beleid- als beh
 
 We concluderen dat deze opzet voor een meetnet geschikt is voor de noden die we vooropgesteld hebben.
 Deze steekproef kan inzicht geven in densiteiten, regionale verschillen en afbakening van kerngebieden voor akkervogels.
-Dit hebben we kunnen illustreren voor de Veldleeuwerik, één van de soorten die opgenomen is in de boerenlandvogelindex en een doelsoort van het soortenbeschermingsprogramma akkervogels.
+Dit hebben we kunnen illustreren voor de Veldleeuwerik, één van de soorten die opgenomen is in de boerenlandvogelindex en een doelsoort van het soortbeschermingsplan akkervogels.
 Het potentieel is aangetoond om, mits verderzetting van meerdere jaren, trends te kunnen detecteren voor doelsoorten.
-Mits de densiteit aan meetpunten hoog genoeg ligt, kunnen effecten op landschapsschaal gemeten worden.
+Mits de densiteit aan meetpunten hoog genoeg ligt, kunnen effecten op landschapsschaal gemeten worden
 
 ```{r setup, include = FALSE}
 library(knitr)
