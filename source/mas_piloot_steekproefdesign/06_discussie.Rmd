@@ -1,37 +1,59 @@
 # Discussie {#discussie}
 
-## MAS telprotocol
+In dit onderdeel bespreken we de belangrijkste leerpunten en aandachtspunten die voortkwamen uit de analyse en uitvoering van het pilootproject.
+We brengen hierbij een onderscheid aan tussen organisatorische en praktische aspecten, methodologische afwegingen en de implicaties voor beleids- en beheermonitoring.
 
-De analyse van beschikbare data bracht enkele afwegingen en discussiepunten met zich mee.
-Zo bleek de inschatting van de zichtbaarheid \textcolor{red}{...} Het verplaatsen van de meetpunt, waarbij de waarnemer zelf nog kan schuiven richting een plek met beter zicht, hebben we verboden.
-Dit toelaten zou het random aspect van de steekproeftrekking te veel kunnen beïnvloeden.
-Omdat een waarnemer niet exact op het puntcoördinaat zal plaatsnemen, met een nauwkeurigheid van een meter, hebben we daar wel wat flexibiliteit in aangebracht.
-De telcirkel zelf blijft waar die ligt, maar de waarnemer mag zich wel binnen een zone van 25 m rondom het telpunt (bewegingsruimte) positioneren in functie van zo goed mogelijke zichtbaarheid in de telcirkel.
-Deze wijziging hebben we op verschillende manieren gecommuniceerd, via de nieuwsbrief, webinars, op trainingsdagen en bij het overlopen van analyses.
-Dit moet jaarlijks best herhaald worden.
+## Organisatorische en praktische aspecten van het MAS-telprotocol
 
-Een ander aspect is het belang van afstanden om detectiecurves op te stellen, waarbij de afstand van de waarnemer ten opzichte van de vogel zo exact mogelijk moet gebeuren.
-Wat we dus niet kunnen toelaten is het tellen vanaf andere plaatsen dan het eigenlijke telpunt, omdat vanop een afstand observeren ook de inschatting van, alsook het effect van het al dan niet aanwezig zijn in het centrum van de telcirkel.
+### Instructies voor waarnemers: positionering en zichtbaarheid
 
-Verschillen tussen vrijwilligers en professionelen waren significant, tijdens de beperkte vergelijkende studie.
-We willen hier vooral geen kwaad bloed zetten, of het werk van professionals ophemelen.
-Het toont vooral aan dat er blijvende aandacht nodig is voor opleiding, met herhaalde infosessies en oefeningen om de kwaliteit van de tellingen hoog te houden.
-Daar waar vrijwilligers nog ervaring of vertrouwen missen, zou het goed zijn om een inloopperiode te voorzien, waarbij iemand mee kan gaan om tellingen uit te voeren samen met een ervaren teller.
+Bij de uitvoering van het MAS-meetnet bleek de inschatting van de zichtbaarheid een belangrijk aandachtspunt.
+Het was noodzakelijk om duidelijke instructies te formuleren rond de positionering van waarnemers.
+Verplaatsen naar een plek met beter zicht werd verboden, omdat dit het random karakter van de steekproeftrekking zou ondermijnen.
+Wel werd flexibiliteit toegestaan in de exacte plaatsing van de waarnemer, aangezien het praktisch onmogelijk is om tot op de meter nauwkeurig op het telpunt te staan.
+Daarom mag de waarnemer zich binnen een bewegingsruimte van 25 meter rond het telpunt positioneren, met als doel de zichtbaarheid binnen de telcirkel te optimaliseren.
 
-Verschillen tussen het MAS-telprotocol en het telprotocol van de Algemene Broedvogelmonitoring Vlaanderen (ABV) [@vermeersch2018] omvatten onder andere de tijdsduur van de telling (resp. 10 min vs. 5 min) en het aantal telperiodes per jaar (resp. 4 vs. 3 periodes).
-De ABV maakt bovendien gebruik van een genest design met 6 telpunten in een hok van 1 km x 1 km.
-Deze punten zijn geplaatst in een theoretisch 2 x 3 grid binnen het hok, maar de waarnemer kan deze verschuiven zonder concrete richtlijnen.
-In tegenstelling tot het MAS, wordt de ABV vaak niet digitaal ingevoerd, ontbreekt een maximale zoekafstand, en worden er geen observaties vastgelegd op de kaart, waardoor afstanden tot de waarnemer niet direct beschikbaar zijn.
-Omwille van deze methodologische verschillen is het niet vanzelfsprekend ABV-data te combineren met de data van het MAS, vooral als we rekening willen houden met detectiekans.
+Het is essentieel dat afstanden tot waargenomen vogels zo exact mogelijk worden ingeschat.
+Tellen vanaf andere locaties dan het officiële telpunt is niet toegestaan, omdat dit de betrouwbaarheid van afstandsmetingen en detectiecurves aantast en de invloed van de aanwezigheid van de waarnemer in het midden van de telcirkel niet correct zou worden meegenomen.
 
-Bij de ABV gebeurt stratificatie van hokken op basis van de Biologische Waarderingskaart (minstens 80 % landbouw) [@onkelinx2023a].
-Bij het MAS gebeurt stratificatie van punten op basis van een engere definitie van landbouwgebied door een combinatie van regels (beschreven in Secties \@ref(piloot-steekproefkader) en \@ref(aanpassingen-meetnet)).
-Dit zorgt ervoor dat de informatie-inhoud van de data over vogels in landbouwgebied groter zal zijn in kader van het MAS en dit meetnet meer doelgerichte vragen kan beantwoorden in dit verband.
-Anderzijds kunnen punten van de ABV sneller worden geteld (zowel de tijdsduur per telpunt als afstand tussen punten is kleiner) zodat dit meetnet nuttig is om meer algemene trends te detecteren op een goedkopere manier.
-Wij stellen voor beide meetnetten zeker 5 jaar parallel te laten verlopen zodat we tijdreeksen kunnen vergelijken.
-Bovendien is er momenteel nog geen tijdreeksdata beschikbaar voor MAS op gelijkaardige schaal als ABV.
+### Communicatie en opleiding van waarnemers
+
+De aangepaste richtlijnen en praktische instructies zijn op verschillende manieren gecommuniceerd: via nieuwsbrieven, webinars, trainingsdagen en toelichtingen bij analyses.
+Jaarlijkse herhaling van deze communicatie is noodzakelijk om de kwaliteit van de tellingen te blijven waarborgen.
+
+Daarnaast bleek uit een beperkte vergelijkende studie dat er significante verschillen zijn tussen de prestaties van vrijwilligers en professionelen.
+Dit mag echter niet leiden tot polarisatie of het onderwaarderen van vrijwilligers.
+Het onderstreept vooral de nood aan blijvende aandacht voor opleiding en kwaliteitsborging.
+Voor minder ervaren waarnemers kan het nuttig zijn om een inloopperiode te voorzien, waarin ze samen met een ervaren teller op pad gaan.
+
+## Methodologische afwegingen
+
+### Vergelijking MAS en ABV
+
+Het MAS-telprotocol verschilt op meerdere vlakken van het telprotocol van de Algemene Broedvogelmonitoring Vlaanderen (ABV) [@vermeersch2018].
+Bij het MAS duurt een telling 10 minuten en zijn er vier telperiodes per jaar.
+Bij de ABV zijn dat respectievelijk 5 minuten en drie periodes.
+Bovendien maakt de ABV gebruik van een genest design met zes telpunten per kilometerhok, waarbij de waarnemer de plaatsing van de telpunten mag aanpassen zonder strikte richtlijnen.
+
+In tegenstelling tot het MAS wordt bij de ABV vaak niet digitaal ingevoerd, is er geen maximale zoekafstand vastgelegd, en worden observaties meestal niet op kaart genoteerd.
+Hierdoor zijn afstanden tot de waarnemer bij de ABV niet beschikbaar.
+Deze methodologische verschillen bemoeilijken het combineren van data tussen beide meetnetten, zeker wanneer detectiekans in rekening moet worden gebracht.
+
+Om de bruikbaarheid van beide meetnetten optimaal te benutten, stellen we voor om het MAS en de ABV minstens vijf jaar parallel te laten lopen.
+Zo kunnen we tijdreeksen vergelijken en blijven we profiteren van de grotere dekking en lagere kostprijs van de ABV.
+
+### Steekproefopzet en stratificatie
+
+De stratificatie van telpunten verschilt tussen MAS en ABV.
+Bij de ABV gebeurt de stratificatie op basis van de Biologische Waarderingskaart (minstens 80 % landbouwgebied) [@onkelinx2023a].
+Het MAS hanteert een engere definitie van landbouwgebied, met een meer gedetailleerde stratificatie (zie Secties \@ref(piloot-steekproefkader) en \@ref(aanpassingen-meetnet)).
+
+Dit maakt het MAS bijzonder geschikt om gerichte vragen over vogels in landbouwgebieden te beantwoorden.
+Het ABV-meetnet is daarentegen meer geschikt voor het detecteren van algemene trends op grotere schaal en tegen lagere kosten, vanwege de kortere tellingen en kleinere afstanden tussen telpunten.
 
 ## Beleidsmonitoring
+
+### Leerpunten uit het pilootproject
 
 ```{r, warning=FALSE, message=FALSE}
 library(brms)
@@ -94,7 +116,7 @@ Voor dit pilootproject hebben we gebruik kunnen maken van al in het verleden (pe
 De MAS-tellingen van deze bestaande meetpunten (die grotendeels ook gecontinueerd werden in 2022 en 2023 in kader van het pilootproject) leren ons bijvoorbeeld dat, voor soorten zoals de Veldleeuwerik, wanneer we een lineaire trend veronderstellen tussen 2018 en 2023 (resultaten niet getoond), er een significante toename is van de densiteit met jaarlijks `r round(interactie_est, 2)` $\pm$ `r round(interactie_se, 2)` per 100 ha in de Oostelijke leemstreek.
 Dit komt overeen met een stijging van een densiteit van `r est_2018` naar `r est_2023` broedvogels per 100 ha over de 6-jarige periode.
 De relatieve foutenmarge (halve breedte van het 95 % geloofwaardigheidsinterval gedeeld door de geschatte densiteit) op de jaarlijkse densiteitsschattingen in de Oostelijke leemstreek liggen voor Veldleeuwerik tussen `r round(min(rfm_stats))` % en `r round(max(rfm_stats))` %.
-Deze cijfers geven vertrouwen dat op een zesjarige periode er voldoende power zal zijn om ecologisch relevante trends (en verschillen in trends tussen strata) te detecteren.
+Deze cijfers geven vertrouwen dat er op een zesjarige periode voldoende power zal zijn om ecologisch relevante trends (en verschillen in trends tussen strata) te detecteren.
 We moeten er echter wel over waken dat de steekproefgrootte per stratum voldoende groot blijft.
 Zo leren we bijvoorbeeld uit de cijfers van de Moeren dat de relatieve foutenmarge op de lineaire trend en toestandschattingen van Veldleeuwerik respectievelijk $\times 2$ en $\times 4$ is in vergelijking met de Oostelijke leemstreek.
 
@@ -107,33 +129,40 @@ We zullen dan immers in staat zijn om bijvoorbeeld de trend binnen en buiten SBP
 We zullen ook de haalbaarheid van (o.b.v. trend) en het halen van (o.b.v. toestand) streefdoelen voor de populatiedensiteit van soorten kunnen aftoetsen.
 Ook kunnen we, door te wegen voor de oppervlakte van elk stratum (bijvoorbeeld open landschap binnen SBP in de leemstreek), toestand- en trendschattingen bekomen die representatief zijn voor een volledige landbouwstreek (en op termijn dus ook voor alle landbouwgebied in Vlaanderen).
 
+### Opzet van het toekomstig meetnet
+
 Elk van bovenvermelde beperkingen zullen we op termijn dus kunnen wegwerken en een deel van de beperkingen hebben we binnen het pilootproject al aangepakt.
 In het meetnet dat we hebben opgezet voor deze pilootstudie zijn controlegebieden toegevoegd die vergelijkbaar zijn met de SBP zones (zelfde landbouwstreek, zelfde mate van openheid van het landschap).
 De uitbreiding hiervan naar de andere landbouwstreken, zal toelaten om zowel per landbouwstreek als voor heel Vlaanderen uitspraken te doen over effecten van het beleid (waarbij een opsplitsing kan gemaakt worden in de mate van uptake van beleid).
 In 2023 konden we al starten met deze uitrol naar de volledige leemstreek en zandleemstreek.
-In 2024 volgen de overige landbouwstreken.
+In 2024 kwamen de overige landbouwstreken aan bod, waarbij over heel Vlaanderen meetpunten werden uitgestrooid.
 
-Voor een beleidsmonitoring op macroniveau is het ook interessant om -- naast resultaten voor individuele soorten -- ook uitspraken te doen over groepen van soorten (bijvoorbeeld alle doelsoorten van het SBP akkervogels).
-Dit kan bijvoorbeeld door -- vergelijkbaar met hoe dit gedaan wordt voor de ABV monitoring -- een multisoortenindex te berekenen die de relatieve wijziging weergeeft van een jaar met een referentiejaar op niveau Vlaanderen (= *multi species change index*).
+Dankzij deze opzet kunnen we in de toekomst de trends binnen en buiten SBP-gebieden vergelijken en trends en toestanden representatief inschatten voor volledige landbouwstreken en heel Vlaanderen.
+
+### Mogelijkheid tot multisoortenindices
+
+Voor een beleidsmonitoring op macroniveau is het ook waardevol om – naast resultaten voor individuele soorten – ook uitspraken te doen over groepen van soorten, bijvoorbeeld alle doelsoorten van het SBP akkervogels.
+Dit kan bijvoorbeeld door een multisoortenindex te berekenen, analoog met hoe dit gedaan wordt voor de ABV monitoring, die de relatieve wijziging weergeeft van een jaar met een referentiejaar op niveau Vlaanderen (= *multi species change index*).
 Met de MAS data kunnen we dit principe ook toepassen per landbouwstreek en binnen versus buiten SBP zones.
 
 ## Beheermonitoring
 
+### Gedetailleerde effectinschatting van beheermaatregelen
+
+Beheermonitoring vereist een fijnmazigere analyse dan beleidsmonitoring.
 Wanneer we als doel hebben om na te gaan of de uitgevoerde beheermaatregelen het gewenste vooropgestelde ecologische resultaat (effectiviteit) opleveren, dienen we net een stap verder te gaan dan een loutere vergelijking van telpunten binnen en buiten SBP.
 Per telcirkel kunnen we exact bepalen welke oppervlakte aan maatregelen er genomen zijn en wanneer.
 Dit kunnen we zowel doen voor de maatregelen die worden genomen in kader van een SBP als voor de landbouwbedrijfsvoering (bijvoorbeeld oppervlakte-aandeel van een bepaald type hoofdteelt).
-Ook andere karakteristieken zoals (variatie in) perceelgroottes, kleine landschapselement ...) nemen we mee als verklarende variabelen in onze modellen.
-Dit laat ons toe om te bepalen welke factoren het meest gunstig zijn voor de densiteit aan akkervogels en laat ons ook beter toe om effecten van bepaalde maatregelen in te schatten conditioneel de andere factoren.
+Ook andere karakteristieken zoals (variatie in) perceelgroottes, kleine landschapselement …) nemen we mee als verklarende variabelen in onze modellen.
 
-Binnen dit pilootproject is al een eerste belangrijke stap gezet om deze modellen te fitten.
-We geloven echter dat hier nog een deel onontgonnen terrein ligt, om in nog meer detail de data te analyseren.
-In bovenstaande schets worden de verklarende variabelen samengevat per telcirkel en per jaar.
-De individuele tellingen geven ons echter informatie waar een soort gezien werd binnen de telcirkel in een bepaalde telperiode.
-Hierin kan mogelijk een sterker signaal verscholen liggen dat verloren gaat wanneer we aggregeren (uitmiddelen of een totaal berekenen) in een telcirkel.
-Een waarneming is uiteraard maar een momentopname, maar uit vele waarnemingen kan er zich wel een patroon aftekenen.
-Stel bijvoorbeeld dat Veldleeuwerik veel meer waargenomen wordt nabij een specifieke beheermaatregel of een specifieke teelt.
-Om zulke signalen op te pikken, moeten we modellen maken die de vertrekken vanaf de individuele waarnemingen en de daarmee via locatie en tijdstip van de waarneming verbonden toestand van de verklarende variabelen.
-Dit is echter voorwerp van verder onderzoek en kon niet binnen het tijdsbestek van dit pilootproject bekeken worden.
-In elk geval verwachten we dat zulke analyses en de analyses die we al uitgevoerd hebben, zullen toelaten om de effectiviteit van maatregelen beter in te schatten en daarmee ook aanbevelingen te kunnen doen om op middellange termijn maatregelen bij te sturen.
-Eveneens kan dit soort analyses signalen geven waar er nood is aan aanvullend verklarend onderzoek (*microniveau*).
+Dit laat toe om te onderzoeken welke factoren het meest gunstig zijn voor akkervogeldensiteiten en om effecten van specifieke maatregelen beter in te schatten, rekening houdend met andere omgevingskenmerken.
+
+### Verdere modelontwikkeling en datapotentieel
+
+Binnen dit pilootproject werden reeds eerste modellen gefit, maar er liggen verdere kansen om gedetailleerdere analyses uit te voeren.
+In plaats van te werken met geaggregeerde gegevens per telcirkel en per jaar, kunnen we vertrekken van individuele waarnemingen gekoppeld aan de locatie binnen de telcirkel en het tijdstip.
+
+Dit kan helpen om fijnmazige patronen te detecteren, zoals voorkeursplekken van soorten nabij specifieke beheermaatregelen of teelten.
+Zulke analyses vereisen verdere ontwikkeling en konden binnen het tijdsbestek van dit project niet uitgevoerd worden, maar ze bieden in de toekomst mogelijkheden om de effectiviteit van maatregelen nog nauwkeuriger in te schatten.
+Bovendien kunnen deze analyses signalen opleveren voor aanvullend, verklarend onderzoek (*microniveau*).
 Dit type van onderzoek zal typisch heel gericht gaan kijken op een kleine schaal gedurende één of maximaal enkele jaren in functie van specifieke kennishiaten.

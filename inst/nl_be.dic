@@ -13,6 +13,7 @@
 5-fold
 7d0cdbc83765719876fbf0954082873d992f33de
 ABV-data
+ABV-meetnet
 AES
 Abundanties
 Akkervogelgemeenschappen
@@ -163,6 +164,7 @@ agri-environment
 agrobiodiversiteit
 agromilieuklimaatmaatregelingen
 akker-
+akkervogeldensiteiten
 akkervogeldichtheid
 akkervogelmeetnet
 akkervogelpopulaties
@@ -269,6 +271,7 @@ kansdichtheidsfunctieplots
 karrekiet
 key
 key-value
+kilometerhok
 klasses
 km-hokjes
 kosten-efficiënt
@@ -305,6 +308,7 @@ monitoringsnoden
 multi-species
 multiple-covariate
 multisoortenindex
+multisoortenindices
 niet-informatieve
 nulbeleid
 nultelling
