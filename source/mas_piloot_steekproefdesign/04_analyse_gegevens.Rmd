@@ -125,12 +125,11 @@ include_graphics(file.path("media", "data_exploratie",
 
 ### Zoogdieren {#exploratie-zoogdieren}
 
-Het MAS-protocol is ook geschikt om zoogdieren te monitoren en dan vooral voor Haas.
+Het MAS-protocol kan ook gebruikt worden om zoogdieren te monitoren.
 Voor deze soorten is broedcode niet relevant.
-Haas was sterker aanwezig in De Moeren dan de Oostelijke leemstreek (Fig. \@ref(fig:relfreqs-zoogdieren)).
-Andere zoogdieren werden minder frequent gezien tijdens tellingen.
-Haas wordt minder geteld in de laatste telperiode (Fig. \@ref(fig:aantallen-haas)) en is het meest frequent in het open landschap (Fig. \@ref(fig:relfreqs-haas)).
-\textcolor{red}{meer kadering, uitleg ... in ander rapport?}
+Wie zien echter dat er, buiten Haas, niet veel zoogdieren worden gezien.
+Haas was sterker aanwezig in De Moeren dan de Oostelijke leemstreek (Fig. \@ref(fig:relfreqs-zoogdieren)), wordt minder geteld in de laatste telperiode (Fig. \@ref(fig:aantallen-haas)), en is het meest frequent in het open landschap (Fig. \@ref(fig:relfreqs-haas)).
+\textcolor{red}{meer kadering, uitleg ... ?}
 
 ```{r relfreqs-zoogdieren, out.width = "100%", fig.cap = "Relatieve frequentie van de zoogdieren gezien tijdens het pilootproject (geordend volgens gemiddelde over telperiode, jaar en regio). Elke punt is een relatieve frequentie in een bepaalde telperiode, jaar en regio."}
 include_graphics(file.path("media", "data_exploratie",
@@ -274,12 +273,12 @@ Voor het aantal waarnemingen konden we hetzelfde besluiten (95 % GI: -1,09 tot 3
 We moeten opmerken dat deze resultaten gebaseerd zijn op modellen die niet altijd een goede weerspiegeling waren van de data.
 De responsdata waren aantallen en dus positief en discreet van aard.
 Desondanks kozen we vaak voor modellen met een Normale verdeling.
-Dit gaf eenvoudig interpreteerbare resultaten en was ook vaak niet problematisch omdat de aantallen vaak hoog genoeg lagen (en er dus geen negatieve waarden zouden voorspeld worden door het model).
+Dit gaf eenvoudig interpreteerbare resultaten en was ook niet problematisch omdat de aantallen vaak hoog genoeg lagen (en er dus geen negatieve waarden zouden voorspeld worden door het model).
 In verschillende gevallen werden de resultaten van de Poisson en Negatief binomiale modellen vergeleken met het Normale model.
 Na omrekenen gaven deze modellen gelijkaardige resultaten.
 Bovendien waren we telkens geïnteresseerd in specifieke hypotheses.
 Hoewel precieze geloofwaardigheidsintervallen van de verschillende modellen wel verschilden, gaven ze telkens een eenduidig antwoord op onze vragen.
-Deze waren ook steeds in lijn met de data exploratie.
+Deze waren steeds in lijn met de data exploratie.
 
 Ten slotte kozen we het aantal soorten en het aantal waarnemingen als maten om te achterhalen of tellingen van vrijwilligers en de professionele teller gelijkaardige resultaten opleverden.
 Dit zijn geen onafhankelijke maten.
@@ -301,7 +300,7 @@ Binnen deze studie hebben we verschillende verklarende variabelen verzameld die 
 We onderscheiden primaire, secundaire en tertiaire variabelen.
 Primaire variabelen zijn variabelen die binnen het kader van de pilootstudie de hoogste interesse hebben om te weten wat het effect is op het aantal of de aanwezigheid van bepaalde akkervogels.
 Deze variabelen zijn sterk gelinkt aan beleid.
-Secundaire variabelen zijn variabelen die mogelijk ook belangrijk zijn voor akkervogels, maar die vooral nodig zijn om modellen vollediger te maken.
+Secundaire variabelen zijn variabelen die mogelijk belangrijk zijn voor akkervogels, maar die vooral nodig zijn om modellen vollediger te maken.
 Ze zijn minder de focus van bepaalde, specifieke onderzoeksvragen.
 Deze variabelen zijn sterk gelinkt aan het voorkomen van soorten.
 Tertiaire variabelen zijn structurele variabelen die eerder dienen om te corrigeren voor het monitoringsprotocol in tijd en ruimte bijvoorbeeld via random effects in mixed models.
@@ -405,15 +404,15 @@ De regio's van het pilootmeetnet (De Moeren en Oostelijke leemstreek).
 In Sectie \@ref(piloot-stratificatie) werd reeds uitgelegd hoe per telpunt de openheid van het landschap werd berekend op schaal van 300 m.
 Daarna werd deze continue variabele opgedeeld in verschillende klassen (OL: open landschap, HOL: halfopen landschap).
 
-Naast deze categorische variabele berekenden we ook de openheid van het landschap als continue variabele op een schaal van 1000 m.
-Deze schaal zou meer relevant zijn voor akkervogels \textcolor{red}{(REF)} en een continue variabele bevat meer informatie voor gedetailleerdere statistische analyses en het identificeren van subtiele patronen in de data.
+Naast deze categorische variabele berekenden we de openheid van het landschap als continue variabele op een schaal van 1000 m.
+Deze schaal zou meer relevant zijn voor akkervogels [@klaassen2022] en een continue variabele bevat meer informatie voor gedetailleerdere statistische analyses en het identificeren van subtiele patronen in de data.
 
 **3. Soortenbeschermingsprogramma**\
 Categorische variabele binnen of buiten soortenbeschermingsprogramma akkervogels (SBP) [@akkervogelgebieden].
 
 **4. Status teller**\
 Analyses van telpunten die zowel door vrijwilligers als professionele teller zijn geteld, gaven duidelijk aan dat vrijwilligers een significant lager aantal waarnemingen en soorten zien dan een professionele teller (Sectie \@ref(dubbeltellingen)).
-Voor elk telpunt hebben we dus ook nagegaan of er geteld is door een professionele teller of een vrijwilliger.
+Voor elk telpunt hebben we dus nagegaan of er geteld is door een professionele teller of een vrijwilliger.
 
 **5. Oppervlakte-aandeel houtige kleine landschapselementen**\
 Het aandeel oppervlakte van elke subklasse houtige kleine landschapselementen binnen de telcirkels werd berekend via houtige landschapselementen op of aangrenzend aan landbouwgebruikspercelen in Vlaanderen (onderzoek 2017 op basis van gegevens 2015).
@@ -554,14 +553,14 @@ De Spearman correlatie tussen twee variabelen zal hoog zijn wanneer waarnemingen
 
 De openheidsvariabele was negatief gecorreleerd met de variabelen van de kleine landschapselementen.
 Dit is logisch aangezien bomen, hagen etc. het landschap minder open maken.
-Zo zagen we ook een negatieve correlatie met fruitteelten omwille van dezelfde reden.
+Zo zagen we een negatieve correlatie met fruitteelten omwille van dezelfde reden.
 Een positieve correlatie zagen we dan weer met afwezigheid van voorteelten en groottes van percelen.
 Dan zal het landschap inderdaad meer open zijn.
 We zagen wel dat de verbanden niet altijd lineair zijn.
 
 De mediaan en interkwartielafstand van perceelsgroottes waren sterk gecorreleerd.
-Ook de gewasdiversiteit (Shannon en absolute aantal gewassen) waren op dezelfde laag van de perceelsgroottes gebaseerd en we zien een sterke negatieve correlatie, maar niet met de variatiecoëfficiënt.
-De evenness maat is ook gecorreleerd met de gewasdiversiteitsmaten.
+De gewasdiversiteit (Shannon en absolute aantal gewassen) was op dezelfde laag van de perceelsgroottes gebaseerd en we zien een sterke negatieve correlatie, maar niet met de variatiecoëfficiënt.
+De evenness maat is gecorreleerd met de gewasdiversiteitsmaten.
 Alle uitspraken voor `..hfdtlt` gelden ook voor `..hfdtlt_pre` (hoofdteelt jaar ervoor).
 Hun overeenkomstige correlaties zijn hier niet van belang.
 Proportie hagen en meerjarige fruitteelt waren vrij sterk positief gecorreleerd.
@@ -576,7 +575,7 @@ Alle uitspraken voor `..hfdtlt` gelden ook voor `..hfdtlt_pre`:
 -   keuze maken over gewasdiversiteitsvariabele: `gewas_div_shannon` over `gewas_div_n` omdat proportie in rekening wordt gebracht, `gewas_evenness` is minder van belang
 -   sommige KLE variabelen tonen sterke correlaties met andere variabelen en bovendien zijn sommige van deze variabelen heel zeldzaam, toch zijn ze allemaal belangrijk voor de vogels. Tijdens het modelleren kan het toch blijken dat het beter is om alles te sommeren tot 1 KLE proportie variabele
 -   keuze maken over predatorvariabele: `n_predators` over `n_predators_spec` omwille van meer variatie
--   voorteelten zijn vaak afwezig waardoor het misschien eerder een maat is voor de oppervlakte aan landbouwgebruikspercelen binnen een telcirkel eerder dan indicatief te zijn voor voorteelten zelf: hoe meer afwezigheid voorteelt, hoe minder landbouwgebruikspercelen, hoe minder kleine landschapselementen (neg. corr.), hoe minder openheid landschap (pos. corr.) ... `afwezig_vrtlt` wordt dus toch ook beter weggelaten. Hoewel voorteelten in praktijk belangrijk kunnen zijn voor de akkervogels, blijkt dat we niet de goede data hebben om dit effectief te gaan controleren.
+-   voorteelten zijn vaak afwezig waardoor het misschien eerder een maat is voor de oppervlakte aan landbouwgebruikspercelen binnen een telcirkel eerder dan indicatief te zijn voor voorteelten zelf: hoe meer afwezigheid voorteelt, hoe minder landbouwgebruikspercelen, hoe minder kleine landschapselementen (neg. corr.), hoe minder openheid landschap (pos. corr.) ... `afwezig_vrtlt` wordt dus toch beter weggelaten. Hoewel voorteelten in praktijk belangrijk kunnen zijn voor de akkervogels, blijkt dat we niet de goede data hebben om dit effectief te gaan controleren.
     -   Voorteelt is door landbouwers vaak ingevoerd als `NA` (en bij ons dus geclassificeerd als "afwezig") omdat er geen voorteelt mogelijk is. Die verzamelaanvraag loopt van 1 januari tot eind van het jaar, en bij wintergewassen staat de hoofdteelt er al op in het vroege voorjaar. Er zijn nog andere gevallen waarbij er geen voorteelt mogelijk is, vanwege de te korte tijd die er vrij is als de hoofdteelt er op moet komen.
     -   Hoofdteelt is de voornaamste teelt die er tussen 15 mei en eind augustus op staat. Een voorteelt wordt voor die tijd ondergewerkt of geoogst, zodat de hoofdteelt er op kan. Dus als er wintertarwe of een ander wintergraan op staat in de voorteelt, wil dat zeggen dat die (voor de organische stof, als voeder of om in te kuilen) wordt geoogst, of gewoon wordt ingeploegd omdat die mislukt is of als vanggewas is gezet. Dat zou dus een uitzondering moeten zijn. Wintergranen die er al op staan in de voorteelt periode, maar als hoofdteelt blijven staan, daar wordt bij de voorteelt `NA` vermeld.
     -   Er blijkt geen controle te zijn op de verzamelaanvraaggegevens, dus het kan ook een interpretatie zijn van de landbouwer om dezelfde voorteelt als hoofdteelt te vermelden (bv. wintertarwe) die gewoon blijft staan. Voor ons onderzoek is vooral de hoofdteelt belangrijk eigenlijk, en bijkomstig of er een verschillende voorteelt is.
@@ -594,7 +593,7 @@ include_graphics(file.path("media", "verklarende_variabelen",
                            "corrmat2.pdf"))
 ```
 
-Ten slotte waren we ook nog geïnteresseerd in het verband tussen binnen en buiten sbp en het oppervlakte-aandeel soortbeschermingsmaatregelen.
+Ten slotte waren we nog geïnteresseerd in het verband tussen binnen en buiten sbp en het oppervlakte-aandeel soortbeschermingsmaatregelen.
 We zien een groter aandeel soortbeschermingsmaatregelen binnen sbp dan buiten sbp (Fig. \@ref(fig:sbp-areapropsb)).
 Ook zien we een verschillende trend over de jaren.
 Om deze beter te begrijpen, bekeken we de oppervlakte aan soortbeschermingsmaatregelen binnen de volledige perimeter van de pilootstudie over de jaren (Fig. \@ref(fig:total-propsb)).
@@ -642,7 +641,7 @@ summary_var_tab_clean %>%
 
 In dit rapport presenteren we een case studie van de analyses en resultaten met betrekking tot de Veldleeuwerik.
 Het voornaamste doel is om een overzicht te geven van de mogelijke analyses die we kunnen doen op de MAS-data.
-De Veldleeuwerik is een handige testsoort, omdat veel data voorhanden is waardoor verschillende methodieken onder verschillende scenario's konden worden uitgetest.
+De Veldleeuwerik is een handige testsoort, omdat veel data voorhanden zijn waardoor verschillende methodieken onder verschillende scenario's konden worden uitgetest.
 De analyses besproken in deze sectie zijn in de meeste gevallen ook reeds uitgevoerd voor andere soorten.
 In een toekomstig rapport, gewijd aan bredere analyses en resultaten van het MAS onder het Meetnet Biodiversiteit in Agrarisch Gebied (MBAG), zullen de bevindingen voor deze andere soorten worden besproken.
 
@@ -799,7 +798,7 @@ De onzekerheid op de abundantie- en densiteitsschattingen komt van twee origines
 
 We voerden de distance sampling analyses uit met behulp van de **Distance** package [@R-Distance; @miller2019] in R.
 We schatten (1) densiteiten per jaar (2018-2023) per regio (De Moeren, Oostelijke leemstreek) en (2) densiteiten per stratum (OL, HOL en binnen en buiten sbp) per regio binnen de pilootstudie (2022-2023).
-We beschouwen enkel waarnemingen van Veldleeuwerik met broedcode groter dan nul en houden ook rekening met het broedseizoen van de soort.
+We beschouwen enkel waarnemingen van Veldleeuwerik met broedcode groter dan nul en houden rekening met het broedseizoen van de soort.
 Alle vier de verschillende telperiodes vallen binnen het broedseizoen van de soort (1 april - 15 juli) zodat we de data van alle telperiodes binnen het jaar konden gebruiken.
 
 Voor (1) beschouwden we alle telpunten van 2018-2021 en voegden enkel telpunten van 2022 en 2023 toe als ze minstens eenmaal geteld waren in een van de voorgaande jaren.
@@ -813,7 +812,7 @@ include_graphics(file.path("media", "distance", "per_jaar",
 ```
 
 Voor (2) beschouwden we enkel de tellingen binnen het pilootproject (alle telpunten van 2022-2023).
-We trokken daarvoor ook een buffer van 300 m rond het steekproefkader, deze keer opgesplitst per stratum (Fig. \@ref(fig:oppervlakte-steekproefkader-stratum)).
+We trokken daarvoor een buffer van 300 m rond het steekproefkader, deze keer opgesplitst per stratum (Fig. \@ref(fig:oppervlakte-steekproefkader-stratum)).
 Voor de formulatie van de detectiefunctie beschouwden we half-normal en hazard-rate sleutelfuncties die we lieten afhangen van covariaten regio, openheid (HOL of OL) en sbp (binnen of buiten sbp).
 Analyses werden voor 2022 en 2023 apart gedaan.
 Dit was puur omwille van tijdsoverwegingen, maar dit kan ook in eenzelfde analyse worden gedaan (zoals we in (1) doen).
@@ -835,9 +834,9 @@ Als het verschil tussen AIC's kleiner is dan 2, kiezen we het eenvoudigste van d
 Modellen met vergelijkbare AIC's hebben vergelijkbare geschatte detectiekansen, dus in de praktijk is er weinig verschil in de keuze tussen deze modellen [@miller2019].
 
 Om te controleren of onze finale modellen voor (1) en (2) goed pasten bij de data (= "goodness of fit") maakten we een Q-Q plot waarbij de cumulatieve distributiefunctie van de gefitte detectiefunctie (CDF) wordt vergeleken met de distributie van de data (EDF).
-We voerden ook de Cramér-von Mises test uit.
+We voerden de Cramér-von Mises test uit.
 Deze kwantificeert de informatie van de Q-Q plot door te testen of punten van de EDF en CDF uit dezelfde verdeling komen [@buckland2015; @miller2019].
-Finaal bekeken we ook de kansdichtheidsfunctieplots.
+Finaal bekeken we de kansdichtheidsfunctieplots.
 Indien het finale model niet goed paste bij de data (slechte "goodness of fit"), werd dit model opnieuw gefit waarbij de afstanden gegroepeerd werden in intervallen van 50 m.
 
 Densiteitsschattingen werden omgezet naar aantallen per 100 ha.
@@ -1194,7 +1193,7 @@ Hierdoor zien we opnieuw een stijging rond 250 m.
 Wij groepeerden de afstanden per 50 m.
 Hoewel de fit er visueel beter uitzag, waren de densiteitsschattingen en hun onzekerheid quasi identiek aan de eerdere resultaten zonder groepering (resultaten niet getoond).
 De toepasbaarheid van de methodiek zal dus sterk verschillen van soort tot soort.
-Dit zien we bijvoorbeeld ook als we Kneu en Kievit vergelijken (Fig. \@ref(fig:detectiekans-vergelijking)), waarbij deze laatste ook een soort is die meestal op grotere afstanden wordt gezien o.w.v. het gedrag van de soort.
+Dit zien we bijvoorbeeld ook als we Kneu en Kievit vergelijken (Fig. \@ref(fig:detectiekans-vergelijking)), waarbij deze laatste een soort is die meestal op grotere afstanden wordt gezien o.w.v. het gedrag van de soort.
 Dit wil niet zeggen dat we deze resultaten niet kunnen gebruiken.
 Voor probleemgevallen zal de detectiefunctie niet dalen in het begin en de detectiekans zal dicht bij één liggen.
 Dit zorgt ervoor dat de schatting van de densiteit nog altijd kan gebruikt worden als minimumschatting waarbij de gecorrigeerde aantallen zeer dicht tegen de effectief getelde aantallen zullen liggen.
@@ -1246,7 +1245,7 @@ Echter, wij zien hier dat deze methode niet per se lagere resultaten bekomt dan 
 De maxima-methode zal lagere schattingen bekomen als de detectiekans van de soort lager is omdat er dan een sterkere correctie optreedt bij distance sampling die niet zal gebeuren bij de maxima-methode (bijvoorbeeld bij Kneu $\hat{P}_a =$ `r pa_kneu`, Fig. \@ref(fig:densiteit-methodiek-kneu)), maar dit is niet per se het geval voor soorten met een hogere detectiekans (bijvoorbeeld bij Fazant $\hat{P}_a =$ `r pa_fazant`, Fig. \@ref(fig:densiteit-methodiek-fazant)).
 Bovendien wordt er bij distance sampling meer gewicht gegeven aan lage aantallen omdat alle data worden meegenomen in de analyse (gemiddeld aantal per telpunt per jaar via effort $T$) terwijl via de maxima-methode veel lage waardes worden weggefilterd (maximum aantal per telpunt per jaar).
 Het verschil tussen beide methodes zal dus afhankelijk zijn van soort tot soort omwille van een combinatie van de detectiekans en zeldzaamheid van een soort (en mogelijk nog andere factoren die hier niet zijn beschouwd).
-Zoals in de vorige paragraaf vermeld, kan distance sampling ook als een minimumschatting genomen worden bij hoge detectiekansen, maar deze is mogelijks te strikt in vergelijking met de maxima-methode in ecologische context.
+Zoals in de vorige paragraaf vermeld, kan distance sampling als een minimumschatting genomen worden bij hoge detectiekansen, maar deze is mogelijks te strikt in vergelijking met de maxima-methode in ecologische context.
 Als er 3 broedgevallen gezien zijn in telperiodes 1, 2 en 3, maar 0 in periode 4, dan kan dit laatste puur per toeval zijn.
 Het is namelijk niet zo dat een nultelling in bijvoorbeeld de laatste ronde enigszins iets zegt over het aantal broedparen, die kunnen er wel geweest zijn, maar op dat moment stilgevallen (zingen/baltsen gebeurt enkel in de territoriumfase en eileg; als ze met jongen zitten of al uitgevlogen zijn, dan wordt er niet mee/veel minder gezongen).
 Het zou dus logischer zijn om te besluiten dat er in die telcirkel effectief 3 broedgevallen zijn (maxima methode) en niet 2.25 (gemiddelde).
@@ -1270,7 +1269,7 @@ include_graphics(file.path("media", "distance", "per_stratum",
 In **Distance** deden we aan zgn.
 "conventional distance sampling" (CDS) waarbij de afstanden werden gebundeld voor alle ruimtelijke locaties (i.c. telpunten) om de parameter(s) van de detectiefunctie te schatten, bijvoorbeeld voor de half-normale functie.
 Dit werd gebruikt om een schatting van de densiteit te verkrijgen, en vervolgens werd de variantie gebaseerd op de variantie van de "encounter rate", die wel enige informatie uit de telpunten gebruikt.
-Bij CDS wordt er ook van uitgegaan dat dieren uniform worden verdeeld met betrekking tot transecten/telpunten en vereisen dus gerandomiseerde plaatsing van transecten/punten tijdens het steekproefdesign.
+Bij CDS wordt er van uitgegaan dat dieren uniform worden verdeeld met betrekking tot transecten/telpunten en vereisen dus gerandomiseerde plaatsing van transecten/punten tijdens het steekproefdesign.
 Hierbij worden factoren die de abundantie tussen plots beïnvloeden verwaarloosd.
 Het is relevant om te overwegen dat er meer geavanceerde benaderingen en alternatieven beschikbaar zijn voor het verbeteren van onze schattingsmethoden en/of deze te koppelen aan vervolganalyses.
 In plaats van gegevens te bundelen zoals bij CDS, biedt "hierarchical distance sampling" (HDS) een expliciet model voor de variatie van de lokale populatiegrootte $N_i$ (de abundantie voor telpunt $i$).
@@ -1283,17 +1282,16 @@ In beide gevallen biedt het de mogelijkheid om covariaten, zoals landschapskenme
 Het overwegen van dergelijke geavanceerde benaderingen in toekomstig onderzoek kan onze schattingsnauwkeurigheid vergroten en ons begrip van de factoren die de dichtheid van akkervogels beïnvloeden verdiepen.
 Het is echter van belang om de complexiteit van deze methoden te erkennen en zorgvuldig af te wegen of de toegevoegde waarde opweegt tegen de extra inspanningen die nodig zijn voor gegevensverzameling en analyse.
 Enkele alternatieven zijn in dit pilootproject uitgetest zoals de **unmarked** package [@kenneth2023; @unmarked-package] en Stan-modellen met **rstan** [@rstan-package] voor HDS en de **dsm** package voor DSM [@dsm-package].
-In Nederland werden ook reeds verschillende analysetechnieken besproken in kader van het MAS protocol [@roodbergen2011].
+In Nederland werden reeds verschillende analysetechnieken besproken in kader van het MAS protocol [@roodbergen2011].
 Onze bevindingen zijn vooral een aanvulling hierop.
 Het was niet de intentie een uitgebreide revisie hierover te doen, maar wel te bepalen welke haalbare technieken zouden volstaan voor de analyse van de gegevens.
 
 We kunnen concluderen dat het schatten van densiteiten een evenwichtsoefening is tussen het maken van juiste beslissingen in ecologische context en anderzijds het gebruiken van een duidelijk en niet te complexe statistische methode.
-Hierbij konden we ook steunen op het onderzoek dat reeds in Nederland gedaan is m.b.t. het MAS protocol [@roodbergen2011].
+Hierbij konden we steunen op het onderzoek dat reeds in Nederland gedaan is m.b.t. het MAS protocol [@roodbergen2011].
 De ecologische context kan in rekening genomen worden door de data te filteren op broedcode groter dan nul en voor elke soort de telperiodes te selecteren die binnen de broedperiode van elke soort vallen.
 Een extra maatregel zou kunnen zijn om over die telperiodes (per telpunt per jaar) het maximum aantal te nemen als finale dataset voor verdere analyse (met effort = 1 omdat we dan niet meer corrigeren voor het aantal bezoeken, waardoor geen strikte uitmiddeling gebeurt).
-Voor Haas zou het bovendien nuttig zijn de oppervlaktes van de telcirkel te corrigeren voor de oppervlakte die effectief zichtbaar is voor de teller (volgens viewshedanalyse, zie \@ref(aanpassingen-meetnet)), aangezien Haas steeds op de grond zit.
-Distance sampling m.b.v. de **Distance** package bleek een relatief eenvoudige procedure (zowel mathematisch als gebruiksvriendelijkheid) om densiteitsschattingen (incl. onzekerheid) te maken rekening houdend met de detectiekans van een soort.
-We toonden bovendien aan dat we op basis hiervan ook specifieke hypotheses kunnen testen aan de hand van *species change indices* of ter uitbreiding *multi species change indices* waarbij een index zou berekend worden door trends van meerdere soorten te combineren.
+Voor soorten als Patrijs, Haas zou het mogelijk nuttig zijn de oppervlaktes van de telcirkel te corrigeren voor de oppervlakte die effectief zichtbaar is voor de teller (volgens viewshedanalyse, zie \@ref(aanpassingen-meetnet)), aangezien deze soorten zich deze soorten zich laag tegen de grond bevinden Distance sampling m.b.v. de **Distance** package bleek een relatief eenvoudige procedure (zowel mathematisch als gebruiksvriendelijkheid) om densiteitsschattingen (incl. onzekerheid) te maken rekening houdend met de detectiekans van een soort.
+We toonden bovendien aan dat we op basis hiervan specifieke hypotheses kunnen testen aan de hand van *species change indices* of ter uitbreiding *multi species change indices* waarbij een index zou berekend worden door trends van meerdere soorten te combineren.
 We zijn dan ook van mening dat complexere analyses niet nodig zijn.
 Een tweestapsmethodiek lijkt een valabele optie die enerzijds overzichtelijk blijft en de complexiteit (en bijgevolg tijdsinvestering) van de analyses breekt:
 
@@ -1379,7 +1377,7 @@ We rapporteren de posterior mediaan als maat voor het centrale tendens voor de d
 
 Uit de densiteitsschattingen via distance sampling (Sectie \@ref(res-distance-stratum)) over verschillende strata werd reeds duidelijk dat de densiteit broedparen Veldleeuwerik significant groter is binnen het soortenbeschermingsprogramma (SBP).
 Dit vertaalt zich ook op ruimtelijke schaal in de bekomen densiteitskaart waarbij we vooral in het zuiden en het oosten van de Oostelijke leemstreek hogere densiteiten zien (Fig. \@ref(fig:densiteitskaart), vergelijk met Fign \@ref(fig:perimeters-sbp), \@ref(fig:oppervlakte-steekproefkader-stratum)).
-In de gebieden met hogere densiteiten is de onzekerheid ook het grootst.
+In de gebieden met hogere densiteiten is de onzekerheid dan ook het grootst.
 Dit is eigen aan de Poisson verdeling waarbij het gemiddelde en de variantie gelijk zijn.
 De relatieve foutenmarge (halve breedte van het 95 % geloofwaardigheidsinterval gedeeld door de geschatte densiteit (= mediaan)) is onafhankelijk van de gemiddelde schatting en toont een hogere onzekerheid aan de periferie, zoals verwacht (Fig. \@ref(fig:relfout-densiteitskaart)).
 
@@ -1411,7 +1409,7 @@ Hierbij moeten we een methode vinden waarbij we op correcte wijze de onzekerheid
 Een eerste mogelijkheid is om een variogram op te stellen o.b.v. de fitted values om een idee te krijgen van spatiale autocorrelatie.
 Deze info kan dan gebruikt worden om de onzekerheid op clusterniveau te bepalen.
 Een tweede mogelijkheid is om andere methodes en R packages te bekijken die dergelijke berekeningen integraal uitvoeren.
-Ook deze mogelijkheden zullen in een later stadium onderzocht moeten worden.
+Deze mogelijkheden zullen in een later stadium onderzocht moeten worden.
 
 ### Modellering in functie van verklarende variabelen {#beheerovereenkomsten}
 
@@ -1419,7 +1417,7 @@ Ook deze mogelijkheden zullen in een later stadium onderzocht moeten worden.
 
 De resultaten van distance sampling gaven al een beeld van het verschil binnen versus buiten soortenbeschermingsprogramma (SBP).
 We hadden ook een continue variabele die het oppervlakte soortbeschermingsmaatregelen in elke telcirkel aangeeft.
-Deze variabele kan meer informatie kan bevatten waardoor correlatieve analyses in deze context ook interessant konden zijn.
+Deze variabele kan meer informatie kan bevatten waardoor correlatieve analyses in deze context interessant konden zijn.
 Ook kunnen we binnen dit kader relaties met andere variabelen onderzoeken die we in Sectie \@ref(verklarende-variabelen) besproken hebben.
 
 #### Materiaal en methoden modellering
@@ -1688,24 +1686,3 @@ Zo kan een vogel in een bepaald perceel met een bepaalde hoofdteelt worden geobs
 Nu aggregeren we de informatie van al die percelen op telcirkelniveau waarbij we deze informatie koppelen aan die observatie, zonder de exacte locatie van de observatie zelf te bekijken.
 Minder aggregeren betekend meer data waardoor we meer subtiele verbanden kunnen waarnemen.
 Dit moet echter in evenwicht zijn met de complexiteit van de modellen en de tijd die nodig is om deze te fitten.
-
-## Over analyses van de Haas {#analyses-haas}
-
-Het MAS-project beoogt een beter inzicht te verkrijgen in de ecologische toestand van zowel vogels als de Haas in het Vlaamse landbouwgebied.
-Het MAS-protocol is, naast de toepassing op vogelsoorten, ook geschikt gebleken voor de monitoring van zoogdieren, met bijzondere aandacht voor de Haas.
-Hoewel de nadruk in dit rapport hoofdzakelijk ligt op akkervogels, zijn de gehanteerde analysemethoden eveneens toepasbaar op de Haas.
-In deze sectie worden de belangrijkste bevindingen met betrekking tot deze soort toegelicht.
-
-Tijdens het veldwerk wordt door de waarnemers geregistreerd of zij tijdens hun bezoek al dan niet zoogdieren hebben geteld.
-Dit maakt het mogelijk om in de analyses een onderscheid te maken tussen afwezigheid als gevolg van niet zoeken en afwezigheid als gevolg van niet waarnemen.
-Het gebruik van broedcodes, dat relevant is voor vogels, is voor de Haas niet van toepassing.
-
-Analyse van de beschikbare MAS-gegevens van het pilootproject toont aan dat de Haas minder frequent wordt waargenomen tijdens de laatste telperiode.
-Een plausibele verklaring hiervoor is dat de soort in deze periode minder zichtbaar is vanwege de hogere vegetatiestructuur.
-Het verdient dan ook aanbeveling om deze telperiode uit te sluiten van verdere analyses met betrekking tot de haas.
-
-Densiteitsschattingen op basis van *distance sampling* lijken de werkelijke populatiedichtheid van de Haas te onderschatten.
-Dit kan deels worden toegeschreven aan het feit dat de detectiekans van de haas vermoedelijk hoger is bij valavond, wanneer er geen MAS-tellingen plaatsvinden.
-Daarnaast wordt in de analyses aangenomen dat de volledige telcirkel waarneembaar is, terwijl visuele barrières in het landschap (zoals vegetatie en reliëf) in werkelijkheid het zicht kunnen beperken.
-
-Hoewel de gegevens van de Haas op vergelijkbare wijze kunnen worden geanalyseerd als die van akkervogels, is het essentieel om de resultaten met de nodige voorzichtigheid te interpreteren, gezien de specifieke detectieproblemen en ecologische kenmerken van deze soort.
