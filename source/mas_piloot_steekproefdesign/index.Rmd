@@ -134,7 +134,7 @@ We tonen ook aan dat regionale verschillen detecteerbaar zijn met MAS, waarbij b
 De analyses in functie van verklarende variabelen leverde verwachte resultaten op.
 De openheid van het landschap op grotere schaal (1000 m) bleek een significant positief effect te hebben op de Veldleeuwerikpopulatie, terwijl elementen zoals bomen, hagen en bosranden een negatief effect hadden.
 De resultaten wijzen erop dat de meeste geteste analyses kunnen uitgevoerd worden op de MAS data en dat deze nuttige inzichten kunnen leveren in de beoogde doelstellingen.
-Daarbij stellen we vast dat een gebied ter grootte van De Moeren als minimumschaal moet worden gehanteerd (afgerond ten minste 5000 ha) en dat eventuele subgebieden genoeg telpunten bevatten om voldoende statistische power te waarborgen.
+Daarbij stellen we vast dat een gebied ter grootte van De Moeren als minimumschaal moet worden gehanteerd (afgerond ten minste 5000 ha) en dat eventuele subgebieden genoeg telpunten bevatten om voldoende statistische kracht te waarborgen.
 
 Naast vogels werd ook onderzocht in hoeverre het MAS bruikbaar is voor de monitoring van de Haas.
 Andere zoogdieren werden tijdens het pilootproject nauwelijks waargenomen.
