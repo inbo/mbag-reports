@@ -136,9 +136,19 @@ De openheid van het landschap op grotere schaal (1000 m) bleek een significant p
 De resultaten wijzen erop dat de meeste geteste analyses kunnen uitgevoerd worden op de MAS data en dat deze nuttige inzichten kunnen leveren in de beoogde doelstellingen.
 Daarbij stellen we vast dat een gebied ter grootte van De Moeren als minimumschaal moet worden gehanteerd (afgerond ten minste 5000 ha) en dat eventuele subgebieden genoeg telpunten bevatten om voldoende statistische power te waarborgen.
 
+Naast vogels werd ook onderzocht in hoeverre het MAS bruikbaar is voor de monitoring van de Haas.
+Andere zoogdieren werden tijdens het pilootproject nauwelijks waargenomen.
+Voor de Haas bestaan in Vlaanderen momenteel geen andere grootschalige telmethodes, behalve voorjaarstellingen en afschotstatistieken.
+De MAS-gegevens zouden dus een waardevolle aanvulling kunnen bieden.
+Uit de analyses bleek echter dat de Haas in de laatste telperiode minder frequent wordt waargenomen, vermoedelijk door een verminderde zichtbaarheid als gevolg van hogere vegetatie.
+Daarnaast blijken dichtheidsschattingen op basis van *distance sampling* de werkelijke populatiedichtheid te onderschatten, o.a.
+door beperkte zichtbaarheid en het feit dat tellingen niet bij valavond plaatsvinden.
+Absolute populatieschattingen worden daarom als onbetrouwbaar beschouwd.
+Toch maken de gegevens het mogelijk om relatieve trends in tijd op te volgen.
+
 De studie kon beroep doen op een reeds bestaande poule van vrijwilligersgroep die al ervaring had met het uitvoeren van MAS-tellingen.
 In beide pilootgebieden werd deze groep bijna integraal voortgezet en aangevuld met enkele nieuwe vrijwilligers.
-We konden hen overtuigen van waarde van de nieuwe steekproef waarbijzowel bestaande telpunten werden verdergezet als nieuwe telpunten werden opgenomen.
+We konden hen overtuigen van de waarde van de nieuwe steekproef waarbij zowel bestaande telpunten werden verdergezet als nieuwe telpunten werden opgenomen.
 In de Oostelijke leemstreek groeide het aantal vrijwillig getelde punten licht, tot een verhouding van 20 % vrijwilligerspunten.
 De Moeren werd volledig door vrijwilligers geteld, daar werden enkele punten dubbel geteld door een professionele teller, om de vergelijkbaarheid te analyseren.
 Een belangrijke bevinding was dat vrijwilligers significant minder waarnemingen en soorten rapporteerden dan professionele tellers die op dezelfde locatie hertelden.

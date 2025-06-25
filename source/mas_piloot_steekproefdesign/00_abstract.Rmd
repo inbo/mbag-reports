@@ -28,9 +28,18 @@ Explanatory variable analyses produced expected results: landscape openness at a
 Most analytical approaches tested proved feasible for use with MAS data and provided useful ecological insights.
 It was concluded that an area at least the size of “De Moeren” (approximately 5000 ha) is the minimum scale for reliable analysis, and that subareas should contain enough survey points to ensure sufficient statistical power.
 
+In addition to birds, the MAS pilot study also explored the potential of the system to monitor European hare.
+Other mammal species were rarely observed during the pilot study.
+Currently, there are no alternative large-scale monitoring methods for hares in Flanders, except for spring surveys and hunting statistics.
+MAS data could therefore provide a valuable complement.
+However, analyses showed that hares were observed less frequently during the final survey period, likely due to reduced visibility caused by taller vegetation.
+Moreover, density estimates based on distance sampling tend to underestimate true population densities, partly due to limited visibility and the fact that MAS surveys do not take place at dusk, when hare activity peaks.
+As a result, absolute population estimates are considered unreliable.
+Nevertheless, MAS data can still be used to track relative trends over time.
+
 The study benefited from an existing pool of experienced volunteers, who largely continued their involvement in the pilot areas, supplemented by new participants.
 In both pilot areas this group was continued almost entirely and supplemented with a few new volunteers.
-We were able to show them of the value of the new sample, in which both existing counting locations were continued and new locations were included.
+We were able to show them the value of the new sample, in which both existing counting locations were continued and new locations were included.
 In the Eastern Loam Region, the proportion of volunteer-surveyed points grew slightly to about 20 %.
 In “De Moeren”, all surveys were conducted by volunteers, with some sites resurveyed by professionals to assess consistency.
 A key finding was that volunteers consistently reported fewer observations and species than professionals surveying the same sites, regardless of volunteer experience or the use of breeding codes.
