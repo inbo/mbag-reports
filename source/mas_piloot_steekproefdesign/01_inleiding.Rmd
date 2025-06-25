@@ -4,25 +4,28 @@
 
 # Inleiding {#inleiding}
 
-De biodiversiteit in landbouwgebieden staat onder grote druk, ook in Vlaanderen, waar de landbouw vaak zeer intensief en gericht op hoge opbrengsten wordt bedreven.
-Als indicator voor die biodiversiteit worden akkervogels gezien.
-Akkervogels zijn typische soorten die voorkomen in landbouwgebieden, waarbij de meeste van hen tijdens de broedperiode afhankelijk zijn van akkers en/of akkerranden voor nestgelegenheid en voedsel.
-Enkele kritische soorten zijn inmiddels vrijwel verdwenen uit Vlaanderen zoals Ortolaan en Grauwe gors.
-Zelfs vroeger algemeen voorkomende akker- en weidevogelsoorten zoals Veldleeuwerik, Kievit en Patrijs hebben het tegenwoordig moeilijk.
-Om deze redenen krijgt deze groep soorten aandacht in het beleid, bijvoorbeeld via soortenbeschermingsprogramma’s voor akkervogels en weidevogels, en door het invoeren van diverse maatregelen in landbouwgebieden.
+De biodiversiteit in landbouwgebieden staat onder grote druk, ook in Vlaanderen.
+Onze landbouw is vaak zeer intensief en gericht op hoge opbrengsten.
+Akkervogels zijn een goede indicator voor de biodiversiteit in het agrarisch gebied.
+Het zijn typische soorten die voorkomen in landbouwgebieden, waarbij de meeste van hen tijdens de broedperiode afhankelijk zijn van akkers en/of akkerranden voor nestgelegenheid en voedsel.
+Enkele soorten gebonden aan kleinschalige landbouw zijn sinds 2000 als broedvogel uit Vlaanderen verdwenen [@vermeersch2004], zoals Ortolaan en Paapje (op een sporadisch niet-jaarlijks broedgeval na).
+Akker- en weidevogelsoorten, zoals Veldleeuwerik, Grauwe gors, Kievit en Patrijs, die 20 jaar geleden nog algemeen en talrijk voorkwamen hebben het tegenwoordig erg moeilijk; ze zijn sterk in aantal en verspreiding afgenomen.
+Om deze redenen krijgt deze groep soorten beleidsaandacht, bijvoorbeeld via soortenbeschermingsprogramma’s voor akkervogels en weidevogels, en door het invoeren van diverse maatregelen in landbouwgebieden.
 
 De boerenlandvogelindex (farmland bird index, FBI) is een belangrijke indicator, waarbij de gegevens van een set aan broedvogelsoorten gerelateerd aan het agrarisch gebied internationaal opgevolgd worden.
-Deze indicator is ook opgenomen in de Europese natuurherstelverordening en in de Europese Verordening inzake milieu-economische rekeningen van 27 november 2024.
+Deze indicator is ook opgenomen in de Europese Natuurherstelverordening en in de Europese Verordening inzake milieu-economische rekeningen van 27 november 2024.
 Het is ook een Vlaamse Openbare Statistiek (VOS).
 
 Huidige monitoringsprojecten en -initiatieven (zie Hoofdstuk \@ref(historie)) bieden een waardevolle basis, maar volstaan niet om alle monitoringsbehoeften in Vlaanderen volledig te dekken.
-Er is een dringende behoefte aan een verfijnder en betrouwbaarder beeld van de toestand van vogels in het landbouwgebied, inclusief het detecteren van regionale verschillen.
-Zo zijn in het soortenbeschermingsprogramma voor akkervogels [@agentschapvoornatuurenbos2021] concrete strategische doelen bepaald.
+Er is dringend behoefte aan een verfijnder en betrouwbaarder beeld van de toestand van vogels in het landbouwgebied, inclusief van de regionale verschillen.
+Zo zijn in het soortenbeschermingsprogramma voor akkervogels [@agentschapvoornatuurenbos2021] concrete strategische doelen bepaald, waaronder de vereiste grootte van bronpopulaties en streefcijfers voor dichtheden van doelsoorten onder dit programma.
 Volgende broeddensiteiten (aantal broedparen/100 ha) worden vooropgesteld voor een leefgebied met hoge leefgebiedkwaliteit: 12,5 bij Geelgors, 15 bij Veldleeuwerik, 10 bij Grauwe gors en 4 bij Patrijs.
 Om deze aantallen te bepalen en op te volgen ontbrak vooralsnog de data en monitoringsplan.
 Daarnaast is het essentieel om beter inzicht te krijgen in de factoren die trends beïnvloeden en de mate waarin genomen maatregelen daadwerkelijk effect sorteren.
+Ook in de Europese Natuurherstelverordening zijn voor de boerenlandvogelindex concrete, te bereiken doelen vooropgesteld tegen 2030 en 2050.
+Momenteel beschikken we over onvoldoende verklarende inzichten welke kritische succesfactoren voorhanden zijn in Vlaamse context die kunnen helpen om het beleid beter te sturen om die doelen te bereiken.
 
-Om de ecologische toestand van vogels en Haas in het Vlaamse landbouwgebied beter te begrijpen en te monitoren, werd dit project gestart als een pilootinitiatief dat gericht is op het versterken van bestaande monitoringprogramma’s.
+Om de ecologische toestand van vogels en hHaas in het Vlaamse landbouwgebied beter te begrijpen en te monitoren, werd dit project gestart als een pilootinitiatief dat gericht is op het versterken van bestaande monitoringprogramma’s.
 Het doel is om meer gedetailleerde trendgegevens te verkrijgen, inzicht te verwerven in de oorzaken van waargenomen trends en de effectiviteit van zowel bestaande als geplande maatregelen te evalueren.
 
 In dit project wordt een voorstel uitgewerkt om de monitoring in Vlaanderen te versterken, met nadruk op het effectniveau (meso) en de haalbaarheid van opschaling.
@@ -30,3 +33,4 @@ Het afstemmen van methoden en het gebruik van bestaande meetlocaties is cruciaal
 Een grondige voorstudie is daarom noodzakelijk om de beste aanpak te bepalen en de haalbaarheid te verzekeren.
 Het project richt zich op een beperkt aantal belangrijke gebieden waar veel maatregelen worden genomen, om de effectiviteit hiervan te evalueren en toekomstige monitoringsstrategieën te verbeteren.
 Daarnaast wordt onderzocht welke infrastructuur en personele capaciteit nodig zijn, inclusief de inzet van professionele en vrijwillige krachten, om een betrouwbaar en efficiënt monitoringsysteem op te zetten.
+
