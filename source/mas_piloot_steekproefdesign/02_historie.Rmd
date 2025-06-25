@@ -2,52 +2,57 @@
 
 Het langlopend monitoren van de toestand en trend van vogels in landbouwgebied is van groot belang om inzicht te verkrijgen in de impact van landbouwpraktijken op de vogelpopulaties.
 Verschillende initiatieven daarrond zijn al genomen of nog lopend in Vlaanderen.
-De meest relevante projecten zijn de tellingen van “Algemene Broedvogels Vlaanderen” (ABV) [@onkelinx2023a], “Bijzondere Broedvogels Vlaanderen” (BBV) en vogelatlas tellingen.
+De meest relevante projecten zijn de tellingen van ‘Algemene Broedvogels Vlaanderen’ (ABV), ‘Bijzondere Broedvogels Vlaanderen’ (BBV) en vogelatlas tellingen (zie verder).
 Hierbij is het belangrijk om de meerwaarde en de compatibiliteit te beschouwen van deze tellingen tegenover een nieuw op te starten meetnet.
 Dit hoofdstuk richt zich op het afstemmen van het nieuwe meetnet en de plaats ervan binnen lopende meetnetten.
 
 Voor broedvogels vormen de volgende initiatieven de kern:
 
-Het project ‘Algemene Broedvogels Vlaanderen’ (ABV) richt zich op het detecteren van trends onder meer algemene soorten.
+Het ABV-project richt zich op het detecteren van trends van meer algemene soorten [@onkelinx2023a].
 Het meetnet bestaat uit 1200 kilometerhokken verspreid over Vlaanderen en gelegen in diverse landschapstypes.
-De doelstelling is om 900 van deze hokken via punttellingen op te volgen tijdens een driejaarlijkse cyclus (300 per jaar).
+De doelstelling is om minimaal 900 van deze hokken via punttellingen op te volgen tijdens een driejaarlijkse cyclus (300 per jaar).
 De opvolging gebeurt sinds 2007.
-Elk hok wordt drie keer tijdens het broedseizoen geïnventariseerd, waarbij elk van zes telpunten telkens 5 minuten worden geteld.
-De coördinatie ligt bij het INBO, dat ook de analyses en rapportering verzorgt, terwijl Natuurpunt het vrijwilligersnetwerk aanstuurt waarop het meetnet bijna volledig berust voor het uitvoeren van de tellingen.
-Momenteel is de vrijwilligersbijdrage onvoldoende om het doel van 300 hokken per jaar te halen; er wordt gewerkt aan uitbreiding van de inzet.
-Betrouwbare trends kunnen worden afgeleid voor soorten die algemeen voorkomen en verspreid zijn, zoals Veldleeuwerik en Gele Kwikstaart.
+Elk hok wordt drie keer tijdens het broedseizoen geïnventariseerd, waarbij elk van zes telpunten telkens 5 minuten wordt geteld.
+De coördinatie ligt bij het INBO, dat ook de analyses en rapportering verzorgt, terwijl Natuurpunt het vrijwilligersnetwerk aanstuurt.
+De voorbije 3-4 jaren was de vrijwilligersbijdrage onvoldoende om het doel van 300 hokken per jaar te halen.
+O.a.
+het erg intensieve terreinwerk voor de vogelatlas steunde immers grotendeels op dezelfde pool van tellers.
+Nu het telwerk voor die atlas voorbij is, wordt getracht de inzet voor ABV opnieuw aan te wakkeren.
+In 2025 lijken we uit te komen op de beoogde 300 getelde hokken.
+Wetenschappelijk significante trends werden de voorbije jaren berekend voor een 80-tal soorten waaronder Veldleeuwerik en Gele kwikstaart.
 
-Het project ‘Bijzondere Broedvogels Vlaanderen’ (BBV) brengt territoria in kaart.
-Hierdoor zijn de resultaten over het algemeen goed vergelijkbaar tussen gebieden en tussen jaren.
-Deze soorten zijn zo zeldzaam, of komen zo geconcentreerd voor, dat ze jaarlijks in geheel Vlaanderen dienen geïnventariseerd te worden om een wetenschappelijk verantwoorde analyse van de resultaten mogelijk te maken.
-Het project loopt sinds 1994 en de inventarisatie gebeurt jaarlijks.
+Het BBV-project brengt territoria van (zeer) schaarse broedvogels in kaart.
 Het gaat om zeldzame soorten zoals Bruine kiekendief en Grauwe gors.
+Die soorten zijn zo zeldzaam, of komen zo geconcentreerd voor, dat ze jaarlijks in geheel Vlaanderen dienen geïnventariseerd te worden om een wetenschappelijk verantwoorde analyse van de resultaten mogelijk te maken.
+Hierdoor zijn de resultaten over het algemeen goed vergelijkbaar tussen gebieden en tussen jaren.
+Het project loopt sinds 1994 en de inventarisatie gebeurt jaarlijks.
 De volledigheid van de tellingen varieert afhankelijk van de soort, regio, verspreiding, broedgedrag en de beschikbaarheid van tellers.
 Daarnaast wordt sinds 1994 een steekproefmethode gehanteerd, waarbij een beperkt aantal gebieden wordt geteld om de ontwikkeling van zeldzame en minder algemene broedvogels te volgen.
 
-De Vlaamse Vogelatlas 2020-2024 heeft vooral als doel de verspreiding van broed- en wintervogels in kaart te brengen, naast het maken van nieuwe populatieschattingen sinds de vorige atlas (2000-2002).
-Ook hierbij worden punttellingen in geselecteerde km-hokjes uitgevoerd, het zogenaamde ‘gouden grid’.
+De Vlaamse Vogelatlas 2020-2024 heeft vooral als doel de verspreiding van broed- en wintervogels in kaart te brengen, naast het maken van nieuwe populatieschattingen sinds de vorige atlas (2000-2002) [@vermeersch2004].
+Hierbij worden punttellingen in geselecteerde km-hokjes uitgevoerd, het zogenaamde ‘gouden grid’.
 
 De rollen bij deze projecten zijn gelijkaardig verdeeld.
 Het INBO coördineert de rapportering aan regionale, nationale en internationale instanties, terwijl Natuurpunt het vrijwilligersnetwerk organiseert en de steekproefhokken verdeelt.
 
 Eerder waren er al regionale initiatieven die zich richten op akkervogels:
 
-Het ‘Meetnet Agrarische Soorten’ (MAS) werd sinds 2017 opgestart in Vlaanderen binnen het kader van 'Plan Kiekendief' (uitvoering van het soortenbeschermingsprogramma Grauwe kiekendief).
-Tellingen werden voornamelijk door vrijwilligers gedaan in twee gebieden: de Leemstreek en de Moeren.
+Het ‘Meetnet Agrarische Soorten’ (MAS) werd sinds 2017 opgestart in Vlaanderen, binnen het kader van 'Plan Kiekendief' (uitvoering van het soortenbeschermingsprogramma Grauwe kiekendief [@vandegehuchte2015grauwekiekendief]) [@vandewaerde2020].
+Tellingen werden voornamelijk door vrijwilligers gedaan in twee gebieden: de leemstreek en De Moeren.
 Deze tellingen werden geëvalueerd om de voedselbeschikbaarheid voor Grauwe kiekendief te monitoren, in de gebieden waar sterk werd ingezet op maatregelen.
-De voornaamste conclusie was dat, door een beperkte looptijd en een gebrek aan controlepunten, de statistische kracht ontbrak om de effectiviteit van die acties te evalueren.
+De voornaamste conclusie was dat door een beperkte looptijd en een gebrek aan controlepunten de statistische kracht ontbrak om de effectiviteit van die acties te evalueren.
 
-Eerder al werden in De Moeren en zeventien andere PDPO-gebieden gemonitord om de effecten van beheerovereenkomsten te evalueren [@debruyn2019].
+Eerder al werden in De Moeren en zeventien andere PDPO-gebieden gemonitord om de effecten van beheerovereenkomsten te evalueren (De Bruyn et al., 2019).
 Tussen 2010 en 2018 werd dit uitgevoerd om de effectiviteit van beheerovereenkomsten voor akker- en weidevogels te evalueren.
 Er werden territoriumkarteringen en wintertellingen gebruikt, uitgevoerd door het INBO.
-Hierbij werd ook geconcludeerd dat voor de relevante soorten geen duidelijke trend kon worden vastgesteld.
+Hierbij werd geconcludeerd dat voor de relevante soorten geen duidelijke trend kon worden vastgesteld.
 
 Het Partridge-project, volgde sinds 2016 broed- en overwinteringsvogels in vier gebieden [@petersen2023].
 In twee demogebieden werden maatregelen genomen, vooral gericht op Patrijs, en werd hun effectiviteit en het broedsucces onderzocht via traject- en territoriumtellingen.
 Ook wintertellingen volgens de MAS-methodiek maakten deel uit van het project.
 Dit alles werd door INBO-medewerkers uitgevoerd en liep tot 2023.
 
-Het onderzoek naar beheerovereenkomsten voor akkervogels is uitgevoerd door UHasselt tussen 2018 en 2021 met PDPO middelen.
+Het onderzoek naar beheerovereenkomsten voor akkervogels is uitgevoerd door UHasselt tussen 2018 en 2021 met PDPO middelen [@evens2022].
 In gebieden met hoge dekking wordt naast MAS-tellingen ook dieper ingegaan op ruimtegebruik (met GPS-loggers), broedsucces en voedselbeschikbaarheid (bijvoorbeeld insectenmonitoring).
+
 Deze projecten streven niet alleen naar het volgen van lokale trends, maar ook naar het koppelen van de resultaten aan beheermaatregelen, zodat deze op een evidence-based manier kunnen worden bijgestuurd voor betere resultaten.
