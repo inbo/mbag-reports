@@ -192,9 +192,11 @@ Dit kan worden toegeschreven aan het feit dat de Haas actiever is bij valavond e
 Dit wordt ondersteund door het onderzoek van @bedson2021estimating, die drie telmethodes vergeleken om populaties van de Sneeuwhaas (*Lepus timidus*) te schatten via *distance sampling*: visuele dagsurveys, nachtelijke thermografie en cameravallen.
 De auteurs concluderen dat dagsurveys de werkelijke populatiegrootte onderschatten doordat ze de nachtelijke activiteit niet capteren, en dus slechts een beperkt beeld geven van de soort.
 Daarnaast wordt in onze analyses aangenomen dat de volledige telcirkel waarneembaar is, terwijl visuele barrières in het landschap (zoals vegetatie en reliëf) in werkelijkheid het zicht kunnen beperken en de werkelijk getelde oppervlakte dus kleiner is.
-*Distance sampling* zal dus wel gedeeltelijk corrigeren voor de detectiekans, maar het is onvoldoende om de beperkingen van de MAS-telling op te vangen.
+Het zou daarom nuttig zijn om te corrigeren voor de oppervlakte van de telcirkel die effectief zichtbaar is voor de teller.
+Echter, *distance sampling* zal nog steeds maar gedeeltelijk corrigeren via de detectiekans, wat onvoldoende is om de beperkingen van de MAS-telling op te vangen.
 Dit versterkt de systematische onderschatting van de populatiegrootte.
 
 Hoewel de gegevens van de Haas op vergelijkbare wijze kunnen worden geanalyseerd als die van akkervogels, is het essentieel om de resultaten met de nodige voorzichtigheid te interpreteren, gezien de specifieke detectieproblemen en ecologische kenmerken van deze soort.
 We besluiten daarom dat de MAS-gegevens voor de Haas niet gebruikt mogen worden om densiteiten of populatiegroottes in te schatten.
 Wel bieden de gegevens potentieel om relatieve populatietrends in tijd op te volgen.
+
