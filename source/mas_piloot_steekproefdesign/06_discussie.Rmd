@@ -178,16 +178,23 @@ In deze sectie worden de belangrijkste bevindingen met betrekking tot de Haas to
 Voor Haas is er in Vlaanderen voorlopig geen alternatieve telmethode buiten de voorjaarstellingen en afschotgegevens van de jagers.
 De vraag is dus of het MAS hier een nuttige bijdrage aan kan leveren.
 
+Voor Haas is er in Vlaanderen geen gebiedsdekkend monitoringsprogramma buiten de voorjaarstellingen en de afschotgegevens van de wildbeheereenheden [@scheppers2008; @scheppers2025].
+Hoewel er voor Haas gestandaardiseerde telmethoden beschikbaar zijn [bv. @huysentruyt2016; @petersen2023hare], is er geen gestandaardiseerd telprotocol vastgelegd voor het uitvoeren van de tellingen van de wildbeheereenheden.
+Door het ontbreken van een standaardmethode is de accuraatheid en de precisie van de schatting van de voorjaarsstand ongekend, hetgeen de bruikbaarheid van deze gegevens voor het opvolgen van de Vlaamse trend in de voorjaarsstand bemoeilijkt [@scheppers2008].
+De vraag is dus of het MAS een alternatieve trendbepaling in de voorjaarsstand op Vlaams niveau kan aanleveren.
+
 Analyse van de beschikbare MAS-gegevens van het pilootproject toont aan dat de Haas minder frequent wordt waargenomen tijdens de vierde (laatste) telperiode.
 Een plausibele verklaring hiervoor is dat de soort in deze periode minder zichtbaar is vanwege de hogere vegetatiestructuur.
 Het verdient dan ook aanbeveling om deze periode uit te sluiten van verdere analyses met betrekking tot de Haas.
 
-Densiteitsschattingen op basis van *distance sampling* zullen de werkelijke populatiedichtheid van de Haas onderschatten.
-Dit kan enerzijds worden toegeschreven aan het feit dat de Haas actiever is bij valavond, wanneer er geen MAS-tellingen plaatsvinden.
-Daarnaast wordt in de analyses aangenomen dat de volledige telcirkel waarneembaar is, terwijl visuele barrières in het landschap (zoals vegetatie en reliëf) in werkelijkheid het zicht kunnen beperken.
-*Distance sampling* zal dus wel gedeeltelijk corrigeren voor de detectiekans, maar het is onvoldoende om alle beperkingen op te vangen.
-Dit leidt tot een systematische onderschatting van de populatiegrootte.
+Densiteitsschattingen op basis van *distance sampling* uitgevoerd gedurende de dag zullen de werkelijke populatiedichtheid van de Haas onderschatten.
+Dit kan worden toegeschreven aan het feit dat de Haas actiever is bij valavond en ‘s nachts [@homolka1986daily; @holley2001daily; @pepin1994studies], wanneer er geen MAS-tellingen plaatsvinden.
+Dit wordt ondersteund door het onderzoek van @bedson2021estimating, die drie telmethodes vergeleken om populaties van de Sneeuwhaas (*Lepus timidus*) te schatten via *distance sampling*: visuele dagsurveys, nachtelijke thermografie en cameravallen.
+De auteurs concluderen dat dagsurveys de werkelijke populatiegrootte onderschatten doordat ze de nachtelijke activiteit niet capteren, en dus slechts een beperkt beeld geven van de soort.
+Daarnaast wordt in onze analyses aangenomen dat de volledige telcirkel waarneembaar is, terwijl visuele barrières in het landschap (zoals vegetatie en reliëf) in werkelijkheid het zicht kunnen beperken en de werkelijk getelde oppervlakte dus kleiner is.
+*Distance sampling* zal dus wel gedeeltelijk corrigeren voor de detectiekans, maar het is onvoldoende om de beperkingen van de MAS-telling op te vangen.
+Dit versterkt de systematische onderschatting van de populatiegrootte.
 
 Hoewel de gegevens van de Haas op vergelijkbare wijze kunnen worden geanalyseerd als die van akkervogels, is het essentieel om de resultaten met de nodige voorzichtigheid te interpreteren, gezien de specifieke detectieproblemen en ecologische kenmerken van deze soort.
 We besluiten daarom dat de MAS-gegevens voor de Haas niet gebruikt mogen worden om densiteiten of populatiegroottes in te schatten.
-Wel bieden de gegevens potentieel om relatieve trends in tijd op te volgen.
+Wel bieden de gegevens potentieel om relatieve populatietrends in tijd op te volgen.
