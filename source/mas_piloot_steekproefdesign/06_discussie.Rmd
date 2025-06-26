@@ -183,7 +183,7 @@ Een plausibele verklaring hiervoor is dat de soort in deze periode minder zichtb
 Het verdient dan ook aanbeveling om deze periode uit te sluiten van verdere analyses met betrekking tot de Haas.
 
 Densiteitsschattingen op basis van *distance sampling* zullen de werkelijke populatiedichtheid van de Haas onderschatten.
-Dit kan enerzijds worden toegeschreven aan het feit dat de Haas vermoedelijk actiever is bij valavond, wanneer er geen MAS-tellingen plaatsvinden.
+Dit kan enerzijds worden toegeschreven aan het feit dat de Haas actiever is bij valavond, wanneer er geen MAS-tellingen plaatsvinden.
 Daarnaast wordt in de analyses aangenomen dat de volledige telcirkel waarneembaar is, terwijl visuele barrières in het landschap (zoals vegetatie en reliëf) in werkelijkheid het zicht kunnen beperken.
 *Distance sampling* zal dus wel gedeeltelijk corrigeren voor de detectiekans, maar het is onvoldoende om alle beperkingen op te vangen.
 Dit leidt tot een systematische onderschatting van de populatiegrootte.
@@ -191,4 +191,3 @@ Dit leidt tot een systematische onderschatting van de populatiegrootte.
 Hoewel de gegevens van de Haas op vergelijkbare wijze kunnen worden geanalyseerd als die van akkervogels, is het essentieel om de resultaten met de nodige voorzichtigheid te interpreteren, gezien de specifieke detectieproblemen en ecologische kenmerken van deze soort.
 We besluiten daarom dat de MAS-gegevens voor de Haas niet gebruikt mogen worden om densiteiten of populatiegroottes in te schatten.
 Wel bieden de gegevens potentieel om relatieve trends in tijd op te volgen.
-
