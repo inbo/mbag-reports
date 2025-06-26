@@ -82,7 +82,7 @@ Deze groep vrijwilligers is langzaam maar zeker gegroeid, en kon verder betrokke
 
 De aanbeveling in het soortenbeschermingsprogramma akkervogels stelde de noodzaak van monitoring terecht aan de kaak.
 We willen hierbij iedereen bedanken die aan het opmaken van dit programma heeft meegewerkt.
-De goedkeuring van het SBP akkervogels in december 2021 gaf aanleiding tot het opstarten van \textcolor{red}{...}
+De goedkeuring van het SBP akkervogels in december 2021 gaf aanleiding tot het opstarten van deze samenwerkingsovereenkomst.
 
 Veel ervaring en kennis haalden we bij onze noorderburen, waar de gekozen methodiek zijn oorsprong kent.
 De samenwerking met onze Nederlandse collega’s van zowel Kenniscentrum akkervogels Grauwe Kiekendief als SOVON verliep heel joviaal.
@@ -93,7 +93,7 @@ Zij zijn allen sleutelfiguren geweest om deze pilootstudie tot stand te brengen.
 We danken ook Dirk Zoetebier en Bernice Goffin graag met naam voor de effectieve uitrol ervan.
 
 Uiteraard willen we alle leden van de stuurgroep en collega’s die hebben meegewerkt, of advies hebben gegeven voor de opbouwende kritiek en bijsturing.
-We bedanken Peter Van Gossum en Jef Melckebeke voor het integraal en kritisch nalezen van het eindrapport.
+We bedanken in het bijzonder Peter Van Gossum en Jef Melckebeke voor het integraal en kritisch nalezen van het eindrapport.
 
 Tot slot bedanken we u als lezer, voor uw interesse in dit rapport, dat hopelijk verklarend en inspirerend kan werken.
 
@@ -138,13 +138,13 @@ Daarbij stellen we vast dat een gebied ter grootte van De Moeren als minimumscha
 
 Naast vogels werd ook onderzocht in hoeverre het MAS bruikbaar is voor de monitoring van de Haas.
 Andere zoogdieren werden tijdens het pilootproject nauwelijks waargenomen.
-Voor de Haas bestaan in Vlaanderen momenteel geen andere grootschalige telmethodes, behalve voorjaarstellingen en afschotstatistieken.
+Voor de Haas bestaan in Vlaanderen momenteel geen andere gebiedsdekkende monitoringsprogramma’s naast de voorjaarstellingen en afschotgegevens van de wildbeheereenheden.
 De MAS-gegevens zouden dus een waardevolle aanvulling kunnen bieden.
 Uit de analyses bleek echter dat de Haas in de laatste telperiode minder frequent wordt waargenomen, vermoedelijk door een verminderde zichtbaarheid als gevolg van hogere vegetatie.
 Daarnaast blijken dichtheidsschattingen op basis van *distance sampling* de werkelijke populatiedichtheid te onderschatten, o.a.
-door beperkte zichtbaarheid en het feit dat tellingen niet bij valavond plaatsvinden.
+door beperkte zichtbaarheid en het feit dat tellingen niet bij valavond of nacht plaatsvinden.
 Absolute populatieschattingen worden daarom als onbetrouwbaar beschouwd.
-Toch maken de gegevens het mogelijk om relatieve trends in tijd op te volgen.
+Toch maken de gegevens het mogelijk om relatieve trends in de tijd op te volgen.
 
 De studie kon beroep doen op een reeds bestaande poule van vrijwilligersgroep die al ervaring had met het uitvoeren van MAS-tellingen.
 In beide pilootgebieden werd deze groep bijna integraal voortgezet en aangevuld met enkele nieuwe vrijwilligers.
