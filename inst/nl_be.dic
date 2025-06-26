@@ -71,6 +71,7 @@ KLA
 KLE
 KML
 Kiekendief'
+Lepus
 MAS-data
 MAS-gegevens
 MAS-meetnet
@@ -79,6 +80,7 @@ MAS-netwerk
 MAS-pilootstudie
 MAS-project
 MAS-protocol
+MAS-telling
 MAS-tellingen
 MAS-telprotocol
 MAS-uitbreiding
@@ -204,6 +206,7 @@ covariaten
 credible
 cross-validation
 cumulative
+dagsurveys
 data/processed
 decompositieparameter
 dens
@@ -414,6 +417,7 @@ territoriumtellingen
 thin
 thinning
 tidybayes
+timidus
 toestand-
 toestandschattingen
 topographic
@@ -442,6 +446,7 @@ viewshed
 viewshedanalyse
 vigueur
 visibility
+voorjaarsstand
 voorjaarstellingen
 voorteelt
 voorteelten
