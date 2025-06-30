@@ -2,12 +2,14 @@
 
 # English abstract {.unnumbered}
 
-This report describes the development and implementation of the "Meetnet Agrarische Soorten" (MAS) in Flanders.
+This report outlines the development of the “Meetnet Agrarische Soorten” (MAS) pilot in two regions, as a stepping stone toward full-scale implementation across Flanders.
 The primary goal of MAS is to provide a more refined and reliable understanding of the state of farmland birds, including regional differences, and to gain insights into the causes of observed trends and the effectiveness of conservation measures.
 This is essential, as biodiversity in Flemish agricultural areas is under significant pressure, particularly due to intensive farming practices.
 Farmland birds, which are key indicator species, are generally in decline.
 Although the Farmland Bird Index is a key indicator in European and Flemish regulations, existing monitoring efforts do not fully meet all data needs in Flanders.
-There is a pressing need for more detailed trend data and for improved insight into the effectiveness of conservation measures.
+Historical and ongoing initiatives offer valuable lessons and serve as a foundation for future work.
+While the broader status of farmland birds can be followed through the general breeding bird monitoring network (ABV), it does not allow evaluation of policy effectiveness.
+There is therefore a pressing need for more detailed trend data and a better understanding of the effects of conservation actions — a need that MAS is well placed to address.
 
 The MAS pilot study (2022-2023) focused on bridging policy-level monitoring (macro-level) and management-level monitoring (meso-level).
 It built upon previous MAS surveys conducted since 2017 within the framework of 'Plan Kiekendief' (Harrier Plan).
@@ -15,20 +17,21 @@ The two pilot areas were the Eastern Loam Region ("Oostelijke leemstreek") and "
 The sampling framework was defined by intersecting the agricultural regions of Belgium with the outline of Flanders.
 Non-agricultural land uses (e.g., parks, residential areas, military zones, industrial sites, cemeteries) were excluded using OpenStreetMap data to ensure a focus on agricultural land.
 Survey points were placed along public roads and paths, and in De Moeren also along waterways.
-The VITO 2019 land use map was used to ensure sufficient agricultural land cover around the points (at least 40 % arable and grassland, and at least 50 % when including additional land uses within a 300 m radius).
-Stratification was based on Species Protection Programme (SBP) areas (inside vs. outside SBP zones) and landscape openness (open vs. semi-open landscapes).
+The VITO 2019 land use map was used to ensure sufficient agricultural coverage at each point.
+Each study area was divided into four strata, based on whether it fell inside or outside a Species Protection Programme (SBP) area and whether it was an open or semi-open landscape.
 A spatially balanced and stratified sampling approach ensured representative coverage of landscape elements.
 Both volunteers and professional surveyors contributed to the fieldwork, with volunteers playing a key role in ensuring cost-efficiency.
 
-The MAS data analysis provided valuable insights, particularly through a case study of the Skylark (“Veldleeuwerik”), a species with sufficient data for testing multiple statistical methods: (1) density estimates corrected for detectability (distance sampling), (2) spatial models, and (3) models using explanatory variables.
+The MAS data analysis provided valuable insights, particularly through a case study of the Eurasian skylark (*Alauda arvensis*), a species with sufficient data for testing multiple statistical methods: (1) density estimates corrected for detectability (distance sampling), (2) spatial models, and (3) models using explanatory variables.
 The analyses showed that Skylark density was higher inside SBP areas compared to outside, though this is a correlational finding, not causal, as SBP areas were often already favourable for farmland birds prior to targeted conservation efforts.
 The results confirmed the relevance of the current delineation of SBP areas, which continue to host the highest Skylark densities.
 Regional differences were detectable: for example, within SBP zones, the Eastern Loam Region had about three times more Skylark breeding pairs per 100 hectares than De Moeren.
 Explanatory variable analyses produced expected results: landscape openness at a larger scale (1000 m radius) had a significant positive effect on Skylark abundance, while trees, hedges, and forest edges had negative effects.
 Most analytical approaches tested proved feasible for use with MAS data and provided useful ecological insights.
-It was concluded that an area at least the size of “De Moeren” (approximately 5000 ha) is the minimum scale for reliable analysis, and that subareas should contain enough survey points to ensure sufficient statistical power.
+The analyses demonstrated that MAS data are suitable for evaluating policy effectiveness and for understanding drivers of population trends.
+A minimum study area of about 5000 ha (roughly the size of De Moeren) is recommended, with sufficient survey points within subareas to ensure enough statistical power.
 
-In addition to birds, the MAS pilot study also explored the potential of the system to monitor European hare.
+In addition to birds, the MAS pilot study also explored the potential of the system to monitor European hare (*Lepus europaeus*).
 Other mammal species were rarely observed during the pilot study.
 Currently, there are no alternative large-scale monitoring methods for hares in Flanders, except for spring surveys and hunting statistics.
 MAS data could therefore provide a valuable complement.
@@ -48,9 +51,6 @@ This underscores the importance of continuous volunteer training, support, and c
 The report makes several recommendations for the future of MAS.
 The current sampling design is suitable for monitoring densities, regional differences, and the identification of core farmland bird areas.
 Long-term monitoring (minimum five years) is essential to detect meaningful trends and evaluate conservation effectiveness.
-A combination of policy and management monitoring is recommended, with annual management monitoring enabling timely interventions.
-The continuity of conservation measures is vital for sustainable integration into the landscape, both for the quality of the habitat for farmland birds and for research.
-
 The MAS network was gradually expanded across all agricultural regions in Flanders based on this pilot study, building on the lessons learned regarding location choice and visibility.
 New adjustments include stricter exclusion criteria for certain land uses and improved calculations of visibility from the counting location (cumulative visibility index).
 The study applies a Before-After Control-Impact (BACI) design, which is critical for robustly assessing the impact of conservation measures by comparing intervention areas to control sites.
