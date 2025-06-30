@@ -30,7 +30,7 @@ De volledigheid van de tellingen varieert afhankelijk van de soort, regio, versp
 Daarnaast wordt sinds 1994 een steekproefmethode gehanteerd, waarbij een beperkt aantal gebieden wordt geteld om de ontwikkeling van zeldzame en minder algemene broedvogels te volgen.
 
 De Vlaamse Vogelatlas 2020-2024 heeft vooral als doel de verspreiding van broed- en wintervogels in kaart te brengen, naast het maken van nieuwe populatieschattingen sinds de vorige atlas (2000-2002) [@vermeersch2004].
-Hierbij worden punttellingen in geselecteerde km-hokjes uitgevoerd, het zogenaamde ‘gouden grid’.
+Hierbij worden punttellingen in geselecteerde km-hokken uitgevoerd, het zogenaamde ‘gouden grid’.
 
 De rollen bij deze projecten zijn gelijkaardig verdeeld.
 Het INBO coördineert de rapportering aan regionale, nationale en internationale instanties, terwijl Natuurpunt het vrijwilligersnetwerk organiseert en de steekproefhokken verdeelt.
@@ -42,7 +42,7 @@ Tellingen werden voornamelijk door vrijwilligers gedaan in twee gebieden: de lee
 Deze tellingen werden geëvalueerd om de voedselbeschikbaarheid voor Grauwe kiekendief te monitoren, in de gebieden waar sterk werd ingezet op maatregelen.
 De voornaamste conclusie was dat door een beperkte looptijd en een gebrek aan controlepunten de statistische kracht ontbrak om de effectiviteit van die acties te evalueren.
 
-Eerder al werden in De Moeren en zeventien andere PDPO-gebieden gemonitord om de effecten van beheerovereenkomsten te evalueren (De Bruyn et al., 2019).
+Eerder al werden in De Moeren en zeventien andere PDPO-gebieden gemonitord om de effecten van beheerovereenkomsten te evalueren [@debruyn2019].
 Tussen 2010 en 2018 werd dit uitgevoerd om de effectiviteit van beheerovereenkomsten voor akker- en weidevogels te evalueren.
 Er werden territoriumkarteringen en wintertellingen gebruikt, uitgevoerd door het INBO.
 Hierbij werd geconcludeerd dat voor de relevante soorten geen duidelijke trend kon worden vastgesteld.
