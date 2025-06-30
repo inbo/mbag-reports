@@ -177,50 +177,7 @@ Tijdens het broedseizoen is de inzet van tijdelijke werknemers, jobstudenten en 
 
 # Aanbevelingen voor beheer en/of beleid {.unnumbered}
 
-Historische en lopende monitoringprojecten en -initiatieven (zie hoofdstuk 2) bleken een waardevolle referentie van geleerde lessen en enkele langlopende monitoringsprojecten beschouwen we als basis om aanvullend op verder te werken.
-Deze volstaan actueel echter niet om alle monitoringsbehoeften in Vlaanderen te dekken.
-Er is een behoefte aan een verfijnder en betrouwbaarder beeld van de toestand van vogels in het landbouwgebied, inclusief het detecteren van regionale verschillen.
-Die toestand moet langdurig gemonitord worden, om de effectiviteit van het beleid te kunnen evalueren.
-Best wordt ervoor gekozen om een combinatie van beleid- en beheermonitoring verder te zetten, met de nadruk op een jaarlijkse beheermonitoring, om nauwgezet bijsturing mogelijk te maken.
-Men kon tot dusver niet aantonen wat er nodig is om akkervogelpopulaties te laten herstellen.
-Recepten werden opgesteld als een combinatie van acties (zoals bv. nestbescherming) en maatregelen (waaronder beheerovereenkomsten, ecoregelingen maar ook maai- en onderhoudsbeheer).
-Maar vooralsnog hebben die recepten de Vlaamse landbouwvogeltrend nog niet positief gemaakt.
-Om verklaringen te vinden moet daarom meer in detail, op beheer- en perceelsniveau, onderzocht worden waar recepten succesvol zijn en welke factoren daarbij bepalend zijn.
-
-Ook voor de inzet van maatregelen bevelen we aan om te zorgen voor continuïteit, door maatregelen op lange termijn en met vergelijkbare voorwaarden verder te zetten.
-Dat werkt tevens een duurzame verankering in het landschap en op bedrijfsniveau in de hand.
-Het zal niet enkel het onderzoek en de evaluatie vergemakkelijken, maar het is ook gunstig (en gewenst) voor de akkervogels en voor de landbouwers die hieraan meewerken.
-
-# Leeswijzer {.unnumbered}
-
-De inleiding gaat dieper in op de biodiversiteit in landbouwgebieden en het belang van akkervogels als indicator.
-De boerenlandvogelindex (farmland bird index, FBI) wordt in dit hoofdstuk genoemd als een belangrijke indicator.
-Huidige monitoringsprojecten en -initiatieven worden als waardevolle basis gezien, maar er is een behoefte aan meer gedetailleerde trendgegevens en inzicht in de oorzaken van trends en de effectiviteit van maatregelen.
-
-Hoofdstuk \@ref(historie) bespreekt de historie en lopende vogelmeetnetten in Vlaanderen, waaronder Algemene Broedvogels Vlaanderen (ABV), Bijzondere Broedvogels Vlaanderen (BBV), de Vlaamse Vogelatlas, en het Meetnet Agrarische Soorten (MAS).
-Regionale initiatieven zoals PDPO-monitoring en het Partridge-project worden ook besproken.
-
-Hoofdstuk \@ref(pilootgegevens) gaat in op het ontwerp van de inzameling van pilootgegevens in 2022-2023.
-Er wordt een informatiebehoefte-analyse uitgevoerd, waarbij monitoringsnoden op drie schaalniveaus worden gedefinieerd: beleidsmonitoring (macroniveau), beheermonitoring (mesoniveau) en aanvullend verklarend onderzoek (microniveau).
-Het plan van aanpak richt zich op het raakvlak tussen macro- en mesoschaalniveau voor soorten die via het MAS-telprotocol kunnen worden opgevolgd.
-De steekproeftrekking, stratificatie, steekproefgrootte, allocatie en overlap met bestaande telpunten worden gedetailleerd beschreven.
-
-Hoofdstuk \@ref(analyse-gegevens) analyseert de beschikbare MAS-gegevens, inclusief data exploratie, broedcodes, relatieve frequenties, zoogdieren, en een vergelijking van gepaarde tellingen tussen vrijwilligers en professionele tellers.
-Ook worden de berekende verklarende variabelen besproken, zoals oppervlakte-aandelen van soortbeschermingsmaatregelen en hoofdteelten, openheid van het landschap, en de aanwezigheid van predatoren.
-
-Daarna beschrijven we in Hoofdstuk \@ref(ontwerp-meetnet) het ontwerp van een meetnet voor heel Vlaanderen, met de lessen die we uit deze pilootstudie hebben geleerd.
-De aanpassingen die nodig zijn om een steekproef te nemen in andere landbouwgebieden worden opgelijst.
-We verzamelen tips om een vrijwilligerswerking uit te bouwen.
-
-In de discussie gaan we dieper in op de voor- en nadelen van de gekozen MAS-methodiek.
-De afwegingen van het werken met vrijwilligers komt aan bod.
-We beargumenteren ook het potentieel van deze methode voor zowel beleid- als beheermonitoring.
-
-We concluderen dat deze opzet voor een meetnet geschikt is voor de noden die we vooropgesteld hebben.
-Deze steekproef kan inzicht geven in densiteiten, regionale verschillen en afbakening van kerngebieden voor akkervogels.
-Dit hebben we kunnen illustreren voor de Veldleeuwerik, één van de soorten die opgenomen is in de boerenlandvogelindex en een doelsoort van het soortbeschermingsplan akkervogels.
-Het potentieel is aangetoond om, mits verderzetting van meerdere jaren, trends te kunnen detecteren voor doelsoorten.
-Mits de densiteit aan meetpunten hoog genoeg ligt, kunnen effecten op landschapsschaal gemeten worden
+\textcolor{red}{...}
 
 ```{r setup, include = FALSE}
 library(knitr)

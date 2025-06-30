@@ -38,7 +38,7 @@ We vonden geen bewijs dat dit verschil anders was tussen data met broedcode 0 en
 We moeten onderkennen dat dit slechts een beperkte analyse was en deze resultaten niet indicatief zijn voor het volledige pilootproject.
 In De Moeren werden tien telpunten in vier telperiodes en één telpunt in drie telperiodes van zeven vrijwilligers dubbelgeteld door een professionele teller.
 Dit neemt niet weg dat deze resultaten een nuttige indicatie zijn en aantonen dat er moet blijven worden ingezet op doorlopende enthousiasmering en training van vrijwilligers bijvoorbeeld via gezamenlijke excursies en studiedagen.
-Dit wordt verder besproken in Sectie \@ref(vrijwilligers-mbag) \textcolor{red}{zie ook de tijdlijn Fig. ...)}.
+Dit wordt verder besproken in Sectie \@ref(vrijwilligers-mbag).
 
 Wanneer we de data meer in detail gingen analyseren, bleek duidelijk dat deze pilootstudie een rijke bron van data is.
 Enkele analysemogelijkheden werden in het vorige hoofdstuk geduid via een case studie voor de Veldleeuwerik (\@ref(veldleeuwerik)).
@@ -166,7 +166,10 @@ include_graphics(file.path("media", "visibility",
 ```
 
 5.  Binnen of buiten gebieden met soortenbeschermingsprogramma\
-    We breiden soortenbeschermingsprogrammagebieden uit.
+    Enkel het soortenbeschermingsprogrammagebied voor akkervogels gebruiken bleek te beperkt, want ook in gelijkaardige landbouwgerelateerde SBP’s wordt actief ingezet op gelijkaardige maatregelen als voor akkervogels.
+    Die werden door de VLM gebundeld tot de zogenoemde beheergebieden.
+    In die SBP-gebieden werd bijvoorbeeld een aanzienlijk areaal aan beheerovereenkomsten gesloten, die een effect kunnen hebben op akkervogels.
+    Daarom verruimen we het stratum “binnen SBP” met alle landbouwgerelateerde soortenbeschermingsprogrammagebieden.
     We nemen kerngebieden en zoekzones samen als onderzoeksgebied en alles hierbuiten beschouwen we als controle.
     Voor het nieuwe SBP gebied combineren we meerdere SBP lagen:
 
@@ -243,15 +246,31 @@ Dit zal zorgen dat deze bestanden nog beter traceerbaar zijn en het volledige me
 
 ## Vrijwilligerswerking {#vrijwilligers-mbag}
 
-Het verzekeren van voldoende vrijwilligers bij vogelmonitoringsprojecten blijkt de laatste jaren niet evident.
-Zo loopt het aantal vrijwilligers die deelnemen aan ABV gestaag terug, waardoor het beoogde aantal hokken niet gehaald wordt puur op vrijwillige basis.
-Ook de inbreng van vrijwilligers in het veldwerk voor de nieuwe vogelatlas, daar bleven nog gaten oningevuld bij gebrek aan vrijwilligers.
-Het spreekt voor zich dat we daarmee rekening moeten houden voor de verderzetting van MAS-tellingen met ervaren vrijwilligers, alsook voor de uitrol van een nieuw meetnet naar nieuwe regio’s.
-Uit de ervaring opgedaan tijdens het piloot project bleek dat vrijwilligers via de tellingen een bijdrage willen leveren aan de bescherming van akkervogels, en daar voldoende \textcolor{red}{...} Ook bleek dat groepsgevoel, gezamenlijke activiteiten (regionaal) en communicatie van groot belang is.
-Daarbij werd voorzien in het jaarlijks opfrissen van de methodiek, het bespreken van broedcodes, identificatie van soorten op zicht en op geluid, zowel als webinar als in het veld tijdens trainingsdagen.
-Het lijkt ook een meerwaarde te zijn als de vrijwilligers jaarrond met het thema geactiveerd blijven, waarbij vrijwilligersorganisaties ook buiten het broedseizoen activiteiten en tellingen voorzien in het buitengebied.
-Sprekende voorbeelden daarvan zijn het opzetten van slaapplaatstellingen van kiekendieven, seizoensbijeenkomsten met informatiedoorstroom van analyses, excursies rond het thema wintervoedsel.
-Op die manier zijn we er in geslaagd om continuïteit te voorzien van vaste tellers, die jaarlijks opnieuw willen deelnemen, alsook een lichte groei aan nieuwe vrijwilligers die telpunten opnemen.
-Bij een uitrol in nieuwe regio’s is het onrealistisch om meteen van het ene jaar op het andere jaar te verwachten dat een aanzienlijk aandeel telpunten meteen wordt opgenomen door lokale vrijwilligers.
-Het garanderen dat alle punten van de steekproef geteld geraken, vooral in nieuwe en controlegebieden, is enkel mogelijk bij een aanzienlijk professionele ondersteuning van vrijwilligers (waarbij gewerkt kan worden aan communicatie, training en opvolging) alsook van betaalde krachten die telpunten tellen.
+De hobby om vogels te kijken is waarschijnlijk nog nooit zo populair geweest.
+Het aantal mensen die vogels kijkt en/of fotografeert groeit, ook in Vlaanderen, als we het aantal vogelwaarnemers in waarnemingen.be (<https://waarnemingen.be/>) als referentie gebruiken.
+De stap voor deze burgerwetenschappers om mee te helpen met een monitoring of telproject is groot, en gaat niet vanzelf.
+Het tellen van vogels (en zoogdieren) volgens een protocol vergt een goede kennis van de identificatie van de soorten, zowel op zicht als op geluid, alsook een motivatie om volgens de voorschriften tijdig en secuur de telpunten te bezoeken.
+Mensen met deze kennis en capaciteit zijn schaars, zowel onder professionelen als vrijwilligers.
+Deze niche groep mensen wordt al fel bevraagd voor allerhande tel- en natuurbeschermingswerk.
+Het verzekeren van voldoende vrijwilligers bij vogelmonitoringprojecten blijkt de laatste jaren niet evident.
+Zo loopt het aantal vrijwilligers die deelnemen aan ABV - ondanks ondersteuning door Natuurpunt Studie - gestaag terug, waardoor het beoogde aantal hokken niet gehaald wordt puur op vrijwillige basis [@onkelinx2025abv].
+De inbreng van vrijwilligers in het veldwerk voor de nieuwe vogelatlas bleek onvoldoende, daar bleven nog gaten oningevuld bij gebrek aan vrijwilligers [@vogelnieuws2023].
+Het spreekt voor zich dat we daarmee rekening moeten houden voor de verderzetting van MAS-tellingen, alsook voor de uitrol van een nieuw meetnet naar nieuwe regio’s.
+
+Uit de ervaring opgedaan tijdens het pilootproject bleek dat vrijwilligers via de tellingen in de eerste plaats een bijdrage willen leveren aan de bescherming van akkervogels.
+Ze voelen zich extra gestimuleerd in gebieden waar veel maatregelen worden genomen en als ze voldoende geïnformeerd worden over wat hun gegevens opleveren.
+Ook bleek dat groepsgevoel, gezamenlijke activiteiten (regionaal) en communicatie van groot belang zijn.
+Daarom werd in de loop van het pilootproject door INBO voorzien in vormingsactiviteiten, zoals het jaarlijks opfrissen van de methodiek, het bespreken van broedcodes, identificatie van soorten op zicht en op geluid.
+Dit deden we zowel als webinar online als met trainingsdagen in het veld.
+Het lijkt een meerwaarde te zijn als de vrijwilligers jaarrond met het thema geactiveerd blijven, waarbij samen met vrijwilligersorganisaties ook buiten het broedseizoen activiteiten en tellingen voorzien worden in het buitengebied.
+Sprekende voorbeelden daarvan zijn het opzetten van slaapplaatstellingen van kiekendieven, braakballen pluizen, seizoensbijeenkomsten met informatiedoorstroom van analyses, excursies rond het thema wintervoedsel etc.
+Op die manier zijn we er in geslaagd om continuïteit te voorzien in het aantal vaste vrijwillige tellers die jaarlijks opnieuw willen deelnemen, alsook een lichte groei te bewerkstelligen in het aantal nieuwe vrijwilligers die telpunten opnemen.
+Bij een uitrol in nieuwe regio’s is het onrealistisch om meteen van het ene jaar op het andere jaar te verwachten dat een aanzienlijk aandeel telpunten wordt opgenomen door lokale vrijwilligers.
+
+Garanderen dat alle punten van de steekproef geteld geraken, vooral in nieuwe en controlegebieden, is enkel mogelijk bij een aanzienlijk professionele ondersteuning van vrijwilligers alsook van betaalde werkkrachten die telpunten tellen.
 Als realistisch streefdoel stellen we voorop dat in dit meetnet naar schatting 20 % van de telpunten kan opgenomen worden door vrijwilligers, met groeipotentieel om dat na verloop van enkele jaren uit te breiden naar 40 %.
+Om kostenefficiënt en tegelijk zo kwalitatief mogelijk te werken, wordt het aandeel professioneel getelde punten best door een mix van werkkrachten opgenomen.
+Daarbij wordt het grootste deel van het professionele telwerk best opgenomen door tijdelijke werkkrachten, waarbij de inzet van jobstudenten, freelancers, en tijdelijke werknemers in deze volgorde het \textcolor{red}{...} De openbare aanbesteding, waar freelancers (zelfstandigen) of studiebureaus op kunnen indienen, gebeurt best zo vroeg mogelijk voor het broedseizoen, zodat zoveel mogelijk kandidaten een offerte kunnen indienen, en zodat het terreinwerk nog ingepland kan worden.
+
+Het waarborgen van de kwaliteit van de tellingen is een belangrijk aandachtspunt, zowel bij professionele tellers, als bij vrijwilligers.
+Voor het professionele luik worden best strenge selectiecriteria toegepast bij het aanwerven van werkkrachten of bij het aanschrijven

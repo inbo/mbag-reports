@@ -45,7 +45,7 @@ Zo kunnen we tijdreeksen vergelijken en blijven we profiteren van de grotere dek
 ### Steekproefopzet en stratificatie
 
 De stratificatie van telpunten verschilt tussen MAS en ABV.
-Bij de ABV gebeurt de stratificatie op basis van de Biologische Waarderingskaart (minstens 80 % landbouwgebied) [@onkelinx2023a].
+Bij de ABV gebeurt de stratificatie op basis van de Biologische Waarderingskaart (minstens 80 % landbouwgebied) [@onkelinx2025abv].
 Het MAS hanteert een engere definitie van landbouwgebied, met een meer gedetailleerde stratificatie (zie Secties \@ref(piloot-steekproefkader) en \@ref(aanpassingen-meetnet)).
 
 Dit maakt het MAS bijzonder geschikt om gerichte vragen over vogels in landbouwgebieden te beantwoorden.
@@ -199,4 +199,3 @@ Dit versterkt de systematische onderschatting van de populatiegrootte.
 Hoewel de gegevens van de Haas op vergelijkbare wijze kunnen worden geanalyseerd als die van akkervogels, is het essentieel om de resultaten met de nodige voorzichtigheid te interpreteren, gezien de specifieke detectieproblemen en ecologische kenmerken van deze soort.
 We besluiten daarom dat de MAS-gegevens voor de Haas niet gebruikt mogen worden om densiteiten of populatiegroottes in te schatten.
 Wel bieden de gegevens potentieel om relatieve populatietrends in tijd op te volgen.
-

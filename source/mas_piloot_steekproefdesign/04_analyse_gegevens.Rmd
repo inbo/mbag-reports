@@ -21,7 +21,7 @@ Engelstalige termen worden in cursief aangeduid.
 
 De volgende resultaten betreffen vogels.
 Zoogdieren worden besproken in Sectie \@ref(exploratie-zoogdieren).
-\textcolor{red}{Sinds 2018 worden in het kader van 'Plan Kiekendief' MAS-tellingen uitgevoerd, in dezelfde deelgebieden waar deze piloot studie zich op richt.} Zoals besproken in Sectie \@ref(piloot-overlap), zijn een aantal van deze punten hergebruikt bij de steekproeftrekking voor deze pilootstudie.
+Zoals besproken in Sectie \@ref(piloot-overlap), zijn een aantal van deze punten hergebruikt bij de steekproeftrekking voor deze pilootstudie.
 Verder zijn er sinds de pilootstudie (sinds 2022) veel telpunten bijgekomen in De Moeren en de Oostelijke leemstreek (Tabel \@ref(tab:samenvatting-aantallen)).
 De meeste telpunten werden vier maal per jaar bezocht (Fig. \@ref(fig:telintensiteit)).
 Figuren \@ref(fig:aantal-waarnemingen) en \@ref(fig:aantal-soorten) geven een meer gedetailleerd beeld van de verdelingen van respectievelijk het aantal waarnemingen en soorten per jaar.
@@ -67,9 +67,27 @@ include_graphics(file.path("media", "data_exploratie",
 ### Broedcodes
 
 Het gebruik van broedcodes bij elke waarneming geeft het voordeel dat we uitspraken kunnen doen in termen van aantal broedgevallen door toevallige waarnemingen van een soort (bv. een overvliegend individu) uit te sluiten (= broedcode nul) [@roodbergen2011].
-We beschouwen tien doelsoorten: Geelgors, Gele kwikstaart, Grasmus, Kievit, Kneu, Kwartel, Ringmus, Torenvalk, Veldleeuwerik en Witte kwikstaart.
+Op basis van observatie wordt door de waarnemer een inschatting gemaakt hoe "broedverdacht" een vogel daar op het moment van de telling is.
+Hoe hoger de broedcode, hoe groter de aanwijzingen dat een koppel daar broedt.
+De MAS-methodiek werkt met een vereenvoudigde broedcodelijst van zes codes:
+
+-   broedcode 0: individu of groep buiten broedhabitat
+-   broedcode 1: volwassen individu in broedbiotoop
+-   broedcode 2: paar in broedbiotoop
+-   broedcode 3: territoriaal gedrag (zang, balts, dreigen)
+-   broedcode 4: nest-aanduidend gedrag (alarm, nestbouw, waarschijnlijke broedplaats)
+-   broedcode 5: nest (met eieren of jongen)
+
+We rekenen enkel de oppervlakte binnen de MAS telcirkel als broedbiotoop.
+Een vogel kan dus enkel een broedcode \>0 meekrijgen als er binnen te telcirkel geschikt broedbiotoop is.
+We beschouwen tien doelsoorten: Geelgors, Gele kwikstaart, Grasmus (*Sylvia* *communis*), Kievit, Kneu (*Linaria* *cannabina*), Kwartel (*Coturnix* *coturnix*), Ringmus (*Passer* *montanus*), Torenvalk (*Falco* *tinnunculus*), Veldleeuwerik en Witte kwikstaart (*Motacilla* *alba*).
 Als we kijken naar de data van 2022-2023, zien we dat de rapportage van broedcodes sterk kan verschillen van soort tot soort (Fig. \@ref(fig:broedcodes)).
-\textcolor{red}{bespreking Johannes? bv verschil witte kwik ringmus, torenvalk, veldleeuwerik? en uitleggen dat we voor roofvogels geen rekening houden met broedcodes}
+Zo worden Veldleeuwerik en Geelgors overwegend als territoriaal, met broedcode 3, ingevoerd; deze soorten wordt dan ook makkelijk en vooral al zingend gehoord.
+Ringmus gaat vooral als paar in broedbiotoop de databank in, de soort heeft geen makkelijk herkenbare zang en het getjilp wordt vaak gehoord als een roep.
+Witte kwikstaart wordt meestal als volwassen individu in broedbiotoop waargenomen, die wordt dan ook vaak gezien in de buurt van erven en zingt weinig.
+Roofvogels, zoals de Torenvalk, hebben meestal geen duidelijke nestgelegenheid binnen de telcirkel, maar komen geregeld van buitenaf jagen.
+Roofvogels worden vaak, terecht, ingevoerd met een broedcode nul.
+Deze combinatie nemen we wel mee in de analyses om de predatiedruk mee in rekening te brengen.
 
 ```{r broedcodes, out.width = "90%", fig.cap = "Aantal tellingen per broedcode per doelsoort voor 2022-2023. De linker y-as toont het aantal tellingen in De Moeren en de rechter y-as het aantal in de Oostelijke leemstreek."}
 include_graphics(file.path("media", "data_exploratie",
@@ -95,8 +113,17 @@ Tijdens het pilootproject (2022-2023) zien we andere soorten naar voren komen en
 Dit is omdat we het controlegebied hadden toegevoegd (buiten soortenbeschermingsprogramma (SBP)) waar minder vogels voorkomen.
 Het is bovendien duidelijk dat bepaalde soorten algemener zijn in de ene of de andere regio.
 Als we het verschil in relatieve frequentie tussen De Moeren en de Oostelijke leemstreek nemen, zien we om welke soorten het gaat (Fign \@ref(fig:verschilfreqs-2018-2021), \@ref(fig:verschilfreqs-2022-2023)).
-\textcolor{red}{Typische soorten van open landschap, water en rietkragen werden meer gezien in De Moeren zoals Kievit, Bruine kiekendief, Rietzanger, Wilde eend Kleine karrekiet enzovoort. In de Oostelijke leemstreek zien we dan weer soorten van meer halfopen landschap en kleine landschapselementen zoals Veldleeuwerik, Geelgors, Vink enzovoort.} Ook binnen specifieke strata is er voor sommige soorten een groot verschil in frequentie (Fig. \@ref(fig:relfreqs-strata)).
-\textcolor{red}{bespreking, vooral voor veldleeuwerik en gele kwik ...}
+In De Moeren werden soorten frequenter gezien die meer en talrijker in de kustpolders voorkomen.
+De blauwe dooradering van water met rietkragen zorgen in De Moeren voor een hogere verhouding aan telpunten met soorten zoals Kievit, Bruine kiekendief, Blauwborst (*Luscinia svecica*), Rietzanger (*Acrocephalus schoenobaenus*), Wilde eend (*Anas platyrhynchos*), Kleine karekiet (*Acrocephalus scirpaceus*) enzovoort.
+Een bijkomende verklaring van de soortensamenstelling is dat De Moeren bijna volledig als open landschap gecategoriseerd wordt, en er bijna geen halfopen landschap te vinden is.
+Hierdoor ontbreken de typerende vogelsoorten voor halfopen landschap in het grootste deel van die telpunten.
+In de Oostelijke leemstreek zien we dan weer soorten van meer halfopen landschap en kleine landschapselementen zoals Grasmus, Zwartkop (*Sylvia atricapilla*), Geelgors, Vink (*Fringilla coelebs*) enzovoort.
+Ook binnen specifieke strata is er voor sommige soorten een groot verschil in frequentie (Fig. \@ref(fig:relfreqs-strata)).
+Zo zien we voor Veldleeuwerik duidelijke verschillen.
+In De Moeren komt Veldleeuwerik duidelijk in meer telcirkels voor binnen SBP-gebied dan buiten SBP-gebied.
+Ook in de Oostelijke leemstreek is dat het geval.
+Uiteraard blijft Veldleeuwerik daar hoger in frequentie in open landschap versus halfopen landschap, gezien de soort een uitgesproken voorkeur heeft voor meer open landschap.
+Ook in halfopen landschap wordt veldleeuwerik gezien, ook binnen dat specifieke stratum is er een duidelijk verschil, waarbij we veldleeuwerik frequenter zien voorkomen binnen SBP-gebied dan buiten.
 
 ```{r relfreqs-2018-2021, out.width = "100%", fig.cap = "Relatieve frequentie van de 20 meest frequente soorten (gemiddeld over telperiode, jaar en regio) en doelsoorten (in vet rood, onder stippellijn indien niet in top 20) van 2018-2021. Elke punt is een relatieve frequentie in een bepaalde telperiode, jaar en regio."}
 include_graphics(file.path("media", "data_exploratie",
@@ -448,7 +475,7 @@ Gewogen gemiddelde van jaar sinds implementatie erosiebeheer en bufferstroken pe
 
 **9. Aantal predatoren**\
 Aantal predatoren gezien tijdens telling.
-Als predatoren beschouwen we roofvogels (Blauwe Kiekendief, Boomvalk, Bosuil, Bruine Kiekendief, Buizerd, Grauwe Kiekendief, Havik, Ransuil, Rode Wouw, Slechtvalk, Smelleken, Sperwer, Steenuil, Steppekiekendief, Torenvalk, Vale Gier, Velduil, Wespendief, Zwarte Wouw) en kraaiachtigen (Ekster, Gaai, Kauw, Raaf, Roek, Zwarte Kraai).
+Als predatoren beschouwen we roofvogels (Blauwe kiekendief (*Circus* *cyaneus*), Boomvalk (*Falco* *subbuteo*), Bosuil (*Strix* *aluco*), Bruine kiekendief, Buizerd (*Buteo* *buteo*), Grauwe kiekendief, Havik (*Accipiter gentilis*), Ransuil (*Asio* *otus*), Rode wouw (*Milvus* *milvus*), Slechtvalk (*Falco* *peregrinus*), Smelleken (*Falco* *columbarius*), Sperwer (*Accipiter* *nisus*), Steenuil (*Athene* *noctua*), Steppekiekendief (*Circus* *macrourus*), Torenvalk, Vale gier (*Gyps* *fulvus*), Velduil (*Asio* *flammeus*), Wespendief (*Pernis* *apivorus*), Zwarte wouw (*Milvus* *migrans*)) en kraaiachtigen (Ekster (*Pica* *pica*), Gaai (*Garrulus* *glandarius*), Kauw (*Coloeus* *monedula*), Raaf (*Corvus* *corax*), Roek (*Corvus* *frugilegus*), Zwarte kraai (*Corvus* *corone*)).
 We beschouwden zowel een variabele voor het aantal individuen als het aantal soorten.
 Deze variabelen worden dus berekend op basis van de data van de tellingen zelf.
 
@@ -1242,7 +1269,8 @@ De maxima komen voor Veldleeuwerik goed overeen met de resultaten van distance s
 @wiersma2021 gebruikten de maxima om densiteiten van akkervogels in te schatten.
 Ze stellen dat dit minimumschattingen zijn omdat ze niet voor onvolledige trefkans hebben gecorrigeerd.
 Echter, wij zien hier dat deze methode niet per se lagere resultaten bekomt dan via distance sampling.
-De maxima-methode zal lagere schattingen bekomen als de detectiekans van de soort lager is omdat er dan een sterkere correctie optreedt bij distance sampling die niet zal gebeuren bij de maxima-methode (bijvoorbeeld bij Kneu $\hat{P}_a =$ `r pa_kneu`, Fig. \@ref(fig:densiteit-methodiek-kneu)), maar dit is niet per se het geval voor soorten met een hogere detectiekans (bijvoorbeeld bij Fazant $\hat{P}_a =$ `r pa_fazant`, Fig. \@ref(fig:densiteit-methodiek-fazant)).
+De maxima-methode zal lagere schattingen bekomen als de detectiekans van de soort lager is omdat er dan een sterkere correctie optreedt bij distance sampling die niet zal gebeuren bij de maxima-methode (bijvoorbeeld bij Kneu $\hat{P}_a =$ `r pa_kneu`, Fig. \@ref(fig:densiteit-methodiek-kneu)), maar dit is niet per se het geval voor soorten met een hogere detectiekans (bijvoorbeeld bij Fazant (*Phasianus* *colchicus*) $\hat{P}_a =$ `r pa_fazant`, Fig.
+\@ref(fig:densiteit-methodiek-fazant)).
 Bovendien wordt er bij distance sampling meer gewicht gegeven aan lage aantallen omdat alle data worden meegenomen in de analyse (gemiddeld aantal per telpunt per jaar via effort $T$) terwijl via de maxima-methode veel lage waardes worden weggefilterd (maximum aantal per telpunt per jaar).
 Het verschil tussen beide methodes zal dus afhankelijk zijn van soort tot soort omwille van een combinatie van de detectiekans en zeldzaamheid van een soort (en mogelijk nog andere factoren die hier niet zijn beschouwd).
 Zoals in de vorige paragraaf vermeld, kan distance sampling als een minimumschatting genomen worden bij hoge detectiekansen, maar deze is mogelijks te strikt in vergelijking met de maxima-methode in ecologische context.

@@ -82,9 +82,7 @@ Dit geeft ons een kaart van de landbouwstreken in Vlaanderen (Fig. \@ref(fig:lan
 De meeste landbouwstreken zijn opgebouwd uit meerdere polygonen.
 Vervolgens beperken we dit daarom voor de Oostelijke leemstreek tot enkel de polygoon die overlapt met de perimeter van het soortenbeschermingsprogramma voor akkervogels.
 Dit geeft voldoende mogelijkheden om telpunten buiten deze SBP gebieden te kunnen selecteren (64 % van de oppervlakte ligt buiten SBP).
-In het geval van De Moeren, is er direct vertrokken van een perimeter die al gebruikt werd door de MAS werking van dat gebied en die ons aangeleverd is.
-Dit was nog geen officiële SBP akkervogels perimeter, maar het is wel een gebied waar gelijkaardige inspanningen werden geleverd en we beschouwen het daarom als "SBP" gebied.
-Om voor De Moeren ook een controlegebied te hebben (buiten SBP), werd een buffer gelegd rond het noordoostelijke deel van De Moeren die in oppervlakte nagenoeg gelijk is aan het gedeelte binnen "SBP" (ten zuiden van De Moeren zitten we in Frankrijk en ten westen zitten we in duingebied).
+\textcolor{red}{...} Om voor De Moeren ook een controlegebied te hebben (buiten SBP), werd een buffer gelegd rond het noordoostelijke deel van De Moeren die in oppervlakte nagenoeg gelijk is aan het gedeelte binnen "SBP" (ten zuiden van De Moeren zitten we in Frankrijk en ten westen zitten we in duingebied).
 Deze perimeter ligt grotendeels binnen de polders landbouwstreek (een klein deel van de bufferzone ligt in de zandleemstreek), maar is slechts een klein deel van de volledige polders [@akkervogelgebieden, Fig. \@ref(fig:perimeters-sbp)].
 De Oostelijke leemstreek omvat een zeer groot deel van de volledige leemstreek en is daarom te beschouwen als **de betere casus** van de twee pilootgebieden om dienst te doen als test voor de uitrol naar andere landbouwstreken in Vlaanderen.
 
@@ -310,13 +308,14 @@ Een overzicht van alle databestanden is gegeven in @dmp-mas.
 De inzet van vrijwilligers is een veelgebruikte troef bij vogeltellingen, en een krachtig middel om de kostenefficiëntie van een monitoringsproject te verhogen.
 Uit de poule van het MAS-meetnet dat reeds opgestart was in beide pilootgebieden, konden we de meeste vrijwilligers verder motiveren om deel te nemen aan tellingen voor dit nieuwe meetnet.
 Dat is een voordeel dat niet overal gegarandeerd is, en het gaat niet zomaar.
-Vrijwilligers betrek je best nauw, en daar kruipt aanzienlijk veel training, opvolging, communicatie en feedback in.
+Vrijwilligers betrek je best nauw en jaarrond.
+Daar kruipt aanzienlijk veel training, opvolging, communicatie en feedback in.
 Om die reden kozen we ervoor om daar voldoende werktijd voor te voorzien.
-We anticipeerden ook op de aantrekkelijkheid van de tellingen, waarbij het voor vrijwilligers vooral loont om te gaan tellen in gebieden waar nog veel vogels te zien zijn, en waar veel maatregelen genomen worden om ze te beschermen.
+We anticipeerden op de aantrekkelijkheid van de tellingen, waarbij het voor vrijwilligers vooral loont om te gaan tellen in gebieden waar nog veel vogels te zien zijn, en waar veel maatregelen genomen worden om ze te beschermen.
 Tellingen in controlegebieden achtten we minder aantrekkelijk.
 Daar werd geopteerd om, waar nodig, tellingen uit te voeren door betaalde werkkrachten.
 Dat aandeel aan betaalde werkkrachten kan instaan voor een continuïteit, waarbij meetpunten jaarlijks geteld worden, en eventueel flexibel ingesprongen kan worden bij het wegvallen of opgeven van vrijwilligerswerk.
-Ook gingen we na of de motivatie en ervaring van tellers, al dan niet betaald, een impact heeft op de kwaliteit van de tellingen.
+We gingen na of de motivatie en ervaring van tellers, al dan niet betaald, een impact heeft op de kwaliteit van de tellingen.
 Daarbij werd gelet op het volgen van de methodiek, alsook het aandeel individuen dat werd herkend of genoteerd.
 
 [^03_pilootgegevens-1]: Bij de steekproeftrekking wordt een methode gebruikt die zal vermijden dat telpunten en hun telcirkels overlappen.

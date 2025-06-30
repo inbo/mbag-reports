@@ -8,7 +8,7 @@ Dit hoofdstuk richt zich op het afstemmen van het nieuwe meetnet en de plaats er
 
 Voor broedvogels vormen de volgende initiatieven de kern:
 
-Het ABV-project richt zich op het detecteren van trends van meer algemene soorten [@onkelinx2023a].
+Het ABV-project richt zich op het detecteren van trends van meer algemene soorten [@onkelinx2025abv].
 Het meetnet bestaat uit 1200 kilometerhokken verspreid over Vlaanderen en gelegen in diverse landschapstypes.
 De doelstelling is om minimaal 900 van deze hokken via punttellingen op te volgen tijdens een driejaarlijkse cyclus (300 per jaar).
 De opvolging gebeurt sinds 2007.
@@ -18,11 +18,11 @@ De voorbije 3-4 jaren was de vrijwilligersbijdrage onvoldoende om het doel van 3
 O.a.
 het erg intensieve terreinwerk voor de vogelatlas steunde immers grotendeels op dezelfde pool van tellers.
 Nu het telwerk voor die atlas voorbij is, wordt getracht de inzet voor ABV opnieuw aan te wakkeren.
-In 2025 lijken we uit te komen op de beoogde 300 getelde hokken.
-Wetenschappelijk significante trends werden de voorbije jaren berekend voor een 80-tal soorten waaronder Veldleeuwerik en Gele kwikstaart.
+In 2025 lijken we uit te komen op de beoogde 300 getelde hokken, grotendeels op vrijwillige basis maar daar bovenop aangevuld door professionele inzet door INBO.
+Wetenschappelijk significante trends voor Vlaanderen werden de voorbije jaren berekend voor een 80-tal soorten waaronder Veldleeuwerik en Gele kwikstaart (*Motacilla flava*).
 
 Het BBV-project brengt territoria van (zeer) schaarse broedvogels in kaart.
-Het gaat om zeldzame soorten zoals Bruine kiekendief en Grauwe gors.
+Het gaat om zeldzame soorten zoals Bruine kiekendief (*Circus* *aeruginosus*) en Grauwe gors.
 Die soorten zijn zo zeldzaam, of komen zo geconcentreerd voor, dat ze jaarlijks in geheel Vlaanderen dienen geïnventariseerd te worden om een wetenschappelijk verantwoorde analyse van de resultaten mogelijk te maken.
 Hierdoor zijn de resultaten over het algemeen goed vergelijkbaar tussen gebieden en tussen jaren.
 Het project loopt sinds 1994 en de inventarisatie gebeurt jaarlijks.
@@ -37,9 +37,9 @@ Het INBO coördineert de rapportering aan regionale, nationale en internationale
 
 Eerder waren er al regionale initiatieven die zich richten op akkervogels:
 
-Het ‘Meetnet Agrarische Soorten’ (MAS) werd sinds 2017 opgestart in Vlaanderen, binnen het kader van 'Plan Kiekendief' (uitvoering van het soortenbeschermingsprogramma Grauwe kiekendief [@vandegehuchte2015grauwekiekendief]) [@vandewaerde2020].
+Het ‘Meetnet Agrarische Soorten’ (MAS) werd sinds 2017 opgestart in Vlaanderen, binnen het kader van 'Plan Kiekendief' (uitvoering van het soortenbeschermingsprogramma Grauwe kiekendief (*Circus* *pygargus*) [@vandegehuchte2015grauwekiekendief]) [@vandewaerde2020].
 Tellingen werden voornamelijk door vrijwilligers gedaan in twee gebieden: de leemstreek en De Moeren.
-Deze tellingen werden geëvalueerd om de voedselbeschikbaarheid voor Grauwe kiekendief te monitoren, in de gebieden waar sterk werd ingezet op maatregelen.
+Deze tellingen werden geëvalueerd om de voedselbeschikbaarheid voor Grauwe kiekendief te monitoren, in de gebieden waar sterk werd ingezet op maatregelen [@wiersma2021voedsel].
 De voornaamste conclusie was dat door een beperkte looptijd en een gebrek aan controlepunten de statistische kracht ontbrak om de effectiviteit van die acties te evalueren.
 
 Eerder al werden in De Moeren en zeventien andere PDPO-gebieden gemonitord om de effecten van beheerovereenkomsten te evalueren [@debruyn2019].
@@ -47,7 +47,7 @@ Tussen 2010 en 2018 werd dit uitgevoerd om de effectiviteit van beheerovereenkom
 Er werden territoriumkarteringen en wintertellingen gebruikt, uitgevoerd door het INBO.
 Hierbij werd geconcludeerd dat voor de relevante soorten geen duidelijke trend kon worden vastgesteld.
 
-Het Partridge-project, volgde sinds 2016 broed- en overwinteringsvogels in vier gebieden [@petersen2023].
+Het Partridge-project volgde sinds 2016 broed- en overwinteringsvogels in vier gebieden [@petersen2023].
 In twee demogebieden werden maatregelen genomen, vooral gericht op Patrijs, en werd hun effectiviteit en het broedsucces onderzocht via traject- en territoriumtellingen.
 Ook wintertellingen volgens de MAS-methodiek maakten deel uit van het project.
 Dit alles werd door INBO-medewerkers uitgevoerd en liep tot 2023.

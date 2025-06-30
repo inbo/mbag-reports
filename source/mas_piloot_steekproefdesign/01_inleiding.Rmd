@@ -13,6 +13,7 @@ Om deze redenen krijgt deze groep soorten beleidsaandacht, bijvoorbeeld via soor
 
 De boerenlandvogelindex (farmland bird index, FBI) is een belangrijke indicator, waarbij de gegevens van een set aan broedvogelsoorten gerelateerd aan het agrarisch gebied internationaal opgevolgd worden.
 Deze indicator is ook opgenomen in de Europese Natuurherstelverordening en in de Europese Verordening inzake milieu-economische rekeningen van 27 november 2024.
+Een index op basis van een deel van deze soorten, twaalf om precies te zijn, wordt in Vlaanderen berekend op basis van ABV tellingen, als de indicator “trend broedvogels van akkers en weiden” [<https://www.vlaanderen.be/inbo/indicatoren/trend-broedvogels-van-weiden-en-akkers>, @onkelinx2025abv].
 Het is ook een Vlaamse Openbare Statistiek (VOS).
 
 Huidige monitoringsprojecten en -initiatieven (zie Hoofdstuk \@ref(historie)) bieden een waardevolle basis, maar volstaan niet om alle monitoringsbehoeften in Vlaanderen volledig te dekken.
