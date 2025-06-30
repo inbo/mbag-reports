@@ -97,8 +97,10 @@ Als we een aantal personen van de organisaties hierboven met naam willen noemen,
 Zij zijn allen sleutelfiguren geweest om deze pilootstudie tot stand te brengen.
 We danken ook Dirk Zoetebier en Bernice Goffin graag met naam voor de effectieve uitrol ervan.
 
-Uiteraard willen we alle leden van de stuurgroep en collega’s die hebben meegewerkt, of advies hebben gegeven voor de opbouwende kritiek en bijsturing.
-We bedanken in het bijzonder Peter Van Gossum en Jef Melckebeke voor het integraal en kritisch nalezen van het eindrapport.
+Uiteraard willen we alle leden van de stuurgroep en collega’s bedanken die hebben meegewerkt, advies hebben gegeven of voor opbouwende kritiek en bijsturing hebben gezorgd.
+Voor de afwerking van dit eindrapport willen we Koen Devos, Glenn Vermeersch en Thomas Scheppers bedanken voor het nalezen van specifieke hoofdstukken.
+Bedankt opnieuw aan de stuurgroepleden Karolien Michiel, Dirk Van Gijseghem en Floris Verhaeghe om opmerkingen te geven op de draft versie.
+We bedanken in het bijzonder Peter Van Gossum en Jef Melckebeke voor het integraal en kritisch reviewen van het volledige eindrapport.
 
 Tot slot bedanken we u als lezer, voor uw interesse in dit rapport, dat hopelijk verklarend en inspirerend kan werken.
 
@@ -286,3 +288,4 @@ for (file_name in figs$name) {
   include_from_drive(name = file_name, figures = figs, overwrite = FALSE)
 }
 ```
+
