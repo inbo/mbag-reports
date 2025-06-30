@@ -34,6 +34,11 @@ reviewer:
     email: "peter.vangossum@inbo.be"
     orcid: "0000-0002-1595-7126"
     affiliation: "Instituut voor Natuur- en Bosonderzoek (INBO)"
+  - name:
+      given: "Jef"
+      family: "Melckebeke"
+    email: "jef.melckebeke@inbo.be"
+    affiliation: "Instituut voor Natuur- en Bosonderzoek (INBO)"
 lang: nl
 style: INBO
 floatbarrier: subsubsection
