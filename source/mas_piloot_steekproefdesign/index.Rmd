@@ -177,7 +177,33 @@ Tijdens het broedseizoen is de inzet van tijdelijke werknemers, jobstudenten en 
 
 # Aanbevelingen voor beheer en/of beleid {.unnumbered}
 
-\textcolor{red}{...}
+**1. Zet het Meetnet Agrarische Soorten (MAS) uit over heel Vlaanderen**\
+Deze pilootstudie toont aan dat een Meetnet Agrarische Soorten (MAS), uitgerold over heel Vlaanderen, een geschikte en noodzakelijke methode is voor beleidsmonitoring van akkervogels.
+Bestaande langlopende monitoringprojecten zoals ABV en BBV volstaan momenteel niet om alle monitoringsbehoeften in Vlaanderen te dekken.
+Er is een behoefte aan een verfijnder en betrouwbaarder beeld van de toestand van vogels in het landbouwgebied, inclusief het detecteren van regionale verschillen.
+
+**2. Combineer bestaande toestandmonitoring met jaarlijkse beleidsevaluatie**\
+Die toestand moet langdurig frequent gemonitord worden, om de effectiviteit van het beleid te kunnen evalueren en bijsturen [@visser2025].
+We bevelen aan om de toestandmonitoring (ABV en BBV) verder te zetten en gelijktijdig aan te vullen met een jaarlijkse beleidsevaluatie via MAS, zodat gerichte en tijdige bijsturing mogelijk wordt.
+
+**3. Onderzoek op perceelsniveau waar maatregelen effectief zijn**\
+Tot op heden is onvoldoende duidelijk welke ingrepen effectief leiden tot herstel van akkervogelpopulaties.
+Er zijn wel 'recepten' geformuleerd, bestaande uit een combinatie van acties (zoals nestbescherming) en maatregelen (zoals beheerovereenkomsten, ecoregelingen en maai- en onderhoudsbeheer).
+Vooralsnog hebben die recepten de Vlaamse boerenlandvogeltrend nog niet positief gekeerd, zo blijkt uit de indicator broedvogels van weiden en akkers [@onkelinx2025abv].
+Verdere analyse op beheer- en perceelsniveau is nodig om te achterhalen waar deze recepten wel of niet werken, en welke factoren daarvoor bepalend zijn.
+
+**4. Investeer in het menselijk kapitaal van vrijwilligers en burgerwetenschappers**\
+Het opgebouwde menselijk kapitaal, in de vorm van goed opgeleide vrijwilligers en werkkrachten, is een cruciale troef om kostenefficiënte monitoring en onderzoek in landbouwgebieden verder te zetten.
+We adviseren om deze groep burgerwetenschappers het hele jaar door te blijven betrekken, met voldoende professionele ondersteuning, zodat hun betrokkenheid en jaarlijkse inzet behouden blijft.
+
+**5. Voorzie een langetermijnplanning en begeleiding voor het vrijwilligennetwerk**\
+Dit netwerk is gebaat met een langetermijnsplanning (minstens vijf jaar vooruit) en met continuïteit in de begeleiding.
+
+**6. Zorg voor continuïteit in beheersmaatregelen**\
+Ook voor beheersmaatregelen (zoals beheerovereenkomsten) is continuïteit essentieel.
+We raden aan om deze maatregelen op lange termijn en onder vergelijkbare voorwaarden verder te zetten.
+Dat werkt tevens een duurzame verankering in het landschap en op bedrijfsniveau in de hand.
+Dit vergemakkelijkt niet alleen onderzoek en evaluatie, maar komt ook ten goede aan zowel akkervogels als de landbouwers die eraan meewerken.
 
 ```{r setup, include = FALSE}
 library(knitr)

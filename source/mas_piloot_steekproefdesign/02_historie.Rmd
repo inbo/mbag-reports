@@ -35,12 +35,16 @@ Hierbij worden punttellingen in geselecteerde km-hokken uitgevoerd, het zogenaam
 De rollen bij deze projecten zijn gelijkaardig verdeeld.
 Het INBO coördineert de rapportering aan regionale, nationale en internationale instanties, terwijl Natuurpunt het vrijwilligersnetwerk organiseert en de steekproefhokken verdeelt.
 
-Eerder waren er al regionale initiatieven die zich richten op akkervogels:
+Deze relevante regionale initiatieven die zich richten op akkervogels hebben als inspiratie gediend voor dit pilootproject:
 
 Het ‘Meetnet Agrarische Soorten’ (MAS) werd sinds 2017 opgestart in Vlaanderen, binnen het kader van 'Plan Kiekendief' (uitvoering van het soortenbeschermingsprogramma Grauwe kiekendief (*Circus* *pygargus*) [@vandegehuchte2015grauwekiekendief]) [@vandewaerde2020].
 Tellingen werden voornamelijk door vrijwilligers gedaan in twee gebieden: de leemstreek en De Moeren.
 Deze tellingen werden geëvalueerd om de voedselbeschikbaarheid voor Grauwe kiekendief te monitoren, in de gebieden waar sterk werd ingezet op maatregelen [@wiersma2021voedsel].
 De voornaamste conclusie was dat door een beperkte looptijd en een gebrek aan controlepunten de statistische kracht ontbrak om de effectiviteit van die acties te evalueren.
+
+Voorafgaand werd een vergelijkende studie gedaan om de toestand van plattelandsvogels te vergelijken tussen Noord-Frankrijk en Zuid-West-Vlaanderen, in 2013 en 2019 [@dochy2021].
+Daaruit kwamen weinig harde nieuwe feiten, maar wel tal van regionale verschillen uit voort, die niet door landschapskenmerken konden worden verklaard.
+Enkele zeer relevante conclusies werden gemaakt, die in acht werden genomen voor deze pilot studie: een voldoende grote steekproef met random punten is nodig, goede opleiding voor vrijwilligers in het herkennen van vogels en aanleren van methodiek, telpunten worden best gescreend op terreingebruik.
 
 Eerder al werden in De Moeren en zeventien andere PDPO-gebieden gemonitord om de effecten van beheerovereenkomsten te evalueren [@debruyn2019].
 Tussen 2010 en 2018 werd dit uitgevoerd om de effectiviteit van beheerovereenkomsten voor akker- en weidevogels te evalueren.
