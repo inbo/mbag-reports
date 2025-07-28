@@ -171,12 +171,12 @@ include_graphics(file.path("media", "data_exploratie",
                            "soortenfreqs_zoogdieren_2022_2023.pdf"))
 ```
 
-```{r aantallen-haas, out.width = "100%", fig.cap = "Aantal individuen van Haas gezien tijdens het MAS pilootproject."}
+```{r aantallen-haas, out.width = "90%", fig.cap = "Aantal individuen van Haas gezien tijdens het MAS pilootproject."}
 include_graphics(file.path("media", "data_exploratie",
                            "aantallen_haas.pdf"))
 ```
 
-```{r relfreqs-haas, out.width = "100%", fig.cap = "Relatieve frequentie van de Haas in verschillende strata van 2022-2023. HOL: halfopen landschap, OL: open landschap, binnen: binnen soortenbeschermingsprogramma (SBP), buiten: buiten SBP."}
+```{r relfreqs-haas, out.width = "90%", fig.cap = "Relatieve frequentie van de Haas in verschillende strata van 2022-2023. HOL: halfopen landschap, OL: open landschap, binnen: binnen soortenbeschermingsprogramma (SBP), buiten: buiten SBP."}
 include_graphics(file.path("media", "data_exploratie",
                            "soortenfreqs_haas_per_strat.pdf"))
 ```
@@ -648,9 +648,12 @@ include_graphics(file.path("media", "data_exploratie",
 ```
 
 ```{r verklarende-vars-tab}
-summary_var_tab <- read_delim(file.path("media", "verklarende_variabelen",
-                                        "verklarende_variabelen_tabel.csv"),
-                              show_col_types = FALSE)
+summary_var_tab <- read_csv2(
+  file.path("media", "verklarende_variabelen",
+            "verklarende_variabelen_tabel.csv"),
+  show_col_types = FALSE,
+  locale = locale(encoding = "Latin1")
+)
 
 summary_var_tab_clean <- summary_var_tab %>%
   arrange(id) %>%
