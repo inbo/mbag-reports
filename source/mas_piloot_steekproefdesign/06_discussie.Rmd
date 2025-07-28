@@ -9,12 +9,13 @@ We brengen hierbij een onderscheid aan tussen organisatorische en praktische asp
 
 Bij de uitvoering van het MAS-meetnet bleek de inschatting van de zichtbaarheid een belangrijk aandachtspunt.
 Het is noodzakelijk om duidelijke instructies te formuleren rond de positionering van waarnemers.
-Verplaatsen naar een plek met beter zicht werd verboden, omdat dit het random karakter van de steekproeftrekking zou ondermijnen.
-Wel werd flexibiliteit toegestaan in de exacte plaatsing van de waarnemer, aangezien het vaak praktisch onmogelijk is om tot op de meter nauwkeurig op het telpunt te staan.
-Daarom mag de waarnemer zich binnen een bewegingsruimte van 25 meter rond het telpunt positioneren, met als doel de zichtbaarheid binnen de telcirkel te optimaliseren.
+Het telpunt verplaatsen naar een plek met beter zicht werd verboden, omdat dit het random karakter van de steekproeftrekking zou ondermijnen.
+Wel werd flexibiliteit toegestaan in de exacte plaatsing van de waarnemer.
+Die mag zich binnen een bewegingsruimte van 25 meter rond het telpunt positioneren, met als doel de zichtbaarheid binnen de telcirkel te optimaliseren.
 
 Het is essentieel dat de afstanden tot waargenomen vogels zo exact mogelijk worden ingeschat.
-Tellen vanaf andere locaties dan het officiële telpunt is niet toegestaan, omdat dit de betrouwbaarheid van afstandsmetingen en detectiecurves aantast en de invloed van de aanwezigheid van de waarnemer in het midden van de telcirkel niet correct zou worden meegenomen.
+Tellen vanaf andere locaties dan het officiële telpunt is niet toegestaan, omdat dit de betrouwbaarheid van afstandsmetingen en detectiecurves aantast.
+De invloed van de aanwezigheid van de waarnemer in het midden van de telcirkel zou ook niet correct worden meegenomen.
 
 ### Communicatie en opleiding van waarnemers
 
@@ -120,9 +121,9 @@ Deze cijfers geven vertrouwen dat er op een zesjarige periode voldoende statisti
 We moeten er echter wel over waken dat de steekproefgrootte per stratum voldoende groot blijft.
 Zo leren we bijvoorbeeld uit de cijfers van de Moeren dat de relatieve foutenmarge op de lineaire trend en toestandschattingen van Veldleeuwerik respectievelijk $\times 2$ en $\times 4$ is in vergelijking met de Oostelijke leemstreek.
 
-Uit de MAS-tellingen van de periode 2018 - 2021 leren we dat er beperkingen zijn aan deze data: (1) uiteraard zijn ze gelimiteerd tot een deel van de leemstreek en een deel van de polders waardoor er niet kan veralgemeend worden naar de (effecten van beleid) in landbouwgebied in Vlaanderen, (2) er zijn uit deze periode geen tellingen in vergelijkbaar controlegebied (buiten SBP gebied), terwijl de zones binnen SBP al de zones waren met de beste kansen voor akkervogels nog voor er maatregelen werden genomen en (3) de telpunten werden niet aselect gekozen waardoor er een risico is op vertekening ten gevolge van de manier waarop tellocaties werden gekozen.
+Uit de MAS-tellingen van de periode 2018 - 2021 leren we dat er beperkingen zijn aan deze data: (1) uiteraard zijn ze gelimiteerd tot een deel van de leemstreek en een deel van de polders waardoor er niet kan veralgemeend worden naar (de effecten van beleid in) landbouwgebied in Vlaanderen, (2) er zijn uit deze periode geen tellingen in vergelijkbaar controlegebied (buiten SBP gebied), terwijl de zones binnen SBP al de zones waren met de beste kansen voor akkervogels nog voor er maatregelen werden genomen en (3) de telpunten werden niet aselect gekozen waardoor er een risico is op vertekening ten gevolge van de manier waarop tellocaties werden gekozen.
 
-Doordat er geen tellingen uit controlegebieden zijn voor de periode 2018 - 2021, kunnen we bijvoorbeeld niet weten of de significante toename van de densiteit aan Veldleeuweriken een effect is van de toename aan SBP maatregelen of een algemene verbetering van de populaties die zich elders in het landbouwgebied afspeelt.
+Doordat er geen tellingen uit controlegebieden zijn voor de periode 2018 - 2021, kunnen we bijvoorbeeld niet weten of de significante toename van de densiteit aan Veldleeuweriken een effect is van de toename aan SBP maatregelen of een algemene verbetering van de populaties die zich elders in het landbouwgebied ook afspeelt.
 Hierdoor weten we niet wat de algemene gemiddelde toestand en trend is van soorten in (bijvoorbeeld) de volledige leemstreek (ongeacht welke beschermingsmaatregelen genomen worden).
 Door ook in vergelijkbare situaties buiten SBP zones te tellen en de tellocaties via een kanssteekproef te selecteren die representatief is binnen elk van de beschouwde strata, kunnen we beide euvels oplossen.
 We zullen dan in staat zijn om bijvoorbeeld de trend binnen en buiten SBP gebied met elkaar te vergelijken.
@@ -135,7 +136,7 @@ Elk van bovenvermelde beperkingen zullen we op termijn kunnen wegwerken en een d
 In het meetnet dat we hebben opgezet voor deze pilootstudie zijn controlegebieden toegevoegd die vergelijkbaar zijn met de SBP zones (dezelfde landbouwstreek, dezelfde mate van openheid van het landschap).
 De uitbreiding hiervan naar de andere landbouwstreken, zal toelaten om zowel per landbouwstreek als voor heel Vlaanderen uitspraken te doen over effecten van het beleid (waarbij een opsplitsing kan gemaakt worden in de mate van uptake van beleid).
 In 2023 konden we al starten met deze uitrol naar de volledige leemstreek en zandleemstreek.
-In 2024 kwamen de overige landbouwstreken aan bod, waarbij over heel Vlaanderen meetpunten werden uitgestrooid.
+In 2024 kwamen de overige landbouwstreken aan bod, waarbij over heel Vlaanderen MAS meetpunten werden uitgestrooid, in het kader van het Meetnet Biodiversiteit in Agrarisch Gebied (MBAG).
 
 Dankzij deze opzet kunnen we in de toekomst de trends binnen en buiten SBP-gebieden vergelijken en trends en toestanden representatief inschatten voor volledige landbouwstreken en heel Vlaanderen.
 

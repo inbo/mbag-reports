@@ -1,0 +1,23 @@
+# Conclusie {#conclusie}
+
+Deze pilootstudie bevestigt dat het Meetnet Agrarische Soorten (MAS) in zijn huidige opzet een robuust en toekomstgericht instrument is voor beleids- en beheermonitoring van akkervogels in Vlaanderen.
+Door een goed onderbouwde steekproeftrekking, stratificatie en het gebruik van een Before-After Control-Impact (BACI) design, biedt het MAS de mogelijkheid om populatietrends en verschillen in ruimte en tijd op een wetenschappelijk onderbouwde manier te detecteren en evalueren.
+
+De analyses van Veldleeuwerikgegevens tonen aan dat het MAS toelaat om betekenisvolle ecologische patronen te detecteren, zoals regionale verschillen in populatiedichtheid en associaties met landschapskenmerken.
+De pilot heeft ook de meerwaarde aangetoond van controlegebieden buiten SBP-zones en de noodzaak van statistische representativiteit binnen elk stratum.
+Deze elementen zijn essentieel om het effect van maatregelen betrouwbaar te kunnen evalueren, wat met oudere datasets niet mogelijk was.
+
+Hoewel de huidige resultaten indicatief zijn, onderstrepen ze vooral het belang van langdurige monitoring.
+Een meetnet als MAS moet minstens vijf jaar operationeel zijn om robuuste uitspraken te kunnen doen over trends en de effectiviteit van maatregelen.
+Deze continuïteit is nodig om beleidsdoelstellingen te evalueren en gericht bij te sturen.
+Daarnaast toont de studie aan dat het MAS ook potentieel heeft voor beheermonitoring op microniveau, mits verdere ontwikkeling van analysemethoden op het niveau van individuele waarnemingen en beheerpercelen.
+Dit biedt unieke kansen om specifiek na te gaan welke maatregelen het meest effectief zijn en in welke context.
+
+Voor de monitoring van Haas blijkt het MAS minder geschikt voor absolute populatieschattingen, maar het kan wél dienen voor het opvolgen van relatieve trends in de tijd.
+De beperkingen rond zichtbaarheid en activiteitspatroon van deze soort vragen echter om soortspecifieke aanpassingen of aanvullend onderzoek.
+
+De succesvolle betrokkenheid van vrijwilligers, ondanks aantoonbare verschillen in detectiekracht met professionele tellers, bevestigt het belang van blijvende training, begeleiding en communicatie.
+Een gemengd model van vrijwilligers en professionals biedt het meeste perspectief voor kostenefficiënte en kwalitatieve monitoring op lange termijn.
+
+Samengevat biedt het MAS een schaalbaar, reproduceerbaar en beleidsrelevant kader dat kan bijdragen aan het verbeteren van het biodiversiteitsbeleid in landbouwgebieden.
+Mits blijvende investering in methodologie, menselijk kapitaal en langetermijnplanning, heeft dit meetnet het potentieel om uit te groeien tot een centrale pijler voor de opvolging van akkervogelpopulaties en de evaluatie van landbouwmaatregelen in Vlaanderen.

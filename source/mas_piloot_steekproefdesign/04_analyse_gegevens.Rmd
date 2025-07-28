@@ -152,11 +152,19 @@ include_graphics(file.path("media", "data_exploratie",
 
 ### Zoogdieren {#exploratie-zoogdieren}
 
-Het MAS-protocol kan ook gebruikt worden om zoogdieren te monitoren.
-Voor deze soorten is broedcode niet relevant.
-Wie zien echter dat er, buiten Haas, niet veel zoogdieren worden gezien.
-Haas was sterker aanwezig in De Moeren dan de Oostelijke leemstreek (Fig. \@ref(fig:relfreqs-zoogdieren)), wordt minder geteld in de laatste telperiode (Fig. \@ref(fig:aantallen-haas)), en is het meest frequent in het open landschap (Fig. \@ref(fig:relfreqs-haas)).
-\textcolor{red}{meer kadering, uitleg ... ?}
+We hebben onderzocht of het MAS-protocol ook gebruikt kan worden om zoogdieren te monitoren.
+Zoogdieren kunnen eenvoudig meegeteld worden tijdens de vogeltelling zonder veel extra moeite, door een uitbreiding van de soortenlijst worden zoogdieren op eenzelfde manier ingevoerd als vogels.
+Voor zoogdieren is het opgeven van een broedcode uiteraard niet relevant, die wordt standaard als broedcode 0 genoteerd.
+We zien uit de waarnemingen tijdens het pilootproject dat er, buiten Haas, niet veel zoogdieren worden gezien tijdens de tellingen (Fig. \@ref(fig:relfreqs-zoogdieren)).
+Zoogdiersoorten zoals Ree (*Capreolus capreolus*), Konijn (*Oryctolagus cuniculus*), Vos (*Vulpes vulpes*) en Huiskat (*Felis silvestris catus*) worden wel af en toe gemeld, maar met de beperkte frequentie waarmee ze gemeld worden, kunnen we geen toestand berekenen.
+Mogelijk zijn waarnemingen van (dagactieve) Vos en Huiskat een factor die we kunnen meenemen in het analyseren van het voorkomen van akkervogels.
+De hiervoor vermelde lijst zoogdiersoorten komt buiten het landbouwgebied talrijker voor, en de MAS cijfers geven ons geen bruikbare data waarmee relevante densiteiten berekend zouden kunnen worden.
+Haas is wel een zoogdiersoort waar het zinvol blijkt om data in te zamelen.
+Zo zien we duidelijke verschillen tussen de twee pilootgebieden.
+Haas was sterker aanwezig in De Moeren dan de Oostelijke leemstreek (Fig. \@ref(fig:relfreqs-zoogdieren)).
+Haas wordt minder geteld in de laatste telperiode (Fig. \@ref(fig:aantallen-haas)), en wordt tijdens MAS tellingen het meest frequent gezien in het open landschap (Fig. \@ref(fig:relfreqs-haas)).
+Dat kunnen we verklaren doordat Haas enkel visueel kan worden waargenomen als het zicht zo open mogelijk is vanop een telpunt, en als de vegetatie en het gewas nog laag staat.
+Dat laatste is vooral in het begin van het seizoen het geval.
 
 ```{r relfreqs-zoogdieren, out.width = "100%", fig.cap = "Relatieve frequentie van de zoogdieren gezien tijdens het pilootproject (geordend volgens gemiddelde over telperiode, jaar en regio). Elke punt is een relatieve frequentie in een bepaalde telperiode, jaar en regio."}
 include_graphics(file.path("media", "data_exploratie",

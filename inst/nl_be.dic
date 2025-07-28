@@ -1,4 +1,5 @@
 'Plan
+'recepten'
 +
 +1
 -bestand
@@ -37,6 +38,7 @@ CDS-methode
 CHM
 CV
 CVVI
+Capreolus
 Clone
 Coloeus
 Conservation
@@ -56,6 +58,7 @@ Emberiza
 Evaluatiefase\
 Evenness
 Faunistique
+Felis
 Fign
 Floristique
 Fringilla
@@ -66,6 +69,7 @@ GLB-programmaperiode
 GLB-programmaperiodes
 GLMM
 GLMMs
+GPS
 GPS-loggers
 GVI
 Garrulus
@@ -118,8 +122,10 @@ Niet-landbouwgebruiken
 OL
 OLA
 OpenStreetMap-gegevens
+Oryctolagus
 PDPO
 PDPO-gebieden
+PDPO-middelen
 PDPO-monitoring
 PDPO-steun
 PPC
@@ -142,6 +148,7 @@ SBP
 SBP's
 SBP-gebied
 SBP-gebieden
+SBP-zones
 SCI
 SCIs
 SOVON
@@ -158,15 +165,18 @@ Telpunten
 TinyTeX
 Tweefasemodellen
 UHasselt
+Veldleeuwerikgegevens
 Veldleeuwerikpopulatie
 Verdonckt
 Vlaanderen’
 Voorteelt
+Vulpes
 X-
 Y-coördinaten
 YML
 Zoekfase\
 Zuid-Hageland
+Zuid-West-Vlaanderen
 \
 a-posteriori
 a-posteriorikans
@@ -205,9 +215,11 @@ beheer-
 beheerovereenkomsten\
 beleid-
 beleids-
+beleidsbijsturing
 bird
 boerenlandvogelindex
 boerenlandvogels
+boerenlandvogeltrend
 bootstrapping
 brms
 broed-
@@ -217,7 +229,9 @@ burn-in
 buteo
 cannabina
 canopy
+capreolus
 capture-recapture
+catus
 cell
 centroïde
 cf
@@ -240,6 +254,7 @@ covariaten
 credible
 cross-validation
 cumulative
+cuniculus
 cyaneus
 dagsurveys
 data/processed
@@ -321,6 +336,7 @@ kansdichtheidsfunctieplots
 karrekiet
 key
 key-value
+kiekendief-maatregelen
 kilometerhok
 klasses
 km-hokken
@@ -432,6 +448,7 @@ selection
 shape
 shrinkage
 significantieniveau
+silvestris
 sleutelactoren
 slope
 slopes
@@ -480,6 +497,7 @@ tidybayes
 timidus
 tinnunculus
 toestand-
+toestandmonitoring
 toestandschattingen
 topographic
 traceplot
@@ -508,10 +526,12 @@ viewshedanalyse
 vigueur
 visibility
 vogelmonitoringprojecten
+vogeltelling
 voorjaarsstand
 voorjaarstellingen
 voorteelt
 voorteelten
+vulpes
 waarnemingen.be
 waarnemingpuntniveau
 weidevogelsoorten
