@@ -74,10 +74,10 @@ We overlopen volgende stappen:
 ### Afbakening steekproefkader {#piloot-steekproefkader}
 
 Een steekproefkader heeft de bedoeling om de statistische doelpopulatie die we willen onderzoeken zo goed mogelijk te benaderen.
-Een steekproefkader kan bijvoorbeeld een lijst zijn (bv. alle landbouwbedrijven in Vlaanderen) of het kan een ruimtelijke afbakening zijn (bv. de contour van Vlaanderen).
+Een steekproefkader kan bijvoorbeeld een lijst zijn (bv. alle landbouwbedrijven in Vlaanderen) of het kan een ruimtelijke afbakening zijn (bv. de omtrek van Vlaanderen).
 In het geval van het MAS pilootproject maken we een lijst aan van potentiële telpuntlocaties.
 
-Voor de afbakening van het steekproefkader, starten we met een intersectie van de landbouwstreken van België met de contour van Vlaanderen.
+Voor de afbakening van het steekproefkader, starten we met een intersectie van de landbouwstreken van België met de omtrek van Vlaanderen.
 Dit geeft ons een kaart van de landbouwstreken in Vlaanderen (Fig. \@ref(fig:landbouwstreken)).
 De meeste landbouwstreken zijn opgebouwd uit meerdere polygonen.
 Vervolgens beperken we dit daarom voor de Oostelijke leemstreek tot enkel de polygoon die overlapt met de perimeter van het soortenbeschermingsprogramma voor akkervogels.

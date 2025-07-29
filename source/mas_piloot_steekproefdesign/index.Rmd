@@ -115,13 +115,13 @@ als gevolg van intensieve landbouw, met boerenlandvogels als belangrijke indicat
 De Boerenlandvogelindex is weliswaar een sleutelindicator die in Europese en Vlaamse regelgeving is opgenomen, maar bestaande monitoringprojecten volstaan niet om alle monitoringsbehoeften in Vlaanderen volledig te dekken.
 Historische en lopende monitoringprojecten en -initiatieven bleken een waardevolle referentie en leverden vele bruikbare geleerde lessen.
 Enkele langlopende monitoringsprojecten beschouwen we als basis om op verder te werken.
-Voor opvolging van de toestand van de boerenlandvogelindex over het hele Vlaamse gewest kunnen we berusten op het meetnet Algemene Broedvogels Vlaanderen, maar de effectiviteit van het beleid kunnen we er niet mee volgen.
+Voor opvolging van de toestand van de boerenlandvogelindex over het hele Vlaamse gewest kunnen we terugvallen op het meetnet Algemene Broedvogels Vlaanderen, maar de effectiviteit van het beleid kunnen we er niet mee volgen.
 Er is een dringende behoefte aan meer gedetailleerde trendgegevens en inzicht in de effectiviteit van genomen maatregelen, hiervoor blijkt het MAS een geschikt meetnet.
 
 De MAS-pilootstudie van 2022-2023 richtte zich op het snijvlak tussen beleidsmonitoring (macroniveau) en beheermonitoring (mesoniveau).
 Deze studie bouwde voort op eerdere MAS-tellingen die sinds 2017 plaatsvonden in het kader van 'Plan Kiekendief'.
 De twee pilootgebieden waren de Oostelijke leemstreek en De Moeren.
-Het steekproefkader werd afgebakend door de landbouwstreken van België te kruisen met de contour van Vlaanderen.
+Het steekproefkader werd afgebakend door de landbouwstreken van België te kruisen met de omtrek van Vlaanderen.
 Niet-landbouwgebruiken, zoals parken, woongebieden, militaire zones, industriegebieden en begraafplaatsen, werden uitgesloten op basis van OpenStreetMap-gegevens om de focus op agrarisch gebied te waarborgen.
 Telpunten werden langs openbare wegen en paden geplaatst, en in De Moeren ook langs waterwegen.
 De VITO 2019-landgebruikskaart werd gebruikt om te garanderen dat telpunten zich in gebieden met voldoende landbouwareaal bevonden.
@@ -187,7 +187,7 @@ Die toestand moet langdurig frequent gemonitord worden, om de effectiviteit van 
 We bevelen aan om de toestandmonitoring (ABV en BBV) verder te zetten en gelijktijdig aan te vullen met een jaarlijkse beleidsevaluatie via MAS, zodat gerichte en tijdige bijsturing mogelijk wordt.
 
 **3. Onderzoek op perceelsniveau waar maatregelen effectief zijn**\
-Tot op heden is onvoldoende duidelijk welke ingrepen effectief leiden tot herstel van akkervogelpopulaties.
+Tot vandaag is het onvoldoende duidelijk welke ingrepen effectief leiden tot herstel van akkervogelpopulaties.
 Er zijn wel 'recepten' geformuleerd, bestaande uit een combinatie van acties (zoals nestbescherming) en maatregelen (zoals beheerovereenkomsten, ecoregelingen en maai- en onderhoudsbeheer).
 Vooralsnog hebben die recepten de Vlaamse boerenlandvogeltrend nog niet positief gekeerd, zo blijkt uit de indicator broedvogels van weiden en akkers [@onkelinx2025abv].
 Verdere analyse op beheer- en perceelsniveau is nodig om te achterhalen waar deze recepten wel of niet werken, en welke factoren daarvoor bepalend zijn.
