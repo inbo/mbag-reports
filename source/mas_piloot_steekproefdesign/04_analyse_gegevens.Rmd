@@ -647,7 +647,7 @@ include_graphics(file.path("media", "data_exploratie",
                            "soortbeschermingsmaatregelen1_2018_2023.pdf"))
 ```
 
-```{r verklarende-vars-tab}
+```{r verklarende-vars-tab, message=FALSE, warning=FALSE}
 summary_var_tab <- read_csv2(
   file.path("media", "verklarende_variabelen",
             "verklarende_variabelen_tabel.csv"),
@@ -1329,7 +1329,7 @@ We kunnen concluderen dat het schatten van densiteiten een evenwichtsoefening is
 Hierbij konden we steunen op het onderzoek dat reeds in Nederland gedaan is m.b.t. het MAS protocol [@roodbergen2011].
 De ecologische context kan in rekening genomen worden door de data te filteren op broedcode groter dan nul en voor elke soort de telperiodes te selecteren die binnen de broedperiode van elke soort vallen.
 Een extra maatregel zou kunnen zijn om over die telperiodes (per telpunt per jaar) het maximum aantal te nemen als finale dataset voor verdere analyse (met effort = 1 omdat we dan niet meer corrigeren voor het aantal bezoeken, waardoor geen strikte uitmiddeling gebeurt).
-Voor soorten als Patrijs, Haas zou het mogelijk nuttig zijn de oppervlaktes van de telcirkel te corrigeren voor de oppervlakte die effectief zichtbaar is voor de teller (volgens viewshedanalyse, zie \@ref(aanpassingen-meetnet)), aangezien deze soorten zich deze soorten zich laag tegen de grond bevinden Distance sampling m.b.v. de **Distance** package bleek een relatief eenvoudige procedure (zowel mathematisch als gebruiksvriendelijkheid) om densiteitsschattingen (incl. onzekerheid) te maken rekening houdend met de detectiekans van een soort.
+Voor soorten als Patrijs, Haas zou het mogelijk nuttig zijn de oppervlaktes van de telcirkel te corrigeren voor de oppervlakte die effectief zichtbaar is voor de teller (volgens viewshedanalyse, zie \@ref(aanpassingen-meetnet)), aangezien deze soorten zich laag tegen de grond bevinden Distance sampling m.b.v. de **Distance** package bleek een relatief eenvoudige procedure (zowel mathematisch als gebruiksvriendelijkheid) om densiteitsschattingen (incl. onzekerheid) te maken rekening houdend met de detectiekans van een soort.
 We toonden bovendien aan dat we op basis hiervan specifieke hypotheses kunnen testen aan de hand van *species change indices* of ter uitbreiding *multi species change indices* waarbij een index zou berekend worden door trends van meerdere soorten te combineren.
 We zijn dan ook van mening dat complexere analyses niet nodig zijn.
 Een tweestapsmethodiek lijkt een valabele optie die enerzijds overzichtelijk blijft en de complexiteit (en bijgevolg tijdsinvestering) van de analyses breekt:
@@ -1598,13 +1598,13 @@ include_graphics(file.path("media", "beheerovereenkomsten",
                            "beleidstoestand_veldleeuwerik_fine.pdf"))
 ```
 
-```{r beleid-dm-veldleeuw2, out.width = "100%", fig.cap = "A-posterioriverdelingen van het verschil in maximum aantal broedparen per telcirkel van laag- en hoogbeleid met nulbeleid voor het model van De Moeren."}
+```{r beleid-dm-veldleeuw2, out.width = "90%", fig.cap = "A-posterioriverdelingen van het verschil in maximum aantal broedparen per telcirkel van laag- en hoogbeleid met nulbeleid voor het model van De Moeren."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "de_moeren",
                            "beleidstoestand_veldleeuwerik_coarse.pdf"))
 ```
 
-```{r boom-dm-veldleeuw, out.width = "100%", fig.cap = "Relatie tussen het maximum aantal broedparen in een telcirkel en de oppervlakte aan bomen. De zwarte lijn is de posterior mediaan en de onzekerheidsband toont het 95 \\% geloofwaardigheidsinterval. Voor betere visualisatie hebben we een pseudo-log-transformatie langs de y-as gedaan."}
+```{r boom-dm-veldleeuw, out.width = "90%", fig.cap = "Relatie tussen het maximum aantal broedparen in een telcirkel en de oppervlakte aan bomen. De zwarte lijn is de posterior mediaan en de onzekerheidsband toont het 95 \\% geloofwaardigheidsinterval. Voor betere visualisatie hebben we een pseudo-log-transformatie langs de y-as gedaan."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "de_moeren",
                            "boom_veldleeuwerik_data.pdf"))
@@ -1618,8 +1618,7 @@ Samenvattende statistieken van de parameters zijn gegeven in Tabel \@ref(tab:ol-
 De referentiegroep is nulbeleid (= geen oppervlakte‐aandeel soortbeschermingsmaatregelen aanwezig).
 We zien significant meer broedparen in telcirkels met laag-, middelhoog- en hoogbeleid (resp. gemiddeld 16 %, 49 % en 43 % meer).
 Voor middellaagbeleid is de onzekerheid te groot (Fig. \@ref(fig:beleid-ol-veldleeuw1)).
-Wanneer we de categorieën aggregeren zien we een positief verschil in aantal broedparen voor laagbeleid en hoogbeleid met nulbeleid Fig.
-\@ref(fig:beleid-ol-veldleeuw2)).
+Wanneer we de categorieën aggregeren zien we een positief verschil in aantal broedparen voor laagbeleid en hoogbeleid met nulbeleid (Fig. \@ref(fig:beleid-ol-veldleeuw2)).
 Verder zien we een significant positief effect van de openheid van het landschap op 1000 m schaal (Fig. \@ref(fig:openheid-ol-veldleeuw)) en negatieve effecten van de andere continue variabelen (Bijlage \@ref(extra-figs-2022-2023)).
 
 ```{r ranking-ol-veldleeuw, out.width = "100%", fig.cap = "Verschil in \\textit{MLPD} met referentiemodel (rode stippellijn) voor verschillende submodelgroottes voor het model van de Oostelijke leemstreek."}
@@ -1677,13 +1676,13 @@ model_output_2022_2023 %>%
   kableExtra::row_spec(0, bold = TRUE)
 ```
 
-```{r beleid-ol-veldleeuw1, out.width = "100%", fig.cap = "A-posterioriverdelingen van het verschil in maximum aantal broedparen per telcirkel met nulbeleid (= geen oppervlakte-aandeel soortbeschermingsmaatregelen aanwezig) voor het model van de Oostelijke leemstreek. Het punt geeft de posterior mediaan aan en het interval het 95 \\% geloofwaardigheidsinterval."}
+```{r beleid-ol-veldleeuw1, out.width = "90%", fig.cap = "A-posterioriverdelingen van het verschil in maximum aantal broedparen per telcirkel met nulbeleid (= geen oppervlakte-aandeel soortbeschermingsmaatregelen aanwezig) voor het model van de Oostelijke leemstreek. Het punt geeft de posterior mediaan aan en het interval het 95 \\% geloofwaardigheidsinterval."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
                            "beleidstoestand_veldleeuwerik_fine.pdf"))
 ```
 
-```{r beleid-ol-veldleeuw2, out.width = "100%", fig.cap = "A-posterioriverdelingen van het verschil in maximum aantal broedparen per telcirkel van laag- en hoogbeleid met nulbeleid voor het model van de Oostelijke leemstreek."}
+```{r beleid-ol-veldleeuw2, out.width = "90%", fig.cap = "A-posterioriverdelingen van het verschil in maximum aantal broedparen per telcirkel van laag- en hoogbeleid met nulbeleid voor het model van de Oostelijke leemstreek."}
 include_graphics(file.path("media", "beheerovereenkomsten",
                            "oostelijke_leemstreek",
                            "beleidstoestand_veldleeuwerik_coarse.pdf"))
