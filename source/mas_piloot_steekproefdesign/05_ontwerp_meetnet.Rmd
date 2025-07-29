@@ -4,15 +4,15 @@
 
 ### In het veld {#issues-veld}
 
-Ondanks de inspanningen om tijdens de steekproeftrekking al zoveel mogelijk rekening te houden met mogelijke problemen tijdens de effectieve tellingen in het veld (Hoofdstuk \@ref(pilootgegevens)), werden nog 163 problematische telpunten gesignaleerd die dan werden vervangen door een reservepunt.
+Ondanks de inspanningen om tijdens de steekproeftrekking al zoveel mogelijk rekening te houden met mogelijke problemen tijdens de effectieve tellingen in het veld (Hoofdstuk \@ref(pilootgegevens)), werden nog 163 problematische telpunten gesignaleerd die werden vervangen door een reservepunt.
 Hierbij werden opmerkingen in het attributenveld van de kaartlaag genoteerd (\@ref(manuele-controle)).
 Deze werden met "regular expressions" geanalyseerd en gecategoriseerd in vijf categorieën (Tabel \@ref(tab:issues-piloot)).
-Zo kregen we een algemeen overzicht waar de belangrijkste problemen zich nog bevonden.
-Bij een deel van punten is er te veel overlap met andere telcirkels.
-We zien vooral problemen met zichtbaarheid omdat punten nog vallen in bossen, boomgaarden, holle wegen etc., hoewel er niet altijd info is waarom zichtbaarheid slecht is.
-Een belangrijk aandeel plots is ook ontoegankelijk omdat het te dicht bij een grote baan ligt, op privéterrein, langs water etc.
-Er zijn 7 punten waarbij geen info aanwezig is.
-In Sectie \@ref(uitbreiding-vlaanderen) leggen we uit hoe we hiermee rekening hebben gehouden voor uitbreiding van het MAS-meetnet in Vlaanderen.
+Zo kregen we een algemeen overzicht van waar de belangrijkste problemen zich nog bevonden.
+Bij een deel van de punten is er te veel overlap met andere telcirkels.
+We zien vooral problemen met de zichtbaarheid omdat de punten nog vallen in bossen, boomgaarden, holle wegen etc., hoewel er niet altijd info is waarom zichtbaarheid slecht is.
+Een belangrijk aandeel plots is ontoegankelijk omdat het te dicht bij een grote baan ligt, op privéterrein, langs water etc.
+Er zijn zeven punten waarbij geen info aanwezig is.
+In Sectie \@ref(uitbreiding-vlaanderen) leggen we uit hoe we hiermee rekening hebben gehouden voor de uitbreiding van het MAS-meetnet in Vlaanderen.
 
 ```{r issues-piloot}
 read_csv(file.path("media", "issues_pilootmeetnet",
@@ -33,29 +33,29 @@ read_csv(file.path("media", "issues_pilootmeetnet",
 
 ### Tijdens de analyses
 
-In Sectie \@ref(dubbeltellingen) toonden we aan dat vrijwilligers een significant minder aantal soorten en waarnemingen zagen dan een professionele teller die op dezelfde locatie in dezelfde telperiode ging hertellen.
+In Sectie \@ref(dubbeltellingen) toonden we aan dat vrijwilligers een significant minder aantal soorten en waarnemingen ingeven dan een professionele teller die op dezelfde locatie in dezelfde telperiode ging hertellen.
 We vonden geen bewijs dat dit verschil anders was tussen data met broedcode 0 en broedcode \> 0, noch afhankelijk van de ervaring van de vrijwilligers (beginnende versus ervaren vrijwilligers).
 We moeten onderkennen dat dit slechts een beperkte analyse was en deze resultaten niet indicatief zijn voor het volledige pilootproject.
-Er werden tien telpunten in vier telperiodes en één telpunt in drie telperiodes dubbelgeteld van zeven vrijwilligers door een professionele teller en dit enkel in De Moeren.
-Dit neemt niet weg dat deze resultaten een nuttige indicatie zijn dat er moet blijven ingezet worden op doorlopende enthousiasmering en training van vrijwilligers bijvoorbeeld via gezamenlijke excursies en studiedagen.
-Dit wordt verder besproken in Sectie \@ref(vrijwilligers-mbag) \textcolor{red}{zie ook de tijdlijn Fig. ...)}.
+In De Moeren werden tien telpunten in vier telperiodes en één telpunt in drie telperiodes van zeven vrijwilligers dubbelgeteld door een professionele teller.
+Dit neemt niet weg dat deze resultaten een nuttige indicatie zijn en aantonen dat er moet blijven worden ingezet op doorlopende enthousiasmering en training van vrijwilligers bijvoorbeeld via gezamenlijke excursies en studiedagen.
+Dit wordt verder besproken in Sectie \@ref(vrijwilligers-mbag).
 
 Wanneer we de data meer in detail gingen analyseren, bleek duidelijk dat deze pilootstudie een rijke bron van data is.
 Enkele analysemogelijkheden werden in het vorige hoofdstuk geduid via een case studie voor de Veldleeuwerik (\@ref(veldleeuwerik)).
-Dit is echter maar het topje van de ijsberg.
+Dit is echter het topje van de ijsberg.
 Een discussie van de verderzetting en uitbreiding van mogelijke statistische analyses wordt in het volgende hoofdstuk beschreven (Hoofdstuk \@ref(discussie)).
-Een belangrijke beperking was wel het aantal data in De Moeren.
+Een belangrijke beperking was het aantal data in De Moeren.
 Zelfs voor een algemene soort als Veldleeuwerik zagen we relatief grote onzekerheid op parameterschattingen en voor minder algemene soorten convergeerden modellen moeilijk of verkregen we onbetrouwbare resultaten.
 Aangezien de MAS-uitbreiding naar Vlaanderen op macro-schaal gebeurt (zie verder), verwachten we hier geen problemen.
 Wel kan het interessant zijn om tijdens latere analyses in te zoomen op kleinere deel(kern)gebieden binnen bepaalde landbouwstreken (meso-schaal).
-Daarbij stellen we voor dat een gebied ter grootte van De Moeren als minimumschaal wordt gehanteerd (of afgerond ten minste 5000 ha).
-Naast een minimum oppervlakte moet natuurlijk ook gewaarborgd worden dat het subgebied genoeg telpunten bevat, want deze zullen de power van statistische analyses bepalen.
+Daarbij stellen we voor dat een gebied ter grootte van De Moeren als minimumschaal wordt gehanteerd (of afgerond ten minste 5.000 ha).
+Naast een minimum oppervlakte moet gewaarborgd worden dat het subgebied genoeg telpunten bevat, want deze zullen de kracht van statistische analyses bepalen.
 
 ## Uitbreiding van het akkervogelmeetnet voor Vlaanderen {#uitbreiding-vlaanderen}
 
-Het idee is om in de komende jaren het MAS-meetnet uit te breiden over de verschillende landbouwstreken in Vlaanderen (Hoofdstuk \@ref(pilootgegevens), Fig.
+Het idee is opgevat om het MAS-meetnet gradueel uit te breiden over de verschillende landbouwstreken in Vlaanderen (Hoofdstuk \@ref(pilootgegevens), Fig.
 \@ref(fig:landbouwstreken)).
-In 2023 zijn we reeds gestart met de leemstreek en de zandleemstreek.
+In 2023 zijn we reeds gestart met uitrol naar de Westelijke leemstreek en de zandleemstreek.
 
 ### Aanpassingen ten opzichte van het pilootmeetnet {#aanpassingen-meetnet}
 
@@ -72,9 +72,9 @@ Zie Bijlage \@ref(bijlage-uitrol-mas) (Fig. \@ref(fig:steekproef-afbakening-mbag
     Op basis van de problemen gesignaleerd tijdens terreinbezoeken, sluiten we meer landgebruiken uit dan voordien (Tabel \@ref(tab:exclusie-landgebruik)).
     Deze vooral om zoveel mogelijk een goede bereikbaarheid en zichtbaarheid te voorzien.
     Langs autosnelwegen liggen vaak parallelle paden; zelfs langs beide kanten van de snelweg.
-    Dit kan in de steekproef tot gevolg hebben dat er met een hogere waarschijnlijkheid een punt wordt geselecteerd vlak bij een snelweg, omdat er veel van zulke punten zijn.
-    Enerzijds is dat een realiteit van het terrein die een invloed heeft op de waarnemingen (bv. vaak kraaiachtigen en Buizerd langs snelwegen) en vrij zeker ook op de detecteerbaarheid (geluidsoverlast en beperkte zichtbaarheid).
-    Daarom hebben we een extra exclusiecriterium in acht te genomen door een zone van 100 m buffer rond autosnelwegen en invoegstroken en afritten van autosnelwegen uit te sluiten.
+    Dit kan in de steekproef tot gevolg hebben dat er met een hogere waarschijnlijkheid een punt wordt geselecteerd vlakbij een snelweg, omdat er veel van zulke punten zijn.
+    Enerzijds is dat een realiteit van het terrein die een invloed heeft op de waarnemingen (bv. vaak kraaiachtigen en Buizerd langs snelwegen) en vrij zeker ook op de detecteerbaarheid van vogels (geluidsoverlast en beperkte zichtbaarheid).
+    Daarom hebben we een extra exclusiecriterium in acht genomen door een zone van 100 m buffer rond autosnelwegen en invoegstroken en afritten van autosnelwegen uit te sluiten.
     Op die manier gaan er nog steeds punten zijn waarvan de telcirkels het effect van snelwegen omvatten, maar sluiten we punten die te dicht tegen snelwegen liggen uit.
     Een recentere versie van de OpenStreetMap data werd gedownload op 16-03-2023.
 
@@ -127,7 +127,7 @@ tibble(
 ```
 
 3.  Bepalen geldige plaatsen waar telling kan uitgevoerd worden\
-    We beperken omwille van de bereikbaarheid de plaatsen waarlangs tellingen kunnen uitgevoerd worden (Tabel \@ref(tab:inclusie-wegen)). We gaan o.a. niet langer langs waterwegen telpunten leggen (bv. grachten, beken). Ook behouden we wel de holle wegen omdat deze een belangrijk onderdeel uitmaken van het agrarisch landschap. Indien de zichtbaarheid toch te laag is in een holle weg, wordt die er via de visibiliteitsberekening later nog uitgefilterd (zie verder).
+    We beperken omwille van de bereikbaarheid de plaatsen waarlangs tellingen kunnen uitgevoerd worden (Tabel \@ref(tab:inclusie-wegen)). We gaan o.a. niet langer langs waterwegen telpunten leggen (bv. grachten, beken). Holle wegen worden wel behouden omdat deze een belangrijk onderdeel uitmaken van het agrarisch landschap. Indien de zichtbaarheid toch te laag is in een holle weg, wordt die er via de visibiliteitsberekening later nog uitgefilterd (zie verder).
 
 ```{r inclusie-wegen}
 tibble(
@@ -165,21 +165,24 @@ include_graphics(file.path("media", "visibility",
                            "voorbeeld_zichtbaarheid.pdf"))
 ```
 
-5.  Binnen of buiten gebieden met soortbeschermingsplan\
-    We breiden soorbeschermingsplangebieden uit.
+5.  Binnen of buiten gebieden met soortenbeschermingsprogramma\
+    Enkel het soortenbeschermingsprogrammagebied voor akkervogels gebruiken bleek te beperkt, want ook in gelijkaardige landbouwgerelateerde SBP’s wordt actief ingezet op gelijkaardige maatregelen als voor akkervogels.
+    Die werden door de VLM gebundeld tot de zogenoemde beheergebieden.
+    In die SBP-gebieden werd bijvoorbeeld een aanzienlijk areaal aan beheerovereenkomsten gesloten, die een effect kunnen hebben op akkervogels.
+    Daarom verruimen we het stratum “binnen SBP” met alle landbouwgerelateerde soortenbeschermingsprogrammagebieden.
     We nemen kerngebieden en zoekzones samen als onderzoeksgebied en alles hierbuiten beschouwen we als controle.
     Voor het nieuwe SBP gebied combineren we meerdere SBP lagen:
 
     -   nieuwe perimeter SBP akkervogels [@jansen2022adviesakkervogels]
-    -   SBP grauwe kiekendief
+    -   SBP Grauwe kiekendief
         -   oude perimeter van in gebruik van 2018 t/m 2022 [@vandegehuchte2015grauwekiekendief]
         -   nieuwe (door INBO voorgestelde) perimeter [@spanoghe2022grauwekiekendief]
-    -   SBP bruine kiekendief, SBP zomertortel en SBP hamster [@overigeSBPs]
+    -   SBP Bruine kiekendief, SBP Zomertortel en SBP Hamster [@overigeSBPs]
 
 Figuur \@ref(fig:sbp-zandleem) toont de nieuwe SBP gebieden voor de leemstreek en de zandleemstreek.
 Kaartlagen per soort zijn gevisualiseerd in Bijlage \@ref(bijlage-uitrol-mas) (Fig. \@ref(fig:sbp-per-soort)).
 
-```{r sbp-zandleem, out.width = "100%", fig.cap = "Perimeters van leemstreek en de zandleemstreek met aanduiding van het gebied binnen en buiten soortbeschermingsplan (SBP)."}
+```{r sbp-zandleem, out.width = "100%", fig.cap = "Perimeters van leemstreek en de zandleemstreek met aanduiding van het gebied binnen en buiten soortenbeschermingsprogramma (SBP)."}
 include_graphics(file.path("media", "kaartjes", "sbp_mbag_kaart.png"))
 ```
 
@@ -188,11 +191,13 @@ include_graphics(file.path("media", "kaartjes", "sbp_mbag_kaart.png"))
     Deze variabele brengen we mee in rekening bij de steekproeftrekking zodat we niet alleen een ruimtelijk gebalanceerde steekproef krijgen, maar ook een gebalanceerde steekproef in functie van deze variabele.
 
 7.  Steekproeftrekking\
-    Omdat we nu met veel grotere gebieden werken, merkten we wel dat een maximale trekking niet voor een goede spatiale spreiding zorgt omdat het algoritme niet genoeg vrijheid krijgt.
+    Omdat we nu met veel grotere gebieden werken, merkten we op dat een maximale trekking niet resulteerde in een goede ruimtelijke spreiding.
+    Dit komt doordat het algoritme te beperkt wordt in zijn mogelijkheden om een goede steekproef te trekken.
     Daarom besloten we uiteindelijk om 1/20ste (5 %) van het aantal elementen in het steekproefkader te nemen per stratum.
     Dit is niet de finale steekproef, maar een (veel) grotere steekproef waaruit later het gewenste aantal telpunten wordt geselecteerd.
-    Het algoritme kent een volgorde toe bij de steekproeftrekking en het is aan de hand van deze volgorde dat het gewenste aantal telpunten wordt geselecteerd.
-    Dit heeft als eigenschap dat deze set ook (ruimtelijk) gebalanceerd is en een goede spreiding vertoont.
+    Het algoritme kent een volgorde toe bij de steekproeftrekking.
+    Het is aan de hand van deze volgorde dat het gewenste aantal telpunten wordt geselecteerd.
+    Dit heeft als eigenschap dat deze set (ruimtelijk) gebalanceerd is en een goede spreiding vertoont.
     We trekken geen veelvoud van het vooropgestelde aantal telpunten (enkel eerste batch van punten).
     Elk telpunt zal een volgnummer hebben (`sample_order`).
     De eerste bv.
@@ -241,4 +246,32 @@ Dit zal zorgen dat deze bestanden nog beter traceerbaar zijn en het volledige me
 
 ## Vrijwilligerswerking {#vrijwilligers-mbag}
 
-\textcolor{red}{uitdagingen en verandering vrijwilligerswerking t.o.v. pilootproject}
+De hobby om vogels te kijken is waarschijnlijk nog nooit zo populair geweest.
+Het aantal mensen die vogels kijkt en/of fotografeert groeit, ook in Vlaanderen, als we het aantal vogelwaarnemers in waarnemingen.be (<https://waarnemingen.be/>) als referentie gebruiken.
+De stap voor deze burgerwetenschappers om mee te helpen met een monitoring of telproject is groot, en gaat niet vanzelf.
+Het tellen van vogels (en zoogdieren) volgens een protocol vergt een goede kennis van de identificatie van de soorten, zowel op zicht als op geluid, alsook een motivatie om volgens de voorschriften tijdig en secuur de telpunten te bezoeken.
+Mensen met deze kennis en capaciteit zijn schaars, zowel onder professionelen als vrijwilligers.
+Deze niche groep mensen wordt al fel bevraagd voor allerhande tel- en natuurbeschermingswerk.
+Het verzekeren van voldoende vrijwilligers bij vogelmonitoringprojecten blijkt de laatste jaren niet evident.
+Zo loopt het aantal vrijwilligers die deelnemen aan ABV - ondanks ondersteuning door Natuurpunt Studie - gestaag terug, waardoor het beoogde aantal hokken niet gehaald wordt puur op vrijwillige basis [@onkelinx2025abv].
+De inbreng van vrijwilligers in het veldwerk voor de nieuwe vogelatlas bleek onvoldoende, daar bleven nog gaten oningevuld bij gebrek aan vrijwilligers [@vogelnieuws2023].
+Het spreekt voor zich dat we daarmee rekening moeten houden voor de verderzetting van MAS-tellingen, alsook voor de uitrol van een nieuw meetnet naar nieuwe regio’s.
+
+Uit de ervaring opgedaan tijdens het pilootproject bleek dat vrijwilligers via de tellingen in de eerste plaats een bijdrage willen leveren aan de bescherming van akkervogels.
+Ze voelen zich extra gestimuleerd in gebieden waar veel maatregelen worden genomen en als ze voldoende geïnformeerd worden over wat hun gegevens opleveren.
+Ook bleek dat groepsgevoel, gezamenlijke activiteiten (regionaal) en communicatie van groot belang zijn.
+Daarom werd in de loop van het pilootproject door INBO voorzien in vormingsactiviteiten, zoals het jaarlijks opfrissen van de methodiek, het bespreken van broedcodes, identificatie van soorten op zicht en op geluid.
+Dit deden we zowel als webinar online als met trainingsdagen in het veld.
+Het lijkt een meerwaarde te zijn als de vrijwilligers jaarrond met het thema geactiveerd blijven, waarbij samen met vrijwilligersorganisaties ook buiten het broedseizoen activiteiten en tellingen voorzien worden in het buitengebied.
+Sprekende voorbeelden daarvan zijn het opzetten van slaapplaatstellingen van kiekendieven, braakballen pluizen, seizoensbijeenkomsten met informatiedoorstroom van analyses, excursies rond het thema wintervoedsel etc.
+Op die manier zijn we er in geslaagd om continuïteit te voorzien in het aantal vaste vrijwillige tellers die jaarlijks opnieuw willen deelnemen, alsook een lichte groei te bewerkstelligen in het aantal nieuwe vrijwilligers die telpunten opnemen.
+Bij een uitrol in nieuwe regio’s is het onrealistisch om meteen van het ene jaar op het andere jaar te verwachten dat een aanzienlijk aandeel telpunten wordt opgenomen door lokale vrijwilligers.
+
+Garanderen dat alle punten van de steekproef geteld geraken, vooral in nieuwe en controlegebieden, is enkel mogelijk bij een aanzienlijk professionele ondersteuning van vrijwilligers alsook van betaalde werkkrachten die telpunten tellen.
+Als realistisch streefdoel stellen we voorop dat in dit meetnet naar schatting 20 % van de telpunten kan opgenomen worden door vrijwilligers, met groeipotentieel om dat na verloop van enkele jaren uit te breiden naar 40 %.
+Om kostenefficiënt en tegelijk zo kwalitatief mogelijk te werken, wordt het aandeel professioneel getelde punten best door een mix van werkkrachten opgenomen.
+Daarbij wordt het grootste deel van het professionele telwerk best opgenomen door tijdelijke werkkrachten, waarbij de inzet van jobstudenten, freelancers, en tijdelijke werknemers in deze volgorde het meest kostenefficiënt is.
+De openbare aanbesteding, waar freelancers (zelfstandigen) of studiebureaus op kunnen indienen, gebeurt best zo vroeg mogelijk voor het broedseizoen, zodat zoveel mogelijk kandidaten een offerte kunnen indienen, en zodat het terreinwerk nog ingepland kan worden.
+
+Het waarborgen van de kwaliteit van de tellingen is een belangrijk aandachtspunt, zowel bij professionele tellers, als bij vrijwilligers.
+Voor het professionele luik worden best strenge selectiecriteria toegepast bij het aanwerven van werkkrachten of bij het aanschrijven

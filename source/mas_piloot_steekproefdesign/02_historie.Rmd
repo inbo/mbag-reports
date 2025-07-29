@@ -1,1 +1,64 @@
-# Historie akkervogelmeetnetten {#historie}
+# Historie en lopende vogelmeetnetten in Vlaanderen {#historie}
+
+Het langlopend monitoren van de toestand en trend van vogels in landbouwgebied is van groot belang om inzicht te verkrijgen in de impact van landbouwpraktijken op de vogelpopulaties.
+Verschillende initiatieven daarrond zijn al genomen of nog lopend in Vlaanderen.
+De meest relevante projecten zijn de tellingen van ‘Algemene Broedvogels Vlaanderen’ (ABV), ‘Bijzondere Broedvogels Vlaanderen’ (BBV) en vogelatlas tellingen.
+Dit hoofdstuk beschouwt de meerwaarde en de complementariteit van die meetnetten in relatie tot het nieuw op te starten Meetnet Agrarische Soorten (MAS), met bijzondere aandacht voor hun focus, schaal, methodiek en mogelijkheden tot bijsturing van beleid.
+
+## Bestaande algemene en bijzondere meetnetten
+
+Voor broedvogels vormen de volgende initiatieven de kern:
+
+Het ABV-project richt zich op het detecteren van trends van meer algemene soorten [@onkelinx2025abv].
+Het meetnet bestaat uit 1200 kilometerhokken verspreid over Vlaanderen en gelegen in diverse landschapstypes.
+De doelstelling is om minimaal 900 van deze hokken via punttellingen op te volgen tijdens een driejaarlijkse cyclus (300 per jaar).
+De opvolging gebeurt sinds 2007.
+Elk hok wordt drie keer tijdens het broedseizoen geïnventariseerd, waarbij elk van zes telpunten telkens 5 minuten wordt geteld.
+De coördinatie ligt bij het INBO, dat ook de analyses en rapportering verzorgt, terwijl Natuurpunt het vrijwilligersnetwerk aanstuurt.
+De voorbije 3-4 jaren was de vrijwilligersbijdrage onvoldoende om het doel van 300 hokken per jaar te halen.
+O.a.
+het erg intensieve terreinwerk voor de vogelatlas steunde immers grotendeels op dezelfde pool van tellers.
+Nu het telwerk voor die atlas voorbij is, wordt getracht de inzet voor ABV opnieuw aan te wakkeren.
+In 2025 lijken we uit te komen op de beoogde 300 getelde hokken, grotendeels op vrijwillige basis maar daar bovenop aangevuld door professionele inzet door INBO.
+Wetenschappelijk significante trends voor Vlaanderen werden de voorbije jaren berekend voor een 80-tal soorten waaronder Veldleeuwerik en Gele kwikstaart (*Motacilla flava*).
+
+Het BBV-project brengt territoria van (zeer) schaarse broedvogels in kaart.
+Het gaat om zeldzame soorten zoals Bruine kiekendief (*Circus* *aeruginosus*) en Grauwe gors.
+Die soorten zijn zo zeldzaam, of komen zo geconcentreerd voor, dat ze jaarlijks in geheel Vlaanderen dienen geïnventariseerd te worden om een wetenschappelijk verantwoorde analyse van de resultaten mogelijk te maken.
+Hierdoor zijn de resultaten over het algemeen goed vergelijkbaar tussen gebieden en tussen jaren.
+Het project loopt sinds 1994 en de inventarisatie gebeurt jaarlijks.
+De volledigheid van de tellingen varieert afhankelijk van de soort, regio, verspreiding, broedgedrag en de beschikbaarheid van tellers.
+Daarnaast wordt sinds 1994 een steekproefmethode gehanteerd, waarbij een beperkt aantal gebieden wordt geteld om de ontwikkeling van zeldzame en minder algemene broedvogels te volgen.
+
+De Vlaamse Vogelatlas 2020-2024 heeft vooral als doel de verspreiding van broed- en wintervogels in kaart te brengen, naast het maken van nieuwe populatieschattingen sinds de vorige atlas (2000-2002) [@vermeersch2004].
+Hierbij worden punttellingen in geselecteerde km-hokken uitgevoerd, het zogenaamde ‘gouden grid’.
+
+Bij deze projecten is de rolverdeling gelijkaardig: het INBO coördineert de rapportering aan regionale, nationale en internationale instanties, terwijl Natuurpunt het vrijwilligersnetwerk organiseert en de steekproefhokken verdeelt.
+
+## Regionale initiatieven rond akkervogels
+
+Naast deze algemene meetnetten zijn er verschillende initiatieven die zich specifieker richten op akkervogels.
+Deze projecten vormden een belangrijke inspiratiebron voor dit pilootproject:
+
+Het ‘Meetnet Agrarische Soorten’ (MAS) werd sinds 2017 opgestart in Vlaanderen, binnen het kader van 'Plan Kiekendief' (uitvoering van het soortenbeschermingsprogramma Grauwe kiekendief (*Circus* *pygargus*) [@vandegehuchte2015grauwekiekendief]) [@vandewaerde2020].
+Tellingen werden voornamelijk door vrijwilligers gedaan in twee gebieden: de leemstreek en De Moeren.
+Deze tellingen werden geëvalueerd om de voedselbeschikbaarheid voor Grauwe kiekendief te monitoren, in de gebieden waar sterk werd ingezet op maatregelen [@wiersma2021voedsel].
+De voornaamste conclusie was dat door een beperkte looptijd en een gebrek aan controlepunten de statistische kracht ontbrak om de effectiviteit van die acties te evalueren.
+
+Een vergelijkende studie omtrent de toestand van plattelandsvogels werd eerder uitgevoerd tussen Noord-Frankrijk en Zuid-West-Vlaanderen in 2013 en 2019 [@dochy2021].
+Daaruit kwamen weinig harde nieuwe feiten, maar wel tal van regionale verschillen uit voort, die niet door landschapskenmerken konden worden verklaard.
+Enkele zeer relevante conclusies werden gemaakt, die in acht werden genomen voor deze pilot studie: een voldoende grote steekproef met random punten is nodig, goede opleiding voor vrijwilligers in het herkennen van vogels en aanleren van methodiek, telpunten worden best gescreend op terreingebruik.
+
+Tussen 2010 en 2018 werd in De Moeren en zeventien andere PDPO-gebieden gemonitord om de effecten van beheerovereenkomsten voor akker- en weidevogels te evalueren [@debruyn2019].
+De inventarisaties gebeurden door INBO via territoriumkarteringen en wintertellingen.
+Voor de relevante soorten kon geen duidelijke trend worden vastgesteld.
+
+Het Partridge-project volgde sinds 2016 broed- en overwinteringsvogels in vier gebieden [@petersen2023].
+In twee demogebieden werden maatregelen genomen, vooral gericht op Patrijs, en werd hun effectiviteit en het broedsucces onderzocht via traject- en territoriumtellingen.
+Ook wintertellingen volgens de MAS-methodiek maakten deel uit van het project.
+Dit alles werd door INBO-medewerkers uitgevoerd en liep tot 2023.
+
+Tot slot voerde de UHasselt tussen 2018 en 2021 onderzoek uit naar beheerovereenkomsten voor akkervogels, met steun van PDPO-middelen [@evens2022].
+In gebieden met hoge dekkingsgraad werd dieper ingegaan op ruimtegebruik (GPS), broedsucces en voedselbeschikbaarheid (bijvoorbeeld insectenmonitoring).
+
+Al deze projecten streven niet alleen naar het volgen van lokale trends, maar ook naar het verbinden van monitoring met beheer, zodat maatregelen evidence-based kunnen worden bijgestuurd voor betere resultaten.

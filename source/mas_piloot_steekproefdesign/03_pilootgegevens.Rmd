@@ -2,10 +2,10 @@
 
 ## Informatiebehoefte-analyse
 
-De vermelde projecten die we hebben besproken in Hoofdstuk \@ref(historie) en Hoofdstuk \@ref(lopende-meetnetten) volstaan niet om aan alle monitoringnoden in Vlaanderen te voldoen.
+De vermelde projecten die we hebben besproken in Hoofdstuk \@ref(historie) volstaan niet om aan alle monitoringsnoden in Vlaanderen te voldoen.
 Er is zowel een behoefte aan een meer verfijnd en betrouwbaar beeld van de toestand van vogels in het landbouwgebied in Vlaanderen (inclusief detectie van regionale verschillen), als aan een beter inzicht in de oorzaken van de huidige trends en de effectiviteit van maatregelen om negatieve trends om te keren.
 
-De monitoringnoden kunnen we definiëren op drie schaalniveaus:
+De monitoringsnoden kunnen we definiëren op drie schaalniveaus:
 
 1.  **Beleidsmonitoring** (*macroniveau*) gaat over soorten of ruimere agrobiodiversiteit in het *landbouwgebied in Vlaanderen* en focust op een breed spectrum aan soorten (bv. vogels, insecten ...) en aangepaste landbouwpraktijken.
     De nadruk ligt op de impact van het beleid (landbouw- en natuurbeleid) op lange termijn trends in het landbouwgebied.
@@ -18,46 +18,46 @@ De monitoringnoden kunnen we definiëren op drie schaalniveaus:
     Rapportering en aanbevelingen laten toe om op middellange termijn maatregelen bij te sturen, naar een volgende regeer- en GLB-programmaperiode toe.
 
 3.  **Aanvullend verklarend onderzoek** (*microniveau*).
-    Op basis van de resultaten van beleids- en beheermonitoring is het vaak aangewezen om aanvullend ook monitoring van bepaalde beheerindicatoren op microniveau of meer diepgaand soortspecifiek onderzoek uit te voeren.
+    Op basis van de resultaten van beleids- en beheermonitoring is het vaak aangewezen om aanvullend monitoring van bepaalde beheerindicatoren op microniveau of meer diepgaand soortspecifiek onderzoek uit te voeren.
     Dat is nodig om een beter inzicht te verkrijgen in de factoren die de waargenomen trends kunnen verklaren of om de ecologische validatie te doen van specifieke nieuwe of aangepaste maatregelen.
-    Onder andere de SWOT-analyse van het Soortenbeschermingsprogramma (SBP) akkervogels [@agentschapvoornatuurenbos2021] onderschrijft deze noodzaak.
+    Onder andere de SWOT-analyse van het soortenbeschermingsprogramma (SBP) akkervogels [@agentschapvoornatuurenbos2021] onderschrijft deze noodzaak.
     Verschillende sleutelactoren werken hiervoor nauw samen waardoor binnen de uitvoeringstermijn van een instrument feedback mogelijk is naar de landbouwer en op middellange termijn een onderbouwde bijsturing (evidence-based) van bepaalde maatregelen mogelijk wordt.
 
-Deze verschillende noden vergen een verschillend meetnetontwerp of onderzoeksopzet, die eventueel ook gedeeltelijk zou kunnen overlappen.
+Deze verschillende noden vergen een verschillend meetnetontwerp of onderzoeksopzet, die eventueel gedeeltelijk zou kunnen overlappen.
 Beleidsmonitoring vraagt om een aselecte steekproef om onvertekende uitspraken te kunnen doen.
-Naarmate de vraagstelling meer gericht is, zoals het geval is bij de vraag naar de effectiviteit van specifieke maatregelen voor een bepaalde soort, zal ook een meer gericht ontwerp nodig zijn.
+Naarmate de vraagstelling meer gericht is, zoals het geval is bij de vraag naar de effectiviteit van specifieke maatregelen voor een bepaalde soort, zal een meer gericht ontwerp nodig zijn.
 Niettemin kan er naar synergie gestreefd worden tussen de verschillende niveaus van monitoring.
 Een voorwaarde voor synergie is dat meetmethoden zo goed mogelijk op elkaar worden afgestemd.
 
 ## Plan van aanpak
 
-Binnen dit pilootproject werken we een strategie uit die toelaat om te beantwoorden aan de monitoringnoden op het raakvlak tussen macro- en mesoschaalniveau voor wat betreft de soorten die kunnen opgevolgd worden via het MAS telprotocol.
+Binnen dit pilootproject werken we een strategie uit die toelaat om te beantwoorden aan de monitoringsnoden op het raakvlak tussen macro- en mesoschaalniveau voor wat betreft de soorten die kunnen opgevolgd worden via het MAS telprotocol.
 Dit zijn voornamelijk vogels die courant voorkomen in landbouwgebied, evenals sommige zoogdieren die met dit telprotocol kunnen worden waargenomen.
-We zullen deze aanpak uitwerken voor twee ver uiteengelegen piloot gebieden: (1) de Oostelijke leemstreek aan de ene kant van het gewest en (2) De Moeren aan de andere kant (zie \@ref(piloot-steekproefkader) voor de exacte ruimtelijke afbakening).
+We zullen deze aanpak uitwerken voor twee ver uiteengelegen pilootgebieden: (1) de Oostelijke leemstreek aan de ene kant van het gewest en (2) De Moeren aan de andere kant (zie \@ref(piloot-steekproefkader) voor de exacte ruimtelijke afbakening).
 Het speelt in ons voordeel dat er binnen deze gebieden al MAS-tellingen gebeuren sinds 2018 met een actieve vrijwilligerswerking.
 
 We combineren de vragen om enerzijds een meer verfijnd en betrouwbaar beeld te krijgen van de toestand van vogels in het landbouwgebied in Vlaanderen (inclusief detectie van regionale verschillen), en anderzijds met de vraag om een beter inzicht te krijgen in de effectiviteit van de maatregelen zonder hierbij te focussen op een individuele specifieke maatregel.
 De meeste beschermingsmaatregelen worden geconcentreerd toegepast in de zogenaamde kerngebieden of prioritaire gebieden.
-Het zijn ook deze gebieden waar de vroegere MAS-tellingen zich op concentreerden.
-De historische data laten ons dus al toe om na te gaan of er, gezamenlijk met de toename in oppervlakte aan beschermingsmaatregelen, ook een verbetering te zien is in de populatiegroottes van de soorten.
-Deze data kunnen ons echter niet vertellen of een eventuele verbetering zich misschien ook heeft voorgedaan buiten deze kerngebieden, waardoor we met minder grote stelligheid kunnen beweren dat de maatregelen een effect hebben.
+Het zijn deze gebieden waar de vroegere MAS-tellingen zich op concentreerden.
+De historische data laten ons dus al toe om na te gaan of er, gezamenlijk met de toename in oppervlakte aan beschermingsmaatregelen, een verbetering te zien is in de populatiegroottes van de soorten.
+Deze data kunnen ons echter niet vertellen of een eventuele verbetering zich misschien heeft voorgedaan buiten deze kerngebieden, waardoor we met minder grote stelligheid kunnen beweren dat de maatregelen een effect hebben.
 Het is daarom nodig dat we het meetnet uitbreiden en ook gaan tellen in zones met weinig of geen beschermingsmaatregelen.
 Daarbij moeten we ervoor zorgen dat deze zones zo goed mogelijk vergelijkbaar zijn met deze van de kerngebieden.
-Het type van landbouwvoering moet vergelijkbaar zijn en dit hangt sterk af van onder andere de bodem, het reliëf en het klimaat.
+Het type van landbouwbedrijfsvoering moet vergelijkbaar zijn en dit hangt sterk af van onder andere de bodem, het reliëf en het klimaat.
 Dit zijn aspecten die vrij goed gecapteerd worden door de landbouwstreken van België.
-Binnen eenzelfde landbouwstreek verwachten we dus gelijkaardige landbouwvoering (De Moeren ligt bijvoorbeeld in de polders en de Oostelijke leemstreek maakt deel uit van de leemstreek).
+Binnen eenzelfde landbouwstreek verwachten we dus gelijkaardige landbouwbedrijfsvoering (De Moeren ligt bijvoorbeeld in de polders en de Oostelijke leemstreek maakt deel uit van de leemstreek).
 Daarnaast weten we dat — zeker voor akkervogels — de openheid van het landschap een sterk bepalende factor is voor het voorkomen van deze soorten.
 Sommige soorten komen voor in zeer open landschappen en andere soorten komen eerder voor in half-open landschappen.
 Deze twee elementen (landbouwstreek en openheid van het landschap) zullen dus sleutelelementen worden in ons meetnetontwerp.
-Ze zullen ons enerzijds toelaten om "vergelijkbare" situaties te vinden binnen en buiten kerngebieden, en anderzijds, biedt de opdeling in landbouwstreken een antwoord op de wens om ook zicht te krijgen op regionale verschillen in toestand en trend van relatieve populatiegroottes van de soorten.
+Ze zullen ons enerzijds toelaten om "vergelijkbare" situaties te vinden binnen en buiten kerngebieden, en anderzijds, biedt de opdeling in landbouwstreken een antwoord op de wens om zicht te krijgen op regionale verschillen in toestand en trend van relatieve populatiegroottes van deze soorten.
 Dit laatste zal nog niet mogelijk zijn met de data die tijdens dit pilootproject zijn ingezameld, maar wordt wel mogelijk wanneer we dit bewezen recept uitrollen naar de andere landbouwstreken in Vlaanderen (zie Hoofdstuk \@ref(ontwerp-meetnet)).
 
 Met deze aanpak beantwoorden we dus zowel de informatienoden voor beleidsmonitoring als de beheermonitoring op mesoniveau, althans wanneer uitgerold naar Vlaanderen.
-Een belangrijke doelstelling van het pilootproject is dan ook de haalbaarheid en opschaalbaarheid van deze monitoring in te schatten zodat in de toekomst meer inzicht wordt verkregen in (1) meer betrouwbare toestand en trend schattingen voor Vlaanderen, (2) regionale verschillen in toestand en trend, en (3) de effectiviteit van de geleverde inspanningen in zijn geheel (inclusief beheerovereenkomsten, soortbeschermingsprogramma's, conditionaliteiten, (pre-)ecoregelingen, agromilieuklimaatmaatregelingen, niet-productieve investeringen via het Vlaams Investeringsfonds ...).
+Een belangrijke doelstelling van het pilootproject is dan ook de haalbaarheid en opschaalbaarheid van deze monitoring in te schatten zodat in de toekomst meer inzicht wordt verkregen in (1) meer betrouwbare toestand en trend schattingen voor Vlaanderen, (2) regionale verschillen in toestand en trend, en (3) de effectiviteit van de geleverde inspanningen in zijn geheel (inclusief beheerovereenkomsten, soortenbeschermingsprogramma's, conditionaliteiten, (pre-)ecoregelingen, agromilieuklimaatmaatregelingen, niet-productieve investeringen via het Vlaams landbouwinvesteringsfonds ...).
 
-Onze aanpak laat ook toe om een deel van de bestaande tellocaties te behouden.
-Binnen het pilootproject werd dit in de eerste plaats toegepast op de reeds bestaande tellocaties van het Meetnet Agrarische Soorten.
-Eventueel kan het principe dat we hiervoor gebruikt hebben echter ook worden toegepast op ABV telhokken (met daarbinnen tellocaties), mits we de vergelijkbaarheid kunnen waarborgen (zie hoofdstuk \@ref(discussie)).
+Onze aanpak laat toe om een deel van de bestaande tellocaties te behouden.
+Binnen het pilootproject werd dit in de eerste plaats toegepast op de reeds bestaande tellocaties van het MAS.
+Eventueel kan het principe dat we hiervoor gebruikt hebben, worden toegepast op ABV telhokken (met daarbinnen tellocaties), mits we de vergelijkbaarheid kunnen waarborgen (zie Hoofdstuk \@ref(discussie)).
 
 In Sectie \@ref(piloot-ontwerp) volgt een meer technische bespreking van de aanpak.
 
@@ -74,16 +74,20 @@ We overlopen volgende stappen:
 ### Afbakening steekproefkader {#piloot-steekproefkader}
 
 Een steekproefkader heeft de bedoeling om de statistische doelpopulatie die we willen onderzoeken zo goed mogelijk te benaderen.
-Een steekproefkader kan bijvoorbeeld een lijst zijn (bv. alle landbouwbedrijven in Vlaanderen) of het kan een ruimtelijke afbakening zijn (bv. de contour van Vlaanderen).
+Een steekproefkader kan bijvoorbeeld een lijst zijn (bv. alle landbouwbedrijven in Vlaanderen) of het kan een ruimtelijke afbakening zijn (bv. de omtrek van Vlaanderen).
 In het geval van het MAS pilootproject maken we een lijst aan van potentiële telpuntlocaties.
 
-Voor de afbakening van het steekproefkader, starten we met een intersectie van de landbouwstreken van België met de contour van Vlaanderen.
+Voor de afbakening van het steekproefkader, starten we met een intersectie van de landbouwstreken van België met de omtrek van Vlaanderen.
 Dit geeft ons een kaart van de landbouwstreken in Vlaanderen (Fig. \@ref(fig:landbouwstreken)).
 De meeste landbouwstreken zijn opgebouwd uit meerdere polygonen.
-Vervolgens beperken we dit daarom voor de Oostelijke leemstreek tot enkel de polygoon die overlapt met de perimeters van de soortbeschermingsplannen voor akkervogels van de Oostelijke leemstreek.
+Vervolgens beperken we dit daarom voor de Oostelijke leemstreek tot enkel de polygoon die overlapt met de perimeter van het soortenbeschermingsprogramma voor akkervogels.
 Dit geeft voldoende mogelijkheden om telpunten buiten deze SBP gebieden te kunnen selecteren (64 % van de oppervlakte ligt buiten SBP).
-In het geval van De Moeren, is er direct vertrokken van een perimeter die al gebruikt werd door de MAS werking van dat gebied en die ons aangeleverd is.
-Dit was nog geen officiële SBP akkervogels perimeter, maar het is wel een gebied waar gelijkaardige inspanningen werden geleverd en we beschouwen het daarom als "SBP" gebied.
+De perimeter van SBP akkervogels is onderverdeeld in twee categorieën, namelijk (1) polygonen die als (prioritair) kerngebied beschouwd worden en (2) zoekzones.
+Die totale perimeter bepaalt waar soortenbeschermingsmaatregelen genomen mogen worden, waarbij de aanbeveling werd gevolgd om eerst en vooral in te zetten in kerngebied.
+Omdat er in de categorie zoekzone ook soortenbeschermingsmaatregelen werden genomen, zij het minder, hebben we deze integraal meegenomen in de perimeter die we als “binnen SBP” beschouwen.
+In het geval van De Moeren, is er direct vertrokken van een perimeter van de “binnenmoeren”, de centrale zone van De Moeren die bij 'Plan Kiekendief' al gebruikt werd door de MAS werking van dat gebied en die ons aangeleverd is.
+Deze perimeter waar veel kiekendief-maatregelen gerealiseerd waren, overlapt integraal met de perimeter van SBP akkervogels, maar die werd daar tot en met 2023 beschouwd als een zoekzone.
+Het is wel een gebied waar gelijkaardige inspanningen werden geleverd voor 'Plan Kiekendief' en we beschouwen het daarom als “SBP” gebied.
 Om voor De Moeren ook een controlegebied te hebben (buiten SBP), werd een buffer gelegd rond het noordoostelijke deel van De Moeren die in oppervlakte nagenoeg gelijk is aan het gedeelte binnen "SBP" (ten zuiden van De Moeren zitten we in Frankrijk en ten westen zitten we in duingebied).
 Deze perimeter ligt grotendeels binnen de polders landbouwstreek (een klein deel van de bufferzone ligt in de zandleemstreek), maar is slechts een klein deel van de volledige polders [@akkervogelgebieden, Fig. \@ref(fig:perimeters-sbp)].
 De Oostelijke leemstreek omvat een zeer groot deel van de volledige leemstreek en is daarom te beschouwen als **de betere casus** van de twee pilootgebieden om dienst te doen als test voor de uitrol naar andere landbouwstreken in Vlaanderen.
@@ -92,14 +96,22 @@ De Oostelijke leemstreek omvat een zeer groot deel van de volledige leemstreek e
 include_graphics(file.path("media", "kaartjes", "landbouwstreken_vl.png"))
 ```
 
-```{r perimeters-sbp, out.width = "100%", fig.cap = "Perimeters van De Moeren (\\textbf{A}) en de Oostelijke leemstreek (\\textbf{B}), met aanduiding van het gebied binnen en buiten soortbeschermingsplan (SBP) en als achtergrond de landbouwstreken."}
+```{r perimeters-sbp, out.width = "100%", fig.cap = "Perimeters van De Moeren (\\textbf{A}) en de Oostelijke leemstreek (\\textbf{B}), met aanduiding van het gebied binnen en buiten soortenbeschermingsprogramma's (SBP) en als achtergrond de landbouwstreken."}
 include_graphics(file.path("media", "kaartjes", "sbp_piloot_kaart.png"))
 ```
 
 We bekomen dus twee polygonen (één voor De Moeren en één voor de Oostelijke leemstreek).
 Beide bevatten zowel zones binnen als buiten SBP gebieden voor akkervogels.
 We moeten nu echter het steekproefkader verder verfijnen.
-In eerste instantie doen we dit door *exclusie* van een aantal landgebruiken op basis van OpenStreetMap data [@openstreetmapcontributors2022] (Fig. \@ref(fig:steekproef-afbakening)A):
+In eerste instantie doen we dit door *exclusie* van een aantal landgebruiken op basis van OpenStreetMap (OSM) data [@openstreetmapcontributors2022] (Fig. \@ref(fig:steekproef-afbakening)A).
+OSM is een wereldwijd, open samenwerkingsproject waarin vrijwilligers geografische gegevens verzamelen en beschikbaar stellen.
+Deze vrij toegankelijke databron biedt een zeer gedetailleerde en actuele kaart van de wereld, die continu wordt bijgewerkt door een actieve gemeenschap van gebruikers.
+Hoewel de kwaliteit van OSM over het algemeen hoog is, kunnen er lokaal nog onvolkomenheden voorkomen.
+Zo kan de kaart op bepaalde plaatsen verouderd zijn of kunnen bijdragen van vrijwilligers leiden tot kleine classificatiefouten.
+Dankzij de open en dynamische aard van het project kunnen deze fouten echter relatief snel gesignaleerd en gecorrigeerd worden.
+OSM werd in Vlaanderen bijvoorbeeld gebruikt voor het opstellen van een open-ruimte-kaart voor Patrijs in functie van jachtregelmentering [@onkelinx2022].
+
+De volgende landgebruiken sluiten we uit:
 
 -   parkgebieden
     -   OSM definitie: `leisure = park`
@@ -149,7 +161,7 @@ We voegden daarom ook de waterlopen toe (in principe moet er een vrije strook va
 Overlappende paden of waterwegen werden verwijderd.
 Vervolgens hebben we dit netwerk van (water)wegen omgevormd tot een puntennetwerk (Fig. \@ref(fig:steekproef-afbakening)C), waarbij elk punt een potentieel telpunt kan zijn:
 
--   Langs alle paden worden op regelmatige afstanden van 50 m punten gelegd[^04_pilootgegevens-1]
+-   Langs alle paden worden op regelmatige afstanden van 50 m punten gelegd[^03_pilootgegevens-1]
 -   Daarna worden punten die op minder dan 40 m van elkaar liggen ruimtelijk gegroepeerd (dit gebeurt wanneer verschillende paden elkaar kruisen of op korte afstand parallel aan elkaar liggen) en uit elk van deze clusters wordt één punt overgehouden
 -   Potentiële telpunten moeten op minstens 300 m van de grens (perimeter) gelegen zijn
 
@@ -165,7 +177,7 @@ We zijn enkel geïnteresseerd in potentiële telpunten waar de samenstelling van
 
 <!-- spell-check: ignore:end -->
 
-Met deze regel slagen we er in om potentiële telpunten uit te sluiten die bijvoorbeeld te dicht bij bebouwing gelegen zijn (Fig. \@ref(fig:steekproef-afbakening)D).
+Met deze regel slagen we erin om potentiële telpunten uit te sluiten die bijvoorbeeld te dicht bij bebouwing gelegen zijn (Fig. \@ref(fig:steekproef-afbakening)D).
 De uiteindelijk bekomen lijst van punten vormt het steekproefkader van het MAS pilootproject.
 
 \begin{figure}
@@ -175,7 +187,7 @@ De uiteindelijk bekomen lijst van punten vormt het steekproefkader van het MAS p
 \end{figure}
 
 In een laatste stap was het de bedoeling om ook nog een exclusie van potentiële telpunten uit te voeren op basis van slechte zichtbaarheid vanaf het telpunt.
-Hier was al gedeeltelijk mee rekening gehouden door holle wegen uit te sluiten.
+Hier was al gedeeltelijk rekening mee gehouden door holle wegen uit te sluiten.
 Mogelijk zijn echter niet alle holle wegen gekend in OpenStreetMap en er zijn ook andere landschapsconfiguraties die maken dat observatie van vogels lastig is.
 Op het moment dat dit steekproefkader werd opgemaakt, was een snelle, efficiënte berekenmethode echter nog niet beschikbaar.
 Later hebben we hier wel een technische oplossing voor gevonden zodat dit wel kan toegepast worden bij de uitrol van het MAS meetnet naar andere landbouwstreken (zie Sectie \@ref(aanpassingen-meetnet)).
@@ -210,8 +222,8 @@ Werkwijze:
 We stratificeerden binnen de Oostelijke leemstreek volgens OL en HOL.
 Binnen De Moeren was er enkel voldoende OL aanwezig en vervalt het HOL stratum.
 Akkervogelgemeenschappen worden vaak ingedeeld volgens hun affiniteit met open landschap (OLA - Open landschap Akkervogels), half-open landschap (HOLA) en kleinschalig landschap (KLA) [@dochy2005].
-Onder kleinschalig landschap verstaat men een landschap waar de percelen relatief klein zijn en het landschap in sterke mate dooraderd is door hagen, rietkragen en andere lijn- of puntvormige kleine landschapselementen (KLE's).<!-- spell-check: ignore --> De manier waarop we openheid van het landschap hebben bepaald laat niet toe om KLA te bepalen zonder bijkomende berekeningen.
-KLA zullen een subset zijn van wat wij HOL noemen, met name HOL waar de gemiddelde perceelsgrootte relatief klein is.
+Onder kleinschalig landschap verstaat men een landschap waar de percelen relatief klein zijn en het landschap in sterke mate dooraderd is door hagen, rietkragen en andere lijn- of puntvormige kleine landschapselementen (KLE's).<!-- spell-check: ignore --> De manier waarop we de openheid van het landschap hebben bepaald, laat niet toe om KLA te bepalen zonder bijkomende berekeningen.
+KLA zal een subset zijn van wat wij HOL noemen, met name HOL waar de gemiddelde perceelsgrootte relatief klein is.
 
 ### Steekproefgrootte, allocatie steekproefgrootte over strata en steekproeftrekking {#piloot-steekproefgrootte}
 
@@ -231,7 +243,7 @@ De methode liet toe om per stratum zowel ruimtelijk een goede spreiding te hebbe
 Een ander voordeel van deze methode is dat elk getrokken telpunt een volgnummer krijgt, wat van belang was bij het nagaan van overlap met bestaande telpunten (zie \@ref(piloot-overlap)) en bij de manuele controle (\@ref(manuele-controle)).
 Indien een punt uitvalt, kan dit vervangen worden door het eerstvolgende uit de reeks dat nog niet toegewezen werd.
 De methode garandeert dat deze nieuwe set ruimtelijk goed gespreid is en een aselecte steekproef is.
-Ondanks de ruimtelijke spreiding, was omwille van hoge densiteit aan telpunten er soms toch nog overlap tussen telpunten.
+Ondanks de ruimtelijke spreiding, was er, omwille van hoge densiteit aan telpunten, soms toch nog overlap tussen telpunten.
 In die gevallen werd enkel het overlappende telpunt met laagste volgnummer weerhouden (Fig. \@ref(fig:steekproef-piloot)).
 
 Deze geselecteerde telpunten werden zowel in 2022 als in 2023 geteld in het kader van het MAS pilootproject.
@@ -243,7 +255,7 @@ Voor de steekproef over Vlaanderen is het best mogelijk dat een ander temporeel 
 
 <!--# We zien wel dat de steekproef een goede afspiegeling is van de volledige populatie (boxplots voor steekproef en populatie zijn zeer gelijkend).-->
 
-Er werd ook een poging ondernomen om telpunten met slechte zichtbaarheid te verwijderen door enkel voor de getrokken telpunten een zichtbaarheidsindex te berekenen [@GVI-package].
+Er werd een poging ondernomen om telpunten met slechte zichtbaarheid te verwijderen door enkel voor de getrokken telpunten een zichtbaarheidsindex te berekenen [@GVI-package].
 In deze fase werden telpunten niet automatisch verwijderd op basis van de zichtbaarheidsindex.
 De reden hiervoor was dat er nog vrij veel situaties zijn waar de zichtbaarheidsindex laag was, terwijl de terreinsituatie toch een goede zichtbaarheid toelaat.
 De reden voor zulke "vals positieven" zijn:
@@ -270,7 +282,7 @@ De steekproef werd geëxporteerd naar een *KML*-bestand en gedeeld als een kaart
 Deze potentiële punten werden dan een voor een gescreend op bereikbaarheid en zichtbaarheid.
 Op basis van satellietbeelden en Google Street View (waar beschikbaar) werd nagegaan of de plek effectief bereikbaar was.
 Hierbij werden punten op paden of wegen die duidelijk ontoegankelijk waren (afgesloten met een hek, op privéterrein of op een militair domein of naast een vliegveld) verwijderd.
-Om de efficiëntie van de tellingen te bewaken, werd ook verzekerd dat een telpunt bereikbaar is met een wagen, of niet verder dan 300 m te voet vanaf een parkeerplaats.
+Om de efficiëntie van de tellingen te bewaken, werd verzekerd dat een telpunt bereikbaar is met een wagen, of niet verder dan 300 m te voet vanaf een parkeerplaats.
 Ook punten die duidelijk geen goed uitzichtpunt bieden, waarbij meer dan de helft van de telcirkel onzichtbaar zou zijn, werden verwijderd.
 Punten die werden verwijderd, werden vervangen door een ander reserve punt binnen hetzelfde stratum (random, namelijk de volgende in de rangorde).
 
@@ -291,15 +303,26 @@ De toestand van de GitHub repository op het moment van de steekproeftrekking voo
 7d0cdbc83765719876fbf0954082873d992f33de
 \end{center}
 
-\text{(1)} het steekproefkader, (2) de steekproef en (3) de finale steekproef na manuele controle (de punten die effectief werden bezocht in het veld) werden ook in de GitHub repository opgeslagen als *TSV*-bestanden via de **git2rdata** package [@git2rdata-package] in de folder *data/processed*.
-Deze staan bijgevolg ook onder versiebeheer.
+\text{(1)} Het steekproefkader, (2) de steekproef en (3) de finale steekproef na manuele controle (de punten die effectief werden bezocht in het veld) werden ook in de GitHub repository opgeslagen als *TSV*-bestanden via de **git2rdata** package [@git2rdata-package] in de folder *data/processed*.
+Deze staan bijgevolg onder versiebeheer.
 De hashes van de finale bestanden zijn te vinden in Bijlage \@ref(hashes-steekproef).
 
 Een overzicht van alle databestanden is gegeven in @dmp-mas.
 
 ## Vrijwilligerswerking
 
-\textcolor{red}{uitleg hoe de vrijwilligerswerking werkt}
+De inzet van vrijwilligers is een veelgebruikte troef bij vogeltellingen, en een krachtig middel om de kostenefficiëntie van een monitoringsproject te verhogen.
+Uit de poule van het MAS-meetnet dat reeds opgestart was in beide pilootgebieden, konden we de meeste vrijwilligers verder motiveren om deel te nemen aan tellingen voor dit nieuwe meetnet.
+Dat is een voordeel dat niet overal gegarandeerd is, en het gaat niet zomaar.
+Vrijwilligers betrek je best nauw en jaarrond.
+Daar kruipt aanzienlijk veel training, opvolging, communicatie en feedback in.
+Om die reden kozen we ervoor om daar voldoende werktijd voor te voorzien.
+We anticipeerden op de aantrekkelijkheid van de tellingen, waarbij het voor vrijwilligers vooral loont om te gaan tellen in gebieden waar nog veel vogels te zien zijn, en waar veel maatregelen genomen worden om ze te beschermen.
+Tellingen in controlegebieden achtten we minder aantrekkelijk.
+Daar werd geopteerd om, waar nodig, tellingen uit te voeren door betaalde werkkrachten.
+Dat aandeel aan betaalde werkkrachten kan instaan voor een continuïteit, waarbij meetpunten jaarlijks geteld worden, en eventueel flexibel ingesprongen kan worden bij het wegvallen of opgeven van vrijwilligerswerk.
+We gingen na of de motivatie en ervaring van tellers, al dan niet betaald, een impact heeft op de kwaliteit van de tellingen.
+Daarbij werd gelet op het volgen van de methodiek, alsook het aandeel individuen dat werd herkend of genoteerd.
 
-[^04_pilootgegevens-1]: Bij de steekproeftrekking wordt een methode gebruikt die zal vermijden dat telpunten en hun telcirkels overlappen.
+[^03_pilootgegevens-1]: Bij de steekproeftrekking wordt een methode gebruikt die zal vermijden dat telpunten en hun telcirkels overlappen.
     Het kan in deze fase dus geen kwaad dat potentiële telpunten op een afstand van minder dan 300 m van elkaar gelegen zijn.
